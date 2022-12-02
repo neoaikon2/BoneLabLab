@@ -1,0 +1,29 @@
+Nullrat_Prefab
+	Brain
+		BehaviourOmniwheel
+			ImpactSrc
+	Physics
+		Head
+			Omniwheel
+				SimpleSFX
+			Trigger
+	Art
+		jnt_null
+			jnt_main
+				jnt_head
+					jnt_root
+						Sphere
+						Sphere_01
+						Sphere_02
+					Head
+						EyeTran
+						nullBody_rat
+							jnt_null
+								jnt_main
+									jnt_head
+										jnt_root
+										Sphere
+								nullBody_rat_mesh
+							Sphere
+							Sphere (1)
+			nullBody_rat_Mesh
