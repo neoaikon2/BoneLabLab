@@ -1,0 +1,57 @@
+Extended EasyDecal Overview
+
+Field					Bonelabs settings				Stub defaults
+--------------------------------------------------------------------------
+Mask						Layers you want decal on		Nothing
+Id							0								0
+Projection Target			None							None
+Mode						Surface Normal					Surface Normal
+Source						Atlas							Material
+Aspect Correction			None							None
+Recursive Mode				Up
+Material					Your Decal Atlas Material		None
+Atlas						Your Decal Atlas				None
+Atlas Region Index			Initial region?? 1(sm)/10(lrg)	0
+Max Distance				.1								0
+Projection Distance			1								0
+Smooth Normals				False							False
+Normal Smooth Fac			0								0
+Normal Smooth Thresh		0								0
+Resolution					2								0
+Multi Mesh Enabled			False							False
+Cull Invisible				False							False
+Cull Unreachable			False							False
+Show Vertices				False							False
+Show Dir					False							False
+Show Normals				False							False
+Enable Vertex Color Fade	False							False
+Only Colliders				True							False
+Calculate Tangents			False							False
+Calculate Normals			False							False
+Normal Chan Mode			Ignore							Ignore
+Tangent Chan Mode			Ignore							Ignore
+Recursice Lookup			False							False
+Random Index Enabled		True							False
+Recursice Steps				1								0
+Autodestroy					False							False
+Opacity mode				Geometry						Geometry
+Fade Only					True							False
+Use Light Probes			False							False
+Lifetime					5								0
+Fadeout Time				1								0
+FadeIn Time					1								1
+Fadeout Curve				0,1 to 1,0						None
+FadeIn Curve				0,1 to 1,0						None
+Surface Rotation			0								0
+Quality						1								0
+Reciever					None							None
+Mesh Container				None							None
+Skinned Mesh Container		None							None
+Creation Time				0								0
+Alpha						0								0
+Creation Frame Number		0								0
+Bake In Frame Number		0								0
+Need UV Recreation			False							False
+Need Geometry Recreation	False							False
+Shared Mesh					None							None
+Instance ID					DO NOT TOUCH					DO NOT TOUCH

@@ -1,0 +1,26 @@
+Minimal Bonelab EasyDecal Settings
+
+Field					Value
+--------------------------------------------------------------------------
+Mask					Set this to layers you want to receive decals
+Source					'Atlas'
+Material				Put your decal material here
+Atlas					Put your decal atlas here
+Atlas Region Index		Set initial decal, can be left 0
+Max Distance			.1
+Projection Distance		1
+Resolution				2
+Only Colliders			True
+Random Index Enabled	True
+Recursice Steps			1
+Fade Only				True
+Lifetime				5
+Fadeout Time			1
+FadeOut Curve			Key 1
+							Time: 0
+							Value: 1
+						Key 2
+							Time: 1
+							Value: 0
+FadeIn Curve			Same as FadeOut
+Quality 				1
