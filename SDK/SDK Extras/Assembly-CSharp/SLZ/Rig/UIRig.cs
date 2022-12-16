@@ -1,6 +1,5 @@
 using System.Runtime.CompilerServices;
 using SLZ.UI;
-using SLZ.UI.Radial;
 using UnityEngine;
 
 namespace SLZ.Rig

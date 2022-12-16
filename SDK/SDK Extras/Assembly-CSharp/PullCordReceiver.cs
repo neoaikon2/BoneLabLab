@@ -1,4 +1,4 @@
-using SLZ.UI.Radial;
+using SLZ.UI;
 using UnityEngine;
 
 public class PullCordReceiver : MonoBehaviour

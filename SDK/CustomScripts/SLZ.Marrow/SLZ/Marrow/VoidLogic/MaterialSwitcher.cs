@@ -1,0 +1,85 @@
+using System.Collections.Generic;
+using System.Text;
+using UnityEngine;
+
+namespace SLZ.Marrow.VoidLogic
+{
+	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/MaterialSwitcher")]
+	[AddComponentMenu("VoidLogic/Endpoints/VoidLogic Material Switcher")]
+	public class MaterialSwitcher : MonoBehaviour, InputDescribable
+	{
+		[SerializeField]
+		[Tooltip("Previous node in the chain")]
+		private BaseNode _previousNode;
+
+		private float _priorValue;
+
+		[SerializeField]
+		private Renderer[] _renderers;
+
+		[SerializeField]
+		private int[] _materialIndex;
+
+		[SerializeField]
+		private Material _offMat;
+
+		[SerializeField]
+		private Material _onMat;
+
+		[SerializeField]
+		private float lowThreshold;
+
+		[SerializeField]
+		private float highThreshold;
+
+		private bool _isHigh;
+
+		private static readonly IReadOnlyList<InputDescription> _inputs;
+
+		public BaseNode PreviousNode
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public float Value
+		{
+			get
+			{
+				return default(float);
+			}
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		private void UpdateMats(Material mat)
+		{
+		}
+
+		public void AppendEndpointInfo(StringBuilder sb)
+		{
+		}
+
+		IReadOnlyList<InputDescription> InputDescribable.DescribeInputs()
+		{
+			return null;
+		}
+
+		public MaterialSwitcher()
+			: base()
+		{
+		}
+	}
+}

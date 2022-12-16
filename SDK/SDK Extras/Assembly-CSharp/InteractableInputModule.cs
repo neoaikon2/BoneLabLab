@@ -2,6 +2,7 @@ using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using SLZ.UI;
 
 [AddComponentMenu("Event/Interactable Input Module")]
 public class InteractableInputModule : VRStandaloneInputModule

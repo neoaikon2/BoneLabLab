@@ -11,7 +11,7 @@ using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
-using SLZ.UI.Radial;
+using SLZ.UI;
 using SLZ.Utilities;
 using SLZ.VRMK;
 using UnityEngine;
