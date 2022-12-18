@@ -18,218 +18,218 @@ namespace ch.sycoforge.Decal
 
 		internal const string SKINNED_CHILD_NAME = "SKINNED_PROC_PLANE";
 
-		private static Camera renderCamera;
+		public static Camera renderCamera;
 
 		public LayerMask Mask;
 
-		private int id;
+		public int id;
 
 		internal bool evenID;
 
-		private Action<EasyDecal> OnFadedOut_;
+		public Action<EasyDecal> OnFadedOut_;
 
-		private Action<EasyDecal> OnFadedIn_;
+		public Action<EasyDecal> OnFadedIn_;
 
-		private Action<EasyDecal> OnFadeOutStarted_;
+		public Action<EasyDecal> OnFadeOutStarted_;
 
-		private Action<EasyDecal, Mesh> OnProjectionFinished_;
+		public Action<EasyDecal, Mesh> OnProjectionFinished_;
 
-		private Action<EasyDecal> OnAtlasIndexChanged_;
+		public Action<EasyDecal> OnAtlasIndexChanged_;
 
-		private Action<EasyDecal> OnSourceChanged_;
-
-		[SerializeField]
-		[HideInInspector]
-		private GameObject projectionTarget;
+		public Action<EasyDecal> OnSourceChanged_;
 
 		[SerializeField]
-		[HideInInspector]
-		private ProjectionMode mode;
-
-		[HideInInspector]
-		[SerializeField]
-		private SourceMode source;
-
-		[HideInInspector]
-		[SerializeField]
-		private AspectMode aspectCorrectionMode;
-
-		[HideInInspector]
-		[SerializeField]
-		private LookupMode recursiveMode;
+		//[HideInInspector]
+		public GameObject projectionTarget;
 
 		[SerializeField]
-		[HideInInspector]
-		private SkinQuality skinningQuality;
+		//[HideInInspector]
+		public ProjectionMode mode;
 
-		[HideInInspector]
+		//[HideInInspector]
+		[SerializeField]
+		public SourceMode source;
+
+		//[HideInInspector]
+		[SerializeField]
+		public AspectMode aspectCorrectionMode;
+
+		//[HideInInspector]
+		[SerializeField]
+		public LookupMode recursiveMode;
+
+		[SerializeField]
+		//[HideInInspector]
+		public SkinQuality skinningQuality;
+
+		//[HideInInspector]
 		[SerializeField]
 		internal Material material;
 
 		[SerializeField]
-		[HideInInspector]
-		private DecalTextureAtlas atlas;
+		//[HideInInspector]
+		public DecalTextureAtlas atlas;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private int atlasRegionIndex;
+		public int atlasRegionIndex;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private float maxDistance;
+		public float maxDistance;
 
-		[HideInInspector]
+		////[HideInInspector]
 		[SerializeField]
-		private float projectionDistance;
+		public float projectionDistance;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private bool smoothNormals;
+		public bool smoothNormals;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private float normalSmoothFactor;
+		public float normalSmoothFactor;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private float normalSmoothThreshold;
+		public float normalSmoothThreshold;
 
 		[SerializeField]
-		[HideInInspector]
+		//[HideInInspector]
 		internal int resolution;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private bool multiMeshEnabled;
+		public bool multiMeshEnabled;
 
 		[SerializeField]
-		[HideInInspector]
-		private bool cullInvisible;
+		//[HideInInspector]
+		public bool cullInvisible;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private bool cullUnreachable;
-
-		[SerializeField]
-		[HideInInspector]
-		private bool showVertices;
+		public bool cullUnreachable;
 
 		[SerializeField]
-		[HideInInspector]
-		private bool showDir;
-
-		[HideInInspector]
-		[SerializeField]
-		private bool showNormals;
+		//[HideInInspector]
+		public bool showVertices;
 
 		[SerializeField]
-		[HideInInspector]
-		private bool enableVertexColorFade;
+		//[HideInInspector]
+		public bool showDir;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private bool onlyColliders;
+		public bool showNormals;
+
+		[SerializeField]
+		//[HideInInspector]
+		public bool enableVertexColorFade;
+
+		//[HideInInspector]
+		[SerializeField]
+		public bool onlyColliders;
 
 		[SerializeField]
 		[FormerlySerializedAs("tangents")]
-		[HideInInspector]
-		private bool calculateTangents;
+		//[HideInInspector]
+		public bool calculateTangents;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private bool calculateNormals;
-
-		[SerializeField]
-		[HideInInspector]
-		private MeshChannelMode normalChannelMode;
-
-		[HideInInspector]
-		[SerializeField]
-		private MeshChannelMode tangentChannelMode;
+		public bool calculateNormals;
 
 		[SerializeField]
-		[HideInInspector]
-		private bool recursiceLookup;
+		//[HideInInspector]
+		public MeshChannelMode normalChannelMode;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private bool randomIndexEnabled;
-
-		[HideInInspector]
-		[SerializeField]
-		private int recursiceLookupSteps;
-
-		[HideInInspector]
-		[SerializeField]
-		private bool autoDestroy;
-
-		[HideInInspector]
-		[SerializeField]
-		private OpacityMode opacityMode;
-
-		[HideInInspector]
-		[SerializeField]
-		private bool fadeOnly;
+		public MeshChannelMode tangentChannelMode;
 
 		[SerializeField]
-		[HideInInspector]
-		private bool useLightProbes;
+		//[HideInInspector]
+		public bool recursiceLookup;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private float lifetime;
+		public bool randomIndexEnabled;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private float fadeoutTime;
+		public int recursiceLookupSteps;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private float fadeinTime;
+		public bool autoDestroy;
 
+		//[HideInInspector]
 		[SerializeField]
-		[HideInInspector]
-		private AnimationCurve fadeoutCurve;
+		public OpacityMode opacityMode;
 
-		[HideInInspector]
+		//[HideInInspector]
 		[SerializeField]
-		private AnimationCurve fadeinCurve;
-
-		[SerializeField]
-		[HideInInspector]
-		private float surfaceRotation;
-
-		[HideInInspector]
-		[SerializeField]
-		private int quality;
-
-		private GameObject receiver;
-
-		private GameObject meshContainer;
-
-		private GameObject skinnedMeshContainer;
-
-		private List<IMeshProcessor> meshProcessors;
-
-		private float creationTime;
-
-		private float alpha;
-
-		private int creationFrameNumber;
-
-		private int bakeInFrameNumber;
-
-		private bool needUVRecreation;
-
-		private bool needGeometryRecreation;
-
-		[HideInInspector]
-		[SerializeField]
-		private Mesh sharedMesh;
+		public bool fadeOnly;
 
 		[SerializeField]
-		[HideInInspector]
-		private int instanceID;
+		//[HideInInspector]
+		public bool useLightProbes;
+
+		//[HideInInspector]
+		[SerializeField]
+		public float lifetime;
+
+		//[HideInInspector]
+		[SerializeField]
+		public float fadeoutTime;
+
+		//[HideInInspector]
+		[SerializeField]
+		public float fadeinTime;
+
+		[SerializeField]
+		//[HideInInspector]
+		public AnimationCurve fadeoutCurve;
+
+		//[HideInInspector]
+		[SerializeField]
+		public AnimationCurve fadeinCurve;
+
+		[SerializeField]
+		//[HideInInspector]
+		public float surfaceRotation;
+
+		//[HideInInspector]
+		[SerializeField]
+		public int quality;
+
+		public GameObject receiver;
+
+		public GameObject meshContainer;
+
+		public GameObject skinnedMeshContainer;
+
+		public List<IMeshProcessor> meshProcessors;
+
+		public float creationTime;
+
+		public float alpha;
+
+		public int creationFrameNumber;
+
+		public int bakeInFrameNumber;
+
+		public bool needUVRecreation;
+
+		public bool needGeometryRecreation;
+
+		//[HideInInspector]
+		[SerializeField]
+		public Mesh sharedMesh;
+
+		[SerializeField]
+		//[HideInInspector]
+		public int instanceID;
 
 		internal bool projectBake;
 
@@ -527,7 +527,7 @@ namespace ch.sycoforge.Decal
 			}
 		}
 
-		public float CurrentFadeoutTime { get; private set; }
+		public float CurrentFadeoutTime { get; set; }
 
 		public float FadeoutTime
 		{
@@ -562,7 +562,7 @@ namespace ch.sycoforge.Decal
 			}
 		}
 
-		public Vector3 InverseProjectionDirection { get; private set; }
+		public Vector3 InverseProjectionDirection { get; set; }
 
 		public float SurfaceRotation
 		{
@@ -888,7 +888,7 @@ namespace ch.sycoforge.Decal
 		{
 		}
 
-		private void StartFadeOut()
+		public void StartFadeOut()
 		{
 		}
 
@@ -896,12 +896,12 @@ namespace ch.sycoforge.Decal
 		{
 		}
 
-		private IEnumerator ProcessFadeOut()
+		public IEnumerator ProcessFadeOut()
 		{
 			return null;
 		}
 
-		private IEnumerator ProcessFadeIn()
+		public IEnumerator ProcessFadeIn()
 		{
 			return null;
 		}
@@ -936,7 +936,7 @@ namespace ch.sycoforge.Decal
 		{
 		}
 
-		private void Log(string msg)
+		public void Log(string msg)
 		{
 		}
 
@@ -968,24 +968,24 @@ namespace ch.sycoforge.Decal
 		{
 		}
 
-		private void CreateDecalGameObject()
+		public void CreateDecalGameObject()
 		{
 		}
 
-		private void SetChildTransform(GameObject child)
+		public void SetChildTransform(GameObject child)
 		{
 		}
 
-		private void ResetMesh()
+		public void ResetMesh()
 		{
 		}
 
-		private Mesh FindSharedMesh()
+		public Mesh FindSharedMesh()
 		{
 			return null;
 		}
 
-		private GameObject Search(string name)
+		public GameObject Search(string name)
 		{
 			return null;
 		}
@@ -994,15 +994,15 @@ namespace ch.sycoforge.Decal
 		{
 		}
 
-		private void ConvertAndAssign(DynamicMesh dynamicMesh, bool forceRecreation)
+		public void ConvertAndAssign(DynamicMesh dynamicMesh, bool forceRecreation)
 		{
 		}
 
-		private void AssignSharedMesh(Mesh mesh)
+		public void AssignSharedMesh(Mesh mesh)
 		{
 		}
 
-		private void PostProcessMesh(DynamicMesh mesh)
+		public void PostProcessMesh(DynamicMesh mesh)
 		{
 		}
 
@@ -1014,11 +1014,11 @@ namespace ch.sycoforge.Decal
 		{
 		}
 
-		private void DrawMeshGeometryGizmos(Vector3[] vertices, Vector3[] normals)
+		public void DrawMeshGeometryGizmos(Vector3[] vertices, Vector3[] normals)
 		{
 		}
 
-		private void ResetPlanes()
+		public void ResetPlanes()
 		{
 		}
 
@@ -1048,31 +1048,31 @@ namespace ch.sycoforge.Decal
 			return default(Color);
 		}
 
-		private void CallOnProjectionFinished(Mesh mesh)
+		public void CallOnProjectionFinished(Mesh mesh)
 		{
 		}
 
-		private void CallOnFadeOutStarted()
+		public void CallOnFadeOutStarted()
 		{
 		}
 
-		private void CallOnFadedOut()
+		public void CallOnFadedOut()
 		{
 		}
 
-		private void CallOnFadedIn()
+		public void CallOnFadedIn()
 		{
 		}
 
-		private void CallOnAtlasIndexChanged()
+		public void CallOnAtlasIndexChanged()
 		{
 		}
 
-		private void CallOnSourceChanged()
+		public void CallOnSourceChanged()
 		{
 		}
 
-		private void CallOnAlphaChanged()
+		public void CallOnAlphaChanged()
 		{
 		}
 
@@ -1134,17 +1134,17 @@ namespace ch.sycoforge.Decal
 			return null;
 		}
 
-		private static EasyDecal ProjectInternal(GameObject decalPrefab, GameObject parent, Vector3 position, Quaternion rotation, Vector3 scale, bool instantiate)
+		public static EasyDecal ProjectInternal(GameObject decalPrefab, GameObject parent, Vector3 position, Quaternion rotation, Vector3 scale, bool instantiate)
 		{
 			return null;
 		}
 
-		private static List<EasyDecal> SearchChildren(Transform parent)
+		public static List<EasyDecal> SearchChildren(Transform parent)
 		{
 			return null;
 		}
 
-		private static bool ContainsLayer(LayerMask mask, int layer)
+		public static bool ContainsLayer(LayerMask mask, int layer)
 		{
 			return default(bool);
 		}
