@@ -4,15 +4,17 @@ using UnityEngine;
 
 namespace ch.sycoforge.Decal
 {
+	[CreateAssetMenu(fileName = "Decal Texture Atlas", menuName = "EasyDecal/Decal Texture Atlas", order = 1)]
 	public class DecalTextureAtlas : ScriptableObject
 	{
 		[SerializeField]
-		[HideInInspector]
-		private Material material;
-
-		[HideInInspector]
+		//[HideInInspector]
+		//private Material material;
+		public Material material;
+		//[HideInInspector]
 		[SerializeField]
-		private List<AtlasRegion> regions;
+		//private List<AtlasRegion> regions;
+		public List<AtlasRegion> regions;
 
 		public Material Material
 		{
