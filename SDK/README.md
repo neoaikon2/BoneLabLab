@@ -6,8 +6,11 @@ These files are my working copy of the SDK, it is NOT guaranteed to be compatibl
 - Damage Volumes  
 - NPCs (Good luck!)  
 ## Required Packages  
-SplineMesh (free on asset store)  
-com.unity.ai.navigation (add via name)
+~~SplineMesh (free on asset store)~~  
+~~com.unity.ai.navigation (add via name)~~  
+I thought these were required but discovered you  
+need to use the ones from the ripped files so don't  
+install these.  
 ## TODO
 Add examples for different things?
 Museum of Unofficial Interactions? :)
