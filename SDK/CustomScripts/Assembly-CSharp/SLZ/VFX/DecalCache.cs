@@ -15,16 +15,16 @@ namespace SLZ.VFX
 			plane = 1
 		}
 
-		private static ComponentCache<DecalCache> _cache;
+		public static ComponentCache<DecalCache> _cache;
 
 		[SerializeField]
-		private EasyDecal easyDecal;
+		public EasyDecal easyDecal;
 
-		private Color tintingColor;
+		public Color tintingColor;
 
-		private Material CustomMat;
+		public Material CustomMat;
 
-		private AssetPoolee poolee;
+		public AssetPoolee poolee;
 
 		public static ComponentCache<DecalCache> Cache
 		{
@@ -34,19 +34,19 @@ namespace SLZ.VFX
 			}
 		}
 
-		private void Reset()
+		public void Reset()
 		{
 		}
 
-		private void Awake()
+		public void Awake()
 		{
 		}
 
-		private void OnDestroy()
+		public void OnDestroy()
 		{
 		}
 
-		private void OnDisable()
+		public void OnDisable()
 		{
 		}
 
@@ -58,7 +58,7 @@ namespace SLZ.VFX
 		{
 		}
 
-		private void decalMaterial(EasyDecal decal, Mesh mesh)
+		public void decalMaterial(EasyDecal decal, Mesh mesh)
 		{
 		}
 
@@ -66,7 +66,7 @@ namespace SLZ.VFX
 		{
 		}
 
-		private void OnEnable()
+		public void OnEnable()
 		{
 		}
 
@@ -74,7 +74,7 @@ namespace SLZ.VFX
 		{
 		}
 
-		private void DecalTint(EasyDecal decal, Mesh mesh)
+		public void DecalTint(EasyDecal decal, Mesh mesh)
 		{
 		}
 

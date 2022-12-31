@@ -11,7 +11,7 @@ namespace SLZ.Zones
 		[Header("Dependancies")]
 		public LevelCrateReference level;
 
-		public LevelCrateReference loadScreenLevel;
+		public LevelCrateReference loadScreenLevel = new LevelCrateReference("fa534c5a83ee4ec6bd641fec424c4142.Level.DefaultLoad");
 
 		public Spawnable vfxFadeOutSpawnable;
 

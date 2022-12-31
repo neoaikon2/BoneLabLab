@@ -15,7 +15,7 @@ public class PartialZipLinkSetup : MonoBehaviour
 
 	public ZipLinkManager zipManager;
 
-	public NavMeshLink navLink;
+	public  NavMeshLink navLink;
 
 	public LinkData linkData;
 

@@ -15,7 +15,7 @@ namespace SLZ.UI
 
 		public Transform[] slotTargets;
 
-		private Inventory inventory;
+		public Inventory inventory;
 
 		public PageElementView[] slots;
 

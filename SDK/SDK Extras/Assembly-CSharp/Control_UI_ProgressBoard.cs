@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 public class Control_UI_ProgressBoard : MonoBehaviour
 {
-	public CraneControlBox craneControlBox;
+	//public CraneControlBox craneControlBox;
 
 	public GameControl_Hub gcHub;
 

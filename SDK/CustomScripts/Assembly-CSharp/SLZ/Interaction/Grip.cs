@@ -23,7 +23,7 @@ namespace SLZ.Interaction
 		[Tooltip("use the original target grip when attaching the joint, not the virtualized one")]
 		public bool ignoreGripTargetOnAttach;
 
-		[HideInInspector]
+		//[HideInInspector]
 		public Collider[] gripColliders;
 
 		public Collider[] additionalGripColliders;

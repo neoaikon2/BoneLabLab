@@ -9,7 +9,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
-//using SLZ.Mods;
+using SLZ.Mods;
 using SLZ.Props;
 using SLZ.Rig;
 using SLZ.SaveData;

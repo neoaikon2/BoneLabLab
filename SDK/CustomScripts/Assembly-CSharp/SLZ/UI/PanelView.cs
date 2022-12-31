@@ -4,13 +4,13 @@ namespace SLZ.UI
 {
 	public class PanelView : MonoBehaviour
 	{
-		//public PopUpMenuView popUpMenu;
+		public PopUpMenuView popUpMenu;
 
 		protected bool m_isActive;
 
 		private bool m_IsActiveThisFrame;
 
-		//private VRStandaloneInputModule _module;
+		private VRStandaloneInputModule _module;
 
 		public bool IsActive
 		{
@@ -20,13 +20,13 @@ namespace SLZ.UI
 			}
 		}
 
-		/*private VRStandaloneInputModule module
+		private VRStandaloneInputModule module
 		{
 			get
 			{
 				return null;
 			}
-		}*/
+		}
 
 		public virtual void CloseMenu()
 		{

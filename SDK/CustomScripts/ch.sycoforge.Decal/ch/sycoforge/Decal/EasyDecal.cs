@@ -20,7 +20,7 @@ namespace ch.sycoforge.Decal
 
 		public static Camera renderCamera;
 
-		public LayerMask Mask;
+		public LayerMask Mask = 8192;
 
 		public int id;
 
@@ -76,11 +76,11 @@ namespace ch.sycoforge.Decal
 
 		//[HideInInspector]
 		[SerializeField]
-		public float maxDistance;
+		public float maxDistance = 0.1f;
 
 		////[HideInInspector]
 		[SerializeField]
-		public float projectionDistance;
+		public float projectionDistance = 1.0f;
 
 		//[HideInInspector]
 		[SerializeField]
@@ -96,7 +96,7 @@ namespace ch.sycoforge.Decal
 
 		[SerializeField]
 		//[HideInInspector]
-		internal int resolution;
+		internal int resolution = 1;
 
 		//[HideInInspector]
 		[SerializeField]
@@ -128,7 +128,7 @@ namespace ch.sycoforge.Decal
 
 		//[HideInInspector]
 		[SerializeField]
-		public bool onlyColliders;
+		public bool onlyColliders = true;
 
 		[SerializeField]
 		[FormerlySerializedAs("tangents")]
@@ -157,7 +157,7 @@ namespace ch.sycoforge.Decal
 
 		//[HideInInspector]
 		[SerializeField]
-		public int recursiceLookupSteps;
+		public int recursiceLookupSteps = 1;
 
 		//[HideInInspector]
 		[SerializeField]
@@ -169,7 +169,7 @@ namespace ch.sycoforge.Decal
 
 		//[HideInInspector]
 		[SerializeField]
-		public bool fadeOnly;
+		public bool fadeOnly = true;
 
 		[SerializeField]
 		//[HideInInspector]
@@ -177,11 +177,11 @@ namespace ch.sycoforge.Decal
 
 		//[HideInInspector]
 		[SerializeField]
-		public float lifetime;
+		public float lifetime = 5.0f;
 
 		//[HideInInspector]
 		[SerializeField]
-		public float fadeoutTime;
+		public float fadeoutTime = 1.0f;
 
 		//[HideInInspector]
 		[SerializeField]
@@ -189,11 +189,11 @@ namespace ch.sycoforge.Decal
 
 		[SerializeField]
 		//[HideInInspector]
-		public AnimationCurve fadeoutCurve;
+		public AnimationCurve fadeoutCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0, 1), new Keyframe(1, 0) });
 
 		//[HideInInspector]
 		[SerializeField]
-		public AnimationCurve fadeinCurve;
+		public AnimationCurve fadeinCurve = new AnimationCurve(new Keyframe[] { new Keyframe(0, 1), new Keyframe(1, 0) });
 
 		[SerializeField]
 		//[HideInInspector]
@@ -201,7 +201,7 @@ namespace ch.sycoforge.Decal
 
 		//[HideInInspector]
 		[SerializeField]
-		public int quality;
+		public int quality = 1;
 
 		public GameObject receiver;
 

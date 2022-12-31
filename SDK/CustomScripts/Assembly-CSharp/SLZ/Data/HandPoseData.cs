@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SLZ.Data
 {
-	[CreateAssetMenu(fileName = "NewHandPoseData", menuName = "StressLevelZero/HandPoseData", order = 1)]
+	[CreateAssetMenu(fileName = "NewHandPoseData", menuName = "StressLevelZero/HandPoseDataPatch2", order = 1)]
 	public class HandPoseData : ScriptableObject
 	{
 		public Quaternion hand2;

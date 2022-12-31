@@ -5,6 +5,9 @@ These files are my working copy of the SDK, it is NOT guaranteed to be compatibl
 - Weapons and other objects the require grips  
 - Damage Volumes  
 - NPCs (Good luck!)  
+## Required Packages  
+SplineMesh (free on asset store)  
+com.unity.ai.navigation (add via name)
 ## TODO
 Add examples for different things?
 Museum of Unofficial Interactions? :)
