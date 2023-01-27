@@ -1,0 +1,60 @@
+ // SLZ Avatar Barcodes:
+
+SLZ.BONELAB.Content.Avatar.DogDuckSeason
+fa534c5a83ee4ec6bd641fec424c4142.Avatar.Fast
+SLZ.BONELAB.Content.Avatar.FordBW
+fa534c5a83ee4ec6bd641fec424c4142.Avatar.Heavy
+SLZ.BONELAB.Content.Avatar.CharJimmy
+SLZ.BONELAB.Content.Avatar.Anime
+SLZ.BONELAB.Content.Avatar.Nullbody
+c3534c5a-2236-4ce5-9385-34a850656173 (Peasant Female C)
+c3534c5a-10bf-48e9-beca-4ca850656173 (Peasant Female B)
+c3534c5a-87a3-48b2-87cd-f0a850656173 (Peasant Male A)
+c3534c5a-3763-4ddf-bd86-6ca850656173 (Peasant Male C)
+c3534c5a-f12c-44ef-b953-b8a850656173 (Peasant Male B)
+SLZ.BONELAB.NoBuild.Avatar.PolyDebugger
+c3534c5a-d388-4945-b4ff-9c7a53656375 (Security Guard)
+fa534c5a83ee4ec6bd641fec424c4142.Avatar.CharFurv4GB (Short)
+SLZ.BONELAB.Content.Avatar.SkeletonPirate
+fa534c5a83ee4ec6bd641fec424c4142.Avatar.Charskeleton
+fa534c5a83ee4ec6bd641fec424c4142.Avatar.Strong
+fa534c5a83ee4ec6bd641fec424c4142.Avatar.CharTallv4
+
+	// Note: Peasant Female A is not mentioned , probably something to do with "BONELAB.Core" so here is the Barcode:
+		// SLZ.BONELAB.Core.Avatar.PeasantFemaleA
+
+
+// Story map Barcodes
+
+c2534c5a-4197-4879-8cd3-4a695363656e (01 - Descent)
+c2534c5a-6b79-40ec-8e98-e58c5363656e (02 - BONELAB Hub)
+c2534c5a-56a6-40ab-a8ce-23074c657665 (03 - LongRun)
+c2534c5a-54df-470b-baaf-741f4c657665 (04 - Mine Dive)
+c2534c5a-7601-4443-bdfe-7f235363656e (05 - Big Anomaly)
+SLZ.BONELAB.Content.Level.LevelStreetPunch (06 - Street Puncher)
+SLZ.BONELAB.Content.Level.SprintBridge04 (07 - Sprint Bridge 04)
+SLZ.BONELAB.Content.Level.SceneMagmaGate (08 - Magma Gate)
+SLZ.BONELAB.Content.Level.MoonBase (09- MoonBase)
+SLZ.BONELAB.Content.Level.LevelKartRace (10 - Monogon Motorway)
+c2534c5a-c056-4883-ac79-e051426f6964 (11 - Pillar Climb)
+SLZ.BONELAB.Content.Level.LevelBigAnomalyB (12 - Big Anomaly B)
+c2534c5a-db71-49cf-b694-24584c657665 (13 - Ascent)
+SLZ.BONELAB.Content.Level.LevelOutro (14 - Home)
+fa534c5a868247138f50c62e424c4144.Level.VoidG114 (15 - Void G114)
+
+// Other Map Barcodes
+fa534c5a83ee4ec6bd641fec424c4142.Level.LevelKartBowling (Big Bone Bowling)
+c2534c5a-162f-4661-a04d-975d5363656e (Container Yard)
+fa534c5a83ee4ec6bd641fec424c4142.Level.SceneparkourDistrictLogic (Neon District Parkour)
+c2534c5a-4f3b-480e-ad2f-69175363656e (Neon District Tac Trial)
+c2534c5a-de61-4df9-8f6c-416954726547 (Drop Pit)
+c2534c5a-5c2f-4eef-a851-66214c657665 (Dungeon Warrior)
+fa534c5a868247138f50c62e424c4144.Level.LevelArenaMin (Fantasy Arena)
+fa534c5a83ee4ec6bd641fec424c4142.Level.LevelGunRange (Gun Range)
+fa534c5a83ee4ec6bd641fec424c4142.Level.LevelHalfwayPark (Halfway Park)
+fa534c5a83ee4ec6bd641fec424c4142.Level.LevelHoloChamber (HoloChamber)
+SLZ.BONELAB.Content.Level.LevelMirror (Mirror)
+fa534c5a83ee4ec6bd641fec424c4142.Level.LevelMuseumBasement (Museum Basement)
+c2534c5a-c6ac-48b4-9c5f-b5cd5363656e (Rooftops)
+c2534c5a-c180-40e0-b2b7-325c5363656e (Tunnel Tipper)
+c2534c5a-2c4c-4b44-b076-203b5363656e (Tuscany)

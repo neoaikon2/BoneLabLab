@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using SplineMesh;
 using UnityEngine;
+using Assets.Marrow_ExtendedSDK.StubClasses;
 
 namespace SLZ.Bonelab
 {

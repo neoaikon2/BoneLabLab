@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using SLZ.Marrow.Utilities;
-using SplineMesh;
 using UnityEngine;
+using Assets.Marrow_ExtendedSDK.StubClasses;
 
 namespace SLZ.Bonelab
 {

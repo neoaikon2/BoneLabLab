@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcf7219bab7fe46a1ad266029b2fee19, type: 3}
+  m_Name: Readme
+  m_EditorClassIdentifier: 
+  icon: {fileID: 2800000, guid: 727a75301c3d24613a3ebcec4a24c2c8, type: 3}
+  title: BoneLab Configs
+  sections:
+  - heading: BoneLab Configuration Files
+    text: These are sets of configuration data for all the scripts BoneLab uses
+    linkText: 
+    url: 
+  - heading: Alliance Data & Aliance table
+    text: These are used in the Behaviour NPC scripts to control who the NPC is allied
+      with (or against)
+    linkText: 
+    url: 
+  - heading: Ammo Groups
+    text: Used to define ammo groupings. Light, Medium, and Heavy are defaults. It
+      is possible to add new ones but you will need to make a variant of the default
+      playe rig and add it to the AmmoInventory, as well as adding UI elements specific
+      to the new group. In short, possible but not straightforward at all. It's easier
+      to stay within the defined groupings.
+    linkText: 
+    url: 
+  - heading: Animation Clips & Animation Controllers
+    text: Various animation clips and controllers used by things within BoneLab
+    linkText: 
+    url: 
+  - heading: Audio FX Data
+    text: Various reverb groupings for different environments
+    linkText: 
+    url: 
+  - heading: Audio Variance Data
+    text: Various groups of sound effects used by things in game. The eject AVDs
+      are incomplete (missing audio clips) but left in as examples.
+    linkText: 
+    url: 
+  - heading: Base Enemy Configs
+    text: Configurations for different enemy types, used to provide Zone Spawners
+      with enemy configurations when they spawn a NPC.
+    linkText: 
+    url: 
+  - heading: Cartridges
+    text: Definitions for the different ammo cartridges used in BoneLab
+    linkText: 
+    url: 
+  - heading: Hand Poses
+    text: Animation definitions for all the different hand poses used on Grips
+    linkText: 
+    url: 
+  - heading: Magazines
+    text: Definitions for the different magazines used by guns (and the cartridges
+      they contain)
+    linkText: 
+    url: 
+  - heading: Physic Materisl
+    text: A mostly complete set of all the different physics materials used by colliders
+      within BoneLab
+    linkText: 
+    url: 
+  - heading: Projectiles
+    text: Projectile data for all the different cartridges
+    linkText: 
+    url: 
+  - heading: Surface Data & VFX Spawn Polidy Data
+    text: Surface and VFX data for different visual effects regarding surfaces
+    linkText: 
+    url: 
+  - heading: Volume Profiles & Volumetric Settings
+    text: Visual profiles used by the cameras on the avatar rig
+    linkText: 
+    url: 
+  loadedLayout: 1
