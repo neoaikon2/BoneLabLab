@@ -17,7 +17,7 @@ MonoBehaviour:
   isFlammable: 0
   fireResistance: 100
   ParicleColorTint: {r: 1, g: 1, b: 1, a: 1}
-  physicMaterial: {fileID: 13400000, guid: 8e44e343f2e205f40bb09260f385b5bf, type: 2}
+  physicMaterial: {fileID: 13400000, guid: 61881bdb181a632489331cdfeb8e7e12, type: 2}
   impactEffectSpawnable:
     crateRef:
       _barcode:

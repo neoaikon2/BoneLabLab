@@ -1,0 +1,121 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1434e05284a9392498a4972edaeb5736, type: 3}
+  m_Name: Splatter Atlas Homebrew Small
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 61e29e6bdf802f646ad8f82a5174b1fc, type: 2}
+  regions:
+  - name: Small_Splat_A
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0.2
+      height: 0.3682
+  - name: Small_Splat_B
+    region:
+      serializedVersion: 2
+      x: 0.1938
+      y: 0.023
+      width: 0.1969
+      height: 0.328
+  - name: Small_Splat_C
+    region:
+      serializedVersion: 2
+      x: 0.4
+      y: 0
+      width: 0.2344
+      height: 0.374
+  - name: Small_Splat_D
+    region:
+      serializedVersion: 2
+      x: 0.6375
+      y: 0
+      width: 0.1938
+      height: 0.3567
+  - name: Small_Splat_E
+    region:
+      serializedVersion: 2
+      x: 0.840625
+      y: 0
+      width: 0.1594
+      height: 0.3567
+  - name: Small_Splat_F
+    region:
+      serializedVersion: 2
+      x: 0
+      y: 0.3797
+      width: 0.1813
+      height: 0.2877
+  - name: Small_Splat_G
+    region:
+      serializedVersion: 2
+      x: 0.2063
+      y: 0.3452
+      width: 0.1813
+      height: 0.3452
+  - name: Small_Splat_H
+    region:
+      serializedVersion: 2
+      x: 0.4188
+      y: 0.374
+      width: 0.2
+      height: 0.3049
+  - name: Small_Splat_I
+    region:
+      serializedVersion: 2
+      x: 0.6375
+      y: 0.3625
+      width: 0.1813
+      height: 0.2992
+  - name: Small_Splat_J
+    region:
+      serializedVersion: 2
+      x: 0.85
+      y: 0.374
+      width: 0.1469
+      height: 0.2762
+  - name: Small_Splat_K
+    region:
+      serializedVersion: 2
+      x: 0.03125
+      y: 0.6847
+      width: 0.1219
+      height: 0.3165
+  - name: Small_Splat_L
+    region:
+      serializedVersion: 2
+      x: 0.2031
+      y: 0.6904
+      width: 0.1838
+      height: 0.3107
+  - name: Small_Splat_M
+    region:
+      serializedVersion: 2
+      x: 0.4313
+      y: 0.6904
+      width: 0.1563
+      height: 0.3107
+  - name: Small_Splat_N
+    region:
+      serializedVersion: 2
+      x: 0.6531
+      y: 0.6904
+      width: 0.1563
+      height: 0.3107
+  - name: Small_Splat_O
+    region:
+      serializedVersion: 2
+      x: 0.8438
+      y: 0.6905
+      width: 0.1563
+      height: 0.3107

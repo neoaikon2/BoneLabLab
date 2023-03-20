@@ -28,7 +28,7 @@ MonoBehaviour:
         _id: null.empty.barcode
         generated: 1
       _editorCrateChanged: 0
-    policyData: {fileID: 0}
+    policyData: {fileID: 11400000, guid: 509effe78c9630541b5aef5b42a790ac, type: 2}
   bulletDecalSpawnable:
     crateRef:
       _barcode:
@@ -39,6 +39,6 @@ MonoBehaviour:
         _id: null.empty.barcode
         generated: 1
       _editorCrateChanged: 0
-    policyData: {fileID: 0}
+    policyData: {fileID: 11400000, guid: 965bd69f54c3ff04e8f3974072d72f42, type: 2}
   BulletDecal: {fileID: 0}
   BluntDecal: {fileID: 0}

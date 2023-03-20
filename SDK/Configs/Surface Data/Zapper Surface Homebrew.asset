@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fed9e19605ce9849bdb907cb412fae5, type: 3}
+  m_Name: Zapper Surface Homebrew
+  m_EditorClassIdentifier: 
+  PenetrationResistance: 0.8
+  megaPascal: 5
+  isFlammable: 0
+  fireResistance: 0
+  ParicleColorTint: {r: 2, g: 0.9176, b: 0.3666, a: 1}
+  physicMaterial: {fileID: 13400000, guid: a39889a664b0c0d47a5fda9952f4e6ca, type: 2}
+  impactEffectSpawnable:
+    crateRef:
+      _barcode:
+        _id: CryptoNeo.NPCExperimentationChamber.VFX.ImpactZapperHomebrew
+        generated: 1
+      _version: 1.2.3
+      _palletBarcode:
+        _id: CryptoNeo.NPCExperimentationChamber
+        generated: 1
+      _editorCrateChanged: 0
+    policyData: {fileID: 11400000, guid: fe43ff9483d0b7245bf7f834dbed6354, type: 2}
+  bulletDecalSpawnable:
+    crateRef:
+      _barcode:
+        _id: null.empty.barcode
+        generated: 1
+      _version: null.empty.barcode
+      _palletBarcode:
+        _id: null.empty.barcode
+        generated: 1
+      _editorCrateChanged: 0
+    policyData: {fileID: 11400000, guid: 325e0d14615e04644915bf4b12f8d285, type: 2}
+  BulletDecal: {fileID: 2100000, guid: 3f51efc4c1d78c94a81d3f987e0b0c8b, type: 2}
+  BluntDecal: {fileID: 2100000, guid: 2c345c153ef72d24698c4f7f9b4af837, type: 2}
