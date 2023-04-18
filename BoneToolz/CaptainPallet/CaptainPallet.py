@@ -1,27 +1,6 @@
 import json
 import os
 
-# Crate Object Template
-objTmp = {
-	"barcode" : "",
-	"barcodeOld" : "",
-	"slimCode" : "",
-	"title" : "",
-	"description" : "",
-	"unlockable" : "",
-	"redacted" : "",
-	"mainAsset" : "",
-	"tags" : [],
-	"packedAssets" : [],
-	"colliderBounds": {
-		"center": { "x": 0.0, "y": 0.0, "z": 0.0 },
-		"extents": { "x": 0.0, "y": 0.0, "z": 0.0 }
-	},
-	"isa": {
-		"type": "t:2"
-	}	
-}
-
 # Header Template
 headerTmp = {
 	"version": 1,
@@ -109,8 +88,27 @@ for path in os.listdir(".\\"):
 		f = open(path)
 		json_data = json.load(f)
 		f.close()
-		# make a working copy of the object template
-		tmp = objTmp.copy()
+		
+		# Crate Object Template
+		tmp = {
+			"barcode" : "",
+			"barcodeOld" : "",
+			"slimCode" : "",
+			"title" : "",
+			"description" : "",
+			"unlockable" : "",
+			"redacted" : "",
+			"mainAsset" : "",
+			"tags" : [],
+			"packedAssets" : [],
+			"colliderBounds": {
+				"center": { "x": 0.0, "y": 0.0, "z": 0.0 },
+				"extents": { "x": 0.0, "y": 0.0, "z": 0.0 }
+			},
+			"isa": {
+				"type": "t:2"
+			}	
+		}
 
 		# Parse each item in the template
 		tmp["barcode"] = json_data["_barcode"]["_id"]
@@ -128,9 +126,9 @@ for path in os.listdir(".\\"):
 		else:
 			tmp["packedAssets"] = [ { "title": "PreviewMesh", "guid": "" } ]
 		# handle edge casae where some items might not have collider bounds
-		if "_colliderBounds" in json_data:
-			tmp["colliderBounds"]["center"] = json_data["_colliderBounds"]["m_Center"]
-			tmp["colliderBounds"]["extents"] = json_data["_colliderBounds"]["m_Extent"]
+		if "_colliderBounds" in json_data:			
+			tmp["colliderBounds"]["center"] = json_data["_colliderBounds"]["m_Center"].copy()
+			tmp["colliderBounds"]["extents"] = json_data["_colliderBounds"]["m_Extent"].copy()			
 		else:
 			tmp["colliderBounds"] = { }
 		
@@ -138,6 +136,7 @@ for path in os.listdir(".\\"):
 		index += 1
 		crates.append({ "ref": "o:"+str(index), "type": "t:2" })
 		objects.update( { "o:" + str(index): tmp } )
+		tmp = None;
 
 # Add in the parsed data into the header
 headerTmp["objects"]["o:1"]["crates"] = crates
