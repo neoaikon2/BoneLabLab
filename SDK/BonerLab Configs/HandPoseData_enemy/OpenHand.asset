@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae77e81f6382c23b0461b2b820d2dfc9, type: 3}
+  m_Name: OpenHand
+  m_EditorClassIdentifier:
+  hand2:
+    x: -0.018062184
+    y: -0.09309537
+    z: -0.18960796
+    w: 0.9772696
+  handleInHandPos:
+    x: 0
+    y: 0
+    z: 0
+  handleInHandRot:
+    x: 0
+    y: 0
+    z: 0
+    w: 1
+  thumb1:
+    x: 0.5200669
+    y: 0.4409779
+    z: -0.13624443
+    w: 0.7186838
+  thumb23:
+    x: 25.314478
+    y: -20.2286
+    z: 0
+  index1:
+    x: 0.0018599137
+    y: 0.08921956
+    z: 0.040832493
+    w: 0.9951729
+  index23:
+    x: -1.1845
+    y: -7.1112
+    z: 0
+  middle1:
+    x: -0.03840194
+    y: -0.0020295987
+    z: 0.004128664
+    w: 0.9992518
+  middle23:
+    x: 4.182205
+    y: -1.8516
+    z: 0
+  ring1:
+    x: -0.03604219
+    y: -0.03704458
+    z: 0.051727302
+    w: 0.9973229
+  ring23:
+    x: -1.6883
+    y: -1.6883
+    z: 0
+  pinky1:
+    x: -0.04888728
+    y: -0.1232455
+    z: 0.08789305
+    w: 0.98726666
+  pinky23:
+    x: -0
+    y: -0
+    z: 0

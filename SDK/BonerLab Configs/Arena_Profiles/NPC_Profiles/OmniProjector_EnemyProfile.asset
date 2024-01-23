@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb0e423dbf71c37b1e8cfd59d3602d4, type: 3}
+  m_Name: OmniProjector_EnemyProfile
+  m_EditorClassIdentifier:
+  enemyTitle: OMNI PROJECTOR BLITZER
+  spawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-7c6d-4f53-b61c-e4024f6d6e69
+        generated: 1
+      _version: 0.0.3
+      _palletBarcode:
+        _id: SLZ.BONELAB.Content
+        generated: 1
+    policyData: {fileID: 0}
+  baseConfig: {fileID: 11400000, guid: f40fbccd56533c54b9748ae321d31a25, type: 2}
+  iconImage: {fileID: 2800000, guid: 2d2d595b6c592f64586d9a84e8ebe732, type: 3}
+  isKing: 0
+  showEnemy: 1
+  deathMult: 3
+  entranceTimeVal: 60

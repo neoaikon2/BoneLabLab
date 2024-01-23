@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f527c448005b7b84fb0e8326a5d08398, type: 3}
+  m_Name: Plasma cart
+  m_EditorClassIdentifier:
+  projectile: {fileID: 11400000, guid: 80a15c0690428cc4dbf2b41accac83bb, type: 2}
+  cartridgeSpawnable:
+    crateRef:
+      _barcode:
+        _id: SLZ.BONELAB.Content.Spawnable.CartridgePlasma
+        generated: 1
+      _version: 0.0.3
+      _palletBarcode:
+        _id: SLZ.BONELAB.Content
+        generated: 1
+    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+  cartridgeCaseSpawnable:
+    crateRef:
+      _barcode:
+        _id: SLZ.BONELAB.Content.Spawnable.CartridgePlasmaCase
+        generated: 1
+      _version: 0.0.3
+      _palletBarcode:
+        _id: SLZ.BONELAB.Content
+        generated: 1
+    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}

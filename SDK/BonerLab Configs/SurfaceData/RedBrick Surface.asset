@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d3390982d5ad9ad7783d227a4e91619c, type: 3}
+  m_Name: RedBrick Surface
+  m_EditorClassIdentifier:
+  PenetrationResistance: 0.8
+  megaPascal: Infinity
+  isFlammable: 0
+  fireResistance: 100
+  ParicleColorTint:
+    r: 0.4245283
+    g: 0.21426664
+    b: 0.21426664
+    a: 1
+  physicMaterial: {fileID: 13400000, guid: c1678a563f80a8445a2694921882ca84, type: 2}
+  impactEffectSpawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-6786-46df-934c-6395526f636b
+        generated: 1
+      _version: 0.0.2
+      _palletBarcode:
+        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
+        generated: 1
+    policyData: {fileID: 11400000, guid: 6b83bffc7613ce24a846a1c9d463f5ed, type: 2}
+  bulletDecalSpawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-df6c-4156-9a6a-b09541747461
+        generated: 1
+      _version: 0.0.1
+      _palletBarcode:
+        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
+        generated: 1
+    policyData: {fileID: 11400000, guid: f45c2bc972bae014abae03a22628d64f, type: 2}
+  BulletDecal: {fileID: 2100000, guid: 05cee8eef07753349be738c915df695c, type: 2}
+  BluntDecal: {fileID: 2100000, guid: e29af76f58db490488eda56eb44d4f32, type: 2}

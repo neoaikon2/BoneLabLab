@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb0e423dbf71c37b1e8cfd59d3602d4, type: 3}
+  m_Name: Ford_FriendlyProfile
+  m_EditorClassIdentifier:
+  enemyTitle: FORD FRIENDLY
+  spawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-3fd8-4d50-9eaf-0695466f7264
+        generated: 1
+      _version: 0.0.1
+      _palletBarcode:
+        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
+        generated: 1
+    policyData: {fileID: 0}
+  baseConfig: {fileID: 11400000, guid: 656c5a2443e71de4c9e2dae91f1149cf, type: 2}
+  iconImage: {fileID: 2800000, guid: 26a7c9fa3810da7458a3e3df669bb078, type: 3}
+  isKing: 0
+  showEnemy: 0
+  deathMult: 1
+  entranceTimeVal: 60

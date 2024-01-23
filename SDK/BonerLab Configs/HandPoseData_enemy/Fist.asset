@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae77e81f6382c23b0461b2b820d2dfc9, type: 3}
+  m_Name: Fist
+  m_EditorClassIdentifier:
+  hand2:
+    x: 0.00043734128
+    y: 0.00066711777
+    z: 0.0033235617
+    w: 0.99999416
+  handleInHandPos:
+    x: 0
+    y: 0
+    z: 0
+  handleInHandRot:
+    x: 0
+    y: 0
+    z: 0
+    w: 1
+  thumb1:
+    x: 0.47396034
+    y: 0.42514744
+    z: 0.116653845
+    w: 0.7622357
+  thumb23:
+    x: 57.07778
+    y: 86.36258
+    z: 1
+  index1:
+    x: 0.1155328
+    y: 0.14381224
+    z: 0.63984877
+    w: 0.74603206
+  index23:
+    x: 107.53981
+    y: 86.91465
+    z: 1
+  middle1:
+    x: -0.014938914
+    y: 0.030568436
+    z: 0.6695047
+    w: 0.74202824
+  middle23:
+    x: 106.01541
+    y: 84.50946
+    z: 1
+  ring1:
+    x: -0.13844271
+    y: -0.028795334
+    z: 0.69716924
+    w: 0.7028225
+  ring23:
+    x: 111.9838
+    y: 111.9838
+    z: 1
+  pinky1:
+    x: -0.20271336
+    y: -0.06296972
+    z: 0.7480771
+    w: 0.62874705
+  pinky23:
+    x: 91.08534
+    y: 106.6654
+    z: 1

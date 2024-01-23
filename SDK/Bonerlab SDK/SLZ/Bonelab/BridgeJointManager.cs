@@ -1,0 +1,20 @@
+using UnityEngine;
+
+namespace SLZ.Bonelab
+{
+	public class BridgeJointManager : MonoBehaviour
+	{
+		public bool isWalkable;
+
+		public bool setNavCost;
+
+		public string navAreaTitle;
+
+		public SetJointRot[] bridgeControls;
+
+		[ContextMenu("ToggleBridge")]
+		public void ToggleBridge()
+		{
+		}
+	}
+}

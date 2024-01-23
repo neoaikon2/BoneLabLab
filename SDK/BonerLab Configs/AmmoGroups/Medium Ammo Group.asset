@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001057338d542498d30c555063f47d5a, type: 3}
+  m_Name: Medium Ammo Group
+  m_EditorClassIdentifier:
+  KeyName: medium
+  cartridges:
+  - {fileID: 11400000, guid: 985995f61f36b7f4eb049c3ac6e709ef, type: 2}
+  - {fileID: 11400000, guid: 3e892d6e15ad9ca4ab417414ee055eb8, type: 2}
+  - {fileID: 11400000, guid: ccebbcde6c8144a449edd72f759d2011, type: 2}

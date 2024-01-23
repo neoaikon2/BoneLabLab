@@ -1,0 +1,1279 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7e4314f1ac62c50bbc8474c9b3aec08, type: 3}
+  m_Name: GlobalAllianceTable
+  m_EditorClassIdentifier:
+  allianceData:
+  - {fileID: 11400000, guid: 061f6f05c84bbb541a08f5b865acba1e, type: 2}
+  - {fileID: 11400000, guid: 9f95bbdd72d54bf40bb56d9f08e16845, type: 2}
+  - {fileID: 11400000, guid: 7a245422ae78fa247a2f2b631565a9a0, type: 2}
+  - {fileID: 11400000, guid: 252858b063f9cd240a46b00c3c038081, type: 2}
+  - {fileID: 11400000, guid: 219421e26310cef40ac1c8da4724da86, type: 2}
+  - {fileID: 11400000, guid: a68cc60e20869964eb339a2969204a8a, type: 2}
+  - {fileID: 11400000, guid: 2d08db4bc0bbb3e4295dce3e958f26ce, type: 2}
+  - {fileID: 11400000, guid: 95511fe74556e6e4f8eededd1ba282ad, type: 2}
+  - {fileID: 11400000, guid: ebe614ecf068ed745b0d07a2bd839956, type: 2}
+  - {fileID: 11400000, guid: e4726d806b1b41f4f9e0c9206af90696, type: 2}
+  - {fileID: 11400000, guid: 2af223f70d43d6a4089891a5946769d0, type: 2}
+  - {fileID: 11400000, guid: 4fe8e0c63d826c44cbeecfe9da5a4a4e, type: 2}
+  entries:
+  - key: FORD_HAIR_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: FORD_HAIR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 0
+  - key: FORD_HAIR_NULLRAT
+    speciesX: NULLRAT
+    speciesY: FORD_HAIR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 1
+  - key: FORD_HAIR_TURRET
+    speciesX: TURRET
+    speciesY: FORD_HAIR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 2
+  - key: FORD_HAIR_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: FORD_HAIR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 3
+  - key: FORD_HAIR_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 4
+  - key: FORD_HAIR_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 5
+  - key: FORD_HAIR_CRABLET
+    speciesX: CRABLET
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 6
+  - key: FORD_HAIR_FORDLET
+    speciesX: FORDLET
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 7
+  - key: FORD_HAIR_NULLBODY
+    speciesX: NULLBODY
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 8
+  - key: FORD_HAIR_EARLY_EXIT
+    speciesX: EARLY_EXIT
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 9
+  - key: FORD_HAIR_FORD_SHORT_HAIR
+    speciesX: FORD_SHORT_HAIR
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 10
+  - key: FORD_HAIR_FORD_HAIR
+    speciesX: FORD_HAIR
+    speciesY: FORD_HAIR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 11
+  - key: FORD_SHORT_HAIR_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 12
+  - key: FORD_SHORT_HAIR_NULLRAT
+    speciesX: NULLRAT
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 13
+  - key: FORD_SHORT_HAIR_TURRET
+    speciesX: TURRET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 14
+  - key: FORD_SHORT_HAIR_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 15
+  - key: FORD_SHORT_HAIR_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 16
+  - key: FORD_SHORT_HAIR_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 17
+  - key: FORD_SHORT_HAIR_CRABLET
+    speciesX: CRABLET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 18
+  - key: FORD_SHORT_HAIR_FORDLET
+    speciesX: FORDLET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 19
+  - key: FORD_SHORT_HAIR_NULLBODY
+    speciesX: NULLBODY
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 20
+  - key: FORD_SHORT_HAIR_EARLY_EXIT
+    speciesX: EARLY_EXIT
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 21
+  - key: FORD_SHORT_HAIR_FORD_SHORT_HAIR
+    speciesX: FORD_SHORT_HAIR
+    speciesY: FORD_SHORT_HAIR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 22
+  - key: EARLY_EXIT_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: EARLY_EXIT
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 23
+  - key: EARLY_EXIT_NULLRAT
+    speciesX: NULLRAT
+    speciesY: EARLY_EXIT
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 24
+  - key: EARLY_EXIT_TURRET
+    speciesX: TURRET
+    speciesY: EARLY_EXIT
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 25
+  - key: EARLY_EXIT_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 26
+  - key: EARLY_EXIT_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 27
+  - key: EARLY_EXIT_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 28
+  - key: EARLY_EXIT_CRABLET
+    speciesX: CRABLET
+    speciesY: EARLY_EXIT
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 29
+  - key: EARLY_EXIT_FORDLET
+    speciesX: FORDLET
+    speciesY: EARLY_EXIT
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 30
+  - key: EARLY_EXIT_NULLBODY
+    speciesX: NULLBODY
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 31
+  - key: EARLY_EXIT_EARLY_EXIT
+    speciesX: EARLY_EXIT
+    speciesY: EARLY_EXIT
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 32
+  - key: NULLBODY_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: NULLBODY
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 33
+  - key: NULLBODY_NULLRAT
+    speciesX: NULLRAT
+    speciesY: NULLBODY
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 34
+  - key: NULLBODY_TURRET
+    speciesX: TURRET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 35
+  - key: NULLBODY_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 36
+  - key: NULLBODY_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 37
+  - key: NULLBODY_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 38
+  - key: NULLBODY_CRABLET
+    speciesX: CRABLET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 39
+  - key: NULLBODY_FORDLET
+    speciesX: FORDLET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 40
+  - key: NULLBODY_NULLBODY
+    speciesX: NULLBODY
+    speciesY: NULLBODY
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 41
+  - key: FORDLET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 42
+  - key: FORDLET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 43
+  - key: FORDLET_TURRET
+    speciesX: TURRET
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 44
+  - key: FORDLET_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 45
+  - key: FORDLET_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 46
+  - key: FORDLET_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 47
+  - key: FORDLET_CRABLET
+    speciesX: CRABLET
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 48
+  - key: FORDLET_FORDLET
+    speciesX: FORDLET
+    speciesY: FORDLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 49
+  - key: CRABLET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: CRABLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 50
+  - key: CRABLET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: CRABLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 51
+  - key: CRABLET_TURRET
+    speciesX: TURRET
+    speciesY: CRABLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 52
+  - key: CRABLET_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: CRABLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 53
+  - key: CRABLET_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: CRABLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 54
+  - key: CRABLET_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: CRABLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 55
+  - key: CRABLET_CRABLET
+    speciesX: CRABLET
+    speciesY: CRABLET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 56
+  - key: OMNIPROJECTOR_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: OMNIPROJECTOR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 57
+  - key: OMNIPROJECTOR_NULLRAT
+    speciesX: NULLRAT
+    speciesY: OMNIPROJECTOR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 58
+  - key: OMNIPROJECTOR_TURRET
+    speciesX: TURRET
+    speciesY: OMNIPROJECTOR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 59
+  - key: OMNIPROJECTOR_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: OMNIPROJECTOR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 60
+  - key: OMNIPROJECTOR_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: OMNIPROJECTOR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 61
+  - key: OMNIPROJECTOR_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: OMNIPROJECTOR
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 62
+  - key: OMNIWRECKER_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: OMNIWRECKER
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 63
+  - key: OMNIWRECKER_NULLRAT
+    speciesX: NULLRAT
+    speciesY: OMNIWRECKER
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 64
+  - key: OMNIWRECKER_TURRET
+    speciesX: TURRET
+    speciesY: OMNIWRECKER
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 65
+  - key: OMNIWRECKER_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: OMNIWRECKER
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 66
+  - key: OMNIWRECKER_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: OMNIWRECKER
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 67
+  - key: OMNITURRET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: OMNITURRET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 68
+  - key: OMNITURRET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: OMNITURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 69
+  - key: OMNITURRET_TURRET
+    speciesX: TURRET
+    speciesY: OMNITURRET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 70
+  - key: OMNITURRET_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: OMNITURRET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 71
+  - key: TURRET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: TURRET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 72
+  - key: TURRET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: TURRET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 73
+  - key: TURRET_TURRET
+    speciesX: TURRET
+    speciesY: TURRET
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 74
+  - key: NULLRAT_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: NULLRAT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 75
+  - key: NULLRAT_NULLRAT
+    speciesX: NULLRAT
+    speciesY: NULLRAT
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 76
+  - key: VOIDMAN_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: VOIDMAN
+    agression: 0
+    graphPos:
+      x: 0
+      y: 0
+    index: 77
+  prevEntries:
+  - key: FORD_HAIR_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 0
+  - key: FORD_HAIR_NULLRAT
+    speciesX: NULLRAT
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 1
+  - key: FORD_HAIR_TURRET
+    speciesX: TURRET
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 2
+  - key: FORD_HAIR_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 3
+  - key: FORD_HAIR_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 4
+  - key: FORD_HAIR_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 5
+  - key: FORD_HAIR_CRABLET
+    speciesX: CRABLET
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 6
+  - key: FORD_HAIR_FORDLET
+    speciesX: FORDLET
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 7
+  - key: FORD_HAIR_NULLBODY
+    speciesX: NULLBODY
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 8
+  - key: FORD_HAIR_EARLY_EXIT
+    speciesX: EARLY_EXIT
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 9
+  - key: FORD_HAIR_FORD_SHORT_HAIR
+    speciesX: FORD_SHORT_HAIR
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 10
+  - key: FORD_HAIR_FORD_HAIR
+    speciesX: FORD_HAIR
+    speciesY: FORD_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 11
+  - key: FORD_SHORT_HAIR_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 12
+  - key: FORD_SHORT_HAIR_NULLRAT
+    speciesX: NULLRAT
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 13
+  - key: FORD_SHORT_HAIR_TURRET
+    speciesX: TURRET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 14
+  - key: FORD_SHORT_HAIR_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 15
+  - key: FORD_SHORT_HAIR_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 16
+  - key: FORD_SHORT_HAIR_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 17
+  - key: FORD_SHORT_HAIR_CRABLET
+    speciesX: CRABLET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 18
+  - key: FORD_SHORT_HAIR_FORDLET
+    speciesX: FORDLET
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 19
+  - key: FORD_SHORT_HAIR_NULLBODY
+    speciesX: NULLBODY
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 20
+  - key: FORD_SHORT_HAIR_EARLY_EXIT
+    speciesX: EARLY_EXIT
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 21
+  - key: FORD_SHORT_HAIR_FORD_SHORT_HAIR
+    speciesX: FORD_SHORT_HAIR
+    speciesY: FORD_SHORT_HAIR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 22
+  - key: EARLY_EXIT_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 23
+  - key: EARLY_EXIT_NULLRAT
+    speciesX: NULLRAT
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 24
+  - key: EARLY_EXIT_TURRET
+    speciesX: TURRET
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 25
+  - key: EARLY_EXIT_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 26
+  - key: EARLY_EXIT_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 27
+  - key: EARLY_EXIT_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 28
+  - key: EARLY_EXIT_CRABLET
+    speciesX: CRABLET
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 29
+  - key: EARLY_EXIT_FORDLET
+    speciesX: FORDLET
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 30
+  - key: EARLY_EXIT_NULLBODY
+    speciesX: NULLBODY
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 31
+  - key: EARLY_EXIT_EARLY_EXIT
+    speciesX: EARLY_EXIT
+    speciesY: EARLY_EXIT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 32
+  - key: NULLBODY_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 33
+  - key: NULLBODY_NULLRAT
+    speciesX: NULLRAT
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 34
+  - key: NULLBODY_TURRET
+    speciesX: TURRET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 35
+  - key: NULLBODY_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 36
+  - key: NULLBODY_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 37
+  - key: NULLBODY_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 38
+  - key: NULLBODY_CRABLET
+    speciesX: CRABLET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 39
+  - key: NULLBODY_FORDLET
+    speciesX: FORDLET
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 40
+  - key: NULLBODY_NULLBODY
+    speciesX: NULLBODY
+    speciesY: NULLBODY
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 41
+  - key: FORDLET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 42
+  - key: FORDLET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 43
+  - key: FORDLET_TURRET
+    speciesX: TURRET
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 44
+  - key: FORDLET_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 45
+  - key: FORDLET_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 46
+  - key: FORDLET_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 47
+  - key: FORDLET_CRABLET
+    speciesX: CRABLET
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 48
+  - key: FORDLET_FORDLET
+    speciesX: FORDLET
+    speciesY: FORDLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 49
+  - key: CRABLET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: CRABLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 50
+  - key: CRABLET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: CRABLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 51
+  - key: CRABLET_TURRET
+    speciesX: TURRET
+    speciesY: CRABLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 52
+  - key: CRABLET_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: CRABLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 53
+  - key: CRABLET_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: CRABLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 54
+  - key: CRABLET_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: CRABLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 55
+  - key: CRABLET_CRABLET
+    speciesX: CRABLET
+    speciesY: CRABLET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 56
+  - key: OMNIPROJECTOR_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: OMNIPROJECTOR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 57
+  - key: OMNIPROJECTOR_NULLRAT
+    speciesX: NULLRAT
+    speciesY: OMNIPROJECTOR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 58
+  - key: OMNIPROJECTOR_TURRET
+    speciesX: TURRET
+    speciesY: OMNIPROJECTOR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 59
+  - key: OMNIPROJECTOR_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: OMNIPROJECTOR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 60
+  - key: OMNIPROJECTOR_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: OMNIPROJECTOR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 61
+  - key: OMNIPROJECTOR_OMNIPROJECTOR
+    speciesX: OMNIPROJECTOR
+    speciesY: OMNIPROJECTOR
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 62
+  - key: OMNIWRECKER_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: OMNIWRECKER
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 63
+  - key: OMNIWRECKER_NULLRAT
+    speciesX: NULLRAT
+    speciesY: OMNIWRECKER
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 64
+  - key: OMNIWRECKER_TURRET
+    speciesX: TURRET
+    speciesY: OMNIWRECKER
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 65
+  - key: OMNIWRECKER_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: OMNIWRECKER
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 66
+  - key: OMNIWRECKER_OMNIWRECKER
+    speciesX: OMNIWRECKER
+    speciesY: OMNIWRECKER
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 67
+  - key: OMNITURRET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: OMNITURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 68
+  - key: OMNITURRET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: OMNITURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 69
+  - key: OMNITURRET_TURRET
+    speciesX: TURRET
+    speciesY: OMNITURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 70
+  - key: OMNITURRET_OMNITURRET
+    speciesX: OMNITURRET
+    speciesY: OMNITURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 71
+  - key: TURRET_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: TURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 72
+  - key: TURRET_NULLRAT
+    speciesX: NULLRAT
+    speciesY: TURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 73
+  - key: TURRET_TURRET
+    speciesX: TURRET
+    speciesY: TURRET
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 74
+  - key: NULLRAT_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: NULLRAT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 75
+  - key: NULLRAT_NULLRAT
+    speciesX: NULLRAT
+    speciesY: NULLRAT
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 76
+  - key: VOIDMAN_VOIDMAN
+    speciesX: VOIDMAN
+    speciesY: VOIDMAN
+    agression: 1
+    graphPos:
+      x: 0
+      y: 0
+    index: 77
+  dataA: {fileID: 11400000, guid: 061f6f05c84bbb541a08f5b865acba1e, type: 2}
+  dataB: {fileID: 11400000, guid: 9f95bbdd72d54bf40bb56d9f08e16845, type: 2}

@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96beacdaa46b5d2008e5021674564215, type: 3}
+  m_Name: Ford_Default_1
+  m_EditorClassIdentifier:
+  puppetState: 0
+  restingRange: 5
+  freezeWhileResting: 0
+  homeIsPost: 0
+  activeRange: 7
+  roamSpeed: 1.35
+  roamRange:
+    x: 15
+    y: 15
+  roamAngSpeed: 180
+  roamFrequency: 0.2
+  roamWanders: 0
+  investigateRange: 11
+  breakAgroTargetDistance: 35
+  breakAgroHomeDistance: 50
+  agroedSpeed: 1.25
+  agroedAngSpeed: 180
+  meleeAttackMask:
+    serializedVersion: 2
+    m_Bits: 37121
+  enableThrowAttack: 0
+  throwMaxRange: 20
+  throwMinRange: 3
+  throwCooldown: 3
+  throwVelocity: 4
+  gunRange: 60
+  gunCooldown: 1.2
+  accuracy: 3
+  reloadTime: 2.2
+  clipSize: 1
+  burstSize: 3
+  desiredGunDistance: 4
+  baseColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  agroColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 0
+  fwdThresh: 0.5
+  forcePath: 0
+  sensorSettings:
+    blockVisionRaycast:
+      serializedVersion: 2
+      m_Bits: 8192
+    visionFov: 90
+  healthSettings:
+    maxHitPoints: 4
+    maxAppendageHp: 4
+    stunRecovery: 0.2
+    maxStunSeconds: 3
+    minHeadImpact: 40
+    minSpineImpact: 80
+    minLimbImpact: 80
+    aggression: 0.499
+    irritability: 1
+    placability: 1
+    vengefulness: 1
+  restingUsage:
+    hips: 1
+    spine: 0.35
+    legLf: 1.5
+    legRt: 0.7
+    armLf: 0.05
+    armRt: 0.05
+  roamUsage:
+    hips: 1
+    spine: 0.35
+    legLf: 1
+    legRt: 1
+    armLf: 0.5
+    armRt: 0.5
+  investigateUsage:
+    hips: 1
+    spine: 0.35
+    legLf: 1
+    legRt: 1
+    armLf: 0.6
+    armRt: 0.6
+  engagedUsage:
+    hips: 1
+    spine: 0.35
+    legLf: 1
+    legRt: 1
+    armLf: 1
+    armRt: 1
+  agroedUsage:
+    hips: 1
+    spine: 0.35
+    legLf: 1
+    legRt: 1
+    armLf: 1
+    armRt: 1
+  mentalState: 0
+  locoState: 0

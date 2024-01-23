@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001057338d542498d30c555063f47d5a, type: 3}
+  m_Name: Heavy Ammo Group
+  m_EditorClassIdentifier:
+  KeyName: heavy
+  cartridges:
+  - {fileID: 11400000, guid: 12d865535c047b3448b62ab7113ac0b6, type: 2}
+  - {fileID: 11400000, guid: a475a01a0cc367344bb752e2a0133a5c, type: 2}
+  - {fileID: 11400000, guid: 4750f2a64b6af5d4e9cce07d70fd04c7, type: 2}
+  - {fileID: 11400000, guid: ecd68516a0e8e9543bc20d9f0ca9e0d3, type: 2}
+  - {fileID: 11400000, guid: fc1e1114e578c5642b1ec86a5ce3cd7a, type: 2}
