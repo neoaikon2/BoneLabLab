@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Target Snake
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.TargetSnake
+    generated: 1
+  _barcodeOld:
+    _id: SLZ.BONELAB.Content.Spawnable.PropTargetSnake
+    generated: 1
+  _slimCode:
+    _byteArray: 
+  _title: Target Snake
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Complex
+  _mainAsset:
+    _assetGUID: 18664ff3157a5e947a57ec4b8f1491b8
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 17ee40c0164b18148a0b2b533ddfdd6b
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.121399686, y: 0.58789206, z: 0.0000006854534}
+    m_Extent: {x: 0.24880216, y: 0.7238941, z: 0.3524039}

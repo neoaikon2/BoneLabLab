@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Printer
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.Printer
+    generated: 1
+  _barcodeOld:
+    _id: null.empty.barcode
+    generated: 0
+  _slimCode:
+    _byteArray: 
+  _title: Printer
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Destructible
+  _mainAsset:
+    _assetGUID: 4e30c817743546f479addd1281165492
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 40c614a5c5828f54ebcc2d1bbfd73adc
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00000008940697, y: 0.13621026, z: 0.03601724}
+    m_Extent: {x: 0.27000222, y: 0.15161717, z: 0.25756794}

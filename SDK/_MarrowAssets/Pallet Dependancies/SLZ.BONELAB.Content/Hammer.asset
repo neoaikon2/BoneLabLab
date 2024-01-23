@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Hammer
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-11d0-4632-b36e-fa9548616d6d
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-11d0-4632-b36e-fa9548616d6d
+    generated: 1
+  _slimCode:
+    _byteArray: d76c5fd943f08d44b6a80f18a6c834fc
+  _title: Hammer
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blunt
+  _mainAsset:
+    _assetGUID: 73d1b1e57a115d543b3cb839462192be
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: a1c1fc0537b5c2643afcab255979657e
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00018605962, y: 0.0032831877, z: -0.0012747496}
+    m_Extent: {x: 0.022686053, y: 0.08256021, z: 0.21242513}

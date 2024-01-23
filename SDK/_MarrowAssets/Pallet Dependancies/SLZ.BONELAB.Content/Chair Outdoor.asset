@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Chair Outdoor
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.ChairOutdoor
+    generated: 1
+  _barcodeOld:
+    _id: null.empty.barcode
+    generated: 0
+  _slimCode:
+    _byteArray: 
+  _title: Chair Outdoor
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Furniture
+  - Complex
+  _mainAsset:
+    _assetGUID: e23e2eea5ef2f8d4a81dc87ec7117570
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 04ba4843cf0a6214387c7ffccee18dda
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.011220038, y: -0.029301345, z: 0.6280661}
+    m_Extent: {x: 0.33630443, y: 0.41332352, z: 0.62951094}

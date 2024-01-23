@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gym Soccer Ball
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-33f4-4b5b-bb3b-d91547796d53
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-33f4-4b5b-bb3b-d91547796d53
+    generated: 1
+  _slimCode:
+    _byteArray: a3366ec29bbbbf47a2e54ed45726afa5
+  _title: Gym Soccer Ball
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Gym
+  _mainAsset:
+    _assetGUID: 29b82d759cfdb5b4aa76556ff49ded94
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 47ddbecca4ee37a46b584710ac1569b6
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000035762787, y: 0.9086952, z: 0}
+    m_Extent: {x: 0.9155841, y: 0.9155841, z: 0.9155841}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Die D6
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.DieD6
+    generated: 1
+  _barcodeOld:
+    _id: null.empty.barcode
+    generated: 0
+  _slimCode:
+    _byteArray: 
+  _title: Die D6
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Toy
+  _mainAsset:
+    _assetGUID: 3de9b98b49739da4fbfb1b035bc1c302
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 109d6b936b325ae49bdb84d7c06277c5
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00006182119, y: 0.000089645386, z: 0.00004474446}
+    m_Extent: {x: 0.033301268, y: 0.03445886, z: 0.033149444}

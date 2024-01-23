@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Chair Wooden A
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.ChairWoodenA
+    generated: 1
+  _barcodeOld:
+    _id: null.empty.barcode
+    generated: 0
+  _slimCode:
+    _byteArray: 
+  _title: Chair Wooden A
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Destructible
+  - Furniture
+  _mainAsset:
+    _assetGUID: 4d910fe568e934d49806208eeec46385
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: acf2dd0c04fba1d45a17e944a2890745
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.0000016391277, y: 0.47232556, z: -0.05943027}
+    m_Extent: {x: 0.2614211, y: 0.47240818, z: 0.25834745}

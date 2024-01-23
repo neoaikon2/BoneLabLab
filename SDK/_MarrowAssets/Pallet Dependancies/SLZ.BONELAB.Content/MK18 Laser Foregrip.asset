@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: MK18 Laser Foregrip
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-ec8e-418a-a545-cf955269666c
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-ec8e-418a-a545-cf955269666c
+    generated: 1
+  _slimCode:
+    _byteArray: 263e36991b793c409f24ff48c7f68100
+  _title: MK18 Laser Foregrip
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Gun
+  - Rifle
+  _mainAsset:
+    _assetGUID: 8e703da18c91b894a850fe6ae4b51c09
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 7b3335d2543a1d04dbbaf8b0b0ebde52
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.020336892, y: -0.012994304, z: 0.038197637}
+    m_Extent: {x: 0.042870495, y: 0.11662702, z: 0.3692878}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gym Cylinder Half A
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-a7be-49a9-b6f2-bcbf47796d43
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-a7be-49a9-b6f2-bcbf47796d43
+    generated: 1
+  _slimCode:
+    _byteArray: d92b45d194f91b479db3ed84c63457ff
+  _title: Gym Cylinder Half A
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Gym
+  _mainAsset:
+    _assetGUID: 0a3688f23c7e3f84e90311be3a589802
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: e66add8bf1fac5b4d96957774143513e
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00000166893, y: -0.0000009536743, z: -0.0000035762787}
+    m_Extent: {x: 1.9964578, y: 0.99803543, z: 1.5000122}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gym D10
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-ea32-4493-898e-1aab50726f70
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-ea32-4493-898e-1aab50726f70
+    generated: 1
+  _slimCode:
+    _byteArray: 19260581555eb249b958b21cb7259348
+  _title: Gym D10
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Gym
+  _mainAsset:
+    _assetGUID: 37a4930ece69f124b9c0707adca9420c
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 4a1dd726a2a9aec47bd6db8b8b6826a2
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.0000002682209, y: 0.2366269, z: -0.00000014901161}
+    m_Extent: {x: 0.29659516, y: 0.23685464, z: 0.3546507}

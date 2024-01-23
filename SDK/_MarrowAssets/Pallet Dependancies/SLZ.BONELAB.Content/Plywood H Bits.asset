@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Plywood H Bits
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.PlywoodHBits
+    generated: 1
+  _barcodeOld:
+    _id: null.empty.barcode
+    generated: 0
+  _slimCode:
+    _byteArray: 
+  _title: Plywood H Bits
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: faea8efd822410a45af05d2d42b3818a
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 062b475e644f9014fb986260e38c1370
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.5689121, y: 0.018979168, z: 0.050998807}
+    m_Extent: {x: 0.5689122, y: 0.028587123, z: 0.057386026}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Prop - KeyBall Purple
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.PropKeyBallPurple
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.PropKeyBallPurple
+    generated: 1
+  _slimCode:
+    _byteArray: 71e3ddf4725bfd46a2498a907a51e690
+  _title: Prop - KeyBall Purple
+  _description: Keyball Purple
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags:
+  - Redacted
+  _mainAsset:
+    _assetGUID: ad25b96564ff97944937e4cd095ffde0
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 6d6d5d036e9ee1945912266b8bff3eeb
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000023841858, y: 0, z: 0.00000011920929}
+    m_Extent: {x: 0.875, y: 0.875, z: 0.875}

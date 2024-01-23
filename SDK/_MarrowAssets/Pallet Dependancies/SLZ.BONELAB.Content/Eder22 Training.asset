@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Eder22 Training
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.HandgunEder22training
+    generated: 1
+  _barcodeOld:
+    _id: null.empty.barcode
+    generated: 0
+  _slimCode:
+    _byteArray: 8ce255b7c4b0034892f92be4eea7ea81
+  _title: Eder22 Training
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Gun
+  - Pistol
+  _mainAsset:
+    _assetGUID: 2dadca2a1e5b39c4aa63ebb8da5f0e37
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 7e5aa8461309ce14596f3175865d6597
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.000000024214387, y: -0.04307819, z: 0.0079395175}
+    m_Extent: {x: 0.020000014, y: 0.062267937, z: 0.09816048}

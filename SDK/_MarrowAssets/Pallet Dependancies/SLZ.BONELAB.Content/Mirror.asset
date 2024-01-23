@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Mirror
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-8fc2-4596-b868-a7644d697272
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-8fc2-4596-b868-a7644d697272
+    generated: 1
+  _slimCode:
+    _byteArray: 9951d8e296b11a47a1412d7ad202f3d9
+  _title: Mirror
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Complex
+  _mainAsset:
+    _assetGUID: 78aff625827fd5b41b048f6146e0d12a
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 2d5110ec743dd4942b5c3dc6c66bb733
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.085978866, y: 2.0724568, z: 1.9322636}
+    m_Extent: {x: 2.0000863, y: 2.0000653, z: 2.1255794}

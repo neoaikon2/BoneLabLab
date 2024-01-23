@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Combat Knife
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-1fb8-477c-afbe-2a95436f6d62
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-1fb8-477c-afbe-2a95436f6d62
+    generated: 1
+  _slimCode:
+    _byteArray: 4d2460e28ed07143a54abfce57f5fd23
+  _title: Combat Knife
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blade
+  _mainAsset:
+    _assetGUID: a3fab58423303b6498a8947a6d193611
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 7db6c6b59b77797469f56d5da485e9c1
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: -0.00045508146, z: 0.000000070780516}
+    m_Extent: {x: 0.02064775, y: 0.1855455, z: 0.035000168}

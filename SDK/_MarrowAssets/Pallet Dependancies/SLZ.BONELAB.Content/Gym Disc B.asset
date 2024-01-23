@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gym Disc B
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-4295-4778-8761-89dd47796d44
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-4295-4778-8761-89dd47796d44
+    generated: 1
+  _slimCode:
+    _byteArray: 569ac3b850eddd4e9719bfffa8012e1f
+  _title: Gym Disc B
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Gym
+  _mainAsset:
+    _assetGUID: 44a862c547d69e040afa97a47772cbfd
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 1d2322c4bc52c774e8ac9cec79aecb4b
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000011920929, y: 0.2500002, z: -0.00000011920929}
+    m_Extent: {x: 1.0000008, y: 0.2499995, z: 1.0000008}

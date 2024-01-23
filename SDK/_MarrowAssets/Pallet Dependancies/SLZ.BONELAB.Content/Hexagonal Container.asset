@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Hexagonal Container
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-3ac8-4f19-913b-6bd348657861
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-3ac8-4f19-913b-6bd348657861
+    generated: 1
+  _slimCode:
+    _byteArray: f94072d168d3864aa5b01729da5c380b
+  _title: Hexagonal Container
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  _mainAsset:
+    _assetGUID: b1acc3d50619bea408d92327e07cbd53
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: a1d74ca3a2e2b564c9c044a9890b3453
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.000004053116, y: -0.000004053116, z: -0.10767484}
+    m_Extent: {x: 1.0000262, y: 0.86603785, z: 2.8089972}

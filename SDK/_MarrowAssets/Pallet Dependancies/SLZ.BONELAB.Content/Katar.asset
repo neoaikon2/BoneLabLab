@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Katar
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-e606-4a82-878c-652f4b617461
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-e606-4a82-878c-652f4b617461
+    generated: 1
+  _slimCode:
+    _byteArray: 6f4eb099c0834c4e9751840227933686
+  _title: Katar
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blade
+  _mainAsset:
+    _assetGUID: bde33ae35b4662449843f71e7ed61434
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 3e62da4f25ff99b4187f3ccbbdd7fd49
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0.035287738, z: -0.00016237795}
+    m_Extent: {x: 0.012500048, y: 0.25001287, z: 0.066162616}

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Staplegun
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.MagazineStaplegun
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.MagazineStaplegun
+    generated: 1
+  _slimCode:
+    _byteArray: 7b0a5fdc23b8a549b982fed4ce7de472
+  _title: Staplegun
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: acbab5800a6353e47b989db353afbd7e
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: eee9d5d2506d87840808a79cc553051e
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.0025999993, y: 0.004113205, z: 0}
+    m_Extent: {x: 0.0275, y: 0.08851321, z: 0.02}

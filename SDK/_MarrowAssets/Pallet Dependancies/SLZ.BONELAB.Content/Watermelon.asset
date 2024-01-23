@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Watermelon
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-1e43-4d94-a504-31d457617465
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-1e43-4d94-a504-31d457617465
+    generated: 1
+  _slimCode:
+    _byteArray: a07c33dc903e8d41869c20aec444f0a4
+  _title: Watermelon
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Destructible
+  _mainAsset:
+    _assetGUID: 5bf20956379fa3b428ebd92e39febda0
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 11bdd6a786d83544ab2ba70c3555b516
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.000000029802322, y: 0.0054194927, z: 0}
+    m_Extent: {x: 0.17440367, y: 0.19320625, z: 0.17709412}

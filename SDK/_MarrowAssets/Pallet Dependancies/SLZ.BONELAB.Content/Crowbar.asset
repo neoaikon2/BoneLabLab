@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Crowbar
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-0c8a-4b82-9f8b-7a9543726f77
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-0c8a-4b82-9f8b-7a9543726f77
+    generated: 1
+  _slimCode:
+    _byteArray: 644bbb8bb920f44684d25333385034d1
+  _title: Crowbar
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blunt
+  _mainAsset:
+    _assetGUID: 662ab9f778a97ff43bb187f79549224e
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 883df7f4be48378428c64d21c0828b48
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00030000508, y: -0.048710726, z: 0.0050554276}
+    m_Extent: {x: 0.02480023, y: 0.12042109, z: 0.38504636}

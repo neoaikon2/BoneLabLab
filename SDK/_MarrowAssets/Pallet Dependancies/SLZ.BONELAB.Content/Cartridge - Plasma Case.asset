@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Cartridge - Plasma Case
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.CartridgePlasmaCase
+    generated: 1
+  _barcodeOld:
+    _id: SLZ.BONELAB.Content.Spawnable.CartridgePlasmaCase
+    generated: 1
+  _slimCode:
+    _byteArray: 12e9fbd2dc27e347b8e14a472e823b5e
+  _title: Cartridge - Plasma Case
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: d166ab65df0e7e7428389f357429ac36
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 639d096e6f6d7574bad41aa44535bded
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.0000000013969839, y: -0.00003098836, z: 0.0025326225}
+    m_Extent: {x: 0.006536245, y: 0.006536245, z: 0.0065362444}

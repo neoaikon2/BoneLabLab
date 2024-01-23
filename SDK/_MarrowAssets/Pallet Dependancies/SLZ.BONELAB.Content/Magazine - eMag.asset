@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Magazine - eMag
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.CORE.Spawnable.MagazineeMag
+    generated: 1
+  _barcodeOld:
+    _id: SLZ.BONELAB.CORE.Spawnable.MagazineeMag
+    generated: 1
+  _slimCode:
+    _byteArray: c74f17a0db986543a0b175d77a58fda0
+  _title: Magazine - eMag
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: 0309f2f013c1d924baf6e35c3361a6e2
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: a3f12089cbe789c41b45df1d520e4523
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.053455498, y: 0.07326281, z: 0}
+    m_Extent: {x: 0.03935531, y: 0.07113689, z: 0.020000009}

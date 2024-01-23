@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: P350 Mag
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-dfeb-4562-9b6e-76d04d61675f
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-dfeb-4562-9b6e-76d04d61675f
+    generated: 1
+  _slimCode:
+    _byteArray: f731e6b55c1ea84e9f3f6dae30a96f3a
+  _title: P350 Mag
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: a95c9df99916854449a1b1de1a5f8f81
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 84bfeef40254cb042871dd30fe188faf
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.000000018626451, y: 0.009323988, z: 0.0032502487}
+    m_Extent: {x: 0.020000009, y: 0.064424925, z: 0.0331963}

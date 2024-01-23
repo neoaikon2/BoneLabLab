@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Crown
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-c4c8-41de-8644-0a9543726f77
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-c4c8-41de-8644-0a9543726f77
+    generated: 1
+  _slimCode:
+    _byteArray: 6884dd9c35436e48b7ac7c4eab1169ee
+  _title: Crown
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Wearable
+  _mainAsset:
+    _assetGUID: a1ec7ac1843c0d24781fce826120f079
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 506822c2a0fa9594282aa8f00d40dacf
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00010663271, y: 0.03940322, z: -0.0007430017}
+    m_Extent: {x: 0.11234296, y: 0.045877077, z: 0.13188624}

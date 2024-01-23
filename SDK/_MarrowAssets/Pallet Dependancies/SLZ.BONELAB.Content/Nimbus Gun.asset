@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Nimbus Gun
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-6b38-438a-a324-d7e147616467
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-6b38-438a-a324-d7e147616467
+    generated: 1
+  _slimCode:
+    _byteArray: 847974f421c2d44e9921319cb294ed01
+  _title: Nimbus Gun
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Gadget
+  - DevTool
+  _mainAsset:
+    _assetGUID: 09ac423e4befddf47bf9037e4b79fc73
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 5dd696f19c665d443a73e0c89de6e694
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.04226237, y: 0.13944183, z: 0.04661785}
+    m_Extent: {x: 0.09830026, y: 0.15783879, z: 0.13598788}

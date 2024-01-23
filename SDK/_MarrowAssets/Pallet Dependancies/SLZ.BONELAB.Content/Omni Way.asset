@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Omni Way
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.OmniWay
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.OmniWay
+    generated: 1
+  _slimCode:
+    _byteArray: aa3aeaa454712847b4e5de95884c1362
+  _title: Omni Way
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Gadget
+  _mainAsset:
+    _assetGUID: 4cb281a5f913ebb4181f754e742dc69b
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 9f42e90cdef346740866e31246602e6c
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00058567524, y: 0.9538387, z: -0.031784892}
+    m_Extent: {x: 0.42790186, y: 0.9538387, z: 0.611714}

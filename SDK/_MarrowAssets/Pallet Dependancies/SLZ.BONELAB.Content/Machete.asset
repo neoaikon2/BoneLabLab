@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Machete
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-a767-4a58-b3ef-26064d616368
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-a767-4a58-b3ef-26064d616368
+    generated: 1
+  _slimCode:
+    _byteArray: 6e0b9f840928974a85224fe3912dd89e
+  _title: Machete
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blade
+  _mainAsset:
+    _assetGUID: 0dd1f0c08b050444584ee5394ec242c1
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 8f9960d89c2eb5d488e6f480650d50a8
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.0024455227, y: 0, z: -0.007884443}
+    m_Extent: {x: 0.033519264, y: 0.010000018, z: 0.26558506}

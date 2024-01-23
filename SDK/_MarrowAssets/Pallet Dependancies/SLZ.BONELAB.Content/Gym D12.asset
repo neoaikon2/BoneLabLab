@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gym D12
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-e1e6-488b-a49e-e0b850726f70
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-e1e6-488b-a49e-e0b850726f70
+    generated: 1
+  _slimCode:
+    _byteArray: 2b354e885bdecf44bb8e7c9e1e5b9dbb
+  _title: Gym D12
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Gym
+  _mainAsset:
+    _assetGUID: 5776b644af3d9a84cb79cf6dd20a47db
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 12dcfc631dee2c14dbfcc0e70edf1ec1
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000008940697, y: 0.31908742, z: 0}
+    m_Extent: {x: 0.3839324, y: 0.31908712, z: 0.3680965}

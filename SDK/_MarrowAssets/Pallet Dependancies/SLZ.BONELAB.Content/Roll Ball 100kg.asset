@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Roll Ball 100kg
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a83ee4ec6bd641fec424c4142.Spawnable.PropRollBall100kg
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a83ee4ec6bd641fec424c4142.Spawnable.PropRollBall100kg
+    generated: 1
+  _slimCode:
+    _byteArray: 77c5a68fcee8b54b8d5cedb6fac2bf7d
+  _title: Roll Ball 100kg
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  _mainAsset:
+    _assetGUID: 5fe7baa15915af74d9fdcae4ebfc7a2a
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 5e2098a5f33a3ca4c8943206b9df724d
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000023841858, y: 0, z: 0.00000011920929}
+    m_Extent: {x: 0.8735, y: 0.8735, z: 0.8735}

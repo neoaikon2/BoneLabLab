@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: 12G Slug Mag
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-d7ea-4c98-a79d-244e4d616761
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-d7ea-4c98-a79d-244e4d616761
+    generated: 1
+  _slimCode:
+    _byteArray: e86cd694a913b94e885dc98c411dbd3b
+  _title: 12G Slug Mag
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: 74e515f82b1b5054da7b63e392eb4afb
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: d74d9d2889006cc4b89005be1dff0f77
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0.023899987}
+    m_Extent: {x: 0.020000005, y: 0.020000005, z: 0.036300033}

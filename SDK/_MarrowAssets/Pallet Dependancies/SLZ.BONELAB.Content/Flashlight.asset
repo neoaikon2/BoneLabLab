@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Flashlight
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-38df-474e-abb3-7e81466c6173
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-38df-474e-abb3-7e81466c6173
+    generated: 1
+  _slimCode:
+    _byteArray: 992ed9a864399745933161deb43b6244
+  _title: Flashlight
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Complex
+  _mainAsset:
+    _assetGUID: 2ef948d19a2a11740864cd96ad91bebd
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 742fbd779beae204c85da4b567f08039
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.0000000037252903, y: 0.0000000037252903, z: -0.00036559254}
+    m_Extent: {x: 0.025803655, y: 0.025803681, z: 0.10804036}

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Nullbody
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Avatar.Nullbody
+    generated: 1
+  _barcodeOld:
+    _id: SLZ.BONELAB.Content.Avatar.Nullbody
+    generated: 1
+  _slimCode:
+    _byteArray: 991521abd2e88a45afea48937d234d68
+  _title: Nullbody
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: 59a9baf3126e2ec44b453c4676b2b98f
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 94dc339289468454089d39a71c940a27
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}

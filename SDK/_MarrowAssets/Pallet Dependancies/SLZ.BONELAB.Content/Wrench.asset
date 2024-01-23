@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Wrench
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-02e7-43cf-bc8d-26955772656e
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-02e7-43cf-bc8d-26955772656e
+    generated: 1
+  _slimCode:
+    _byteArray: 755423ad506b06468bd6842847526662
+  _title: Wrench
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blunt
+  _mainAsset:
+    _assetGUID: a17edb1a323b1fe44ae581d9868406bd
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: dfce47070d3a52c498b896c6e94a68a6
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.000000020489097, y: 0.03329283, z: 0.1363242}
+    m_Extent: {x: 0.02500064, y: 0.06672033, z: 0.2767225}

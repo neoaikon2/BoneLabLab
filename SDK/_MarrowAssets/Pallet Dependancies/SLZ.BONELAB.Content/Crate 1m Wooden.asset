@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Crate 1m Wooden
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-5be2-49d6-884e-d35c576f6f64
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-5be2-49d6-884e-d35c576f6f64
+    generated: 1
+  _slimCode:
+    _byteArray: 02eccb9b4bc0864892647662ab69af66
+  _title: Crate 1m Wooden
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Destructible
+  _mainAsset:
+    _assetGUID: d38e0e8e8460de7438f8ec12d81e17e0
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 23e27d14d3d20d94d9e0515c15b78946
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00000035762787, y: 0.00000011920929, z: -0.00000023841858}
+    m_Extent: {x: 0.50000495, y: 0.5000037, z: 0.5000037}

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Frying Pan
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-d0e9-4d53-9218-e76446727969
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-d0e9-4d53-9218-e76446727969
+    generated: 1
+  _slimCode:
+    _byteArray: a7d61085259abb42b7b9b318cf5c7fec
+  _title: Frying Pan
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blunt
+  _mainAsset:
+    _assetGUID: df8336345ac664e48b8de0d050bdedb1
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: d2d543b7dc00f0442a71cabbb72adf46
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.08874902, y: 0.025268648, z: 0.00045847893}
+    m_Extent: {x: 0.24674493, y: 0.030920368, z: 0.16150829}

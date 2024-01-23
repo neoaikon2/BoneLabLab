@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gym Cone A
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-067e-4466-9122-19c247796d43
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-067e-4466-9122-19c247796d43
+    generated: 1
+  _slimCode:
+    _byteArray: 35c89ef8b647864997cb62597e073006
+  _title: Gym Cone A
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Gym
+  _mainAsset:
+    _assetGUID: 3a11e9aa9c7bf4a4186c4958c850f20a
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 6ff8a375bed0c9a4db77f8c5c13ab234
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00000023841858, y: 1.3799397, z: 0.00000023841858}
+    m_Extent: {x: 0.9675808, y: 1.3799394, z: 0.9675808}

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Crate 1m Indestructible
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-935a-44e8-8036-d86043726174
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-935a-44e8-8036-d86043726174
+    generated: 1
+  _slimCode:
+    _byteArray: 0c5e1da9c0997e46b04a1c57dd22b48d
+  _title: Crate 1m Indestructible
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  _mainAsset:
+    _assetGUID: 822206534a561fb4597438784e8aff88
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 315a7d1a503286a4f829b2a02146ca51
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0.000000059604645, z: -0.00000011920929}
+    m_Extent: {x: 0.50000674, y: 0.5000049, z: 0.5000049}

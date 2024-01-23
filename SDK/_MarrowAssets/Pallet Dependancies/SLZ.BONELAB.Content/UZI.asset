@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: UZI
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-8d03-42de-93c7-f595534d4755
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-8d03-42de-93c7-f595534d4755
+    generated: 1
+  _slimCode:
+    _byteArray: 1d4e049f85b9d74eb03128880dd0ef07
+  _title: UZI
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Gun
+  - SMG
+  _mainAsset:
+    _assetGUID: 5659283b499f3c34baf39884a5334c60
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 1d1deb28e0e6e3e429e1ebf5bc209013
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.013599362, y: -0.04024814, z: -0.013713077}
+    m_Extent: {x: 0.032877732, y: 0.089871004, z: 0.12687425}

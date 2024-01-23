@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Stapler
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.Stapler
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a868247138f50c62e424c4144.Spawnable.Stapler
+    generated: 1
+  _slimCode:
+    _byteArray: eb72c7aeda9c5a4ca1a5f8455cfc3b22
+  _title: Stapler
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Gun
+  - Pistol
+  _mainAsset:
+    _assetGUID: 4a6aef8aaa5eb034c88918a9269f3989
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 35f2249faeb292243aa68a262138e781
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.04440318, y: 0.006445825, z: 0.04004366}
+    m_Extent: {x: 0.030000009, y: 0.08886914, z: 0.1051452}

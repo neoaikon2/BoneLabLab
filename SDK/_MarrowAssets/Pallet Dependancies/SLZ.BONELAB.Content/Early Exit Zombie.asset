@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Early Exit Zombie
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-2ab7-46fe-b0d6-7495466f7264
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-2ab7-46fe-b0d6-7495466f7264
+    generated: 1
+  _slimCode:
+    _byteArray: 712a93fbc9ca714f8db087d90b86aa69
+  _title: Early Exit Zombie
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - NPC
+  - Humanoid
+  _mainAsset:
+    _assetGUID: ea4372ee7e808624195deb2d70e74c63
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 5c6f00708ff7d114d9a386d837c932b3
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00000017881393, y: 0.8700777, z: 0.016470686}
+    m_Extent: {x: 0.521718, y: 0.87007797, z: 0.17442185}

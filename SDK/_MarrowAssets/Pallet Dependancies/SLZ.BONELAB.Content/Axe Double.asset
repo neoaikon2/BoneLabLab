@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Axe Double
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-6d6b-4414-a9f2-af034d656c65
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-6d6b-4414-a9f2-af034d656c65
+    generated: 1
+  _slimCode:
+    _byteArray: f54f7196de6e534a97b3e436798e76fe
+  _title: Axe Double
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blade
+  _mainAsset:
+    _assetGUID: c82c4c318df74ac4fbcef2bd8b74ecce
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: d48737ad348e46f4f9d0dbcb547b505e
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.00030003488, y: 0, z: -0.00022768974}
+    m_Extent: {x: 0.17539449, y: 0.030000007, z: 0.3958729}

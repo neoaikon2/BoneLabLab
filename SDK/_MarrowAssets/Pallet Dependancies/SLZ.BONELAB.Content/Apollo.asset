@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Apollo
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-f938-40cb-8be5-23db41706f6c
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-f938-40cb-8be5-23db41706f6c
+    generated: 1
+  _slimCode:
+    _byteArray: 8ec664b81d49ca439e6962fa8144d881
+  _title: Apollo
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Toy
+  _mainAsset:
+    _assetGUID: 6de0d17f637826b4b9fd1e30e5445e75
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 6a5eb84a2deedcb4088cdc89266976b0
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.020802274, y: 0.16010298, z: -0.08174695}
+    m_Extent: {x: 0.19327329, y: 0.19753198, z: 0.124636486}

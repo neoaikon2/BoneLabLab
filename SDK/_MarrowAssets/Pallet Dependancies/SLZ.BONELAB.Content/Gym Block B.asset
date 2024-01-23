@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gym Block B
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-a419-426e-96d9-e12e50726f70
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-a419-426e-96d9-e12e50726f70
+    generated: 1
+  _slimCode:
+    _byteArray: 7cb694f3f00d354e93c2a09b3c72c921
+  _title: Gym Block B
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Gym
+  _mainAsset:
+    _assetGUID: a132755be48288040bc2192dd46fb89b
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 8448e0db27b22aa4e8908f39444d1d63
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.9779999, y: 0.24900001, z: 0.974}
+    m_Extent: {x: 1, y: 0.25, z: 1}

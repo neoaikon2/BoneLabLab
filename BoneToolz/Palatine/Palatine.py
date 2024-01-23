@@ -3,7 +3,7 @@ import json
 
 strAssetMeta = ".asset.meta"
 strPreviewMesh = " PreviewMesh.asset.meta"
-dataPath = ".\\PreviewMeshes\\";
+dataPath = ".\\PreviewMeshes";
 
 previewGuids = [];
 

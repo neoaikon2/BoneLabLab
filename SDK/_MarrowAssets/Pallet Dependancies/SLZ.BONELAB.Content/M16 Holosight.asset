@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: M16 Holosight
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-cc53-4aac-b842-46955269666c
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-cc53-4aac-b842-46955269666c
+    generated: 1
+  _slimCode:
+    _byteArray: 91807084788f444a9d5c7d77ee7e01c6
+  _title: M16 Holosight
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Gun
+  - Rifle
+  _mainAsset:
+    _assetGUID: 50a3142753629c7459d1a186825c8db0
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: a20d7cb20df65c74d81e032d7ef10cfd
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: -0.0051925555, z: 0.13379228}
+    m_Extent: {x: 0.030000249, y: 0.11863004, z: 0.5068089}

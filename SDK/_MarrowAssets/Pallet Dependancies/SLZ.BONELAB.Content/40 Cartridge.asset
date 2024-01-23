@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: 40 Cartridge
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-7dbf-4797-b9c5-1aa734304361
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-7dbf-4797-b9c5-1aa734304361
+    generated: 1
+  _slimCode:
+    _byteArray: ec0f97b54baeed41960eb4bf31a4b9da
+  _title: 40 Cartridge
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: 61dcd7a4adb83944da735f3542e72198
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: f8e7aa2deb4d0c04ba636f9a7e92ecec
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0.0036232714}
+    m_Extent: {x: 0.005500001, y: 0.0055, z: 0.012979694}

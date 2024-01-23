@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: MP5K Sabrelake
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-6670-4ac2-a82a-a595534d474d
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-6670-4ac2-a82a-a595534d474d
+    generated: 1
+  _slimCode:
+    _byteArray: bbdc66e41a4fd44eac480051edb6b492
+  _title: MP5K Sabrelake
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Gun
+  - SMG
+  _mainAsset:
+    _assetGUID: 00043b39aebafcc48a0e05d3a2ebc683
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 6acc3da0ebe74fb4db30dcadd5f906f8
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.0000003222376, y: 0.0024759248, z: 0.031843424}
+    m_Extent: {x: 0.020000355, y: 0.11253416, z: 0.16080979}

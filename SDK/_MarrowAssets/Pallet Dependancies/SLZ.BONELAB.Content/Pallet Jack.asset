@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Pallet Jack
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-52b6-490b-8c20-1cfe50616c6c
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-52b6-490b-8c20-1cfe50616c6c
+    generated: 1
+  _slimCode:
+    _byteArray: 628688c9371a8e44bb85ce914ef6cbec
+  _title: Pallet Jack
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Gadget
+  _mainAsset:
+    _assetGUID: b9bbeebbd0d4efd468b15869a014ee06
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 575fa65f5ce2fb84886b69f11e540a73
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00010052323, y: 0.6468747, z: -0.21517074}
+    m_Extent: {x: 0.34964988, y: 0.6468748, z: 0.9789294}

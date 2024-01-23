@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Sword Claymore
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-b59c-4790-9b09-499553776f72
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-b59c-4790-9b09-499553776f72
+    generated: 1
+  _slimCode:
+    _byteArray: fce3f39b27ba85409d45550aeec8b4fd
+  _title: Sword Claymore
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blade
+  _mainAsset:
+    _assetGUID: 5c025d7c3a4711a4db203e63b22b7afd
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: b9187f9f287ca284293851335ee28a70
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000022351742, y: 0.34664935, z: 0}
+    m_Extent: {x: 0.18277194, y: 0.7471522, z: 0.020000001}

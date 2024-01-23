@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: 7.62 Cartridge Case
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-255d-46f1-90af-fa63372e3632
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-255d-46f1-90af-fa63372e3632
+    generated: 1
+  _slimCode:
+    _byteArray: 2b1bba96d37c7a47b6523133ff80dae7
+  _title: 7.62 Cartridge Case
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: 9e7a5ea47cd8b9748900dd10ff9ac51c
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: f7422bae58b435d4b85ba8f7a10ac4fa
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0.010084249}
+    m_Extent: {x: 0.0055760033, y: 0.0055760015, z: 0.021908052}

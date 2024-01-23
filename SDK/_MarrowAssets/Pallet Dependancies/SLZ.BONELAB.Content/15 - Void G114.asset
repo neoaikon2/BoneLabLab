@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: 15 - Void G114
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a868247138f50c62e424c4144.Level.VoidG114
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a868247138f50c62e424c4144.Level.VoidG114
+    generated: 1
+  _slimCode:
+    _byteArray: 96991dca16af844380621f5c61fe8885
+  _title: 15 - Void G114
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Story
+  _mainAsset:
+    _assetGUID: 1378bdcaf9526974d98cc23b94c6ab5c
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}

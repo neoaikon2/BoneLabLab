@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Battery A
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a83ee4ec6bd641fec424c4142.Spawnable.BatteryA
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a83ee4ec6bd641fec424c4142.Spawnable.BatteryA
+    generated: 1
+  _slimCode:
+    _byteArray: d75a38cc2f4a4748a7b386caaaa77a2b
+  _title: Battery A
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags:
+  - Gadget
+  - Powered
+  _mainAsset:
+    _assetGUID: 89e31a94b7c187f48b5c9d7604e95645
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 6874ec8bd8188b64882710bf07af3f9b
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.000011026859, y: 0.12631415, z: 0.00007070601}
+    m_Extent: {x: 0.06737926, y: 0.09911598, z: 0.06841725}

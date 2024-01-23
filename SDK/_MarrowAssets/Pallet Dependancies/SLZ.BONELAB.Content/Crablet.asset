@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Crablet
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-4583-48b5-ac3f-eb9543726162
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-4583-48b5-ac3f-eb9543726162
+    generated: 1
+  _slimCode:
+    _byteArray: 052f8f981f75f048a153e90fdf25aa7e
+  _title: Crablet
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - NPC
+  _mainAsset:
+    _assetGUID: f6e9688c8cc72fb4ab779743405761ae
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: c6a606ece811d3e42aef626c4e3fc415
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000020861626, y: 0.24633409, z: -0.01665625}
+    m_Extent: {x: 0.485275, y: 0.24669106, z: 0.35889643}

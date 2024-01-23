@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: M16 Mag
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-8bb2-47cc-977a-46954d616761
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-8bb2-47cc-977a-46954d616761
+    generated: 1
+  _slimCode:
+    _byteArray: e673f9f05b9b28438ce3e771f062d404
+  _title: M16 Mag
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: 07d5f6cc9e3101440abf13bb084960cd
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: c100bc8a62b8b374b8d89a43af24d407
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: -0.005632434, z: -0.0013205782}
+    m_Extent: {x: 0.02, y: 0.04468141, z: 0.101320736}

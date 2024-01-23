@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Warhammer
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-f6f3-46e2-aa51-67214d656c65
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-f6f3-46e2-aa51-67214d656c65
+    generated: 1
+  _slimCode:
+    _byteArray: 1b2691a3719ec642913a15c089e4e503
+  _title: Warhammer
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Melee
+  - Blunt
+  _mainAsset:
+    _assetGUID: 4686db9ca0f8f8c4fbafa1d7623e6cf1
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 0606627083837714f88e64d93e676634
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.034425974, y: -0.010035545, z: -0.000069836155}
+    m_Extent: {x: 0.12312196, y: 0.35096416, z: 0.024348479}

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Headset B
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-f6e1-4a7b-ab7f-3f5848656164
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-f6e1-4a7b-ab7f-3f5848656164
+    generated: 1
+  _slimCode:
+    _byteArray: 8435f0a1baf3bf4f8d07b85cad578373
+  _title: Headset B
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Complex
+  - Wearable
+  _mainAsset:
+    _assetGUID: 647d39ccee25f554bb83626f8f36aebe
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: d092a1189872a0b419565cd532db3259
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.0002014637, y: 0.13899998, z: 0.0157184}
+    m_Extent: {x: 0.12636773, y: 0.12544395, z: 0.17251617}

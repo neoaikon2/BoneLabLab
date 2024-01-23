@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Arena_PropCapsule
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-5f9e-4fea-b76d-94954172656e
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-5f9e-4fea-b76d-94954172656e
+    generated: 1
+  _slimCode:
+    _byteArray: 55c577c494a4e54ea9895ac35c7220bf
+  _title: Arena_PropCapsule
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags:
+  - Gadget
+  _mainAsset:
+    _assetGUID: 8fb73bf25600b164391dbba1f9ecde57
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 709ab2f26d91adf45992fdb34e0ca81f
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: -0.030000001, z: 0}
+    m_Extent: {x: 0.054158706, y: 0.22, z: 0.054158688}

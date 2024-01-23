@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Gravity Plate
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-a1c3-437b-85ac-e09547726176
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-a1c3-437b-85ac-e09547726176
+    generated: 1
+  _slimCode:
+    _byteArray: 649d8ece225be74f99205e7393beb85d
+  _title: Gravity Plate
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Gadget
+  _mainAsset:
+    _assetGUID: 5dae9c97506da8d488fe940b85e1d3e2
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 6a220261325389246bebea8cb38505da
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.000099390745, y: 0.044770498, z: -0.0012536943}
+    m_Extent: {x: 0.21390182, y: 0.045029894, z: 0.15027216}

@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Baseball
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-837c-43ca-b4b5-33d842617365
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-837c-43ca-b4b5-33d842617365
+    generated: 1
+  _slimCode:
+    _byteArray: f4901789b9db484aaf1818682846c178
+  _title: Baseball
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Toy
+  _mainAsset:
+    _assetGUID: 2e6f527dfa45b6a4cbe4d11eafc1b9e1
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: d9458dfe0f6d8b84883425bfb96311d1
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.03762778, y: 0.03762778, z: 0.03762778}

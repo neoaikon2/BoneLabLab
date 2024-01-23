@@ -11,10 +11,6 @@ Put your old SDK files into the folder called BASE, put your newly ripped Script
 
 A unity editor script that lets you take the guidmap.txt you got from BoneDoc and apply the updated GUIDs across the entirety of your project updating any missing references.
 
-## Captain Pallet
-
-It's possible to use Asset Studio to rip the internal pallet data; this is a collection of JSON files of all the palletized objects in BoneLab, after extraction - just drop this script into that folder and run it and it will generate output.json, which you can import into Unity using the SLZ Void Tools to easily add in-game items to your mods.  
-
 ## Palatine
 
 Along with the internal pallet data it's also possible to rip a majority of the preview meshes. One can link these up manually, or you can use Palatine to link up everything automatically (well, the thinks with matching object -> preview mesh names anyway). Just put the preview mesh assets and meta files into a folder called 'PreviewMeshes' (it's usually called that in the rip as well), rename the output of Captain Pallet to "pallet.json" and put both of those in the same directory as the 'PreviewMeshes' folder. Run it and it should link up everything it can.
@@ -22,3 +18,7 @@ Along with the internal pallet data it's also possible to rip a majority of the 
 ## Sharp Sort
 
 Take a folder of disorganized unity scripts and organizes them by the first namespace found in the file.
+
+## Pallet to JSON
+
+Right click on a pallet, and get the pallet.json directly on your clipboard. Paste it into a file, name it <something>.json and share your pallet dependancies to your hearts content! Can also be useful in cases where you only have the pallet data (I.E. Extracting the ripped internal assets)

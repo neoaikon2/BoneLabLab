@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Target Rat
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Content.Spawnable.TargetRat
+    generated: 1
+  _barcodeOld:
+    _id: SLZ.BONELAB.Content.Spawnable.PropTargetRat
+    generated: 1
+  _slimCode:
+    _byteArray: 
+  _title: Target Rat
+  _description: 
+  _unlockable: 1
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Prop
+  - Complex
+  _mainAsset:
+    _assetGUID: a2381d2fc55c8364e82730e02b83f263
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: eebae4856777dae4081b537da71d6c29
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0.12139933, y: 0.5314742, z: 0.0000007748604}
+    m_Extent: {x: 0.24880286, y: 0.66748023, z: 0.35240477}

@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Boid
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: fa534c5a83ee4ec6bd641fec424c4142.Spawnable.NPCBoid
+    generated: 1
+  _barcodeOld:
+    _id: fa534c5a83ee4ec6bd641fec424c4142.Spawnable.NPCBoid
+    generated: 1
+  _slimCode:
+    _byteArray: 016a81e00ab7a54cbb40f26e1434902f
+  _title: Boid
+  _description: 
+  _unlockable: 0
+  _redacted: 1
+  _pallet: {fileID: 0}
+  _tags: []
+  _mainAsset:
+    _assetGUID: cfaf8363ec9d59b47b6f032b6dbc6697
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: e1c3e31933464b64d981124a0c7b9f66
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0.03999999}
+    m_Extent: {x: 0.100000076, y: 0.1, z: 0.30000007}

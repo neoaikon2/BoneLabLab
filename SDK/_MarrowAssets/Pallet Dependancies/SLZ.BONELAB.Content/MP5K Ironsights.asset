@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: MP5K Ironsights
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-9f54-4f32-b8b9-f295534d474d
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-9f54-4f32-b8b9-f295534d474d
+    generated: 1
+  _slimCode:
+    _byteArray: c62d92aa8167ab45a0b4377cf1689f38
+  _title: MP5K Ironsights
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Weapon
+  - Gun
+  - SMG
+  _mainAsset:
+    _assetGUID: a2c0f1c9485c7d848a2764256b0c6c57
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 18f1eeb2010c10240a1cd14112edaa6c
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.00000032037497, y: 0.002475962, z: 0.03184341}
+    m_Extent: {x: 0.020000134, y: 0.11253384, z: 0.16080946}
