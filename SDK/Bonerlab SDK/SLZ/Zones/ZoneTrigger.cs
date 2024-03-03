@@ -10,7 +10,11 @@ namespace SLZ.Zones
 		public Action<SceneZone> zoneExitDelegate;
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		private bool isZoneTriggerActive;
+#else
+		public bool isZoneTriggerActive;
+#endif
 
 		public void OnTriggerEnter(Collider other)
 		{

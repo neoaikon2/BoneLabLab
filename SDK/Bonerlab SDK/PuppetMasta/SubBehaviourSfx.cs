@@ -51,7 +51,11 @@ namespace PuppetMasta
 		public AudioClip movementLoop;
 
 		[SerializeField]
+#if !UNITY_EDITOR
 		private float pitchMultiplier;
+#else
+		public float pitchMultiplier;
+#endif
 
 		private AudioSource _mouthSource;
 

@@ -23,7 +23,11 @@ namespace SLZ.Combat
 
 		[SerializeField]
 		[FormerlySerializedAs("ParentObj")]
+#if !UNITY_EDITOR // Castify required modification
 		private VisualDamageController visualDamageController;
+#else
+		public VisualDamageController visualDamageController;
+#endif
 
 		[Header("CutOut area")]
 		[Space(5f)]

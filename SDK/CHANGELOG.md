@@ -13,3 +13,7 @@ As of this entry, the BonerLabSDK is updated to be compatible with Bonelab patch
 ## 3.1.0 - Date: 1/21/2024
 
 I've managed to basically get a complete port of all the ripped scripts imported successfully, as far as I know this is the most complete and functional SDK available now.
+
+## 3.1.1 - Date: 1/31/204
+
+I decided to mess with ElevatorPowerables, that was kind of a mistake but I know how they work now. I've created an examples folder that I'll start placing example prefabs into. The first one is...you guessed it, and ElevatorPowerable example.

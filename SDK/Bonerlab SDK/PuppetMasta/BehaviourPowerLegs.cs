@@ -101,7 +101,7 @@ namespace PuppetMasta
 
 		public SubBehaviourHandPose handPoser;
 
-		public float scaleFactor;
+		public float scaleFactor = 1f;
 
 		public GameObject throwVfx;
 
@@ -142,16 +142,16 @@ namespace PuppetMasta
 		private bool _debugDrawHierarchy;
 
 		[Header("Agro State")]
-		[EnumFlags]
+		[SLZ.EnumFlags]
 		public CombatType combatProficiency;
 
 		public CombatType agroState;
 
-		public float meleeRange;
+		public float meleeRange = 1f;
 
-		public float desiredMeleeDistance;
+		public float desiredMeleeDistance = 0.8f;
 
-		public float meleeCooldown;
+		public float meleeCooldown = 3f;
 
 		public TargetableAnimatorEvent WildPunchBigL;
 

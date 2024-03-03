@@ -10,14 +10,26 @@ namespace SLZ.VFX
 	{
 		private static ComponentCache<Blip> _cache;
 
-		[SerializeField]
+		[SerializeField]		
+#if !UNITY_EDITOR // Castify required modification
 		private Renderer[] Renderers;
+#else
+		public Renderer[] Renderers;
+#endif
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		private Spawnable fizzlerSpawnable;
+#else
+		public Spawnable fizzlerSpawnable;
+#endif
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		private Spawnable spawnSpawnable;
+#else
+		public Spawnable spawnSpawnable;
+#endif
 
 		[Header("DO NOT SET IN INSPECTOR")]
 		[HideInInspector]

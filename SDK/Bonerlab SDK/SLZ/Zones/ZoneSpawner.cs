@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using PuppetMasta;
 using SLZ.AI;
 using SLZ.Bonelab;
@@ -11,288 +12,391 @@ using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Events;
+using SLZ.Marrow.Warehouse;
+using Cysharp.Threading.Tasks;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace SLZ.Zones
 {
-	public class ZoneSpawner : ZoneItem
-	{
-		public enum modes
-		{
-			SINGLE = 0,
-			EMITTER = 1
-		}
+    public class ZoneSpawner : ZoneItem
+    {
+        public enum modes
+        {
+            SINGLE = 0,
+            EMITTER = 1
+        }
 
-		[CompilerGenerated]
-		private sealed class _003CCoStartEmmiter_003Ed__78
-		{
-			private int _003C_003E1__state;
+        private static ComponentCache<ZoneSpawner> _cache;
 
-			private object _003C_003E2__current;
+        public bool autoStart = true;
 
-			public ZoneSpawner _003C_003E4__this;
+        [Tooltip("Short-Circuit the spawning while active")]
+        public bool isSpawningAllowed;
 
-			public GameObject playerObject;
+        public Spawnable spawnable;
 
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+        [Tooltip("Check this to have spawner use array below for random enemy")]
+        public bool useRandomCrate;
 
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+        [Tooltip("Add crates of all enemies you want to random select from")]
+        public Spawnable[] randomeSpawnables;
 
-			[DebuggerHidden]
-			public _003CCoStartEmmiter_003Ed__78(int _003C_003E1__state)
-			{
-			}
+        [HideInInspector]
+        public int amountOfCrates;
 
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
+        public Spawnable spawnVFX;
 
-			private bool MoveNext()
-			{
-				return false;
-			}
+        public Vector3 VFXPosition;
 
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
+        public modes mode;
 
-		private static ComponentCache<ZoneSpawner> _cache;
+        [Tooltip("Maximum that can be spawned ")]
+        [Header("Emitter Settings")]
+        public int max = 1;
 
-		public bool autoStart;
+        [Tooltip("Maximum spawns that can be alive before spawning stops (0 = Infinity)")]
+        public int concurrentAlive = 1;
 
-		[Tooltip("Short-Circuit the spawning while active")]
-		public bool isSpawningAllowed;
+        [Tooltip("Maximum spawns that can be alive or dead before spawning stops (0 = Infinity), Will require dead spawns to be manually cleaned up before spawning can continue")]
+        public int concurrentTotal;
 
-		public Spawnable spawnable;
+        [Tooltip("Resets when zone is entered by player, set to true if you want the emitter to persist")]
+        public bool isResetOnZoneEnable;
 
-		[Tooltip("Check this to have spawner use array below for random enemy")]
-		public bool useRandomCrate;
+        public AudioClip[] spawnClip;
 
-		[Tooltip("Add crates of all enemies you want to random select from")]
-		public Spawnable[] randomeSpawnables;
+        [Tooltip("Per-Second")]
+        public float frequency = 2.0f;
 
-		[HideInInspector]
-		public int amountOfCrates;
+        public Vector3 spawnVelocity;
 
-		public Spawnable spawnVFX;
+        public Vector3 spawnAngularVelocity;
 
-		public Vector3 VFXPosition;
+        public float minSpawnAngularVelocity;
 
-		public modes mode;
+        public float maxSpawnAngularVelocity;
 
-		[Tooltip("Maximum that can be spawned ")]
-		[Header("Emitter Settings")]
-		public int max;
+        public Action<GameObject, GameObject> OnPreSpawnDelegate;
 
-		[Tooltip("Maximum spawns that can be alive before spawning stops (0 = Infinity)")]
-		public int concurrentAlive;
+        public Action<GameObject, GameObject> OnSpawnDelegate;
 
-		[Tooltip("Maximum spawns that can be alive or dead before spawning stops (0 = Infinity), Will require dead spawns to be manually cleaned up before spawning can continue")]
-		public int concurrentTotal;
+        public Action<GameObject> OnDespawnDelegate;
 
-		[Tooltip("Resets when zone is entered by player, set to true if you want the emitter to persist")]
-		public bool isResetOnZoneEnable;
+        public Action OnDeathDelegate;
 
-		public AudioClip[] spawnClip;
+        public UnityEvent onActivate;
 
-		[Tooltip("Per-Second")]
-		public float frequency;
+        public UnityEvent onDeactivate;
 
-		public Vector3 spawnVelocity;
+        public UnityEvent onSpawn;
 
-		public Vector3 spawnAngularVelocity;
+        public UnityEvent onDeath;
 
-		public float minSpawnAngularVelocity;
+        public UnityEvent onDeathOneShot;
 
-		public float maxSpawnAngularVelocity;
+        private bool deathEventSent;
 
-		public Action<GameObject, GameObject> OnPreSpawnDelegate;
+        public Action<ZoneSpawner, AIBrain, EnemyProfile, bool> onSpawnNPCDelegate;
 
-		public Action<GameObject, GameObject> OnSpawnDelegate;
+        public Action<BehaviourBaseNav, Rigidbody> OnSpawn_NPC_Launcher;
 
-		public Action<GameObject> OnDespawnDelegate;
+        private GameObject _playerObject;
 
-		public Action OnDeathDelegate;
+        private int _dead;
 
-		public UnityEvent onActivate;
+        private int _total;
 
-		public UnityEvent onDeactivate;
+        private Coroutine _emitterCoroutine;
 
-		public UnityEvent onSpawn;
+        [Tooltip("Used for explicit arena spawns only, useful for enemies spawned on ziplines or at heights, disables damage from collision for x seconds after spawn")]
+        [Header("Arena")]
+        [SerializeField]
+        private float blockCollisionDelay;
 
-		public UnityEvent onDeath;
+        public EnemyProfile currEnemyProfile;
 
-		public UnityEvent onDeathOneShot;
+        public bool enableAgentLinking;
 
-		private bool deathEventSent;
+        public bool customSpawnerName;
 
-		public Action<ZoneSpawner, AIBrain, EnemyProfile, bool> onSpawnNPCDelegate;
+        [HideInInspector]
+        public GameObject playerObj;
 
-		public Action<BehaviourBaseNav, Rigidbody> OnSpawn_NPC_Launcher;
+        [HideInInspector]
+        public Arena_GameController arenaGameController;
 
-		private GameObject _playerObject;
+        [Tooltip("Reference to game obj that will be the spawned npc's parent")]
+        public GameObject parentOverride;
 
-		private int _dead;
+#if UNITY_EDITOR
 
-		private int _total;
+        public static bool showPreviewMesh = true;
+        public static bool showColliderBounds = true;
+        public static bool showLitMaterialPreview = false;
+        private static Material defaultLitMat = null;
+#endif
 
-		private Coroutine _emitterCoroutine;
+        public static ComponentCache<ZoneSpawner> Cache
+        {
+            get
+            {
+                return null;
+            }
+        }
 
-		[Header("Arena")]
-		[Tooltip("Used for explicit arena spawns only, useful for enemies spawned on ziplines or at heights, disables damage from collision for x seconds after spawn")]
-		[SerializeField]
-		private float blockCollisionDelay;
+        public List<GameObject> spawns { get; private set; }
 
-		public EnemyProfile currEnemyProfile;
+        public bool IsActive { get; private set; }
 
-		public bool enableAgentLinking;
+        public int Alive { get; private set; }
 
-		public bool customSpawnerName;
+        protected void InitSpawns()
+        {
+        }
 
-		[HideInInspector]
-		public GameObject playerObj;
+        private void Awake()
+        {
+        }
 
-		[HideInInspector]
-		public Arena_GameController arenaGameController;
+        private void OnDestroy()
+        {
+        }
 
-		[Tooltip("Reference to game obj that will be the spawned npc's parent")]
-		public GameObject parentOverride;
+        public override void OnZoneDisabled(GameObject playerObject)
+        {
+        }
 
-		public static ComponentCache<ZoneSpawner> Cache => null;
+        public override void OnZoneEnabled(GameObject playerObject)
+        {
+        }
 
-		public List<GameObject> spawns { get; private set; }
+        public void Activate()
+        {
+        }
 
-		public bool IsActive { get; private set; }
-
-		public int Alive { get; private set; }
-
-		protected void InitSpawns()
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public override void OnZoneDisabled(GameObject playerObject)
-		{
-		}
-
-		public override void OnZoneEnabled(GameObject playerObject)
-		{
-		}
-
-		public void Activate()
-		{
-		}
-
-		public void AllowSpawning(bool isAllowed)
-		{
-		}
-
-		public void SetAutostart(bool isAutoStart)
-		{
-		}
-
-		public void Deactivate()
-		{
-		}
-
-		public bool IsUnderMaxSpawn()
-		{
-			return false;
-		}
-
-		public bool IsUnderConcurrentSpawn()
-		{
-			return false;
-		}
-
-		public bool CanSpawn()
-		{
-			return false;
-		}
-
-		public void SetMaxSpawnCount(int val)
-		{
-		}
-
-		public void TriggerSpawn()
-		{
-		}
-
-		public void ResetEmitter()
-		{
-		}
-
-		public void StopEmitterSpawns()
-		{
-		}
-
-		public void ExplicitFriendlySpawn(Vector3 spawnPos, Quaternion spawnRot, EnemyProfile enemyProfile, BaseEnemyConfig baseConfig = null, bool autoDespawn = false, float colDelay = 0f)
-		{
-		}
-
-		public void ExplicitArenaSpawn(EnemyProfile enemyProfile, bool autoDespawn = false, float colDelay = 0f, bool isFriendly = false)
-		{
-		}
-
-		private void Spawn(GameObject playerObject)
-		{
-		}
-
-		public void StartSpawn(GameObject playerObject = null)
-		{
-		}
-
-		[IteratorStateMachine(typeof(_003CCoStartEmmiter_003Ed__78))]
-		private IEnumerator CoStartEmmiter(GameObject playerObject)
-		{
-			return null;
-		}
-
-		public void DisableSpawning()
-		{
-		}
-
-		public void EnableSpawning()
-		{
-		}
-
-		private void OnDespawn(GameObject despawnedObject)
-		{
-		}
-
-		private void OnDeath()
-		{
-		}
-
-		private void OnResurrect()
-		{
-		}
-
-		private void RandomizeCrate()
-		{
-		}
-	}
+        public void AllowSpawning(bool isAllowed)
+        {
+        }
+
+        public void SetAutostart(bool isAutoStart)
+        {
+        }
+
+        public void Deactivate()
+        {
+        }
+
+        public bool IsUnderMaxSpawn()
+        {
+            return default(bool);
+        }
+
+        public bool IsUnderConcurrentSpawn()
+        {
+            return default(bool);
+        }
+
+        public bool CanSpawn()
+        {
+            return default(bool);
+        }
+
+        public void SetMaxSpawnCount(int val)
+        {
+        }
+
+        public void TriggerSpawn()
+        {
+        }
+
+        public void ResetEmitter()
+        {
+        }
+
+        public void StopEmitterSpawns()
+        {
+        }
+
+        public void ExplicitFriendlySpawn(Vector3 spawnPos, Quaternion spawnRot, EnemyProfile enemyProfile, BaseEnemyConfig baseConfig = default(BaseEnemyConfig), bool autoDespawn = false, float colDelay = 0f)
+        {
+        }
+
+        public void ExplicitArenaSpawn(EnemyProfile enemyProfile, bool autoDespawn = false, float colDelay = 0f, bool isFriendly = false)
+        {
+        }
+
+        private void Spawn(GameObject playerObject)
+        {
+        }
+
+        public void StartSpawn(GameObject playerObject = default(GameObject))
+        {
+        }
+
+        private IEnumerator CoStartEmmiter(GameObject playerObject)
+        {
+            return null;
+        }
+
+        public void DisableSpawning()
+        {
+        }
+
+        public void EnableSpawning()
+        {
+        }
+
+        private void OnDespawn(GameObject despawnedObject)
+        {
+        }
+
+        private void OnDeath()
+        {
+        }
+
+        private void OnResurrect()
+        {
+        }
+
+        private void RandomizeCrate()
+        {
+        }
+
+#if UNITY_EDITOR
+
+        static Material mat = null;
+
+        [DrawGizmo(GizmoType.Active | GizmoType.Selected | GizmoType.NonSelected)]
+        private static void DrawPreviewGizmo(ZoneSpawner placer, GizmoType gizmoType)
+        {
+            if (mat == null)
+                mat = new Material(Shader.Find("Shader Graphs/Void Glow ShaderGraph"));
+            if (!Application.isPlaying && placer.gameObject.scene != default)
+            {
+                if (showLitMaterialPreview && defaultLitMat == null)
+                {
+                    defaultLitMat = AssetDatabase.LoadAssetAtPath<Material>("Packages/com.unity.render-pipelines.universal/Runtime/Materials/Lit.mat");
+                }
+                EditorPreviewMeshGizmo.Draw("PreviewMesh", placer.gameObject, placer.GetCrateReference(), mat, !showPreviewMesh, !showColliderBounds, true);
+                placer.EditorUpdateName();
+            }
+        }
+
+        private void OnValidate()
+        {
+            if (!Application.isPlaying && gameObject.scene != default)
+            {
+                EditorUpdateName();
+            }
+        }
+
+        private void Reset()
+        {
+            gameObject.name = "Spawnable Placer";
+        }
+
+        [ContextMenu("Reset Name")]
+        public void ResetName()
+        {
+            gameObject.name = "Zone Spawner";
+        }
+
+        public void EditorUpdateName()
+        {
+            if (gameObject.name == "Zone Spawner" && AssetWarehouse.ready && !Application.isPlaying && AssetWarehouse.Instance.TryGetCrate(GetCrateReference().Barcode, out var crate))
+            {
+                gameObject.name = $"Zone Spawner ({crate.Title})";
+                GameObjectUtility.EnsureUniqueNameForSibling(gameObject);
+            }
+        }
+
+        private SpawnableCrateReference GetCrateReference()
+        {
+            if (AssetWarehouse.ready)
+            {
+                return spawnable.crateRef;
+            }
+
+            return null;
+        }
+
+
+        [MenuItem("GameObject/MarrowSDK/Spawnable Placer", priority = 1)]
+        private static void MenuCreatePlacer(MenuCommand menuCommand)
+        {
+            GameObject go = EditorCreateSpawnablePlacer();
+
+            GameObjectUtility.SetParentAndAlign(go, menuCommand.context as GameObject);
+            Selection.activeObject = go;
+        }
+
+        public static void EditorCreateSpawnablePlacer(Barcode barcode, Transform targetTransform, Transform parentTransform = null)
+        {
+            if (AssetWarehouse.ready && AssetWarehouse.Instance.TryGetCrate<SpawnableCrate>(barcode, out var crate))
+            {
+                EditorCreateSpawnablePlacer(crate, targetTransform, parentTransform);
+            }
+        }
+
+        public static void EditorSwapPrefabForSpawnablePlacer(GameObject prefabInstance, bool deleteOriginalGameObject = true)
+        {
+            if (PrefabUtility.IsOutermostPrefabInstanceRoot(prefabInstance))
+            {
+                var prefab = PrefabUtility.GetCorrespondingObjectFromSource(prefabInstance);
+                if (prefab != null)
+                {
+                    if (AssetWarehouse.Instance.EditorObjectCrateLookup.TryGetValue(prefab, out Crate prefabCrate) && prefabCrate is SpawnableCrate spawnableCrate)
+                    {
+                        EditorCreateSpawnablePlacer(spawnableCrate, prefabInstance.transform, prefabInstance.transform.parent);
+
+                        if (deleteOriginalGameObject)
+                        {
+                            DeleteOriginalGameObject(prefabInstance).Forget();
+                        }
+                    }
+                }
+            }
+        }
+
+        private static async UniTaskVoid DeleteOriginalGameObject(GameObject go)
+        {
+            await UniTask.NextFrame();
+            Undo.RecordObject(go, $"Delete Spawnable Placer Original GameObject {go.name}");
+            UnityEngine.Object.DestroyImmediate(go);
+        }
+
+        public static GameObject EditorCreateSpawnablePlacer(SpawnableCrate crate = null, Transform targetTransform = null, Transform parentTransform = null)
+        {
+            GameObject go = new GameObject("Auto Spawnable Placer", typeof(SpawnableCratePlacer));
+            go.transform.localScale = Vector3.one;
+            if (parentTransform != null)
+                go.transform.parent = parentTransform;
+            if (targetTransform != null)
+            {
+                go.transform.localPosition = targetTransform.localPosition;
+                go.transform.localRotation = targetTransform.localRotation;
+            }
+
+            var placer = go.GetComponent<SpawnableCratePlacer>();
+            if (crate == null)
+                placer.spawnableCrateReference = new SpawnableCrateReference();
+            else
+                placer.spawnableCrateReference = new SpawnableCrateReference(crate.Barcode);
+            placer.EditorUpdateName();
+            Undo.RegisterCreatedObjectUndo(go, $"Create Spawnable Placer {(crate != null ? crate.Title : "")}");
+
+            return go;
+        }
+
+
+#endif
+
+        public ZoneSpawner()
+            : base()
+        {
+        }
+    }
 }

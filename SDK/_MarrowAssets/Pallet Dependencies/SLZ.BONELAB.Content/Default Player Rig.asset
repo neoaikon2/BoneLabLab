@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Default Player Rig
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: SLZ.BONELAB.Core.DefaultPlayerRig
+    generated: 1
+  _barcodeOld:
+    _id: SLZ.BONELAB.Core.DefaultPlayerRig
+    generated: 1
+  _slimCode:
+    _byteArray: 
+  _title: Default Player Rig
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - Hidden
+  _mainAsset:
+    _assetGUID: 9383ec4275477614f8310cc3de27a652
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: c9ad3b0d02280a2449c6323da19f998a
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.000000029802322, y: 0.83008456, z: 0.20560537}
+    m_Extent: {x: 0, y: 0, z: 0}

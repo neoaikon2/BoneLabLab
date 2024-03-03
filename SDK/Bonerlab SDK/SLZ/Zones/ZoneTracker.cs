@@ -27,9 +27,14 @@ namespace SLZ.Zones
 		private SceneZone _parentZone;
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		private ZoneTrigger _zoneTrigger;
+#else
+		public ZoneTrigger _zoneTrigger;
+#endif
 
 		public static ComponentCache<ZoneTracker> Cache => null;
+
 
 		public ZoneTrigger ZoneTrigger => null;
 

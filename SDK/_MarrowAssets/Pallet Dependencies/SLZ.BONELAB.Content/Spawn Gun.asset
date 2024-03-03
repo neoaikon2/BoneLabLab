@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Spawn Gun
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-5747-42a2-bd08-ab3b47616467
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-5747-42a2-bd08-ab3b47616467
+    generated: 1
+  _slimCode:
+    _byteArray: 
+  _title: Spawn Gun
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 11400000, guid: 857519aa25a31134096905a8ad228e64, type: 2}
+  _tags:
+  - Gadget
+  - DevTool
+  _mainAsset:
+    _assetGUID: 0a6eb793c9918b94a83578063e6a96c9
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 3bd0105d20f2a354e9a7ae6ac94df170
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: -0.005585134, y: 0.01778198, z: 0.04216431}
+    m_Extent: {x: 0, y: 0, z: 0}

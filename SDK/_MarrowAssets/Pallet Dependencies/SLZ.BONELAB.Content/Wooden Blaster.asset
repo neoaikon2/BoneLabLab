@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Wooden Blaster
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-25a1-4d90-b2f1-31f6426c6173
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-25a1-4d90-b2f1-31f6426c6173
+    generated: 1
+  _slimCode:
+    _byteArray: 
+  _title: Wooden Blaster
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - VFX
+  - Blaster
+  _mainAsset:
+    _assetGUID: 510eb73dbd6087949b15f2cbfc1d73d2
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 4434aa87ccc1fb844b79ef44c8de3cc7
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}

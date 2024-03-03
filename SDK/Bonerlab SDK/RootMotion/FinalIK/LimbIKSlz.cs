@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Limb IK")]
+	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Limb IK SLZ")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page7.html")]
 	public class LimbIKSlz : IK
 	{

@@ -40,7 +40,11 @@ namespace PuppetMasta
 		public BaseEnemyConfig baseConfig;
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		protected BaseEnemyConfig defaultConfig;
+#else
+		public BaseEnemyConfig defaultConfig;
+#endif
 
 		[Header("Resting State")]
 		[Range(0f, 16f)]
@@ -133,7 +137,11 @@ namespace PuppetMasta
 		public float aiTickFreq;
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		protected Transform eyeTran;
+#else
+		public Transform eyeTran;
+#endif
 
 		public SubBehaviourSensors sensors;
 

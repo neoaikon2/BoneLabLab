@@ -11,22 +11,22 @@ namespace SLZ.Bonelab.SLZ.Bonelab
 		[Range(0f, 0.2f)]
 		[Space(5f)]
 		[Header("VOLTAGE OFFSET")]
-		public float lowerOffSet;
+		public float lowerOffSet = .2f;
 
 		[Range(0f, 0.8f)]
-		public float higherOffset;
+		public float higherOffset = .8f;
 
 		[Space(5f)]
 		[Range(-1f, 1f)]
-		public float min_InputVoltage;
+		public float min_InputVoltage = -1;
 
 		[Range(-1f, 1f)]
-		public float max_InputVoltage;
+		public float max_InputVoltage = 1;
 
 		[Space(5f)]
-		public float min_TargetVoltage;
+		public float min_TargetVoltage = -1;
 
-		public float max_TargetVoltage;
+		public float max_TargetVoltage = 1;
 
 		[Space(5f)]
 		[Header("JOINTS")]
@@ -37,29 +37,29 @@ namespace SLZ.Bonelab.SLZ.Bonelab
 		[Space(3f)]
 		public Rigidbody ConnectedRB;
 
-		public float parentScale;
+		public float parentScale = 1.0f;
 
-		private Vector3 Anchor;
+		private Vector3 Anchor = Vector3.zero;
 
-		private Vector3 axis_slide;
+		private Vector3 axis_slide = Vector3.zero;
 
 		private float limit_Linear;
 
-		private float bounce;
+		private float bounce = .15f;
 
-		private float contactDistance;
+		private float contactDistance = .05f;
 
-		public float springPower;
+		public float springPower = 10000f;
 
-		public float damperPower;
+		public float damperPower = 10000f;
 
-		public float motor_forcePower;
+		public float motor_forcePower = 2700f;
 
 		[Tooltip("Changing the force to not be able to hold up the platform when there's no power")]
-		public float NoPowerForce;
+		public float NoPowerForce = 70f;
 
 		[Tooltip("Modifier for the garage door's movement in Time.deltaTime")]
-		public float speedMod;
+		public float speedMod = .8f;
 
 		[Space(5f)]
 		public float tarPos_down;

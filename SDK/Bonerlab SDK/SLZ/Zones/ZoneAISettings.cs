@@ -23,13 +23,13 @@ namespace SLZ.Zones
 
 		public bool isSoundAggroWhenInSecondaryZone;
 
-		public float investigateTimeout;
+		public float investigateTimeout = 10.0f;
 
 		public bool overrideRoam;
 
-		public Vector2 roamXz;
+		public Vector2 roamXz = Vector2.zero;
 
-		public float roamSpeed;
+		public float roamSpeed = 0.8f;
 
 		public bool roamWanders;
 

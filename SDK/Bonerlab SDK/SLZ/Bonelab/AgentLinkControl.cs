@@ -979,14 +979,22 @@ namespace SLZ.Bonelab
 		private float totalMass;
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		private float jointForceMult;
+#else
+		public float jointForceMult;
+#endif
 
 		private float defaultTotalMass;
 
 		public NavMeshAgent navAgent;
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		private AIBrain brain;
+#else
+		public AIBrain brain;
+#endif
 
 		public TriggerRefProxy triggerProxy;
 
@@ -1067,6 +1075,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		public Rigidbody chestRB;
 
+#if !UNITY_EDITOR // Castify required modification
 		[SerializeField]
 		private Rigidbody leftHandRB;
 
@@ -1090,6 +1099,31 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private Rigidbody rightKneeRB;
+#else
+		[SerializeField]
+		public Rigidbody leftHandRB;
+
+		[SerializeField]
+		public Rigidbody leftElbowRB;
+
+		[SerializeField]
+		public Rigidbody rightHandRB;
+
+		[SerializeField]
+		public Rigidbody rightElbowRB;
+
+		[SerializeField]
+		public Rigidbody leftFootRB;
+
+		[SerializeField]
+		public Rigidbody leftKneeRB;
+
+		[SerializeField]
+		public Rigidbody rightFootRB;
+
+		[SerializeField]
+		public Rigidbody rightKneeRB;
+#endif
 
 		public Rigidbody[] allRBs;
 
@@ -1146,7 +1180,11 @@ namespace SLZ.Bonelab
 		private float sqrPos;
 
 		[SerializeField]
+#if !UNITY_EDITOR // Castify required modification
 		private float distTimer;
+#else
+		public float distTimer;
+#endif
 
 		private Color agentColor;
 

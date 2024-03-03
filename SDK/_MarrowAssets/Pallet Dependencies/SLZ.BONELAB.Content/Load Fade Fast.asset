@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34569ddb84e20304981812b1c448d930, type: 3}
+  m_Name: Load Fade Fast
+  m_EditorClassIdentifier: 
+  _barcode:
+    _id: c1534c5a-84f0-4d2b-b4d7-64405646584c
+    generated: 1
+  _barcodeOld:
+    _id: c1534c5a-84f0-4d2b-b4d7-64405646584c
+    generated: 1
+  _slimCode:
+    _byteArray: 
+  _title: Load Fade Fast
+  _description: 
+  _unlockable: 0
+  _redacted: 0
+  _pallet: {fileID: 0}
+  _tags:
+  - VFX
+  _mainAsset:
+    _assetGUID: 0cbb8a4bc01d31848bd700510330e482
+    _editorAssetChanged: 0
+  _previewMesh:
+    _assetGUID: 42e99cf2caa1c7f4196e568d51466db4
+    _editorAssetChanged: 0
+  _customQuality: 0
+  _previewMeshQuality: 0.5
+  _maxLODLevel: 0
+  _colliderBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}

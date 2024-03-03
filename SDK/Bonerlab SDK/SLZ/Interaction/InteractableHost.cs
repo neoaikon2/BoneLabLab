@@ -99,7 +99,11 @@ namespace SLZ.Interaction
 
 		[field: SerializeField]
 		[field: FormerlySerializedAs("virtualController")]
+#if !UNITY_EDITOR // Castify required modification
 		public VirtualController VirtualController { get; private set; }
+#else
+		public VirtualController VirtualController { get; set; }
+#endif
 
 		public TriggerRefProxy LastGrabbedProxy { get; private set; }
 
@@ -115,7 +119,11 @@ namespace SLZ.Interaction
 
 		[field: FormerlySerializedAs("hasRigidbody")]
 		[field: SerializeField]
+#if (!UNITY_EDITOR)
 		public bool HasRigidbody { get; private set; }
+#else
+		public bool HasRigidbody { get; set; }
+#endif
 
 		public Rigidbody Rb => null;
 
