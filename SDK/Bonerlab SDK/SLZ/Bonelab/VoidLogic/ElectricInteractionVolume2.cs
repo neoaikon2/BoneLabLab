@@ -12,6 +12,32 @@ namespace SLZ.Bonelab.VoidLogic
 {
 	public class ElectricInteractionVolume2 : InteractionVolume
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CElectricInteractionCooldown_003Ed__15 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ElectricInteractionVolume2 _003C_003E4__this;
+
+			public IGrippable host;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		private MarrowBody _marrowBody;
 
@@ -53,14 +79,10 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CElectricInteractionCooldown_003Ed__15))]
 		private UniTaskVoid ElectricInteractionCooldown(IGrippable host)
 		{
 			return default(UniTaskVoid);
-		}
-
-		public ElectricInteractionVolume2()
-			: base()
-		{
 		}
 	}
 }

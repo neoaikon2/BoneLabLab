@@ -11,6 +11,58 @@ namespace SLZ.Bonelab.Obsolete
 	[Obsolete("Superseded by VoidLogic")]
 	public class Powerable : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoUnchargeLoop_003Ed__26 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Powerable _003C_003E4__this;
+
+			private float _003CdividedDischarge_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoUnchargeLoop_003Ed__26(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("POWERED AND TURNED ON")]
 		[SerializeField]
 		protected bool m_Powered;
@@ -36,7 +88,7 @@ namespace SLZ.Bonelab.Obsolete
 		{
 			get
 			{
-				return default(bool);
+				return false;
 			}
 			set
 			{
@@ -47,7 +99,7 @@ namespace SLZ.Bonelab.Obsolete
 		{
 			get
 			{
-				return default(bool);
+				return false;
 			}
 			set
 			{
@@ -82,14 +134,10 @@ namespace SLZ.Bonelab.Obsolete
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoUnchargeLoop_003Ed__26))]
 		private IEnumerator CoUnchargeLoop()
 		{
 			return null;
-		}
-
-		public Powerable()
-			: base()
-		{
 		}
 	}
 }

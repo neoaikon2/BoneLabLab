@@ -15,7 +15,65 @@ namespace SLZ.Interaction
 			LONGHOVERING = 1,
 			PULLING = 2
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoPull_003Ed__26 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
 
+			private object _003C_003E2__current;
+
+			public ForcePullGrip _003C_003E4__this;
+
+			public Hand hand;
+
+			private float _003CmaxPullDistance_003E5__2;
+
+			private IGrippable _003Chost_003E5__3;
+
+			private float _003Ctime_003E5__4;
+
+			private bool _003CisSnatching_003E5__5;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoPull_003Ed__26(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		private Grip _grip;
 
 		private Hand _pullToHand;
@@ -84,14 +142,10 @@ namespace SLZ.Interaction
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoPull_003Ed__26))]
 		private IEnumerator CoPull(Hand hand)
 		{
 			return null;
-		}
-
-		public ForcePullGrip()
-			: base()
-		{
 		}
 	}
 }

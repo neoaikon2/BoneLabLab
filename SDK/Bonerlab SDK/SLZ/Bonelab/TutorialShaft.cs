@@ -16,7 +16,33 @@ namespace SLZ.Bonelab
 			MOVING_UP = 1,
 			MOVING_DOWN = 2
 		}
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CMoveShaftLoop_003Ed__10 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
 
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public TutorialShaft _003C_003E4__this;
+
+			public CancellationToken ct;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 		public TutorialElevator elevator;
 
 		public ShaftState shaftState;
@@ -43,14 +69,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CMoveShaftLoop_003Ed__10))]
 		private UniTaskVoid MoveShaftLoop(CancellationToken ct)
 		{
 			return default(UniTaskVoid);
-		}
-
-		public TutorialShaft()
-			: base()
-		{
 		}
 	}
 }

@@ -14,6 +14,56 @@ namespace SLZ.MLAgents
 
 		public delegate void OnGoalChangeDelegate(float newVal);
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CRadiusStateController_003Ed__41 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public TaskObjective _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CRadiusStateController_003Ed__41(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("Radii Section")]
 		[Tooltip("The collider component name that will tell task that contestant has entered")]
 		public string vehicleComponentCpName;
@@ -82,7 +132,7 @@ namespace SLZ.MLAgents
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
 			{
@@ -93,9 +143,45 @@ namespace SLZ.MLAgents
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
+			{
+			}
+		}
+
+		public event Action<bool> TaskCompleted
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event OnProxChangeDelegate OnProxChange
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event OnGoalChangeDelegate OnGoalChange
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
 			{
 			}
 		}
@@ -104,6 +190,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CRadiusStateController_003Ed__41))]
 		public IEnumerator RadiusStateController()
 		{
 			return null;
@@ -152,16 +239,5 @@ namespace SLZ.MLAgents
 		protected virtual void SubmitTaskInfo(GameObject gameObj)
 		{
 		}
-
-		public TaskObjective()
-			: base()
-		{
-		}
-
-		public event Action<bool> TaskCompleted;
-
-		public event OnProxChangeDelegate OnProxChange;
-
-		public event OnGoalChangeDelegate OnGoalChange;
 	}
 }

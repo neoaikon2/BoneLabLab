@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
@@ -15,6 +14,29 @@ namespace SLZ.Bonelab
 {
 	public class BonelabLevelsPanelView : PanelView
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CPopulateMenuAsync_003Ed__42 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public BonelabLevelsPanelView _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 		[Tooltip("Include levels that are built in with the game")]
 		[Header("Level Query")]
 		public bool includeInternalLevels;
@@ -82,13 +104,7 @@ namespace SLZ.Bonelab
 
 		public int doorPortalIndex;
 
-		private static PlayerProgression p
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerProgression p => null;
 
 		private void Start()
 		{
@@ -112,7 +128,7 @@ namespace SLZ.Bonelab
 
 		private bool GetLevelCompletion(PlayerProgression progression, string _level)
 		{
-			return default(bool);
+			return false;
 		}
 
 		[ContextMenu("Load First Level")]
@@ -128,6 +144,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CPopulateMenuAsync_003Ed__42))]
 		public UniTaskVoid PopulateMenuAsync()
 		{
 			return default(UniTaskVoid);
@@ -155,11 +172,6 @@ namespace SLZ.Bonelab
 
 		[RuntimeInitializeOnLoadMethod]
 		public static void Startup()
-		{
-		}
-
-		public BonelabLevelsPanelView()
-			: base()
 		{
 		}
 	}

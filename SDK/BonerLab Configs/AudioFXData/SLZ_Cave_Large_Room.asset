@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0574cc530538d9ba846b9ae36fa78195, type: 3}
+  m_Script: {fileID: 11500000, guid: 37eedab185f26df4ca6c7ba65dbb72c9, type: 3}
   m_Name: SLZ_Cave_Large_Room
   m_EditorClassIdentifier:
   reverbData:

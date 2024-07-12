@@ -19,26 +19,17 @@ namespace SLZ.Bonelab
 
 			public HashSet<ulong> m_VtxAttrSet;
 
-			public HashSet<ulong> vtxAttrSet
-			{
-				get
-				{
-					return null;
-				}
-			}
+			public HashSet<ulong> vtxAttrSet => null;
 
 			public ShaderLayout(Shader shader)
-				: base()
 			{
 			}
 
 			public ShaderLayout(Shader shader, VertexAttributeDescriptor[] vtxAttribute)
-				: base()
 			{
 			}
 
 			public ShaderLayout(Shader shader, VertexAttributeDescriptor[] vtxAttribute, ulong hashCode)
-				: base()
 			{
 			}
 
@@ -63,22 +54,22 @@ namespace SLZ.Bonelab
 
 			public SerializedVtxAttrArray(SerializedVtxAttrDesc[] desc)
 			{
-				this.desc = default(SerializedVtxAttrDesc[]);
+				this.desc = null;
 			}
 
 			public SerializedVtxAttrArray(VertexAttributeDescriptor[] desc)
 			{
-				this.desc = default(SerializedVtxAttrDesc[]);
+				this.desc = null;
 			}
 
 			public ulong GetLongHashCode()
 			{
-				return default(ulong);
+				return 0uL;
 			}
 
 			public override int GetHashCode()
 			{
-				return default(int);
+				return 0;
 			}
 
 			public ShaderWarmupSetup GetWarmupSetup()
@@ -92,11 +83,8 @@ namespace SLZ.Bonelab
 		public struct SerializedVtxAttrDesc
 		{
 			public VertexAttribute attribute;
-
 			public VertexAttributeFormat format;
-
 			public int dimension;
-
 			public int stream;
 		}
 
@@ -105,13 +93,7 @@ namespace SLZ.Bonelab
 		[NonSerialized]
 		private Dictionary<Shader, int> m_ShaderToLayout;
 
-		public Dictionary<Shader, int> shaderToLayout
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public Dictionary<Shader, int> shaderToLayout => null;
 
 		public void RefreshShaderToLayout()
 		{
@@ -119,7 +101,7 @@ namespace SLZ.Bonelab
 
 		public static ulong GetVtxAttributeHashCode(VertexAttributeDescriptor[] desc)
 		{
-			return default(ulong);
+			return 0uL;
 		}
 
 		public static SerializedVtxAttrDesc[] ToSerialized(VertexAttributeDescriptor[] desc)
@@ -149,11 +131,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void PreWarmShaderBruteForce()
-		{
-		}
-
-		public VtxStructCollection()
-			: base()
 		{
 		}
 	}

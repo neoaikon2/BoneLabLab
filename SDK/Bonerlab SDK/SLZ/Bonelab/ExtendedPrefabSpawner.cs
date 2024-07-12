@@ -13,6 +13,58 @@ namespace SLZ.Bonelab
 {
 	public class ExtendedPrefabSpawner : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnLoop_003Ed__26 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ExtendedPrefabSpawner _003C_003E4__this;
+
+			public float length;
+
+			private float _003Ctime_003E5__2;
+
+			private float _003ClastSpawn_003E5__3;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CWaitForHibernation_003Ed__28 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ExtendedPrefabSpawner _003C_003E4__this;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		[Tooltip("Spawnable")]
 		private Spawnable[] spawnables;
@@ -79,6 +131,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnLoop_003Ed__26))]
 		private UniTaskVoid SpawnLoop(float length, CancellationTokenSource cts)
 		{
 			return default(UniTaskVoid);
@@ -88,17 +141,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CWaitForHibernation_003Ed__28))]
 		private UniTaskVoid WaitForHibernation()
 		{
 			return default(UniTaskVoid);
 		}
 
 		private void ApplyForce()
-		{
-		}
-
-		public ExtendedPrefabSpawner()
-			: base()
 		{
 		}
 	}

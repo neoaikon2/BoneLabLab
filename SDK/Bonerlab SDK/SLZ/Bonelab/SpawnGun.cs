@@ -16,6 +16,84 @@ namespace SLZ.Bonelab
 {
 	public class SpawnGun : Gun
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoFireFlash_003Ed__85 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public SpawnGun _003C_003E4__this;
+
+			private float _003Cduration_003E5__2;
+
+			private float _003Ctime_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoFireFlash_003Ed__85(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnCrate_003Ed__87 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Action<GameObject> callback;
+
+			public SpawnGun _003C_003E4__this;
+
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		[Header("Spawn Options")]
 		private Spawnable _spawnGunUISpawnable;
@@ -223,6 +301,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoFireFlash_003Ed__85))]
 		private IEnumerator CoFireFlash()
 		{
 			return null;
@@ -232,14 +311,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private UniTaskVoid SpawnCrate(Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Action<GameObject> callback = default(Action<GameObject>))
+		//[AsyncStateMachine(typeof(_003CSpawnCrate_003Ed__87))]
+		private UniTaskVoid SpawnCrate(Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Action<GameObject> callback = null)
 		{
 			return default(UniTaskVoid);
-		}
-
-		public SpawnGun()
-			: base()
-		{
 		}
 	}
 }

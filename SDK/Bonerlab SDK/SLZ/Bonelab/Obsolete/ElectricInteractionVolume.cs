@@ -12,6 +12,60 @@ namespace SLZ.Bonelab.Obsolete
 	[Obsolete("Superseded by VoidLogic")]
 	public class ElectricInteractionVolume : InteractionVolume
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoElectricInteractionCooldown_003Ed__22 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public ElectricInteractionVolume _003C_003E4__this;
+
+			public bool isInserted;
+
+			public IGrippable host;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoElectricInteractionCooldown_003Ed__22(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public Transform targetPos;
 
 		public Collider[] recieverColliders;
@@ -39,13 +93,7 @@ namespace SLZ.Bonelab.Obsolete
 
 		public static Action<ElectricInteractionVolume, IGrippable> OnVolumeChanged;
 
-		public bool isElectricInserted
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public bool isElectricInserted => false;
 
 		private void Start()
 		{
@@ -53,7 +101,7 @@ namespace SLZ.Bonelab.Obsolete
 
 		private bool M_CanInsert(PowerSourceType type)
 		{
-			return default(bool);
+			return false;
 		}
 
 		protected override void OnHoverStart(InteractableHost host)
@@ -80,6 +128,7 @@ namespace SLZ.Bonelab.Obsolete
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoElectricInteractionCooldown_003Ed__22))]
 		private IEnumerator CoElectricInteractionCooldown(bool isInserted, IGrippable host)
 		{
 			return null;
@@ -90,11 +139,6 @@ namespace SLZ.Bonelab.Obsolete
 		}
 
 		public void ExitInteractionVolume()
-		{
-		}
-
-		public ElectricInteractionVolume()
-			: base()
 		{
 		}
 	}

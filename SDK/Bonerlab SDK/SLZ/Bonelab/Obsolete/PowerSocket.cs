@@ -11,6 +11,56 @@ namespace SLZ.Bonelab.Obsolete
 	[Obsolete("Superseded by VoidLogic")]
 	public class PowerSocket : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoChargeLoop_003Ed__20 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PowerSocket _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoChargeLoop_003Ed__20(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		[Tooltip("The charge rate passed into the battery in Watts/min")]
 		private float m_ChargeCurrent;
@@ -57,6 +107,7 @@ namespace SLZ.Bonelab.Obsolete
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoChargeLoop_003Ed__20))]
 		private IEnumerator CoChargeLoop()
 		{
 			return null;
@@ -75,11 +126,6 @@ namespace SLZ.Bonelab.Obsolete
 		}
 
 		private void M_SetIndicators(bool OnOff = false)
-		{
-		}
-
-		public PowerSocket()
-			: base()
 		{
 		}
 	}

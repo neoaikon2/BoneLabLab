@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 
@@ -36,15 +37,11 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
+		[field: SerializeField]
+		[field: ReadOnly(false)]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
-		public PortMetadata PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		public PortMetadata PortMetadata => default(PortMetadata);
 
 		private void Awake()
 		{
@@ -62,22 +59,28 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		void IVoidLogicSensor.ReadSensors(NodeState nodeState)
+		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicSensor_002EReadSensors(ref NodeState nodeState)
 		{
 		}
 
+		[MethodImpl(256)]
 		private float _wrap(float angleDegrees)
 		{
-			return default(float);
+			return 0f;
 		}
 
-		void IVoidLogicSource.Calculate(NodeState nodeState)
+		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicSource_002ECalculate(ref NodeState nodeState)
 		{
 		}
 
-		public OneOffTransformSensor()
-			: base()
+		public void ReadSensors(NodeState nodeState)
 		{
+			throw new System.NotImplementedException();
+		}
+
+		public void Calculate(NodeState nodeState)
+		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

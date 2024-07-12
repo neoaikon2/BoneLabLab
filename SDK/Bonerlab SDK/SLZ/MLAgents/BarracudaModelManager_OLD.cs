@@ -13,6 +13,41 @@ namespace SLZ.MLAgents
 {
 	public class BarracudaModelManager_OLD
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CRun_003Ed__31 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public BarracudaModelManager_OLD _003C_003E4__this;
+
+			public CancellationTokenSource cancelToken;
+
+			private IEnumerator _003Cit_003E5__2;
+
+			private int _003Ccounter_003E5__3;
+
+			private int _003Cit_counter_003E5__4;
+
+			private Tensor _003Coutput_003E5__5;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private int _003Csim_update_counter_003E5__6;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 		public GameObject agentPrefab;
 
 		public GameObject area;
@@ -87,17 +122,13 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CRun_003Ed__31))]
 		public UniTaskVoid Run(CancellationTokenSource cancelToken)
 		{
 			return default(UniTaskVoid);
 		}
 
 		public void Dispose()
-		{
-		}
-
-		public BarracudaModelManager_OLD()
-			: base()
 		{
 		}
 	}

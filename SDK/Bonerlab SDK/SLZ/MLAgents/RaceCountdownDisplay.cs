@@ -9,6 +9,56 @@ namespace SLZ.MLAgents
 {
 	public class RaceCountdownDisplay : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCountdown_003Ed__15 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public RaceCountdownDisplay _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCountdown_003Ed__15(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public GameObject[] displayNumberPrefabs;
 
 		public GameObject[] displayNumbers;
@@ -21,6 +71,30 @@ namespace SLZ.MLAgents
 		private float currentSeconds;
 
 		private int currentDisplayInd;
+
+		public event Action CountdownCompleted
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event Action CountdownTick
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
 
 		private void Awake()
 		{
@@ -36,18 +110,10 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCountdown_003Ed__15))]
 		private IEnumerator Countdown()
 		{
 			return null;
 		}
-
-		public RaceCountdownDisplay()
-			: base()
-		{
-		}
-
-		public event Action CountdownCompleted;
-
-		public event Action CountdownTick;
 	}
 }

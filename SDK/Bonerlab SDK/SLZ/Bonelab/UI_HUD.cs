@@ -19,7 +19,255 @@ namespace SLZ.Bonelab
 			Head = 2,
 			Inventory = 3
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003CAmmoFollow_Coroutine_003Ed__66 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
 
+			private object _003C_003E2__current;
+
+			public UI_HUD _003C_003E4__this;
+
+			private bool _003CrunRoutine_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CAmmoFollow_Coroutine_003Ed__66(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CResetLevel_003Ed__68 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public bool opening;
+
+			public UI_HUD _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CResetLevel_003Ed__68(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CProgressBar_003Ed__69 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public UI_HUD _003C_003E4__this;
+
+			private float _003Ctime_003E5__2;
+
+			private float _003CprogressLength_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CProgressBar_003Ed__69(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CHUD_SoftFollow_003Ed__73 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public UI_HUD _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CHUD_SoftFollow_003Ed__73(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CHeadFollowTimmer_003Ed__74 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public UI_HUD _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CHeadFollowTimmer_003Ed__74(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[Header("GENERAL")]
 		public UIRig uiRig;
 
@@ -180,13 +428,14 @@ namespace SLZ.Bonelab
 
 		private bool IsAmmoLowByCartridge(CartridgeData cartridge)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void SHOWAMMO(AmmoDisplayLocation ammoLocation = AmmoDisplayLocation.None)
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CAmmoFollow_Coroutine_003Ed__66))]
 		private IEnumerator AmmoFollow_Coroutine()
 		{
 			return null;
@@ -196,11 +445,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CResetLevel_003Ed__68))]
 		private IEnumerator ResetLevel(bool opening)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CProgressBar_003Ed__69))]
 		private IEnumerator ProgressBar()
 		{
 			return null;
@@ -218,24 +469,21 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CHUD_SoftFollow_003Ed__73))]
 		private IEnumerator HUD_SoftFollow()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CHeadFollowTimmer_003Ed__74))]
 		private IEnumerator HeadFollowTimmer()
 		{
 			return null;
 		}
 
-		protected Vector3 SmoothDamp2(Vector3 target, Vector3 lastTarget, Vector3 gimbaledVelocity, Vector3 gimbalAccel, Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset, float smoothTime = 0.1f)
+		protected Vector3 SmoothDamp2(Vector3 target, ref Vector3 lastTarget, ref Vector3 gimbaledVelocity, ref Vector3 gimbalAccel, ref Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset, float smoothTime = 0.1f)
 		{
 			return default(Vector3);
-		}
-
-		public UI_HUD()
-			: base()
-		{
 		}
 	}
 }

@@ -7,7 +7,6 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab.SaveData;
-using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Marrow.Warehouse;
@@ -18,6 +17,175 @@ namespace SLZ.Bonelab
 {
 	public class Control_Gashapon : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCheckGachaLoop_003Ed__42 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Control_Gashapon _003C_003E4__this;
+
+			private float _003Ctime_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCheckGachaLoop_003Ed__42(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnGacha_003Ed__44 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public string barcode;
+
+			public Control_Gashapon _003C_003E4__this;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CPusherPaddle_003Ed__45 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Control_Gashapon _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CPusherPaddle_003Ed__45(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CBallUpdateLoop_003Ed__46 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Control_Gashapon _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CBallUpdateLoop_003Ed__46(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		public PowerSource pusherPower;
 
 		[SerializeField]
@@ -98,21 +266,9 @@ namespace SLZ.Bonelab
 
 		private AmmoInventory _ammoInventory;
 
-		private static PlayerUnlocks u
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerUnlocks u => null;
 
-		private static PlayerProgression p
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerProgression p => null;
 
 		private void Start()
 		{
@@ -144,6 +300,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCheckGachaLoop_003Ed__42))]
 		private IEnumerator CheckGachaLoop()
 		{
 			return null;
@@ -153,24 +310,22 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnGacha_003Ed__44))]
 		private UniTaskVoid SpawnGacha(string barcode)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[IteratorStateMachine(typeof(_003CPusherPaddle_003Ed__45))]
 		private IEnumerator PusherPaddle()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CBallUpdateLoop_003Ed__46))]
 		private IEnumerator BallUpdateLoop()
 		{
 			return null;
-		}
-
-		public Control_Gashapon()
-			: base()
-		{
 		}
 	}
 }

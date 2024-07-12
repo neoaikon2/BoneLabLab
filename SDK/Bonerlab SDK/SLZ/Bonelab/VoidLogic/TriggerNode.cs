@@ -50,13 +50,7 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		public override PortMetadata PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		public override PortMetadata PortMetadata => default(PortMetadata);
 
 		protected override void Awake()
 		{
@@ -71,11 +65,6 @@ namespace SLZ.Bonelab.VoidLogic
 		}
 
 		public override void Calculate(NodeState nodeState)
-		{
-		}
-
-		public TriggerNode()
-			: base()
 		{
 		}
 	}

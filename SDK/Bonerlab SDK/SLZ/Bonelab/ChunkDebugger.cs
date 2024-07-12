@@ -18,21 +18,11 @@ namespace SLZ.Bonelab
 			public Quaternion rotation;
 
 			public Vector3 extends;
-
-			public Box()
-				: base()
-			{
-			}
 		}
 
 		private class TriggerBox : Box
 		{
 			public ChunkTrigger chunkTrigger;
-
-			public TriggerBox()
-				: base()
-			{
-			}
 		}
 
 		private class TrackerBox : Box
@@ -40,12 +30,55 @@ namespace SLZ.Bonelab
 			public ChunkTracker chunkTracker;
 
 			public Collider collider;
+		}
 
-			public TrackerBox()
-				: base()
+		/*
+		[CompilerGenerated]
+		private sealed class _003CStart_003Ed__9 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CStart_003Ed__9(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 		}
+		*/
 
 		public Grip triggerGrip;
 
@@ -61,6 +94,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CStart_003Ed__9))]
 		private IEnumerator Start()
 		{
 			return null;
@@ -79,11 +113,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDestroy()
-		{
-		}
-
-		public ChunkDebugger()
-			: base()
 		{
 		}
 	}

@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using SLZ.Bonelab.SaveData;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
@@ -15,6 +14,122 @@ namespace SLZ.Bonelab
 {
 	public class PopUpMenuView : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoShowCursor_003Ed__76 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PopUpMenuView _003C_003E4__this;
+
+			public float duration;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoShowCursor_003Ed__76(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoHideCursor_003Ed__77 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PopUpMenuView _003C_003E4__this;
+
+			public float duration;
+
+			private Vector3 _003ClocStartPos_003E5__2;
+
+			private Vector3 _003ClocMidPos_003E5__3;
+
+			private Vector3 _003ClocEndPos_003E5__4;
+
+			private Quaternion _003ClocStartRot_003E5__5;
+
+			private Quaternion _003ClocMidRot_003E5__6;
+
+			private Quaternion _003ClocEndRot_003E5__7;
+
+			private float _003Ctime_003E5__8;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoHideCursor_003Ed__77(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("References")]
 		public PageView radialPageView;
 
@@ -100,37 +215,13 @@ namespace SLZ.Bonelab
 
 		public static PopUpMenuView instance { get; private set; }
 
-		public bool isActive
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public bool isActive => false;
 
-		private Transform m_CursorTransform
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private Transform m_CursorTransform => null;
 
-		private static PlayerUnlocks u
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerUnlocks u => null;
 
-		private static PlayerProgression Progression
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerProgression Progression => null;
 
 		private void Awake()
 		{
@@ -144,7 +235,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void Trigger(bool isDown, bool isSecondaryDown = true, UIControllerInput controllerInput = default(UIControllerInput))
+		public void Trigger(bool isDown, bool isSecondaryDown = true, UIControllerInput controllerInput = null)
 		{
 		}
 
@@ -228,19 +319,16 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoShowCursor_003Ed__76))]
 		private IEnumerator CoShowCursor(float duration)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoHideCursor_003Ed__77))]
 		private IEnumerator CoHideCursor(float duration)
 		{
 			return null;
-		}
-
-		public PopUpMenuView()
-			: base()
-		{
 		}
 	}
 }

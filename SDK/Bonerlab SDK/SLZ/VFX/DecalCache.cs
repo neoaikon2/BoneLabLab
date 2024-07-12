@@ -13,6 +13,30 @@ namespace SLZ.VFX
 	[RequireComponent(typeof(DecalProjector))]
 	public class DecalCache : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CDelayedDespawn_003Ed__9 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public DecalCache _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		private static ComponentCache<DecalCache> _cache;
 
 		[SerializeField]
@@ -20,13 +44,7 @@ namespace SLZ.VFX
 
 		private Poolee poolee;
 
-		public static ComponentCache<DecalCache> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static ComponentCache<DecalCache> Cache => null;
 
 		private void Reset()
 		{
@@ -44,6 +62,7 @@ namespace SLZ.VFX
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CDelayedDespawn_003Ed__9))]
 		private UniTaskVoid DelayedDespawn()
 		{
 			return default(UniTaskVoid);
@@ -54,11 +73,6 @@ namespace SLZ.VFX
 		}
 
 		public void SetVariablesAndCreate(SurfaceData.MaterialLevel decalMaterialLevel, Collider hitCollider, Color colorTint)
-		{
-		}
-
-		public DecalCache()
-			: base()
 		{
 		}
 	}

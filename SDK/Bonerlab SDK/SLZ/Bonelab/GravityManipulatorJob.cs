@@ -65,7 +65,107 @@ namespace SLZ.Bonelab
 			{
 			}
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoAutoCollect_003Ed__65 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
 
+			private object _003C_003E2__current;
+
+			public GravityManipulatorJob _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoAutoCollect_003Ed__65(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoCleanupRbMap_003Ed__102 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GravityManipulatorJob _003C_003E4__this;
+
+			private float _003CkeepDistanceSqr_003E5__2;
+
+			private int _003Ci_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoCleanupRbMap_003Ed__102(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[Header("Options")]
 		public float targetMinDistance;
 
@@ -206,13 +306,7 @@ namespace SLZ.Bonelab
 
 		private Coroutine cleanupRbMapCoroutine;
 
-		private Vector3 m_TargetPoint
-		{
-			get
-			{
-				return default(Vector3);
-			}
-		}
+		private Vector3 m_TargetPoint => default(Vector3);
 
 		public bool IsRigidbodyLocked { get; private set; }
 
@@ -224,6 +318,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoAutoCollect_003Ed__65))]
 		private IEnumerator CoAutoCollect()
 		{
 			return null;
@@ -278,7 +373,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void SetColliders(List<Collider> colliders)
+		public void SetColliders(ref List<Collider> colliders)
 		{
 		}
 
@@ -328,17 +423,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoCleanupRbMap_003Ed__102))]
 		private IEnumerator CoCleanupRbMap()
 		{
 			return null;
 		}
 
 		private void OnDrawGizmosSelected()
-		{
-		}
-
-		public GravityManipulatorJob()
-			: base()
 		{
 		}
 	}

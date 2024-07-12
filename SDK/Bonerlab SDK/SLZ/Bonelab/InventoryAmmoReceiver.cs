@@ -13,6 +13,104 @@ namespace SLZ.Bonelab
 {
 	public class InventoryAmmoReceiver : InventoryHandReceiver
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CGrabMagAsync_003Ed__21 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Hand hand;
+
+			public InventoryAmmoReceiver _003C_003E4__this;
+
+			public CartridgeData cartridge;
+
+			public int ammoCount;
+
+			private Magazine _003Cmagazine_003E5__2;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwitchMagazineAsync_003Ed__34 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Spawnable spawnable;
+
+			public InventoryAmmoReceiver _003C_003E4__this;
+
+			public CartridgeData cartridgeData;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnAndPlaceMagazineAsync_003Ed__35 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public InventoryAmmoReceiver _003C_003E4__this;
+
+			public Spawnable spawnable;
+
+			public CartridgeData cartridgeData;
+
+			private Transform[] _003C_003E7__wrap1;
+
+			private int _003C_003E7__wrap2;
+
+			private Transform _003CartTarget_003E5__4;
+
+			private Magazine _003Cmagazine_003E5__5;
+
+			private InteractableHost _003Chost_003E5__6;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Range(0f, 10f)]
 		public float priority;
 
@@ -76,6 +174,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CGrabMagAsync_003Ed__21))]
 		private UniTaskVoid GrabMagAsync(Hand hand, CartridgeData cartridge, int ammoCount)
 		{
 			return default(UniTaskVoid);
@@ -87,7 +186,7 @@ namespace SLZ.Bonelab
 
 		public override float Validate(Hand hand)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public void RegisterMagazine(Magazine magazine)
@@ -110,22 +209,19 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSwitchMagazineAsync_003Ed__34))]
 		private UniTaskVoid SwitchMagazineAsync(Spawnable spawnable, CartridgeData cartridgeData)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnAndPlaceMagazineAsync_003Ed__35))]
 		private UniTask SpawnAndPlaceMagazineAsync(Spawnable spawnable, CartridgeData cartridgeData)
 		{
 			return default(UniTask);
 		}
 
 		private void UpdateAmmoArt()
-		{
-		}
-
-		public InventoryAmmoReceiver()
-			: base()
 		{
 		}
 	}

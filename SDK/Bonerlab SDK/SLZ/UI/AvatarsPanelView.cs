@@ -23,6 +23,156 @@ namespace SLZ.UI
 {
 	public class AvatarsPanelView : PanelView
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CPopulateMenuAsync_003Ed__92 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public AvatarsPanelView _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CPromptCycle_003Ed__96 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public AvatarsPanelView _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CPromptCycle_003Ed__96(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoadFavoriteAvatars_003Ed__97 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public AvatarsPanelView _003C_003E4__this;
+
+			private List<string> _003CfavoriteAvatarsBarcodes_003E5__2;
+
+			private int _003Ci_003E5__3;
+
+			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwapAvatar_003Ed__98 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public AvatarsPanelView _003C_003E4__this;
+
+			public AvatarCrate avatarCrate;
+
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwapReflectionAvatar_003Ed__99 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public string barcode;
+
+			public AvatarsPanelView _003C_003E4__this;
+
+			private AvatarCrate _003Ccrate_003E5__2;
+
+			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
+
+			private UniTask<GameObject>.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public GameObject canvas;
 
 		[Header("Avatar Query")]
@@ -174,13 +324,7 @@ namespace SLZ.UI
 
 		public UnityEvent pullCordRemoved;
 
-		private static PlayerUnlocks u
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerUnlocks u => null;
 
 		private void Start()
 		{
@@ -266,6 +410,7 @@ namespace SLZ.UI
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CPopulateMenuAsync_003Ed__92))]
 		public UniTaskVoid PopulateMenuAsync()
 		{
 			return default(UniTaskVoid);
@@ -283,29 +428,28 @@ namespace SLZ.UI
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CPromptCycle_003Ed__96))]
 		private IEnumerator PromptCycle()
 		{
 			return null;
 		}
 
+		//[AsyncStateMachine(typeof(_003CLoadFavoriteAvatars_003Ed__97))]
 		private UniTaskVoid LoadFavoriteAvatars()
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__98))]
 		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSwapReflectionAvatar_003Ed__99))]
 		private UniTask SwapReflectionAvatar(string barcode)
 		{
 			return default(UniTask);
-		}
-
-		public AvatarsPanelView()
-			: base()
-		{
 		}
 	}
 }

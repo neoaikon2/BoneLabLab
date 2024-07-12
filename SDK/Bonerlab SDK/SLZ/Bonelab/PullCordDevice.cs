@@ -19,6 +19,353 @@ namespace SLZ.Bonelab
 {
 	public class PullCordDevice : MonoBehaviour
 	{
+		/*[CompilerGenerated]
+		private sealed class _003CHologramAnimation_003Ed__153 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PullCordDevice _003C_003E4__this;
+
+			private Color _003ChologramDipColor_003E5__2;
+
+			private float _003CanimTime_003E5__3;
+
+			private bool _003CpreviewMeshSet_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CHologramAnimation_003Ed__153(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CAvatarTransformationSequence_003Ed__155 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public int stopIndex;
+
+			public PullCordDevice _003C_003E4__this;
+
+			public AvatarCrateReference avatarRef;
+
+			private float _003CanimTime_003E5__2;
+
+			private float _003CanimLength_003E5__3;
+
+			private int _003ClastGlyphProgress_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CAvatarTransformationSequence_003Ed__155(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CAddAvatarAnimation_003Ed__157 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PullCordDevice _003C_003E4__this;
+
+			public SpawnableCrate addCrate;
+
+			public Transform addPosition;
+
+			private GameObject _003CaddObject_003E5__2;
+
+			private GameObject _003CaddMeshObj_003E5__3;
+
+			private Quaternion _003CavatarAddRotation_003E5__4;
+
+			private MeshRenderer _003CaddRenderer_003E5__5;
+
+			private Vector3 _003Cscale_003E5__6;
+
+			private Vector3 _003CoffsetStart_003E5__7;
+
+			private Vector3 _003CscaleEnd_003E5__8;
+
+			private Vector3 _003CoffsetEnd_003E5__9;
+
+			private float _003CanimTime_003E5__10;
+
+			private float _003CanimLength_003E5__11;
+
+			private Color _003ChologramDipColor_003E5__12;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CAddAvatarAnimation_003Ed__157(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CRetractBall_003Ed__161 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PullCordDevice _003C_003E4__this;
+
+			public bool quiet;
+
+			private float _003CinitialDist_003E5__2;
+
+			private float _003Ctime_003E5__3;
+
+			private float _003Clength_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CRetractBall_003Ed__161(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CLerpAnchor_003Ed__168 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PullCordDevice _003C_003E4__this;
+
+			public float lerpTime;
+
+			private float _003Ctime_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CLerpAnchor_003Ed__168(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CUpdateAllPreviewMeshes_003Ed__172 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public PullCordDevice _003C_003E4__this;
+
+			private int _003Ci_003E5__2;
+
+			private SpawnableCrate[] _003C_003E7__wrap2;
+
+			private int _003C_003E7__wrap3;
+
+			private UniTask<SpawnableCrate>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwapAvatar_003Ed__174 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public AvatarCrateReference avatarCrateRef;
+
+			public PullCordDevice _003C_003E4__this;
+
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public PullCordHandle pch;
 
 		public AvatarsPanelView apv;
@@ -401,6 +748,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CHologramAnimation_003Ed__153))]
 		private IEnumerator HologramAnimation()
 		{
 			return null;
@@ -410,6 +758,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CAvatarTransformationSequence_003Ed__155))]
 		private IEnumerator AvatarTransformationSequence(AvatarCrateReference avatarRef, int stopIndex = -1)
 		{
 			return null;
@@ -419,6 +768,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CAddAvatarAnimation_003Ed__157))]
 		private IEnumerator AddAvatarAnimation(Transform addPosition, SpawnableCrate addCrate)
 		{
 			return null;
@@ -436,6 +786,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CRetractBall_003Ed__161))]
 		private IEnumerator RetractBall(bool quiet = false)
 		{
 			return null;
@@ -466,6 +817,7 @@ namespace SLZ.Bonelab
 			return default(Vector3);
 		}
 
+		//[IteratorStateMachine(typeof(_003CLerpAnchor_003Ed__168))]
 		private IEnumerator LerpAnchor(float lerpTime)
 		{
 			return null;
@@ -483,6 +835,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CUpdateAllPreviewMeshes_003Ed__172))]
 		private UniTaskVoid UpdateAllPreviewMeshes()
 		{
 			return default(UniTaskVoid);
@@ -492,6 +845,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__174))]
 		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrateRef)
 		{
 			return default(UniTaskVoid);
@@ -503,12 +857,7 @@ namespace SLZ.Bonelab
 
 		private float GetVolumeSurface(Vector3 size)
 		{
-			return default(float);
-		}
-
-		public PullCordDevice()
-			: base()
-		{
+			return 0f;
 		}
 	}
 }

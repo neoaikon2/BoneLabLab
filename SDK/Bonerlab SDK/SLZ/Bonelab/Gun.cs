@@ -62,6 +62,276 @@ namespace SLZ.Bonelab
 			UNSPENT = 1,
 			SPENT = 2
 		}
+		
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CInstantLoadAsync_003Ed__101 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public Gun _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CUpdateMagazineArt_003Ed__104 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Gun _003C_003E4__this;
+
+			private CartridgeData _003CcartData_003E5__2;
+
+			private UniTask<Poolee>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoBlinkHighlight_003Ed__109 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Renderer renderer;
+
+			public Gun _003C_003E4__this;
+
+			private MaterialPropertyBlock _003CpropertyBlock_003E5__2;
+
+			private int _003Cdither_003E5__3;
+
+			private float _003Ccycles_003E5__4;
+
+			private float _003Cduration_003E5__5;
+
+			private float _003Ctime_003E5__6;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoBlinkHighlight_003Ed__109(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnFlareAsync_003Ed__124 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Gun _003C_003E4__this;
+
+			private UniTask<Poolee>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoOnAnimationComplete_003Ed__130 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Gun _003C_003E4__this;
+
+			public AnimationStates completedAnimation;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoOnAnimationComplete_003Ed__130(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoPlayAnimation_003Ed__135 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public float startPerc;
+
+			public Gun _003C_003E4__this;
+
+			public bool isReversed;
+
+			public AnimationStates state;
+
+			public AnimationCurve curve;
+
+			private float _003Ctime_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoPlayAnimation_003Ed__135(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnCartridge_003Ed__137 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Gun _003C_003E4__this;
+
+			public Spawnable spawnableCartridge;
+
+			private Rigidbody _003ChostRb_003E5__2;
+
+			private FirearmCartridge _003Ccartridge_003E5__3;
+
+			private UniTask<Poolee>.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 
 		private static ComponentCache<Gun> _cache;
 
@@ -256,13 +526,7 @@ namespace SLZ.Bonelab
 
 		private Coroutine playAnimationStateCoroutine;
 
-		public static ComponentCache<Gun> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static ComponentCache<Gun> Cache => null;
 
 		[HideInInspector]
 		public MagazineState MagazineState
@@ -312,6 +576,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CInstantLoadAsync_003Ed__101))]
 		public UniTask InstantLoadAsync()
 		{
 			return default(UniTask);
@@ -325,6 +590,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CUpdateMagazineArt_003Ed__104))]
 		private UniTaskVoid UpdateMagazineArt()
 		{
 			return default(UniTaskVoid);
@@ -343,6 +609,7 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoBlinkHighlight_003Ed__109))]
 		private IEnumerator CoBlinkHighlight(Renderer renderer)
 		{
 			return null;
@@ -350,7 +617,7 @@ namespace SLZ.Bonelab
 
 		protected virtual int AmmoCount()
 		{
-			return default(int);
+			return 0;
 		}
 
 		public void CheckGunRequirements()
@@ -359,7 +626,7 @@ namespace SLZ.Bonelab
 
 		public bool RequiresChargingHandle()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void SlideOverride()
@@ -394,6 +661,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnFlareAsync_003Ed__124))]
 		private UniTaskVoid SpawnFlareAsync()
 		{
 			return default(UniTaskVoid);
@@ -415,6 +683,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoOnAnimationComplete_003Ed__130))]
 		private IEnumerator CoOnAnimationComplete(AnimationStates completedAnimation)
 		{
 			return null;
@@ -428,7 +697,8 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private IEnumerator CoPlayAnimation(AnimationStates state, bool isReversed = false, float startPerc = 0f, float duration = 1f, AnimationCurve curve = default(AnimationCurve))
+		//[IteratorStateMachine(typeof(_003CCoPlayAnimation_003Ed__135))]
+		private IEnumerator CoPlayAnimation(AnimationStates state, bool isReversed = false, float startPerc = 0f, float duration = 1f, AnimationCurve curve = null)
 		{
 			return null;
 		}
@@ -437,6 +707,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnCartridge_003Ed__137))]
 		private UniTaskVoid SpawnCartridge(Spawnable spawnableCartridge)
 		{
 			return default(UniTaskVoid);
@@ -468,7 +739,7 @@ namespace SLZ.Bonelab
 
 		public virtual bool HasMagazine()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void OnEntityCull()
@@ -476,11 +747,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnEntityUncull()
-		{
-		}
-
-		public Gun()
-			: base()
 		{
 		}
 	}

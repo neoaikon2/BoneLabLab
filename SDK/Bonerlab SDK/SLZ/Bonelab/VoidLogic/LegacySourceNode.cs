@@ -28,27 +28,16 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
 			{
 			}
 		}
 
-		public override PortMetadata PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		public override PortMetadata PortMetadata => default(PortMetadata);
 
 		public override void Calculate(NodeState nodeState)
-		{
-		}
-
-		public LegacySourceNode()
-			: base()
 		{
 		}
 	}

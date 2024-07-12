@@ -9,6 +9,56 @@ namespace SLZ.MLAgents
 {
 	public class FollowTaskMover_Baked : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CMoveCarOnPath_003Ed__25 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public FollowTaskMover_Baked _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CMoveCarOnPath_003Ed__25(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public TrackClass trackClass;
 
 		public float desiredSpeed;
@@ -57,13 +107,14 @@ namespace SLZ.MLAgents
 
 		private int WrapAroundInd(int ind, int len)
 		{
-			return default(int);
+			return 0;
 		}
 
 		private void Awake()
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CMoveCarOnPath_003Ed__25))]
 		public IEnumerator MoveCarOnPath()
 		{
 			return null;
@@ -74,11 +125,6 @@ namespace SLZ.MLAgents
 		}
 
 		private void OnDestroy()
-		{
-		}
-
-		public FollowTaskMover_Baked()
-			: base()
 		{
 		}
 	}

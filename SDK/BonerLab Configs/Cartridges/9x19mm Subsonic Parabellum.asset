@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f527c448005b7b84fb0e8326a5d08398, type: 3}
+  m_Script: {fileID: 11500000, guid: ea0c5348a57015f4789906a1dd9b7e7e, type: 3}
   m_Name: 9x19mm Subsonic Parabellum
   m_EditorClassIdentifier:
   projectile: {fileID: 11400000, guid: e8c86562eb8e4324a9e991f415b479db, type: 2}

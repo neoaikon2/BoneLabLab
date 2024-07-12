@@ -14,7 +14,7 @@ Preset:
   m_Properties:
   - target: {fileID: 0}
     propertyPath: tags.Array.size
-    value: 64
+    value: 68
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: tags.Array.data[0]
@@ -273,6 +273,22 @@ Preset:
     value: boid
     objectReference: {fileID: 0}
   - target: {fileID: 0}
+    propertyPath: tags.Array.data[64]
+    value: health_zone
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: tags.Array.data[65]
+    value: wall
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: tags.Array.data[66]
+    value: GravitySlow
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: tags.Array.data[67]
+    value: WorldCreator
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
     propertyPath: layers.Array.size
     value: 32
     objectReference: {fileID: 0}
@@ -290,7 +306,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[3]
-    value: 
+    value: ObserverTrigger
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[4]
@@ -302,7 +318,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[6]
-    value: 
+    value: Fixture
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[7]
@@ -322,7 +338,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[11]
-    value: StereoRender_Ignore
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[12]
@@ -330,11 +346,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[13]
-    value: Static
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[14]
-    value: SpawnGunUI
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[15]
@@ -342,11 +358,11 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[16]
-    value: Hand
+    value: Decaverse
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[17]
-    value: HandOnly
+    value: Deciverse
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[18]
@@ -358,7 +374,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[20]
-    value: InteractableOnly
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[21]
@@ -366,7 +382,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[22]
-    value: NoSelfCollide
+    value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[23]
@@ -382,23 +398,23 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[26]
-    value: Tracker
+    value: EntityTracker
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[27]
-    value: Trigger
+    value: BeingTracker
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[28]
-    value: 
+    value: ObserverTracker
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[29]
-    value: 
+    value: EntityTrigger
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[30]
-    value: 
+    value: BeingTrigger
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: layers.Array.data[31]

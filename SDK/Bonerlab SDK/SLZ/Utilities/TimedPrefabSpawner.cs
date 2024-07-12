@@ -11,6 +11,32 @@ namespace SLZ.Utilities
 {
 	public class TimedPrefabSpawner : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnLoop_003Ed__10 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public TimedPrefabSpawner _003C_003E4__this;
+
+			public CancellationTokenSource cancelToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Tooltip("Spawnable")]
 		[SerializeField]
 		private Spawnable spawnable;
@@ -45,17 +71,13 @@ namespace SLZ.Utilities
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnLoop_003Ed__10))]
 		private UniTaskVoid SpawnLoop(CancellationTokenSource cancelToken)
 		{
 			return default(UniTaskVoid);
 		}
 
 		public void SpawnPrefab()
-		{
-		}
-
-		public TimedPrefabSpawner()
-			: base()
 		{
 		}
 	}

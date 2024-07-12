@@ -12,6 +12,156 @@ namespace StressLevelZero
 {
 	public class HealthPickup : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoSetCollectable_003Ed__19 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public HealthPickup _003C_003E4__this;
+
+			public bool collect;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoSetCollectable_003Ed__19(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoCollectAnimation_003Ed__27 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public HealthPickup _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoCollectAnimation_003Ed__27(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoTimedDespawn_003Ed__29 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float t;
+
+			public HealthPickup _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoTimedDespawn_003Ed__29(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public float healthPerc;
 
 		[SerializeField]
@@ -54,7 +204,7 @@ namespace StressLevelZero
 
 		public bool GetCollectionState()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void SetCollectable(bool collect)
@@ -65,6 +215,7 @@ namespace StressLevelZero
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoSetCollectable_003Ed__19))]
 		private IEnumerator CoSetCollectable(bool collect)
 		{
 			return null;
@@ -98,6 +249,7 @@ namespace StressLevelZero
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoCollectAnimation_003Ed__27))]
 		private IEnumerator CoCollectAnimation()
 		{
 			return null;
@@ -107,6 +259,7 @@ namespace StressLevelZero
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoTimedDespawn_003Ed__29))]
 		private IEnumerator CoTimedDespawn(float t)
 		{
 			return null;
@@ -125,11 +278,6 @@ namespace StressLevelZero
 		}
 
 		public void OnDespawn(GameObject go)
-		{
-		}
-
-		public HealthPickup()
-			: base()
 		{
 		}
 	}

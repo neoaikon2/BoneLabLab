@@ -11,6 +11,40 @@ namespace SLZ.Bonelab
 {
 	public class CartMultiStop : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CCoMoveTargetTransform_003Ed__12 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public CartMultiStop _003C_003E4__this;
+
+			public int floor;
+
+			public CancellationToken cts;
+
+			private Vector3 _003CstartPos_003E5__2;
+
+			private float _003Cdist_003E5__3;
+
+			private float _003Ctime_003E5__4;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("Options")]
 		public float maxSpeed;
 
@@ -41,6 +75,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CCoMoveTargetTransform_003Ed__12))]
 		private UniTaskVoid CoMoveTargetTransform(int floor, CancellationToken cts)
 		{
 			return default(UniTaskVoid);
@@ -55,11 +90,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void GoBackward()
-		{
-		}
-
-		public CartMultiStop()
-			: base()
 		{
 		}
 	}

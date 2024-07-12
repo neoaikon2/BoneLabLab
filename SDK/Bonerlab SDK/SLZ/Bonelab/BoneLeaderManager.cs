@@ -29,6 +29,154 @@ namespace SLZ.Bonelab
 			TOP = 2
 		}
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoWaitAndQuery_003Ed__63 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BoneLeaderManager _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoWaitAndQuery_003Ed__63(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoQueryTimeout_003Ed__65 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BoneLeaderManager _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoQueryTimeout_003Ed__65(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSteam_QueryData_003Ed__66 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncVoidMethodBuilder _003C_003Et__builder;
+
+			public BoneLeaderManager _003C_003E4__this;
+
+			private TaskAwaiter<Leaderboard?> _003C_003Eu__1;
+
+			private TaskAwaiter<LeaderboardEntry[]> _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSubmitScoreToBoard_003Ed__67 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncVoidMethodBuilder _003C_003Et__builder;
+
+			public BoneLeaderData data;
+
+			public int score;
+
+			public BoneLeaderManager _003C_003E4__this;
+
+			private TaskAwaiter<Leaderboard?> _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public LeaderMode leaderMode;
 
 		[SerializeField]
@@ -234,6 +382,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoWaitAndQuery_003Ed__63))]
 		private IEnumerator CoWaitAndQuery()
 		{
 			return null;
@@ -243,21 +392,19 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoQueryTimeout_003Ed__65))]
 		private IEnumerator CoQueryTimeout(BoneLeaderData data)
 		{
 			return null;
 		}
 
+		//[AsyncStateMachine(typeof(_003CSteam_QueryData_003Ed__66))]
 		public void Steam_QueryData()
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSubmitScoreToBoard_003Ed__67))]
 		public void SubmitScoreToBoard(BoneLeaderData data, int score)
-		{
-		}
-
-		public BoneLeaderManager()
-			: base()
 		{
 		}
 	}

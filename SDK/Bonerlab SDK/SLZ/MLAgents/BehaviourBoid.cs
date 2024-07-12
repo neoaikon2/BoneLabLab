@@ -14,6 +14,154 @@ namespace SLZ.MLAgents
 {
 	public class BehaviourBoid : BehaviourGrabbableBaseNav
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CBluntAttackStun_003Ed__54 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BehaviourBoid _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CBluntAttackStun_003Ed__54(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CSelfDespawn_003Ed__63 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public BehaviourBoid _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CSelfDespawn_003Ed__63(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CSpoolCounter_003Ed__88 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BehaviourBoid _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CSpoolCounter_003Ed__88(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public Transform target;
 
 		public Action emitForRecycle;
@@ -131,6 +279,18 @@ namespace SLZ.MLAgents
 			}
 		}
 
+		public event Action OnNewTarget
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
 		public static BehaviourBoidBall FindBall(GameObject childObject)
 		{
 			return null;
@@ -196,6 +356,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CBluntAttackStun_003Ed__54))]
 		private IEnumerator BluntAttackStun(float damage)
 		{
 			return null;
@@ -234,6 +395,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CSelfDespawn_003Ed__63))]
 		public IEnumerator SelfDespawn(float duration)
 		{
 			return null;
@@ -263,6 +425,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CSpoolCounter_003Ed__88))]
 		private IEnumerator SpoolCounter()
 		{
 			return null;
@@ -299,12 +462,5 @@ namespace SLZ.MLAgents
 		private void ProcessDespawn()
 		{
 		}
-
-		public BehaviourBoid()
-			: base()
-		{
-		}
-
-		public event Action OnNewTarget;
 	}
 }

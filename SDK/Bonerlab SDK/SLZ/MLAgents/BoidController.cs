@@ -12,6 +12,154 @@ namespace SLZ.MLAgents
 {
 	public class BoidController : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CChargeShot_003Ed__114 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BoidController _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CChargeShot_003Ed__114(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CPostLaunchCooldown_003Ed__115 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BoidController _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CPostLaunchCooldown_003Ed__115(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CWayPointCountdown_003Ed__119 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BoidController _003C_003E4__this;
+
+			public TriggerRefProxy trp;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CWayPointCountdown_003Ed__119(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("Reward Switches")]
 		public bool use_passive_penalty;
 
@@ -172,13 +320,52 @@ namespace SLZ.MLAgents
 
 		public bool seekingWaypoint;
 
+		[HideInInspector]
+		public event Action OnAgentCollision
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		[HideInInspector]
+		public event Action OnNonAgentCollision
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		[HideInInspector]
+		public event Action OnBulletCollision
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
 		public void Reactivate()
 		{
 		}
 
 		private float MinMaxNorm(float val, float max, float min)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		private void OnDrawGizmos()
@@ -187,67 +374,67 @@ namespace SLZ.MLAgents
 
 		public float RewardLoop(Agent agent, ActionSegment<int> actions)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float PassivePenalty(int MaxStep)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float RadiusReward()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float BoidAlgLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float NeighborReward()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float CohesionLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float AlignmentLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float AvgVelLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float PersonalSpaceLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float ProximityLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float MovementLoss(int moveVal)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float RayLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public float InVolumeLoss()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public Vector3 ProximityDelta()
@@ -262,7 +449,7 @@ namespace SLZ.MLAgents
 
 		public float HandleObsRay()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		private void Awake()
@@ -293,11 +480,13 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CChargeShot_003Ed__114))]
 		private IEnumerator ChargeShot()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CPostLaunchCooldown_003Ed__115))]
 		public IEnumerator PostLaunchCooldown()
 		{
 			return null;
@@ -315,6 +504,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CWayPointCountdown_003Ed__119))]
 		private IEnumerator WayPointCountdown(TriggerRefProxy trp)
 		{
 			return null;
@@ -328,16 +518,5 @@ namespace SLZ.MLAgents
 		public void ForceNextWaypoint()
 		{
 		}
-
-		public BoidController()
-			: base()
-		{
-		}
-
-		public event Action OnAgentCollision;
-
-		public event Action OnNonAgentCollision;
-
-		public event Action OnBulletCollision;
 	}
 }

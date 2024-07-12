@@ -8,51 +8,86 @@ namespace Ara
 {
 	public class ElasticArray<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CGetEnumerator_003Ed__2 : IEnumerator<T>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private T _003C_003E2__current;
+
+			public ElasticArray<T> _003C_003E4__this;
+
+			private int _003Ci_003E5__2;
+
+			private T System_002ECollections_002EGeneric_002EIEnumerator_003CT_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return default(T);
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CGetEnumerator_003Ed__2(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		private T[] data;
 
 		private int count;
 
-		public int Count
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		public int Count => 0;
 
-		public bool IsReadOnly
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public bool IsReadOnly => false;
 
 		public T this[int index]
 		{
 			get
 			{
-				return (T)default(T);
+				return default(T);
 			}
 			set
 			{
 			}
 		}
 
-		public T[] Data
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public T[] Data => null;
 
+		//[IteratorStateMachine(typeof(ElasticArray<>._003CGetEnumerator_003Ed__2))]
 		public IEnumerator<T> GetEnumerator()
 		{
 			return null;
 		}
 
-		IEnumerator IEnumerable.GetEnumerator()
+		private IEnumerator System_002ECollections_002EIEnumerable_002EGetEnumerator()
 		{
 			return null;
 		}
@@ -67,7 +102,7 @@ namespace Ara
 
 		public bool Contains(T item)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void CopyTo(T[] array, int arrayIndex)
@@ -76,12 +111,12 @@ namespace Ara
 
 		public bool Remove(T item)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public int IndexOf(T item)
 		{
-			return default(int);
+			return 0;
 		}
 
 		public void Insert(int index, T item)
@@ -104,9 +139,9 @@ namespace Ara
 		{
 		}
 
-		public ElasticArray()
-			: base()
+		IEnumerator IEnumerable.GetEnumerator()
 		{
+			throw new NotImplementedException();
 		}
 	}
 }

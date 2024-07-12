@@ -20,6 +20,34 @@ namespace SLZ.UI
 
 		public delegate void SelectUtilityModeDelegate(UtilityModes mode);
 
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoadFavorites_003Ed__81 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public SpawnablesPanelView _003C_003E4__this;
+
+			private List<string> _003CfavoriteSpawnableBarcodes_003E5__2;
+
+			private int _003Ci_003E5__3;
+
+			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("Buttons")]
 		public ButtonReferenceHolder[] tabButtons;
 
@@ -117,11 +145,29 @@ namespace SLZ.UI
 
 		public SpawnGun spawnGun { private get; set; }
 
-		private static PlayerSettings p
+		private static PlayerSettings p => null;
+
+		public event SelectSpawnableDelegate selectSpawnableDelegate
 		{
-			get
+			[CompilerGenerated]
+			add
 			{
-				return null;
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event SelectUtilityModeDelegate selectModeDelegate
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
 			}
 		}
 
@@ -217,6 +263,7 @@ namespace SLZ.UI
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CLoadFavorites_003Ed__81))]
 		private UniTaskVoid LoadFavorites()
 		{
 			return default(UniTaskVoid);
@@ -225,14 +272,5 @@ namespace SLZ.UI
 		public void SaveFavorites()
 		{
 		}
-
-		public SpawnablesPanelView()
-			: base()
-		{
-		}
-
-		public event SelectSpawnableDelegate selectSpawnableDelegate;
-
-		public event SelectUtilityModeDelegate selectModeDelegate;
 	}
 }

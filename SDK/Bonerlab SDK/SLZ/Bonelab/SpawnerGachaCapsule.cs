@@ -12,6 +12,32 @@ namespace SLZ.Bonelab
 {
 	public class SpawnerGachaCapsule : SpawnEvents
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CAsyncSpawnProcedure_003Ed__11 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public SpawnerGachaCapsule _003C_003E4__this;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__1;
+
+			private UniTask<Poolee>.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public Rigidbody rb;
 
 		public Spawnable spawnable;
@@ -42,14 +68,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CAsyncSpawnProcedure_003Ed__11))]
 		private UniTaskVoid AsyncSpawnProcedure()
 		{
 			return default(UniTaskVoid);
-		}
-
-		public SpawnerGachaCapsule()
-			: base()
-		{
 		}
 	}
 }

@@ -17,6 +17,130 @@ namespace SLZ.Bonelab
 {
 	public class GameControl_startup : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CStart_003Ed__80 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_startup _003C_003E4__this;
+
+			private float _003ClogoSLZTime_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CStart_003Ed__80(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CDissolveBoneLab_003Ed__88 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_startup _003C_003E4__this;
+
+			private float _003ClogoSLZTime_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CDissolveBoneLab_003Ed__88(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__93 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public GameControl_startup _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("BUILD INFO")]
 		public string buildTitle;
 
@@ -172,13 +296,7 @@ namespace SLZ.Bonelab
 
 		private bool canClick;
 
-		private static PlayerProgression Progression
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerProgression Progression => null;
 
 		private void Awake()
 		{
@@ -196,6 +314,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CStart_003Ed__80))]
 		private IEnumerator Start()
 		{
 			return null;
@@ -229,6 +348,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CDissolveBoneLab_003Ed__88))]
 		public IEnumerator DissolveBoneLab()
 		{
 			return null;
@@ -251,17 +371,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__93))]
 		public UniTask LoadAvatarFromSaveDataAsync()
 		{
 			return default(UniTask);
 		}
 
 		private void SetPreviewMesh(AvatarCrate crate)
-		{
-		}
-
-		public GameControl_startup()
-			: base()
 		{
 		}
 	}

@@ -12,6 +12,58 @@ namespace SLZ.MLAgents
 {
 	public class BehaviourArmWorm_Training : BehaviourGrabbableBaseNav
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CSelfDespawn_003Ed__55 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public BehaviourArmWorm_Training _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CSelfDespawn_003Ed__55(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("Arm Settings")]
 		public SubBehaviourIk ik;
 
@@ -107,7 +159,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void SetArtTargetRotation(Transform transform, float x, float y, float z, float lowX, float highX, float lowY, float highY, float lowZ, float highZ)
+		public void SetArtTargetRotation(ref Transform transform, float x, float y, float z, float lowX, float highX, float lowY, float highY, float lowZ, float highZ)
 		{
 		}
 
@@ -129,7 +181,7 @@ namespace SLZ.MLAgents
 
 		protected static float ScaleAction(float rawAction, float min, float max)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		private void TakeDelayedAction()
@@ -156,6 +208,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CSelfDespawn_003Ed__55))]
 		private IEnumerator SelfDespawn(float duration)
 		{
 			return null;
@@ -174,11 +227,6 @@ namespace SLZ.MLAgents
 		}
 
 		protected override void SwitchLocoState(LocoState lState, float coolDown = 0f, bool forceSwitch = false)
-		{
-		}
-
-		public BehaviourArmWorm_Training()
-			: base()
 		{
 		}
 	}

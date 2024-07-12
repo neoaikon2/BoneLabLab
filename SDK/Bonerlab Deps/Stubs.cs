@@ -84,16 +84,6 @@ namespace Steamworks
 	namespace Data { }
 }
 
-public class LocoController
-{
-
-}
-
-public class MouseLook
-{
-
-}
-
 namespace PathCreation
 {
 	namespace Examples
@@ -109,7 +99,6 @@ public class RoadMeshCreator_Custom
 
 public class PathCreator { }
 public class DecalAtlasData { }
-public class CounterTorque { }
 public class SteamId { }
 public class Leaderboard { }
 public class LeaderboardEntry { }
@@ -118,13 +107,10 @@ public class ILogger<T> { }
 public class VertexPath { }
 
 public class BezierPath { }
-public class LeanTweenType { }
-public class ModSubscriptionDownloader { }  
-public class HomeCleanupVolume {}
+
 public class OVRPlugin
 {
 	public class ColorSpace { }
 }
-public class QuadDroneJoystick { }
 public class SvoAgent { }
 public class HeightRangeCost { }

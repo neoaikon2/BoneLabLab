@@ -22,6 +22,30 @@ namespace SLZ.Bonelab
 			public string key;
 		}
 
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CPopulateMenuAsync_003Ed__25 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public LevelsPanelView _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("Level Query")]
 		[Tooltip("Include levels that are built in with the game")]
 		public bool includeInternalLevels;
@@ -79,7 +103,7 @@ namespace SLZ.Bonelab
 
 		private bool GetLevelCompletion(PlayerProgression progression, string level)
 		{
-			return default(bool);
+			return false;
 		}
 
 		[ContextMenu("Load First Level")]
@@ -95,6 +119,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CPopulateMenuAsync_003Ed__25))]
 		public UniTaskVoid PopulateMenuAsync()
 		{
 			return default(UniTaskVoid);
@@ -117,11 +142,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void PrevPage()
-		{
-		}
-
-		public LevelsPanelView()
-			: base()
 		{
 		}
 	}

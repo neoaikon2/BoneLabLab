@@ -13,6 +13,286 @@ namespace SLZ.Bonelab
 {
 	public class ShockTrap : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoBlinkCharge_003Ed__48 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public ShockTrap _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoBlinkCharge_003Ed__48(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoChargeShock_003Ed__49 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public ShockTrap _003C_003E4__this;
+
+			private float _003CstartTime_003E5__2;
+
+			private float _003CendTime_003E5__3;
+
+			private float _003CchargeLerp_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoChargeShock_003Ed__49(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoShock_003Ed__55 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public ShockTrap _003C_003E4__this;
+
+			private List<TriggerRefProxy>.Enumerator _003C_003E7__wrap1;
+
+			private TriggerRefProxy _003Cproxy_003E5__3;
+
+			private Material _003ClightningMat_003E5__4;
+
+			private float _003ClightningProgress_003E5__5;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoShock_003Ed__55(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			private void _003C_003Em__Finally1()
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoLightningFX_003Ed__59 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public ShockTrap _003C_003E4__this;
+
+			public Vector3 target;
+
+			private Material _003ClightningMat_003E5__2;
+
+			private float _003ClightningProgress_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoLightningFX_003Ed__59(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoPortalPlay_003Ed__64 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public ShockTrap _003C_003E4__this;
+
+			private float _003CstartTime_003E5__2;
+
+			private float _003CendTime_003E5__3;
+
+			private float _003CscaleLerp_003E5__4;
+
+			private Vector3 _003CstartScale_003E5__5;
+
+			private Vector3 _003CendScale_003E5__6;
+
+			private Vector3 _003CstartPos_003E5__7;
+
+			private Vector3 _003CendPos_003E5__8;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoPortalPlay_003Ed__64(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public KeyReceiver keyReceiver;
 
 		[SerializeField]
@@ -140,11 +420,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoBlinkCharge_003Ed__48))]
 		private IEnumerator CoBlinkCharge()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoChargeShock_003Ed__49))]
 		private IEnumerator CoChargeShock()
 		{
 			return null;
@@ -170,6 +452,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoShock_003Ed__55))]
 		private IEnumerator CoShock()
 		{
 			return null;
@@ -188,6 +471,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoLightningFX_003Ed__59))]
 		private IEnumerator CoLightningFX(Vector3 target)
 		{
 			return null;
@@ -210,14 +494,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoPortalPlay_003Ed__64))]
 		private IEnumerator CoPortalPlay()
 		{
 			return null;
-		}
-
-		public ShockTrap()
-			: base()
-		{
 		}
 	}
 }

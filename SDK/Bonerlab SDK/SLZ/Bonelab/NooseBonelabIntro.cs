@@ -26,6 +26,56 @@ namespace SLZ.Bonelab
 			Cut = 4
 		}
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CLoadFXAndLevel_003Ed__71 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public NooseBonelabIntro _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CLoadFXAndLevel_003Ed__71(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public PlayableDirector introCutscene;
 
 		public CrateSpawner torchIntro;
@@ -161,12 +211,12 @@ namespace SLZ.Bonelab
 
 		private bool CheckRelativeToHead()
 		{
-			return default(bool);
+			return false;
 		}
 
 		private float CheckReel()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		private void CheckAndSetTargetSide()
@@ -209,6 +259,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CLoadFXAndLevel_003Ed__71))]
 		private IEnumerator LoadFXAndLevel()
 		{
 			return null;
@@ -219,11 +270,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void CutScene(bool play, bool turnOn)
-		{
-		}
-
-		public NooseBonelabIntro()
-			: base()
 		{
 		}
 	}

@@ -11,6 +11,32 @@ namespace SLZ.Bonelab
 {
 	public class MagazineDecorator : SpawnDecorator
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CInitializeAsync_003Ed__3 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Magazine magazine;
+
+			public MagazineDecorator _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		private CartridgeData _cartridgeData;
 
@@ -21,14 +47,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CInitializeAsync_003Ed__3))]
 		private UniTaskVoid InitializeAsync(Magazine magazine)
 		{
 			return default(UniTaskVoid);
-		}
-
-		public MagazineDecorator()
-			: base()
-		{
 		}
 	}
 }

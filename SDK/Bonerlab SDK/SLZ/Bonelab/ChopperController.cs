@@ -13,6 +13,114 @@ namespace SLZ.Bonelab
 {
 	public class ChopperController : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CManagedUpdate_003Ed__77 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperController _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CFireTurret_003Ed__78 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperController _003C_003E4__this;
+
+			public CancellationTokenSource cancelToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CAudioLowPassLerp_003Ed__79 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public CancellationTokenSource cancelToken;
+
+			public ChopperController _003C_003E4__this;
+
+			public float fromCutoff;
+
+			public float toCutoff;
+
+			private float _003Ctime_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CAudioVolumeLerp_003Ed__80 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public CancellationTokenSource cancelToken;
+
+			public ChopperController _003C_003E4__this;
+
+			public float fromVol;
+
+			public float toVol;
+
+			private float _003Ctime_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("References")]
 		public SLZ.Marrow.Interaction.SplineJoint splineJoint;
 
@@ -191,21 +299,25 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CManagedUpdate_003Ed__77))]
 		private UniTaskVoid ManagedUpdate()
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CFireTurret_003Ed__78))]
 		private UniTaskVoid FireTurret(CancellationTokenSource cancelToken)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CAudioLowPassLerp_003Ed__79))]
 		private UniTaskVoid AudioLowPassLerp(float fromCutoff, float toCutoff, CancellationTokenSource cancelToken)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CAudioVolumeLerp_003Ed__80))]
 		private UniTaskVoid AudioVolumeLerp(float fromVol, float toVol, CancellationTokenSource cancelToken)
 		{
 			return default(UniTaskVoid);
@@ -232,11 +344,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void KILLMODE(bool killOn)
-		{
-		}
-
-		public ChopperController()
-			: base()
 		{
 		}
 	}

@@ -15,24 +15,13 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		public override PortMetadata PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		public override PortMetadata PortMetadata => default(PortMetadata);
 
 		public override void Calculate(NodeState nodeState)
 		{
 		}
 
 		public void ResetRatchet()
-		{
-		}
-
-		public RatchetNode()
-			: base()
 		{
 		}
 	}

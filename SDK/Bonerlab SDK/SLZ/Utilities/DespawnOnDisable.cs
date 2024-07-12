@@ -12,6 +12,30 @@ namespace SLZ.Utilities
 	[RequireComponent(typeof(Poolee))]
 	public class DespawnOnDisable : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CDelayedDespawn_003Ed__2 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public DespawnOnDisable _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[ReadOnly(false)]
 		public Poolee poolee;
 
@@ -19,17 +43,13 @@ namespace SLZ.Utilities
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CDelayedDespawn_003Ed__2))]
 		private UniTaskVoid DelayedDespawn()
 		{
 			return default(UniTaskVoid);
 		}
 
 		private void Reset()
-		{
-		}
-
-		public DespawnOnDisable()
-			: base()
 		{
 		}
 	}

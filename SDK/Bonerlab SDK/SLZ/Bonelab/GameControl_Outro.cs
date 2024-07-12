@@ -15,6 +15,78 @@ namespace SLZ.Bonelab
 {
 	public class GameControl_Outro : BonelabInternalGameControl
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSequenceProgress_003Ed__48 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public int progress;
+
+			public GameControl_Outro _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CChangeChunk_003Ed__49 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public int progress;
+
+			public GameControl_Outro _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__61 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Outro _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public Encounter[] Encounters;
 
 		[Header("Chunks")]
@@ -138,11 +210,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSequenceProgress_003Ed__48))]
 		public UniTaskVoid SequenceProgress(int progress)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CChangeChunk_003Ed__49))]
 		private UniTask ChangeChunk(int progress)
 		{
 			return default(UniTask);
@@ -192,6 +266,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__61))]
 		public UniTask LoadAvatarFromSaveDataAsync()
 		{
 			return default(UniTask);
@@ -206,11 +281,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDestroy()
-		{
-		}
-
-		public GameControl_Outro()
-			: base()
 		{
 		}
 	}

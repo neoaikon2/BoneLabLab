@@ -29,11 +29,61 @@ namespace SLZ.Bonelab
 		[Serializable]
 		public class OnRadioOverrideEvent : UnityEvent<RadioSong>
 		{
-			public OnRadioOverrideEvent()
-				: base()
+		}
+
+		/*
+		[CompilerGenerated]
+		private sealed class _003CAnnouncementOverride_003Ed__18 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float delay;
+
+			public RadioManager _003C_003E4__this;
+
+			public RadioSong overrideClip;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CAnnouncementOverride_003Ed__18(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 		}
+		*/
 
 		public bool radioOn;
 
@@ -54,13 +104,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		public OnRadioOverrideEvent onRadioOverrideEvent;
 
-		public static RadioManager RadioManagerInstance
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static RadioManager RadioManagerInstance => null;
 
 		private void Awake()
 		{
@@ -86,14 +130,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CAnnouncementOverride_003Ed__18))]
 		private IEnumerator AnnouncementOverride(RadioSong overrideClip, float delay)
 		{
 			return null;
-		}
-
-		public RadioManager()
-			: base()
-		{
 		}
 	}
 }

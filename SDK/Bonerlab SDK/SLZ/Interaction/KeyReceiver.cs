@@ -42,6 +42,160 @@ namespace SLZ.Interaction
 			SLIDING = 5
 		}
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoEjectMagazine_003Ed__34 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public KeyReceiver _003C_003E4__this;
+
+			public Action callback;
+
+			private SimpleTransform _003CinsertToHost_003E5__2;
+
+			private SimpleTransform _003ClocalStart_003E5__3;
+
+			private SimpleTransform _003ClocalEnd_003E5__4;
+
+			private Vector3 _003CendToStart_003E5__5;
+
+			private float _003CsqrDistance_003E5__6;
+
+			private float _003Cacceleration_003E5__7;
+
+			private float _003Cspeed_003E5__8;
+
+			private SimpleTransform _003Ctarget_003E5__9;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoEjectMagazine_003Ed__34(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoWaitLockMagazine_003Ed__35 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public KeyReceiver _003C_003E4__this;
+
+			private float _003Cspeed_003E5__2;
+
+			private float _003Cacceleration_003E5__3;
+
+			private SimpleTransform _003CinsertToHost_003E5__4;
+
+			private SimpleTransform _003ClocalStart_003E5__5;
+
+			private SimpleTransform _003ClocalEnd_003E5__6;
+
+			private SimpleTransform _003Ctarget_003E5__7;
+
+			private float _003CsqrDistance_003E5__8;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoWaitLockMagazine_003Ed__35(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CAltFixedUpdateLoop_003Ed__38 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public CancellationTokenSource cancellationSource;
+
+			public KeyReceiver _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("References")]
 		public MarrowEntity marrowEntity;
 
@@ -99,13 +253,7 @@ namespace SLZ.Interaction
 
 		private float _ActivePercVel;
 
-		public bool hasCartridge
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public bool hasCartridge => false;
 
 		public InteractableHost GetHost()
 		{
@@ -144,11 +292,13 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private IEnumerator CoEjectMagazine(Action callback = default(Action))
+		//[IteratorStateMachine(typeof(_003CCoEjectMagazine_003Ed__34))]
+		private IEnumerator CoEjectMagazine(Action callback = null)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoWaitLockMagazine_003Ed__35))]
 		private IEnumerator CoWaitLockMagazine()
 		{
 			return null;
@@ -158,6 +308,7 @@ namespace SLZ.Interaction
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CAltFixedUpdateLoop_003Ed__38))]
 		private UniTaskVoid AltFixedUpdateLoop(CancellationTokenSource cancellationSource)
 		{
 			return default(UniTaskVoid);
@@ -208,11 +359,6 @@ namespace SLZ.Interaction
 		}
 
 		private void MakeDynamic()
-		{
-		}
-
-		public KeyReceiver()
-			: base()
 		{
 		}
 	}

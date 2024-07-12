@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using SLZ.Rig;
 using UnityEngine;
 
@@ -11,6 +10,164 @@ namespace SLZ.Bonelab
 {
 	public class PageView : MonoBehaviour
 	{
+		/*[CompilerGenerated]
+		private sealed class _003CCoChangePage_003Ed__22 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PageView _003C_003E4__this;
+
+			public Page page;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoChangePage_003Ed__22(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoCloseAnimation_003Ed__23 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PageView _003C_003E4__this;
+
+			private float[] _003Cvelocities_003E5__2;
+
+			private float[] _003Cdamps_003E5__3;
+
+			private float[] _003Cdurations_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoCloseAnimation_003Ed__23(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoSummonAnimation_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PageView _003C_003E4__this;
+
+			private float[] _003Cvelocities_003E5__2;
+
+			private float[] _003Cdamps_003E5__3;
+
+			private float[] _003Cdurations_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoSummonAnimation_003Ed__24(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[Header("References")]
 		public GameObject audioPlacementOverride;
 
@@ -70,16 +227,19 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoChangePage_003Ed__22))]
 		private IEnumerator CoChangePage(Page page)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoCloseAnimation_003Ed__23))]
 		private IEnumerator CoCloseAnimation()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoSummonAnimation_003Ed__24))]
 		private IEnumerator CoSummonAnimation()
 		{
 			return null;
@@ -111,23 +271,18 @@ namespace SLZ.Bonelab
 
 		public bool Trigger()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void RadialText(bool activation)
 		{
 		}
 
-		private void PlayAudioClip(AudioClip clipToPlay, Transform buttonTransform = default(Transform))
+		private void PlayAudioClip(AudioClip clipToPlay, Transform buttonTransform = null)
 		{
 		}
 
 		private void PlayHaptic(int hapticAction = 0)
-		{
-		}
-
-		public PageView()
-			: base()
 		{
 		}
 	}

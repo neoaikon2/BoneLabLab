@@ -35,10 +35,66 @@ namespace SLZ.Bonelab
 
 			public LData(Vector3 initialVelocity, float timeToTarget)
 			{
-				this.ttTarg = default(float);
-				this.iVel = default(Vector3);
+				iVel = default(Vector3);
+				ttTarg = 0f;
 			}
 		}
+
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoMeasureError_003Ed__175 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float timeToTarg;
+
+			public LinkData _003C_003E4__this;
+
+			private float _003CstartTime_003E5__2;
+
+			private float _003CendTime_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoMeasureError_003Ed__175(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 
 		public LinkType linkType;
 
@@ -429,7 +485,7 @@ namespace SLZ.Bonelab
 
 		public float CheckAgentDot(GameObject agentObj)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public void LaunchAudio(bool isForw)
@@ -469,6 +525,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoMeasureError_003Ed__175))]
 		private IEnumerator CoMeasureError(float timeToTarg)
 		{
 			return null;
@@ -490,7 +547,7 @@ namespace SLZ.Bonelab
 
 		public float CalcAdjusttedTOF(GameObject launchObj, Vector3 target, float height)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		[ContextMenu("FindMaxHeight")]
@@ -547,11 +604,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void DrawEditorIdealPath(GameObject launchObj)
-		{
-		}
-
-		public LinkData()
-			: base()
 		{
 		}
 	}

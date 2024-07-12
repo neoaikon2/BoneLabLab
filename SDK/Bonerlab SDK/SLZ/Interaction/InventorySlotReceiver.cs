@@ -15,6 +15,84 @@ namespace SLZ.Interaction
 {
 	public class InventorySlotReceiver : InventoryHandReceiver
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoWaitLockMagazine_003Ed__22 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public InventorySlotReceiver _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoWaitLockMagazine_003Ed__22(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnInSlotAsync_003Ed__33 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder<bool> _003C_003Et__builder;
+
+			public Barcode barcode;
+
+			public InventorySlotReceiver _003C_003E4__this;
+
+			private Spawnable _003Cspawnable_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Range(0f, 10f)]
 		public float priority;
 
@@ -71,6 +149,7 @@ namespace SLZ.Interaction
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoWaitLockMagazine_003Ed__22))]
 		private IEnumerator CoWaitLockMagazine()
 		{
 			return null;
@@ -106,19 +185,20 @@ namespace SLZ.Interaction
 
 		public override float Validate(Hand hand)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		private float ValidateGrab(Hand hand)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		private float ValidateDrop(Hand hand)
 		{
-			return default(float);
+			return 0f;
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnInSlotAsync_003Ed__33))]
 		public UniTask<bool> SpawnInSlotAsync(Barcode barcode)
 		{
 			return default(UniTask<bool>);
@@ -134,12 +214,7 @@ namespace SLZ.Interaction
 
 		public bool InsertInSlot(InteractableHost host)
 		{
-			return default(bool);
-		}
-
-		public InventorySlotReceiver()
-			: base()
-		{
+			return false;
 		}
 	}
 }

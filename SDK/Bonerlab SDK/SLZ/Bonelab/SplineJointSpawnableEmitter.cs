@@ -17,6 +17,32 @@ namespace SLZ.Bonelab
 			Multiple = 2
 		}
 
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnLoop_003Ed__7 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public SplineJointSpawnableEmitter _003C_003E4__this;
+
+			private bool _003CisLooping_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("Settings")]
 		public Spawnable splineSpawnable;
 
@@ -34,6 +60,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnLoop_003Ed__7))]
 		private UniTaskVoid SpawnLoop()
 		{
 			return default(UniTaskVoid);
@@ -44,11 +71,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDrawGizmos()
-		{
-		}
-
-		public SplineJointSpawnableEmitter()
-			: base()
 		{
 		}
 	}

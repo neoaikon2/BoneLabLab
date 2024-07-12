@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -38,6 +37,190 @@ namespace SLZ.Interaction
 			INSERTED = 4,
 			SLIDING = 5
 		}
+
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoEjectMagazine_003Ed__47 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public KeycardReceiver _003C_003E4__this;
+
+			public Action callback;
+
+			private SimpleTransform _003CinsertToHost_003E5__2;
+
+			private SimpleTransform _003ClocalStart_003E5__3;
+
+			private SimpleTransform _003ClocalEnd_003E5__4;
+
+			private Vector3 _003CendToStart_003E5__5;
+
+			private float _003CsqrDistance_003E5__6;
+
+			private float _003Cacceleration_003E5__7;
+
+			private float _003Cspeed_003E5__8;
+
+			private SimpleTransform _003Ctarget_003E5__9;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoEjectMagazine_003Ed__47(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoWaitLockMagazine_003Ed__48 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public KeycardReceiver _003C_003E4__this;
+
+			private float _003Cspeed_003E5__2;
+
+			private float _003Cacceleration_003E5__3;
+
+			private SimpleTransform _003CinsertToHost_003E5__4;
+
+			private SimpleTransform _003ClocalStart_003E5__5;
+
+			private SimpleTransform _003ClocalEnd_003E5__6;
+
+			private SimpleTransform _003Ctarget_003E5__7;
+
+			private float _003CsqrDistance_003E5__8;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoWaitLockMagazine_003Ed__48(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoSelfDestructJoint_003Ed__49 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Rigidbody target;
+
+			public GameObject source;
+
+			public float time;
+
+			private ConfigurableJoint _003Cjoint_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoSelfDestructJoint_003Ed__49(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 
 		[Header("References")]
 		public MarrowEntity marrowEntity;
@@ -118,13 +301,7 @@ namespace SLZ.Interaction
 
 		public static HashSet<InteractableHost> ClaimedHosts { get; private set; }
 
-		public bool hasCartridge
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public bool hasCartridge => false;
 
 		public InteractableHost GetHost()
 		{
@@ -163,16 +340,19 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private IEnumerator CoEjectMagazine(Action callback = default(Action))
+		//[IteratorStateMachine(typeof(_003CCoEjectMagazine_003Ed__47))]
+		private IEnumerator CoEjectMagazine(Action callback = null)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoWaitLockMagazine_003Ed__48))]
 		private IEnumerator CoWaitLockMagazine()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoSelfDestructJoint_003Ed__49))]
 		private IEnumerator CoSelfDestructJoint(GameObject source, Rigidbody target, float time)
 		{
 			return null;
@@ -235,11 +415,6 @@ namespace SLZ.Interaction
 		}
 
 		private void MakeDynamic()
-		{
-		}
-
-		public KeycardReceiver()
-			: base()
 		{
 		}
 	}

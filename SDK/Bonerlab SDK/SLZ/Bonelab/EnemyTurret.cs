@@ -23,6 +23,493 @@ namespace SLZ.Bonelab
 			PANIC = 5,
 			SLEEP = 6
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoSetState_003Ed__73 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public TurretStates nextState;
+
+			public EnemyTurret _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoSetState_003Ed__73(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoPanicSequence_003Ed__78 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public EnemyTurret _003C_003E4__this;
+
+			private float _003Ctime_003E5__2;
+
+			private float _003Cduration_003E5__3;
+
+			private float _003CsoundTime_003E5__4;
+
+			private float _003CsoundDuration_003E5__5;
+
+			private float _003CwarmupDuration_003E5__6;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoPanicSequence_003Ed__78(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoFlipSequence_003Ed__81 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public EnemyTurret _003C_003E4__this;
+
+			private int _003CflipTries_003E5__2;
+
+			private float _003Ctime_003E5__3;
+
+			private float _003Cduration_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoFlipSequence_003Ed__81(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoAlertSequence_003Ed__84 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public EnemyTurret _003C_003E4__this;
+
+			private float _003ClastBurstTime_003E5__2;
+
+			private float _003CwaitDuration_003E5__3;
+
+			private float _003Ctime_003E5__4;
+
+			private float _003CblinkTime_003E5__5;
+
+			private float _003C_reloadTimer_003E5__6;
+
+			private int _003C_calculatedBurst_003E5__7;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoAlertSequence_003Ed__84(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoSearchAnimation_003Ed__87 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public EnemyTurret _003C_003E4__this;
+
+			public float duration;
+
+			private float _003CangleLimit_003E5__2;
+
+			private float _003ChalfAngleLimit_003E5__3;
+
+			private float _003CstartAngle_003E5__4;
+
+			private float _003CdvtDuration_003E5__5;
+
+			private float _003Ctime_003E5__6;
+
+			private float _003ClastBeepTime_003E5__7;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoSearchAnimation_003Ed__87(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoTippedCheck_003Ed__91 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public EnemyTurret _003C_003E4__this;
+
+			public Action<bool> callback;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoTippedCheck_003Ed__91(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoPackLegs_003Ed__93 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public EnemyTurret _003C_003E4__this;
+
+			private Vector3 _003CstartSpine_003E5__2;
+
+			private Quaternion _003CstartLegRear_003E5__3;
+
+			private Quaternion _003CstartLegHingLeft_003E5__4;
+
+			private Quaternion _003CstartLegLeft_003E5__5;
+
+			private Quaternion _003CstartLegHingRight_003E5__6;
+
+			private Quaternion _003CstartLegRight_003E5__7;
+
+			private Vector3 _003CendSpine_003E5__8;
+
+			private Quaternion _003CendLegRear_003E5__9;
+
+			private Quaternion _003CendLegHingLeft_003E5__10;
+
+			private Quaternion _003CendLegLeft_003E5__11;
+
+			private Quaternion _003CendLegHingRight_003E5__12;
+
+			private Quaternion _003CendLegRight_003E5__13;
+
+			private float _003Cduration_003E5__14;
+
+			private float _003Ctime_003E5__15;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoPackLegs_003Ed__93(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoUnPackLegs_003Ed__94 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public EnemyTurret _003C_003E4__this;
+
+			private Vector3 _003CstartSpine_003E5__2;
+
+			private Quaternion _003CstartLegRear_003E5__3;
+
+			private Quaternion _003CstartLegHingLeft_003E5__4;
+
+			private Quaternion _003CstartLegLeft_003E5__5;
+
+			private Quaternion _003CstartLegHingRight_003E5__6;
+
+			private Quaternion _003CstartLegRight_003E5__7;
+
+			private Vector3 _003CendSpine_003E5__8;
+
+			private Quaternion _003CendLegRear_003E5__9;
+
+			private Quaternion _003CendLegHingLeft_003E5__10;
+
+			private Quaternion _003CendLegLeft_003E5__11;
+
+			private Quaternion _003CendLegHingRight_003E5__12;
+
+			private Quaternion _003CendLegRight_003E5__13;
+
+			private float _003Cduration_003E5__14;
+
+			private float _003Ctime_003E5__15;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoUnPackLegs_003Ed__94(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 
 		[Header("Settings")]
 		public LayerMask raycastMask;
@@ -188,6 +675,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoSetState_003Ed__73))]
 		private IEnumerator CoSetState(TurretStates nextState)
 		{
 			return null;
@@ -209,6 +697,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoPanicSequence_003Ed__78))]
 		private IEnumerator CoPanicSequence()
 		{
 			return null;
@@ -222,6 +711,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoFlipSequence_003Ed__81))]
 		private IEnumerator CoFlipSequence()
 		{
 			return null;
@@ -235,6 +725,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoAlertSequence_003Ed__84))]
 		private IEnumerator CoAlertSequence()
 		{
 			return null;
@@ -248,6 +739,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoSearchAnimation_003Ed__87))]
 		private IEnumerator CoSearchAnimation(float duration = 10f)
 		{
 			return null;
@@ -265,6 +757,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoTippedCheck_003Ed__91))]
 		private IEnumerator CoTippedCheck(Action<bool> callback)
 		{
 			return null;
@@ -274,19 +767,16 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoPackLegs_003Ed__93))]
 		private IEnumerator CoPackLegs()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoUnPackLegs_003Ed__94))]
 		private IEnumerator CoUnPackLegs()
 		{
 			return null;
-		}
-
-		public EnemyTurret()
-			: base()
-		{
 		}
 	}
 }

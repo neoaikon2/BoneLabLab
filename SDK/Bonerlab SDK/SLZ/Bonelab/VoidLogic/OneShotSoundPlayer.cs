@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Algorithms.Unity;
-using SLZ.Marrow.Audio;
+using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 
@@ -17,6 +17,55 @@ namespace SLZ.Bonelab.VoidLogic
 	[Support(SupportFlags.CowboySupported, "It's unclear how exactly we want to properly support playing sound. This component is allowed without endorsement until we have an answer for that.")]
 	public class OneShotSoundPlayer : MonoBehaviour, IVoidLogicSink, IVoidLogicNode
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CDoAStart_003Ed__46 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public OneShotSoundPlayer _003C_003E4__this;
+
+			public EdgeType edgeType;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnAndPlayAudio_003Ed__47 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public OneShotSoundPlayer _003C_003E4__this;
+
+			public ClipPair chosenClipPair;
+
+			private UniTask<GameObject>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 		[SerializeField]
 		[Tooltip("Previous node(s) in the chain")]
 		[Interface(typeof(IVoidLogicSource), false)]
@@ -28,43 +77,49 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private List<AudioPlayerAndClipPair> _audioPlayers;
 
-		private Queue<ValueTuple<EdgeType, ClipPair>> _queuedPlays;
+		private Queue<(EdgeType, ClipPair)> _queuedPlays;
 
 		private static readonly PortMetadata _portMetadata;
 
+		[field: SerializeField]
+		[field: ReadOnly(false)]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
+		[field: SerializeField]
 		public ClipChooser ClipChooser { get; set; }
 
+		[field: SerializeField]
 		public Transform AudioPlacementOverride { get; set; }
 
+		[field: Range(0.1f, 10f)]
+		[field: SerializeField]
 		public float SourceRadius { get; set; }
 
+		[field: Range(0f, 1f)]
+		[field: SerializeField]
 		public float Volume { get; set; }
 
+		[field: SerializeField]
+		[field: Range(0f, 1f)]
 		public float SpacialBlend { get; set; }
 
+		[field: Range(1f, 5f)]
+		[field: SerializeField]
 		public int MaximumQueueDepth { get; set; }
 
+		[field: Tooltip("Edge detection configuration for start input")]
+		[field: SerializeField]
 		private EdgeDetector StartEdgeDetector { get; set; }
 
+		[field: Tooltip("Edge detection configuration for reset input")]
+		[field: SerializeField]
 		private EdgeDetector ResetEdgeDetector { get; set; }
 
-		public int InputCount
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		public int InputCount => 0;
 
-		PortMetadata IVoidLogicNode.PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
+
+		public PortMetadata PortMetadata => throw new NotImplementedException();
 
 		private void Awake()
 		{
@@ -86,11 +141,13 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CDoAStart_003Ed__46))]
 		private UniTaskVoid DoAStart(EdgeType edgeType)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnAndPlayAudio_003Ed__47))]
 		private UniTask SpawnAndPlayAudio(EdgeType edgeType, ClipPair chosenClipPair)
 		{
 			return default(UniTask);
@@ -105,19 +162,20 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
+		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
 		{
-			return default(bool);
+			input = null;
+			return false;
 		}
 
 		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return default(bool);
+			return false;
 		}
 
-		public OneShotSoundPlayer()
-			: base()
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			throw new NotImplementedException();
 		}
 	}
 }

@@ -13,6 +13,30 @@ namespace SLZ.Marrow.Zones
 	[RequireComponent(typeof(CrateSpawner))]
 	public class SpawnVFX : SpawnDecorator
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CWaitForHibernation_003Ed__3 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public SpawnVFX _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		private MarrowEntity entity;
 
 		private Blip blip;
@@ -21,14 +45,10 @@ namespace SLZ.Marrow.Zones
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CWaitForHibernation_003Ed__3))]
 		private UniTaskVoid WaitForHibernation()
 		{
 			return default(UniTaskVoid);
-		}
-
-		public SpawnVFX()
-			: base()
-		{
 		}
 	}
 }

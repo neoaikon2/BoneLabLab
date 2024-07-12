@@ -25,6 +25,106 @@ namespace SLZ.MLAgents
 
 		public delegate void OnShotChangeDelegate(bool newVal);
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CSelfDespawn_003Ed__41 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public BehaviourBoidBall _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CSelfDespawn_003Ed__41(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CBallRadiusStateController_003Ed__133 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BehaviourBoidBall _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CBallRadiusStateController_003Ed__133(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("----BoidBall Section Start----")]
 		[Tooltip("Shows the debug graphics for the radii and thrusters")]
 		public bool debug_gizmos;
@@ -265,7 +365,7 @@ namespace SLZ.MLAgents
 		{
 			get
 			{
-				return default(bool);
+				return false;
 			}
 			set
 			{
@@ -276,7 +376,7 @@ namespace SLZ.MLAgents
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
 			{
@@ -287,7 +387,7 @@ namespace SLZ.MLAgents
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
 			{
@@ -298,9 +398,69 @@ namespace SLZ.MLAgents
 		{
 			get
 			{
-				return default(bool);
+				return false;
 			}
 			set
+			{
+			}
+		}
+
+		public event Action Death
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event OnShotChangeDelegate OnSquishChange
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event OnProxChangeDelegate OnProxChange
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event OnGoalChangeDelegate OnGoalChange
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event OnShotChangeDelegate OnShotChange
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
 			{
 			}
 		}
@@ -334,6 +494,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CSelfDespawn_003Ed__41))]
 		private IEnumerator SelfDespawn(float duration)
 		{
 			return null;
@@ -432,6 +593,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CBallRadiusStateController_003Ed__133))]
 		public IEnumerator BallRadiusStateController()
 		{
 			return null;
@@ -481,20 +643,5 @@ namespace SLZ.MLAgents
 		private void HandleBeingShot()
 		{
 		}
-
-		public BehaviourBoidBall()
-			: base()
-		{
-		}
-
-		public event Action Death;
-
-		public event OnShotChangeDelegate OnSquishChange;
-
-		public event OnProxChangeDelegate OnProxChange;
-
-		public event OnGoalChangeDelegate OnGoalChange;
-
-		public event OnShotChangeDelegate OnShotChange;
 	}
 }

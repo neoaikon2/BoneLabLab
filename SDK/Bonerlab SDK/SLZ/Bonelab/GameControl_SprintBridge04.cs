@@ -10,6 +10,30 @@ namespace SLZ.Bonelab
 {
 	public class GameControl_SprintBridge04 : BonelabAvatarLevelGameControl
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CKillPlayerAndReset_003Ed__12 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public GameControl_SprintBridge04 _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		private RigManager rM;
 
 		private Player_Health playerHealth;
@@ -46,14 +70,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CKillPlayerAndReset_003Ed__12))]
 		private UniTaskVoid KillPlayerAndReset()
 		{
 			return default(UniTaskVoid);
-		}
-
-		public GameControl_SprintBridge04()
-			: base()
-		{
 		}
 	}
 }

@@ -1,7 +1,7 @@
 using System;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using SLZ.Algorithms.Unity;
+using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -30,23 +30,15 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
+		[field: SerializeField]
+		[field: ReadOnly(false)]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
-		public int InputCount
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		public int InputCount => 0;
 
-		PortMetadata IVoidLogicNode.PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
+
+		public PortMetadata PortMetadata => throw new NotImplementedException();
 
 		private void Reset()
 		{
@@ -76,23 +68,29 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		void IVoidLogicActuator.Actuate(NodeState nodeState)
+		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicActuator_002EActuate(ref NodeState nodeState)
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
+		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
 		{
-			return default(bool);
+			input = null;
+			return false;
 		}
 
 		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return default(bool);
+			return false;
 		}
 
-		public ParticleEmissionController()
-			: base()
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			throw new NotImplementedException();
+		}
+
+		public void Actuate(NodeState nodeState)
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

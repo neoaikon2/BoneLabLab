@@ -13,6 +13,94 @@ namespace SLZ.Bonelab
 {
 	public class RadioPlayer : MonoBehaviour, IPoolable, IMarrowEntityCullable
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CRadioUpdateLoop_003Ed__44 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public RadioPlayer _003C_003E4__this;
+
+			public CancellationToken cancelToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CFadeVolume_003Ed__45 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public RadioPlayer _003C_003E4__this;
+
+			public float fadeTarget;
+
+			public float fadeTime;
+
+			public CancellationTokenSource cancellationSource;
+
+			private float _003Ctime_003E5__2;
+
+			private float _003CfadeTargetClamped_003E5__3;
+
+			private float _003CstartVolume_003E5__4;
+
+			private float _003CnormalizedFadeTime_003E5__5;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003COverrideAsync_003Ed__46 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public RadioPlayer _003C_003E4__this;
+
+			public CancellationToken cancelToken;
+
+			private float _003Ctime_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public MarrowEntity entity;
 
 		public Poolee poolee;
@@ -33,8 +121,8 @@ namespace SLZ.Bonelab
 
 		[HideInInspector]
 		public RadioStation[] stations;
-		
-		public RadioStation selectedStation;
+
+		public RadioStation? selectedStation;
 
 		public RadioManager radioManager;
 
@@ -130,27 +218,25 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CRadioUpdateLoop_003Ed__44))]
 		private UniTaskVoid RadioUpdateLoop(CancellationToken cancelToken)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CFadeVolume_003Ed__45))]
 		private UniTaskVoid FadeVolume(float fadeTarget, float fadeTime, CancellationTokenSource cancellationSource)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003COverrideAsync_003Ed__46))]
 		private UniTaskVoid OverrideAsync(CancellationToken cancelToken)
 		{
 			return default(UniTaskVoid);
 		}
 
 		private void StopAndReleaseAll()
-		{
-		}
-
-		public RadioPlayer()
-			: base()
 		{
 		}
 	}

@@ -123,6 +123,30 @@ namespace SLZ.MLAgents
 
 		public int ignoreAgentLayer;
 
+		public event Action TaskComplete
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event Action TaskResetComplete
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
 		public void ConnectAgentToBmm(GameObject agent, int agentId)
 		{
 		}
@@ -169,7 +193,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void RescaleObstacle(GameObject obsObj)
+		public void RescaleObstacle(ref GameObject obsObj)
 		{
 		}
 
@@ -204,14 +228,5 @@ namespace SLZ.MLAgents
 		public void AddStats()
 		{
 		}
-
-		public TaskClass()
-			: base()
-		{
-		}
-
-		public event Action TaskComplete;
-
-		public event Action TaskResetComplete;
 	}
 }

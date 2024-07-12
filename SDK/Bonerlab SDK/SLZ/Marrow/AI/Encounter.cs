@@ -69,14 +69,6 @@ namespace SLZ.Marrow.AI
 		{
 		}
 
-		protected override void OnEnter(MarrowEntity activatorEntity)
-		{
-		}
-
-		protected override void OnExit(MarrowEntity activatorEntity)
-		{
-		}
-
 		[ContextMenu("StartEncounter")]
 		public void StartEncounter()
 		{

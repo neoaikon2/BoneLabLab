@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using SLZ.Marrow.Audio;
 using UnityEngine;
 
@@ -11,6 +10,63 @@ namespace SLZ.SFX
 {
 	public class AmbientSFX : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CFade_003Ed__29 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float fadeTarget;
+
+			public AmbientSFX _003C_003E4__this;
+
+			public float fadeTime;
+
+			private WaitForSecondsRealtime _003Cwait_003E5__2;
+
+			private float _003CfadeTargetClamped_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CFade_003Ed__29(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		public AudioClip[] longPlay;
 
 		public AudioClip powerUp;
@@ -59,13 +115,7 @@ namespace SLZ.SFX
 
 		private AudioPlayer _ap;
 
-		public AudioPlayer audioPlayer
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public AudioPlayer audioPlayer => null;
 
 		private void Awake()
 		{
@@ -99,7 +149,7 @@ namespace SLZ.SFX
 		{
 		}
 
-		private void PlayNew(Action callback = default(Action))
+		private void PlayNew(Action callback = null)
 		{
 		}
 
@@ -107,14 +157,10 @@ namespace SLZ.SFX
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CFade_003Ed__29))]
 		private IEnumerator Fade(float fadeTarget, float fadeTime)
 		{
 			return null;
-		}
-
-		public AmbientSFX()
-			: base()
-		{
 		}
 	}
 }

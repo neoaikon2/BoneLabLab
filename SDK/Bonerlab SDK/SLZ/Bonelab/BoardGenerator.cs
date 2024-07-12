@@ -17,6 +17,77 @@ namespace SLZ.Bonelab
 {
 	public class BoardGenerator : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CBoardSpawnerAsync_003Ed__29 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public BoardGenerator _003C_003E4__this;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003Clineloop_003Ed__40 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BoardGenerator _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003Clineloop_003Ed__40(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[SerializeField]
 		private bool isUsingAmmo;
 
@@ -93,6 +164,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CBoardSpawnerAsync_003Ed__29))]
 		private UniTaskVoid BoardSpawnerAsync()
 		{
 			return default(UniTaskVoid);
@@ -134,17 +206,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003Clineloop_003Ed__40))]
 		private IEnumerator lineloop()
 		{
 			return null;
 		}
 
 		private void SetJoint(Vector3 position, MarrowBody bodyB, MarrowBody bodyA)
-		{
-		}
-
-		public BoardGenerator()
-			: base()
 		{
 		}
 	}

@@ -12,6 +12,32 @@ namespace SLZ.Bonelab
 	[Obsolete("Uses obsolete zone components")]
 	public class HeadTitlesTrigger : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CDelayedSENDTITLES_async_003Ed__16 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public HeadTitlesTrigger _003C_003E4__this;
+
+			public MarrowEntity entity;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public AudioClip clipToPlay;
 
 		public string string_Title;
@@ -49,17 +75,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CDelayedSENDTITLES_async_003Ed__16))]
 		private UniTaskVoid DelayedSENDTITLES_async(MarrowEntity entity)
 		{
 			return default(UniTaskVoid);
 		}
 
 		public void SENDTITLES(MarrowEntity entity)
-		{
-		}
-
-		public HeadTitlesTrigger()
-			: base()
 		{
 		}
 	}

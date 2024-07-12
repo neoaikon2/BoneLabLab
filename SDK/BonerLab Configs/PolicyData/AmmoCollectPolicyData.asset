@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 696db5aacb45eb547b872407bc7d3d74, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c8329abc2ef0d544991eba6a94e7d55, type: 3}
   m_Name: AmmoCollectPolicyData
   m_EditorClassIdentifier:
   maxSize: 2

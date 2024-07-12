@@ -16,6 +16,34 @@ namespace SLZ.Bonelab
 	[RequireComponent(typeof(CrateSpawner))]
 	public class ProfileSpawner : SpawnDecorator
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CExplicitArenaSpawn_003Ed__12 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public ProfileSpawner _003C_003E4__this;
+
+			public EnemyProfile enemyProfile;
+
+			public bool isFriendly;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public Zone zone;
 
 		public bool forceManualSpawns;
@@ -34,13 +62,7 @@ namespace SLZ.Bonelab
 
 		public Action<ProfileSpawner, AIBrain, EnemyProfile, bool> onSpawnNPCDelegate;
 
-		public CrateSpawner CrateSpawner
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public CrateSpawner CrateSpawner => null;
 
 		private void Awake()
 		{
@@ -50,6 +72,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CExplicitArenaSpawn_003Ed__12))]
 		public UniTask ExplicitArenaSpawn(EnemyProfile enemyProfile, bool isFriendly = false)
 		{
 			return default(UniTask);
@@ -64,11 +87,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnDeath(AIBrain aiBrain)
-		{
-		}
-
-		public ProfileSpawner()
-			: base()
 		{
 		}
 	}

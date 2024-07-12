@@ -27,11 +27,6 @@ namespace SLZ.VRMK
 			{
 				return default(Vector3);
 			}
-
-			public TrigonometricBone()
-				: base()
-			{
-			}
 		}
 
 		public Transform target;
@@ -76,7 +71,7 @@ namespace SLZ.VRMK
 
 		public float GetIKRotationWeight()
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public override Point[] GetPoints()
@@ -99,12 +94,12 @@ namespace SLZ.VRMK
 
 		public override bool IsValid(string message)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public bool SetChain(Transform bone1, Transform bone2, Transform bone3, Transform root)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public static void Solve(Transform bone1, Transform bone2, Transform bone3, Vector3 targetPosition, Vector3 bendNormal, float weight)
@@ -122,7 +117,7 @@ namespace SLZ.VRMK
 
 		private bool IsDirectHierarchy()
 		{
-			return default(bool);
+			return false;
 		}
 
 		private void InitiateBones()
@@ -148,11 +143,6 @@ namespace SLZ.VRMK
 		protected Vector3 GetBendDirection(Vector3 direction, Vector3 bendNormal)
 		{
 			return default(Vector3);
-		}
-
-		public IKSolverTrigonometricSlz()
-			: base()
-		{
 		}
 	}
 }

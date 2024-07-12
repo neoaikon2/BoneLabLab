@@ -21,12 +21,111 @@ namespace SLZ.Bonelab
 			public Cubemap cubemap1;
 
 			public SphericalHarmonicsL2 harmonics;
+		}
 
-			public ProbePair()
-				: base()
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCycleMatOverTimeEditor_003Ed__33 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Holodeck _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCycleMatOverTimeEditor_003Ed__33(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 		}
+
+		[CompilerGenerated]
+		private sealed class _003CCycleMatOverTime_003Ed__34 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Holodeck _003C_003E4__this;
+
+			private Material[] _003Cmat2_003E5__2;
+
+			private Material[] _003Cmat4_003E5__3;
+
+			private int _003Ci_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCycleMatOverTime_003Ed__34(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 
 		public GameObject UI;
 
@@ -107,11 +206,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCycleMatOverTimeEditor_003Ed__33))]
 		private IEnumerator CycleMatOverTimeEditor()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCycleMatOverTime_003Ed__34))]
 		private IEnumerator CycleMatOverTime()
 		{
 			return null;
@@ -133,22 +234,17 @@ namespace SLZ.Bonelab
 
 		private static int FindFace(Vector3 dir)
 		{
-			return default(int);
+			return 0;
 		}
 
 		private static int GetTexelIndexFromDirection(Vector3 dir, int cubemap_size)
 		{
-			return default(int);
+			return 0;
 		}
 
 		private SphericalHarmonicsL2 NormalizeSH(SphericalHarmonicsL2 sh, int totalSamples)
 		{
 			return default(SphericalHarmonicsL2);
-		}
-
-		public GameControl_Holodeck()
-			: base()
-		{
 		}
 	}
 }

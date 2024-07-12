@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -49,7 +48,7 @@ namespace SLZ.Interaction
 
 		public override float GetTwistLimit(Hand hand)
 		{
-			return default(float);
+			return 0f;
 		}
 
 		public SimpleTransform SolveStaticFriction(Hand hand)
@@ -57,11 +56,11 @@ namespace SLZ.Interaction
 			return default(SimpleTransform);
 		}
 
-		public void SolveOffsetBlending(Hand hand, float posInHas, float rotInHas)
+		public void SolveOffsetBlending(Hand hand, ref float posInHas, ref float rotInHas)
 		{
 		}
 
-		private void ClampToTargetLimits(Hand hand, Quaternion toHas, float posInHas, float rotInHas)
+		private void ClampToTargetLimits(Hand hand, Quaternion toHas, ref float posInHas, ref float rotInHas)
 		{
 		}
 
@@ -77,7 +76,7 @@ namespace SLZ.Interaction
 
 		public bool IsJointFree(Hand hand)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public override void OnHandHoverUpdate(Hand hand)
@@ -91,7 +90,7 @@ namespace SLZ.Interaction
 
 		public override bool OnHandHoverUpdate(Hand hand, bool isOverride)
 		{
-			return default(bool);
+			return false;
 		}
 
 		private void LockJoint(Hand hand)
@@ -133,7 +132,7 @@ namespace SLZ.Interaction
 
 		public bool IsHandYieldInVc(Hand hand)
 		{
-			return default(bool);
+			return false;
 		}
 
 		protected override void SetupConfiguration(HandJointConfiguration config)
@@ -160,9 +159,9 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override (float, float, Vector3, Vector3) ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return default(ValueTuple<float, float, Vector3, Vector3>);
+			return default((float, float, Vector3, Vector3));
 		}
 
 		private Vector3 GetPointOnPerimeter(float radius, float theta, float limit, float perc)
@@ -179,11 +178,6 @@ namespace SLZ.Interaction
 		}
 
 		private void OnDrawGizmosSelected()
-		{
-		}
-
-		public CylinderGrip()
-			: base()
 		{
 		}
 	}

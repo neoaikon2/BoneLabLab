@@ -1,4 +1,3 @@
-using System.Runtime.CompilerServices;
 using SLZ.Interaction;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Player;
@@ -72,13 +71,7 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public override PortMetadata PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		public override PortMetadata PortMetadata => default(PortMetadata);
 
 		protected override void Awake()
 		{
@@ -88,7 +81,7 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		void IVoidLogicSensor.ReadSensors(NodeState nodeState)
+		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicSensor_002EReadSensors(ref NodeState nodeState)
 		{
 		}
 
@@ -96,13 +89,18 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		void IVoidLogicActuator.Actuate(NodeState nodeState)
+		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicActuator_002EActuate(ref NodeState nodeState)
 		{
 		}
 
-		public OneOffAsymmetricSliderNode()
-			: base()
+		public void ReadSensors(NodeState nodeState)
 		{
+			throw new System.NotImplementedException();
+		}
+
+		public void Actuate(NodeState nodeState)
+		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

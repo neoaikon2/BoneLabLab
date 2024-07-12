@@ -24,7 +24,63 @@ namespace SLZ.Bonelab
 			Dropped = 4,
 			Void = 5
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoTargetWindMill_003Ed__19 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
 
+			private object _003C_003E2__current;
+
+			public ArmFinale _003C_003E4__this;
+
+			public float duration;
+
+			public float deltaAngVel;
+
+			private float _003Celapsed_003E5__2;
+
+			private JointDrive _003Cdrive_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoTargetWindMill_003Ed__19(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		public Rigidbody windmillBlades;
 
 		public ConfigurableJoint windmillJoint;
@@ -73,6 +129,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoTargetWindMill_003Ed__19))]
 		private IEnumerator CoTargetWindMill(float duration, float deltaAngVel)
 		{
 			return null;
@@ -111,11 +168,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void JointDestroyEvent(int tile)
-		{
-		}
-
-		public ArmFinale()
-			: base()
 		{
 		}
 	}

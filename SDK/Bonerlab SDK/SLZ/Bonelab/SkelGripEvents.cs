@@ -14,6 +14,61 @@ namespace SLZ.Bonelab
 {
 	public class SkelGripEvents : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoAdjustJoints_003Ed__35 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public SkelGripEvents _003C_003E4__this;
+
+			private ConfigurableJoint[] _003C_003E7__wrap1;
+
+			private int _003C_003E7__wrap2;
+
+			private ConfigurableJoint _003Cjoint_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoAdjustJoints_003Ed__35(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/ 
 		[SerializeField]
 		private List<ConfigurableJointInfo> _wallJointInfos;
 
@@ -114,17 +169,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoAdjustJoints_003Ed__35))]
 		private IEnumerator CoAdjustJoints()
 		{
 			return null;
 		}
 
 		private void BuildJoints()
-		{
-		}
-
-		public SkelGripEvents()
-			: base()
 		{
 		}
 	}

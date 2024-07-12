@@ -18,6 +18,60 @@ namespace SLZ.Bonelab
 			MOVING_TO_CLEAR = 3
 		}
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoDelayedMoveNext_003Ed__25 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float timeDelay;
+
+			public GeoManager _003C_003E4__this;
+
+			public int index;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoDelayedMoveNext_003Ed__25(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public GeoState geoState;
 
 		public GeoMover activeGeoMover;
@@ -47,13 +101,7 @@ namespace SLZ.Bonelab
 
 		public Dictionary<string, GeoMover> geoMoverDict;
 
-		public int moverIndex
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		public int moverIndex => 0;
 
 		public void Awake()
 		{
@@ -92,17 +140,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoDelayedMoveNext_003Ed__25))]
 		private IEnumerator CoDelayedMoveNext(float timeDelay, int index)
 		{
 			return null;
 		}
 
 		private void CleanupDecalsAndFragments()
-		{
-		}
-
-		public GeoManager()
-			: base()
 		{
 		}
 	}

@@ -35,24 +35,68 @@ namespace SLZ.Player
 
 			public float armRt;
 
-			public static UsageSettings Default
-			{
-				get
-				{
-					return default(UsageSettings);
-				}
-			}
+			public static UsageSettings Default => default(UsageSettings);
 
 			public UsageSettings(float hips = 1f, float spine = 1f, float legLf = 1f, float legRt = 1f, float armLf = 1f, float armRt = 1f)
 			{
-				this.armRt = default(float);
-				this.armLf = default(float);
-				this.legRt = default(float);
-				this.legLf = default(float);
-				this.spine = default(float);
-				this.hips = default(float);
+				this.hips = 0f;
+				this.spine = 0f;
+				this.legLf = 0f;
+				this.legRt = 0f;
+				this.armLf = 0f;
+				this.armRt = 0f;
 			}
 		}
+
+		/*
+		[CompilerGenerated]
+		private sealed class _003CBleedOverTimer_003Ed__67 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			private float _003Ct_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CBleedOverTimer_003Ed__67(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 
 		protected RigManager _rigManager;
 
@@ -219,7 +263,7 @@ namespace SLZ.Player
 
 		public bool isLODVisible()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void AddToHitArray(Matrix4x4 Matrix)
@@ -242,14 +286,10 @@ namespace SLZ.Player
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CBleedOverTimer_003Ed__67))]
 		private IEnumerator BleedOverTimer()
 		{
 			return null;
-		}
-
-		public Health()
-			: base()
-		{
 		}
 	}
 }

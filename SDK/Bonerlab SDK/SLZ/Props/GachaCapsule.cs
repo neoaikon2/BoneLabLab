@@ -19,6 +19,113 @@ namespace SLZ.Props
 {
 	public class GachaCapsule : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003C_003Ec__DisplayClass51_0
+		{
+			public Crate crate;
+
+			internal void _003CPopFXAsync_003Eb__0(GameObject go)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CPopFXAsync_003Ed__51 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public GachaCapsule _003C_003E4__this;
+
+			private _003C_003Ec__DisplayClass51_0 _003C_003E8__1;
+
+			public Spawnable effect;
+
+			private UniTask<Crate>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CDespawnTimmer_003Ed__52 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GachaCapsule _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CDespawnTimmer_003Ed__52(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSetPreviewMesh_003Ed__54 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public GachaCapsule _003C_003E4__this;
+
+			private UniTask<SpawnableCrate>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 		public SphereGrip grip;
 
 		public ObjectDestructible objDestruct;
@@ -110,13 +217,7 @@ namespace SLZ.Props
 
 		private bool doubleSpawnProtection;
 
-		private static PlayerUnlocks u
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerUnlocks u => null;
 
 		private void Awake()
 		{
@@ -162,11 +263,13 @@ namespace SLZ.Props
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CPopFXAsync_003Ed__51))]
 		private UniTaskVoid PopFXAsync(Spawnable effect)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[IteratorStateMachine(typeof(_003CDespawnTimmer_003Ed__52))]
 		private IEnumerator DespawnTimmer()
 		{
 			return null;
@@ -176,14 +279,10 @@ namespace SLZ.Props
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSetPreviewMesh_003Ed__54))]
 		public UniTaskVoid SetPreviewMesh()
 		{
 			return default(UniTaskVoid);
-		}
-
-		public GachaCapsule()
-			: base()
-		{
 		}
 	}
 }

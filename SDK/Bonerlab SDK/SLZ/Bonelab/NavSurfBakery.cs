@@ -13,10 +13,5 @@ namespace SLZ.Bonelab
 		public GameObject[] disableObjs;
 
 		private NavMeshSurface[] navMeshSurfaces;
-
-		public NavSurfBakery()
-			: base()
-		{
-		}
 	}
 }

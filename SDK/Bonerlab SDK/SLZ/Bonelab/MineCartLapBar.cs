@@ -13,6 +13,56 @@ namespace SLZ.Bonelab
 {
 	public class MineCartLapBar : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoCheckBar_003Ed__15 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public MineCartLapBar _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoCheckBar_003Ed__15(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[InspectorDisplayName("Configurable Joint")]
 		[Tooltip("Joint for lapbar")]
 		public ConfigurableJoint cj;
@@ -70,6 +120,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoCheckBar_003Ed__15))]
 		private IEnumerator CoCheckBar()
 		{
 			return null;
@@ -77,7 +128,7 @@ namespace SLZ.Bonelab
 
 		public bool CheckBar()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void LockBar()
@@ -89,11 +140,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDisable()
-		{
-		}
-
-		public MineCartLapBar()
-			: base()
 		{
 		}
 	}

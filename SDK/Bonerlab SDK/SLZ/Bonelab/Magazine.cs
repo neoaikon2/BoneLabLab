@@ -14,6 +14,36 @@ namespace SLZ.Bonelab
 {
 	public class Magazine : SpawnEvents
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CInitializeAsync_003Ed__21 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public Magazine _003C_003E4__this;
+
+			public CartridgeData cartridgeData;
+
+			public int count;
+
+			private Spawnable _003Cspawnable_003E5__2;
+
+			private UniTask<Poolee>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		public MagazineState magazineState;
 
@@ -59,7 +89,7 @@ namespace SLZ.Bonelab
 
 		public bool IsClaimed()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void Claim()
@@ -70,6 +100,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CInitializeAsync_003Ed__21))]
 		public UniTask InitializeAsync(CartridgeData cartridgeData, int count)
 		{
 			return default(UniTask);
@@ -109,11 +140,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void CheckBulletArt()
-		{
-		}
-
-		public Magazine()
-			: base()
 		{
 		}
 	}

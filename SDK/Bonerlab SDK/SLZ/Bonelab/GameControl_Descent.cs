@@ -33,6 +33,220 @@ namespace SLZ.Bonelab
 			public bool loop;
 		}
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoroutineSequence_003Ed__69 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Descent _003C_003E4__this;
+
+			private float _003ClerpTime_003E5__2;
+
+			private float _003ClerpInSpeed_003E5__3;
+
+			private Vector3 _003CtargetScale_003E5__4;
+
+			private float _003ClerpOutSpeed_003E5__5;
+
+			private float _003CmirrorLerpSpeed_003E5__6;
+
+			private Material _003ClightningMat_003E5__7;
+
+			private float _003ClightningProgress_003E5__8;
+
+			private float _003CTargetTime_003E5__9;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoroutineSequence_003Ed__69(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CForceGrabCoroutine_003Ed__70 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Descent _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CForceGrabCoroutine_003Ed__70(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CMirrorInProgress_003Ed__72 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Descent _003C_003E4__this;
+
+			private float _003CvoidProgress_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CMirrorInProgress_003Ed__72(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CMirrorOutProgress_003Ed__73 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Descent _003C_003E4__this;
+
+			private float _003CvoidProgress_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CMirrorOutProgress_003Ed__73(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public NooseBonelabIntro nooseScript;
 
 		public GameObject dynamicGallows;
@@ -183,11 +397,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoroutineSequence_003Ed__69))]
 		public IEnumerator CoroutineSequence()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CForceGrabCoroutine_003Ed__70))]
 		public IEnumerator ForceGrabCoroutine()
 		{
 			return null;
@@ -197,11 +413,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CMirrorInProgress_003Ed__72))]
 		public IEnumerator MirrorInProgress()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CMirrorOutProgress_003Ed__73))]
 		public IEnumerator MirrorOutProgress()
 		{
 			return null;
@@ -220,11 +438,6 @@ namespace SLZ.Bonelab
 		}
 
 		public override void DoLevelComplete()
-		{
-		}
-
-		public GameControl_Descent()
-			: base()
 		{
 		}
 	}

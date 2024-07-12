@@ -10,17 +10,18 @@ namespace SLZ.Bonelab.Console
 	{
 		public bool CanDescribe(Type type)
 		{
-			return default(bool);
+			return false;
+		}
+
+		public bool TryDescribe(object obj, TokenParseContext context, out ObjectDescription description)
+		{
+			description = null;
+			return false;
 		}
 
 		public bool TryDescribe(object obj, TokenParseContext context, [Out] ObjectDescription description)
 		{
-			return default(bool);
-		}
-
-		public SceneDescriber()
-			: base()
-		{
+			throw new NotImplementedException();
 		}
 	}
 }

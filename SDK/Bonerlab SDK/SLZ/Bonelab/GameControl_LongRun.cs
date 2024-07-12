@@ -9,6 +9,30 @@ namespace SLZ.Bonelab
 {
 	public class GameControl_LongRun : BonelabInternalGameControl
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CKillPlayerAndReset_003Ed__10 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public GameControl_LongRun _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		private Player_Health playerHealth;
 
 		public UnityEvent onDeathEvent;
@@ -39,14 +63,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CKillPlayerAndReset_003Ed__10))]
 		private UniTaskVoid KillPlayerAndReset()
 		{
 			return default(UniTaskVoid);
-		}
-
-		public GameControl_LongRun()
-			: base()
-		{
 		}
 	}
 }

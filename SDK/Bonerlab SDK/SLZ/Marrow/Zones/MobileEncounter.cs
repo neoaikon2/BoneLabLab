@@ -20,6 +20,34 @@ namespace SLZ.Marrow.Zones
 			SERIES = 1
 		}
 
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CEncounterLoop_003Ed__27 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public SpawnGroup group;
+
+			public CancellationToken ct;
+
+			public MobileEncounter _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public SpawnOrder spawnOrder;
 
 		public SpawnGroup[] spawnGroups;
@@ -100,14 +128,10 @@ namespace SLZ.Marrow.Zones
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CEncounterLoop_003Ed__27))]
 		protected UniTaskVoid EncounterLoop(SpawnGroup group, CancellationToken ct)
 		{
 			return default(UniTaskVoid);
-		}
-
-		public MobileEncounter()
-			: base()
-		{
 		}
 	}
 }

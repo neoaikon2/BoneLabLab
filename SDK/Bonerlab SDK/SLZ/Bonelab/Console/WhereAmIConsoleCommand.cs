@@ -1,9 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Cysharp.Threading.Tasks.Linq;
@@ -14,7 +12,6 @@ namespace SLZ.Bonelab.Console
 	[ConsoleCommand("__builtin", "whereami", "Display current coordinates")]
 	public class WhereAmIConsoleCommand : BaseConsoleCommand
 	{
-		[StructLayout(LayoutKind.Sequential, Size = 1)]
 		private struct WriteToLog : IAsyncWriter<object>
 		{
 			public UniTask YieldAsync(object value)
@@ -22,10 +19,34 @@ namespace SLZ.Bonelab.Console
 				return default(UniTask);
 			}
 		}
-
-		protected override ValueTuple<CommandStatus, string, object> ParseTokenAtIndex(List<ValueTuple<string, object>> previousTokens, int index, string token)
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CWhereAmI_003Ed__2 : IAsyncStateMachine
 		{
-			return default(ValueTuple<CommandStatus, string, object>);
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public IAsyncWriter<object> writer;
+
+			private SwitchToMainThreadAwaitable.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string, object)> previousTokens, int index, string token)
+		{
+			return default((CommandStatus, string, object));
 		}
 
 		public override IUniTaskAsyncEnumerable<object> RunCommand(string command)
@@ -33,17 +54,13 @@ namespace SLZ.Bonelab.Console
 			return null;
 		}
 
+		//[AsyncStateMachine(typeof(_003CWhereAmI_003Ed__2))]
 		private static UniTask WhereAmI(IAsyncWriter<object> writer)
 		{
 			return default(UniTask);
 		}
 
 		private static void WhereAmI()
-		{
-		}
-
-		public WhereAmIConsoleCommand()
-			: base()
 		{
 		}
 	}

@@ -12,6 +12,32 @@ namespace SLZ.Bonelab
 {
 	public class SpawnAllHelper : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnAsync_003Ed__4 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public SpawnAllHelper _003C_003E4__this;
+
+			private List<Poolee> _003C_003E7__wrap1;
+
+			private UniTask<Poolee[]>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		private CrateSpawner[] _crateSpawners;
 
@@ -25,17 +51,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnAsync_003Ed__4))]
 		private UniTaskVoid SpawnAsync()
 		{
 			return default(UniTaskVoid);
 		}
 
 		public void ToggleSpawn()
-		{
-		}
-
-		public SpawnAllHelper()
-			: base()
 		{
 		}
 	}

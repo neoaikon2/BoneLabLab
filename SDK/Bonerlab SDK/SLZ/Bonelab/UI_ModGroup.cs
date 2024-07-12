@@ -83,16 +83,39 @@ namespace SLZ.Bonelab
 			public bool isInstalled;
 
 			public CancellationTokenSource StopThisDownloadCTS;
-
-			public UI_ModViewModel()
-				: base()
-			{
-			}
 		}
 
+		
 		[Serializable]
 		public class UI_ModCell
 		{
+			/*
+			[StructLayout(3)]
+			[CompilerGenerated]
+			private struct _003CUpdateFromViewModel_003Ed__7 : IAsyncStateMachine
+			{
+				public int _003C_003E1__state;
+
+				public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+				public UI_ModCell _003C_003E4__this;
+
+				public UI_ModViewModel viewModel;
+
+				public UI_ModGroup context;
+
+				private UniTask<UnityEngine.Networking.UnityWebRequest>.Awaiter _003C_003Eu__1;
+
+				private void MoveNext()
+				{
+				}
+
+				[DebuggerHidden]
+				private void SetStateMachine(IAsyncStateMachine stateMachine)
+				{
+				}
+			}
+
 			public ButtonReferenceHolder button;
 
 			public ProgressBar progressBar;
@@ -110,16 +133,180 @@ namespace SLZ.Bonelab
 			[HideInInspector]
 			public int viewModelIndex;
 
+			[AsyncStateMachine(typeof(_003CUpdateFromViewModel_003Ed__7))]
 			public UniTask UpdateFromViewModel(UI_ModViewModel viewModel, UI_ModGroup context)
 			{
 				return default(UniTask);
 			}
+			*/
+		}
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CCheckLogIn_003Ed__50 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
 
-			public UI_ModCell()
-				: base()
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public UI_ModGroup _003C_003E4__this;
+
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
 		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoad_Repositories_003Ed__56 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public UI_ModGroup _003C_003E4__this;
+
+			private UniTask<UnityEngine.Networking.UnityWebRequest>.Awaiter _003C_003Eu__1;
+
+			private UniTask<ModRepository[]>.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CCodeTimmer_003Ed__64 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public DeviceLoginResponseContext loginResponseContext;
+
+			public UI_ModGroup _003C_003E4__this;
+
+			public CancellationTokenSource cts;
+
+			public CancellationTokenSource maincts;
+
+			private DateTime _003Cdate_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003C_003Ec__DisplayClass73_0
+		{
+			public UI_ModGroup _003C_003E4__this;
+
+			public List<Pallet> pallets;
+
+			internal void _003CPopulateMenu_003Eb__0()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CPopulateMenu_003Ed__73 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public UI_ModGroup _003C_003E4__this;
+
+			private _003C_003Ec__DisplayClass73_0 _003C_003E8__1;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private ModRepository[] _003C_003E7__wrap1;
+
+			private int _003C_003E7__wrap2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoadingIcon_003Ed__75 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public CancellationTokenSource cts;
+
+			public UI_ModGroup _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CUpdateCells_003Ed__77 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public int newPageIndex;
+
+			public UI_ModGroup _003C_003E4__this;
+
+			private int _003CcellIndex_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 
 		[Space(10f)]
 		[Header("Global")]
@@ -227,13 +414,7 @@ namespace SLZ.Bonelab
 
 		private readonly Regex NonAlphanumeric;
 
-		private int _pageCount
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		private int _pageCount => 0;
 
 		private void Awake()
 		{
@@ -243,6 +424,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CCheckLogIn_003Ed__50))]
 		private UniTaskVoid CheckLogIn()
 		{
 			return default(UniTaskVoid);
@@ -264,6 +446,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CLoad_Repositories_003Ed__56))]
 		private UniTask Load_Repositories()
 		{
 			return default(UniTask);
@@ -297,6 +480,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CCodeTimmer_003Ed__64))]
 		private UniTaskVoid CodeTimmer(DeviceLoginResponseContext loginResponseContext, CancellationTokenSource cts, CancellationTokenSource maincts)
 		{
 			return default(UniTaskVoid);
@@ -334,6 +518,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CPopulateMenu_003Ed__73))]
 		private UniTask PopulateMenu()
 		{
 			return default(UniTask);
@@ -343,6 +528,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CLoadingIcon_003Ed__75))]
 		private UniTaskVoid LoadingIcon(CancellationTokenSource cts)
 		{
 			return default(UniTaskVoid);
@@ -352,6 +538,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CUpdateCells_003Ed__77))]
 		private UniTask UpdateCells(int newPageIndex)
 		{
 			return default(UniTask);
@@ -359,15 +546,10 @@ namespace SLZ.Bonelab
 
 		private int ModSorterLettersAndNumbersOnly(UI_ModViewModel x, UI_ModViewModel y)
 		{
-			return default(int);
+			return 0;
 		}
 
 		public void WARNINGS()
-		{
-		}
-
-		public UI_ModGroup()
-			: base()
 		{
 		}
 	}

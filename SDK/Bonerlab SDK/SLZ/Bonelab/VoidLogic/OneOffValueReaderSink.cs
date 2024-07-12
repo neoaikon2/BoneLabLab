@@ -1,7 +1,7 @@
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using SLZ.Algorithms.Unity;
+using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 
@@ -25,23 +25,15 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
+		[field: ReadOnly(false)]
+		[field: SerializeField]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
-		public int InputCount
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		public int InputCount => 0;
 
-		PortMetadata IVoidLogicNode.PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
+
+		public PortMetadata PortMetadata => throw new System.NotImplementedException();
 
 		private void Awake()
 		{
@@ -71,19 +63,20 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
+		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
 		{
-			return default(bool);
+			input = null;
+			return false;
 		}
 
 		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return default(bool);
+			return false;
 		}
 
-		public OneOffValueReaderSink()
-			: base()
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

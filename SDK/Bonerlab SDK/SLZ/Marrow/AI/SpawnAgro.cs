@@ -28,14 +28,6 @@ namespace SLZ.Marrow.AI
 		[Tooltip("Duration in seconds npc spends investigating player position")]
 		public float investigateTimeout;
 
-		protected override void OnEnable()
-		{
-		}
-
-		protected override void OnDisable()
-		{
-		}
-
 		public void OnDespawn(GameObject go)
 		{
 		}
@@ -49,10 +41,6 @@ namespace SLZ.Marrow.AI
 		}
 
 		public void PostReactivate(BehaviourBaseNav baseNav)
-		{
-		}
-
-		protected override void OnEnter(MarrowEntity activatorEntity)
 		{
 		}
 

@@ -15,6 +15,53 @@ namespace SLZ.Bonelab
 {
 	public class AvatarGun : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoadFavoriteAvatars_003Ed__27 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public AvatarGun _003C_003E4__this;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwapAvatar_003Ed__28 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public RigManager targetRig;
+
+			public AvatarCrateReference avatarCrate;
+
+			public AvatarGun _003C_003E4__this;
+
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 		public Grip triggerGrip;
 
 		public Transform firePoint;
@@ -88,11 +135,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CLoadFavoriteAvatars_003Ed__27))]
 		private UniTaskVoid LoadFavoriteAvatars()
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__28))]
 		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrate, RigManager targetRig)
 		{
 			return default(UniTaskVoid);
@@ -104,12 +153,7 @@ namespace SLZ.Bonelab
 
 		private float GetVolumeSurface(Vector3 size)
 		{
-			return default(float);
-		}
-
-		public AvatarGun()
-			: base()
-		{
+			return 0f;
 		}
 	}
 }

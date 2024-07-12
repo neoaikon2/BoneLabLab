@@ -55,10 +55,5 @@ namespace SLZ.Bonelab
 		public void OnDrawGizmosSelected()
 		{
 		}
-
-		public PartialZipLinkSetup()
-			: base()
-		{
-		}
 	}
 }

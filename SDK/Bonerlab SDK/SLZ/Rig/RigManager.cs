@@ -26,6 +26,42 @@ namespace SLZ.Rig
 			Rectangle = 1
 		}
 
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwapAvatarCrate_003Ed__60 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder<bool> _003C_003Et__builder;
+
+			public string barcode;
+
+			public Action<bool> callback;
+
+			public bool cache;
+
+			public RigManager _003C_003E4__this;
+
+			private SLZ.VRMK.Avatar _003CavatarToSwapTo_003E5__2;
+
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
+
+			private UniTask<GameObject>.Awaiter _003C_003Eu__2;
+
+			private UniTask.Awaiter _003C_003Eu__3;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		private static ComponentCache<RigManager> _cache;
 
 		[HideInInspector]
@@ -124,21 +160,9 @@ namespace SLZ.Rig
 
 		private LeashType _type;
 
-		public static ComponentCache<RigManager> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static ComponentCache<RigManager> Cache => null;
 
-		public ControllerRig ControllerRig
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public ControllerRig ControllerRig => null;
 
 		public SLZ.VRMK.Avatar avatar
 		{
@@ -151,13 +175,7 @@ namespace SLZ.Rig
 			}
 		}
 
-		public string avatarID
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public string avatarID => null;
 
 		public bool HasInitialAvatar { get; private set; }
 
@@ -183,13 +201,7 @@ namespace SLZ.Rig
 			}
 		}
 
-		public bool isLeashed
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public bool isLeashed => false;
 
 		private void Awake()
 		{
@@ -232,7 +244,8 @@ namespace SLZ.Rig
 			return null;
 		}
 
-		public UniTask<bool> SwapAvatarCrate(string barcode, bool cache = false, Action<bool> callback = default(Action<bool>))
+		//[AsyncStateMachine(typeof(_003CSwapAvatarCrate_003Ed__60))]
+		public UniTask<bool> SwapAvatarCrate(string barcode, bool cache = false, Action<bool> callback = null)
 		{
 			return default(UniTask<bool>);
 		}
@@ -243,7 +256,7 @@ namespace SLZ.Rig
 
 		private bool SwitchAvatar(SLZ.VRMK.Avatar newAvatar)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void TeleportEvent(Transform trans)
@@ -252,17 +265,17 @@ namespace SLZ.Rig
 
 		public bool Teleport(Vector3 feetDestinationWorld, bool zeroVelocity = true)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public bool Teleport(Vector3 feetDestinationWorld, Vector3 fwdSnap, bool zeroVelocity = true)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public bool Teleport(Transform destination, bool zeroVelocity = true)
 		{
-			return default(bool);
+			return false;
 		}
 
 		private void InternalTeleport()
@@ -271,12 +284,12 @@ namespace SLZ.Rig
 
 		public bool TeleportToPose(Vector3 feetDestinationWorld, Vector3 fwdSnap, bool zeroVelocity = true)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public bool LeashPlayerCircle(Vector3 positionWorld, float minRadius, float maxRadius)
 		{
-			return default(bool);
+			return false;
 		}
 
 		public Vector3 UpdateLeashCircle(Vector3 headDelta)
@@ -290,11 +303,6 @@ namespace SLZ.Rig
 		}
 
 		public void UnleashPlayer()
-		{
-		}
-
-		public RigManager()
-			: base()
 		{
 		}
 	}

@@ -13,6 +13,40 @@ namespace SLZ.Bonelab
 {
 	public class Blip : SpawnEvents
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CFireEffectAsync_003Ed__16 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Blip _003C_003E4__this;
+
+			public Spawnable effect;
+
+			public Color? color;
+
+			private List<Mesh> _003CcachedMeshes_003E5__2;
+
+			private List<Renderer> _003Crenderers_003E5__3;
+
+			private UniTask<Poolee[]>.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		private static ComponentCache<Blip> _cache;
 
 		[SerializeField]
@@ -36,13 +70,7 @@ namespace SLZ.Bonelab
 
 		private bool sfxPlayed;
 
-		public static ComponentCache<Blip> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static ComponentCache<Blip> Cache => null;
 
 		protected override void Awake()
 		{
@@ -68,19 +96,15 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public UniTaskVoid FireEffectAsync(Spawnable effect, Color? color = default(Color?))
+		//[AsyncStateMachine(typeof(_003CFireEffectAsync_003Ed__16))]
+		public UniTaskVoid FireEffectAsync(Spawnable effect, Color? color = null)
 		{
 			return default(UniTaskVoid);
 		}
 
 		private float GetVolumeSurface(Vector3 size)
 		{
-			return default(float);
-		}
-
-		public Blip()
-			: base()
-		{
+			return 0f;
 		}
 	}
 }

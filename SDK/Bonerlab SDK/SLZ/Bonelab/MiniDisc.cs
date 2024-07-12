@@ -12,6 +12,30 @@ namespace SLZ.Bonelab
 {
 	public class MiniDisc : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CPopFXAsync_003Ed__14 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public Spawnable effect;
+
+			public MiniDisc _003C_003E4__this;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public BoxGrip grip;
 
 		public RadioSong clip_song;
@@ -51,14 +75,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CPopFXAsync_003Ed__14))]
 		private UniTaskVoid PopFXAsync(Spawnable effect)
 		{
 			return default(UniTaskVoid);
-		}
-
-		public MiniDisc()
-			: base()
-		{
 		}
 	}
 }

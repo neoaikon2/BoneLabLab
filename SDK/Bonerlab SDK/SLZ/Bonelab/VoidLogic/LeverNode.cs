@@ -59,13 +59,7 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		public ConfigurableJoint LeverConfigurableJoint
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public ConfigurableJoint LeverConfigurableJoint => null;
 
 		public Servo Servo
 		{
@@ -93,7 +87,7 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 			get
 			{
-				return default(int);
+				return 0;
 			}
 			set
 			{
@@ -104,7 +98,7 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
 			{
@@ -115,7 +109,7 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
 			{
@@ -126,20 +120,14 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 			get
 			{
-				return default(float);
+				return 0f;
 			}
 			set
 			{
 			}
 		}
 
-		public override PortMetadata PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		public override PortMetadata PortMetadata => default(PortMetadata);
 
 		private void Reset()
 		{
@@ -149,7 +137,7 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		void IVoidLogicSensor.ReadSensors(NodeState nodeState)
+		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicSensor_002EReadSensors(ref NodeState nodeState)
 		{
 		}
 
@@ -157,13 +145,18 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		void IVoidLogicActuator.Actuate(NodeState nodeState)
+		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicActuator_002EActuate(ref NodeState nodeState)
 		{
 		}
 
-		public LeverNode()
-			: base()
+		public void Actuate(NodeState nodeState)
 		{
+			throw new System.NotImplementedException();
+		}
+
+		public void ReadSensors(NodeState nodeState)
+		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

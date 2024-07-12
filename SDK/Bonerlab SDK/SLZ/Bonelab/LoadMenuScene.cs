@@ -11,28 +11,42 @@ namespace SLZ.Bonelab
 {
 	public class LoadMenuScene : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLoad_003Ed__5 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public LoadMenuScene _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public LevelCrateReference MenuHollowCrateRef;
 
 		public LevelCrateReference VoidG114CrateRef;
 
 		public LevelCrateReference LevelLoaderCrateRef;
 
-		private static PlayerProgression p
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerProgression p => null;
 
+		//[AsyncStateMachine(typeof(_003CLoad_003Ed__5))]
 		public UniTaskVoid Load()
 		{
 			return default(UniTaskVoid);
-		}
-
-		public LoadMenuScene()
-			: base()
-		{
 		}
 	}
 }

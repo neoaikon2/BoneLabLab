@@ -13,6 +13,64 @@ namespace SLZ.Bonelab
 	[RequireComponent(typeof(ConfigurableJoint))]
 	public class DoorControl : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CSwingOverTime_003Ed__98 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float time;
+
+			public DoorControl _003C_003E4__this;
+
+			public bool lockOnComplete;
+
+			private float _003CstartTime_003E5__2;
+
+			private JointDrive _003CstartingDrive_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CSwingOverTime_003Ed__98(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("GENERAL")]
 		public bool FreeDoor;
 
@@ -250,6 +308,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CSwingOverTime_003Ed__98))]
 		public IEnumerator SwingOverTime(float time = 1f, bool lockOnComplete = false)
 		{
 			return null;
@@ -340,11 +399,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void UE_CLOSED(bool doorClosed)
-		{
-		}
-
-		public DoorControl()
-			: base()
 		{
 		}
 	}

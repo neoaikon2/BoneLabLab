@@ -1,15 +1,13 @@
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using SLZ.Algorithms.Unity;
-using SLZ.Marrow.Combat;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.PuppetMasta;
+using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Player;
 using SLZ.VFX;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace SLZ.Bonelab.VoidLogic
 {
@@ -88,31 +86,17 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
+		[field: ReadOnly(false)]
+		[field: SerializeField]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
-		private int _AffectedProxiesCount
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		private int _AffectedProxiesCount => 0;
 
-		public int InputCount
-		{
-			get
-			{
-				return default(int);
-			}
-		}
+		public int InputCount => 0;
 
-		PortMetadata IVoidLogicNode.PortMetadata
-		{
-			get
-			{
-				return default(PortMetadata);
-			}
-		}
+		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
+
+		public PortMetadata PortMetadata => throw new System.NotImplementedException();
 
 		private void Awake()
 		{
@@ -136,12 +120,12 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private bool OnFirstRigidbodyAdded(Rigidbody rb)
 		{
-			return default(bool);
+			return false;
 		}
 
 		private bool AddDamageReceiverInformation(Rigidbody rb)
 		{
-			return default(bool);
+			return false;
 		}
 
 		private void OnLastRigidbodyRemoved(Rigidbody rb, int removedCount)
@@ -150,7 +134,7 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private bool RemoveDamageReceiverInformation(Rigidbody rb)
 		{
-			return default(bool);
+			return false;
 		}
 
 		private void OnDespawn(GameObject go)
@@ -169,19 +153,20 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
+		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
 		{
-			return default(bool);
+			input = null;
+			return false;
 		}
 
 		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return default(bool);
+			return false;
 		}
 
-		public DamageVolume()
-			: base()
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			throw new System.NotImplementedException();
 		}
 	}
 }

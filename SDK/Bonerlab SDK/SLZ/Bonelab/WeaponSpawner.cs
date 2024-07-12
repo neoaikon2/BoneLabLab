@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
@@ -14,6 +13,106 @@ namespace SLZ.Bonelab
 {
 	public class WeaponSpawner : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoSpawnDefaultPack_003Ed__33 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public WeaponSpawner _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoSpawnDefaultPack_003Ed__33(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoSpawnAllWeaponPacks_003Ed__35 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float delay;
+
+			public WeaponSpawner _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoSpawnAllWeaponPacks_003Ed__35(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[SerializeField]
 		private bool spawnDefAtStart;
 
@@ -115,6 +214,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoSpawnDefaultPack_003Ed__33))]
 		private IEnumerator CoSpawnDefaultPack()
 		{
 			return null;
@@ -124,6 +224,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoSpawnAllWeaponPacks_003Ed__35))]
 		private IEnumerator CoSpawnAllWeaponPacks(float delay)
 		{
 			return null;
@@ -163,7 +264,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void DropAndDespawnInventory(GameObject playerObject = default(GameObject))
+		public void DropAndDespawnInventory(GameObject playerObject = null)
 		{
 		}
 
@@ -186,11 +287,6 @@ namespace SLZ.Bonelab
 
 		[ContextMenu("SpawnRandSpecialWep")]
 		public void SpawnRandSpecialWep()
-		{
-		}
-
-		public WeaponSpawner()
-			: base()
 		{
 		}
 	}

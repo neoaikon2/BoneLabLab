@@ -20,6 +20,82 @@ namespace SLZ.MLAgents
 {
 	public class BehaviourQuadDrone : BehaviourGrabbableBaseNav
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CSelfDespawn_003Ed__48 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public BehaviourQuadDrone _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CSelfDespawn_003Ed__48(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CTravelAlongPath_003Ed__104 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public BehaviourQuadDrone _003C_003E4__this;
+
+			public CancellationToken cancellationToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		public GameObject rootParent;
 
 		public Grip droneBodyGrip;
@@ -216,6 +292,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CSelfDespawn_003Ed__48))]
 		private IEnumerator SelfDespawn(float duration)
 		{
 			return null;
@@ -302,6 +379,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CTravelAlongPath_003Ed__104))]
 		private UniTaskVoid TravelAlongPath(CancellationToken cancellationToken)
 		{
 			return default(UniTaskVoid);
@@ -400,11 +478,6 @@ namespace SLZ.MLAgents
 
 		[ContextMenu("Force Buffer Distance")]
 		private void ForceBuffer()
-		{
-		}
-
-		public BehaviourQuadDrone()
-			: base()
 		{
 		}
 	}

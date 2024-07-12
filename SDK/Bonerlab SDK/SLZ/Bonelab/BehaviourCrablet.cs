@@ -6,11 +6,9 @@ using System.Runtime.CompilerServices;
 using PuppetMasta;
 using SLZ.Interaction;
 using SLZ.Marrow.AI;
-using SLZ.Marrow.Combat;
 using SLZ.Marrow.Mechanics;
 using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace SLZ.Bonelab
 {
@@ -23,7 +21,57 @@ namespace SLZ.Bonelab
 			FaceMount = 2,
 			OffmeshLink = 3
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003CSelfDespawn_003Ed__21 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
 
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public BehaviourCrablet _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CSelfDespawn_003Ed__21(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[Header("Crab Settings")]
 		public SubBehaviourIk ik;
 
@@ -117,6 +165,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CSelfDespawn_003Ed__21))]
 		private IEnumerator SelfDespawn(float duration)
 		{
 			return null;
@@ -189,7 +238,7 @@ namespace SLZ.Bonelab
 
 		private bool CheckMount()
 		{
-			return default(bool);
+			return false;
 		}
 
 		private void UpdateMount(float distance)
@@ -206,12 +255,12 @@ namespace SLZ.Bonelab
 
 		private bool AttachToFace(Rigidbody face, TriggerRefProxy trp, bool preAttach = false, bool isPlayer = true)
 		{
-			return default(bool);
+			return false;
 		}
 
 		private bool TransitionJointToEngaged()
 		{
-			return default(bool);
+			return false;
 		}
 
 		public void DetachFromFace()
@@ -247,11 +296,6 @@ namespace SLZ.Bonelab
 		}
 
 		protected override void SwitchLocoState(LocoState lState, float coolDown = 0f, bool forceSwitch = false)
-		{
-		}
-
-		public BehaviourCrablet()
-			: base()
 		{
 		}
 	}

@@ -23,7 +23,115 @@ namespace SLZ.Bonelab
 			RETRACT = 2,
 			NONE = 3
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoGrab_003Ed__27 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
 
+			private object _003C_003E2__current;
+
+			public ArenaCraneController _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoGrab_003Ed__27(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoDump_003Ed__29 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public ArenaCraneController _003C_003E4__this;
+
+			private float _003CstartTime_003E5__2;
+
+			private float _003CendTime_003E5__3;
+
+			private float _003CdumpLerp_003E5__4;
+
+			private float _003CstartSpring_003E5__5;
+
+			private JointDrive _003CdropDrive_003E5__6;
+
+			private float _003CspringGoal_003E5__7;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoDump_003Ed__29(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[SerializeField]
 		private ConfigurableJoint xJoint;
 
@@ -101,6 +209,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoGrab_003Ed__27))]
 		private IEnumerator CoGrab()
 		{
 			return null;
@@ -110,6 +219,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoDump_003Ed__29))]
 		private IEnumerator CoDump()
 		{
 			return null;
@@ -126,11 +236,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void PickupCargo(int idX)
-		{
-		}
-
-		public ArenaCraneController()
-			: base()
 		{
 		}
 	}

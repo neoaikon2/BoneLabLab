@@ -238,6 +238,18 @@ namespace SLZ.MLAgents
 
 		public static bool Regen { get; set; }
 
+		public event Action OnReset
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
 		private void Awake()
 		{
 		}
@@ -280,12 +292,5 @@ namespace SLZ.MLAgents
 		{
 			return default(Vector3);
 		}
-
-		public TrackClass()
-			: base()
-		{
-		}
-
-		public event Action OnReset;
 	}
 }

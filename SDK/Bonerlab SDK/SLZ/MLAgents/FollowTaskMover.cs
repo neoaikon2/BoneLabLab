@@ -10,6 +10,55 @@ namespace SLZ.MLAgents
 {
 	public class FollowTaskMover : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CMoveTaskOnPath_003Ed__34 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public FollowTaskMover _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CMoveTaskOnPath_003Ed__34(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		public TrackGenerator trackGen;
 
 		public FollowObjective followObjective;
@@ -87,6 +136,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CMoveTaskOnPath_003Ed__34))]
 		public IEnumerator MoveTaskOnPath()
 		{
 			return null;
@@ -97,11 +147,6 @@ namespace SLZ.MLAgents
 		}
 
 		private void OnDestroy()
-		{
-		}
-
-		public FollowTaskMover()
-			: base()
 		{
 		}
 	}

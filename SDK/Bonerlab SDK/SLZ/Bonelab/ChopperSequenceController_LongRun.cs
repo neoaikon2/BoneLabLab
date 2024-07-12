@@ -16,6 +16,194 @@ namespace SLZ.Bonelab
 {
 	public class ChopperSequenceController_LongRun : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CWindForceBurst_003Ed__71 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperSequenceController_LongRun _003C_003E4__this;
+
+			private float _003Ctime_003E5__2;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CWindForce_003Ed__73 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperSequenceController_LongRun _003C_003E4__this;
+
+			private float _003Ctime_003E5__2;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CVideoTimmer_003Ed__77 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperSequenceController_LongRun _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CLerpBlend_003Ed__78 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperSequenceController_LongRun _003C_003E4__this;
+
+			public float fromCutoff;
+
+			public float toCutoff;
+
+			public float fromVol;
+
+			public float toVol;
+
+			public CancellationTokenSource cts;
+
+			private float _003Ctime_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CTargetPlayer_003Ed__79 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperSequenceController_LongRun _003C_003E4__this;
+
+			public CancellationTokenSource cts;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnOmnis_003Ed__80 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperSequenceController_LongRun _003C_003E4__this;
+
+			private Transform[] _003C_003E7__wrap1;
+
+			private int _003C_003E7__wrap2;
+
+			private Transform _003Ctran_003E5__4;
+
+			private bool _003Cfired_003E5__5;
+
+			private float _003Ctime_003E5__6;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CRotorPowerUpdate_003Ed__81 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ChopperSequenceController_LongRun _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private YieldAwaitable.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("Animator")]
 		public Animator animator;
 
@@ -188,6 +376,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CWindForceBurst_003Ed__71))]
 		private UniTaskVoid WindForceBurst()
 		{
 			return default(UniTaskVoid);
@@ -197,6 +386,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CWindForce_003Ed__73))]
 		private UniTaskVoid WindForce()
 		{
 			return default(UniTaskVoid);
@@ -214,26 +404,31 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CVideoTimmer_003Ed__77))]
 		private UniTaskVoid VideoTimmer()
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CLerpBlend_003Ed__78))]
 		private UniTaskVoid LerpBlend(float fromCutoff, float toCutoff, float fromVol, float toVol, CancellationTokenSource cts)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CTargetPlayer_003Ed__79))]
 		private UniTaskVoid TargetPlayer(CancellationTokenSource cts)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnOmnis_003Ed__80))]
 		private UniTaskVoid SpawnOmnis()
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CRotorPowerUpdate_003Ed__81))]
 		private UniTaskVoid RotorPowerUpdate()
 		{
 			return default(UniTaskVoid);
@@ -248,11 +443,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void Update()
-		{
-		}
-
-		public ChopperSequenceController_LongRun()
-			: base()
 		{
 		}
 	}

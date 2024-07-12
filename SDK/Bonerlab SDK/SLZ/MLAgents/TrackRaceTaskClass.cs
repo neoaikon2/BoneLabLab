@@ -9,6 +9,56 @@ namespace SLZ.MLAgents
 {
 	public class TrackRaceTaskClass : TaskClass
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCheckVP_003Ed__26 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public TrackRaceTaskClass _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCheckVP_003Ed__26(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Tooltip("The context of the current task")]
 		[Header("Objective Section")]
 		private VehicleSceneContextManager context;
@@ -58,6 +108,30 @@ namespace SLZ.MLAgents
 
 		private RaceUtils raceUtils;
 
+		public event Action RaceComplete
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public event Action RaceResetComplete
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
 		protected override void Awake()
 		{
 		}
@@ -74,6 +148,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCheckVP_003Ed__26))]
 		private IEnumerator CheckVP()
 		{
 			return null;
@@ -142,16 +217,7 @@ namespace SLZ.MLAgents
 
 		public float SplitTime(int checkpointCounter, float cp_time)
 		{
-			return default(float);
+			return 0f;
 		}
-
-		public TrackRaceTaskClass()
-			: base()
-		{
-		}
-
-		public event Action RaceComplete;
-
-		public event Action RaceResetComplete;
 	}
 }

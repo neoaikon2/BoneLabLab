@@ -6,17 +6,17 @@ using JetBrains.Annotations;
 
 namespace SLZ.Marrow.SaveData
 {
-	public abstract class MarrowDataManager<T>
+	public abstract class MarrowDataManager<DataManager, Save, Settings, PlayerProgression, PlayerUnlocks>
 	{
-		protected internal static T _instance;
+		protected internal static DataManager _instance;
 
 		protected readonly int SettingsVersion;
 
-		protected T _settings;
+		protected Settings _settings;
 
 		protected readonly int SaveVersion;
 
-		protected internal T _activeSave;
+		protected internal Save _activeSave;
 
 		[PublicAPI]
 		public static string SettingsPath
@@ -56,22 +56,22 @@ namespace SLZ.Marrow.SaveData
 
 		protected internal DateTime LastWriteTime { get; private set; }
 
-		private bool _tryReadAndParseSettings([Out] T settings)
+		private bool _tryReadAndParseSettings([Out] Settings settings)
 		{
 			return default(bool);
 		}
 
-		protected static bool TryWriteSettings(T settings)
+		protected static bool TryWriteSettings(Settings settings)
 		{
 			return default(bool);
 		}
 
-		protected internal bool TryAutosaveAndSetActive(T save, SaveFlags flags, [Out] string saveFilename)
+		protected internal bool TryAutosaveAndSetActive(Save save, SaveFlags flags, [Out] string saveFilename)
 		{
 			return default(bool);
 		}
 
-		protected bool TryWriteSave(T save, string saveFilename, SaveFlags flags)
+		protected bool TryWriteSave(Save save, string saveFilename, SaveFlags flags)
 		{
 			return default(bool);
 		}
@@ -81,7 +81,7 @@ namespace SLZ.Marrow.SaveData
 			return default(bool);
 		}
 
-		protected bool TryReadSave(T save, string filename, SaveFlags flags = SaveFlags.Progression)
+		protected bool TryReadSave(Save save, string filename, SaveFlags flags = SaveFlags.Progression)
 		{
 			return default(bool);
 		}

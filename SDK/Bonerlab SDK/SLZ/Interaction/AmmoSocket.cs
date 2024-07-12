@@ -11,6 +11,36 @@ namespace SLZ.Interaction
 {
 	public class AmmoSocket : Socket
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CForceLoadAsync_003Ed__23 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public MagazineData magazineData;
+
+			public AmmoSocket _003C_003E4__this;
+
+			private Magazine _003Cmagazine_003E5__2;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
+
+			private UniTask.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[Header("Magazine Socket")]
 		public string platform;
 
@@ -29,21 +59,9 @@ namespace SLZ.Interaction
 
 		private AmmoPlug _magazinePlug;
 
-		public override bool IsClearOnInsert
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public override bool IsClearOnInsert => false;
 
-		public bool hasMagazine
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public bool hasMagazine => false;
 
 		protected override void Awake()
 		{
@@ -90,17 +108,13 @@ namespace SLZ.Interaction
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CForceLoadAsync_003Ed__23))]
 		public UniTask ForceLoadAsync(MagazineData magazineData)
 		{
 			return default(UniTask);
 		}
 
 		public override void OnDespawn()
-		{
-		}
-
-		public AmmoSocket()
-			: base()
 		{
 		}
 	}

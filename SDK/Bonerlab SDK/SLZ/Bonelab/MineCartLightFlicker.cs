@@ -9,6 +9,64 @@ namespace SLZ.Bonelab
 {
 	public class MineCartLightFlicker : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CFlicker_003Ed__15 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public bool isTurningOn;
+
+			public MineCartLightFlicker _003C_003E4__this;
+
+			public float curIntensity;
+
+			public float targetIntesity;
+
+			public AnimationCurve curve;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CFlicker_003Ed__15(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public Light cartLight;
 
 		public AnimationCurve OnCurve;
@@ -53,14 +111,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CFlicker_003Ed__15))]
 		private IEnumerator Flicker(AnimationCurve curve, float curIntensity, float targetIntesity, bool isTurningOn)
 		{
 			return null;
-		}
-
-		public MineCartLightFlicker()
-			: base()
-		{
 		}
 	}
 }

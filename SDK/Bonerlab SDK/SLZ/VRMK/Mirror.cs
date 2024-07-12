@@ -15,6 +15,58 @@ namespace SLZ.VRMK
 	[DefaultExecutionOrder(9100)]
 	public class Mirror : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwapReflectionAvatar_003Ed__14 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public Mirror _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSwapReflectionAvatar_003Ed__15 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public string barcode;
+
+			public Mirror _003C_003E4__this;
+
+			private AvatarCrate _003Ccrate_003E5__2;
+
+			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
+
+			private UniTask<GameObject>.Awaiter _003C_003Eu__2;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		[ReadOnly(false)]
 		public RigManager rigManager;
 
@@ -39,13 +91,7 @@ namespace SLZ.VRMK
 
 		private Action swapperAction;
 
-		public Avatar Reflection
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public Avatar Reflection => null;
 
 		private void OnTriggerEnter(Collider c)
 		{
@@ -63,19 +109,16 @@ namespace SLZ.VRMK
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CSwapReflectionAvatar_003Ed__14))]
 		private UniTask SwapReflectionAvatar()
 		{
 			return default(UniTask);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSwapReflectionAvatar_003Ed__15))]
 		private UniTask SwapReflectionAvatar(string barcode)
 		{
 			return default(UniTask);
-		}
-
-		public Mirror()
-			: base()
-		{
 		}
 	}
 }

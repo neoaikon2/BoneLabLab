@@ -15,6 +15,110 @@ namespace SLZ.Bonelab
 {
 	public class JimmyDoorController : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CDoorSequence_003Ed__43 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public JimmyDoorController _003C_003E4__this;
+
+			private Vector3 _003CstartPos_003E5__2;
+
+			private Vector3 _003CendPos_003E5__3;
+
+			private float _003CyoinkTime_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CDoorSequence_003Ed__43(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CDoorSequenceByPass_003Ed__45 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public JimmyDoorController _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CDoorSequenceByPass_003Ed__45(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public Seat seat;
 
 		public Rigidbody rb;
@@ -109,6 +213,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CDoorSequence_003Ed__43))]
 		private IEnumerator DoorSequence()
 		{
 			return null;
@@ -118,6 +223,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CDoorSequenceByPass_003Ed__45))]
 		private IEnumerator DoorSequenceByPass()
 		{
 			return null;
@@ -126,11 +232,6 @@ namespace SLZ.Bonelab
 		public Vector3 FindNearestPointOnLine(Vector3 origin, Vector3 vector, Vector3 point)
 		{
 			return default(Vector3);
-		}
-
-		public JimmyDoorController()
-			: base()
-		{
 		}
 	}
 }

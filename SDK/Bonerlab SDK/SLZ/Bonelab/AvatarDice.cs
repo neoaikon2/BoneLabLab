@@ -14,6 +14,81 @@ namespace SLZ.Bonelab
 {
 	public class AvatarDice : MonoBehaviour
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CActiveRoll_003Ed__12 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public AvatarDice _003C_003E4__this;
+
+			public int result;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CDiceResult_003Ed__13 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public AvatarDice _003C_003E4__this;
+
+			public int result;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CChangeAvatar_003Ed__14 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public AvatarDice _003C_003E4__this;
+
+			public int result;
+
+			private AvatarCrateReference _003CnewAvatar_003E5__2;
+
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
 		public Dice dice;
 
 		public List<AvatarCrateReference> avatars;
@@ -44,16 +119,19 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CActiveRoll_003Ed__12))]
 		private UniTaskVoid ActiveRoll(int result)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CDiceResult_003Ed__13))]
 		private UniTaskVoid DiceResult(int result)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CChangeAvatar_003Ed__14))]
 		private UniTask ChangeAvatar(int result, bool isResultRoll = false)
 		{
 			return default(UniTask);
@@ -63,10 +141,12 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		[MethodImpl(256)]
 		private void _listenForHandAttach()
 		{
 		}
 
+		[MethodImpl(256)]
 		private void _unlistenForHandAttach()
 		{
 		}
@@ -102,11 +182,6 @@ namespace SLZ.Bonelab
 
 		[ContextMenu("Simulate Roll 6")]
 		private void _simulateRoll6()
-		{
-		}
-
-		public AvatarDice()
-			: base()
 		{
 		}
 	}

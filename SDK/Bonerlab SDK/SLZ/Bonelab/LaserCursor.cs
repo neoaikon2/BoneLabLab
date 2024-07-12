@@ -20,6 +20,58 @@ namespace SLZ.Bonelab
 			public Bounds bounds;
 		}
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CFireRayPulse_003Ed__65 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public LaserCursor _003C_003E4__this;
+
+			private bool _003CmidFire_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CFireRayPulse_003Ed__65(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		protected bool m_isActive;
 
 		private bool m_IsActiveThisFrame;
@@ -141,13 +193,7 @@ namespace SLZ.Bonelab
 
 		private BaseController[] controllers;
 
-		private VRStandaloneInputModule module
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private VRStandaloneInputModule module => null;
 
 		public void OnPointerEnter(PointerEventData eventData)
 		{
@@ -171,9 +217,10 @@ namespace SLZ.Bonelab
 
 		public virtual bool Trigger()
 		{
-			return default(bool);
+			return false;
 		}
 
+		//[IteratorStateMachine(typeof(_003CFireRayPulse_003Ed__65))]
 		private IEnumerator FireRayPulse()
 		{
 			return null;
@@ -212,11 +259,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void PlayAudio(AudioClip clipToPlay, Vector3 location)
-		{
-		}
-
-		public LaserCursor()
-			: base()
 		{
 		}
 	}

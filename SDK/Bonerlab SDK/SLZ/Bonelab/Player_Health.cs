@@ -19,6 +19,428 @@ namespace SLZ.Bonelab
 
 		public delegate void PlayerDamageReceived(float damageAmount);
 
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoBrightenDeathSave_003Ed__78 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Player_Health _003C_003E4__this;
+
+			private float _003CstartTime_003E5__2;
+
+			private float _003CendTime_003E5__3;
+
+			private float _003ClerpVal_003E5__4;
+
+			private float _003CstartShut_003E5__5;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoBrightenDeathSave_003Ed__78(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoUpdateHealthUI_003Ed__79 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Player_Health _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoUpdateHealthUI_003Ed__79(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoFadeVignette_003Ed__80 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Player_Health _003C_003E4__this;
+
+			private float _003CinnerValue_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoFadeVignette_003Ed__80(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoFadeDeathVignette_003Ed__81 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Player_Health _003C_003E4__this;
+
+			public float deathTime;
+
+			private float _003Cshuteye_003E5__2;
+
+			private float _003Ctimer_003E5__3;
+
+			private float _003CstartTime_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoFadeDeathVignette_003Ed__81(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoRegenHealth_003Ed__82 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float waitSeconds;
+
+			public Player_Health _003C_003E4__this;
+
+			private float _003Ctimer_003E5__2;
+
+			private float _003CstartHealth_003E5__3;
+
+			private float _003CgoalHealth_003E5__4;
+
+			private float _003CstartTime_003E5__5;
+
+			private float _003Cendtime_003E5__6;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoRegenHealth_003Ed__82(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoLowPassFilter_003Ed__83 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public bool enableLow;
+
+			private float _003CstartTime_003E5__2;
+
+			private float _003CendTime_003E5__3;
+
+			private float _003ClerpVal_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoLowPassFilter_003Ed__83(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoWaitAndReloadScene_003Ed__87 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoWaitAndReloadScene_003Ed__87(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoWaitAndGoToRespawn_003Ed__88 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Player_Health _003C_003E4__this;
+
+			private float _003Ctimer_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoWaitAndGoToRespawn_003Ed__88(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public bool reloadLevelOnDeath;
 
 		[Space(2f)]
@@ -136,6 +558,42 @@ namespace SLZ.Bonelab
 
 		private int colorID;
 
+		public static event PlayerDeathImminent OnDeathImminent
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public static event PlayerDeath OnPlayerDeath
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
+		public static event PlayerDamageReceived OnPlayerDamageReceived
+		{
+			[CompilerGenerated]
+			add
+			{
+			}
+			[CompilerGenerated]
+			remove
+			{
+			}
+		}
+
 		private void OnEnable()
 		{
 		}
@@ -210,31 +668,37 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoBrightenDeathSave_003Ed__78))]
 		private IEnumerator CoBrightenDeathSave()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoUpdateHealthUI_003Ed__79))]
 		private IEnumerator CoUpdateHealthUI()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoFadeVignette_003Ed__80))]
 		private IEnumerator CoFadeVignette()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoFadeDeathVignette_003Ed__81))]
 		private IEnumerator CoFadeDeathVignette(float deathTime)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoRegenHealth_003Ed__82))]
 		private IEnumerator CoRegenHealth(float waitSeconds)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoLowPassFilter_003Ed__83))]
 		private IEnumerator CoLowPassFilter(bool enableLow)
 		{
 			return null;
@@ -252,11 +716,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoWaitAndReloadScene_003Ed__87))]
 		private IEnumerator CoWaitAndReloadScene()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoWaitAndGoToRespawn_003Ed__88))]
 		public IEnumerator CoWaitAndGoToRespawn()
 		{
 			return null;
@@ -265,16 +731,5 @@ namespace SLZ.Bonelab
 		public void STARTDATA()
 		{
 		}
-
-		public Player_Health()
-			: base()
-		{
-		}
-
-		public static event PlayerDeathImminent OnDeathImminent;
-
-		public static event PlayerDeath OnPlayerDeath;
-
-		public static event PlayerDamageReceived OnPlayerDamageReceived;
 	}
 }

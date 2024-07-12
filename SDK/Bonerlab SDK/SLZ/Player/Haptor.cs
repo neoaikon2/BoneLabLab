@@ -17,7 +17,127 @@ namespace SLZ.Player
 			hap_Ignore = 2,
 			hap_Duck = 3
 		}
+		/*
+		[CompilerGenerated]
+		private sealed class _003Cco_HapHit_003Ed__60 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
 
+			private object _003C_003E2__current;
+
+			public Haptor _003C_003E4__this;
+
+			public float amp;
+
+			private float _003Chap_hit_clock_003E5__2;
+
+			private float _003Chap_loop_t_003E5__3;
+
+			private float _003Chap_hit_dur_003E5__4;
+
+			private float _003Camp_drop_003E5__5;
+
+			private float _003Cfreq_drop_003E5__6;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003Cco_HapHit_003Ed__60(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003Cco_HapticSine_003Ed__61 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public Haptor _003C_003E4__this;
+
+			public float length;
+
+			public float min_amplitude;
+
+			public float max_amplitude;
+
+			public float frequency;
+
+			public int gate;
+
+			private float _003Chap_loop_t_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003Cco_HapticSine_003Ed__61(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[Header("Required")]
 		public bool hapticsAllowed;
 
@@ -204,11 +324,13 @@ namespace SLZ.Player
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003Cco_HapHit_003Ed__60))]
 		private IEnumerator co_HapHit(float amp = 0f)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003Cco_HapticSine_003Ed__61))]
 		private IEnumerator co_HapticSine(int gate = 0, float length = 0f, float frequency = 0f, float max_amplitude = 0f, float min_amplitude = 0f)
 		{
 			return null;
@@ -219,11 +341,6 @@ namespace SLZ.Player
 		}
 
 		private void VIVEBANDAID()
-		{
-		}
-
-		public Haptor()
-			: base()
 		{
 		}
 	}

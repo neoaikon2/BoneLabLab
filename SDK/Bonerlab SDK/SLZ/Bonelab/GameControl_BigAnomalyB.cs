@@ -13,6 +13,112 @@ namespace SLZ.Bonelab
 {
 	public class GameControl_BigAnomalyB : BonelabInternalGameControl
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CCoLightingPos_003Ed__26 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_BigAnomalyB _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoLightingPos_003Ed__26(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoLightningFX_003Ed__27 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_BigAnomalyB _003C_003E4__this;
+
+			public Vector3 target;
+
+			private Material _003ClightningMat_003E5__2;
+
+			private float _003ClightningProgress_003E5__3;
+
+			private float _003ClightningTime_003E5__4;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoLightningFX_003Ed__27(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("Animation Stuff")]
 		public RigManager rm;
 
@@ -59,13 +165,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AudioClip hitClip;
 
-		private static PlayerProgression p
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerProgression p => null;
 
 		public override void DoLevelComplete()
 		{
@@ -100,22 +200,19 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoLightingPos_003Ed__26))]
 		private IEnumerator CoLightingPos()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoLightningFX_003Ed__27))]
 		private IEnumerator CoLightningFX(Vector3 target)
 		{
 			return null;
 		}
 
 		private void EndTutorial()
-		{
-		}
-
-		public GameControl_BigAnomalyB()
-			: base()
 		{
 		}
 	}

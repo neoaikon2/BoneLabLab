@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using SLZ.Rig;
 using TMPro;
 using UnityEngine;
@@ -12,6 +11,104 @@ namespace SLZ.Bonelab
 {
 	public class HeadTitles : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CFXChange_003Ed__50 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public HeadTitles _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CFXChange_003Ed__50(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CFollow_003Ed__51 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public HeadTitles _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CFollow_003Ed__51(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public RigManager manager;
 
 		public Transform headFollower;
@@ -115,7 +212,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void CUSTOMDISPLAY(string incomingTitle = "", string incomingSubTitle = "", Sprite incomingSprite = default(Sprite), float holdTime = 0f, AudioClip audioClip = default(AudioClip), bool isAvatarLevel = false, Sprite sprite_A = default(Sprite), Sprite sprite_B = default(Sprite), Sprite sprite_C = default(Sprite), Sprite sprite_D = default(Sprite))
+		public void CUSTOMDISPLAY(string incomingTitle = "", string incomingSubTitle = "", Sprite incomingSprite = null, float holdTime = 0f, AudioClip audioClip = null, bool isAvatarLevel = false, Sprite sprite_A = null, Sprite sprite_B = null, Sprite sprite_C = null, Sprite sprite_D = null)
 		{
 		}
 
@@ -135,24 +232,21 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CFXChange_003Ed__50))]
 		private IEnumerator FXChange()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CFollow_003Ed__51))]
 		private IEnumerator Follow()
 		{
 			return null;
 		}
 
-		protected Vector3 SmoothDamp2(Vector3 target, Vector3 lastTarget, Vector3 gimbaledVelocity, Vector3 gimbalAccel, Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset, float smoothTime = 0.1f)
+		protected Vector3 SmoothDamp2(Vector3 target, ref Vector3 lastTarget, ref Vector3 gimbaledVelocity, ref Vector3 gimbalAccel, ref Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset, float smoothTime = 0.1f)
 		{
 			return default(Vector3);
-		}
-
-		public HeadTitles()
-			: base()
-		{
 		}
 	}
 }

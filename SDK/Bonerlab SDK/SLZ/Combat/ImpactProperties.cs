@@ -14,6 +14,82 @@ namespace SLZ.Combat
 {
 	public class ImpactProperties : ImpactPropertiesVariables, IAttackReceiver, IEventSystemHandler
 	{
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CRecieveAttackAsync_003Ed__14 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ImpactProperties _003C_003E4__this;
+
+			public Attack attack;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnImpactAsync_003Ed__15 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ImpactProperties _003C_003E4__this;
+
+			public Attack attack;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSpawnDecalAsync_003Ed__16 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public ImpactProperties _003C_003E4__this;
+
+			public Attack attack;
+
+			public Quaternion rot;
+
+			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+		*/
+
 		private static ComponentCache<ImpactProperties> _cache;
 
 		[Header("References")]
@@ -35,13 +111,7 @@ namespace SLZ.Combat
 
 		private bool _isDestroyed;
 
-		public static ComponentCache<ImpactProperties> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static ComponentCache<ImpactProperties> Cache => null;
 
 		private void Awake()
 		{
@@ -63,16 +133,19 @@ namespace SLZ.Combat
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CRecieveAttackAsync_003Ed__14))]
 		public UniTaskVoid RecieveAttackAsync(Attack attack)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnImpactAsync_003Ed__15))]
 		private UniTaskVoid SpawnImpactAsync(Attack attack)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSpawnDecalAsync_003Ed__16))]
 		private UniTaskVoid SpawnDecalAsync(Attack attack, Quaternion rot)
 		{
 			return default(UniTaskVoid);
@@ -106,12 +179,7 @@ namespace SLZ.Combat
 
 		public float GetMegaPascals()
 		{
-			return default(float);
-		}
-
-		public ImpactProperties()
-			: base()
-		{
+			return 0f;
 		}
 	}
 }

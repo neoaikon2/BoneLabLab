@@ -9,6 +9,58 @@ namespace SLZ.Bonelab.Obsolete
 {
 	public class LightControlPowerable : Powerable
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CFlickerLight_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public LightControlPowerable _003C_003E4__this;
+
+			private float _003CblinkRange_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CFlickerLight_003Ed__24(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		[Header("VOLTAGE")]
 		public bool isBinary;
 
@@ -83,6 +135,7 @@ namespace SLZ.Bonelab.Obsolete
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CFlickerLight_003Ed__24))]
 		private IEnumerator FlickerLight()
 		{
 			return null;
@@ -99,11 +152,6 @@ namespace SLZ.Bonelab.Obsolete
 		private Color LerpColor(float voltage, Color a, Color b)
 		{
 			return default(Color);
-		}
-
-		public LightControlPowerable()
-			: base()
-		{
 		}
 	}
 }

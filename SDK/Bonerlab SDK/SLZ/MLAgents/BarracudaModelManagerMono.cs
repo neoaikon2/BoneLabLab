@@ -10,6 +10,59 @@ namespace SLZ.MLAgents
 {
 	public class BarracudaModelManagerMono : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CRun_003Ed__45 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public BarracudaModelManagerMono _003C_003E4__this;
+
+			private int _003Ccounter_003E5__2;
+
+			private int _003Csim_update_counter_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CRun_003Ed__45(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[Header("Model/Inference Pipeline Specific")]
 		[Tooltip("The neural network to do inference with")]
 		public NNModel srcModel;
@@ -143,6 +196,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CRun_003Ed__45))]
 		public IEnumerator Run()
 		{
 			return null;
@@ -189,11 +243,6 @@ namespace SLZ.MLAgents
 		}
 
 		private void PlaceAgents()
-		{
-		}
-
-		public BarracudaModelManagerMono()
-			: base()
 		{
 		}
 	}

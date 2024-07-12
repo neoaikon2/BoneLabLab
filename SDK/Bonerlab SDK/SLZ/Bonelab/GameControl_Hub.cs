@@ -23,6 +23,401 @@ namespace SLZ.Bonelab
 {
 	public class GameControl_Hub : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CBWBoxSequence_003Ed__156 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			private float _003CbarInterval_003E5__2;
+
+			private int _003Ci_003E5__3;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CBWBoxSequence_003Ed__156(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CKlaxonLight_003Ed__157 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			private float _003CorginalIntensity_003E5__2;
+
+			private float _003CsmoothTime_003E5__3;
+
+			private float _003CvelRef_003E5__4;
+
+			private float _003CalarmTime_003E5__5;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CKlaxonLight_003Ed__157(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CBackUpYoinkLoad_003Ed__161 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CBackUpYoinkLoad_003Ed__161(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CGeneratorStartSequence_003Ed__165 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CGeneratorStartSequence_003Ed__165(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CAirlockEnter_003Ed__176 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			public int side;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CAirlockExitCycle_003Ed__177 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003COpenSmallDoor_003Ed__178 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			public CancellationToken cancelToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CCloseSmallDoor_003Ed__179 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			public CancellationToken cancelToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003COpenBigDoors_003Ed__180 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			public CancellationToken cancelToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CCloseBigDoors_003Ed__181 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			public CancellationToken cancelToken;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CBlinkAirLockCycleLight_003Ed__182 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CBlinkAirLockCycleLight_003Ed__182(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		public const string OneTrueLevelKey = "Hub";
 
 		public const string LevelKeyA = "Hub_A";
@@ -297,37 +692,13 @@ namespace SLZ.Bonelab
 
 		private AvatarCrateReference[] avatarCrates;
 
-		public static string LevelKey
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static string LevelKey => null;
 
-		public static string[] PriorLevels
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public static string[] PriorLevels => null;
 
-		private static PlayerProgression p
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerProgression p => null;
 
-		private static PlayerUnlocks u
-		{
-			get
-			{
-				return null;
-			}
-		}
+		private static PlayerUnlocks u => null;
 
 		private void Awake()
 		{
@@ -393,11 +764,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CBWBoxSequence_003Ed__156))]
 		public IEnumerator BWBoxSequence()
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CKlaxonLight_003Ed__157))]
 		public IEnumerator KlaxonLight()
 		{
 			return null;
@@ -415,6 +788,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CBackUpYoinkLoad_003Ed__161))]
 		private IEnumerator BackUpYoinkLoad()
 		{
 			return null;
@@ -432,6 +806,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CGeneratorStartSequence_003Ed__165))]
 		private IEnumerator GeneratorStartSequence()
 		{
 			return null;
@@ -455,7 +830,7 @@ namespace SLZ.Bonelab
 
 		private int CountKeys()
 		{
-			return default(int);
+			return 0;
 		}
 
 		public void AIRLOCKENTERNORTH()
@@ -478,36 +853,43 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CAirlockEnter_003Ed__176))]
 		private UniTaskVoid AirlockEnter(int side)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CAirlockExitCycle_003Ed__177))]
 		private UniTaskVoid AirlockExitCycle()
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003COpenSmallDoor_003Ed__178))]
 		private UniTask OpenSmallDoor(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
+		//[AsyncStateMachine(typeof(_003CCloseSmallDoor_003Ed__179))]
 		private UniTask CloseSmallDoor(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
+		//[AsyncStateMachine(typeof(_003COpenBigDoors_003Ed__180))]
 		private UniTask OpenBigDoors(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
+		//[AsyncStateMachine(typeof(_003CCloseBigDoors_003Ed__181))]
 		private UniTask CloseBigDoors(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
+		//[IteratorStateMachine(typeof(_003CBlinkAirLockCycleLight_003Ed__182))]
 		private IEnumerator BlinkAirLockCycleLight()
 		{
 			return null;
@@ -518,11 +900,6 @@ namespace SLZ.Bonelab
 		}
 
 		private static void UpgradeHubInventoryToPush()
-		{
-		}
-
-		public GameControl_Hub()
-			: base()
 		{
 		}
 	}

@@ -54,7 +54,163 @@ namespace SLZ.Bonelab
 			Stay = 1,
 			Hide = 2
 		}
+		/*
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CFlickerDeathAsync_003Ed__48 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
 
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public BehaviourOmniwheel _003C_003E4__this;
+
+			public float duration;
+
+			private float _003Ctime_003E5__2;
+
+			private CancellationToken _003CdestroyToken_003E5__3;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003CSelfDespawnAsync_003Ed__49 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+
+			public BehaviourOmniwheel _003C_003E4__this;
+
+			public float duration;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+			[DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoFlicker_003Ed__53 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public BehaviourOmniwheel _003C_003E4__this;
+
+			private float _003Ctime_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoFlicker_003Ed__53(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+
+		[CompilerGenerated]
+		private sealed class _003CCoFlickerSin_003Ed__54 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public float duration;
+
+			public BehaviourOmniwheel _003C_003E4__this;
+
+			private float _003Ctime_003E5__2;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CCoFlickerSin_003Ed__54(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
 		[Header("Omni Settings")]
 		public float scaleFactor;
 
@@ -298,11 +454,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[AsyncStateMachine(typeof(_003CFlickerDeathAsync_003Ed__48))]
 		private UniTaskVoid FlickerDeathAsync(float duration)
 		{
 			return default(UniTaskVoid);
 		}
 
+		//[AsyncStateMachine(typeof(_003CSelfDespawnAsync_003Ed__49))]
 		private UniTaskVoid SelfDespawnAsync(float duration)
 		{
 			return default(UniTaskVoid);
@@ -320,11 +478,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoFlicker_003Ed__53))]
 		private IEnumerator CoFlicker(float duration)
 		{
 			return null;
 		}
 
+		//[IteratorStateMachine(typeof(_003CCoFlickerSin_003Ed__54))]
 		private IEnumerator CoFlickerSin(float duration)
 		{
 			return null;
@@ -383,11 +543,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void SwitchEngagedState()
-		{
-		}
-
-		public BehaviourOmniwheel()
-			: base()
 		{
 		}
 	}

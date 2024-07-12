@@ -4,15 +4,63 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Combat;
-using SLZ.Marrow.Combat;
 using SLZ.SFX;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace SLZ.Interaction
 {
 	public class PowerPuncher : MonoBehaviour
 	{
+		/*
+		[CompilerGenerated]
+		private sealed class _003CPopAnim_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
+		{
+			private int _003C_003E1__state;
+
+			private object _003C_003E2__current;
+
+			public PowerPuncher _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			private object System_002ECollections_002EIEnumerator_002ECurrent
+			{
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
+			}
+
+			[DebuggerHidden]
+			public _003CPopAnim_003Ed__24(int _003C_003E1__state)
+			{
+			}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+		}
+		*/
+
 		public GravGunSFX sfx;
 
 		public Grip triggerGrip;
@@ -78,6 +126,7 @@ namespace SLZ.Interaction
 		{
 		}
 
+		//[IteratorStateMachine(typeof(_003CPopAnim_003Ed__24))]
 		private IEnumerator PopAnim()
 		{
 			return null;
@@ -92,11 +141,6 @@ namespace SLZ.Interaction
 		}
 
 		public void OnSignificantCollisionEnter(CollisionCollector.RelevantCollision collision)
-		{
-		}
-
-		public PowerPuncher()
-			: base()
 		{
 		}
 	}
