@@ -1,63 +1,61 @@
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using System.Text;
+using System.Runtime.InteropServices;
+using SLZ.Algorithms.Unity;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
-	public abstract class BaseNode : MonoBehaviour, InputDescribable
+	public abstract class BaseNode : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicSource
 	{
 		[Tooltip("Previous node(s) in the chain")]
 		[SerializeField]
-		protected List<BaseNode> _previous;
+		[Interface(typeof(IVoidLogicSource), false)]
+		protected internal MonoBehaviour[] _previous;
 
-		protected float _cachedValue;
+		public VoidLogicSubgraph Subgraph { get; set; }
 
-		public List<BaseNode> PreviousNodes
+		public abstract PortMetadata PortMetadata { get; }
+
+		public int InputCount
 		{
 			get
 			{
-				return null;
+				return default(int);
 			}
 		}
 
-		protected bool IsCachedInternal { get; private set; }
-
-		public bool IsCached
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
-
-		public float OutputValue
-		{
-			get
-			{
-				return default(float);
-			}
-		}
-
-		public void Uncache()
+		protected virtual void Awake()
 		{
 		}
 
-		public void ConnectPrevious(BaseNode node)
+		protected virtual void OnEnable()
 		{
 		}
 
-		public void DisconnectPrevious(BaseNode node)
+		protected virtual void OnDisable()
 		{
 		}
 
-		public abstract IReadOnlyList<InputDescription> DescribeInputs();
-
-		public virtual void AppendNodeInfo(StringBuilder sb)
+		protected virtual void OnDestroy()
 		{
 		}
 
-		protected abstract float CalculateValue();
+		protected static bool EqualWithTolerance(float term1, float term2, float tolerance)
+		{
+			return default(bool);
+		}
+
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
+		{
+			return default(bool);
+		}
+
+		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
+		{
+			return default(bool);
+		}
+
+		public abstract void Calculate(NodeState nodeState);
 
 		public BaseNode()
 			: base()

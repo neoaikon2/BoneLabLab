@@ -1,6 +1,6 @@
+using SLZ.Bonelab.Obsolete;
 using SLZ.SFX;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Bonelab
 {
@@ -14,9 +14,6 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private Rigidbody _spinnerRb;
-
-		[SerializeField]
-		private AudioMixerGroup _outputMixer;
 
 		[SerializeField]
 		private Transform _pressureGauge;
@@ -44,6 +41,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void UpdateGauge()
+		{
+		}
+
+		public CoreCannonBrain()
+			: base()
 		{
 		}
 	}

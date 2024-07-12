@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.CompilerServices;
+using Cysharp.Threading.Tasks;
 using SLZ.Marrow.Plugins;
 
 namespace SLZ.Marrow.Console
@@ -24,16 +25,19 @@ namespace SLZ.Marrow.Console
 		{
 		}
 
-		public void OnMarrowPluginLoad()
+		public UniTask OnMarrowPluginLoad()
 		{
+			return default(UniTask);
 		}
 
-		public void OnMarrowPluginStart()
+		public UniTask OnMarrowPluginStart()
 		{
+			return default(UniTask);
 		}
 
-		public void OnMarrowPluginStop()
+		public UniTask OnMarrowPluginStop()
 		{
+			return default(UniTask);
 		}
 
 		private void CurrentDomain_AssemblyLoad(object sender, AssemblyLoadEventArgs args)

@@ -1,22 +1,24 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/XorNode")]
+	[Support(SupportFlags.Supported, null)]
 	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Xor")]
 	public class XorNode : BaseNode
 	{
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		protected override float CalculateValue()
+		public override PortMetadata PortMetadata
 		{
-			return default(float);
+			get
+			{
+				return default(PortMetadata);
+			}
 		}
 
-		public override IReadOnlyList<InputDescription> DescribeInputs()
+		public override void Calculate(NodeState nodeState)
 		{
-			return null;
 		}
 
 		public XorNode()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -8,40 +9,31 @@ namespace SLZ.Interaction
 	{
 		[Tooltip("Friction while hand is moving")]
 		[Header("Cylinder Options")]
-		public float dynamicFriction = 0.6f;
+		public float dynamicFriction;
 
 		[Tooltip("Friction while hand is static")]
-		public float staticFriction = 0.7f;
+		public float staticFriction;
 
 		[Tooltip("Meters plus and minus")]
-		public float limit = .25f;
+		public float limit;
 
-		public bool hasCapA = true;
+		public bool hasCapA;
 
-		public bool hasCapB = true;
+		public bool hasCapB;
 
 		public bool ignoreFlipOnZ;
 
-		public float rotationalFrictionMult = 1.0f;
+		public float rotationalFrictionMult;
 
 		[Tooltip("Once grabbed, aspect ratio (X:1) defines how much object wants to stay in sweetspot due to oval shape")]
-		public float aspectRatio = 1.0f;
+		public float aspectRatio;
 
-		public bool variableRadius = false;
+		public bool variableRadius;
 
 		[Tooltip("Used to vary radius across a cylinder grab (Example: Baseball Bat). Defaults to 1 for no effect")]
-		public AnimationCurve RadiusCurve = new AnimationCurve(
-			new Keyframe[] {
-				new Keyframe(-180, -30),
-				new Keyframe(-50, -30),
-				new Keyframe(0, 0),
-				new Keyframe(50, 30),
-				new Keyframe(180, 30),
-			});
+		public AnimationCurve RadiusCurve;
 
 		private float handWidth;
-
-		private float _handPaddingOffset;
 
 		private readonly HashSet<Hand> _isJointPositionFree;
 
@@ -57,7 +49,7 @@ namespace SLZ.Interaction
 
 		public override float GetTwistLimit(Hand hand)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public SimpleTransform SolveStaticFriction(Hand hand)
@@ -65,11 +57,11 @@ namespace SLZ.Interaction
 			return default(SimpleTransform);
 		}
 
-		public void SolveOffsetBlending(Hand hand, ref float posInHas, ref float rotInHas)
+		public void SolveOffsetBlending(Hand hand, float posInHas, float rotInHas)
 		{
 		}
 
-		private void ClampToTargetLimits(Hand hand, Quaternion toHas, ref float posInHas, ref float rotInHas)
+		private void ClampToTargetLimits(Hand hand, Quaternion toHas, float posInHas, float rotInHas)
 		{
 		}
 
@@ -85,7 +77,7 @@ namespace SLZ.Interaction
 
 		public bool IsJointFree(Hand hand)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void OnHandHoverUpdate(Hand hand)
@@ -99,7 +91,7 @@ namespace SLZ.Interaction
 
 		public override bool OnHandHoverUpdate(Hand hand, bool isOverride)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void LockJoint(Hand hand)
@@ -135,13 +127,13 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override void CheckHandPriority(ref HandGripPair primary, ref HandGripPair secondary)
+		public override void CheckHandPriority(HandGripPair primary, HandGripPair secondary)
 		{
 		}
 
 		public bool IsHandYieldInVc(Hand hand)
 		{
-			return false;
+			return default(bool);
 		}
 
 		protected override void SetupConfiguration(HandJointConfiguration config)
@@ -168,9 +160,9 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		private Vector3 GetPointOnPerimeter(float radius, float theta, float limit, float perc)
@@ -187,6 +179,11 @@ namespace SLZ.Interaction
 		}
 
 		private void OnDrawGizmosSelected()
+		{
+		}
+
+		public CylinderGrip()
+			: base()
 		{
 		}
 	}

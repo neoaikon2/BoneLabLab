@@ -1,4 +1,3 @@
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,8 +5,6 @@ namespace SLZ.Interaction
 {
 	public class InventoryHandReceiver : MonoBehaviour
 	{
-		private static ComponentCache<InventoryHandReceiver> _cache;
-
 		public UnityEvent OnHover;
 
 		public UnityEvent OnHoverBegin;
@@ -17,16 +14,6 @@ namespace SLZ.Interaction
 		public UnityEvent OnDrop;
 
 		public UnityEvent OnGrab;
-
-		public static ComponentCache<InventoryHandReceiver> Cache => null;
-
-		protected virtual void Awake()
-		{
-		}
-
-		protected virtual void OnDestroy()
-		{
-		}
 
 		public virtual void OnHandDrop(IGrippable host)
 		{
@@ -50,7 +37,12 @@ namespace SLZ.Interaction
 
 		public virtual float Validate(Hand hand)
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public InventoryHandReceiver()
+			: base()
+		{
 		}
 	}
 }

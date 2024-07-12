@@ -1,6 +1,6 @@
 using System;
-using RealisticEyeMovements;
 using RootMotion.FinalIK;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -111,8 +111,6 @@ namespace PuppetMasta
 
 		private Quaternion _spineTopNeutral;
 
-		private EyeAndHeadAnimator _eyeAndHead;
-
 		public void Initiate(BehaviourBase b)
 		{
 		}
@@ -150,6 +148,11 @@ namespace PuppetMasta
 		}
 
 		public void SetArmIkRotation(Quaternion ikRotation, bool isRight = false)
+		{
+		}
+
+		public SubBehaviourIk()
+			: base()
 		{
 		}
 	}

@@ -16,11 +16,6 @@ namespace Oculus.Platform.Models
 		[Obsolete("Deprecated in favor of LeaderOptional")]
 		public readonly User Leader;
 
-		public readonly Room RoomOptional;
-
-		[Obsolete("Deprecated in favor of RoomOptional")]
-		public readonly Room Room;
-
 		public readonly UserList UsersOptional;
 
 		[Obsolete("Deprecated in favor of UsersOptional")]

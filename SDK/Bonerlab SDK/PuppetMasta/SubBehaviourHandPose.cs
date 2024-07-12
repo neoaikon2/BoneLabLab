@@ -1,5 +1,6 @@
 using System;
-using SLZ.Data;
+using SLZ.Marrow.Data;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
@@ -97,7 +98,7 @@ namespace PuppetMasta
 		{
 		}
 
-		private void CopyPoseData(HandPoseData data, ref LocalPoseData destination)
+		private void CopyPoseData(HandPoseData data, LocalPoseData destination)
 		{
 		}
 
@@ -117,15 +118,20 @@ namespace PuppetMasta
 		{
 		}
 
-		private void LerpPose(LocalPoseData from, LocalPoseData to, ref LocalPoseData saveTo, float t)
+		private void LerpPose(LocalPoseData from, LocalPoseData to, LocalPoseData saveTo, float t)
 		{
 		}
 
-		private void PoseFingerCurl(HandPoseData open, HandPoseData closed, ref LocalPoseData saveTo, float thumbT, float indexT, float middleT, float ringT, float pinkyT)
+		private void PoseFingerCurl(HandPoseData open, HandPoseData closed, LocalPoseData saveTo, float thumbT, float indexT, float middleT, float ringT, float pinkyT)
 		{
 		}
 
 		private void ApplyPoseToTransforms(LocalPoseData pose, Transform[] trans)
+		{
+		}
+
+		public SubBehaviourHandPose()
+			: base()
 		{
 		}
 	}

@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SLZ.Props;
+using SLZ.VFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -16,23 +16,23 @@ namespace SLZ.Bonelab
 		private int costModMult;
 
 		[SerializeField]
-		private ObjectDestructable defaultDestObj;
+		private ObjectDestructible defaultDestObj;
 
-		[SerializeField]
 		[Header("LinkTrigger")]
+		[SerializeField]
 		private bool isLink;
 
 		[SerializeField]
 		private LinkData[] linkDatas;
 
-		[Header("NavMeshAreaTrigger")]
 		[SerializeField]
+		[Header("NavMeshAreaTrigger")]
 		private Arena_GameController gameController;
 
 		[SerializeField]
 		private string areaName;
 
-		private HashSet<ObjectDestructable> destHash;
+		private HashSet<ObjectDestructible> destHash;
 
 		private void OnEnable()
 		{
@@ -42,7 +42,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnDestruction(ObjectDestructable dest)
+		private void OnDestruction(ObjectDestructible dest)
 		{
 		}
 
@@ -51,6 +51,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void ToggleAreaOrLink()
+		{
+		}
+
+		public NavDestTrigger()
+			: base()
 		{
 		}
 	}

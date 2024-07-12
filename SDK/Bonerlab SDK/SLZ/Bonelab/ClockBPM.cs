@@ -10,54 +10,6 @@ namespace SLZ.Bonelab
 {
 	public class ClockBPM : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CCountClock_003Ed__26
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public ClockBPM _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCountClock_003Ed__26(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[Header("SETTINGS")]
 		public bool playOnStart;
 
@@ -120,7 +72,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCountClock_003Ed__26))]
 		private IEnumerator CountClock()
 		{
 			return null;
@@ -135,6 +86,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void CLOCK_RESET(bool play = false)
+		{
+		}
+
+		public ClockBPM()
+			: base()
 		{
 		}
 	}

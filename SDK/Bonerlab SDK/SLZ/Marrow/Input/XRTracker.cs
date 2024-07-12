@@ -6,6 +6,16 @@ namespace SLZ.Marrow.Input
 	{
 		public readonly string name;
 
+		private bool _isTracking;
+
+		public override bool IsTracking
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
+
 		public XRTracker(string name)
 			: base()
 		{

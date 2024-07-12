@@ -1,30 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Marrow.Interaction
 {
-	public class MarrowJoint : MarrowBehaviour
+	[Serializable]
+	public class MarrowJoint : MonoBehaviour
 	{
-		private static ComponentCache<MarrowJoint> _cache;
+		[SerializeField]
+		private MarrowBody _bodyA;
+
+		[SerializeField]
+		private MarrowBody _bodyB;
 
 		[SerializeField]
 		private ConfigurableJoint _configurableJoint;
 
 		[SerializeField]
-		private MarrowBody _connectedMarrowBody;
+		private MarrowEntity _entity;
 
 		[SerializeField]
-		private ConfigurableJointInfo _configurableJointSettings;
+		[ReadOnly(false)]
+		private ConfigurableJointInfo _defaultConfigJointInfo;
 
-		[SerializeField]
-		private MarrowEntity _parent;
+		private SimpleTransform _jointSpace;
 
-		private readonly ConfigurableJointInfo _cjFreezeInfo;
+		private readonly ConfigurableJointInfo _cjTempInfo;
 
-		public static ComponentCache<MarrowJoint> Cache
+		private bool _doResetConnectedAnchor;
+
+		private bool _hasBeenEnabled;
+
+		private DisabledJointInfo _disableJointInfo;
+
+		private List<Action<MarrowJoint>> _jointBreakActions;
+
+		public MarrowBody BodyA
 		{
 			get
 			{
@@ -32,13 +50,65 @@ namespace SLZ.Marrow.Interaction
 			}
 		}
 
-		public bool HasConfigJoint { get; private set; }
+		public MarrowBody BodyB
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public void ResetConfig()
+		public bool SwapBodies
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
+
+		public bool ConfiguredInWorld
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
+
+		public Quaternion StartRotation { get; private set; }
+
+		public Quaternion ToJointSpace { get; private set; }
+
+		public Quaternion ToJointSpaceInv { get; private set; }
+
+		public Quaternion ToJointSpaceFromDefault { get; private set; }
+
+		public bool IsCreatedAtRuntime { get; private set; }
+
+		public bool HasConfigJoint
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
+
+		public JointDrive xDriveBase { get; set; }
+
+		public JointDrive yDriveBase { get; set; }
+
+		public JointDrive zDriveBase { get; set; }
+
+		public JointDrive angularXDriveBase { get; set; }
+
+		public JointDrive angularYZDriveBase { get; set; }
+
+		public JointDrive slerpDriveBase { get; set; }
+
+		private void Awake()
 		{
 		}
 
-		private void Awake()
+		public void CreateJoint(ConfigurableJointInfo configJointInfo, MarrowBody bodyA, MarrowBody bodyB)
 		{
 		}
 
@@ -46,16 +116,139 @@ namespace SLZ.Marrow.Interaction
 		{
 		}
 
+		public void Destroy()
+		{
+		}
+
+		private void OnJointBreak(float breakForce)
+		{
+		}
+
+		private UniTaskVoid JointCleanupCheckAsync()
+		{
+			return default(UniTaskVoid);
+		}
+
 		public bool TryGetConfigurableJoint([Out] ConfigurableJoint joint)
 		{
 			return default(bool);
 		}
 
-		public void DestroyConfigurableJoint()
+		internal void SetFromDefaultConfig()
 		{
 		}
 
-		public void CreateConfigurableJoint()
+		public void SetToDefaultConfig()
+		{
+		}
+
+		private void Build(ConfigurableJointInfo info)
+		{
+		}
+
+		private void ReadJointSpace()
+		{
+		}
+
+		private void WriteJointSpace()
+		{
+		}
+
+		private void RestoreStartRotation()
+		{
+		}
+
+		internal void OnBodyEnable()
+		{
+		}
+
+		internal void OnBodyDisable()
+		{
+		}
+
+		public void RegisterOnBreakEvent(Action<MarrowJoint> jointBreakAction)
+		{
+		}
+
+		public void UnregisterOnBreakEvent(Action<MarrowJoint> jointBreakAction)
+		{
+		}
+
+		public void SetXDrive(float springMult, float damperMult, float maxForceMult)
+		{
+		}
+
+		public void SetYDrive(float springMult, float damperMult, float maxForceMult)
+		{
+		}
+
+		public void SetZDrive(float springMult, float damperMult, float maxForceMult)
+		{
+		}
+
+		public void SetAngularXDrive(float springMult, float damperMult, float maxForceMult)
+		{
+		}
+
+		public void SetAngularYZDrive(float springMult, float damperMult, float maxForceMult)
+		{
+		}
+
+		public void SetSlerpDrive(float springMult, float damperMult, float maxForceMult)
+		{
+		}
+
+		public void SetXDriveBase(float spring, float damper, float maxForce)
+		{
+		}
+
+		public void SetYDriveBase(float spring, float damper, float maxForce)
+		{
+		}
+
+		public void SetZDriveBase(float spring, float damper, float maxForce)
+		{
+		}
+
+		public void SetAngularXDriveBase(float spring, float damper, float maxForce)
+		{
+		}
+
+		public void SetAngularYZDriveBase(float spring, float damper, float maxForce)
+		{
+		}
+
+		public void SetSlerpDriveBase(float spring, float damper, float maxForce)
+		{
+		}
+
+		private JointDrive ComputeJointDrive(JointDrive driveBase, float springMult, float damperMult, float maxForceMult)
+		{
+			return default(JointDrive);
+		}
+
+		public void FreeAllConstraints()
+		{
+		}
+
+		public JointDrive SetJointDrive(float spring, float damper, float maxForce)
+		{
+			return default(JointDrive);
+		}
+
+		public void SetJointLimitsAll(float linearLimit, Vector4 angularLimits)
+		{
+		}
+
+		private void Validate(ConfigurableJoint cj, MarrowEntity entity)
+		{
+		}
+
+		private void CopyJointInfo(ConfigurableJoint cj)
+		{
+		}
+
+		public void SetEntity(MarrowEntity marrowEntity)
 		{
 		}
 

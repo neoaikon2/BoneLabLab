@@ -25,11 +25,20 @@ namespace RootMotion.FinalIK
 
 		private IKSolver[] _ikSolvers;
 
-		public IKSolverLimb[] limbs => null;
-
-		public IKSolver[] ikSolvers => null;
+		public IKSolverLimb[] limbs
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public void AssignReferences(BipedReferences references)
+		{
+		}
+
+		public BipedIKSolvers()
+			: base()
 		{
 		}
 	}

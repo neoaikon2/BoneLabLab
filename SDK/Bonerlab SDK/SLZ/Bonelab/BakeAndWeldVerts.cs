@@ -20,6 +20,11 @@ namespace SLZ.Bonelab
 			public void CalcAverageNorm(Vector3[] vNs, float AngleThreshold)
 			{
 			}
+
+			public Cluster()
+				: base()
+			{
+			}
 		}
 
 		public float DistanceThreshold;
@@ -28,6 +33,11 @@ namespace SLZ.Bonelab
 
 		[ContextMenu("Bake And Weld Verts")]
 		private void DoBakeAndWeldVerts()
+		{
+		}
+
+		public BakeAndWeldVerts()
+			: base()
 		{
 		}
 	}

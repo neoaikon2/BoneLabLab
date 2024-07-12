@@ -41,7 +41,7 @@ namespace Dynamite3D.RealIvy
 		{
 		}
 
-		private void BuildLeaves(int b, ref int vertCount)
+		private void BuildLeaves(int b, int vertCount)
 		{
 		}
 
@@ -56,15 +56,20 @@ namespace Dynamite3D.RealIvy
 
 		private float CalculateRadius(float lenght, float totalLenght)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float GetTipInfluence(float lenght, float totalLenght)
 		{
-			return 0f;
+			return default(float);
 		}
 
-		private void TriangulateBranch(int b, ref int triCount, int vertCount, int lastVertCount)
+		private void TriangulateBranch(int b, int triCount, int vertCount, int lastVertCount)
+		{
+		}
+
+		public EditorMeshBuilder()
+			: base()
 		{
 		}
 	}

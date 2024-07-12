@@ -19,5 +19,10 @@ namespace SLZ.Bonelab
 		public void BatteryPlaced()
 		{
 		}
+
+		public trackBatteries()
+			: base()
+		{
+		}
 	}
 }

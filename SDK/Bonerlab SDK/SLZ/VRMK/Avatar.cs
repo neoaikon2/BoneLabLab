@@ -156,6 +156,53 @@ namespace SLZ.VRMK
 		}
 
 		[Serializable]
+		public class PoseOffsets
+		{
+			public SimpleTransform pelvisOffset;
+
+			public SimpleTransform spineOffset;
+
+			public SimpleTransform chestOffset;
+
+			public SimpleTransform neckOffset;
+
+			public SimpleTransform headOffest;
+
+			public SimpleTransform shoulderLfOffset;
+
+			public SimpleTransform armUpperLfOffset;
+
+			public SimpleTransform armLowerLfOffset;
+
+			public SimpleTransform handLfOffset;
+
+			public SimpleTransform shoulderRtOffset;
+
+			public SimpleTransform armUpperRtOffset;
+
+			public SimpleTransform armLowerRtOffset;
+
+			public SimpleTransform handRtOffset;
+
+			public SimpleTransform legUpperLfOffset;
+
+			public SimpleTransform legLowerLfOffset;
+
+			public SimpleTransform footLfOffset;
+
+			public SimpleTransform legUpperRtOffset;
+
+			public SimpleTransform legLowerRtOffset;
+
+			public SimpleTransform footRtOffset;
+
+			public PoseOffsets()
+				: base()
+			{
+			}
+		}
+
+		[Serializable]
 		public struct HandSchematic
 		{
 			public Vector3 thumb1;
@@ -221,6 +268,125 @@ namespace SLZ.VRMK
 				this.middle1 = default(Vector3);
 				this.index1 = default(Vector3);
 				this.thumb1 = default(Vector3);
+			}
+		}
+
+		[Serializable]
+		public class ArtTransforms
+		{
+			public Transform hips;
+
+			public Transform spine;
+
+			public Transform chest;
+
+			public Transform upperChest;
+
+			public Transform neck;
+
+			public Transform head;
+
+			public Transform jaw;
+
+			public Transform leftEye;
+
+			public Transform rightEye;
+
+			public Transform leftShoulder;
+
+			public Transform leftUpperArm;
+
+			public Transform leftLowerArm;
+
+			public Transform leftHand;
+
+			public Transform rightShoulder;
+
+			public Transform rightUpperArm;
+
+			public Transform rightLowerArm;
+
+			public Transform rightHand;
+
+			public Transform leftUpperLeg;
+
+			public Transform leftLowerLeg;
+
+			public Transform leftFoot;
+
+			public Transform leftToes;
+
+			public Transform rightUpperLeg;
+
+			public Transform rightLowerLeg;
+
+			public Transform rightFoot;
+
+			public Transform rightToes;
+
+			public Transform leftThumbProximal;
+
+			public Transform leftThumbIntermediate;
+
+			public Transform leftThumbDistal;
+
+			public Transform leftIndexProximal;
+
+			public Transform leftIndexIntermediate;
+
+			public Transform leftIndexDistal;
+
+			public Transform leftMiddleProximal;
+
+			public Transform leftMiddleIntermediate;
+
+			public Transform leftMiddleDistal;
+
+			public Transform leftRingProximal;
+
+			public Transform leftRingIntermediate;
+
+			public Transform leftRingDistal;
+
+			public Transform leftLittleProximal;
+
+			public Transform leftLittleIntermediate;
+
+			public Transform leftLittleDistal;
+
+			public Transform rightThumbProximal;
+
+			public Transform rightThumbIntermediate;
+
+			public Transform rightThumbDistal;
+
+			public Transform rightIndexProximal;
+
+			public Transform rightIndexIntermediate;
+
+			public Transform rightIndexDistal;
+
+			public Transform rightMiddleProximal;
+
+			public Transform rightMiddleIntermediate;
+
+			public Transform rightMiddleDistal;
+
+			public Transform rightRingProximal;
+
+			public Transform rightRingIntermediate;
+
+			public Transform rightRingDistal;
+
+			public Transform rightLittleProximal;
+
+			public Transform rightLittleIntermediate;
+
+			public Transform rightLittleDistal;
+
+			public ArtTransforms()
+				: base()
+			{
 			}
 		}
 
@@ -366,8 +532,6 @@ namespace SLZ.VRMK
 			}
 		}
 
-		private static ComponentCache<Avatar> _cache;
-
 		public Animator animator;
 
 		[HideInInspector]
@@ -414,13 +578,13 @@ namespace SLZ.VRMK
 
 		public Transform twistUpperThighRt;
 
-		[Tooltip("Crown of head Y from EyeHeight / eyeHeight. Default is .068")]
 		[SerializeField]
 		[Range(0.02f, 0.2f)]
+		[Tooltip("Crown of head Y from EyeHeight / eyeHeight. Default is .068")]
 		private float _headTop;
 
-		[SerializeField]
 		[Range(0.02f, 0.2f)]
+		[SerializeField]
 		private float _chinY;
 
 		[Range(0.3f, 0.4f)]
@@ -431,23 +595,23 @@ namespace SLZ.VRMK
 		[SerializeField]
 		protected float _waistY;
 
-		[Range(0.75f, 0.85f)]
 		[SerializeField]
+		[Range(0.75f, 0.85f)]
 		protected float _highHipY;
 
-		[Tooltip("Bottom of crotch from hipCenter / eyeHeight. Default is .04")]
-		[Range(0.02f, 0.2f)]
 		[SerializeField]
+		[Range(0.02f, 0.2f)]
+		[Tooltip("Bottom of crotch from hipCenter / eyeHeight. Default is .04")]
 		private float _crotchBottom;
 
-		[SerializeField]
-		[Range(0.02f, 0.2f)]
 		[Tooltip("Forehead Width on X / AvatarHeight. Default is .044")]
+		[Range(0.02f, 0.2f)]
+		[SerializeField]
 		private float _headEllipseX;
 
-		[SerializeField]
-		[Range(0.02f, 0.2f)]
 		[Tooltip("Jaw Width on X / AvatarHeight. Default is .044")]
+		[Range(0.02f, 0.2f)]
+		[SerializeField]
 		private float _jawEllipseX;
 
 		[Tooltip("Neck Width on X / AvatarHeight. Default is .04")]
@@ -460,48 +624,48 @@ namespace SLZ.VRMK
 		[SerializeField]
 		private float _chestEllipseX;
 
-		[Range(0.04f, 0.24f)]
 		[Tooltip("Waist Width on X / AvatarHeight. Default is .09")]
+		[Range(0.04f, 0.24f)]
 		[SerializeField]
 		private float _waistEllipseX;
 
-		[Tooltip("High Hips Width on X / AvatarHeight. Default is .09")]
 		[Range(0.04f, 0.24f)]
 		[SerializeField]
+		[Tooltip("High Hips Width on X / AvatarHeight. Default is .09")]
 		private float _highHipsEllipseX;
 
+		[Range(0.04f, 0.24f)]
 		[Tooltip("Hips Width on X / AvatarHeight. Default is .09")]
 		[SerializeField]
-		[Range(0.04f, 0.24f)]
 		private float _hipsEllipseX;
 
-		[Tooltip("Forehead Z Fwd / AvatarHeight. Default is .06")]
 		[Range(0.02f, 0.2f)]
+		[Tooltip("Forehead Z Fwd / AvatarHeight. Default is .06")]
 		[SerializeField]
 		private float _headEllipseZ;
 
+		[Range(0.02f, 0.2f)]
 		[Tooltip("Jaw Z Fwd / AvatarHeight. Default is .06")]
 		[SerializeField]
-		[Range(0.02f, 0.2f)]
 		private float _jawEllipseZ;
 
-		[SerializeField]
-		[Range(0.018f, 0.08f)]
 		[Tooltip("Neck Z / AvatarHeight. Default is .04")]
+		[Range(0.018f, 0.08f)]
+		[SerializeField]
 		private float _neckEllipseZ;
 
+		[SerializeField]
 		[Range(0.01f, 0.24f)]
 		[Tooltip("Sternum Z / AvatarHeight. Default is .068")]
-		[SerializeField]
 		private float _sternumEllipseZ;
 
 		[SerializeField]
-		[Tooltip("Chest Width on Z / AvatarHeight. Default is .068")]
 		[Range(0.01f, 0.24f)]
+		[Tooltip("Chest Width on Z / AvatarHeight. Default is .068")]
 		private float _chestEllipseZ;
 
-		[Tooltip("Waist Width on Z / AvatarHeight. Default is .068")]
 		[Range(0.01f, 0.24f)]
+		[Tooltip("Waist Width on Z / AvatarHeight. Default is .068")]
 		[SerializeField]
 		private float _waistEllipseZ;
 
@@ -515,44 +679,44 @@ namespace SLZ.VRMK
 		[SerializeField]
 		private float _hipsEllipseZ;
 
-		[Range(0.02f, 0.2f)]
 		[Tooltip("Forehead Z Neg / AvatarHeight. Default is .06")]
+		[Range(0.02f, 0.2f)]
 		[SerializeField]
 		private float _headEllipseNegZ;
 
-		[SerializeField]
-		[Range(0.02f, 0.2f)]
 		[Tooltip("Jaw Z Neg / AvatarHeight. Default is .06")]
+		[Range(0.02f, 0.2f)]
+		[SerializeField]
 		private float _jawEllipseNegZ;
 
 		[Tooltip("Neck Z / AvatarHeight. Default is .03")]
-		[SerializeField]
 		[Range(0.018f, 0.08f)]
+		[SerializeField]
 		private float _neckEllipseNegZ;
 
-		[Tooltip("Sternum Neg Z / AvatarHeight. Default is .068")]
 		[Range(0.01f, 0.22f)]
 		[SerializeField]
+		[Tooltip("Sternum Neg Z / AvatarHeight. Default is .068")]
 		private float _sternumEllipseNegZ;
 
-		[Range(0.01f, 0.22f)]
-		[SerializeField]
 		[Tooltip("Chest Width on Neg Z / AvatarHeight. Default is .068")]
+		[SerializeField]
+		[Range(0.01f, 0.22f)]
 		private float _chestEllipseNegZ;
 
-		[Tooltip("Waist Width on Neg Z / AvatarHeight. Default is .06")]
-		[Range(0.01f, 0.22f)]
 		[SerializeField]
+		[Range(0.01f, 0.22f)]
+		[Tooltip("Waist Width on Neg Z / AvatarHeight. Default is .06")]
 		private float _waistEllipseNegZ;
 
+		[Tooltip("High Hips Width on Neg Z / AvatarHeight. Default is .07")]
 		[SerializeField]
 		[Range(0.01f, 0.22f)]
-		[Tooltip("High Hips Width on Neg Z / AvatarHeight. Default is .07")]
 		private float _highHipsEllipseNegZ;
 
-		[Tooltip("Hips Width on Neg Z / AvatarHeight. Default is .068")]
-		[Range(0.01f, 0.22f)]
 		[SerializeField]
+		[Range(0.01f, 0.22f)]
+		[Tooltip("Hips Width on Neg Z / AvatarHeight. Default is .068")]
 		private float _hipsEllipseNegZ;
 
 		[SerializeField]
@@ -654,6 +818,8 @@ namespace SLZ.VRMK
 		public AudioVarianceData dead;
 
 		public AudioVarianceData recovery;
+
+		public SurfaceData surfaceData;
 
 		public Action OnWriteTransforms;
 
@@ -796,7 +962,7 @@ namespace SLZ.VRMK
 
 		protected float _carpalPercent;
 
-		protected float _toeHeightPercent;
+		protected float _toeHeight;
 
 		protected float _tippyToeExt;
 
@@ -818,19 +984,13 @@ namespace SLZ.VRMK
 
 		protected Vector2 _palmSize;
 
+		public ArtTransforms artTransforms;
+
 		public ArtOffsets artOffsets;
 
-		private Vector4 _nipple;
+		public PoseOffsets poseOffsets;
 
 		private bool PreComputed;
-
-		public static ComponentCache<Avatar> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
 
 		public bool hasUpperChest
 		{
@@ -945,6 +1105,14 @@ namespace SLZ.VRMK
 		}
 
 		public float tippyToeExtension
+		{
+			get
+			{
+				return default(float);
+			}
+		}
+
+		public float toeHeight
 		{
 			get
 			{

@@ -80,5 +80,10 @@ namespace SLZ.Bonelab
 		public void DISPLAYUI()
 		{
 		}
+
+		public UnlockableDisplayCase()
+			: base()
+		{
+		}
 	}
 }

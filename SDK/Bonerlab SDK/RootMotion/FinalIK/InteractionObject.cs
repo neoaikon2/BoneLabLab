@@ -1,11 +1,12 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace RootMotion.FinalIK
 {
-	[HelpURL("https://www.youtube.com/watch?v=r5jiZnsDH3M")]
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction Object")]
+	[HelpURL("https://www.youtube.com/watch?v=r5jiZnsDH3M")]
 	public class InteractionObject : MonoBehaviour
 	{
 		[Serializable]
@@ -32,6 +33,11 @@ namespace RootMotion.FinalIK
 			public void Activate(Transform t)
 			{
 			}
+
+			public InteractionEvent()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -46,6 +52,11 @@ namespace RootMotion.FinalIK
 			private const string empty = "";
 
 			public void Send(Transform t)
+			{
+			}
+
+			public Message()
+				: base()
 			{
 			}
 		}
@@ -84,6 +95,11 @@ namespace RootMotion.FinalIK
 			private void Activate(Animation animation)
 			{
 			}
+
+			public AnimatorEvent()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -113,7 +129,12 @@ namespace RootMotion.FinalIK
 
 			public float GetValue(float timer)
 			{
-				return 0f;
+				return default(float);
+			}
+
+			public WeightCurve()
+				: base()
+			{
 			}
 		}
 
@@ -131,7 +152,12 @@ namespace RootMotion.FinalIK
 
 			public float GetValue(WeightCurve weightCurve, float timer)
 			{
-				return 0f;
+				return default(float);
+			}
+
+			public Multiplier()
+				: base()
+			{
 			}
 		}
 
@@ -156,9 +182,21 @@ namespace RootMotion.FinalIK
 
 		public InteractionSystem lastUsedInteractionSystem { get; private set; }
 
-		public Transform lookAtTarget => null;
+		public Transform lookAtTarget
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public Transform targetsRoot => null;
+		public Transform targetsRoot
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		[ContextMenu("TUTORIAL VIDEO (PART 1: BASICS)")]
 		private void OpenTutorial1()
@@ -201,7 +239,7 @@ namespace RootMotion.FinalIK
 
 		public bool CurveUsed(WeightCurve.Type type)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public InteractionTarget[] GetTargets()
@@ -224,7 +262,7 @@ namespace RootMotion.FinalIK
 
 		public float GetValue(WeightCurve.Type weightCurveType, InteractionTarget target, float timer)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private void Awake()
@@ -242,12 +280,12 @@ namespace RootMotion.FinalIK
 
 		private int GetWeightCurveIndex(WeightCurve.Type weightCurveType)
 		{
-			return 0;
+			return default(int);
 		}
 
 		private int GetMultiplierIndex(WeightCurve.Type weightCurveType)
 		{
-			return 0;
+			return default(int);
 		}
 
 		[ContextMenu("User Manual")]
@@ -257,6 +295,11 @@ namespace RootMotion.FinalIK
 
 		[ContextMenu("Scrpt Reference")]
 		private void OpenScriptReference()
+		{
+		}
+
+		public InteractionObject()
+			: base()
 		{
 		}
 	}

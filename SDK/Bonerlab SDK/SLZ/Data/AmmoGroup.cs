@@ -11,5 +11,10 @@ namespace SLZ.Data
 		public string KeyName;
 
 		public CartridgeData[] cartridges;
+
+		public AmmoGroup()
+			: base()
+		{
+		}
 	}
 }

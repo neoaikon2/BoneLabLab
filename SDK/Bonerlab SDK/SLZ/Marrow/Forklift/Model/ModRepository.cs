@@ -7,7 +7,7 @@ using SLZ.Serialize;
 namespace SLZ.Marrow.Forklift.Model
 {
 	[Serializable]
-	public class ModRepository : IJSONPackable
+	public class ModRepository : IPackable
 	{
 		public string Title { get; set; }
 
@@ -19,7 +19,7 @@ namespace SLZ.Marrow.Forklift.Model
 		{
 		}
 
-		public void Unpack(ObjectStore store, ObjectId objectId)
+		public void Unpack(ObjectStore store, string objectId)
 		{
 		}
 

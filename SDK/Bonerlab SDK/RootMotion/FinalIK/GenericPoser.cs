@@ -17,6 +17,7 @@ namespace RootMotion.FinalIK
 			private Quaternion defaultLocalRotation;
 
 			public Map(Transform bone, Transform target)
+				: base()
 			{
 			}
 
@@ -59,6 +60,11 @@ namespace RootMotion.FinalIK
 		private Transform GetTargetNamed(string tName, Transform[] array)
 		{
 			return null;
+		}
+
+		public GenericPoser()
+			: base()
+		{
 		}
 	}
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -5,8 +6,9 @@ using UnityEngine.Events;
 
 namespace SLZ.Marrow.SceneStreaming
 {
-	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/Levels")]
 	[RequireComponent(typeof(BoxCollider))]
+	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/Levels")]
+	[Obsolete("Chunk trigger is now obsolete use the new zone/entity system for this functionality")]
 	public class ChunkTrigger : MonoBehaviour
 	{
 		public Chunk chunk;

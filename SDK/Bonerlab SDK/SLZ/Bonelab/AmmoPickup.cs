@@ -13,28 +13,6 @@ namespace SLZ.Bonelab
 {
 	public class AmmoPickup : SpawnEvents
 	{
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CDelayDespawnAsync_003Ed__12
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public AmmoPickup _003C_003E4__this;
-
-			private UniTask.Awaiter _003C_003Eu__1;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
 		public AmmoGroup ammoGroup;
 
 		public int ammoCount;
@@ -53,11 +31,11 @@ namespace SLZ.Bonelab
 
 		private Vector3 scale;
 
-		protected void Awake()
+		protected override void Awake()
 		{
 		}
 
-		protected override void OnSpawn(GameObject go)
+		public override void OnPoolInitialize()
 		{
 		}
 
@@ -65,13 +43,17 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CDelayDespawnAsync_003Ed__12))]
 		private UniTaskVoid DelayDespawnAsync()
 		{
 			return default(UniTaskVoid);
 		}
 
 		public void ForcePickup()
+		{
+		}
+
+		public AmmoPickup()
+			: base()
 		{
 		}
 	}

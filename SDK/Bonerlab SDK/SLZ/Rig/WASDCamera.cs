@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SLZ.Rig
@@ -139,6 +140,11 @@ namespace SLZ.Rig
 		}
 
 		public void WasdFixedUpdate(Rig rig)
+		{
+		}
+
+		public WASDCamera()
+			: base()
 		{
 		}
 	}

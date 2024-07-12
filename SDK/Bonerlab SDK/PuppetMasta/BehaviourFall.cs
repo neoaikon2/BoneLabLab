@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using RootMotion;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
@@ -12,58 +13,8 @@ namespace PuppetMasta
 	[HelpURL("http://root-motion.com/puppetmasterdox/html/page11.html")]
 	public class BehaviourFall : BehaviourBase
 	{
-		[CompilerGenerated]
-		private sealed class _003CSmoothActivate_003Ed__21
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BehaviourFall _003C_003E4__this;
-
-			private float _003Cfader_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CSmoothActivate_003Ed__21(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[LargeHeader("Animation State")]
 		[Tooltip("Animation State to crossfade to when this behaviour is activated.")]
+		[LargeHeader("Animation State")]
 		public string stateName;
 
 		[Tooltip("The duration of crossfading to 'State Name'. Value is in seconds.")]
@@ -75,8 +26,8 @@ namespace PuppetMasta
 		[Tooltip("Start time of the current destination state. Value is in seconds. If no explicit fixedTime is specified or fixedTime value is float.NegativeInfinity, the state will either be played from the start if it's not already playing, or will continue playing from its current time and no transition will happen.")]
 		public float fixedTime;
 
-		[Tooltip("The layers that will be raycasted against to find colliding objects.")]
 		[LargeHeader("Blending")]
+		[Tooltip("The layers that will be raycasted against to find colliding objects.")]
 		public LayerMask raycastLayers;
 
 		[Tooltip("The parameter in the Animator that blends between catch fall and writhe animations.")]
@@ -133,7 +84,6 @@ namespace PuppetMasta
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CSmoothActivate_003Ed__21))]
 		private IEnumerator SmoothActivate()
 		{
 			return null;
@@ -153,12 +103,17 @@ namespace PuppetMasta
 
 		private float GetBlendTarget(float groundHeight)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float GetGroundHeight()
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public BehaviourFall()
+			: base()
+		{
 		}
 	}
 }

@@ -3,76 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Combat;
+using SLZ.Interaction;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
 	[RequireComponent(typeof(ConfigurableJoint))]
 	public class DoorControl : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CSwingOverTime_003Ed__90
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float time;
-
-			public DoorControl _003C_003E4__this;
-
-			public bool lockOnComplete;
-
-			private float _003CstartTime_003E5__2;
-
-			private JointDrive _003CstartingDrive_003E5__3;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CSwingOverTime_003Ed__90(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[Header("GENERAL")]
 		public bool FreeDoor;
+
+		public DoorControl pairedDoor;
 
 		public Vector3 axis_Link;
 
 		public Vector3 axis_LinkSecondary;
+
+		public bool navBlockEnemies;
 
 		private Rigidbody rb_this;
 
@@ -82,56 +32,36 @@ namespace SLZ.Bonelab
 
 		private bool DoorShut;
 
-		[Header("DOOR")]
-		[Space(10f)]
-		public bool DoorIndestructible;
+		private bool lastDoorShut;
 
-		public float health_Door;
-
-		private float cur_health_Door;
-
-		public float DoorDurability;
-
-		[Space(5f)]
-		public bool damageFromImpact;
-
-		public float thr_Impact;
-
-		public float mod_Impact;
-
-		[Space(3f)]
-		public bool damageFromAttack;
-
-		public float mod_Attack;
-
-		[Space(3f)]
-		public int req_hit_count;
-
-		private int cur_hit_count;
-
-		private bool DoorHasShattered;
+		private bool DoorIsOffHinge;
 
 		[Header("LOCK")]
 		[Space(10f)]
 		public float[] LockAngleLimits;
 
-		public bool LockIndestructible;
-
 		public bool Lock_Locked;
 
+		[HideInInspector]
 		public bool Lock_Closed;
-
-		public float health_Lock;
-
-		private float cur_health_Lock;
-
-		public float LockDurability;
 
 		public bool hasKey;
 
-		public GameObject PhysicalLock;
+		private bool LockIsBroken;
 
 		private bool LockHasShattered;
+
+		public MeshRenderer lockRenderer;
+
+		public Material noLock_Mat;
+
+		public Material brokenLock_Mat;
+
+		public Material locked_Mat;
+
+		public Material unlocked_Mat;
+
+		private bool initializedLocked;
 
 		[Header("LINK")]
 		[Space(10f)]
@@ -140,6 +70,18 @@ namespace SLZ.Bonelab
 		private ConfigurableJoint jnt_link;
 
 		public Transform override_Anchor;
+
+		public Transform hinge_Forward;
+
+		public Transform hinge_Backward;
+
+		private Vector3 _v3_hinge_FWD;
+
+		private Vector3 _v3_hinge_FWD_connected;
+
+		private Vector3 _v3_hinge_BWD;
+
+		private Vector3 _v3_hinge_BWD_connected;
 
 		[Space(3f)]
 		public bool UsingThresholds;
@@ -170,8 +112,14 @@ namespace SLZ.Bonelab
 
 		private float m_closedLimitMin;
 
-		[Space(10f)]
+		private float rb_velocity;
+
+		private bool isClosedLimits;
+
+		private bool isForwAnchor;
+
 		[Header("KNOB")]
+		[Space(10f)]
 		public bool FlipLatch;
 
 		public GameObject DoorKnob;
@@ -182,8 +130,8 @@ namespace SLZ.Bonelab
 
 		private bool KnobLocked;
 
-		[SerializeField]
 		[Tooltip("This is the number added to the lowest x-angularThreshold and subtracted from the highest x-angularThreshold")]
+		[SerializeField]
 		private float KnobThreshOffset;
 
 		public float[] knob_UnlockAngles;
@@ -196,44 +144,75 @@ namespace SLZ.Bonelab
 
 		public int tar_springLoc;
 
+		private bool canPlayKnobClick;
+
+		private bool isFullLimit;
+
+		public Grip[] grips;
+
 		[Space(10f)]
 		[Header("REFERENCES")]
-		public AudioClip[] clip_Knock;
+		public Transform audioPosition_Hinge;
 
-		public AudioClip[] clip_DoorDamage;
-
-		public AudioClip[] clip_DoorDestroyed;
-
-		public AudioClip[] clip_Knob;
+		public Transform audioPosition_Lock;
 
 		[Space(3f)]
+		public AudioClip[] clip_Knob;
+
 		public AudioClip[] clip_Unlock;
 
-		public AudioClip[] clip_LockDestroyed;
-
-		public AudioClip[] clip_IsLocked;
+		public AudioClip[] clip_ItsLocked;
 
 		public AudioClip[] clip_SetLock;
 
-		[Space(5f)]
-		public ParticleSystem KnockParticles;
+		public AudioClip[] clip_Anchor;
 
-		public ParticleSystem DamageParticles;
-
-		public GameObject fx_LockShatter;
-
-		public GameObject fx_DoorShatter;
+		public AudioClip[] clip_Slam;
 
 		[Space(5f)]
-		public DoorLightControl[] DoorLights;
+		private float lastLockAudioTime;
 
+		public float lockAudioThresh;
+
+		private float lastAnchorAudioTime;
+
+		public float anchorAudioThresh;
+
+		public float anchorAudioVolume;
+
+		[Space(5f)]
 		public OcclusionPortal occlusionPortal;
 
-		private bool playedKnob;
+		public NavMeshObstacle navMeshObstacle;
 
-		private bool m_Door_Broken => false;
+		[Header("Events")]
+		public UnityEvent onLocked;
 
-		private bool m_Lock_Broken => false;
+		public UnityEvent onUnlocked;
+
+		public UnityEvent onClosed;
+
+		public UnityEvent onOpened;
+
+		public UnityEvent onOpenedFirstTime;
+
+		private bool hasBeenOpened;
+
+		private HashSet<Hand> collisionHands;
+
+		private HashSet<Hand> gripHands;
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
 
 		private void Start()
 		{
@@ -251,27 +230,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnCollisionEnter(Collision impact)
+		private void ToggleAnchor()
 		{
 		}
 
-		public void ReceiveAttack(Attack attack)
-		{
-		}
-
-		private void SORTDAMAGE(float damage)
-		{
-		}
-
-		private void DAMAGEDOOR(float dmg)
-		{
-		}
-
-		public void SHATTERDOOR()
-		{
-		}
-
-		private void DAMAGELOCK(float dmg)
+		public void DOORBROKEN()
 		{
 		}
 
@@ -283,37 +246,36 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void CloseCrate()
+		public void SWINGSHUTANDLOCK(float time)
 		{
 		}
 
-		public void SwingShutAndLock(float time)
-		{
-		}
-
-		[IteratorStateMachine(typeof(_003CSwingOverTime_003Ed__90))]
 		public IEnumerator SwingOverTime(float time = 1f, bool lockOnComplete = false)
 		{
 			return null;
 		}
 
-		private void SETLINK()
+		private void UpdateLockLight()
 		{
 		}
 
-		private void ROTTARGET()
+		private void SetLink()
 		{
 		}
 
-		private void SETLIMITS()
+		private void RotTarget()
 		{
 		}
 
-		public void CHECKTHRESHOLDS(float cur_angle)
+		private void SetLimits()
 		{
 		}
 
-		private void CheckPortal(float cur_angle)
+		private void CheckThresholds_Door(float cur_angle)
+		{
+		}
+
+		private void CheckOpened(float cur_angle)
 		{
 		}
 
@@ -325,27 +287,64 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void SETKNOBLIMITS(bool fullLimit)
+		private void SetKnobLimits(bool fullLimit)
 		{
 		}
 
-		private void CHECKKNOBTHRESHOLDS()
+		private void CheckKnobThresholds()
 		{
 		}
 
-		private void DOORLIGHTS()
+		public void OnCollisionEnter(Collision other)
 		{
 		}
 
-		public void FXKnockDoor(float force, Vector3 pos)
+		public void OnCollisionExit(Collision other)
 		{
 		}
 
-		public void FXDamageDoor(float force, Vector3 pos)
+		private void OnHandAttached(Hand hand)
 		{
 		}
 
-		public void DEFAULTDATA()
+		private void OnHandDetached(Hand hand)
+		{
+		}
+
+		private void SFXDoorKnob()
+		{
+		}
+
+		private void SFXDoorLocking(bool locking)
+		{
+		}
+
+		private void SFXDoorIsAlreadyLocked()
+		{
+		}
+
+		public void DoorAnchorSFX()
+		{
+		}
+
+		private void DoorSlamSFX()
+		{
+		}
+
+		private void SFXSend(AudioClip[] clipToPlay, Vector3 pos)
+		{
+		}
+
+		private void UE_LOCKED(bool doorLock)
+		{
+		}
+
+		private void UE_CLOSED(bool doorClosed)
+		{
+		}
+
+		public DoorControl()
+			: base()
 		{
 		}
 	}

@@ -5,10 +5,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Bonelab;
+using SLZ.Bonelab.SaveData;
 using SLZ.Marrow;
 using SLZ.Marrow.Warehouse;
-using SLZ.Props;
-using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 
@@ -19,32 +19,6 @@ namespace SLZ.UI
 		public delegate void SelectSpawnableDelegate(SpawnableCrate data);
 
 		public delegate void SelectUtilityModeDelegate(UtilityModes mode);
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CLoadFavorites_003Ed__81
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public SpawnablesPanelView _003C_003E4__this;
-
-			private List<string> _003CfavoriteSpawnableBarcodes_003E5__2;
-
-			private int _003Ci_003E5__3;
-
-			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
 
 		[Header("Buttons")]
 		public ButtonReferenceHolder[] tabButtons;
@@ -89,8 +63,15 @@ namespace SLZ.UI
 
 		public TextMeshPro selectedTags;
 
+		[Header("Audio Section")]
+		public ButtonReferenceHolder capsuleButton;
+
+		public AudioClip meowClip;
+
 		[HideInInspector]
 		public SpawnableCrate selectedObject;
+
+		private Dictionary<string, List<SpawnableCrate>> SpawnablesQuickMap;
 
 		private Dictionary<string, SpawnableCrate> favoriteCrates;
 
@@ -134,37 +115,25 @@ namespace SLZ.UI
 
 		private bool sortSwap;
 
-		public Dictionary<string, List<SpawnableCrate>> SpawnablesQuickMap { get; private set; }
-
 		public SpawnGun spawnGun { private get; set; }
 
-		private static PlayerSettings p => null;
-
-		public event SelectSpawnableDelegate selectSpawnableDelegate
+		private static PlayerSettings p
 		{
-			[CompilerGenerated]
-			add
+			get
 			{
-			}
-			[CompilerGenerated]
-			remove
-			{
+				return null;
 			}
 		}
 
-		public event SelectUtilityModeDelegate selectModeDelegate
+		public override void Activate()
 		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
 		}
 
 		public void SelectTab(int idx)
+		{
+		}
+
+		public void SelectCategory(int idx)
 		{
 		}
 
@@ -173,54 +142,6 @@ namespace SLZ.UI
 		}
 
 		public void SelectMode(int mode)
-		{
-		}
-
-		public void SelectCategory(int idx)
-		{
-		}
-
-		private void HighlightProperSpawnItem()
-		{
-		}
-
-		public override void Activate()
-		{
-		}
-
-		private void CollectPalletDates()
-		{
-		}
-
-		private void CleanupUserTags()
-		{
-		}
-
-		private void PopulateMenu()
-		{
-		}
-
-		private void FilterTagTree()
-		{
-		}
-
-		public void GenerateCategoriesMapping()
-		{
-		}
-
-		private void UpdatePageItems(int pageIdx, int maxItems)
-		{
-		}
-
-		private void UpdateTagPageItems(int tagPageIdx, int maxTagItems)
-		{
-		}
-
-		private void UpdatePageText(int idx, int total)
-		{
-		}
-
-		private void UpdateTagPageText(int idx, int total)
 		{
 		}
 
@@ -252,7 +173,50 @@ namespace SLZ.UI
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CLoadFavorites_003Ed__81))]
+		public void MeowButton()
+		{
+		}
+
+		private void CollectPalletDates()
+		{
+		}
+
+		private void CleanupUserTags()
+		{
+		}
+
+		private void FilterTagTree()
+		{
+		}
+
+		public void GenerateCategoriesMapping()
+		{
+		}
+
+		private void PopulateMenu()
+		{
+		}
+
+		private void HighlightProperSpawnItem()
+		{
+		}
+
+		private void UpdatePageItems(int pageIdx, int maxItems)
+		{
+		}
+
+		private void UpdateTagPageItems(int tagPageIdx, int maxTagItems)
+		{
+		}
+
+		private void UpdatePageText(int idx, int total)
+		{
+		}
+
+		private void UpdateTagPageText(int idx, int total)
+		{
+		}
+
 		private UniTaskVoid LoadFavorites()
 		{
 			return default(UniTaskVoid);
@@ -261,5 +225,14 @@ namespace SLZ.UI
 		public void SaveFavorites()
 		{
 		}
+
+		public SpawnablesPanelView()
+			: base()
+		{
+		}
+
+		public event SelectSpawnableDelegate selectSpawnableDelegate;
+
+		public event SelectUtilityModeDelegate selectModeDelegate;
 	}
 }

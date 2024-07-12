@@ -39,12 +39,12 @@ namespace RootMotion.Dynamics
 
 				public float twist;
 
-				public Limits(float _minSwing, float _maxSwing, float _swing2, float _twist)
+				public Limits(float minSwing, float maxSwing, float swing2, float twist)
 				{
-					minSwing = _minSwing;
-					maxSwing = _maxSwing;
-					swing2 = _swing2;
-					twist = _twist;
+					this.twist = default(float);
+					this.swing2 = default(float);
+					this.maxSwing = default(float);
+					this.minSwing = default(float);
 				}
 			}
 
@@ -60,14 +60,14 @@ namespace RootMotion.Dynamics
 
 			public JointType type;
 
-			public CreateJointParams(Rigidbody _rigidbody, Rigidbody _connectedBody, Transform _child, Vector3 _worldSwingAxis, Limits _limits, JointType _type)
+			public CreateJointParams(Rigidbody rigidbody, Rigidbody connectedBody, Transform child, Vector3 worldSwingAxis, Limits limits, JointType type)
 			{
-				rigidbody = _rigidbody;
-				connectedBody = _connectedBody;
-				child = _child;
-				worldSwingAxis = _worldSwingAxis;
-				limits = _limits;
-				type = _type;
+				this.type = default(JointType);
+				this.limits = default(Limits);
+				this.worldSwingAxis = default(Vector3);
+				this.child = default(Transform);
+				this.connectedBody = default(Rigidbody);
+				this.rigidbody = default(Rigidbody);
 			}
 		}
 
@@ -89,7 +89,7 @@ namespace RootMotion.Dynamics
 
 		protected static float GetScaleF(Transform t)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		protected static Vector3 Abs(Vector3 v)
@@ -97,7 +97,7 @@ namespace RootMotion.Dynamics
 			return default(Vector3);
 		}
 
-		protected static void Vector3Abs(ref Vector3 v)
+		protected static void Vector3Abs(Vector3 v)
 		{
 		}
 
@@ -113,7 +113,7 @@ namespace RootMotion.Dynamics
 
 		protected static int DirectionVector3ToInt(Vector3 dir)
 		{
-			return 0;
+			return default(int);
 		}
 
 		protected static Vector3 GetLocalOrthoDirection(Transform transform, Vector3 worldDir)
@@ -121,7 +121,7 @@ namespace RootMotion.Dynamics
 			return default(Vector3);
 		}
 
-		protected static Rigidbody GetConnectedBody(Transform bone, ref Transform[] bones)
+		protected static Rigidbody GetConnectedBody(Transform bone, Transform[] bones)
 		{
 			return null;
 		}
@@ -133,6 +133,11 @@ namespace RootMotion.Dynamics
 		private static SoftJointLimit ToSoftJointLimit(float limit)
 		{
 			return default(SoftJointLimit);
+		}
+
+		public RagdollCreator()
+			: base()
+		{
 		}
 	}
 }

@@ -16,5 +16,10 @@ namespace SLZ.Utilities
 		public void SpawnPrefab()
 		{
 		}
+
+		public PrefabSpawner()
+			: base()
+		{
+		}
 	}
 }

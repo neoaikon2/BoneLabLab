@@ -3,73 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
-using SLZ.Utilities;
 using SLZ.Vehicle;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
 	public class JimmyDoorController : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CDoorSequence_003Ed__42
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public JimmyDoorController _003C_003E4__this;
-
-			private Vector3 _003CstartPos_003E5__2;
-
-			private Vector3 _003CendPos_003E5__3;
-
-			private float _003CyoinkTime_003E5__4;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CDoorSequence_003Ed__42(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public Seat seat;
 
 		public Rigidbody rb;
@@ -96,8 +41,6 @@ namespace SLZ.Bonelab
 
 		public ParticleSystem windBlast;
 
-		public AudioMixerGroup outputMixer;
-
 		public AudioClip[] doorSFX;
 
 		public AudioClip portalSFX;
@@ -107,6 +50,8 @@ namespace SLZ.Bonelab
 		private AudioPlayer ap2;
 
 		public UnityEvent YoinkEvent;
+
+		public UnityEvent LeashEvent;
 
 		private RigManager rM;
 
@@ -133,6 +78,8 @@ namespace SLZ.Bonelab
 		private bool isInTrigger;
 
 		private bool isYoinkReady;
+
+		private bool canLeashPlayer;
 
 		private Vector3 debugGizmo1;
 
@@ -162,7 +109,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CDoorSequence_003Ed__42))]
 		private IEnumerator DoorSequence()
 		{
 			return null;
@@ -172,12 +118,18 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		private IEnumerator DoorSequenceByPass()
+		{
+			return null;
+		}
+
 		public Vector3 FindNearestPointOnLine(Vector3 origin, Vector3 vector, Vector3 point)
 		{
 			return default(Vector3);
 		}
 
-		private void OnTriggerEnter(Collider other)
+		public JimmyDoorController()
+			: base()
 		{
 		}
 	}

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -31,6 +32,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public VRIKRootController()
+			: base()
 		{
 		}
 	}

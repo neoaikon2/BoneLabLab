@@ -18,6 +18,8 @@ namespace SLZ.Marrow.Utilities
 
 		public static AssetWarehouse assetWarehouse;
 
+		public static MarrowSettings marrowSettings;
+
 		public static Action<string> OnLogUpdate;
 
 		private static Action _onReady;

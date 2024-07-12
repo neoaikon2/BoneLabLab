@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using SLZ.Marrow.Data;
+using SLZ.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
@@ -22,13 +22,20 @@ namespace SLZ.Interaction
 
 			public bool isCapGrab;
 
-			public float sqrDistanceFromSurface;
+			public Vector3 gripWorld;
+
+			public Vector3 handleWorld;
 
 			public Vector3 normal;
 
 			public Vector3 localPosition;
 
 			public Quaternion localRotation;
+
+			public GrabConfiguration()
+				: base()
+			{
+			}
 		}
 
 		private struct HandToBarrelGripState
@@ -120,14 +127,14 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		public override bool OnHandHoverUpdate(Hand hand, bool isOverride)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void OnHandAttachedUpdate(Hand hand)
@@ -140,7 +147,12 @@ namespace SLZ.Interaction
 
 		public bool CheckZones(Hand hand)
 		{
-			return false;
+			return default(bool);
+		}
+
+		public BarrelGrip()
+			: base()
+		{
 		}
 	}
 }

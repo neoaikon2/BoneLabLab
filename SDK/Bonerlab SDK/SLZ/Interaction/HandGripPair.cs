@@ -8,8 +8,8 @@ namespace SLZ.Interaction
 
 		public HandGripPair(Hand h, Grip g)
 		{
-			hand = h;
-			grip = g;
+			this.grip = default(Grip);
+			this.hand = default(Hand);
 		}
 
 		public void Clear()

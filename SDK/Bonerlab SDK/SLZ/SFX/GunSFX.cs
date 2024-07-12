@@ -1,16 +1,12 @@
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
-using SLZ.Utilities;
+using SLZ.Marrow.Audio;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.SFX
 {
 	public class GunSFX : MonoBehaviour
 	{
-		public AudioMixerGroup gunshotOutputMixer;
-
-		public AudioMixerGroup interactionOutputMixer;
-
 		public AudioClip[] fire;
 
 		public AudioClip[] fireSlow;
@@ -37,9 +33,7 @@ namespace SLZ.SFX
 
 		private InteractableHost _host;
 
-		private AudioPlayer _gunshotAp;
-
-		private float _gunshotTimer;
+		private ManagedAudioPlayer _gunshotMap;
 
 		private void Start()
 		{
@@ -53,11 +47,11 @@ namespace SLZ.SFX
 		{
 		}
 
-		public void Grab()
+		public void Grab(Vector3 localPosition = default(Vector3))
 		{
 		}
 
-		public void SecondGrip()
+		public void SecondGrip(Vector3 localPosition = default(Vector3))
 		{
 		}
 
@@ -82,6 +76,11 @@ namespace SLZ.SFX
 		}
 
 		public void DryFire()
+		{
+		}
+
+		public GunSFX()
+			: base()
 		{
 		}
 	}

@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Polygonal")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page12.html")]
+	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Polygonal")]
 	public class RotationLimitPolygonal : RotationLimit
 	{
 		[Serializable]
@@ -18,17 +18,40 @@ namespace RootMotion.FinalIK
 
 			public Vector3 B;
 
-			public Vector3 o => default(Vector3);
+			public Vector3 a
+			{
+				get
+				{
+					return default(Vector3);
+				}
+			}
 
-			public Vector3 a => default(Vector3);
+			public Vector3 b
+			{
+				get
+				{
+					return default(Vector3);
+				}
+			}
 
-			public Vector3 b => default(Vector3);
+			public Vector3 c
+			{
+				get
+				{
+					return default(Vector3);
+				}
+			}
 
-			public Vector3 c => default(Vector3);
-
-			public bool isValid => false;
+			public bool isValid
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
 			public ReachCone(Vector3 _o, Vector3 _a, Vector3 _b, Vector3 _c)
+				: base()
 			{
 			}
 
@@ -43,6 +66,11 @@ namespace RootMotion.FinalIK
 			public Vector3 point;
 
 			public float tangentWeight;
+
+			public LimitPoint()
+				: base()
+			{
+			}
 		}
 
 		[Range(0f, 180f)]
@@ -51,16 +79,16 @@ namespace RootMotion.FinalIK
 		[Range(0f, 3f)]
 		public int smoothIterations;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		public LimitPoint[] points;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		public Vector3[] P;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		public ReachCone[] reachCones;
 
 		[ContextMenu("User Manual")]
@@ -111,7 +139,7 @@ namespace RootMotion.FinalIK
 
 		private float GetScalar(int k)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private Vector3 PointToTangentPlane(Vector3 p, float r)
@@ -131,7 +159,12 @@ namespace RootMotion.FinalIK
 
 		private int GetReachCone(Vector3 L)
 		{
-			return 0;
+			return default(int);
+		}
+
+		public RotationLimitPolygonal()
+			: base()
+		{
 		}
 	}
 }

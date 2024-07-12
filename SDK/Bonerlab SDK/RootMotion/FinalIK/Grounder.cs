@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -43,5 +44,10 @@ namespace RootMotion.FinalIK
 		protected abstract void OpenUserManual();
 
 		protected abstract void OpenScriptReference();
+
+		public Grounder()
+			: base()
+		{
+		}
 	}
 }

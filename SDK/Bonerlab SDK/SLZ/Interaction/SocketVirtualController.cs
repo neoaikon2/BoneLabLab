@@ -1,4 +1,3 @@
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Interaction
@@ -20,8 +19,6 @@ namespace SLZ.Interaction
 			PLANE = 2
 		}
 
-		private static ComponentCache<SocketVirtualController> _cache;
-
 		public PlugVirtualController.FormFactor formFactor;
 
 		public TwistAlingment twistAlingment;
@@ -32,21 +29,16 @@ namespace SLZ.Interaction
 
 		public Transform insertTransform;
 
-		public static ComponentCache<SocketVirtualController> Cache => null;
-
-		private void Awake()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
 		public void OnAttach()
 		{
 		}
 
 		public void OnDettach()
+		{
+		}
+
+		public SocketVirtualController()
+			: base()
 		{
 		}
 	}

@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RealisticEyeMovements
@@ -42,6 +43,11 @@ namespace RealisticEyeMovements
 			public bool isLookUpPosSet;
 
 			public bool isLookDownPosSet;
+
+			public EyelidRotationLimiterForExport()
+				: base()
+			{
+			}
 		}
 
 		[SerializeField]
@@ -97,7 +103,7 @@ namespace RealisticEyeMovements
 
 		public bool CanImport(EyelidRotationLimiterForExport import, Transform startXform)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public EyelidRotationLimiterForExport GetExport(Transform startXform)
@@ -105,9 +111,8 @@ namespace RealisticEyeMovements
 			return null;
 		}
 
-		public void GetRotationAndPosition(float eyeAngle, float blink01, float eyeWidenOrSquint, bool isUpper, out Quaternion rotation, ref Vector3 position, ControlData.EyelidBoneMode eyelidBoneMode)
+		public void GetRotationAndPosition(float eyeAngle, float blink01, float eyeWidenOrSquint, bool isUpper, [Out] Quaternion rotation, Vector3 position, ControlData.EyelidBoneMode eyelidBoneMode)
 		{
-			rotation = default(Quaternion);
 		}
 
 		public void Import(EyelidRotationLimiterForExport import, Transform startXform)
@@ -143,6 +148,11 @@ namespace RealisticEyeMovements
 		}
 
 		public void SaveLookUp(float eyeMaxUpAngle)
+		{
+		}
+
+		public EyelidRotationLimiter()
+			: base()
 		{
 		}
 	}

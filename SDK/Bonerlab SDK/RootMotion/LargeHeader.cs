@@ -9,10 +9,7 @@ namespace RootMotion
 		public string color;
 
 		public LargeHeader(string name)
-		{
-		}
-
-		public LargeHeader(string name, string color)
+			: base()
 		{
 		}
 	}

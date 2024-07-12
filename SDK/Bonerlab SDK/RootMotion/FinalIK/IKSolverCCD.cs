@@ -8,10 +8,6 @@ namespace RootMotion.FinalIK
 	{
 		public IterationDelegate OnPreIteration;
 
-		public void FadeOutBoneWeights()
-		{
-		}
-
 		protected override void OnInitiate()
 		{
 		}
@@ -21,6 +17,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void Solve(Vector3 targetPosition)
+		{
+		}
+
+		public IKSolverCCD()
+			: base()
 		{
 		}
 	}

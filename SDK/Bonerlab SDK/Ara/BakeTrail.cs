@@ -18,5 +18,10 @@ namespace Ara
 		private void Bake()
 		{
 		}
+
+		public BakeTrail()
+			: base()
+		{
+		}
 	}
 }

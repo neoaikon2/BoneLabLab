@@ -21,5 +21,10 @@ namespace SLZ.Interaction
 		public override void OnVirtualControllerSolve(VirtualControlerPayload p)
 		{
 		}
+
+		public PumpShotgunVirtualController()
+			: base()
+		{
+		}
 	}
 }

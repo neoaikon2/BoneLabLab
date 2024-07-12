@@ -13,9 +13,20 @@ namespace SplineMesh
 
 		public float endRoll;
 
-		private Spline spline => null;
+		private Spline spline
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void OnValidate()
+		{
+		}
+
+		public ExampleTentacle()
+			: base()
 		{
 		}
 	}

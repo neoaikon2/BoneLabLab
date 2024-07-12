@@ -9,8 +9,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private TrailRenderer TR;
 
-		[SerializeField]
 		[Tooltip("Number of frames the trail will appear")]
+		[SerializeField]
 		private float TrailSize;
 
 		private void OnValidate()
@@ -18,6 +18,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void Update()
+		{
+		}
+
+		public TrailTimescale()
+			: base()
 		{
 		}
 	}

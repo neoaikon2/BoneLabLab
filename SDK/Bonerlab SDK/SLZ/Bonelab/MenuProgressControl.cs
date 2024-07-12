@@ -1,6 +1,5 @@
+using SLZ.Bonelab.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.SaveData;
-using SLZ.UI;
 using TMPro;
 using UnityEngine;
 
@@ -74,7 +73,13 @@ namespace SLZ.Bonelab
 
 		public LevelCrateReference outroCrate;
 
-		private static PlayerProgression Progression => null;
+		private static PlayerProgression Progression
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public void SetupDisplays()
 		{
@@ -94,57 +99,62 @@ namespace SLZ.Bonelab
 
 		private float SolveCompletePercent()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcCampaignComplete()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcHubComplete()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcTacTrials()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcArenas()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcParkours()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcSandbox()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcExperimentals()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcUnlocks()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcAvatars()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalcEasterEggs()
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public MenuProgressControl()
+			: base()
+		{
 		}
 	}
 }

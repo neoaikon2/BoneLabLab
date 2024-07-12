@@ -7,7 +7,7 @@ namespace SLZ.VRMK
 	public class PlayerAvatarArt : MonoBehaviour
 	{
 		[SerializeField]
-		private RigManager _rigManager;
+		private OpenControllerRig _openCtrlRig;
 
 		[Header("Third Person Camera")]
 		public float scale;
@@ -79,6 +79,11 @@ namespace SLZ.VRMK
 		}
 
 		private void OnSpawnStateChanged(bool isPaused)
+		{
+		}
+
+		public PlayerAvatarArt()
+			: base()
 		{
 		}
 	}

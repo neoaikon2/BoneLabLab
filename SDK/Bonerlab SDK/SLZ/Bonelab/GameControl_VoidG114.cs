@@ -1,8 +1,8 @@
+using System.Runtime.CompilerServices;
+using SLZ.Bonelab.SaveData;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
-using SLZ.SaveData;
-using SLZ.VRMK;
 using TMPro;
 using UnityEngine;
 
@@ -49,9 +49,21 @@ namespace SLZ.Bonelab
 
 		public TextMeshPro tmp_BuildInfo;
 
-		private static PlayerProgression Progression => null;
+		private static PlayerProgression Progression
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		private static PlayerProgression p => null;
+		private static PlayerProgression p
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Start()
 		{
@@ -80,6 +92,11 @@ namespace SLZ.Bonelab
 		private LevelCrateReference ContinueDestination()
 		{
 			return null;
+		}
+
+		public GameControl_VoidG114()
+			: base()
+		{
 		}
 	}
 }

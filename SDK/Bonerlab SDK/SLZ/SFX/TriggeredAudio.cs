@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.SFX
 {
@@ -13,9 +12,12 @@ namespace SLZ.SFX
 
 		public float pitch;
 
-		public AudioMixerGroup mixingGroup;
-
 		public void PlayAudio()
+		{
+		}
+
+		public TriggeredAudio()
+			: base()
 		{
 		}
 	}

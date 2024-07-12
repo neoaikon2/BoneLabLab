@@ -22,5 +22,10 @@ namespace SLZ.Bonelab
 		private void Reset()
 		{
 		}
+
+		public CloneBlendShapes()
+			: base()
+		{
+		}
 	}
 }

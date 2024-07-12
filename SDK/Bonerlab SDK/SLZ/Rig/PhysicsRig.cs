@@ -3,7 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Combat;
+using SLZ.Data;
 using SLZ.Interaction;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using SLZ.SFX;
 using SLZ.VRMK;
@@ -13,6 +17,17 @@ namespace SLZ.Rig
 {
 	public class PhysicsRig : Rig
 	{
+		public enum BodyState
+		{
+			OnFoot = 0,
+			Seated = 1,
+			Ragdoll = 2,
+			Prone = 3,
+			Supine = 4,
+			InAirControlled = 5,
+			InAirRagdoll = 6
+		}
+
 		public enum StepState
 		{
 			NeutralRoll = 0,
@@ -20,58 +35,7 @@ namespace SLZ.Rig
 			ReturnStep = 2,
 			Dangle = 3,
 			Climbing = 4,
-			FreeRotation = 5,
-			ReSprout = 6
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoResetHand_003Ed__127
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Handedness handedness;
-
-			public PhysicsRig _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoResetHand_003Ed__127(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
+			Foothold = 5
 		}
 
 		[Header("PhysicsRig")]
@@ -89,6 +53,10 @@ namespace SLZ.Rig
 
 		public HeadSFX headSfx;
 
+		public ArtRig artOutput;
+
+		public bool shutdown;
+
 		public HashSet<Rigidbody> selfRbs;
 
 		public int onLadder;
@@ -103,17 +71,19 @@ namespace SLZ.Rig
 
 		private bool _bodyMassNatural;
 
-		private Vector3 _lastHeadPos;
+		[SerializeField]
+		private ImpactProperties[] _impactProperties;
 
-		private Vector3 _lastinputVel;
+		[SerializeField]
+		private CollisionCollector[] _collisionCollectors;
 
-		private Vector3 _accelBuffer;
+		[SerializeField]
+		private CollisionSfxManager _torsoSfxManager;
 
-		private float _bufferVelocity;
+		[SerializeField]
+		private SurfaceData _surfaceDataDefault;
 
 		private Coroutine resetHandsCoroutine;
-
-		private Vector3 _avgVel;
 
 		private bool _ballLocoEnabled;
 
@@ -199,6 +169,12 @@ namespace SLZ.Rig
 
 		private Quaternion _cachedFootRt;
 
+		public BodyState bodyState;
+
+		private float _avgDeltaTest;
+
+		private float _skidSpeedTest;
+
 		private float _monoRemainder;
 
 		private float _monoVel;
@@ -227,14 +203,28 @@ namespace SLZ.Rig
 		private ConfigurableJoint _feetKneeJoint;
 
 		[SerializeField]
+		private Servo _kneeHeadServo;
+
+		[SerializeField]
+		private Servo _kneeChestServo;
+
+		[SerializeField]
 		private Servo _kneePelServo;
 
 		public CapsuleCollider kneePelvisCol;
 
 		public LayerMask footballColCheckMask;
 
+		[Range(0f, 1f)]
+		public float overrideKneePelForce;
+
+		public GameObject debugFootArt;
+
 		[SerializeField]
 		private float _pelvisForceMult;
+
+		[SerializeField]
+		private float _pelvisForceInternalMult;
 
 		[SerializeField]
 		private float _monoDamperMult;
@@ -242,6 +232,8 @@ namespace SLZ.Rig
 		private float _footballRadius;
 
 		private float _maxStepHeight;
+
+		private Vector3 _kneeAnchorVelocity;
 
 		[SerializeField]
 		private SphereCollider _football;
@@ -261,6 +253,12 @@ namespace SLZ.Rig
 		private StepState _stepState;
 
 		private float _climbingOffset;
+
+		private float _stepOffset;
+
+		private float _stepOffsetVelocity;
+
+		public bool canFall;
 
 		private Vector2 _stepDelta;
 
@@ -300,41 +298,109 @@ namespace SLZ.Rig
 
 		public Vector3 pelvisAccel { get; private set; }
 
-		public Vector3 headDelta { get; private set; }
+		public Vector3 spineDisplaceInWorld { get; private set; }
 
-		public Vector3 physicalSpineDisplaceInWorld { get; private set; }
+		public Vector3 spineDisplaceVelocityInWorld { get; private set; }
 
-		public Vector3 grounderNormal => default(Vector3);
+		public Vector3 grounderNormal
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public bool ungroundedThisFrame => false;
+		public bool ungroundedThisFrame
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		public float pelvisHeightMult { get; private set; }
 
-		public float physicalKneeDisplaceInPelvisHeights { get; private set; }
+		public float physicalKneeDisplace { get; private set; }
 
-		public Vector3 deviaVectorLfInHandle { get; private set; }
+		public bool ballLocoEnabled
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public Vector3 deviaVectorRtInHandle { get; private set; }
+		public Rigidbody rbKnee
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public Rigidbody rbKnee => null;
+		public Rigidbody rbFeet
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public Rigidbody rbFeet => null;
+		public ConfigurableJoint kneePelvisJoint
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public ConfigurableJoint kneePelvisJoint => null;
+		public float footballRadius
+		{
+			get
+			{
+				return default(float);
+			}
+		}
 
-		public float footballRadius => 0f;
+		public StepState stepState
+		{
+			get
+			{
+				return default(StepState);
+			}
+		}
 
-		public StepState stepState => default(StepState);
+		public Vector3 climbingVelocity
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 climbingVelocity => default(Vector3);
+		public Vector3 climbingNormal
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 climbingNormal => default(Vector3);
+		public float monofootInternalMult
+		{
+			get
+			{
+				return default(float);
+			}
+			set
+			{
+			}
+		}
 
 		public void ResetHands(Handedness handedness)
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoResetHand_003Ed__127))]
 		private IEnumerator CoResetHand(Handedness handedness)
 		{
 			return null;
@@ -368,6 +434,10 @@ namespace SLZ.Rig
 		{
 		}
 
+		public override void OnLateUpdate()
+		{
+		}
+
 		public override void OnFixedUpdate(float deltaTime)
 		{
 		}
@@ -376,7 +446,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public override void Teleport(Vector3 displace, bool zeroVelocity = false)
+		public override void Teleport(SimpleTransform displace, bool zeroVelocity = false)
 		{
 		}
 
@@ -406,7 +476,7 @@ namespace SLZ.Rig
 
 		public bool CheckDoubleJump(float newtonSecond, float cooldown = 1f)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void DischargeMono()
@@ -435,6 +505,14 @@ namespace SLZ.Rig
 		{
 		}
 
+		public void SetFrictionNatural()
+		{
+		}
+
+		public void SetFrictionLow()
+		{
+		}
+
 		public void KinematicLegs()
 		{
 		}
@@ -453,6 +531,18 @@ namespace SLZ.Rig
 		{
 		}
 
+		public void ShutdownRig()
+		{
+		}
+
+		public void TurnOnRig()
+		{
+		}
+
+		public void CalibrateJoints(SLZ.VRMK.Avatar avatar)
+		{
+		}
+
 		public void OnMonofootUpdate()
 		{
 		}
@@ -461,7 +551,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public void UpdateKnee(float feetTar)
+		public void UpdateKnee(float feetTar, float deltaTime)
 		{
 		}
 
@@ -479,41 +569,31 @@ namespace SLZ.Rig
 
 		private bool CheckDangle()
 		{
-			return false;
+			return default(bool);
 		}
 
-		private bool CheckClimb(Rig inRig, float castExtension, float mantle, out Vector3 supportPoint, out Vector3 virtuaPelvisWorld, out Vector3 castDir, out Vector3 trackPhysError, out RaycastHit hitInfo)
+		private bool CheckClimb(Rig inRig, float castExtension, float mantle, [Out] Vector3 supportPoint, [Out] Vector3 virtuaPelvisWorld, [Out] Vector3 castDir, [Out] Vector3 trackPhysError, [Out] RaycastHit hitInfo)
 		{
-			supportPoint = default(Vector3);
-			virtuaPelvisWorld = default(Vector3);
-			castDir = default(Vector3);
-			trackPhysError = default(Vector3);
-			hitInfo = default(RaycastHit);
-			return false;
+			return default(bool);
 		}
 
 		private void SwitchStepState(StepState to)
 		{
 		}
 
-		private bool FootCast(Vector3 inputVelocity, float forwardProject, out RaycastHit hitInfo, out float hitHeight, out float normalHitHeight)
+		private bool FootCast(Rig inRig, Vector3 inputVelocity, float forwardProject, [Out] RaycastHit hitInfo, [Out] float hitHeight, [Out] float normalHitHeight)
 		{
-			hitInfo = default(RaycastHit);
-			hitHeight = default(float);
-			normalHitHeight = default(float);
-			return false;
+			return default(bool);
 		}
 
-		public bool SphereCastExcludeRbHashset(Vector3 origin, float radius, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, RaycastHit[] buffer, HashSet<Rigidbody> rbHashSet)
+		public bool SphereCastExcludeRbHashset(Vector3 origin, float radius, Vector3 direction, [Out] RaycastHit hitInfo, float maxDistance, int layerMask, RaycastHit[] buffer, HashSet<Rigidbody> rbHashSet)
 		{
-			hitInfo = default(RaycastHit);
-			return false;
+			return default(bool);
 		}
 
-		public bool RaycastExcludeRbHashset(Vector3 origin, Vector3 direction, out RaycastHit hitInfo, float maxDistance, int layerMask, RaycastHit[] buffer, HashSet<Rigidbody> rbHashSet)
+		public bool RaycastExcludeRbHashset(Vector3 origin, Vector3 direction, [Out] RaycastHit hitInfo, float maxDistance, int layerMask, RaycastHit[] buffer, HashSet<Rigidbody> rbHashSet)
 		{
-			hitInfo = default(RaycastHit);
-			return false;
+			return default(bool);
 		}
 
 		private void HoldStep(Vector3 inputVelocity)
@@ -537,6 +617,11 @@ namespace SLZ.Rig
 		}
 
 		public void SetKneePelvisLimit(float minCrouchMeters, float maxCrouchMeters)
+		{
+		}
+
+		public PhysicsRig()
+			: base()
 		{
 		}
 	}

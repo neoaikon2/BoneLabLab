@@ -41,7 +41,13 @@ namespace RootMotion.Dynamics
 
 			public ColliderType footColliders;
 
-			public static Options Default => default(Options);
+			public static Options Default
+			{
+				get
+				{
+					return default(Options);
+				}
+			}
 		}
 
 		public bool canBuild;
@@ -109,7 +115,7 @@ namespace RootMotion.Dynamics
 
 		public static bool IsClear(BipedRagdollReferences r)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static Vector3 GetUpperArmToHeadCentroid(BipedRagdollReferences r)
@@ -120,6 +126,11 @@ namespace RootMotion.Dynamics
 		private static Vector3 GetUpperArmCentroid(BipedRagdollReferences r)
 		{
 			return default(Vector3);
+		}
+
+		public BipedRagdollCreator()
+			: base()
+		{
 		}
 	}
 }

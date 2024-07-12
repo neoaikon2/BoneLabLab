@@ -20,7 +20,12 @@ namespace ReachableGames.AutoProbe
 
 		private float MakeRelative(float euler)
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public FlyCamera()
+			: base()
+		{
 		}
 	}
 }

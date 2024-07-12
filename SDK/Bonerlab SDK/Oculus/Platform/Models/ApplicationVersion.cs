@@ -12,6 +12,10 @@ namespace Oculus.Platform.Models
 
 		public readonly string LatestName;
 
+		public readonly long ReleaseDate;
+
+		public readonly string Size;
+
 		public ApplicationVersion(IntPtr o)
 			: base()
 		{

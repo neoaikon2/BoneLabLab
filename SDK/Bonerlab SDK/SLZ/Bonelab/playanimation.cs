@@ -16,5 +16,10 @@ namespace SLZ.Bonelab
 		private void OnEnable()
 		{
 		}
+
+		public playanimation()
+			: base()
+		{
+		}
 	}
 }

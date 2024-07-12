@@ -9,62 +9,6 @@ namespace SLZ.Interaction
 {
 	public class SightFlipGrip : TargetGrip
 	{
-		[CompilerGenerated]
-		private sealed class _003CCoFlipSight_003Ed__5
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public SightFlipGrip _003C_003E4__this;
-
-			public Transform target;
-
-			private float _003Ctime_003E5__2;
-
-			private float _003Cduration_003E5__3;
-
-			private Quaternion _003Cstart_003E5__4;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoFlipSight_003Ed__5(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public Transform sight;
 
 		public Transform openSight;
@@ -77,10 +21,14 @@ namespace SLZ.Interaction
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoFlipSight_003Ed__5))]
 		private IEnumerator CoFlipSight(Transform target)
 		{
 			return null;
+		}
+
+		public SightFlipGrip()
+			: base()
+		{
 		}
 	}
 }

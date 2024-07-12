@@ -24,39 +24,45 @@ namespace SplineMesh
 
 		private Quaternion rotation;
 
-		public Quaternion Rotation => default(Quaternion);
-
-		public CurveSample(Vector3 _location, Vector3 _tangent, Vector3 _up, Vector2 _scale, float _roll, float _distanceInCurve, float _timeInCurve, CubicBezierCurve _curve)
+		public Quaternion Rotation
 		{
-			location = _location;
-			tangent = _tangent;
-			up = _up;
-			scale = _scale;
-			roll = _roll;
-			distanceInCurve = _distanceInCurve;
-			timeInCurve = _timeInCurve;
-			curve = _curve;
-			rotation = Quaternion.identity;
+			get
+			{
+				return default(Quaternion);
+			}
+		}
+
+		public CurveSample(Vector3 location, Vector3 tangent, Vector3 up, Vector2 scale, float roll, float distanceInCurve, float timeInCurve, CubicBezierCurve curve)
+		{
+			this.rotation = default(Quaternion);
+			this.curve = default(CubicBezierCurve);
+			this.timeInCurve = default(float);
+			this.distanceInCurve = default(float);
+			this.roll = default(float);
+			this.scale = default(Vector2);
+			this.up = default(Vector3);
+			this.tangent = default(Vector3);
+			this.location = default(Vector3);
 		}
 
 		public override bool Equals(object obj)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override int GetHashCode()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public static bool operator ==(CurveSample cs1, CurveSample cs2)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static bool operator !=(CurveSample cs1, CurveSample cs2)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static CurveSample Lerp(CurveSample a, CurveSample b, float t)

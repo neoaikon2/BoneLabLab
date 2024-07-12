@@ -6,6 +6,10 @@ namespace Oculus.Platform
 	{
 		private IntPtr Handle;
 
+		public void SetDeeplinkMessageOverride(string value)
+		{
+		}
+
 		public void SetDestinationApiName(string value)
 		{
 		}

@@ -40,5 +40,10 @@ namespace RootMotion.FinalIK
 		protected override void FixTransforms()
 		{
 		}
+
+		public Poser()
+			: base()
+		{
+		}
 	}
 }

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
@@ -17,8 +18,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("The transform that you want to be aimed at the target. Needs to be a lineal descendant of the bone hierarchy. For example, if you wish to aim a gun, it should be the gun, one of it's children or the hand bone.")]
 		public Transform aimTransform;
 
-		[Space(5f)]
 		[Tooltip("The X value of the local axis of the 'Aim Transform' that you want to be aimed at IKPosition.")]
+		[Space(5f)]
 		public float axisX;
 
 		[Tooltip("The Y value of the local axis of the 'Aim Transform' that you want to be aimed at IKPosition.")]
@@ -27,8 +28,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("The Z value of the local axis of the 'Aim Transform' that you want to be aimed at IKPosition.")]
 		public float axisZ;
 
-		[Tooltip("The X value of the local axis of the 'Aim Transform' that you want oriented towards the 'Pole Target'.")]
 		[Space(5f)]
+		[Tooltip("The X value of the local axis of the 'Aim Transform' that you want oriented towards the 'Pole Target'.")]
 		public float poleAxisX;
 
 		[Tooltip("The Y value of the local axis of the 'Aim Transform' that you want oriented towards the 'Pole Target'.")]
@@ -37,9 +38,9 @@ namespace RootMotion.FinalIK
 		[Tooltip("The Z value of the local axis of the 'Aim Transform' that you want oriented towards the 'Pole Target'.")]
 		public float poleAxisZ;
 
-		[Space(5f)]
-		[Range(0f, 1f)]
 		[Tooltip("The master weight of this solver.")]
+		[Range(0f, 1f)]
+		[Space(5f)]
 		public float weight;
 
 		[Tooltip("The weight of the 'Pole Target'")]
@@ -52,12 +53,12 @@ namespace RootMotion.FinalIK
 		[Tooltip("Max solver iterations per frame. If target position offset is less than 'Tolerance', will stop solving.")]
 		public int maxIterations;
 
-		[Tooltip("Clamping rotation of the solver. 0 is free rotation, 1 is completely clamped to animated rotation.")]
 		[Range(0f, 1f)]
+		[Tooltip("Clamping rotation of the solver. 0 is free rotation, 1 is completely clamped to animated rotation.")]
 		public float clampWeight;
 
-		[Tooltip("Number of sine smoothing iterations applied on clamping to make the clamping point smoother.")]
 		[Range(0f, 2f)]
+		[Tooltip("Number of sine smoothing iterations applied on clamping to make the clamping point smoother.")]
 		public int clampSmoothing;
 
 		[Tooltip("If true, rotation limits (if existing) will be applied on each iteration. Only RotationLimitAngle and RotationLimitHinge can be used with this solver.")]
@@ -111,6 +112,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDisable()
+		{
+		}
+
+		public AimIKJ()
+			: base()
 		{
 		}
 	}

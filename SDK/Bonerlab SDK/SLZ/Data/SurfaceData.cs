@@ -8,8 +8,20 @@ namespace SLZ.Data
 	[CreateAssetMenu(fileName = "Surface", menuName = "Variables/Surface", order = 10)]
 	public class SurfaceData : ScriptableObject
 	{
-		[Range(0.001f, 1f)]
+		[Serializable]
+		public struct MaterialLevel
+		{
+			public Material material;
+
+			public float size;
+
+			public DecalAtlasData atlasData;
+
+			public bool useVertexColor;
+		}
+
 		[Header("Options")]
+		[Range(0.001f, 1f)]
 		public float PenetrationResistance;
 
 		public float megaPascal;
@@ -28,8 +40,13 @@ namespace SLZ.Data
 
 		public Spawnable bulletDecalSpawnable;
 
-		public Material BulletDecal;
+		public MaterialLevel[] BulletDecal;
 
-		public Material BluntDecal;
+		public MaterialLevel[] BluntDecal;
+
+		public SurfaceData()
+			: base()
+		{
+		}
 	}
 }

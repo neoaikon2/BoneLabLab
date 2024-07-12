@@ -46,5 +46,10 @@ namespace RootMotion.FinalIK
 		{
 			return default(Quaternion);
 		}
+
+		public RotationLimitSpline()
+			: base()
+		{
+		}
 	}
 }

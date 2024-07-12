@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Steam.VR.Features;
 using UnityEngine.XR.Management;
+using UnityEngine.XR.OpenXR.Features;
 
 namespace SLZ.Marrow.Input
 {
@@ -33,6 +34,8 @@ namespace SLZ.Marrow.Input
 
 		public XRHand RightHand { get; private set; }
 
+		public XRBody Body { get; private set; }
+
 		public GamepadActionMap Gamepad { get; private set; }
 
 		public ViveTrackerActionMap Trackers { get; private set; }
@@ -43,12 +46,23 @@ namespace SLZ.Marrow.Input
 
 		public MeshSubsystemManager Mesh { get; private set; }
 
+		public bool HasPalmPoseFeature { get; private set; }
+
+		private static bool IsFeatureSupported<TFeature>() where TFeature : OpenXRFeature
+		{
+			return default(bool);
+		}
+
 		public UniTask Initialize()
 		{
 			return default(UniTask);
 		}
 
 		public void Deinitialize()
+		{
+		}
+
+		public void Refresh()
 		{
 		}
 

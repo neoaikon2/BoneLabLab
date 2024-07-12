@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -53,11 +54,29 @@ namespace RootMotion.FinalIK
 
 			private int plane3NodeIndex;
 
-			public Vector3 swingDirection => default(Vector3);
+			public Vector3 swingDirection
+			{
+				get
+				{
+					return default(Vector3);
+				}
+			}
 
-			public bool isNodeBone => false;
+			public bool isNodeBone
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
-			private Quaternion lastAnimatedTargetRotation => default(Quaternion);
+			private Quaternion lastAnimatedTargetRotation
+			{
+				get
+				{
+					return default(Quaternion);
+				}
+			}
 
 			public void Initiate(Transform transform, IKSolverFullBody solver)
 			{
@@ -107,17 +126,13 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public void FixToNode(IKSolverFullBody solver, float weight, IKSolver.Node fixNode = null)
+			public void FixToNode(IKSolverFullBody solver, float weight, IKSolver.Node fixNode = default(IKSolver.Node))
 			{
 			}
 
 			public Vector3 GetPlanePosition(IKSolverFullBody solver)
 			{
 				return default(Vector3);
-			}
-
-			public void PositionToPlane(IKSolverFullBody solver)
-			{
 			}
 
 			public void RotateToPlane(IKSolverFullBody solver, float weight)
@@ -148,25 +163,35 @@ namespace RootMotion.FinalIK
 			{
 				return default(Quaternion);
 			}
+
+			public BoneMap()
+				: base()
+			{
+			}
 		}
 
-		public virtual bool IsValid(IKSolver solver, ref string message)
+		public virtual bool IsValid(IKSolver solver, string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual void Initiate(IKSolverFullBody solver)
 		{
 		}
 
-		protected bool BoneIsValid(Transform bone, IKSolver solver, ref string message, Warning.Logger logger = null)
+		protected bool BoneIsValid(Transform bone, IKSolver solver, string message, Warning.Logger logger = default(Warning.Logger))
 		{
-			return false;
+			return default(bool);
 		}
 
 		protected Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length)
 		{
 			return default(Vector3);
+		}
+
+		public IKMapping()
+			: base()
+		{
 		}
 	}
 }

@@ -1,19 +1,22 @@
 using System;
-using SLZ.Zones;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Warehouse;
+using SLZ.Marrow.Zones;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
-	public class Trial_SpawnerEvents : MonoBehaviour
+	public class Trial_SpawnerEvents : MonoBehaviour, ISpawnListenable
 	{
-		[SerializeField]
-		private ZoneSpawner[] zSpawners;
+		public CrateSpawner[] crateSpawners;
 
 		public int deadCount;
 
 		public int totalCount;
+
+		public int spawnerCount;
 
 		public float requiredPerc;
 
@@ -25,7 +28,7 @@ namespace SLZ.Bonelab
 
 		public bool sendTotalEvents;
 
-		public bool sentKillEvent;
+		private bool sentKillEvent;
 
 		public UnityEvent OnKilledAll;
 
@@ -35,6 +38,26 @@ namespace SLZ.Bonelab
 
 		public TMP_Text totalText;
 
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		public void OnSpawn(GameObject go)
+		{
+		}
+
+		public void OnDespawn(GameObject go)
+		{
+		}
+
+		public void OnDeath(AIBrain brain)
+		{
+		}
+
 		private void Start()
 		{
 		}
@@ -43,7 +66,17 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		[ContextMenu("GetTotalCountFromPerc")]
+		public void GetTotalCountFromPerc()
+		{
+		}
+
 		public void OnDrawGizmosSelected()
+		{
+		}
+
+		public Trial_SpawnerEvents()
+			: base()
 		{
 		}
 	}

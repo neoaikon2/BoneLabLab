@@ -1,6 +1,5 @@
-using SLZ.Utilities;
+using SLZ.Marrow.Audio;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Bonelab
 {
@@ -14,8 +13,6 @@ namespace SLZ.Bonelab
 			LAYERING = 2,
 			OUTRO = 3
 		}
-
-		public AudioMixerGroup mixerGroup;
 
 		[Header("Audio Clips")]
 		public AudioClip[] stems_hold;
@@ -69,13 +66,24 @@ namespace SLZ.Bonelab
 
 		private AudioPlayer _ap;
 
-		public AudioPlayer audioPlayer => null;
+		public AudioPlayer audioPlayer
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Start()
 		{
 		}
 
 		private void Update()
+		{
+		}
+
+		public StemControl()
+			: base()
 		{
 		}
 	}

@@ -6,5 +6,10 @@ namespace RootMotion
 	{
 		[Multiline]
 		public string text;
+
+		public Comments()
+			: base()
+		{
+		}
 	}
 }

@@ -7,5 +7,10 @@ namespace SLZ.Bonelab
 		private void Awake()
 		{
 		}
+
+		public PlatformRealtimeRelectionProbe()
+			: base()
+		{
+		}
 	}
 }

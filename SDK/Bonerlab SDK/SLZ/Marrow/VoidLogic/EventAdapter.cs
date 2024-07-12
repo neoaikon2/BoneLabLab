@@ -1,27 +1,20 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Algorithms.Unity;
+using UltEvents;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace SLZ.Marrow.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Endpoints/VoidLogic Event Adapter")]
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/EventAdapter")]
-	public sealed class EventAdapter : MonoBehaviour, InputDescribable
+	[AddComponentMenu("VoidLogic/Sinks/VoidLogic Event Adapter")]
+	[Support(SupportFlags.Supported, "<b>Reminder</b>: Is there a better way to do this?")]
+	public sealed class EventAdapter : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
 	{
-		[Serializable]
-		public sealed class NodeOutputValueCurrentAndPrior : UnityEvent<float, float>
-		{
-			public NodeOutputValueCurrentAndPrior()
-				: base()
-			{
-			}
-		}
-
-		[SerializeField]
 		[Tooltip("Previous node in the chain")]
-		private BaseNode _previousNode;
+		[Interface(typeof(IVoidLogicSource), false)]
+		[SerializeField]
+		private MonoBehaviour _previousNode;
 
 		[SerializeField]
 		private float lowThreshold;
@@ -29,21 +22,21 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		private float highThreshold;
 
+		[Tooltip("When the input value changes (EXPENSIVE, runs all callbacks on every value update)")]
 		[Header("Events")]
-		[Tooltip("When the power value changes")]
-		public NodeOutputValueCurrentAndPrior NodeOutputValueUpdated;
+		public UltEvent<EventAdapter, IVoidLogicSource, float> InputUpdated;
 
-		[Tooltip("When the power value rises above the high threshold")]
-		public UnityEvent NodeOutputRose;
+		[Tooltip("When the input value rises above the high threshold")]
+		public UltEvent<EventAdapter, IVoidLogicSource, float> InputRose;
 
-		[Tooltip("When the power value holds above the high threshold")]
-		public UnityEvent NodeOutputHeld;
+		[Tooltip("When the input value holds above the high threshold")]
+		public UltEvent<EventAdapter, IVoidLogicSource, float> InputHeld;
 
-		[Tooltip("When the power value lowers beneath the low threshold")]
-		public UnityEvent NodeOutputFell;
+		[Tooltip("When the input value lowers beneath the low threshold")]
+		public UltEvent<EventAdapter, IVoidLogicSource, float> InputFell;
 
-		[Tooltip("When the power value rises above the high threshold (for the first time only)")]
-		public UnityEvent NodeOutputRoseOneShot;
+		[Tooltip("When the input value rises above the high threshold (for the first time only)")]
+		public UltEvent<EventAdapter, IVoidLogicSource, float> InputRoseOneShot;
 
 		private float _priorValue;
 
@@ -51,51 +44,78 @@ namespace SLZ.Marrow.VoidLogic
 
 		private bool _hasBeenHigh;
 
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		public BaseNode PreviousNode
+		public VoidLogicSubgraph Subgraph { get; set; }
+
+		public int InputCount
 		{
 			get
 			{
-				return null;
+				return default(int);
 			}
 		}
 
-		public float Value
+		public PortMetadata PortMetadata
 		{
 			get
 			{
-				return default(float);
+				return default(PortMetadata);
 			}
 		}
 
-		public float PriorValue
+		private void Awake()
 		{
-			get
-			{
-				return default(float);
-			}
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDestroy()
+		{
 		}
 
 		private void Start()
 		{
 		}
 
-		private void Update()
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
 		{
 		}
 
-		public void LogOutputValueUpdated(float currentValue, float priorValue)
+		private void _invokeInputUpdated(IVoidLogicSource source, float f)
 		{
 		}
 
-		public void AppendEndpointInfo(StringBuilder sb)
+		private void _invokeInputRose(IVoidLogicSource source, float f)
 		{
 		}
 
-		IReadOnlyList<InputDescription> InputDescribable.DescribeInputs()
+		private void _invokeInputRoseOneShot(IVoidLogicSource source, float f)
 		{
-			return null;
+		}
+
+		private void _invokeInputFell(IVoidLogicSource source, float f)
+		{
+		}
+
+		private void _invokeInputHeld(IVoidLogicSource source, float f)
+		{
+		}
+
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
+		{
+			return default(bool);
+		}
+
+		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
+		{
+			return default(bool);
 		}
 
 		public EventAdapter()

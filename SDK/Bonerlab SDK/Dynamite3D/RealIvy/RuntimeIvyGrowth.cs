@@ -42,7 +42,7 @@ namespace Dynamite3D.RealIvy
 
 		private int ChooseBranchSense()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void Step()
@@ -79,12 +79,12 @@ namespace Dynamite3D.RealIvy
 
 		private float CalculateRadius(float lenght)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float CalculateLeafScale(BranchContainer branch, LeafPoint leafPoint)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private Quaternion CalculateLeafRotation(LeafPoint leafPoint)
@@ -159,6 +159,11 @@ namespace Dynamite3D.RealIvy
 		private RTBranchContainer GetNextBranchContainer()
 		{
 			return null;
+		}
+
+		public RuntimeIvyGrowth()
+			: base()
+		{
 		}
 	}
 }

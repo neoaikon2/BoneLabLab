@@ -38,6 +38,7 @@ namespace SLZ.Interaction
 			public bool attached;
 
 			public HoveringCounts(int c, int s, int d, bool a)
+				: base()
 			{
 			}
 		}
@@ -63,12 +64,12 @@ namespace SLZ.Interaction
 
 		public bool IsOptionsSet(Options flags)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool IsOptionsNotSet(Options flags)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public Options SetOptions(Options flags)
@@ -107,27 +108,27 @@ namespace SLZ.Interaction
 
 		private bool AddHoveredHost(InteractableHost host)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private bool RemoveHoveredHost(InteractableHost host)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private bool IsHoveredHost(InteractableHost host)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private bool CanCallDelegate(InteractableHost host)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private bool CanCallDelegateDrop(InteractableHost host)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void OnTriggerEnter(Collider other)
@@ -143,6 +144,11 @@ namespace SLZ.Interaction
 		}
 
 		private void FixedUpdate()
+		{
+		}
+
+		public InteractionReciever()
+			: base()
 		{
 		}
 	}

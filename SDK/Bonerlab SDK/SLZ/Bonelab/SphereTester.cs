@@ -9,5 +9,10 @@ namespace SLZ.Bonelab
 		private void Update()
 		{
 		}
+
+		public SphereTester()
+			: base()
+		{
+		}
 	}
 }

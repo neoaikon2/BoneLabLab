@@ -1,4 +1,3 @@
-using System.Runtime.InteropServices;
 using Oculus.Platform.Models;
 
 namespace Oculus.Platform
@@ -20,22 +19,17 @@ namespace Oculus.Platform
 			return null;
 		}
 
+		public static Request<BlockedUserList> GetBlockedUsers()
+		{
+			return null;
+		}
+
 		public static Request<User> GetLoggedInUser()
 		{
 			return null;
 		}
 
 		public static Request<UserList> GetLoggedInUserFriends()
-		{
-			return null;
-		}
-
-		public static Request<UserAndRoomList> GetLoggedInUserFriendsAndRooms()
-		{
-			return null;
-		}
-
-		public static Request<UserAndRoomList> GetLoggedInUserRecentlyMetUsersAndRooms(UserOptions userOptions = default(UserOptions))
 		{
 			return null;
 		}
@@ -55,17 +49,32 @@ namespace Oculus.Platform
 			return null;
 		}
 
+		public static Request<LaunchBlockFlowResult> LaunchBlockFlow(ulong userID)
+		{
+			return null;
+		}
+
 		public static Request<LaunchFriendRequestFlowResult> LaunchFriendRequestFlow(ulong userID)
 		{
 			return null;
 		}
 
-		public static Request<UserAndRoomList> GetNextUserAndRoomListPage(UserAndRoomList list)
+		public static Request<LaunchUnblockFlowResult> LaunchUnblockFlow(ulong userID)
+		{
+			return null;
+		}
+
+		public static Request<BlockedUserList> GetNextBlockedUserListPage(BlockedUserList list)
 		{
 			return null;
 		}
 
 		public static Request<UserList> GetNextUserListPage(UserList list)
+		{
+			return null;
+		}
+
+		public static Request<UserCapabilityList> GetNextUserCapabilityListPage(UserCapabilityList list)
 		{
 			return null;
 		}

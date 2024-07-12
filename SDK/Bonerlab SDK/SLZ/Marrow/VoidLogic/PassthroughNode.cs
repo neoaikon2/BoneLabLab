@@ -1,8 +1,8 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
+	[Support(SupportFlags.Supported, null)]
 	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Passthrough")]
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/PassthroughNode")]
 	public class PassthroughNode : BaseNode
@@ -10,19 +10,18 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		private bool _cutoff;
 
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		public bool Cutoff
+		public override PortMetadata PortMetadata
 		{
 			get
 			{
-				return default(bool);
+				return default(PortMetadata);
 			}
 		}
 
-		protected override float CalculateValue()
+		public override void Calculate(NodeState nodeState)
 		{
-			return default(float);
 		}
 
 		public void Toggle()
@@ -35,11 +34,6 @@ namespace SLZ.Marrow.VoidLogic
 
 		public void TurnOff()
 		{
-		}
-
-		public override IReadOnlyList<InputDescription> DescribeInputs()
-		{
-			return null;
 		}
 
 		public PassthroughNode()

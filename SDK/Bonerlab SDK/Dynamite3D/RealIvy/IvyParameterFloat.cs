@@ -6,6 +6,7 @@ namespace Dynamite3D.RealIvy
 	public class IvyParameterFloat : IvyParameter
 	{
 		public IvyParameterFloat(float value)
+			: base()
 		{
 		}
 
@@ -15,7 +16,7 @@ namespace Dynamite3D.RealIvy
 
 		public static implicit operator float(IvyParameterFloat floatParameter)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public static implicit operator IvyParameterFloat(float floatValue)

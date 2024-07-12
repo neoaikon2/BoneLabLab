@@ -24,13 +24,7 @@ namespace SLZ.Marrow.Input
 
 		public virtual bool IsConnected { get; protected set; }
 
-		public virtual bool IsTracking
-		{
-			get
-			{
-				return default(bool);
-			}
-		}
+		public virtual bool IsTracking { get; protected set; }
 
 		public Vector3 Position { get; protected set; }
 

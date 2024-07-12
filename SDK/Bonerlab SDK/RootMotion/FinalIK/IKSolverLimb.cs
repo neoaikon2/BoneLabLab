@@ -25,11 +25,11 @@ namespace RootMotion.FinalIK
 
 			public float dot;
 
-			public AxisDirection(Vector3 _direction, Vector3 _axis)
+			public AxisDirection(Vector3 direction, Vector3 axis)
 			{
-				direction = _direction;
-				axis = _axis;
-				dot = 0;
+				this.dot = default(float);
+				this.axis = default(Vector3);
+				this.direction = default(Vector3);
 			}
 		}
 
@@ -67,7 +67,13 @@ namespace RootMotion.FinalIK
 
 		private AxisDirection[] axisDirectionsRight;
 
-		private AxisDirection[] axisDirections => null;
+		private AxisDirection[] axisDirections
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public void MaintainRotation()
 		{
@@ -90,14 +96,16 @@ namespace RootMotion.FinalIK
 		}
 
 		public IKSolverLimb()
+			: base()
 		{
 		}
 
 		public IKSolverLimb(AvatarIKGoal goal)
+			: this()
 		{
 		}
 
-		private void StoreAxisDirections(ref AxisDirection[] axisDirections)
+		private void StoreAxisDirections(AxisDirection[] axisDirections)
 		{
 		}
 

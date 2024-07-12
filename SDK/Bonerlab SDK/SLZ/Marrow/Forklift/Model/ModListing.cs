@@ -8,7 +8,7 @@ using SLZ.Serialize;
 namespace SLZ.Marrow.Forklift.Model
 {
 	[Serializable]
-	public class ModListing : IJSONPackable, IReadOnlyScannable
+	public class ModListing : IPackable, IReadOnlyScannable
 	{
 		private WeakReference<ModRepository> _repository;
 
@@ -22,13 +22,7 @@ namespace SLZ.Marrow.Forklift.Model
 
 		public string Version { get; set; }
 
-		public bool Internal { get; set; }
-
-		public List<string> Tags { get; set; }
-
 		public string ThumbnailUrl { get; set; }
-
-		public string ManifestUrl { get; set; }
 
 		public StringModTargetListingDictionary Targets { get; set; }
 
@@ -60,7 +54,7 @@ namespace SLZ.Marrow.Forklift.Model
 		{
 		}
 
-		public void Unpack(ObjectStore store, ObjectId objectId)
+		public void Unpack(ObjectStore store, string objectId)
 		{
 		}
 

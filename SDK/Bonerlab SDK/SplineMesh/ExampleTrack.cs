@@ -1,11 +1,13 @@
+using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SplineMesh
 {
-	[DisallowMultipleComponent]
-	[SelectionBase]
 	[ExecuteInEditMode]
+	[SelectionBase]
+	[DisallowMultipleComponent]
 	public class ExampleTrack : MonoBehaviour
 	{
 		private GameObject generated;
@@ -31,6 +33,11 @@ namespace SplineMesh
 		}
 
 		public void CreateMeshes()
+		{
+		}
+
+		public ExampleTrack()
+			: base()
 		{
 		}
 	}

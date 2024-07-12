@@ -9,7 +9,13 @@ namespace SLZ.Bonelab
 
 		private SplineContainer splineContainer;
 
-		public int Count => 0;
+		public int Count
+		{
+			get
+			{
+				return default(int);
+			}
+		}
 
 		public SplineContainer Container
 		{
@@ -20,6 +26,11 @@ namespace SLZ.Bonelab
 			set
 			{
 			}
+		}
+
+		public SplineTimeline()
+			: base()
+		{
 		}
 	}
 }

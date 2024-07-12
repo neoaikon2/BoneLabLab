@@ -1,6 +1,5 @@
-using SLZ.Utilities;
+using SLZ.Marrow.Audio;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.SFX
 {
@@ -46,15 +45,9 @@ namespace SLZ.SFX
 
 		public float maxVelocityPitch;
 
-		public AudioMixerGroup outputMixer;
+		private ManagedAudioPlayer _mapVelocity;
 
-		private AudioPlayer _apVelocity;
-
-		private AudioPlayer _apAcceleration;
-
-		private bool _hasApVel;
-
-		private bool _hasApAccel;
+		private ManagedAudioPlayer _mapAcceleration;
 
 		private void Awake()
 		{
@@ -80,7 +73,8 @@ namespace SLZ.SFX
 		{
 		}
 
-		private void StopAccel()
+		public MotorSFX()
+			: base()
 		{
 		}
 	}

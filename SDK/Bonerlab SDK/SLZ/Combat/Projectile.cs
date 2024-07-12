@@ -1,15 +1,14 @@
-using SLZ.AI;
+using System.Runtime.InteropServices;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Combat;
 using SLZ.Marrow.Data;
-using SLZ.Marrow.Utilities;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.EventSystems;
 
 namespace SLZ.Combat
 {
 	public class Projectile : MonoBehaviour
 	{
-		private static ComponentCache<Projectile> _cache;
-
 		private Rigidbody rb;
 
 		private bool isFinished;
@@ -26,8 +25,8 @@ namespace SLZ.Combat
 
 		public TrailRenderer trail;
 
-		[Header("Projectile Attributes ")]
 		[Tooltip("Bullet reference. Use stated values if empty")]
+		[Header("Projectile Attributes ")]
 		private ProjectileData _data;
 
 		[Tooltip("Velocity in Meters per Second")]
@@ -53,23 +52,15 @@ namespace SLZ.Combat
 
 		private TriggerRefProxy _proxy;
 
-		public GameObject projectileMeshGameObject;
-
+		[Header("Pool Options")]
 		[SerializeField]
 		[Range(0f, 19f)]
 		[Tooltip("Max amount of impact particle systems allowed to spawn")]
 		[Space(5f)]
-		[Header("Pool Options")]
 		private int MaxParticleSpawns;
 
 		[SerializeField]
-		private UnityEvent onCreate;
-
-		[SerializeField]
 		private UnityEventCollision onCollision;
-
-		[SerializeField]
-		private UnityEvent onDestroy;
 
 		[SerializeField]
 		private bool showDebugLines;
@@ -78,19 +69,25 @@ namespace SLZ.Combat
 
 		private bool _simulate;
 
-		private int _lastFrameUdate;
+		private Attack _attack;
 
-		public static ComponentCache<Projectile> Cache => null;
+		private ExecuteEvents.EventFunction<IAttackReceiver> _executeEventAction;
+
+		private int _lastFrameUdate;
 
 		private void Awake()
 		{
 		}
 
-		public void SetBulletObject(ProjectileData data, Transform startTransform, Vector3 locPos, Quaternion locRot, Rigidbody EmittingRigidbody = null, TriggerRefProxy proxy = null)
+		public void SetBulletObject(ProjectileData data, Transform startTransform, Vector3 locPos, Quaternion locRot, Rigidbody EmittingRigidbody = default(Rigidbody), TriggerRefProxy proxy = default(TriggerRefProxy))
 		{
 		}
 
-		public void EstablishVariables(string name = null, Transform EmittingTransform = null, TriggerRefProxy proxy = null)
+		public void EstablishVariables(string name = default(string), Transform EmittingTransform = default(Transform), TriggerRefProxy proxy = default(TriggerRefProxy))
+		{
+		}
+
+		private void ExecuteEventCallback(IAttackReceiver handler, BaseEventData eventData)
 		{
 		}
 
@@ -98,15 +95,12 @@ namespace SLZ.Combat
 		{
 		}
 
-		public void OnDestroy()
-		{
-		}
-
 		public void OnEnable()
 		{
 		}
 
-		public void OnDisable()
+		public Projectile()
+			: base()
 		{
 		}
 	}

@@ -12,7 +12,13 @@ namespace RootMotion.FinalIK
 
 		private bool fixedFrame;
 
-		private bool animatePhysics => false;
+		private bool animatePhysics
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		private void Start()
 		{
@@ -31,6 +37,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void FixTransforms()
+		{
+		}
+
+		public IKExecutionOrder()
+			: base()
 		{
 		}
 	}

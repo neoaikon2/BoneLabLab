@@ -5,5 +5,10 @@ namespace SLZ.Bonelab
 		protected override void OnSplineTrigger(SplineBody body)
 		{
 		}
+
+		public SplineJointDespawner()
+			: base()
+		{
+		}
 	}
 }

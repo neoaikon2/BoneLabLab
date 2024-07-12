@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+using SLZ.VRMK;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -24,16 +26,16 @@ namespace SLZ.Bonelab
 
 		public Transform targetHand;
 
-		[Tooltip("Maximum factor the arms can be stretched by. Default 1.05")]
 		[Range(1.001f, 3f)]
+		[Tooltip("Maximum factor the arms can be stretched by. Default 1.05")]
 		public float maxStretchFactor;
 
-		[Tooltip("Percentage of arm length where stretching starts. Default 0.8")]
 		[Range(0f, 1f)]
+		[Tooltip("Percentage of arm length where stretching starts. Default 0.8")]
 		public float stretchThreshold;
 
-		[Tooltip("Ratio of hyperextention to resulting arm length. Default 2")]
 		[Range(1f, 4f)]
+		[Tooltip("Ratio of hyperextention to resulting arm length. Default 2")]
 		public float stretchRatio;
 
 		private float _oldMaxStretchFactor;
@@ -148,28 +150,21 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void LimbStretch(float limbMag, float upperLength, float lowerLength, AnimationCurve stretchCurve, float stretchThreshold, out float newLimbMag, out float newUpperLength, out float newLowerLength)
+		private void LimbStretch(float limbMag, float upperLength, float lowerLength, AnimationCurve stretchCurve, float stretchThreshold, [Out] float newLimbMag, [Out] float newUpperLength, [Out] float newLowerLength)
 		{
-			newLimbMag = default(float);
-			newUpperLength = default(float);
-			newLowerLength = default(float);
 		}
 
-		private void LimbStretch2(float limbMag, float upperLength, float lowerLength, AnimationCurve stretchCurve, float stretchThreshold, out float newLimbMag, out float newUpperLength, out float newLowerLength)
+		private void LimbStretch2(float limbMag, float upperLength, float lowerLength, AnimationCurve stretchCurve, float stretchThreshold, [Out] float newLimbMag, [Out] float newUpperLength, [Out] float newLowerLength)
 		{
-			newLimbMag = default(float);
-			newUpperLength = default(float);
-			newLowerLength = default(float);
 		}
 
 		private void WristRelax()
 		{
 		}
 
-		public float ElbowIsNot(Vector3 neutralGh, float twistFloat, out float newTwistFloat)
+		public float ElbowIsNot(Vector3 neutralGh, float twistFloat, [Out] float newTwistFloat)
 		{
-			newTwistFloat = default(float);
-			return 0f;
+			return default(float);
 		}
 
 		private void CarpalHand(Transform wrist, Transform carpal, Transform hand, Quaternion targetRot, float segmentLength)
@@ -181,6 +176,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void SolveHandPose()
+		{
+		}
+
+		public ArticulatedArmController()
+			: base()
 		{
 		}
 	}

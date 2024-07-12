@@ -17,14 +17,6 @@ namespace RootMotion.FinalIK
 
 			private Quaternion defaultLocalRotation;
 
-			public BendBone()
-			{
-			}
-
-			public BendBone(Transform transform, float weight)
-			{
-			}
-
 			public void StoreDefaultLocalState()
 			{
 			}
@@ -32,18 +24,23 @@ namespace RootMotion.FinalIK
 			public void FixTransforms()
 			{
 			}
+
+			public BendBone()
+				: base()
+			{
+			}
 		}
 
 		[Tooltip("Reference to the FBBIK component.")]
 		public FullBodyBipedIK ik;
 
+		[LargeHeader("Position")]
 		[Range(0f, 1f)]
 		[Tooltip("Master weight for positioning the head.")]
-		[LargeHeader("Position")]
 		public float positionWeight;
 
-		[Range(0f, 1f)]
 		[Tooltip("The weight of moving the body along with the head")]
+		[Range(0f, 1f)]
 		public float bodyWeight;
 
 		[Tooltip("The weight of moving the thighs along with the head")]
@@ -53,17 +50,17 @@ namespace RootMotion.FinalIK
 		[Tooltip("If false, hands will not pull the head away if they are too far. Disabling this will improve performance significantly.")]
 		public bool handsPullBody;
 
-		[LargeHeader("Rotation")]
 		[Tooltip("The weight of rotating the head bone after solving")]
+		[LargeHeader("Rotation")]
 		[Range(0f, 1f)]
 		public float rotationWeight;
 
-		[Tooltip("Clamping the rotation of the body")]
 		[Range(0f, 1f)]
+		[Tooltip("Clamping the rotation of the body")]
 		public float bodyClampWeight;
 
-		[Range(0f, 1f)]
 		[Tooltip("Clamping the rotation of the head")]
+		[Range(0f, 1f)]
 		public float headClampWeight;
 
 		[Tooltip("The master weight of bending/twisting the spine to the rotation of the head effector. This is similar to CCD, but uses the rotation of the head effector not the position.")]
@@ -73,25 +70,25 @@ namespace RootMotion.FinalIK
 		[Tooltip("The bones to use for bending.")]
 		public BendBone[] bendBones;
 
+		[Range(0f, 1f)]
 		[LargeHeader("CCD")]
 		[Tooltip("Optional. The master weight of the CCD (Cyclic Coordinate Descent) IK effect that bends the spine towards the head effector before FBBIK solves.")]
-		[Range(0f, 1f)]
 		public float CCDWeight;
 
-		[Tooltip("The weight of rolling the bones in towards the target")]
 		[Range(0f, 1f)]
+		[Tooltip("The weight of rolling the bones in towards the target")]
 		public float roll;
 
-		[Tooltip("Smoothing the CCD effect.")]
 		[Range(0f, 1000f)]
+		[Tooltip("Smoothing the CCD effect.")]
 		public float damper;
 
 		[Tooltip("Bones to use for the CCD pass. Assign spine and/or neck bones.")]
 		public Transform[] CCDBones;
 
 		[Tooltip("Stretching the spine/neck to help reach the target. This is useful for making sure the head stays locked relative to the VR headset. NB! Stretching is done after FBBIK has solved so if you have the hand effectors pinned and spine bones included in the 'Stretch Bones', the hands might become offset from their target positions.")]
-		[LargeHeader("Stretching")]
 		[Range(0f, 1f)]
+		[LargeHeader("Stretching")]
 		public float postStretchWeight;
 
 		[Tooltip("Stretch magnitude limit.")]
@@ -206,11 +203,16 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		private void Solve(ref Vector3 pos1, ref Vector3 pos2, float nominalDistance)
+		private void Solve(Vector3 pos1, Vector3 pos2, float nominalDistance)
 		{
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public FBBIKHeadEffector()
+			: base()
 		{
 		}
 	}

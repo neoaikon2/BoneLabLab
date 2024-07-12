@@ -1,6 +1,3 @@
-using SLZ.Rig;
-using SLZ.SaveData;
-using SLZ.VRMK;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -18,34 +15,28 @@ namespace SLZ.Bonelab
 
 		public RigScreenOptions rigScreen;
 
-		public Audio_Manager audioManager;
-
-		public Control_GlobalTime control_GlobalTime;
-
 		public UniversalRenderPipelineAsset CustomPipelineAsset;
 
 		public bool toolTipDisplay
 		{
 			get
 			{
-				return false;
+				return default(bool);
 			}
 			set
 			{
 			}
 		}
 
-		public int physicsUpdateRate => 0;
+		public int physicsUpdateRate
+		{
+			get
+			{
+				return default(int);
+			}
+		}
 
 		public void OnEnable()
-		{
-		}
-
-		public void OnDisable()
-		{
-		}
-
-		private void InstanceOnDataManagerEventPublished(object sender, DataManagerEventArgs args)
 		{
 		}
 
@@ -78,6 +69,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void SEND_BODYLOG_VITALS()
+		{
+		}
+
+		public Control_Player()
+			: base()
 		{
 		}
 	}

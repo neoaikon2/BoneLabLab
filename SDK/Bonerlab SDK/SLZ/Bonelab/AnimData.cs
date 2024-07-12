@@ -13,5 +13,10 @@ namespace SLZ.Bonelab
 		public string animTrigger;
 
 		public AudioClip voiceClip;
+
+		public AnimData()
+			: base()
+		{
+		}
 	}
 }

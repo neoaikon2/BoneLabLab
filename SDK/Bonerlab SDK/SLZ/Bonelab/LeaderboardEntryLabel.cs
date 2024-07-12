@@ -1,6 +1,6 @@
 using System;
+using System.Runtime.CompilerServices;
 using SLZ.Data;
-using SLZ.Marrow.Utilities;
 using Steamworks.Data;
 using TMPro;
 using UnityEngine;
@@ -10,8 +10,6 @@ namespace SLZ.Bonelab
 {
 	public class LeaderboardEntryLabel : MonoBehaviour
 	{
-		private static ComponentCache<LeaderboardEntryLabel> _cache;
-
 		public int rank;
 
 		public string oculusID;
@@ -40,16 +38,6 @@ namespace SLZ.Bonelab
 
 		public int itemIndex;
 
-		public static ComponentCache<LeaderboardEntryLabel> Cache => null;
-
-		private void Awake()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
 		public void PopulateBoneUserText_Steam(LeaderboardEntry entry, BoneLeaderData data, BoneLeaderManager manager, bool displayPanel)
 		{
 		}
@@ -67,6 +55,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnDataComplete()
+		{
+		}
+
+		public LeaderboardEntryLabel()
+			: base()
 		{
 		}
 	}

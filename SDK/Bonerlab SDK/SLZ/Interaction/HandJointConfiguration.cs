@@ -125,5 +125,10 @@ namespace SLZ.Interaction
 		public void WakeupDrives(ConfigurableJoint joint, Rigidbody rb)
 		{
 		}
+
+		public HandJointConfiguration()
+			: base()
+		{
+		}
 	}
 }

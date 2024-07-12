@@ -6,7 +6,7 @@ namespace SLZ.Utilities
 	{
 		public static int GetListenerNumber(this UnityEventBase unityEvent)
 		{
-			return 0;
+			return default(int);
 		}
 	}
 }

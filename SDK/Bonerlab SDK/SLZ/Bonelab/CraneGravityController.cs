@@ -1,7 +1,6 @@
-using SLZ.Props;
-using SLZ.Utilities;
+using SLZ.Marrow.Audio;
+using SLZ.SFX;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Bonelab
 {
@@ -17,11 +16,9 @@ namespace SLZ.Bonelab
 
 		public GameObject redLight;
 
-		public AudioMixerGroup outputMixer;
+		private ManagedAudioPlayer _mapSmall;
 
-		private AudioPlayer apSmall;
-
-		private AudioPlayer apBig;
+		private ManagedAudioPlayer _mapBig;
 
 		public AudioClip[] gravityManipulatorSmallSounds;
 
@@ -41,11 +38,16 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		public void ForceGavityManipState(bool onOff)
+		{
+		}
+
 		public void FlopCraneGravity(bool isStart = false)
 		{
 		}
 
-		private void PlayAudioClip(AudioPlayer ap, AudioClip clip, float volume, Transform pos)
+		public CraneGravityController()
+			: base()
 		{
 		}
 	}

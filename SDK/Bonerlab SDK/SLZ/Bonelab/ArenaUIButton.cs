@@ -11,5 +11,10 @@ namespace SLZ.Bonelab
 		public Image buttonImage;
 
 		public TMP_Text buttonText;
+
+		public ArenaUIButton()
+			: base()
+		{
+		}
 	}
 }

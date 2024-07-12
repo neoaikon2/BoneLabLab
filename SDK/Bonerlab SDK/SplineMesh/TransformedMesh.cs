@@ -17,5 +17,10 @@ namespace SplineMesh
 		public Vector3 rotation;
 
 		public Vector3 scale;
+
+		public TransformedMesh()
+			: base()
+		{
+		}
 	}
 }

@@ -29,7 +29,7 @@ namespace SLZ.Marrow.Console
 			return null;
 		}
 
-		protected virtual ValueTuple<CommandStatus, string, object> ParseTokenAtIndex(List<ValueTuple<(string token, object parsed)>> previousTokens, int index, string token)
+		protected virtual ValueTuple<CommandStatus, string, object> ParseTokenAtIndex(List<ValueTuple<string, object>> previousTokens, int index, string token)
 		{
 			return default(ValueTuple<CommandStatus, string, object>);
 		}

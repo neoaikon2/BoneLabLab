@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -45,6 +46,11 @@ namespace RootMotion.FinalIK
 			protected abstract void CrossFadeStart();
 
 			protected abstract void OnApply(VRIK ik, AnimationCurve[] curves, float weight);
+
+			public Offset()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -70,6 +76,11 @@ namespace RootMotion.FinalIK
 				public void CrossFadeStart()
 				{
 				}
+
+				public PositionOffsetLink()
+					: base()
+				{
+				}
 			}
 
 			[Tooltip("Offset magnitude in the direction of the hit force")]
@@ -83,7 +94,7 @@ namespace RootMotion.FinalIK
 
 			protected override float GetLength(AnimationCurve[] curves)
 			{
-				return 0f;
+				return default(float);
 			}
 
 			protected override void CrossFadeStart()
@@ -91,6 +102,11 @@ namespace RootMotion.FinalIK
 			}
 
 			protected override void OnApply(VRIK ik, AnimationCurve[] curves, float weight)
+			{
+			}
+
+			public PositionOffset()
+				: base()
 			{
 			}
 		}
@@ -104,8 +120,8 @@ namespace RootMotion.FinalIK
 				[Tooltip("Reference to the bone that this hit point rotates")]
 				public IKSolverVR.RotationOffset rotationOffset;
 
-				[Tooltip("Weight of rotating the bone")]
 				[Range(0f, 1f)]
+				[Tooltip("Weight of rotating the bone")]
 				public float weight;
 
 				private Quaternion lastValue;
@@ -117,6 +133,11 @@ namespace RootMotion.FinalIK
 				}
 
 				public void CrossFadeStart()
+				{
+				}
+
+				public RotationOffsetLink()
+					: base()
 				{
 				}
 			}
@@ -131,7 +152,7 @@ namespace RootMotion.FinalIK
 
 			protected override float GetLength(AnimationCurve[] curves)
 			{
-				return 0f;
+				return default(float);
 			}
 
 			protected override void CrossFadeStart()
@@ -139,6 +160,11 @@ namespace RootMotion.FinalIK
 			}
 
 			protected override void OnApply(VRIK ik, AnimationCurve[] curves, float weight)
+			{
+			}
+
+			public RotationOffset()
+				: base()
 			{
 			}
 		}
@@ -156,6 +182,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void Hit(Collider collider, Vector3 force, Vector3 point)
+		{
+		}
+
+		public HitReactionVRIK()
+			: base()
 		{
 		}
 	}

@@ -53,12 +53,12 @@ namespace Ara
 
 			public Vector3 tangent;
 
-			public CurveFrame(Vector3 _position, Vector3 _normal, Vector3 _bitangent, Vector3 _tangent)
+			public CurveFrame(Vector3 position, Vector3 normal, Vector3 bitangent, Vector3 tangent)
 			{
-				position = _position;
-				normal = _normal;
-				bitangent = _bitangent;
-				tangent = _tangent;
+				this.tangent = default(Vector3);
+				this.bitangent = default(Vector3);
+				this.normal = default(Vector3);
+				this.position = default(Vector3);
 			}
 
 			public Vector3 Transport(Vector3 newTangent, Vector3 newPosition)
@@ -87,22 +87,22 @@ namespace Ara
 
 			public bool discontinuous;
 
-			public Point(Vector3 _position, Vector3 _velocity, Vector3 _tangent, Vector3 _normal, Color _color, float _thickness, float _texcoord, float _lifetime)
+			public Point(Vector3 position, Vector3 velocity, Vector3 tangent, Vector3 normal, Color color, float thickness, float texcoord, float lifetime)
 			{
-				position = _position;
-				velocity = _velocity;
-				tangent = _tangent;
-				normal = _normal;
-				color = _color;
-				thickness = _thickness;
-				life = _lifetime;
-				texcoord = _texcoord;
-				discontinuous = false;
+				this.discontinuous = default(bool);
+				this.texcoord = default(float);
+				this.life = default(float);
+				this.thickness = default(float);
+				this.color = default(Color);
+				this.normal = default(Vector3);
+				this.tangent = default(Vector3);
+				this.velocity = default(Vector3);
+				this.position = default(Vector3);
 			}
 
 			public static float CatmullRom(float p0, float p1, float p2, float p3, float t)
 			{
-				return 0f;
+				return default(float);
 			}
 
 			public static Point operator +(Point p1, Point p2)
@@ -118,8 +118,8 @@ namespace Ara
 
 		public const float epsilon = 1E-05f;
 
-		[Tooltip("Trail cross-section asset, determines the shape of the emitted trail. If no asset is specified, the trail will be a simple strip.")]
 		[Header("Overall")]
+		[Tooltip("Trail cross-section asset, determines the shape of the emitted trail. If no asset is specified, the trail will be a simple strip.")]
 		public TrailSection section;
 
 		[Tooltip("Whether to use world or local space to generate and simulate the trail.")]
@@ -140,8 +140,8 @@ namespace Ara
 		[Tooltip("Thickness multiplier, in meters.")]
 		public float thickness;
 
-		[Range(1f, 8f)]
 		[Tooltip("Amount of smoothing iterations applied to the trail shape.")]
+		[Range(1f, 8f)]
 		public int smoothness;
 
 		[Tooltip("Calculate accurate thickness at sharp corners.")]
@@ -150,17 +150,17 @@ namespace Ara
 		[Range(0f, 12f)]
 		public int cornerRoundness;
 
-		[FormerlySerializedAs("thicknessOverLenght")]
-		[Tooltip("How should the thickness of the curve evolve over its lenght. The horizontal axis is normalized lenght (in the [0,1] range) and the vertical axis is a thickness multiplier.")]
 		[Header("Length")]
+		[Tooltip("How should the thickness of the curve evolve over its lenght. The horizontal axis is normalized lenght (in the [0,1] range) and the vertical axis is a thickness multiplier.")]
+		[FormerlySerializedAs("thicknessOverLenght")]
 		public AnimationCurve thicknessOverLength;
 
 		[Tooltip("How should vertex color evolve over the trail's length.")]
 		[FormerlySerializedAs("colorOverLenght")]
 		public Gradient colorOverLength;
 
-		[Tooltip("How should the thickness of the curve evolve with its lifetime. The horizontal axis is normalized lifetime (in the [0,1] range) and the vertical axis is a thickness multiplier.")]
 		[Header("Time")]
+		[Tooltip("How should the thickness of the curve evolve with its lifetime. The horizontal axis is normalized lifetime (in the [0,1] range) and the vertical axis is a thickness multiplier.")]
 		public AnimationCurve thicknessOverTime;
 
 		[Tooltip("How should vertex color evolve over the trail's lifetime.")]
@@ -201,12 +201,12 @@ namespace Ara
 		[Range(0f, 1f)]
 		public float inertia;
 
-		[Tooltip("Amount of temporal smoothing applied to the velocity transferred from the transform to the trail.")]
 		[Range(0f, 1f)]
+		[Tooltip("Amount of temporal smoothing applied to the velocity transferred from the transform to the trail.")]
 		public float velocitySmoothing;
 
-		[Range(0f, 1f)]
 		[Tooltip("Amount of damping applied to the trail's velocity. Larger values will slow down the trail more as time passes.")]
+		[Range(0f, 1f)]
 		public float damping;
 
 		[Header("Rendering")]
@@ -218,8 +218,8 @@ namespace Ara
 
 		public bool useLightProbes;
 
-		[Tooltip("Quad mapping will send the shader an extra coordinate for each vertex, that can be used to correct UV distortion using tex2Dproj.")]
 		[Header("Texture")]
+		[Tooltip("Quad mapping will send the shader an extra coordinate for each vertex, that can be used to correct UV distortion using tex2Dproj.")]
 		public bool quadMapping;
 
 		[Tooltip("How to apply the texture over the trail: stretch it all over its lenght, or tile it.")]
@@ -282,25 +282,43 @@ namespace Ara
 
 		private Action<ScriptableRenderContext, Camera> renderCallback;
 
-		public Vector3 Velocity => default(Vector3);
-
-		private float DeltaTime => 0f;
-
-		private float FixedDeltaTime => 0f;
-
-		public Mesh mesh => null;
-
-		public Matrix4x4 worldToTrail => default(Matrix4x4);
-
-		public event Action onUpdatePoints
+		public Vector3 Velocity
 		{
-			[CompilerGenerated]
-			add
+			get
 			{
+				return default(Vector3);
 			}
-			[CompilerGenerated]
-			remove
+		}
+
+		private float DeltaTime
+		{
+			get
 			{
+				return default(float);
+			}
+		}
+
+		private float FixedDeltaTime
+		{
+			get
+			{
+				return default(float);
+			}
+		}
+
+		public Mesh mesh
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Matrix4x4 worldToTrail
+		{
+			get
+			{
+				return default(Matrix4x4);
 			}
 		}
 
@@ -382,7 +400,7 @@ namespace Ara
 
 		public float GetLenght(ElasticArray<Point> input)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private ElasticArray<Point> GetRenderablePoints(int start, int end)
@@ -403,12 +421,19 @@ namespace Ara
 		{
 		}
 
-		private void AppendSection(Point[] data, ref CurveFrame frame, int i, int count, float sectionThickness, float vCoord)
+		private void AppendSection(Point[] data, CurveFrame frame, int i, int count, float sectionThickness, float vCoord)
 		{
 		}
 
-		private void AppendFlatTrail(Point[] data, ref CurveFrame frame, int i, int count, float sectionThickness, float vCoord, ref int va, ref int vb)
+		private void AppendFlatTrail(Point[] data, CurveFrame frame, int i, int count, float sectionThickness, float vCoord, int va, int vb)
 		{
 		}
+
+		public AraTrail()
+			: base()
+		{
+		}
+
+		public event Action onUpdatePoints;
 	}
 }

@@ -6,9 +6,20 @@ namespace RootMotion
 	{
 		private static T sInstance;
 
-		public static T instance => null;
+		public static T instance
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		protected virtual void Awake()
+		{
+		}
+
+		public Singleton()
+			: base()
 		{
 		}
 	}

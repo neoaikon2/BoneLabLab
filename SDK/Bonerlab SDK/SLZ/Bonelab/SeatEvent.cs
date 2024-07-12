@@ -11,9 +11,9 @@ namespace SLZ.Bonelab
 		[Tooltip("Seat script goes here")]
 		public Seat seat;
 
-		[Header("Events")]
-		[Tooltip("Event to fire on player seated")]
 		[SerializeField]
+		[Tooltip("Event to fire on player seated")]
+		[Header("Events")]
 		private UnityEvent OnSeat;
 
 		[Tooltip("Event to fire on player unseated")]
@@ -33,6 +33,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnUnSeated()
+		{
+		}
+
+		public SeatEvent()
+			: base()
 		{
 		}
 	}

@@ -16,5 +16,10 @@ namespace SLZ.Bonelab
 		public static void Unlock(string id)
 		{
 		}
+
+		public Achievements()
+			: base()
+		{
+		}
 	}
 }

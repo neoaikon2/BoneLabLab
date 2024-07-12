@@ -4,11 +4,13 @@ using UnityEngine;
 
 namespace SLZ.Rig
 {
-	public class ArtRig : Rig
+	public class ArtRig : MonoBehaviour
 	{
-		[Header("ArtRig")]
-		public bool testTween2;
+		public Transform m_handLf;
 
+		public Transform m_handRt;
+
+		[Header("ArtRig")]
 		public Transform l3Vert;
 
 		public Transform l1Vert;
@@ -19,15 +21,11 @@ namespace SLZ.Rig
 
 		public Transform eyeRt;
 
-		public Transform clavLf;
-
 		public Transform scapLf;
 
 		public Transform wristLf;
 
 		public Transform carpalLf;
-
-		public Transform clavRt;
 
 		public Transform scapRt;
 
@@ -46,6 +44,18 @@ namespace SLZ.Rig
 		public Transform buttLf;
 
 		public Transform buttRt;
+
+		public Transform armUpperTwistLf;
+
+		public Transform armUpperTwistRt;
+
+		public Transform armLowerTwistLf;
+
+		public Transform armLowerTwistRt;
+
+		public Transform legUpperTwistLf;
+
+		public Transform legUpperTwistRt;
 
 		[Header("Art Offsets")]
 		public Transform artHips;
@@ -72,7 +82,11 @@ namespace SLZ.Rig
 
 		public Transform artUpperArmLf;
 
+		public Transform artUpperArmTwistLf;
+
 		public Transform artLowerArmLf;
+
+		public Transform artLowerArmTwistLf;
 
 		public Transform artWristLf;
 
@@ -86,7 +100,11 @@ namespace SLZ.Rig
 
 		public Transform artUpperArmRt;
 
+		public Transform artUpperArmTwistRt;
+
 		public Transform artLowerArmRt;
+
+		public Transform artLowerArmTwistRt;
 
 		public Transform artWristRt;
 
@@ -96,6 +114,8 @@ namespace SLZ.Rig
 
 		public Transform artUpperLegLf;
 
+		public Transform artUpperLegTwistLf;
+
 		public Transform artLowerLegLf;
 
 		public Transform artFootLf;
@@ -103,6 +123,8 @@ namespace SLZ.Rig
 		public Transform artToeLf;
 
 		public Transform artUpperLegRt;
+
+		public Transform artUpperLegTwistRt;
 
 		public Transform artLowerLegRt;
 
@@ -184,51 +206,62 @@ namespace SLZ.Rig
 		[SerializeField]
 		private HandPoseAnimator _rightAnimatorHand;
 
-		public HandPoseAnimator LeftAnimatorHand => null;
+		private float _eyeDamper;
 
-		public HandPoseAnimator RightAnimatorHand => null;
+		public HandPoseAnimator LeftAnimatorHand
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public override void Reset()
+		public HandPoseAnimator RightAnimatorHand
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public void Reset()
 		{
 		}
 
-		public override void OnAwake()
+		public void ArtOutputAwake(PhysicsRig rig)
 		{
 		}
 
-		public override void OnStart()
+		public void MountRig(PhysicsRig rig)
 		{
 		}
 
-		public override void OnUpdate()
+		public void UnmountRig()
 		{
 		}
 
-		public override void OnLateUpdate()
-		{
-		}
-
-		public override void Teleport(Vector3 displace, bool zeroVelocity = false)
-		{
-		}
-
-		public override void SetAvatar(SLZ.VRMK.Avatar avatar)
-		{
-		}
-
-		public void ApplyRotationOffsetsToRig(SLZ.VRMK.Avatar avatar)
-		{
-		}
-
-		private void TweenSpine(SLZ.VRMK.Avatar avatar)
-		{
-		}
-
-		private void SetArms(Rig inRig, SLZ.VRMK.Avatar avatar)
+		public void ArtOutputUpdate(PhysicsRig inRig)
 		{
 		}
 
 		private void SolveCarpal(SimpleTransform wrist, SimpleTransform hand, Transform carpal, float segmentLength)
+		{
+		}
+
+		public void ArtOutputLateUpdate(PhysicsRig inRig)
+		{
+		}
+
+		public void SetArtOutputAvatar(PhysicsRig inRig, SLZ.VRMK.Avatar avatar)
+		{
+		}
+
+		private void ApplyRotationOffsetsToRig(SLZ.VRMK.Avatar avatar)
+		{
+		}
+
+		public ArtRig()
+			: base()
 		{
 		}
 	}

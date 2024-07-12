@@ -6,6 +6,8 @@ namespace SLZ.Marrow.Utilities
 {
 	public class MarrowPlayerLoop
 	{
+		private Action _postTimeUpdateDelegate;
+
 		private Action _startFrameDelegate;
 
 		private Action _preNewInputUpdateDelegate;
@@ -22,14 +24,6 @@ namespace SLZ.Marrow.Utilities
 
 		private Action _endFrameDelegate;
 
-		public void RegisterComponent(MarrowBehaviour gameComponent)
-		{
-		}
-
-		public void UnregisterComponent(MarrowBehaviour gameComponent)
-		{
-		}
-
 		public void RegisterLoopAction(UpdateLoopActions loopAction, Action action)
 		{
 		}
@@ -43,6 +37,10 @@ namespace SLZ.Marrow.Utilities
 		}
 
 		private void AddLoopSystem<CustomSystemT, SubSystemT>(PlayerLoopSystem system, int subSysIdx, PlayerLoopSystem.UpdateFunction Callback, bool isBefore = false)
+		{
+		}
+
+		private void OnPostTimeUpdate()
 		{
 		}
 

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace SLZ.Interaction
@@ -34,8 +33,6 @@ namespace SLZ.Interaction
 
 		private float _defaultDriveMaxForce;
 
-		public AudioMixerGroup mixerGroup;
-
 		private void Awake()
 		{
 		}
@@ -49,6 +46,11 @@ namespace SLZ.Interaction
 		}
 
 		private void OnGripDetached(Hand hnad)
+		{
+		}
+
+		public PullDevice()
+			: base()
 		{
 		}
 	}

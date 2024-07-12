@@ -43,5 +43,10 @@ namespace SLZ.Data
 		public int puzzle_KeyRun;
 
 		public int puzzle_Ascent;
+
+		public GameProgress_Bonelab()
+			: base()
+		{
+		}
 	}
 }

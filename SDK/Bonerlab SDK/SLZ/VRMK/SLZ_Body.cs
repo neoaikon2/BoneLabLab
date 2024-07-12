@@ -1,110 +1,41 @@
 using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Marrow.Audio;
 using SLZ.Marrow.Utilities;
 using SLZ.Rig;
-using SLZ.SFX;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace SLZ.VRMK
 {
 	public class SLZ_Body : MonoBehaviour
 	{
 		[Serializable]
-		public class FollowObjects
-		{
-			public Transform head;
-
-			public Transform chest;
-
-			public Transform leftHand;
-
-			public Transform rightHand;
-
-			public Transform pelvis;
-
-			public Transform lfFoot;
-
-			public Transform rtFoot;
-
-			[Tooltip("Used for up / gravity direction and default floor plane")]
-			public Transform playerRoot;
-		}
-
-		[Serializable]
-		public class Spine
-		{
-			public bool computeVelocity;
-
-			public bool thoracicLumbarSpine;
-
-			public bool feetCenter;
-
-			[Range(0f, 1f)]
-			public float trackedPelvisWeight;
-
-			public bool noSlerp;
-
-			[Range(0f, 1f)]
-			[Tooltip("Weight of spine leaning to maintain balance due to acceleration (0 to 1)")]
-			public float accelLeanWeight;
-
-			[Range(0f, 4f)]
-			[Tooltip("Weight of spine leaning to maintain balance due to fluid drag (0 to 4, 1 default)")]
-			public float dragWeight;
-
-			[Tooltip("Product of p(mass density) * A(area) * Cd(drag coef). p = 1.2 at 20celcius, A ~= .4m2, Cd ~= .6 - 1")]
-			public float pACdProduct;
-
-			public float accelDragTan;
-
-			public float dragTan;
-
-			public Vector3 dragUpDir;
-
-			public float angularVelocity;
-
-			[HideInInspector]
-			public Vector3 velocitySanGrav;
-
-			[HideInInspector]
-			public Vector3 accelerationSanGrav;
-
-			[HideInInspector]
-			public Vector3 velocitySanGravNormal;
-
-			[HideInInspector]
-			public Vector3 accelerationSanGravNormal;
-
-			[HideInInspector]
-			public float velocitySanGravMag;
-
-			[HideInInspector]
-			public float accelSanGravMag;
-
-			public AnimationCurve thoracicTwistCurve;
-
-			public float spineCrouchOffset;
-
-			private float deltaLerpTime;
-
-			private Vector3 lastAngularFwd;
-
-			internal void BodyVelocity(Vector3 vel, Vector3 accel, Quaternion feetCenterRot, float deltaTime)
-			{
-			}
-		}
-
-		[Serializable]
 		public class Footstep
 		{
-			public float stepSpeed;
+			public enum StepState
+			{
+				Grounded = 0,
+				Lifted = 1,
+				Soaring = 2,
+				Stepping = 3
+			}
 
-			public Vector3 characterSpaceOffset;
+			public Transform target;
+
+			public float stepSpeed;
 
 			public Vector3 position;
 
 			public Quaternion rotation;
 
-			public bool isSupportLeg;
+			public float footOffset;
+
+			public float heelOffset;
+
+			public float stepProgressThreshold;
 
 			public Vector3 stepFrom;
 
@@ -112,64 +43,90 @@ namespace SLZ.VRMK
 
 			private Quaternion stepFromRot;
 
+			public int gear;
+
 			private Quaternion stepToRot;
 
-			private float supportLegW;
+			private float _toeLiftOffset;
 
-			private float supportLegWV;
+			private float _toeLiftTo;
 
-			private float minAngle;
+			private float _freeOffsetT;
+
+			private float _freeOffsetVel;
+
+			private SimpleTransform _soaringOffset;
+
+			public FootstepSFX stepSfx;
+
+			private HashSet<Rigidbody> _selfRbs;
+
+			private RaycastHit[] _footHits;
+
+			private Footstep _otherStep;
+
+			[Range(0f, 1f)]
+			public float supportLegW;
+
+			public StepState stepState;
 
 			public Quaternion grounderRotOffset;
 
-			private Grounder grounder;
-
-			private Quaternion toHitNormal;
-
-			private RaycastHit toeHit;
-
-			private Transform hip;
+			public Transform hip;
 
 			private bool _wasGrounded;
 
+			private Locomotion _loco;
+
 			private float _wasGroundedTimer;
 
-			public bool isStepping => false;
+			public bool isStepping
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
 			public float stepProgress { get; private set; }
 
-			public float heightFromFeet { get; private set; }
+			public float stepProgressSmooth { get; private set; }
 
 			public Vector3 grounderOffset { get; private set; }
 
 			public bool isGrounded { get; private set; }
 
-			public Footstep(Vector3 footPosition, Quaternion footRotation, Vector3 characterSpaceOffset, Grounder ground, Transform hipTran, float relaxTwistMinAngle)
-			{
-			}
-
 			public void Reset(Vector3 footPosition, Quaternion footRotation)
 			{
 			}
 
-			public void StartStep(Vector3 p, Quaternion rootRotation)
+			public void OnAwake(Vector3 charSpaceOffset, Locomotion l, Footstep otherStep, HashSet<Rigidbody> excludeRbs)
 			{
 			}
 
-			public void UpdateStepping(Vector3 p, Vector3 comVelGrndVector, Vector3 accel, float angularVel, Quaternion rootRotation, float stepSpeedUpdate, float stepLZ, Vector3 rootUp, float deltaTime)
+			public void StartStep(float velocitySanGravNorm)
 			{
 			}
 
-			public void UpdateStanding(Quaternion rootRotation, Vector3 rootUp, float deltaTime)
+			public void UpdateStepping(Vector3 rootPosition, Quaternion rootRotation, Quaternion footRotation, Vector3 rootUp, Vector3 velocitySanGrav, Vector3 accel, float angularVel, float velocitySanGravNorm, float stepLZ, float velDot, float sacrumHeightWeight, float deltaTime)
 			{
 			}
 
-			public void UpdateSoaring(Vector3 comToeLz, Quaternion rootRotation, Vector3 rootUp, float deltaTime)
+			public void UpdateStanding(Vector3 rootPosition, Quaternion rootRotation, Quaternion footRotation, Vector3 rootUp, Vector3 velocitySanGrav, float stepLZ, float deltaTime)
 			{
 			}
 
-			public void Update(FootstepSFX stepSfx, AnimationCurve stepZInterpolation, bool rightFoot, float stepRadius, Vector3 velAccel, Quaternion rootRotation, float deltaTime)
+			public void PreUpdate(Vector3 rootPosition, Quaternion rootRotation, Quaternion footRotation, Vector3 rootUp, Vector3 velocitySanGrav, Vector3 accel, float angularVel, float velocitySanGravNorm, float velDot, float sacrumHeightWeight, float deltaTime)
 			{
+			}
+
+			public void UpdateSoaring(Vector3 rootPosition, Quaternion rootRotation, Quaternion footRotation, Vector3 rootUp, Vector3 velocitySanGrav, float angularVelocity, float stepLZ, float deltaTime)
+			{
+			}
+
+			public ValueTuple<SimpleTransform, float, float> Update(float velocitySanGravNorm, Quaternion rootRotation, float sacrumHeightWeight, float deltaTime)
+			{
+				return default(ValueTuple<SimpleTransform, float, float>);
 			}
 
 			public void AddDeltaRotation(float delta, Vector3 pivot)
@@ -177,6 +134,14 @@ namespace SLZ.VRMK
 			}
 
 			public void AddDeltaPosition(Vector3 delta)
+			{
+			}
+
+			public void UpdateLifted(Vector3 rootPosition, Quaternion rootRotation, Quaternion footRotation, Vector3 rootUp, Vector3 velocitySanGrav, float stepLZ, float deltaTime)
+			{
+			}
+
+			private void CaptureOffset(Quaternion footRotation)
 			{
 			}
 
@@ -184,12 +149,13 @@ namespace SLZ.VRMK
 			{
 			}
 
-			private RaycastHit GetRaycastHit(Vector3 offsetFromToe, Vector3 rootUp)
+			public bool RaycastExcludeRbHashset(Vector3 origin, Vector3 direction, [Out] RaycastHit hitInfo, float maxDistance, int layerMask, RaycastHit[] buffer, HashSet<Rigidbody> rbHashSet)
 			{
-				return default(RaycastHit);
+				return default(bool);
 			}
 
-			private void SetFootToPoint(Vector3 normal, Vector3 point, Vector3 rootUp, float deltaTime)
+			public Footstep()
+				: base()
 			{
 			}
 		}
@@ -197,63 +163,46 @@ namespace SLZ.VRMK
 		[Serializable]
 		public class Locomotion
 		{
-			[Tooltip("Makes a step only if step target position is at least this far from the current footstep or the foot does not reach the current footstep anymore or footstep angle is past the 'Angle Threshold'.")]
-			public float stepThreshold;
-
-			[Tooltip("Percentage of previous step completion before another can be triggered 0-1f")]
-			public float stepProgressThresholdLf;
-
-			[Tooltip("Percentage of previous step completion before another can be triggered 0-1f")]
-			public float stepProgressThresholdRt;
-
-			[Tooltip("Makes a step only if step target position is at least 'Step Threshold' far from the current footstep or the foot does not reach the current footstep anymore or footstep angle is past this value.")]
-			public float angleThreshold;
-
-			public float stepLzLf;
-
-			public float stepLzRt;
-
-			[Tooltip("The speed of steps.")]
-			[Range(0.5f, 5f)]
-			public float stepSpeed;
-
-			[Tooltip("Degrees splayed 'Y' over 0 - 1 squat factor 'X'.")]
-			public AnimationCurve FootDistanceVCurve;
-
-			public AnimationCurve StepThresholdVCurve;
-
-			public AnimationCurve StepSpeedVCurve;
-
-			[Range(0f, 180f)]
-			[Tooltip("Rotates the foot while the leg is not stepping to relax the twist rotation of the leg if ideal rotation is past this angle.")]
-			public float relaxLegTwistMinAngle;
+			public Transform neutralRoot;
 
 			[Range(0f, 1f)]
-			public float animCycle;
+			public float supportLeg;
 
-			public int gearLf;
+			private const float angleThreshold = 40f;
 
-			public int gearRt;
+			[HideInInspector]
+			public float legLength;
+
+			[HideInInspector]
+			public float tippyToeExt;
+
+			[Range(0f, 1f)]
+			private float animCycle;
+
+			private float _legLengthMult;
+
+			private float _legLengthInvMult;
 
 			public Gear[] gears;
 
-			public Grounder grounder;
+			[Tooltip("Layers to ground the character to. Make sure to exclude the layer of the character controller.")]
+			public LayerMask layers;
 
-			public FootstepSFX leftStepSfx;
-
-			public FootstepSFX rightStepSfx;
-
-			private Footstep[] footsteps;
+			public Footstep[] footsteps;
 
 			private float lastAnimCycle;
 
 			private bool wasStepping;
 
-			public void Initiate(SkeletonRig animRig)
+			public void SetAvatar(Avatar avatar)
 			{
 			}
 
-			public void Reset(SkeletonRig animRig)
+			public void Initiate(SLZ.Rig.Rig animRig)
+			{
+			}
+
+			public void Reset(SLZ.Rig.Rig animRig)
 			{
 			}
 
@@ -265,21 +214,8 @@ namespace SLZ.VRMK
 			{
 			}
 
-			public Vector3 GetFootstepNeutralOffset(int stepIndex)
+			public void Solve(Vector3 velocitySanGrav, float velocitySanGravMag, Vector3 accelerationSanGrav, float angularVelocity, float sacrumHeightWeight, float deltaTime, [Out] SimpleTransform footstepLf, [Out] SimpleTransform footstepRt, [Out] float leftFootOffset, [Out] float rightFootOffset, [Out] float leftHeelOffset, [Out] float rightHeelOffset)
 			{
-				return default(Vector3);
-			}
-
-			public void Solve(SkeletonRig animRig, Spine spine, float legLength, float sacrumHeightWeight, int supportLegIndex, float deltaTime, out Vector3 leftFootPosition, out Vector3 rightFootPosition, out Quaternion leftFootRotation, out Quaternion rightFootRotation, out float leftFootOffset, out float rightFootOffset, out float leftHeelOffset, out float rightHeelOffset)
-			{
-				leftFootPosition = default(Vector3);
-				rightFootPosition = default(Vector3);
-				leftFootRotation = default(Quaternion);
-				rightFootRotation = default(Quaternion);
-				leftFootOffset = default(float);
-				rightFootOffset = default(float);
-				leftHeelOffset = default(float);
-				rightHeelOffset = default(float);
 			}
 
 			public void UpdateAnimCycle(float deltaTime)
@@ -288,10 +224,15 @@ namespace SLZ.VRMK
 
 			private bool CanStep()
 			{
-				return false;
+				return default(bool);
 			}
 
-			private void GearShifter(Vector3 velocity, Vector3 accel, ref int gear)
+			private void GearShifter(float speed, int gear)
+			{
+			}
+
+			public Locomotion()
+				: base()
 			{
 			}
 		}
@@ -303,15 +244,28 @@ namespace SLZ.VRMK
 
 			public float downshiftVel;
 
+			[Range(0f, 1f)]
+			[Tooltip("Percentage of previous step completion before another can be triggered 0-1f")]
+			public float stepProgressThreshold;
+
+			[Range(0f, 1f)]
+			[Tooltip("Blend of how much step is behind and in front of neutral point")]
+			public float stepfromtoWeight;
+
 			[Tooltip("The height of the foot by normalized step progress (0 - 1).")]
 			public AnimationCurve stepHeight;
 
 			[Tooltip("The height offset of the heel by normalized step progress (0 - 1).")]
 			public AnimationCurve heelHeight;
 
-			public AnimationCurve stepHeightBackwards;
+			[FormerlySerializedAs("StepZInterpolationVCurve")]
+			public AnimationCurve StepZInterpolation;
 
-			public AnimationCurve heelHeightBackwards;
+			[Range(0f, 1f)]
+			public float stepTakeOff;
+
+			[Range(0f, 1f)]
+			public float stepLand;
 
 			public AnimationCurve StepProgressThreshVCurve;
 
@@ -319,70 +273,21 @@ namespace SLZ.VRMK
 
 			public AnimationCurve StepLandingZoneVCurve;
 
-			public AnimationCurve StepZInterpolationVCurve;
-		}
-
-		[Serializable]
-		public class Grounder
-		{
-			[Serializable]
-			public enum Quality
+			public Gear()
+				: base()
 			{
-				ToeRay = 0,
-				ToeHeelRay = 1
 			}
-
-			public bool useGrounder;
-
-			[Tooltip("Layers to ground the character to. Make sure to exclude the layer of the character controller.")]
-			public LayerMask layers;
-
-			[Tooltip("The raycasting quality.")]
-			public Quality quality;
-
-			[Tooltip("Max step height. Maximum vertical distance of Grounding from the root of the character.")]
-			public float maxStep;
-
-			[Tooltip("Max Foot Rotation Angle. Max angular offset from the foot's rotation.")]
-			[Range(0f, 90f)]
-			public float maxFootRotationAngle;
-
-			[Tooltip("The speed of moving the feet up/down.")]
-			public float footSpeed;
-
-			[Tooltip("Speed of slerping the feet to their grounded rotations.")]
-			public float footRotationSpeed;
 		}
-
-		private int supportLegIndex;
-
-		private Vector3 _playerUp;
-
-		private Quaternion feetAngleSlerp;
 
 		private float _hipZDamped;
 
 		private float _hipZVelocity;
 
-		private float _velocitySanGravMagRetainer;
-
-		private float _accelSanGravMagRetainer;
-
-		public SkeletonRig animationRig;
-
-		public Spine spine;
+		public HeptaRig skeletonRig;
 
 		public Locomotion locomotion;
 
-		[HideInInspector]
-		public float footLength;
-
-		[Tooltip("The transforms to solve the body for.")]
-		public FollowObjects followObjects;
-
-		public bool sitting;
-
-		public void OnStart(Avatar avatar, PhysicsRig physRig)
+		public void OnStart()
 		{
 		}
 
@@ -390,25 +295,13 @@ namespace SLZ.VRMK
 		{
 		}
 
-		private void FeetCenter(float deltaTime)
+		public ValueTuple<SimpleTransform, SimpleTransform, SimpleTransform, SimpleTransform, float, float> SolveLegs(float deltaTime, Vector3 velocitySanGrav, float velocitySanGravMag, Vector3 accelerationSanGrav, float angularVelocity, float sacrumHeightWeight, SimpleTransform pelvisOffset)
 		{
+			return default(ValueTuple<SimpleTransform, SimpleTransform, SimpleTransform, SimpleTransform, float, float>);
 		}
 
-		private void LimbLimit(float limbMag, float upperLength, float lowerLength, out float newLimbMag)
-		{
-			newLimbMag = default(float);
-		}
-
-		private void SolveLegs(Avatar avatar, out SimpleTransform pelvisOffset, bool fullBody, float deltaTime)
-		{
-			pelvisOffset = default(SimpleTransform);
-		}
-
-		public void CalibratePlayerBodyScale(Avatar avatar)
-		{
-		}
-
-		public void FullBodyUpdate3(float deltaTime, Vector3 pelvisVelocity, Vector3 pelvisAccel, PhysicsRig physRig, ref SimpleTransform pelvisOffset, bool fullBody = false)
+		public SLZ_Body()
+			: base()
 		{
 		}
 	}

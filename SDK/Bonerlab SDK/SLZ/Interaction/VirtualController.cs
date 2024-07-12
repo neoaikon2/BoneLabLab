@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
@@ -8,13 +10,13 @@ namespace SLZ.Interaction
 	[Serializable]
 	public class VirtualController
 	{
-		private const float displaceSoftLimitArmLengths = 0.18f;
+		private const float softLimitArmLengths = 0.18f;
 
-		private const float displaceHardLimitArmLengths = 0.58f;
+		private const float hardLimitArmLengths = 0.58f;
 
-		private const float angDisplaceSoftLimitDegrees = 16f;
+		private const float softLimitDegrees = 16f;
 
-		private const float angDisplaceHardLimitDegrees = 142f;
+		private const float hardLimitDegrees = 142f;
 
 		private float _twistWindup;
 
@@ -22,10 +24,6 @@ namespace SLZ.Interaction
 		public VirtualControllerSettings defaultSettings;
 
 		private SimpleTransform _hostOffset;
-
-		private Vector3 _acceleration;
-
-		private Vector3 _velocity;
 
 		private float _artificialDelta;
 
@@ -35,12 +33,8 @@ namespace SLZ.Interaction
 
 		private float _artDelAngVelocity;
 
-		private float _blend;
-
 		[HideInInspector]
 		public SimpleTransform overrideVCTransform;
-
-		public Action OnPreSolve;
 
 		public Action<SimpleTransform> OnVirtualControllerSolve;
 
@@ -104,20 +98,17 @@ namespace SLZ.Interaction
 
 		private bool CheckHandDesync(HandGripPair pair, SimpleTransform contHandle, SimpleTransform rigHandle)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public bool FetchGrips(out HandGripPair primary)
+		public bool FetchGrips([Out] HandGripPair primary)
 		{
-			primary = default(HandGripPair);
-			return false;
+			return default(bool);
 		}
 
-		public bool FetchGrips(out HandGripPair primary, out HandGripPair secondary)
+		public bool FetchGrips([Out] HandGripPair primary, [Out] HandGripPair secondary)
 		{
-			primary = default(HandGripPair);
-			secondary = default(HandGripPair);
-			return false;
+			return default(bool);
 		}
 
 		public void AddVCOverride(Grip grip, VirtualControllerOverride vcOverride)
@@ -128,30 +119,27 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private bool GetVirtualControllerOverride(Grip primary, Grip secondary, out VirtualControllerOverride vcOverride)
+		private bool GetVirtualControllerOverride(Grip primary, Grip secondary, [Out] VirtualControllerOverride vcOverride)
 		{
-			vcOverride = null;
-			return false;
+			return default(bool);
 		}
 
 		private bool ContainsVirtualControllerOverride(Grip primary)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private bool GetVirtualControllerOverride(Grip primary, out VirtualControllerOverride vcOverride)
+		private bool GetVirtualControllerOverride(Grip primary, [Out] VirtualControllerOverride vcOverride)
 		{
-			vcOverride = null;
-			return false;
+			return default(bool);
 		}
 
 		public void CalcBlendOffset(HandGripPair pair)
 		{
 		}
 
-		public SimpleTransform HandleBlendOffset(bool isFirstPass, bool isSingleHanded, SimpleTransform vcInWorld, SimpleTransform rigInHost, out float rotDelta)
+		public SimpleTransform HandleBlendOffset(bool isFirstPass, bool isSingleHanded, SimpleTransform vcInWorld, SimpleTransform rigInHost, [Out] float rotDelta)
 		{
-			rotDelta = default(float);
 			return default(SimpleTransform);
 		}
 
@@ -169,6 +157,11 @@ namespace SLZ.Interaction
 		}
 
 		public void Solve()
+		{
+		}
+
+		public VirtualController()
+			: base()
 		{
 		}
 	}

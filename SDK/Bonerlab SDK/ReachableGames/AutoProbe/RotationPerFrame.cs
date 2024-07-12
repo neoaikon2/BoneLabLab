@@ -9,5 +9,10 @@ namespace ReachableGames.AutoProbe
 		private void Update()
 		{
 		}
+
+		public RotationPerFrame()
+			: base()
+		{
+		}
 	}
 }

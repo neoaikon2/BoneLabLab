@@ -36,17 +36,9 @@ namespace RootMotion.FinalIK
 
 		private bool useFABRIK;
 
-		public override bool IsValid(IKSolver solver, ref string message)
+		public override bool IsValid(IKSolver solver, string message)
 		{
-			return false;
-		}
-
-		public IKMappingSpine()
-		{
-		}
-
-		public IKMappingSpine(Transform[] spineBones, Transform leftUpperArmBone, Transform rightUpperArmBone, Transform leftThighBone, Transform rightThighBone)
-		{
+			return default(bool);
 		}
 
 		public void SetBones(Transform[] spineBones, Transform leftUpperArmBone, Transform rightUpperArmBone, Transform leftThighBone, Transform rightThighBone)
@@ -67,7 +59,7 @@ namespace RootMotion.FinalIK
 
 		private bool UseFABRIK()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void ReadPose()
@@ -87,6 +79,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void MapToSolverPositions(IKSolverFullBody solver)
+		{
+		}
+
+		public IKMappingSpine()
+			: base()
 		{
 		}
 	}

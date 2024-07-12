@@ -11,11 +11,16 @@ namespace SLZ.Bonelab
 		{
 			public GameObject door;
 
-			public SpawnableCratePlacer[] items;
+			public CrateSpawner[] items;
 
 			public string saveVar;
 
 			public bool overrideOpen;
+
+			public SpawnableDoorGroup()
+				: base()
+			{
+			}
 		}
 
 		public float doorHighOffset;
@@ -33,6 +38,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OPENDOOR(int i)
+		{
+		}
+
+		public SpawnableDoorStateSetter()
+			: base()
 		{
 		}
 	}

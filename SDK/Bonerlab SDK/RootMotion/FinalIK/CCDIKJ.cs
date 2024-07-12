@@ -1,18 +1,19 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Animations;
 using UnityEngine.Playables;
 
 namespace RootMotion.FinalIK
 {
-	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK Jobs/CCD IKJ")]
 	[RequireComponent(typeof(Animator))]
+	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK Jobs/CCD IKJ")]
 	public class CCDIKJ : MonoBehaviour
 	{
 		[Tooltip("The target Transform of this solver.")]
 		public Transform target;
 
-		[Range(0f, 1f)]
 		[Tooltip("The master weight of this solver.")]
+		[Range(0f, 1f)]
 		public float weight;
 
 		[Tooltip("Minimum offset from last reached position. Will stop solving if offset is less than tolerance.If tolerance is zero, will iterate until maxIterations.")]
@@ -49,6 +50,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDisable()
+		{
+		}
+
+		public CCDIKJ()
+			: base()
 		{
 		}
 	}

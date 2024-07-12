@@ -1,14 +1,12 @@
 using System;
 using System.Collections.Generic;
-using SLZ.Marrow.Utilities;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SLZ.Interaction
 {
 	public class InteractableHostManager : MonoBehaviour
 	{
-		private static ComponentCache<InteractableHostManager> _cache;
-
 		public InteractableHost[] hosts;
 
 		public Action<InteractableHost, Hand> onHandAttached;
@@ -18,23 +16,13 @@ namespace SLZ.Interaction
 		[HideInInspector]
 		public List<InteractableHost> grabbedHosts;
 
-		public static ComponentCache<InteractableHostManager> Cache => null;
-
 		public float TotalMass { get; private set; }
 
 		private void Reset()
 		{
 		}
 
-		private void Awake()
-		{
-		}
-
 		private void Start()
-		{
-		}
-
-		private void OnDestroy()
 		{
 		}
 
@@ -63,6 +51,11 @@ namespace SLZ.Interaction
 		}
 
 		public void DisableInteractionAll()
+		{
+		}
+
+		public InteractableHostManager()
+			: base()
 		{
 		}
 	}

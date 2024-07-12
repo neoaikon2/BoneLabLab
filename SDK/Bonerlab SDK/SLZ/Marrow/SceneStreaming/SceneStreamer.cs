@@ -37,15 +37,6 @@ namespace SLZ.Marrow.SceneStreaming
 			return default(UniTask);
 		}
 
-		public static void LoadChunk(Chunk chunk, Action onComplete = default(Action))
-		{
-		}
-
-		public static UniTask LoadChunkAsync(Chunk chunk, Action onComplete = default(Action))
-		{
-			return default(UniTask);
-		}
-
 		public static void Reload()
 		{
 		}

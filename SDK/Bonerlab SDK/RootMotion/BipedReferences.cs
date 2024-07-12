@@ -12,12 +12,10 @@ namespace RootMotion
 
 			public bool includeEyes;
 
-			public static AutoDetectParams Default => default(AutoDetectParams);
-
-			public AutoDetectParams(bool _legsParentInSpine, bool _includeEyes)
+			public AutoDetectParams(bool legsParentInSpine, bool includeEyes)
 			{
-				legsParentInSpine = _legsParentInSpine;
-				includeEyes = _includeEyes;
+				this.includeEyes = default(bool);
+				this.legsParentInSpine = default(bool);
 			}
 		}
 
@@ -55,109 +53,108 @@ namespace RootMotion
 
 		public Transform[] eyes;
 
-		public virtual bool isFilled => false;
-
-		public bool isEmpty => false;
-
-		public virtual bool IsEmpty(bool includeRoot)
+		public virtual bool isFilled
 		{
-			return false;
+			get
+			{
+				return default(bool);
+			}
 		}
 
-		public virtual bool Contains(Transform t, bool ignoreRoot = false)
+		public static bool AutoDetectReferences(BipedReferences references, Transform root, AutoDetectParams autoDetectParams)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public static bool AutoDetectReferences(ref BipedReferences references, Transform root, AutoDetectParams autoDetectParams)
-		{
-			return false;
-		}
-
-		public static void DetectReferencesByNaming(ref BipedReferences references, Transform root, AutoDetectParams autoDetectParams)
+		public static void DetectReferencesByNaming(BipedReferences references, Transform root, AutoDetectParams autoDetectParams)
 		{
 		}
 
-		public static void AssignHumanoidReferences(ref BipedReferences references, Animator animator, AutoDetectParams autoDetectParams)
+		public static void AssignHumanoidReferences(BipedReferences references, Animator animator, AutoDetectParams autoDetectParams)
 		{
 		}
 
-		public static bool SetupError(BipedReferences references, ref string errorMessage)
+		public static bool SetupError(BipedReferences references, string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public static bool SetupWarning(BipedReferences references, ref string warningMessage)
+		public static bool SetupWarning(BipedReferences references, string warningMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool IsNeckBone(Transform bone, Transform leftUpperArm)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool AddBoneToEyes(Transform bone, ref BipedReferences references, AutoDetectParams autoDetectParams)
+		private static bool AddBoneToEyes(Transform bone, BipedReferences references, AutoDetectParams autoDetectParams)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool AddBoneToSpine(Transform bone, ref BipedReferences references, AutoDetectParams autoDetectParams)
+		private static bool AddBoneToSpine(Transform bone, BipedReferences references, AutoDetectParams autoDetectParams)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static void DetectLimb(BipedNaming.BoneType boneType, BipedNaming.BoneSide boneSide, ref Transform firstBone, ref Transform secondBone, ref Transform lastBone, Transform[] transforms)
-		{
-		}
-
-		private static void AddBoneToHierarchy(ref Transform[] bones, Transform transform)
+		private static void DetectLimb(BipedNaming.BoneType boneType, BipedNaming.BoneSide boneSide, Transform firstBone, Transform secondBone, Transform lastBone, Transform[] transforms)
 		{
 		}
 
-		private static bool LimbError(Transform bone1, Transform bone2, Transform bone3, ref string errorMessage)
+		private static void AddBoneToHierarchy(Transform[] bones, Transform transform)
 		{
-			return false;
 		}
 
-		private static bool LimbWarning(Transform bone1, Transform bone2, Transform bone3, ref string warningMessage)
+		private static bool LimbError(Transform bone1, Transform bone2, Transform bone3, string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool SpineError(BipedReferences references, ref string errorMessage)
+		private static bool LimbWarning(Transform bone1, Transform bone2, Transform bone3, string warningMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool SpineWarning(BipedReferences references, ref string warningMessage)
+		private static bool SpineError(BipedReferences references, string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool EyesError(BipedReferences references, ref string errorMessage)
+		private static bool SpineWarning(BipedReferences references, string warningMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool EyesWarning(BipedReferences references, ref string warningMessage)
+		private static bool EyesError(BipedReferences references, string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool RootHeightWarning(BipedReferences references, ref string warningMessage)
+		private static bool EyesWarning(BipedReferences references, string warningMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		private static bool FacingAxisWarning(BipedReferences references, ref string warningMessage)
+		private static bool RootHeightWarning(BipedReferences references, string warningMessage)
 		{
-			return false;
+			return default(bool);
+		}
+
+		private static bool FacingAxisWarning(BipedReferences references, string warningMessage)
+		{
+			return default(bool);
 		}
 
 		private static float GetVerticalOffset(Vector3 p1, Vector3 p2, Quaternion rotation)
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public BipedReferences()
+			: base()
+		{
 		}
 	}
 }

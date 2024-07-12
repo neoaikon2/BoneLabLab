@@ -7,15 +7,13 @@ namespace SLZ.Interaction
 	{
 		public Transform shoulderTransform;
 
+		public Collider testCollider;
+
 		public float maxDistance;
 
 		public float rotationMult;
 
 		public float positionMult;
-
-		private float _lastX;
-
-		private float _lastTime;
 
 		private Vector2 _lastTt;
 
@@ -23,19 +21,9 @@ namespace SLZ.Interaction
 
 		private bool _secIsLead;
 
-		private bool _firstPass;
-
 		private SimpleTransform _buttInRig;
 
-		private SimpleTransform _hostOffset;
-
-		private SimpleTransform _lastBlendTransform;
-
-		private SimpleTransform _lastVcInLocal;
-
-		private Vector3 _acceleration;
-
-		private Vector3 _velocity;
+		private SimpleTransform _colliderInRig;
 
 		protected void Reset()
 		{
@@ -56,6 +44,19 @@ namespace SLZ.Interaction
 		}
 
 		public override void OnVirtualControllerSolve(VirtualControlerPayload payload)
+		{
+		}
+
+		private void OnVirtualControllerStart2(VirtualControlerPayload payload)
+		{
+		}
+
+		private void OnVirtualControllerSolve2(VirtualControlerPayload payload)
+		{
+		}
+
+		public RifleVirtualController()
+			: base()
 		{
 		}
 	}

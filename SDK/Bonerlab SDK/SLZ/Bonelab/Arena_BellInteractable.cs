@@ -17,112 +17,6 @@ namespace SLZ.Bonelab
 			MOVING = 2
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CMoveBell_003Ed__26
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float duration;
-
-			public Arena_BellInteractable _003C_003E4__this;
-
-			public bool up;
-
-			public Vector3 currentPosition;
-
-			private float _003CstartTime_003E5__2;
-
-			private float _003CendTime_003E5__3;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CMoveBell_003Ed__26(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoResetBell_003Ed__28
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_BellInteractable _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoResetBell_003Ed__28(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[SerializeField]
 		private Arena_GameController arenaGameController;
 
@@ -191,7 +85,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CMoveBell_003Ed__26))]
 		private IEnumerator MoveBell(bool up, float duration, Vector3 currentPosition)
 		{
 			return null;
@@ -201,7 +94,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoResetBell_003Ed__28))]
 		private IEnumerator CoResetBell()
 		{
 			return null;
@@ -209,6 +101,11 @@ namespace SLZ.Bonelab
 
 		[ContextMenu("Get All Local Positions")]
 		private void GetAllReferences()
+		{
+		}
+
+		public Arena_BellInteractable()
+			: base()
 		{
 		}
 	}

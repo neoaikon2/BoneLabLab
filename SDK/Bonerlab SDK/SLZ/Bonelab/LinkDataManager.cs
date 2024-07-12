@@ -1,4 +1,6 @@
+using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
+using SLZ.Marrow.Interaction;
 using SLZ.Rig;
 using UnityEngine;
 
@@ -6,9 +8,15 @@ namespace SLZ.Bonelab
 {
 	public class LinkDataManager : MonoBehaviour
 	{
-		public BaseGameController baseGameController;
+		public MarrowEntity playerEntity;
 
 		public RigManager rigManager;
+
+		public Rigidbody playerPelvisRB;
+
+		public Rigidbody[] playerRBs;
+
+		public TriggerRefProxy playerProxy;
 
 		public LaunchHelper launchHelper;
 
@@ -47,6 +55,15 @@ namespace SLZ.Bonelab
 		public GameObject zipBarPrefab;
 
 		public void Awake()
+		{
+		}
+
+		private void GetPlayerEntity()
+		{
+		}
+
+		public LinkDataManager()
+			: base()
 		{
 		}
 	}

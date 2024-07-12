@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SLZ.Utilities
@@ -11,6 +12,11 @@ namespace SLZ.Utilities
 		}
 
 		public void ACTIVATE()
+		{
+		}
+
+		public DisableOnLoad()
+			: base()
 		{
 		}
 	}

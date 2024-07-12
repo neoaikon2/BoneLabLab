@@ -11,5 +11,10 @@ namespace SLZ.Bonelab
 		private void Start()
 		{
 		}
+
+		public XRLODBias()
+			: base()
+		{
+		}
 	}
 }

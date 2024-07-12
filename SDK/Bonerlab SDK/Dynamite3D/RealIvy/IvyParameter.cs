@@ -5,5 +5,10 @@ namespace Dynamite3D.RealIvy
 		public float value;
 
 		public abstract void UpdateValue(float value);
+
+		public IvyParameter()
+			: base()
+		{
+		}
 	}
 }

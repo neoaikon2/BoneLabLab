@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 		public void SETMODULESTATE(string state)
 		{
 		}
+
+		public ModuleOcclusion()
+			: base()
+		{
+		}
 	}
 }

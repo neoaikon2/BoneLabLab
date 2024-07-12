@@ -34,5 +34,10 @@ namespace RealisticEyeMovements
 		public float nervousness;
 
 		public float limitHeadAngle;
+
+		public EyeAndHeadAnimatorForExport()
+			: base()
+		{
+		}
 	}
 }

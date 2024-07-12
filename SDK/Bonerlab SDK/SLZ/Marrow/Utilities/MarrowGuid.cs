@@ -27,7 +27,7 @@ namespace SLZ.Marrow.Utilities
 			this._byteArray = default(byte[]);
 		}
 
-		public void GenerateGuid(bool firstBit)
+		public void GenerateGuid(bool firstBit = true)
 		{
 		}
 

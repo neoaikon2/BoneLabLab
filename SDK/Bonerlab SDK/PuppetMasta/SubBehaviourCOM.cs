@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.CompilerServices;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
@@ -88,7 +90,7 @@ namespace PuppetMasta
 
 		private bool IsGrounded()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private Vector3 GetCenterOfMass()
@@ -119,6 +121,11 @@ namespace PuppetMasta
 		private Vector3 GetFeetCentroid()
 		{
 			return default(Vector3);
+		}
+
+		public SubBehaviourCOM()
+			: base()
+		{
 		}
 	}
 }

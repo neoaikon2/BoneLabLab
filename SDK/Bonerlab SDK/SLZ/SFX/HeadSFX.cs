@@ -1,15 +1,16 @@
-using SLZ.AI;
-using SLZ.Marrow.Utilities;
+using System.Runtime.CompilerServices;
+using SLZ.Combat;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
 using SLZ.Rig;
 using UnityEngine;
-using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 
 namespace SLZ.SFX
 {
 	public class HeadSFX : MonoBehaviour
 	{
-		private static ComponentCache<HeadSFX> _cache;
-
 		[Header("Jump Effort")]
 		public AudioClip[] jumpEffort;
 
@@ -28,6 +29,8 @@ namespace SLZ.SFX
 
 		public AudioSource mouthSrc;
 
+		public AudioLowPassFilter mouthLowPass;
+
 		[Header("Headbutt")]
 		public LayerMask meleeAttackMask;
 
@@ -43,15 +46,37 @@ namespace SLZ.SFX
 
 		private float _lastImpactTime;
 
-		public AudioMixerGroup inHeadMixer;
-
 		private Rigidbody _rbHead;
 
-		public PhysicsRig physRig;
+		[SerializeField]
+		private PhysicsRig _physRig;
 
-		public static ComponentCache<HeadSFX> Cache => null;
+		[SerializeField]
+		private CollisionCollector _collisionCollector;
 
-		public bool isSpeaking => false;
+		private float _nextImpactTime;
+
+		private float _lastImpulse;
+
+		private float _nextSlideTime;
+
+		private float _lastAccelSqMg;
+
+		private Vector3 _lastRelVelPlane;
+
+		private ManagedAudioPlayer _mapImpact;
+
+		private bool _fixedRan;
+
+		private float _lastHeadChestAngVelSqMg;
+
+		public bool isSpeaking
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		public void Speak(AudioClip clip, bool playDelayed = false, bool overwrite = true)
 		{
@@ -85,13 +110,26 @@ namespace SLZ.SFX
 		{
 		}
 
-		private void OnCollisionEnter(Collision c)
+		private void OnSignificantCollisionEnter(CollisionCollector.RelevantCollision c)
+		{
+		}
+
+		private bool BluntAttack(CollisionCollector.RelevantCollision c, float impulseNormed)
+		{
+			return default(bool);
+		}
+
+		private void OnSignificantCollisionStay(CollisionCollector.RelevantCollision c)
+		{
+		}
+
+		private void UpdateLowPass()
 		{
 		}
 
 		private float ProcessImpulse(Collision c, Rigidbody thisRb)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private void Awake()
@@ -102,7 +140,20 @@ namespace SLZ.SFX
 		{
 		}
 
+		private void FixedUpdate()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
 		private void OnDestroy()
+		{
+		}
+
+		public HeadSFX()
+			: base()
 		{
 		}
 	}

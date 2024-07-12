@@ -26,5 +26,10 @@ namespace SLZ.Rig
 		public override void OnUpdate()
 		{
 		}
+
+		public PancakeControllerRig()
+			: base()
+		{
+		}
 	}
 }

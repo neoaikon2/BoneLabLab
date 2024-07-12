@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 		private void OnDestroy()
 		{
 		}
+
+		public SceneGravity()
+			: base()
+		{
+		}
 	}
 }

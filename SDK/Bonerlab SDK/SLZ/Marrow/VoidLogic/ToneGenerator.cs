@@ -1,16 +1,19 @@
-using System.Collections.Generic;
-using System.Text;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Algorithms.Unity;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Endpoints/VoidLogic Tone Generator")]
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/ToneGenerator")]
-	public class ToneGenerator : MonoBehaviour, InputDescribable
+	[AddComponentMenu("VoidLogic/Sinks/VoidLogic Tone Generator")]
+	[Support(SupportFlags.AlphaSupported, "This is intended mainly for debugging, and as such its serialization compatibility is not guaranteed.")]
+	public class ToneGenerator : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
 	{
-		[Tooltip("Previous node(s) in the chain")]
 		[SerializeField]
-		protected List<BaseNode> _previous;
+		[Interface(typeof(IVoidLogicSource), false)]
+		[Tooltip("Previous node(s) in the chain")]
+		protected internal MonoBehaviour[] _previous;
 
 		[Range(0f, 1f)]
 		[SerializeField]
@@ -27,15 +30,9 @@ namespace SLZ.Marrow.VoidLogic
 
 		private bool _running;
 
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		public List<BaseNode> PreviousNodes
-		{
-			get
-			{
-				return null;
-			}
-		}
+		public VoidLogicSubgraph Subgraph { get; set; }
 
 		public float Volume
 		{
@@ -48,11 +45,43 @@ namespace SLZ.Marrow.VoidLogic
 			}
 		}
 
+		public int InputCount
+		{
+			get
+			{
+				return default(int);
+			}
+		}
+
+		public PortMetadata PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
 		private void Start()
 		{
 		}
 
-		private void Update()
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
 		{
 		}
 
@@ -60,13 +89,14 @@ namespace SLZ.Marrow.VoidLogic
 		{
 		}
 
-		public void AppendEndpointInfo(StringBuilder sb)
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			return default(bool);
 		}
 
-		IReadOnlyList<InputDescription> InputDescribable.DescribeInputs()
+		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return null;
+			return default(bool);
 		}
 
 		public ToneGenerator()

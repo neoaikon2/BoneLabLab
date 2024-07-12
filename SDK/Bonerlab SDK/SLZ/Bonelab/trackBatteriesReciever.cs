@@ -18,5 +18,10 @@ namespace SLZ.Bonelab
 		public void LockBattery()
 		{
 		}
+
+		public trackBatteriesReciever()
+			: base()
+		{
+		}
 	}
 }

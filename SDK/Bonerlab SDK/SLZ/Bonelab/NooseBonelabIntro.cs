@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Interaction;
+using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 
@@ -25,58 +26,16 @@ namespace SLZ.Bonelab
 			Cut = 4
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CLoadFXAndLevel_003Ed__60
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public NooseBonelabIntro _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CLoadFXAndLevel_003Ed__60(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public PlayableDirector introCutscene;
 
+		public CrateSpawner torchIntro;
+
+		private bool torchSpawned;
+
+		[HideInInspector]
 		public RigManager rM;
 
+		[HideInInspector]
 		public Player_Health pH;
 
 		private ConfigurableJoint _chestToKnot;
@@ -109,10 +68,18 @@ namespace SLZ.Bonelab
 
 		public AudioClip nooseCut;
 
-		public AudioMixerGroup audioMixerGroup;
+		public AudioClip intoFallingWind;
+
+		public AudioClip nooseChoke;
+
+		public Transform nooseChokePoint;
 
 		[SerializeField]
 		private NooseStage _nooseStage;
+
+		private bool hasChokePlayed;
+
+		private ManagedAudioPlayer nooseChokePlayer;
 
 		private bool _sideLeft;
 
@@ -150,16 +117,22 @@ namespace SLZ.Bonelab
 
 		public Rigidbody dagger;
 
+		public MarrowEntity daggerEntity;
+
 		private Vector3 _daggerInitV3;
 
 		private Quaternion _daggerInitRot;
 
-		private ConfigurableJoint _daggerJoint;
+		public NooseDaggerJoint nooseDaggerJointScript;
+
+		public MarrowEntity GALLOWSEntity;
 
 		[Header("Level Loader")]
 		public LevelCrateReference level;
 
 		public Spawnable vfxFadeOutSpawnable;
+
+		private bool _skipUpdate;
 
 		public void AddVelocityToNoose(Vector3 force)
 		{
@@ -181,14 +154,19 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		[ContextMenu("ManualHideDagger")]
+		public void ManualHideDagger()
+		{
+		}
+
 		private bool CheckRelativeToHead()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private float CheckReel()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private void CheckAndSetTargetSide()
@@ -223,11 +201,14 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		public void NooseChoke()
+		{
+		}
+
 		public void Reveal()
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CLoadFXAndLevel_003Ed__60))]
 		private IEnumerator LoadFXAndLevel()
 		{
 			return null;
@@ -238,6 +219,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void CutScene(bool play, bool turnOn)
+		{
+		}
+
+		public NooseBonelabIntro()
+			: base()
 		{
 		}
 	}

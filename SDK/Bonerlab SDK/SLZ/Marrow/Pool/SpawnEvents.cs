@@ -2,17 +2,10 @@ using UnityEngine;
 
 namespace SLZ.Marrow.Pool
 {
-	public class SpawnEvents : MonoBehaviour
+	public abstract class SpawnEvents : MonoBehaviour, IPoolable
 	{
-		public GameObject parent;
-
-		protected AssetPoolee _poolee;
-
-		protected bool _hasPoolee;
-
-		private bool _hasSpawn;
-
-		private bool _hasPostSpawn;
+		[SerializeField]
+		protected Poolee _poolee;
 
 		public ulong ID
 		{
@@ -30,7 +23,11 @@ namespace SLZ.Marrow.Pool
 			}
 		}
 
-		protected virtual void Start()
+		protected virtual void Awake()
+		{
+		}
+
+		protected virtual void Reset()
 		{
 		}
 
@@ -38,35 +35,15 @@ namespace SLZ.Marrow.Pool
 		{
 		}
 
-		private void _OnSpawn(GameObject go)
+		public virtual void OnPoolInitialize()
 		{
 		}
 
-		private void _OnPostSpawn(GameObject go)
+		public virtual void OnPoolSpawn()
 		{
 		}
 
-		private void _OnDespawn(GameObject go)
-		{
-		}
-
-		private void _OnPostDespawn(GameObject go)
-		{
-		}
-
-		protected virtual void OnSpawn(GameObject go)
-		{
-		}
-
-		protected virtual void OnPostSpawn(GameObject go)
-		{
-		}
-
-		protected virtual void OnDespawn(GameObject go)
-		{
-		}
-
-		protected virtual void OnPostDespawn(GameObject go)
+		public virtual void OnPoolDeInitialize()
 		{
 		}
 

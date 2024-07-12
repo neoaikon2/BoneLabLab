@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -30,19 +31,8 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public void UpdateSolverPosition()
-			{
-			}
-
-			public void UpdateSolverLocalPosition()
-			{
-			}
-
-			public void UpdateSolverState()
-			{
-			}
-
-			public void UpdateSolverLocalState()
+			public Point()
+				: base()
 			{
 			}
 		}
@@ -66,16 +56,9 @@ namespace RootMotion.FinalIK
 				{
 					return null;
 				}
-				set
-				{
-				}
 			}
 
 			public void Swing(Vector3 swingTarget, float weight = 1f)
-			{
-			}
-
-			public static void SolverSwing(Bone[] bones, int index, Vector3 swingTarget, float weight = 1f)
 			{
 			}
 
@@ -83,19 +66,8 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public void SetToSolverPosition()
-			{
-			}
-
 			public Bone()
-			{
-			}
-
-			public Bone(Transform transform)
-			{
-			}
-
-			public Bone(Transform transform, float weight)
+				: base()
 			{
 			}
 		}
@@ -112,14 +84,12 @@ namespace RootMotion.FinalIK
 			public Vector3 offset;
 
 			public Node()
+				: base()
 			{
 			}
 
 			public Node(Transform transform)
-			{
-			}
-
-			public Node(Transform transform, float weight)
+				: this()
 			{
 			}
 		}
@@ -145,18 +115,13 @@ namespace RootMotion.FinalIK
 
 		protected bool firstInitiation;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		protected Transform root;
 
 		public bool initiated { get; private set; }
 
-		public bool IsValid()
-		{
-			return false;
-		}
-
-		public abstract bool IsValid(ref string message);
+		public abstract bool IsValid(string message);
 
 		public void Initiate(Transform root)
 		{
@@ -177,7 +142,7 @@ namespace RootMotion.FinalIK
 
 		public float GetIKPositionWeight()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void SetIKPositionWeight(float weight)
@@ -212,12 +177,12 @@ namespace RootMotion.FinalIK
 
 		public static bool HierarchyIsValid(Bone[] bones)
 		{
-			return false;
+			return default(bool);
 		}
 
-		protected static float PreSolveBones(ref Bone[] bones)
+		public IKSolver()
+			: base()
 		{
-			return 0f;
 		}
 	}
 }

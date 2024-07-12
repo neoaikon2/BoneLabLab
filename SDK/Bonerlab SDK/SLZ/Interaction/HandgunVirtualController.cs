@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
@@ -23,19 +24,22 @@ namespace SLZ.Interaction
 		{
 		}
 
-		protected Vector3 EyePoint(SimpleTransform eyeTran, SimpleTransform rearSightTran, Vector3 sightPos, out float enter)
+		protected Vector3 EyePoint(SimpleTransform eyeTran, SimpleTransform rearSightTran, Vector3 sightPos, [Out] float enter)
 		{
-			enter = default(float);
 			return default(Vector3);
 		}
 
-		protected Quaternion AimEnhancer(Quaternion rotation, SimpleTransform eyeTran, SimpleTransform rearSightTran, float enhanceIntensity, out float enhanceT)
+		protected Quaternion AimEnhancer(Quaternion rotation, SimpleTransform eyeTran, SimpleTransform rearSightTran, float enhanceIntensity, [Out] float enhanceT)
 		{
-			enhanceT = default(float);
 			return default(Quaternion);
 		}
 
 		public override void OnVirtualControllerSolve(VirtualControlerPayload p)
+		{
+		}
+
+		public HandgunVirtualController()
+			: base()
 		{
 		}
 	}

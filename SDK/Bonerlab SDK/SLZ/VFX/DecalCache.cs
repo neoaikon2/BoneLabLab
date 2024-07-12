@@ -1,32 +1,32 @@
-using SLZ.Combat;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Data;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
-using ch.sycoforge.Decal;
 
 namespace SLZ.VFX
 {
-	[RequireComponent(typeof(EasyDecal))]
+	[RequireComponent(typeof(DecalProjector))]
 	public class DecalCache : MonoBehaviour
 	{
-		public enum DecalType
-		{
-			mesh = 0,
-			plane = 1
-		}
-
 		private static ComponentCache<DecalCache> _cache;
 
 		[SerializeField]
-		private EasyDecal easyDecal;
+		private DecalProjector _decalProjector;
 
-		private Color tintingColor;
+		private Poolee poolee;
 
-		private Material CustomMat;
-
-		private AssetPoolee poolee;
-
-		public static ComponentCache<DecalCache> Cache => null;
+		public static ComponentCache<DecalCache> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Reset()
 		{
@@ -44,31 +44,21 @@ namespace SLZ.VFX
 		{
 		}
 
-		public void SetMaterial(Material material)
+		private UniTaskVoid DelayedDespawn()
+		{
+			return default(UniTaskVoid);
+		}
+
+		public void SetColliderColorAndCreate(Collider hitCollider, Color color)
 		{
 		}
 
-		public void SetObject(GameObject GO)
+		public void SetVariablesAndCreate(SurfaceData.MaterialLevel decalMaterialLevel, Collider hitCollider, Color colorTint)
 		{
 		}
 
-		private void decalMaterial(EasyDecal decal, Mesh mesh)
-		{
-		}
-
-		public void SetGenerationType(ImpactPropertiesVariables.DecalType decalType)
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		public void TintMaterial(Color color)
-		{
-		}
-
-		private void DecalTint(EasyDecal decal, Mesh mesh)
+		public DecalCache()
+			: base()
 		{
 		}
 	}

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Utilities;
 using SplineMesh;
 using UnityEngine;
@@ -53,12 +54,12 @@ namespace SLZ.Bonelab
 
 		public int GetSampleIdxByDistance(float distance)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public static float GetSphereIntersection(Vector3 point, Vector3 ray, Vector3 spherePoint, float radius)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void AddEntity(SplineEntity entity)
@@ -75,7 +76,7 @@ namespace SLZ.Bonelab
 
 		public float GetDistanceInSpline(SplineBody sBody)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void BuildPolyPath()
@@ -84,7 +85,7 @@ namespace SLZ.Bonelab
 
 		private int Mod(int i, int max)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public SimpleTransform GetSegmentTransformAtIndex(int segmentIndex)
@@ -94,25 +95,30 @@ namespace SLZ.Bonelab
 
 		public int GetNearestSegmentIndex(Vector3 worldPosition)
 		{
-			return 0;
+			return default(int);
 		}
 
-		private (Vector3, Vector3) GetClosestSegmentFrom(Vector3 position, Vector3 disp, float distance, int lastIdx)
+		private ValueTuple<Vector3, Vector3> GetClosestSegmentFrom(Vector3 position, Vector3 disp, float distance, int lastIdx)
 		{
-			return default((Vector3, Vector3));
+			return default(ValueTuple<Vector3, Vector3>);
 		}
 
 		private int GetDirection(Vector3 direction, int lastIdx)
 		{
-			return 0;
+			return default(int);
 		}
 
-		private CurveSample GetSample(Vector3 position, ref int lastIdx, Vector3? direction = null)
+		private CurveSample GetSample(Vector3 position, int lastIdx, Vector3? direction = default(Vector3?))
 		{
 			return default(CurveSample);
 		}
 
 		private void ConfigureJoint(ConfigurableJoint joint, SplineBody sBody, Vector3 anchor, Vector3 connectedAnchor)
+		{
+		}
+
+		public SplineJoint()
+			: base()
 		{
 		}
 	}

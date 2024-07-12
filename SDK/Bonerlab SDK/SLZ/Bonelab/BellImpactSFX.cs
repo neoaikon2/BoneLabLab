@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
@@ -9,8 +8,6 @@ namespace SLZ.Bonelab
 		public UnityEvent onRingBell;
 
 		public AudioClip bellImpactClip;
-
-		public AudioMixerGroup audioGroup;
 
 		private float _nextImpactTime;
 
@@ -33,6 +30,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnAttackSFX()
+		{
+		}
+
+		public BellImpactSFX()
+			: base()
 		{
 		}
 	}

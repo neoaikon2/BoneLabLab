@@ -34,5 +34,10 @@ namespace SLZ.Bonelab
 		private void OnDrawGizmosSelected()
 		{
 		}
+
+		public FreezeBlast()
+			: base()
+		{
+		}
 	}
 }

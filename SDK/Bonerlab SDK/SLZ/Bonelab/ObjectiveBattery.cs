@@ -1,6 +1,5 @@
 using System;
 using SLZ.Interaction;
-using SLZ.Marrow.Utilities;
 using TMPro;
 using UnityEngine;
 
@@ -8,8 +7,6 @@ namespace SLZ.Bonelab
 {
 	public class ObjectiveBattery : MonoBehaviour
 	{
-		private static ComponentCache<ObjectiveBattery> _cache;
-
 		public float charge;
 
 		public TMP_Text chargeText;
@@ -28,17 +25,11 @@ namespace SLZ.Bonelab
 
 		public static Action OnBattteryGrabbed;
 
-		public static ComponentCache<ObjectiveBattery> Cache => null;
-
 		private void OnEnable()
 		{
 		}
 
 		private void OnDisable()
-		{
-		}
-
-		private void Awake()
 		{
 		}
 
@@ -51,6 +42,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnGrab(Hand hand)
+		{
+		}
+
+		public ObjectiveBattery()
+			: base()
 		{
 		}
 	}

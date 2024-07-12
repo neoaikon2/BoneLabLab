@@ -34,5 +34,10 @@ namespace SLZ.Bonelab
 		private void MoveJoint(bool forward)
 		{
 		}
+
+		public HandCrank()
+			: base()
+		{
+		}
 	}
 }

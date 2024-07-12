@@ -1,15 +1,11 @@
-using SLZ.AI;
-using SLZ.Marrow.Utilities;
+using SLZ.Marrow.AI;
 using SLZ.Rig;
-using SLZ.Zones;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
 	public class SuperSeeker : MonoBehaviour
 	{
-		private static ComponentCache<SuperSeeker> _cache;
-
 		[SerializeField]
 		private GameObject targetObj;
 
@@ -22,38 +18,16 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GameObject childObj;
 
-		public ZoneSpawner spawner;
+		public ProfileSpawner spawner;
 
 		[SerializeField]
 		private AIManager aiBrain;
 
-		public static ComponentCache<SuperSeeker> Cache => null;
-
-		public void Awake()
+		private void OnSpawnerDeath(AIBrain brain)
 		{
 		}
 
-		public void SubToSpawner()
-		{
-		}
-
-		public void OnDisable()
-		{
-		}
-
-		private void OnSpawn(GameObject npcObj, GameObject playerObj)
-		{
-		}
-
-		private void OnSpawnerDeath()
-		{
-		}
-
-		private void OnDespawn(GameObject npcObj)
-		{
-		}
-
-		public void SetSeekerTarget(GameObject targ, GameObject playerObj = null)
+		public void SetSeekerTarget(AIBrain brain)
 		{
 		}
 
@@ -62,6 +36,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void FixedUpdate()
+		{
+		}
+
+		public SuperSeeker()
+			: base()
 		{
 		}
 	}

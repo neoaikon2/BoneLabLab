@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -17,8 +18,8 @@ namespace RootMotion.FinalIK
 		[Range(0f, 1f)]
 		public float weight;
 
-		[Range(0f, 1f)]
 		[Tooltip("The weight of rotating the finger tip and bending the finger to the target.")]
+		[Range(0f, 1f)]
 		public float rotationWeight;
 
 		[Tooltip("Rotational degrees of freedom. When set to 'One' the fingers will be able to be rotated only around a single axis. When 3, all 3 axes are free to rotate around.")]
@@ -55,10 +56,6 @@ namespace RootMotion.FinalIK
 
 		public Vector3 IKPosition
 		{
-			get
-			{
-				return default(Vector3);
-			}
 			set
 			{
 			}
@@ -75,9 +72,9 @@ namespace RootMotion.FinalIK
 			}
 		}
 
-		public bool IsValid(ref string errorMessage)
+		public bool IsValid(string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Initiate(Transform hand, int index)
@@ -93,6 +90,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void Update(float masterWeight)
+		{
+		}
+
+		public Finger()
+			: base()
 		{
 		}
 	}

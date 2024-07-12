@@ -39,11 +39,11 @@ namespace SLZ.Interaction
 
 		Transform GetTransform();
 
-		void ForceDetach();
+		void ForceDetach(bool isQuick = false);
 
-		void DestroyRigidbody();
+		void Freeze();
 
-		void CreateRigidbody();
+		void Unfreeze();
 
 		GameObject GetHostGameObject();
 

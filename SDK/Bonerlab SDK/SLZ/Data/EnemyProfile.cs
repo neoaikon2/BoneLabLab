@@ -1,10 +1,10 @@
-using PuppetMasta;
 using SLZ.Marrow.Data;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace SLZ.Data
 {
-	[CreateAssetMenu(fileName = "Arena_EnemyProfile", menuName = "StressLevelZero / NPC_Profile", order = 1)]
+	[CreateAssetMenu(fileName = "Arena_EnemyProfile", menuName = "StressLevelZero / Enemy_Profile", order = 1)]
 	public class EnemyProfile : ScriptableObject
 	{
 		public string enemyTitle;
@@ -23,5 +23,10 @@ namespace SLZ.Data
 		public int deathMult;
 
 		public float entranceTimeVal;
+
+		public EnemyProfile()
+			: base()
+		{
+		}
 	}
 }

@@ -1,7 +1,9 @@
 using System;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Utilities;
 using SLZ.VRMK;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace SLZ.Rig
 {
@@ -34,9 +36,54 @@ namespace SLZ.Rig
 		[Header("RemapHeptaRig")]
 		public Transform testGazeTarget;
 
+		public bool physicalTwistAlignEnabled;
+
 		private float _lfCurlLerp;
 
 		private float _rtCurlLerp;
+
+		private float _velocitySanGravMagRetainer;
+
+		private float _accelSanGravMagRetainer;
+
+		private float _accelDuckRetainer;
+
+		private float _accelDuckVelocity;
+
+		private float _lastSwingOff;
+
+		private float _platformAngularVel;
+
+		private float _platformAngularAccel;
+
+		[SerializeField]
+		private AnimationCurve _dirVel;
+
+		private BodyPose _inBasePose;
+
+		public Rig testAdditiveRig;
+
+		private BodyPose _addSubtractivePose;
+
+		private BodyPose _basePose;
+
+		private RigWeights _baseWeights;
+
+		private BodyPose _inAdditivePose;
+
+		public RigWeights _inWeights;
+
+		private BodyPose _addAdditivePose;
+
+		public RigWeights _addWeights;
+
+		[Range(0f, 1f)]
+		public float inWeight;
+
+		[Range(0f, 1f)]
+		public float addWeight;
+
+		public NavMeshAgent _navAgent;
 
 		[Header("Movement")]
 		public float maxVelocity;
@@ -59,23 +106,37 @@ namespace SLZ.Rig
 
 		private Vector2 _currentAcceleration;
 
-		private float _currentVelocityY;
+		private Vector2 _effectiveAcceleration;
 
-		private float _lastChestHeight;
+		private Vector3 _vcLocoDeltaLf;
+
+		private Vector3 _vcLocoDeltaRt;
+
+		private Vector3 _vcLocoNormalLf;
+
+		private Vector3 _vcLocoNormalRt;
+
+		private int _vcLocoDofLf;
+
+		private int _vcLocoDofRt;
+
+		private bool _vcActive;
+
+		private float _lastPelvisHeight;
 
 		private float _smoothTwist;
 
 		protected float currentMaxVelocity;
 
-		public float feetOffset;
-
 		public AnimationCurve JumpCurve;
 
 		public AnimationCurve SwingCounterCurve;
 
-		protected bool _feetThisFrame;
+		private float _crouchTarget;
 
-		protected float _crouchTarget;
+		private float _crouchVelocity;
+
+		private float _feetOffset;
 
 		private float _crouchSpeedLimit;
 
@@ -86,8 +147,6 @@ namespace SLZ.Rig
 		private float _jumpCycle;
 
 		private float _timeOfFlight;
-
-		private float _jumpCharge;
 
 		private float _spineCrouchOff;
 
@@ -115,23 +174,11 @@ namespace SLZ.Rig
 
 		private Vector3 _trackedHeadDelta;
 
-		[Range(0f, 1f)]
-		public float holdTrackedGround;
-
-		[Range(0f, 1f)]
-		public float holdLocoGround;
-
-		[Range(0f, 1f)]
-		public float holdPhysGround;
-
-		[Range(0.1f, 5f)]
-		public float debtApplierMult;
-
 		public bool jumpEnabled;
 
 		public bool doubleJump;
 
-		public static Action onPlayerJump;
+		public Action onPlayerJump;
 
 		private Quaternion _rotationOffset;
 
@@ -151,11 +198,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public override void OnFirstFixedUpdate()
-		{
-		}
-
-		public override void OnFixedUpdate(float deltaTime)
+		public override void OnEarlyUpdate()
 		{
 		}
 
@@ -167,7 +210,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public override void Teleport(Vector3 displace, bool zeroVelocity = false)
+		public override void Teleport(SimpleTransform displace, bool zeroVelocity = false)
 		{
 		}
 
@@ -176,15 +219,6 @@ namespace SLZ.Rig
 		}
 
 		protected virtual void ApplyMovement(Vector2 axis, bool inputPressed, float deltaTime)
-		{
-		}
-
-		private Vector2 LocoDebtPre(Vector2 artiDelta, float deltaTime)
-		{
-			return default(Vector2);
-		}
-
-		private void LocoDebtPost()
 		{
 		}
 
@@ -200,7 +234,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		private void JumpCharge(float deltaTime, bool chargeInput = true)
+		private void JumpCharge(float deltaTime, bool feetOverride, bool chargeInput = true)
 		{
 		}
 
@@ -208,7 +242,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		private void Jumping(float deltaTime)
+		private void Jumping(float deltaTime, bool feetOverride)
 		{
 		}
 
@@ -216,7 +250,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		protected virtual void CrouchHold(float deltaTime, float crouchRate = -1f, bool crouchInput = true)
+		protected virtual void CrouchHold(float deltaTime, bool feetOverride, float crouchRate = -1f, bool crouchInput = true)
 		{
 		}
 
@@ -224,10 +258,9 @@ namespace SLZ.Rig
 		{
 		}
 
-		private bool MantleGesture(out float mantle)
+		private bool MantleGesture([Out] float mantle)
 		{
-			mantle = default(float);
-			return false;
+			return default(bool);
 		}
 
 		public Vector2 GetVelocity()
@@ -235,9 +268,22 @@ namespace SLZ.Rig
 			return default(Vector2);
 		}
 
-		public float GetVelocityY()
+		public Vector2 GetAcceleration()
 		{
-			return 0f;
+			return default(Vector2);
+		}
+
+		public void SetVcLocomotionLf(Vector3 deltaLf, Vector3 normalLf, int positionalDof = 0)
+		{
+		}
+
+		public void SetVcLocomotionRt(Vector3 deltaRt, Vector3 normalRt, int positionalDof = 0)
+		{
+		}
+
+		public RemapRig()
+			: base()
+		{
 		}
 	}
 }

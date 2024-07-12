@@ -33,6 +33,7 @@ namespace Oculus.Platform
 		public enum MessageType : uint
 		{
 			Unknown = 0u,
+			AbuseReport_ReportRequestHandled = 1267661958u,
 			Achievements_AddCount = 65495601u,
 			Achievements_AddFields = 346693929u,
 			Achievements_GetAllDefinitions = 64177549u,
@@ -45,8 +46,12 @@ namespace Oculus.Platform
 			ApplicationLifecycle_GetRegisteredPIDs = 82169698u,
 			ApplicationLifecycle_GetSessionKey = 984570141u,
 			ApplicationLifecycle_RegisterSessionKey = 1303818232u,
+			Application_CancelAppDownload = 2082496734u,
+			Application_CheckAppDownloadProgress = 1429514532u,
 			Application_GetVersion = 1751583246u,
+			Application_InstallAppUpdateAndRelaunch = 343960453u,
 			Application_LaunchOtherApp = 1424151032u,
+			Application_StartAppDownload = 1157365870u,
 			AssetFile_Delete = 1834842246u,
 			AssetFile_DeleteById = 1525206354u,
 			AssetFile_DeleteByName = 1108001231u,
@@ -60,6 +65,7 @@ namespace Oculus.Platform
 			AssetFile_Status = 47394656u,
 			AssetFile_StatusById = 1570069816u,
 			AssetFile_StatusByName = 1104140880u,
+			Avatar_LaunchAvatarEditor = 99737939u,
 			Challenges_Create = 1750718017u,
 			Challenges_DeclineInvite = 1452177088u,
 			Challenges_Delete = 642287050u,
@@ -75,17 +81,18 @@ namespace Oculus.Platform
 			Challenges_Join = 556040297u,
 			Challenges_Leave = 694228709u,
 			Challenges_UpdateInfo = 292929120u,
-			CloudStorage2_GetUserDirectoryPath = 1990471406u,
-			CloudStorage_Delete = 685393261u,
-			CloudStorage_GetNextCloudStorageMetadataArrayPage = 1544004335u,
-			CloudStorage_Load = 1082420033u,
-			CloudStorage_LoadBucketMetadata = 1931977997u,
-			CloudStorage_LoadConflictMetadata = 1146770162u,
-			CloudStorage_LoadHandle = 845863478u,
-			CloudStorage_LoadMetadata = 65446546u,
-			CloudStorage_ResolveKeepLocal = 811109637u,
-			CloudStorage_ResolveKeepRemote = 1965400838u,
-			CloudStorage_Save = 1270570030u,
+			Cowatching_GetNextCowatchViewerArrayPage = 490748210u,
+			Cowatching_GetPresenterData = 1233536821u,
+			Cowatching_GetViewersData = 1557635663u,
+			Cowatching_IsInSession = 1696286852u,
+			Cowatching_JoinSession = 1669899604u,
+			Cowatching_LaunchInviteDialog = 580072087u,
+			Cowatching_LeaveSession = 1017005773u,
+			Cowatching_RequestToPresent = 2138684586u,
+			Cowatching_ResignFromPresenting = 1263124994u,
+			Cowatching_SetPresenterData = 1830586630u,
+			Cowatching_SetViewerData = 1021044774u,
+			DeviceApplicationIntegrity_GetIntegrityToken = 846310362u,
 			Entitlement_GetIsViewerEntitled = 409688241u,
 			GroupPresence_Clear = 1839897795u,
 			GroupPresence_GetInvitableUsers = 592167921u,
@@ -97,6 +104,7 @@ namespace Oculus.Platform
 			GroupPresence_LaunchRosterPanel = 896698498u,
 			GroupPresence_SendInvites = 231461732u,
 			GroupPresence_Set = 1734302756u,
+			GroupPresence_SetDeeplinkMessageOverride = 1377492749u,
 			GroupPresence_SetDestination = 1281042058u,
 			GroupPresence_SetIsJoinable = 714018901u,
 			GroupPresence_SetLobbySession = 1224693182u,
@@ -119,52 +127,15 @@ namespace Oculus.Platform
 			Leaderboard_GetPreviousEntries = 1224858304u,
 			Leaderboard_WriteEntry = 293587198u,
 			Leaderboard_WriteEntryWithSupplementaryMetric = 1925616378u,
-			Matchmaking_Browse = 509948616u,
-			Matchmaking_Browse2 = 1715641947u,
-			Matchmaking_Cancel = 543705519u,
-			Matchmaking_Cancel2 = 285117908u,
-			Matchmaking_CreateAndEnqueueRoom = 1615617480u,
-			Matchmaking_CreateAndEnqueueRoom2 = 693889755u,
-			Matchmaking_CreateRoom = 54203178u,
-			Matchmaking_CreateRoom2 = 1231922052u,
-			Matchmaking_Enqueue = 1086418033u,
-			Matchmaking_Enqueue2 = 303174325u,
-			Matchmaking_EnqueueRoom = 1888108644u,
-			Matchmaking_EnqueueRoom2 = 1428741028u,
-			Matchmaking_GetAdminSnapshot = 1008820116u,
-			Matchmaking_GetStats = 1123849272u,
-			Matchmaking_JoinRoom = 1295177725u,
-			Matchmaking_ReportResultInsecure = 439800205u,
-			Matchmaking_StartMatch = 1154746693u,
 			Media_ShareToFacebook = 14912239u,
-			Notification_GetNextRoomInviteNotificationArrayPage = 102890359u,
-			Notification_GetRoomInvites = 1871801234u,
 			Notification_MarkAsRead = 1903319523u,
 			Party_GetCurrent = 1200830304u,
 			RichPresence_Clear = 1471632051u,
 			RichPresence_GetDestinations = 1483681044u,
 			RichPresence_GetNextDestinationArrayPage = 1731624773u,
 			RichPresence_Set = 1007973641u,
-			Room_CreateAndJoinPrivate = 1977017207u,
-			Room_CreateAndJoinPrivate2 = 1513775683u,
-			Room_Get = 1704628152u,
-			Room_GetCurrent = 161916164u,
-			Room_GetCurrentForUser = 234887141u,
-			Room_GetInvitableUsers = 506615698u,
-			Room_GetInvitableUsers2 = 1330899120u,
-			Room_GetModeratedRooms = 159645047u,
-			Room_GetNextRoomArrayPage = 1317239238u,
-			Room_InviteUser = 1093266451u,
-			Room_Join = 382373641u,
-			Room_Join2 = 1303059522u,
-			Room_KickUser = 1233344310u,
-			Room_LaunchInvitableUserFlow = 843047539u,
-			Room_Leave = 1916281973u,
-			Room_SetDescription = 809796911u,
-			Room_UpdateDataStore = 40779816u,
-			Room_UpdateMembershipLockStatus = 923514796u,
-			Room_UpdateOwner = 850803997u,
-			Room_UpdatePrivateRoomJoinPolicy = 289473179u,
+			UserAgeCategory_Get = 567009472u,
+			UserAgeCategory_Report = 776853718u,
 			UserDataStore_PrivateDeleteEntryByKey = 1552510782u,
 			UserDataStore_PrivateGetEntries = 1821016616u,
 			UserDataStore_PrivateGetEntryByKey = 470188825u,
@@ -175,41 +146,40 @@ namespace Oculus.Platform
 			UserDataStore_PublicWriteEntry = 875973130u,
 			User_Get = 1808768583u,
 			User_GetAccessToken = 111696574u,
+			User_GetBlockedUsers = 2099254614u,
 			User_GetLoggedInUser = 1131361373u,
 			User_GetLoggedInUserFriends = 1484532365u,
-			User_GetLoggedInUserFriendsAndRooms = 1585908615u,
-			User_GetLoggedInUserRecentlyMetUsersAndRooms = 694139440u,
-			User_GetNextUserAndRoomArrayPage = 2143146719u,
+			User_GetNextBlockedUserArrayPage = 2083192267u,
 			User_GetNextUserArrayPage = 645723971u,
+			User_GetNextUserCapabilityArrayPage = 587854745u,
 			User_GetOrgScopedID = 418426907u,
 			User_GetSdkAccounts = 1733454467u,
 			User_GetUserProof = 578880643u,
+			User_LaunchBlockFlow = 1876305192u,
 			User_LaunchFriendRequestFlow = 151303576u,
+			User_LaunchUnblockFlow = 346172055u,
 			Voip_GetMicrophoneAvailability = 1951195973u,
 			Voip_SetSystemVoipSuppressed = 1161808298u,
+			Notification_AbuseReport_ReportButtonPressed = 608644972u,
 			Notification_ApplicationLifecycle_LaunchIntentChanged = 78859427u,
 			Notification_AssetFile_DownloadUpdate = 803015885u,
-			Notification_Cal_FinalizeApplication = 1963741337u,
-			Notification_Cal_ProposeApplication = 779375093u,
+			Notification_Cowatching_ApiNotReady = 1711880577u,
+			Notification_Cowatching_ApiReady = 160786067u,
+			Notification_Cowatching_InSessionChanged = 234434835u,
+			Notification_Cowatching_Initialized = 1960397043u,
+			Notification_Cowatching_PresenterDataChanged = 1309118190u,
+			Notification_Cowatching_SessionStarted = 1931580316u,
+			Notification_Cowatching_SessionStopped = 1239866362u,
+			Notification_Cowatching_ViewersDataChanged = 1760752127u,
 			Notification_GroupPresence_InvitationsSent = 1738179766u,
 			Notification_GroupPresence_JoinIntentReceived = 2000194038u,
 			Notification_GroupPresence_LeaveIntentReceived = 1194846749u,
 			Notification_HTTP_Transfer = 2111073839u,
 			Notification_Livestreaming_StatusChange = 575101294u,
-			Notification_Matchmaking_MatchFound = 197393623u,
 			Notification_NetSync_ConnectionStatusChanged = 120882378u,
 			Notification_NetSync_SessionsChanged = 947814198u,
-			Notification_Networking_ConnectionStateChange = 1577243802u,
-			Notification_Networking_PeerConnectRequest = 1295114959u,
-			Notification_Networking_PingResult = 1360343058u,
 			Notification_Party_PartyUpdate = 487688882u,
-			Notification_Room_InviteAccepted = 1829794225u,
-			Notification_Room_InviteReceived = 1783209300u,
-			Notification_Room_RoomUpdate = 1626094639u,
-			Notification_Session_InvitationsSent = 133810304u,
-			Notification_Voip_ConnectRequest = 908343318u,
 			Notification_Voip_MicrophoneAvailabilityStateUpdate = 1042336599u,
-			Notification_Voip_StateChange = 888120928u,
 			Notification_Voip_SystemVoipState = 1490179237u,
 			Notification_Vrcamera_GetDataChannelMessageUpdate = 1860498236u,
 			Notification_Vrcamera_GetSurfaceUpdate = 938610820u,
@@ -267,16 +237,6 @@ namespace Oculus.Platform
 			return null;
 		}
 
-		public virtual PingResult GetPingResult()
-		{
-			return null;
-		}
-
-		public virtual NetworkingPeer GetNetworkingPeer()
-		{
-			return null;
-		}
-
 		public virtual HttpTransferUpdate GetHttpTransferUpdate()
 		{
 			return null;
@@ -303,6 +263,16 @@ namespace Oculus.Platform
 		}
 
 		public virtual AchievementUpdate GetAchievementUpdate()
+		{
+			return null;
+		}
+
+		public virtual AppDownloadProgressResult GetAppDownloadProgressResult()
+		{
+			return null;
+		}
+
+		public virtual AppDownloadResult GetAppDownloadResult()
 		{
 			return null;
 		}
@@ -347,17 +317,12 @@ namespace Oculus.Platform
 			return null;
 		}
 
-		public virtual CalApplicationFinalized GetCalApplicationFinalized()
+		public virtual AvatarEditorResult GetAvatarEditorResult()
 		{
 			return null;
 		}
 
-		public virtual CalApplicationProposed GetCalApplicationProposed()
-		{
-			return null;
-		}
-
-		public virtual CalApplicationSuggestionList GetCalApplicationSuggestionList()
+		public virtual BlockedUserList GetBlockedUserList()
 		{
 			return null;
 		}
@@ -377,27 +342,17 @@ namespace Oculus.Platform
 			return null;
 		}
 
-		public virtual CloudStorageConflictMetadata GetCloudStorageConflictMetadata()
+		public virtual CowatchingState GetCowatchingState()
 		{
 			return null;
 		}
 
-		public virtual CloudStorageData GetCloudStorageData()
+		public virtual CowatchViewerList GetCowatchViewerList()
 		{
 			return null;
 		}
 
-		public virtual CloudStorageMetadata GetCloudStorageMetadata()
-		{
-			return null;
-		}
-
-		public virtual CloudStorageMetadataList GetCloudStorageMetadataList()
-		{
-			return null;
-		}
-
-		public virtual CloudStorageUpdateResponse GetCloudStorageUpdateResponse()
+		public virtual CowatchViewerUpdate GetCowatchViewerUpdate()
 		{
 			return null;
 		}
@@ -497,31 +452,6 @@ namespace Oculus.Platform
 			return null;
 		}
 
-		public virtual MatchmakingAdminSnapshot GetMatchmakingAdminSnapshot()
-		{
-			return null;
-		}
-
-		public virtual MatchmakingBrowseResult GetMatchmakingBrowseResult()
-		{
-			return null;
-		}
-
-		public virtual MatchmakingEnqueueResult GetMatchmakingEnqueueResult()
-		{
-			return null;
-		}
-
-		public virtual MatchmakingEnqueueResultAndRoom GetMatchmakingEnqueueResultAndRoom()
-		{
-			return null;
-		}
-
-		public virtual MatchmakingStats GetMatchmakingStats()
-		{
-			return null;
-		}
-
 		public virtual MicrophoneAvailabilityState GetMicrophoneAvailabilityState()
 		{
 			return null;
@@ -597,26 +527,6 @@ namespace Oculus.Platform
 			return null;
 		}
 
-		public virtual Room GetRoom()
-		{
-			return null;
-		}
-
-		public virtual RoomInviteNotification GetRoomInviteNotification()
-		{
-			return null;
-		}
-
-		public virtual RoomInviteNotificationList GetRoomInviteNotificationList()
-		{
-			return null;
-		}
-
-		public virtual RoomList GetRoomList()
-		{
-			return null;
-		}
-
 		public virtual SdkAccountList GetSdkAccountList()
 		{
 			return null;
@@ -647,7 +557,12 @@ namespace Oculus.Platform
 			return null;
 		}
 
-		public virtual UserAndRoomList GetUserAndRoomList()
+		public virtual UserAccountAgeCategory GetUserAccountAgeCategory()
+		{
+			return null;
+		}
+
+		public virtual UserCapabilityList GetUserCapabilityList()
 		{
 			return null;
 		}

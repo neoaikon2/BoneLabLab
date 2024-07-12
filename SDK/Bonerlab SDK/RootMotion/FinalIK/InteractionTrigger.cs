@@ -1,10 +1,11 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[HelpURL("https://www.youtube.com/watch?v=-TDZpNjt2mk&index=15&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction Trigger")]
+	[HelpURL("https://www.youtube.com/watch?v=-TDZpNjt2mk&index=15&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
 	public class InteractionTrigger : MonoBehaviour
 	{
 		[Serializable]
@@ -16,8 +17,8 @@ namespace RootMotion.FinalIK
 			[Tooltip("The offset of the character's position relative to the trigger in XZ plane. Y position of the character is unlimited as long as it is contact with the collider.")]
 			public Vector2 offset;
 
-			[Tooltip("Angle offset from the default forward direction.")]
 			[Range(-180f, 180f)]
+			[Tooltip("Angle offset from the default forward direction.")]
 			public float angleOffset;
 
 			[Tooltip("Max angular offset of the character's forward from the direction of this trigger.")]
@@ -33,14 +34,30 @@ namespace RootMotion.FinalIK
 			[Tooltip("Fixes the Y axis of the trigger to Vector3.up. This makes the trigger symmetrical relative to the object. For example a gun will be able to be picked up from the same direction relative to the barrel no matter which side the gun is resting on.")]
 			public bool fixYAxis;
 
-			public Vector3 offset3D => default(Vector3);
-
-			public Vector3 direction3D => default(Vector3);
-
-			public bool IsInRange(Transform character, Transform trigger, out float error)
+			public Vector3 offset3D
 			{
-				error = default(float);
-				return false;
+				get
+				{
+					return default(Vector3);
+				}
+			}
+
+			public Vector3 direction3D
+			{
+				get
+				{
+					return default(Vector3);
+				}
+			}
+
+			public bool IsInRange(Transform character, Transform trigger, [Out] float error)
+			{
+				return default(bool);
+			}
+
+			public CharacterPosition()
+				: base()
+			{
 			}
 		}
 
@@ -68,10 +85,14 @@ namespace RootMotion.FinalIK
 				return default(Quaternion);
 			}
 
-			public bool IsInRange(Transform raycastFrom, RaycastHit hit, Transform trigger, out float error)
+			public bool IsInRange(Transform raycastFrom, RaycastHit hit, Transform trigger, [Out] float error)
 			{
-				error = default(float);
-				return false;
+				return default(bool);
+			}
+
+			public CameraPosition()
+				: base()
+			{
 			}
 		}
 
@@ -86,10 +107,15 @@ namespace RootMotion.FinalIK
 
 				[Tooltip("The effectors to interact with.")]
 				public FullBodyBipedEffector[] effectors;
+
+				public Interaction()
+					: base()
+				{
+				}
 			}
 
-			[SerializeField]
 			[HideInInspector]
+			[SerializeField]
 			public string name;
 
 			[HideInInspector]
@@ -105,10 +131,14 @@ namespace RootMotion.FinalIK
 			[Tooltip("Definitions of the interactions associated with this range.")]
 			public Interaction[] interactions;
 
-			public bool IsInRange(Transform character, Transform raycastFrom, RaycastHit raycastHit, Transform trigger, out float maxError)
+			public bool IsInRange(Transform character, Transform raycastFrom, RaycastHit raycastHit, Transform trigger, [Out] float maxError)
 			{
-				maxError = default(float);
-				return false;
+				return default(bool);
+			}
+
+			public Range()
+				: base()
+			{
 			}
 		}
 
@@ -136,7 +166,12 @@ namespace RootMotion.FinalIK
 
 		public int GetBestRangeIndex(Transform character, Transform raycastFrom, RaycastHit raycastHit)
 		{
-			return 0;
+			return default(int);
+		}
+
+		public InteractionTrigger()
+			: base()
+		{
 		}
 	}
 }

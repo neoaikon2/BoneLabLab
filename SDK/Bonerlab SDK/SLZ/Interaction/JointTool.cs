@@ -23,5 +23,10 @@ namespace SLZ.Interaction
 		private void DebugDraw()
 		{
 		}
+
+		public JointTool()
+			: base()
+		{
+		}
 	}
 }

@@ -6,7 +6,7 @@ using SLZ.Serialize;
 namespace SLZ.Marrow.Forklift.Model
 {
 	[Serializable]
-	public abstract class ModTarget : IJSONPackable
+	public abstract class ModTarget : IPackable
 	{
 		public string ThumbnailOverride { get; set; }
 
@@ -14,7 +14,7 @@ namespace SLZ.Marrow.Forklift.Model
 		{
 		}
 
-		public virtual void Unpack(ObjectStore store, ObjectId objectId)
+		public virtual void Unpack(ObjectStore store, string objectId)
 		{
 		}
 

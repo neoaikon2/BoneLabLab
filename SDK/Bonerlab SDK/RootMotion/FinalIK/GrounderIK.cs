@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[HelpURL("http://www.root-motion.com/finalikdox/html/page11.html")]
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Grounder/Grounder IK")]
+	[HelpURL("http://www.root-motion.com/finalikdox/html/page11.html")]
 	public class GrounderIK : Grounder
 	{
 		public IK[] legs;
@@ -14,8 +14,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("The root Transform of the character, with the rigidbody and the collider.")]
 		public Transform characterRoot;
 
-		[Tooltip("The weight of rotating the character root to the ground normal (range: 0 - 1).")]
 		[Range(0f, 1f)]
+		[Tooltip("The weight of rotating the character root to the ground normal (range: 0 - 1).")]
 		public float rootRotationWeight;
 
 		[Tooltip("The speed of rotating the character root to the ground normal (range: 0 - inf).")]
@@ -56,7 +56,7 @@ namespace RootMotion.FinalIK
 
 		private bool IsReadyToInitiate()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void OnDisable()
@@ -84,6 +84,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public GrounderIK()
+			: base()
 		{
 		}
 	}

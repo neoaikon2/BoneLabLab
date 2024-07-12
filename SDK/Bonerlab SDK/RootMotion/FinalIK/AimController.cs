@@ -9,59 +9,11 @@ namespace RootMotion.FinalIK
 {
 	public class AimController : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CTurnToTarget_003Ed__33
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public AimController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CTurnToTarget_003Ed__33(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[Tooltip("Reference to the AimIK component.")]
 		public AimIK ik;
 
-		[Tooltip("Master weight of the IK solver.")]
 		[Range(0f, 1f)]
+		[Tooltip("Master weight of the IK solver.")]
 		public float weight;
 
 		[Tooltip("The target to aim at. Do not use the Target transform that is assigned to AimIK. Set to null if you wish to stop aiming.")]
@@ -74,8 +26,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("The time it takes to blend in/out of AimIK weight.")]
 		public float weightSmoothTime;
 
-		[Tooltip("Enables smooth turning towards the target according to the parameters under this header.")]
 		[Header("Turning Towards The Target")]
+		[Tooltip("Enables smooth turning towards the target according to the parameters under this header.")]
 		public bool smoothTurnTowardsTarget;
 
 		[Tooltip("Speed of turning towards the target using Vector3.RotateTowards.")]
@@ -96,8 +48,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("Offset applied to the target in world space. Convenient for scripting aiming inaccuracy.")]
 		public Vector3 offset;
 
-		[Tooltip("Character root will be rotate around the Y axis to keep root forward within this angle from the aiming direction.")]
 		[Range(0f, 180f)]
+		[Tooltip("Character root will be rotate around the Y axis to keep root forward within this angle from the aiming direction.")]
 		[Header("RootRotation")]
 		public float maxRootAngle;
 
@@ -134,7 +86,13 @@ namespace RootMotion.FinalIK
 
 		private float turnToTargetMlpV;
 
-		private Vector3 pivot => default(Vector3);
+		private Vector3 pivot
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
 		private void Start()
 		{
@@ -152,10 +110,14 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CTurnToTarget_003Ed__33))]
 		private IEnumerator TurnToTarget()
 		{
 			return null;
+		}
+
+		public AimController()
+			: base()
+		{
 		}
 	}
 }

@@ -31,5 +31,10 @@ namespace SLZ.Bonelab
 		public void GetComponents()
 		{
 		}
+
+		public ForcePlatform()
+			: base()
+		{
+		}
 	}
 }

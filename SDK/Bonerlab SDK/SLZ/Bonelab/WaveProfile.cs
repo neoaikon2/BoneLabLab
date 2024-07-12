@@ -34,5 +34,10 @@ namespace SLZ.Bonelab
 		public int heavyBulletAmount;
 
 		public bool isProceduralWave;
+
+		public WaveProfile()
+			: base()
+		{
+		}
 	}
 }

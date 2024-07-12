@@ -2,15 +2,15 @@ using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	[RequireComponent(typeof(ConfigurableJoint))]
 	[RequireComponent(typeof(Rigidbody))]
+	[RequireComponent(typeof(ConfigurableJoint))]
 	public class SlideObjectControl : MonoBehaviour
 	{
 		private Vector3 SlideDirection;
 
-		private ConfigurableJoint m_configJoint;
+		public ConfigurableJoint m_configJoint;
 
-		private Rigidbody m_rb;
+		public Rigidbody m_rb;
 
 		[Header("Drawer Movement")]
 		private bool flippedDir;
@@ -23,7 +23,10 @@ namespace SLZ.Bonelab
 
 		public bool FreeDrawer;
 
-		private bool DrawerOpen;
+		[Tooltip("is the drawer set in an open position? this will stop it from closing at start")]
+		public bool startOpen;
+
+		private bool previousIsOpen;
 
 		private Vector3 axis_Anchor;
 
@@ -48,22 +51,17 @@ namespace SLZ.Bonelab
 
 		public float targetPosition_open;
 
-		private Vector3 desiredPosition;
+		private Vector3 desiredClosedPosition;
 
-		[Header("Lock")]
+		private Vector3 desiredOpenPosition;
+
 		[Space(10f)]
+		[Header("Lock")]
 		public bool Locked;
 
-		public AudioClip[] clip_Locked;
-
-		public AudioClip[] clip_Lock;
-
-		public AudioClip[] clip_Unlock;
-
-		[Space(10f)]
-		private bool canSlam;
-
-		public AudioClip clip_Slam;
+		private void Reset()
+		{
+		}
 
 		private void Start()
 		{
@@ -85,7 +83,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void OPENCLOSE()
+		public void OPENCLOSE(bool isOpening)
 		{
 		}
 
@@ -93,11 +91,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void LockUnlock(bool locked, bool hasKey)
+		private bool CalculateOpening()
 		{
+			return default(bool);
 		}
 
-		private void PlaySound(AudioClip clip, float force = 1f)
+		public SlideObjectControl()
+			: base()
 		{
 		}
 	}

@@ -38,5 +38,10 @@ namespace SLZ.Interaction
 		private void CheckLock()
 		{
 		}
+
+		public MultiAuthenticator()
+			: base()
+		{
+		}
 	}
 }

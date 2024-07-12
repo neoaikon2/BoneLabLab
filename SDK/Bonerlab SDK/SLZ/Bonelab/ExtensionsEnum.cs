@@ -4,12 +4,12 @@ namespace SLZ.Bonelab
 	{
 		public static T Next<T>(this T src) where T : struct
 		{
-			return default(T);
+			return (T)default(T);
 		}
 
 		public static T Previous<T>(this T src) where T : struct
 		{
-			return default(T);
+			return (T)default(T);
 		}
 	}
 }

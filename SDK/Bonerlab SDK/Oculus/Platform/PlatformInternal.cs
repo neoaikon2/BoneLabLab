@@ -17,6 +17,7 @@ namespace Oculus.Platform
 			Colocation_GetCurrentMapUuid = 878018226u,
 			Colocation_RequestMap = 840263277u,
 			Colocation_ShareMap = 409847005u,
+			DeviceApplicationIntegrity_GetAttestationToken = 271557598u,
 			GraphAPI_Get = 822018158u,
 			GraphAPI_Post = 1990567876u,
 			HTTP_Get = 1874211363u,
@@ -59,17 +60,17 @@ namespace Oculus.Platform
 			Room_GetSocialRooms = 1636310390u,
 			User_CancelRecordingForReportFlow = 65065289u,
 			User_GetLinkedAccounts = 1469314134u,
-			User_LaunchBlockFlow = 1876305192u,
+			User_GetUserCapabilities = 303837564u,
 			User_LaunchReportFlow = 1449304081u,
 			User_LaunchReportFlow2 = 2139314275u,
-			User_LaunchUnblockFlow = 346172055u,
 			User_NewEntitledTestUser = 292822787u,
 			User_NewTestUser = 921194380u,
 			User_NewTestUserFriends = 517416647u,
 			User_StartRecordingForReportFlow = 1819161571u,
 			User_StopRecordingAndLaunchReportFlow = 1618513035u,
 			User_StopRecordingAndLaunchReportFlow2 = 432190251u,
-			User_TestUserCreateDeviceManifest = 1701884605u
+			User_TestUserCreateDeviceManifest = 1701884605u,
+			Voip_ReportAppVoipSessions = 408048078u
 		}
 
 		public static class HTTP

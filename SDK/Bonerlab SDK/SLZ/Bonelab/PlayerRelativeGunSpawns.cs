@@ -12,6 +12,7 @@ namespace SLZ.Bonelab
 
 		public Rigidbody playerPelvisRB;
 
+		[ContextMenu("CheckDropLocation")]
 		public void CheckDropLocation()
 		{
 		}
@@ -21,6 +22,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDrawGizmos()
+		{
+		}
+
+		public PlayerRelativeGunSpawns()
+			: base()
 		{
 		}
 	}

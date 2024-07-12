@@ -17,21 +17,27 @@ namespace SLZ.Bonelab
 
 		private Quaternion objRot;
 
-		private bool jointBroken;
-
 		public ConfigurableJoint joint;
 
 		public SoftJointLimit lowAngularXLimit;
 
 		public SoftJointLimit highAngularXLimit;
 
+		public Vector3 connectedAnch;
+
 		private ConfigurableJoint newJoint;
 
-		private void OnEnable()
+		private void Awake()
 		{
 		}
 
+		[ContextMenu("ResetLadder")]
 		public void LadderReset()
+		{
+		}
+
+		public ResetLadder()
+			: base()
 		{
 		}
 	}

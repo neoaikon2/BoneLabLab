@@ -6,11 +6,27 @@ namespace Oculus.Platform
 	{
 		private IntPtr Handle;
 
+		public void SetDeveloperDefinedContext(string key, string value)
+		{
+		}
+
+		public void ClearDeveloperDefinedContext()
+		{
+		}
+
 		public void SetObjectType(string value)
 		{
 		}
 
 		public void SetReportType(AbuseReportType value)
+		{
+		}
+
+		public void AddSuggestedUser(ulong userID)
+		{
+		}
+
+		public void ClearSuggestedUsers()
 		{
 		}
 

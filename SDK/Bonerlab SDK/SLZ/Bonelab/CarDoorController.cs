@@ -11,54 +11,6 @@ namespace SLZ.Bonelab
 {
 	public class CarDoorController : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CSetLatch_003Ed__29
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public CarDoorController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CSetLatch_003Ed__29(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public ConfigurableJoint jnt;
 
 		public Rigidbody rb;
@@ -137,7 +89,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CSetLatch_003Ed__29))]
 		private IEnumerator SetLatch()
 		{
 			return null;
@@ -148,6 +99,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void CLOSEDOORCAB()
+		{
+		}
+
+		public CarDoorController()
+			: base()
 		{
 		}
 	}

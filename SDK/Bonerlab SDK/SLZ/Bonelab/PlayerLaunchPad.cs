@@ -12,10 +12,10 @@ namespace SLZ.Bonelab
 
 			public readonly float timeToTarget;
 
-			public LaunchData(Vector3 _initialVelocity, float _timeToTarget)
+			public LaunchData(Vector3 initialVelocity, float timeToTarget)
 			{
-				initialVelocity = _initialVelocity;
-				timeToTarget = _timeToTarget;
+				this.timeToTarget = default(float);
+				this.initialVelocity = default(Vector3);
 			}
 		}
 
@@ -47,7 +47,7 @@ namespace SLZ.Bonelab
 
 		public float CheckAgentDot(GameObject agentObj)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		[ContextMenu("GetAllPlayerBodies")]
@@ -69,6 +69,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnDrawGizmosSelected()
+		{
+		}
+
+		public PlayerLaunchPad()
+			: base()
 		{
 		}
 	}

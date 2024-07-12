@@ -7,5 +7,10 @@ namespace SLZ.Bonelab
 		public GameObject[] upperWheelObjs;
 
 		public GameObject lowerWheelObj;
+
+		public ZipMechData()
+			: base()
+		{
+		}
 	}
 }

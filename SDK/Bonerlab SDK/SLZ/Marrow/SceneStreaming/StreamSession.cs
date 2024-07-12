@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Warehouse;
+using UnityEngine;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 
@@ -27,24 +28,32 @@ namespace SLZ.Marrow.SceneStreaming
 
 		private Action _doLevelUnload;
 
+		private bool _willPersistentSceneLoadHappened;
+
 		private Action _willPersistentSceneLoad;
+
+		private bool _doPersistentSceneLoadHappened;
 
 		private Action _doPersistentSceneLoad;
 
-		private bool acceptingPlacers;
-
-		private List<SpawnableCratePlacer> _initialPlacers;
-
-		private List<UniTask> _initialPlacings;
-
 		private List<PlayerMarker> _playerMarkers;
+
+		private int _loadDependencyCount;
 
 		public StreamStatus Status { get; private set; }
 
-		public ChunkLoader ChunkLoader { get; private set; }
+		public SceneLoader SceneLoader { get; private set; }
 
 		public StreamSession(LevelCrateReference level, LevelCrateReference loadLevel = default(LevelCrateReference))
 			: base()
+		{
+		}
+
+		public void RegisterLoadDependency()
+		{
+		}
+
+		public void UnregisterLoadDependency()
 		{
 		}
 
@@ -64,7 +73,7 @@ namespace SLZ.Marrow.SceneStreaming
 		{
 		}
 
-		public UniTask Load()
+		internal UniTask Load()
 		{
 			return default(UniTask);
 		}
@@ -78,22 +87,13 @@ namespace SLZ.Marrow.SceneStreaming
 			return null;
 		}
 
-		public void RegisterInitialPlacer(SpawnableCratePlacer placer)
-		{
-		}
-
 		public void RegisterPlayerMarker(PlayerMarker playerMarker)
 		{
 		}
 
-		private Chunk WarmupTriggersReturnPlayerChunk()
+		private UniTask<Scene> LoadPersistentScenes()
 		{
-			return null;
-		}
-
-		private UniTask LoadPersistentScenes(bool autoActivate = true)
-		{
-			return default(UniTask);
+			return default(UniTask<Scene>);
 		}
 
 		private UniTask UnloadAllOtherScenes(Scene loadingScene)

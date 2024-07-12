@@ -19,6 +19,11 @@ namespace RootMotion.FinalIK
 			public void Apply(IKSolverFullBodyBiped solver, float weight, Quaternion rotation)
 			{
 			}
+
+			public EffectorLink()
+				: base()
+			{
+			}
 		}
 
 		public EffectorLink[] effectorLinks;
@@ -28,6 +33,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void Apply(IKSolverFullBodyBiped solver, float weight, Quaternion rotation)
+		{
+		}
+
+		public OffsetPose()
+			: base()
 		{
 		}
 	}

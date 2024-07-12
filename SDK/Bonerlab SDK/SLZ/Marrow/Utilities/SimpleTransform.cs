@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using UnityEngine;
 
 namespace SLZ.Marrow.Utilities
@@ -230,6 +231,21 @@ namespace SLZ.Marrow.Utilities
 		public static SimpleTransform Lerp(SimpleTransform fromST, SimpleTransform toST, float perc)
 		{
 			return default(SimpleTransform);
+		}
+
+		public bool Approximately(SimpleTransform other)
+		{
+			return default(bool);
+		}
+
+		public static bool Approximately(float3 positionA, float3 positionB, float threshold = 1.1920929E-07f)
+		{
+			return default(bool);
+		}
+
+		public static bool Approximately(quaternion rotationA, quaternion rotationB, float threshold = 1.1920929E-07f)
+		{
+			return default(bool);
 		}
 	}
 }

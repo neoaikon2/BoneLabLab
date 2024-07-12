@@ -10,8 +10,6 @@ namespace Oculus.Platform.Models
 
 		public readonly string ImageURL;
 
-		public readonly string InviteToken;
-
 		public readonly string OculusID;
 
 		public readonly string Presence;

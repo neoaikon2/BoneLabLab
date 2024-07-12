@@ -13,10 +13,12 @@ namespace SplineMesh
 		public Vector2 uv;
 
 		public MeshVertex(Vector3 position, Vector3 normal, Vector2 uv)
+			: base()
 		{
 		}
 
 		public MeshVertex(Vector3 position, Vector3 normal)
+			: base()
 		{
 		}
 	}

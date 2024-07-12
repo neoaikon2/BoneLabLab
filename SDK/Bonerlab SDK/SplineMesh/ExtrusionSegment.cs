@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SplineMesh
 {
-	[RequireComponent(typeof(MeshRenderer))]
+	[DisallowMultipleComponent]
 	[ExecuteInEditMode]
 	[RequireComponent(typeof(MeshFilter))]
-	[DisallowMultipleComponent]
+	[RequireComponent(typeof(MeshRenderer))]
 	public class ExtrusionSegment : MonoBehaviour
 	{
 		[Serializable]
@@ -20,10 +21,12 @@ namespace SplineMesh
 			public float uCoord;
 
 			public Vertex(Vector2 point, Vector2 normal, float uCoord)
+				: base()
 			{
 			}
 
 			public Vertex(Vertex other)
+				: base()
 			{
 			}
 		}
@@ -67,7 +70,7 @@ namespace SplineMesh
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -78,7 +81,7 @@ namespace SplineMesh
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -89,7 +92,7 @@ namespace SplineMesh
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -126,6 +129,11 @@ namespace SplineMesh
 		}
 
 		public void Compute()
+		{
+		}
+
+		public ExtrusionSegment()
+			: base()
 		{
 		}
 	}

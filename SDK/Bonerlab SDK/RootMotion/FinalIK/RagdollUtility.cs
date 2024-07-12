@@ -35,6 +35,7 @@ namespace RootMotion.FinalIK
 			public Quaternion lastRotation;
 
 			public Rigidbone(Rigidbody r)
+				: base()
 			{
 			}
 
@@ -56,6 +57,7 @@ namespace RootMotion.FinalIK
 			public Quaternion localRotation;
 
 			public Child(Transform transform)
+				: base()
 			{
 			}
 
@@ -64,54 +66,6 @@ namespace RootMotion.FinalIK
 			}
 
 			public void StoreLocalState()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CDisableRagdollSmooth_003Ed__21
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public RagdollUtility _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CDisableRagdollSmooth_003Ed__21(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 		}
@@ -153,9 +107,21 @@ namespace RootMotion.FinalIK
 
 		private bool[] disabledIKComponents;
 
-		private bool isRagdoll => false;
+		private bool isRagdoll
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		private bool ikUsed => false;
+		private bool ikUsed
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		public void EnableRagdoll()
 		{
@@ -169,7 +135,6 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CDisableRagdollSmooth_003Ed__21))]
 		private IEnumerator DisableRagdollSmooth()
 		{
 			return null;
@@ -216,6 +181,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public RagdollUtility()
+			: base()
 		{
 		}
 	}

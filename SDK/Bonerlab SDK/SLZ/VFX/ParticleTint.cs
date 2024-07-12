@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -9,8 +10,8 @@ namespace SLZ.VFX
 		private static ComponentCache<ParticleTint> _cache;
 
 		[Space]
-		[SerializeField]
 		[Header("This is used to tint particels when they are spawned in")]
+		[SerializeField]
 		private ParticleSystem[] ParticleSystems;
 
 		[SerializeField]
@@ -24,13 +25,19 @@ namespace SLZ.VFX
 		[SerializeField]
 		private Mesh quadRef;
 
-		public static ComponentCache<ParticleTint> Cache => null;
+		public static ComponentCache<ParticleTint> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		private void Reset()
+		protected override void Reset()
 		{
 		}
 
-		protected override void OnPostSpawn(GameObject go)
+		public override void OnPoolInitialize()
 		{
 		}
 
@@ -78,11 +85,11 @@ namespace SLZ.VFX
 		{
 		}
 
-		public void SetMeshAndPlay(Color TintColor, Mesh mesh, float volumeSize, Vector3 scale, Vector3? velocity = null)
+		public void SetMeshAndPlay(Color TintColor, Mesh mesh, float volumeSize, Vector3 scale, Vector3? velocity = default(Vector3?))
 		{
 		}
 
-		public void SetMeshAndPlay(Color TintColor, SkinnedMeshRenderer mesh, float volumeSize, Vector3 scale, Vector3? velocity = null)
+		public void SetMeshAndPlay(Color TintColor, SkinnedMeshRenderer mesh, float volumeSize, Vector3 scale, Vector3? velocity = default(Vector3?))
 		{
 		}
 
@@ -96,10 +103,10 @@ namespace SLZ.VFX
 
 		private float GetVolume(Vector3 size)
 		{
-			return 0f;
+			return default(float);
 		}
 
-		private void Awake()
+		protected override void Awake()
 		{
 		}
 
@@ -108,6 +115,11 @@ namespace SLZ.VFX
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public ParticleTint()
+			: base()
 		{
 		}
 	}

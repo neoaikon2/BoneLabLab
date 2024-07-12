@@ -31,14 +31,15 @@ namespace SLZ.Interaction
 
 		public BodyRegion bodyRegion;
 
-		[Range(0f, 1f)]
-		[FormerlySerializedAs("torsoY")]
+		[Range(0f, 2f)]
 		[Tooltip("Torso Y location of slot. 0 is between the shoulders, 1 is between the hips")]
 		public float regionY;
 
 		[Range(-180f, 180f)]
 		[Tooltip("0 is straight in front, sternum to belly button. 180 is straight in back along the spine. 90/-90 is along the side")]
 		public float degreesFromCenter;
+
+		public Vector2 hardDimentions;
 
 		private float _cachedDegrees;
 
@@ -74,6 +75,11 @@ namespace SLZ.Interaction
 		}
 
 		public void FlipSpecialItem(bool flipped)
+		{
+		}
+
+		public SlotContainer()
+			: base()
 		{
 		}
 	}

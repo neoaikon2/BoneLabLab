@@ -140,10 +140,12 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public RTBakedMeshBuilder()
+			: base()
 		{
 		}
 
 		public RTBakedMeshBuilder(RTIvyContainer ivyContainer, GameObject ivyGo)
+			: this()
 		{
 		}
 
@@ -161,7 +163,7 @@ namespace Dynamite3D.RealIvy
 
 		private float CalculateRadius(BranchPoint branchPoint, BranchContainer buildingBranchContainer)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private void SetTriangles(RTBranchContainer branch, int vertCount, int initIndex, int branchIndex)

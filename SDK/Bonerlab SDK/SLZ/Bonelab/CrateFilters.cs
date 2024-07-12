@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using SLZ.Bonelab.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.SaveData;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -11,7 +11,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public UnlockedNotUnlockableAndNotRedactedFilter()
+				: base()
+			{
 			}
 		}
 
@@ -19,7 +24,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public UnlockableNotUnlockedAndNotRedactedFilter()
+				: base()
+			{
 			}
 		}
 
@@ -27,7 +37,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public UnlockableAndNotRedactedCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -35,7 +50,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public UnlockedAndNotRedactedCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -43,7 +63,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public UnlockedCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -51,7 +76,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public NonAvatarCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -59,7 +89,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public NonRedactedCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -67,7 +102,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public NonUnlockableCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -75,7 +115,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public RedactedCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -83,7 +128,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public UnlockableCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -92,34 +142,13 @@ namespace SLZ.Bonelab
 			private List<string> blackList;
 
 			public BlackListCrateFilter(List<string> blackList)
+				: base()
 			{
 			}
 
 			public bool Filter(Crate crate)
 			{
-				return false;
-			}
-		}
-
-		public class BlackListPalletFilter : ICrateFilter<Crate>
-		{
-			private List<string> blackList;
-
-			public BlackListPalletFilter(List<string> blackList)
-			{
-			}
-
-			public bool Filter(Crate crate)
-			{
-				return false;
-			}
-		}
-
-		public class SLZFilter : ICrateFilter<Crate>
-		{
-			public bool Filter(Crate crate)
-			{
-				return false;
+				return default(bool);
 			}
 		}
 
@@ -127,7 +156,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public DevToolCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -135,7 +169,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public FavoritesCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -143,7 +182,12 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public GunCrateFilter()
+				: base()
+			{
 			}
 		}
 
@@ -151,12 +195,34 @@ namespace SLZ.Bonelab
 		{
 			public bool Filter(Crate crate)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public NPCCrateFilter()
+				: base()
+			{
 			}
 		}
 
-		private static PlayerUnlocks u => null;
+		private static PlayerUnlocks u
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		private static PlayerSettings p => null;
+		private static PlayerSettings p
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public CrateFilters()
+			: base()
+		{
+		}
 	}
 }

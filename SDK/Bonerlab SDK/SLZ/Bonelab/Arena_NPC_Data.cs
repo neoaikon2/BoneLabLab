@@ -1,5 +1,5 @@
 using System;
-using SLZ.AI;
+using SLZ.Marrow.AI;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -24,5 +24,10 @@ namespace SLZ.Bonelab
 		public GameObject crownObj;
 
 		public FixedJoint crownJoint;
+
+		public Arena_NPC_Data()
+			: base()
+		{
+		}
 	}
 }

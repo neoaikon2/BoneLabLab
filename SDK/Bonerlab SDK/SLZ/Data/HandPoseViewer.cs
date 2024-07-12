@@ -1,5 +1,5 @@
 using SLZ.Interaction;
-using SLZ.Marrow.Data;
+using SLZ.VRMK;
 using UnityEngine;
 using UnityEngine.Animations.Rigging;
 
@@ -112,7 +112,12 @@ namespace SLZ.Data
 
 		private float CheckEulerAngles(float e)
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public HandPoseViewer()
+			: base()
+		{
 		}
 	}
 }

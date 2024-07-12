@@ -14,5 +14,10 @@ namespace SplineMesh
 		public int insertIndex;
 
 		public int removeIndex;
+
+		public ListChangedEventArgs()
+			: base()
+		{
+		}
 	}
 }

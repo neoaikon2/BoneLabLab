@@ -45,5 +45,10 @@ namespace RootMotion.FinalIK
 		public void SolveHead()
 		{
 		}
+
+		public InteractionLookAt()
+			: base()
+		{
+		}
 	}
 }

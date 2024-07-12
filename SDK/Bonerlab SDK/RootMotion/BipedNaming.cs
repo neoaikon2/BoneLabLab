@@ -76,13 +76,9 @@ namespace RootMotion
 			return null;
 		}
 
-		public static Transform GetFirstBoneOfTypeAndSide(BoneType boneType, BoneSide boneSide, Transform[] bones)
-		{
-			return null;
-		}
-
 		public static Transform GetNamingMatch(Transform[] transforms, params string[][] namings)
 		{
+			namings = default(string[][]);
 			return null;
 		}
 
@@ -98,72 +94,58 @@ namespace RootMotion
 
 		public static Transform GetBone(Transform[] transforms, BoneType boneType, BoneSide boneSide = BoneSide.Center, params string[][] namings)
 		{
+			namings = default(string[][]);
 			return null;
 		}
 
 		private static bool isLeft(string boneName)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool isRight(string boneName)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool isSpine(string boneName)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool isHead(string boneName)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool isArm(string boneName)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool isLeg(string boneName)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool isTail(string boneName)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool isEye(string boneName)
 		{
-			return false;
-		}
-
-		private static bool isTypeExclude(string boneName)
-		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool matchesNaming(string boneName, string[] namingConvention)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private static bool excludesNaming(string boneName, string[] namingConvention)
 		{
-			return false;
-		}
-
-		private static bool matchesLastLetter(string boneName, string[] namingConvention)
-		{
-			return false;
-		}
-
-		private static bool LastLetterIs(string boneName, string letter)
-		{
-			return false;
+			return default(bool);
 		}
 
 		private static string firstLetter(string boneName)

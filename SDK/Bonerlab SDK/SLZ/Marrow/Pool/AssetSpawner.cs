@@ -13,15 +13,19 @@ namespace SLZ.Marrow.Pool
 {
 	public class AssetSpawner : MonoBehaviour
 	{
+		private static bool _hasInstance;
+
 		private static AssetSpawner _instance;
 
-		private Dictionary<Barcode, AssetPool> _barcodeToPool;
+		private Dictionary<Barcode, Pool> _barcodeToPool;
 
-		private Dictionary<AssetPoolee, SpawnPolicy> _pooleeToPolicy;
+		private Dictionary<Poolee, SpawnPolicy> _pooleeToPolicy;
 
-		private Dictionary<ValueTuple<int, SpawnPolicyData, Barcode>, SpawnPolicy> _policySpawns;
+		private Dictionary<int, SpawnPolicy> _policySpawns;
 
-		private List<AssetPool> _poolList;
+		private List<Pool> _poolList;
+
+		private static ulong _spawnCount;
 
 		private void Awake()
 		{
@@ -31,12 +35,13 @@ namespace SLZ.Marrow.Pool
 		{
 		}
 
-		private void LateUpdate()
+		private static void Instantiate()
 		{
 		}
 
-		private static void Instantiate()
+		public static ulong GetNewID()
 		{
+			return default(ulong);
 		}
 
 		public static void Register(Spawnable spawnable)
@@ -48,29 +53,25 @@ namespace SLZ.Marrow.Pool
 			return default(UniTask);
 		}
 
+		public static UniTask InstantiateForWarmupAsync(Spawnable spawnable)
+		{
+			return default(UniTask);
+		}
+
 		public static void Spawn(Spawnable spawnable, Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Vector3? scale = default(Vector3?), bool ignorePolicy = false, int? groupID = default(int?), Action<GameObject> spawnCallback = default(Action<GameObject>), Action<GameObject> despawnCallback = default(Action<GameObject>))
 		{
 		}
 
-		public static UniTask<AssetPoolee> SpawnAsync(Spawnable spawnable, Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Vector3? scale = default(Vector3?), bool ignorePolicy = false, int? groupID = default(int?), Action<GameObject> spawnCallback = default(Action<GameObject>), Action<GameObject> despawnCallback = default(Action<GameObject>))
+		public static UniTask<Poolee> SpawnAsync(Spawnable spawnable, Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Vector3? scale = default(Vector3?), bool ignorePolicy = false, int? groupID = default(int?), Action<GameObject> spawnCallback = default(Action<GameObject>), Action<GameObject> despawnCallback = default(Action<GameObject>))
 		{
-			return default(UniTask<AssetPoolee>);
+			return default(UniTask<Poolee>);
 		}
 
-		private static UniTaskVoid SpawnCallbackFrameDelay(AssetPoolee poolee)
-		{
-			return default(UniTaskVoid);
-		}
-
-		public static void Clear(AssetPoolee poolee)
+		public static void Clear(Poolee poolee)
 		{
 		}
 
-		public static void StageForDespawn(AssetPoolee poolee)
-		{
-		}
-
-		public static void Despawn(AssetPoolee poolee)
+		public static void Despawn(Poolee poolee, bool skipDisable = false)
 		{
 		}
 

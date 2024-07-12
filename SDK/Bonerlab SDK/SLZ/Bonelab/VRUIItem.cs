@@ -20,5 +20,10 @@ namespace SLZ.Bonelab
 		private void ValidateCollider()
 		{
 		}
+
+		public VRUIItem()
+			: base()
+		{
+		}
 	}
 }

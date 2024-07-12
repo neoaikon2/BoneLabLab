@@ -10,6 +10,22 @@ namespace Oculus.Platform
 		{
 		}
 
+		public void SetDestinationApiName(string value)
+		{
+		}
+
+		public void SetLobbySessionId(string value)
+		{
+		}
+
+		public void SetMatchSessionId(string value)
+		{
+		}
+
+		public void SetRoomId(ulong value)
+		{
+		}
+
 		public static explicit operator IntPtr(ApplicationOptions options)
 		{
 			return default(IntPtr);

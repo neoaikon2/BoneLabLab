@@ -1,5 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.MLAgents;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
@@ -13,16 +15,16 @@ namespace SLZ.Bonelab
 
 		private RaceCountdownDisplay countdownDisplay;
 
-		[SerializeField]
 		[Tooltip("Spawnable")]
+		[SerializeField]
 		private Spawnable playerKart;
 
 		[SerializeField]
 		[Tooltip("Spawnable")]
 		private Spawnable aiKart;
 
-		[Tooltip("Spawnable")]
 		[SerializeField]
+		[Tooltip("Spawnable")]
 		private Spawnable aiTruck;
 
 		public GameObject playerKartGo;
@@ -80,42 +82,6 @@ namespace SLZ.Bonelab
 		private RaceUtils raceUtils;
 
 		private TrackUtils trackUtils;
-
-		public event Action RaceStart
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event Action IncrementContestants
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event Action DecrementContestants
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
 
 		protected void Awake()
 		{
@@ -187,7 +153,7 @@ namespace SLZ.Bonelab
 		}
 
 		[ContextMenu("Spawn Contestant")]
-		public void SpawnContestant(Spawnable spawnable, int ind, BarracudaModelManagerMono bmm = null)
+		public void SpawnContestant(Spawnable spawnable, int ind, BarracudaModelManagerMono bmm = default(BarracudaModelManagerMono))
 		{
 		}
 
@@ -225,5 +191,16 @@ namespace SLZ.Bonelab
 		private void DeleteCheckpoints()
 		{
 		}
+
+		public TruckChaseTaskClass()
+			: base()
+		{
+		}
+
+		public event Action RaceStart;
+
+		public event Action IncrementContestants;
+
+		public event Action DecrementContestants;
 	}
 }

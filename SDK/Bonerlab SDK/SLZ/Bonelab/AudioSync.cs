@@ -35,18 +35,6 @@ namespace SLZ.Bonelab
 		[Tooltip("The placement of the subtitles in the bottom screen")]
 		public SubtitlePlacement SubPlacement;
 
-		public static event Action<string, float, SubtitlePlacement> AddSubtitles
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
 		public void Awake()
 		{
 		}
@@ -58,5 +46,12 @@ namespace SLZ.Bonelab
 		public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex, AnimatorControllerPlayable controller)
 		{
 		}
+
+		public AudioSync()
+			: base()
+		{
+		}
+
+		public static event Action<string, float, SubtitlePlacement> AddSubtitles;
 	}
 }

@@ -1,8 +1,9 @@
+using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class SLZ_LaserPointer : MonoBehaviour
+	public class SLZ_LaserPointer : MarrowBehaviour
 	{
 		public Transform laserLine;
 
@@ -54,8 +55,8 @@ namespace SLZ.Bonelab
 
 		private Vector3 AirPoint;
 
-		[SerializeField]
 		[Range(0f, 6f)]
+		[SerializeField]
 		private int FrameSkip;
 
 		private int frame;
@@ -79,6 +80,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void MeshUpdate(Vector3 hitpoint, Vector3 lasthit)
+		{
+		}
+
+		public SLZ_LaserPointer()
+			: base()
 		{
 		}
 	}

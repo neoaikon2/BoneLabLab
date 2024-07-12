@@ -12,6 +12,8 @@ namespace SLZ.Bonelab
 
 			public const string BigAnomaly_B = "BigAnomaly_B";
 
+			public const string BlankBox = "BlankBox";
+
 			public const string Descent = "Descent";
 
 			public const string DistrictParkour = "DistrictParkour";
@@ -25,6 +27,8 @@ namespace SLZ.Bonelab
 			public const string GunRangeSandbox = "GunRangeSandbox";
 
 			public const string HalfwayPark = "HalfwayPark";
+
+			public const string HandGunBox = "HandGunBox";
 
 			public const string Holodeck = "Holodeck";
 
@@ -45,6 +49,8 @@ namespace SLZ.Bonelab
 			public const string Outro = "Outro";
 
 			public const string Pillar = "Pillar";
+
+			public const string RedactedChamber = "RedactedChamber";
 
 			public const string Rooftops = "Rooftops";
 

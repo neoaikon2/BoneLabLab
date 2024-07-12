@@ -102,7 +102,7 @@ namespace RootMotion.FinalIK
 
 		public float GetAngle(AnimationStream s, Vector3 axis, Vector3 IKPosition)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private Vector3 GetClampedIKPosition(AnimationStream s, float clampWeight, int clampSmoothing, Vector3 IKPosition, Vector3 transformPosition, Vector3 transformAxis)
@@ -113,11 +113,6 @@ namespace RootMotion.FinalIK
 		private Vector3 GetLocalDirection(AnimationStream s, Vector3 transformAxis)
 		{
 			return default(Vector3);
-		}
-
-		private float GetPositionOffset(AnimationStream s, Vector3 localDirection)
-		{
-			return 0f;
 		}
 
 		public void Dispose()

@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[RequireComponent(typeof(Spline))]
 	[ExecuteInEditMode]
+	[RequireComponent(typeof(Spline))]
 	public class ExampleGrowingRoot : MonoBehaviour
 	{
 		private GameObject generated;
@@ -51,6 +51,11 @@ namespace SplineMesh
 		}
 
 		private void Init()
+		{
+		}
+
+		public ExampleGrowingRoot()
+			: base()
 		{
 		}
 	}

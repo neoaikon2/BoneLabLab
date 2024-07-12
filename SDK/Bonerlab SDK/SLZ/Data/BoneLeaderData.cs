@@ -20,5 +20,10 @@ namespace SLZ.Data
 		public string apiTitle;
 
 		public ScoreType scoreType;
+
+		public BoneLeaderData()
+			: base()
+		{
+		}
 	}
 }

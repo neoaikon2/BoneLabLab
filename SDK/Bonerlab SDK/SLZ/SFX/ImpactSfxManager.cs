@@ -20,7 +20,12 @@ namespace SLZ.SFX
 
 		public bool CheckImpact(float impulse, ImpactSFX impact)
 		{
-			return false;
+			return default(bool);
+		}
+
+		public ImpactSfxManager()
+			: base()
+		{
 		}
 	}
 }

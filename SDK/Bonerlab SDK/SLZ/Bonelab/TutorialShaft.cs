@@ -1,3 +1,9 @@
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -21,7 +27,29 @@ namespace SLZ.Bonelab
 
 		public float loopHeight;
 
-		private void Update()
+		private CancellationTokenSource cts;
+
+		[ContextMenu("StartShaftLoop")]
+		public void StartShaftLoop()
+		{
+		}
+
+		[ContextMenu("StopShaftLoop")]
+		public void StopShaftLoop()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
+		private UniTaskVoid MoveShaftLoop(CancellationToken ct)
+		{
+			return default(UniTaskVoid);
+		}
+
+		public TutorialShaft()
+			: base()
 		{
 		}
 	}

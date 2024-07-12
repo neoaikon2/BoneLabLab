@@ -10,5 +10,10 @@ namespace SLZ.Utilities
 		private void OnJointBreak(float breakForce)
 		{
 		}
+
+		public TriggeredJointBreak()
+			: base()
+		{
+		}
 	}
 }

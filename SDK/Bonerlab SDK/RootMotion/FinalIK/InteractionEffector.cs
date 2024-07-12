@@ -1,5 +1,7 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -75,11 +77,24 @@ namespace RootMotion.FinalIK
 
 		public InteractionObject interactionObject { get; private set; }
 
-		public bool inInteraction => false;
+		public bool inInteraction
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public float progress => 0f;
+		public float progress
+		{
+			get
+			{
+				return default(float);
+			}
+		}
 
 		public InteractionEffector(FullBodyBipedEffector effectorType)
+			: base()
 		{
 		}
 
@@ -93,32 +108,30 @@ namespace RootMotion.FinalIK
 
 		public bool ResetToDefaults(float speed)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool Pause()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool Resume()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool Start(InteractionObject interactionObject, string tag, float fadeInTime, bool interrupt)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Update(Transform root, float speed)
 		{
 		}
 
-		private void TriggerUntriggeredEvents(bool checkTime, out bool pickUp, out bool pause)
+		private void TriggerUntriggeredEvents(bool checkTime, [Out] bool pickUp, [Out] bool pause)
 		{
-			pickUp = default(bool);
-			pause = default(bool);
 		}
 
 		private void PickUp(Transform root)
@@ -127,7 +140,7 @@ namespace RootMotion.FinalIK
 
 		public bool Stop()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void OnPostFBBIK()

@@ -34,5 +34,10 @@ namespace RootMotion.FinalIK
 		private void OnDestroy()
 		{
 		}
+
+		public ShoulderRotator()
+			: base()
+		{
+		}
 	}
 }

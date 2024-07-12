@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -78,21 +80,9 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public void PinToBone(float positionWeight, float rotationWeight)
+		public bool IsValid(IKSolver solver, string message)
 		{
-		}
-
-		public IKEffector()
-		{
-		}
-
-		public IKEffector(Transform bone, Transform[] childBones)
-		{
-		}
-
-		public bool IsValid(IKSolver solver, ref string message)
-		{
-			return false;
+			return default(bool);
 		}
 
 		public void Initiate(IKSolverFullBody solver)
@@ -124,10 +114,14 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		private Vector3 GetPosition(IKSolverFullBody solver, out Quaternion planeRotationOffset)
+		private Vector3 GetPosition(IKSolverFullBody solver, [Out] Quaternion planeRotationOffset)
 		{
-			planeRotationOffset = default(Quaternion);
 			return default(Vector3);
+		}
+
+		public IKEffector()
+			: base()
+		{
 		}
 	}
 }

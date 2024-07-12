@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RealisticEyeMovements
@@ -115,8 +116,8 @@ namespace RealisticEyeMovements
 		[Tooltip("Maximum seconds until next blink")]
 		public float kMaxNextBlinkTime;
 
-		[Tooltip("The blinking speed. Default is 1.")]
 		[Range(0.1f, 3f)]
+		[Tooltip("The blinking speed. Default is 1.")]
 		public float blinkSpeed;
 
 		[Tooltip("Whether the eyelids move up a bit when looking up and down when looking down.")]
@@ -156,12 +157,12 @@ namespace RealisticEyeMovements
 		[Tooltip("Cross eye correction factor")]
 		public float crossEyeCorrection;
 
-		[Range(0f, 10f)]
 		[Tooltip("The more nervous, the more often you do micro-and macrosaccades.")]
+		[Range(0f, 10f)]
 		public float nervousness;
 
-		[Range(0f, 1f)]
 		[Tooltip("Limits the angle for the head movement")]
+		[Range(0f, 1f)]
 		public float limitHeadAngle;
 
 		private Transform leftEyeAnchor;
@@ -346,54 +347,6 @@ namespace RealisticEyeMovements
 
 		public Transform headParentXform { get; private set; }
 
-		public event Action OnCannotGetTargetIntoView
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event Action OnTargetDestroyed
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event Action OnTargetOutOfSight
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event Action OnUpdate2Finished
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
 		private void Awake()
 		{
 		}
@@ -404,17 +357,17 @@ namespace RealisticEyeMovements
 
 		public bool CanGetIntoView(Vector3 point)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool CanChangePointOfAttention()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool CanImportFromFile(string filename)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void CheckIdleLookTargets()
@@ -435,12 +388,12 @@ namespace RealisticEyeMovements
 
 		private float ClampLeftHorizEyeAngle(float angle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float ClampRightHorizEyeAngle(float angle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void ClearLookTarget()
@@ -502,12 +455,12 @@ namespace RealisticEyeMovements
 
 		public float GetStareAngleMeAtTarget(Vector3 target)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public float GetStareAngleTargetAtMe(Transform targetXform)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void ImportFromFile(string filename)
@@ -520,12 +473,12 @@ namespace RealisticEyeMovements
 
 		public bool IsInView(Vector3 target)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool IsLookingAtFace()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void LateUpdate()
@@ -534,12 +487,12 @@ namespace RealisticEyeMovements
 
 		private float LimitHorizontalHeadAngle(float headAngle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private float LimitVerticalHeadAngle(float headAngle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void LookAtFace(Transform eyeCenterXform, float headLatency = 0.075f)
@@ -598,11 +551,11 @@ namespace RealisticEyeMovements
 		{
 		}
 
-		private void StartEyeMovement(Transform targetXform = null, bool blinkIfEyesMoveEnough = true)
+		private void StartEyeMovement(Transform targetXform = default(Transform), bool blinkIfEyesMoveEnough = true)
 		{
 		}
 
-		private void StartHeadMovement(Transform targetXform = null)
+		private void StartHeadMovement(Transform targetXform = default(Transform))
 		{
 		}
 
@@ -633,5 +586,18 @@ namespace RealisticEyeMovements
 		private void UpdateHeadMovement()
 		{
 		}
+
+		public EyeAndHeadAnimator()
+			: base()
+		{
+		}
+
+		public event Action OnCannotGetTargetIntoView;
+
+		public event Action OnTargetDestroyed;
+
+		public event Action OnTargetOutOfSight;
+
+		public event Action OnUpdate2Finished;
 	}
 }

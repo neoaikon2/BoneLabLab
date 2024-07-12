@@ -1,5 +1,5 @@
 using System;
-using SLZ.Combat;
+using SLZ.Marrow.Combat;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
@@ -31,6 +31,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public TargetTracker()
+			: base()
 		{
 		}
 	}

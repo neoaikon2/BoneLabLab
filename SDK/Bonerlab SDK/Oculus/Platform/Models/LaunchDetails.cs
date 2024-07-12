@@ -12,8 +12,6 @@ namespace Oculus.Platform.Models
 
 		public readonly LaunchType LaunchType;
 
-		public readonly ulong RoomID;
-
 		public readonly string TrackingID;
 
 		public readonly UserList UsersOptional;

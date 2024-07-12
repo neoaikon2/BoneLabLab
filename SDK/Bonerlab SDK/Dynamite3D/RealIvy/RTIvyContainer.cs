@@ -33,5 +33,10 @@ namespace Dynamite3D.RealIvy
 		{
 			return null;
 		}
+
+		public RTIvyContainer()
+			: base()
+		{
+		}
 	}
 }

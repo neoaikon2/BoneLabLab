@@ -16,6 +16,11 @@ namespace RootMotion.FinalIK
 
 				[Tooltip("Weight of using this effector")]
 				public float weight;
+
+				public EffectorLink()
+					: base()
+				{
+				}
 			}
 
 			[Tooltip("The Transform to follow, can be any bone of the character")]
@@ -30,8 +35,8 @@ namespace RootMotion.FinalIK
 			[Tooltip("The acceleration, smaller values means lazyer following")]
 			public float acceleration;
 
-			[Tooltip("Matching target velocity")]
 			[Range(0f, 1f)]
+			[Tooltip("Matching target velocity")]
 			public float matchVelocity;
 
 			[Tooltip("gravity applied to the Body")]
@@ -54,6 +59,11 @@ namespace RootMotion.FinalIK
 			public void Update(IKSolverFullBodyBiped solver, float weight, float deltaTime)
 			{
 			}
+
+			public Body()
+				: base()
+			{
+			}
 		}
 
 		[Tooltip("The array of Bodies")]
@@ -67,6 +77,11 @@ namespace RootMotion.FinalIK
 		}
 
 		protected override void OnModifyOffset()
+		{
+		}
+
+		public Inertia()
+			: base()
 		{
 		}
 	}

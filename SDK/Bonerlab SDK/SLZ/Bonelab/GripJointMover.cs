@@ -20,114 +20,6 @@ namespace SLZ.Bonelab
 			ROTATED = 4
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CCoMoveJointTarget_003Ed__20
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float initialDelay;
-
-			public GripJointMover _003C_003E4__this;
-
-			public Vector3 startPos;
-
-			public Vector3 endPos;
-
-			private float _003CstartTime_003E5__2;
-
-			private float _003CendTime_003E5__3;
-
-			private float _003ClerpVal_003E5__4;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoMoveJointTarget_003Ed__20(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoCheckGrip_003Ed__24
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public GripJointMover _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoCheckGrip_003Ed__24(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[SerializeField]
 		private MoveState moveState;
 
@@ -190,7 +82,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoMoveJointTarget_003Ed__20))]
 		private IEnumerator CoMoveJointTarget(Vector3 startPos, Vector3 endPos, float initialDelay = 0f)
 		{
 			return null;
@@ -208,7 +99,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoCheckGrip_003Ed__24))]
 		private IEnumerator CoCheckGrip()
 		{
 			return null;
@@ -223,6 +113,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnDrawGizmosSelected()
+		{
+		}
+
+		public GripJointMover()
+			: base()
 		{
 		}
 	}

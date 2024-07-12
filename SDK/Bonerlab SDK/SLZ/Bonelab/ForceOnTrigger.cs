@@ -21,5 +21,10 @@ namespace SLZ.Bonelab
 		public void APPLYFORCE()
 		{
 		}
+
+		public ForceOnTrigger()
+			: base()
+		{
+		}
 	}
 }

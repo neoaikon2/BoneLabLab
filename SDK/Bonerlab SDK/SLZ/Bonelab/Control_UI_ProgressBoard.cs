@@ -3,71 +3,25 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Bonelab.SaveData;
 using SLZ.Interaction;
-using SLZ.SaveData;
-using SLZ.Utilities;
+using SLZ.Marrow.Audio;
+using SLZ.SFX;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace SLZ.Bonelab
 {
 	public class Control_UI_ProgressBoard : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CBoardUpdateLoop_003Ed__57
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Control_UI_ProgressBoard _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CBoardUpdateLoop_003Ed__57(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public CraneControlBox craneControlBox;
 
 		public GameControl_Hub gcHub;
 
 		public TextMeshPro promptBoardText;
+
+		public string text_noBatteries;
 
 		public string text_noPower;
 
@@ -151,8 +105,6 @@ namespace SLZ.Bonelab
 
 		public AudioClip[] craneIUSounds;
 
-		public AudioMixerGroup outputMixer;
-
 		public ParticleSystem[] confettiSocket;
 
 		private SimpleSFX[] confettiSocket_sfx;
@@ -161,13 +113,17 @@ namespace SLZ.Bonelab
 
 		private IEnumerator boardUpdateLoop;
 
-		private AudioPlayer apCrane;
-
-		private AudioPlayer apCraneUI;
+		private ManagedAudioPlayer _mapCraneUI;
 
 		private int lastSocketIndex;
 
-		private static PlayerProgression p => null;
+		private static PlayerProgression p
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void OnEnable()
 		{
@@ -181,7 +137,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CBoardUpdateLoop_003Ed__57))]
 		private IEnumerator BoardUpdateLoop()
 		{
 			return null;
@@ -255,15 +210,16 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void PlayAudioClip(AudioPlayer ap, AudioClip clip, float volume, float minDist, Transform pos)
-		{
-		}
-
 		private void CheckGate()
 		{
 		}
 
 		public void CheckProgressText()
+		{
+		}
+
+		public Control_UI_ProgressBoard()
+			: base()
 		{
 		}
 	}

@@ -15,124 +15,14 @@ namespace SLZ.Interaction
 			Off = 1
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CCoBlendIconScaleFromTo_003Ed__24
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float from;
-
-			public float to;
-
-			public InteractableIcon _003C_003E4__this;
-
-			private float _003Cduration_003E5__2;
-
-			private float _003Ctime_003E5__3;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoBlendIconScaleFromTo_003Ed__24(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CSwitch_003Ed__26
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public InteractableIcon _003C_003E4__this;
-
-			public Flip flip;
-
-			private float _003CTargetScale_003E5__2;
-
-			private float _003Ci_003E5__3;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CSwitch_003Ed__26(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		private Grip m_Grip;
 
 		public Transform targetCenter;
 
 		public GripIconType gripIconType;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private GameObject iconObj;
 
 		private Renderer iconRenderer;
@@ -147,15 +37,15 @@ namespace SLZ.Interaction
 		[SerializeField]
 		private bool LocalOverride;
 
-		[SerializeField]
 		[Tooltip("Override default icon")]
+		[SerializeField]
 		private Texture IconTex;
 
 		[SerializeField]
-		private float IconSize = 0.1f;
+		private float IconSize;
 
 		[SerializeField]
-		private float AnimationDuration = 0.25f;
+		private float AnimationDuration;
 
 		private float scaledIconSize;
 
@@ -201,13 +91,11 @@ namespace SLZ.Interaction
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoBlendIconScaleFromTo_003Ed__24))]
 		private IEnumerator CoBlendIconScaleFromTo(float from, float to)
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CSwitch_003Ed__26))]
 		private IEnumerator Switch(Flip flip)
 		{
 			return null;
@@ -240,6 +128,11 @@ namespace SLZ.Interaction
 		}
 
 		private void RemoveIcon()
+		{
+		}
+
+		public InteractableIcon()
+			: base()
 		{
 		}
 	}

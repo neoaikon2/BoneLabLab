@@ -10,5 +10,10 @@ namespace SLZ.Bonelab
 		public UnityEngine.Object sourceObj;
 
 		public TrackAsset trackAsset;
+
+		public TrackData()
+			: base()
+		{
+		}
 	}
 }

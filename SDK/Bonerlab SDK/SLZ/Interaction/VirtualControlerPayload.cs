@@ -23,5 +23,10 @@ namespace SLZ.Interaction
 		public HandGripPair priHandGripPair;
 
 		public HandGripPair secHandGripPair;
+
+		public VirtualControlerPayload()
+			: base()
+		{
+		}
 	}
 }

@@ -37,5 +37,10 @@ namespace RootMotion.FinalIK
 		{
 			return null;
 		}
+
+		public AimIK()
+			: base()
+		{
+		}
 	}
 }

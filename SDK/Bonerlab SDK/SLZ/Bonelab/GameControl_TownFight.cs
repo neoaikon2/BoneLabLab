@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
@@ -34,6 +35,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void SaveData(int location = 10)
+		{
+		}
+
+		public GameControl_TownFight()
+			: base()
 		{
 		}
 	}

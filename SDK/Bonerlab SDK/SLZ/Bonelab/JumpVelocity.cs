@@ -23,5 +23,10 @@ namespace SLZ.Bonelab
 		public void launch()
 		{
 		}
+
+		public JumpVelocity()
+			: base()
+		{
+		}
 	}
 }

@@ -7,7 +7,6 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Marrow.Graphs;
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
 using UnityEngine.Scripting;
@@ -41,7 +40,7 @@ namespace SLZ.Marrow.Plugins
 
 		private Dictionary<string, HashSet<string>> DependenciesByQN { get; }
 
-		private List<List<Vertex<string>>> CachedGroups { get; set; }
+		private List<List<string>> CachedGroups { get; set; }
 
 		[RuntimeInitializeOnLoadMethod]
 		private static void EnsurePluginSystem()
@@ -164,12 +163,12 @@ namespace SLZ.Marrow.Plugins
 			return default(UniTask);
 		}
 
-		private UniTask _Trigger<TPlugin>(bool forward, object context, Action<MarrowPluginWrapper, TPlugin, object> callback) where TPlugin : IMarrowPlugin
+		private UniTask _TriggerAsync<TPlugin>(bool forward, object context, Func<MarrowPluginWrapper, TPlugin, object, UniTask> callback) where TPlugin : IMarrowPlugin
 		{
 			return default(UniTask);
 		}
 
-		private void _ThrowIfCycles(List<List<Vertex<string>>> groups)
+		private static void _ThrowIfCycles(List<List<string>> groups)
 		{
 		}
 

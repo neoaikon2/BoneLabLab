@@ -7,5 +7,10 @@ namespace SLZ.Bonelab
 		private void OnCollisionEnter(Collision collision)
 		{
 		}
+
+		public NameCollision()
+			: base()
+		{
+		}
 	}
 }

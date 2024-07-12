@@ -1,4 +1,4 @@
-using PuppetMasta;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -46,7 +46,7 @@ namespace SLZ.Bonelab
 
 		public bool CheckChallengeCompletion()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void CheckArenaCompletion()
@@ -78,6 +78,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnHeadshot()
+		{
+		}
+
+		public Arena_Stats()
+			: base()
 		{
 		}
 	}

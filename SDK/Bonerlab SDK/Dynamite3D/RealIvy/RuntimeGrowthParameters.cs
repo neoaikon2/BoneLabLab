@@ -17,5 +17,10 @@ namespace Dynamite3D.RealIvy
 		public float delay;
 
 		public bool startGrowthOnAwake;
+
+		public RuntimeGrowthParameters()
+			: base()
+		{
+		}
 	}
 }

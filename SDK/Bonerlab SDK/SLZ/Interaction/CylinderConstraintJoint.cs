@@ -1,12 +1,15 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace SLZ.Interaction
 {
 	public class CylinderConstraintJoint
 	{
-		private const float MAX_DRIVE_SPRING_DISTANCE = 3.4028234E+35f;
+		private const float MAX_DRIVE_SPRING_DISTANCE = 1E+10f;
 
-		private const float MAX_DRIVE_DAMPEN_DISTANCE = 3.4028233E+32f;
+		private const float MAX_DRIVE_DAMPEN_DISTANCE = 100000000f;
+
+		private const float POSITION_THRESHOLD = 0.005f;
 
 		private const float POSITION_THRESHOLD_SQR = 2.5E-05f;
 
@@ -60,9 +63,15 @@ namespace SLZ.Interaction
 
 		private bool _isActive;
 
-		public bool IsFrictionKinetic => false;
+		public bool IsFrictionKinetic
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public void Create(Rigidbody body, Rigidbody connectedBody = null, bool swapBodies = false, Vector3 axis = default(Vector3), Vector3 secondaryAxis = default(Vector3), float linearLimit = 0f, float xAngLimit = 0f, float yzAngLimit = 0f)
+		public void Create(Rigidbody body, Rigidbody connectedBody = default(Rigidbody), bool swapBodies = false, Vector3 axis = default(Vector3), Vector3 secondaryAxis = default(Vector3), float linearLimit = 0f, float xAngLimit = 0f, float yzAngLimit = 0f)
 		{
 		}
 
@@ -115,6 +124,11 @@ namespace SLZ.Interaction
 		}
 
 		private void SetupJointConfig(bool swapBodies, Vector3 axis, Vector3 secondaryAxis, float linearLimit, float xAngLimit, float yzAngLimit)
+		{
+		}
+
+		public CylinderConstraintJoint()
+			: base()
 		{
 		}
 	}

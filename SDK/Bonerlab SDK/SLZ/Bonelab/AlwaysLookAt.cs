@@ -3,61 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Zones;
+using SLZ.Marrow.Interaction;
+using SLZ.Marrow.Zones;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class AlwaysLookAt : ZoneItem
+	public class AlwaysLookAt : ZoneLinkItem
 	{
-		[CompilerGenerated]
-		private sealed class _003CTickLook_003Ed__7
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public AlwaysLookAt _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CTickLook_003Ed__7(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public Transform local;
 
 		public Transform target;
@@ -66,19 +19,24 @@ namespace SLZ.Bonelab
 
 		public ConfigurableJoint jnt_Rotator;
 
+		private Coroutine tickLook;
+
 		private void Start()
 		{
 		}
 
-		public override void OnZoneEnabled(GameObject playerObject)
+		protected override void OnEnter(MarrowEntity playerEntity)
 		{
 		}
 
-		public override void OnZoneDisabled(GameObject playerObject)
+		protected override void OnExit(MarrowEntity playerEntity)
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CTickLook_003Ed__7))]
+		private void SetPlayerTarget(MarrowEntity playerEntity)
+		{
+		}
+
 		private IEnumerator TickLook()
 		{
 			return null;
@@ -88,7 +46,12 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnDisable()
+		private new void OnDisable()
+		{
+		}
+
+		public AlwaysLookAt()
+			: base()
 		{
 		}
 	}

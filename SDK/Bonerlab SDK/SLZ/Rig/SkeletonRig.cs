@@ -1,48 +1,73 @@
+using System.Runtime.InteropServices;
+using SLZ.Marrow.Mechanics;
 using SLZ.Marrow.Utilities;
 using SLZ.VRMK;
 using UnityEngine;
 
 namespace SLZ.Rig
 {
-	public class SkeletonRig : Rig
+	public class SkeletonRig : HeptaRig
 	{
+		[SerializeField]
 		[Header("AnimationRig")]
-		public Transform eyeLf;
-
-		public Transform eyeRt;
-
-		public Transform clavLf;
-
-		public Transform clavRt;
-
-		public Transform toeLf;
-
-		public Transform toeRt;
-
-		[SerializeField]
-		private AnimationCurve _thoracicTwistCurve;
-
-		[SerializeField]
 		private LiteLoco _liteLoco;
 
 		[SerializeField]
 		private SLZ_Body _body;
 
-		[SerializeField]
-		private HandPoseAnimator _leftAnimatorHand;
-
-		[SerializeField]
-		private HandPoseAnimator _rightAnimatorHand;
-
 		private SimpleTransform _pelvisLocalAnimOff;
 
-		public SLZ_Body body => null;
+		private new const float accelLeanWeight = 0.35f;
 
-		public HandPoseAnimator LeftAnimatorHand => null;
+		private new const float dragWeight = 4f;
 
-		public HandPoseAnimator RightAnimatorHand => null;
+		private new const float pACdProduct = 2f;
 
-		public SimpleTransform pelvisLocalAnimOff => default(SimpleTransform);
+		private float _accelDragTan;
+
+		private float _dragTan;
+
+		private new float _angularVelocity;
+
+		[HideInInspector]
+		public Vector3 velocitySanGrav;
+
+		[HideInInspector]
+		public Vector3 accelerationSanGrav;
+
+		[HideInInspector]
+		public Vector3 velocitySanGravNormal;
+
+		[HideInInspector]
+		public Vector3 accelerationSanGravNormal;
+
+		[HideInInspector]
+		public float velocitySanGravMag;
+
+		[HideInInspector]
+		public float accelSanGravMag;
+
+		private float _deltaLerpTime;
+
+		private new Vector3 _lastAngularFwd;
+
+		private Quaternion _feetAngleSlerp;
+
+		public SLZ_Body body
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public SimpleTransform pelvisLocalAnimOff
+		{
+			get
+			{
+				return default(SimpleTransform);
+			}
+		}
 
 		public override void Reset()
 		{
@@ -56,15 +81,28 @@ namespace SLZ.Rig
 		{
 		}
 
-		public override void OnUpdate()
-		{
-		}
-
-		public override void Teleport(Vector3 displace, bool zeroVelocity = false)
+		public override void Teleport(SimpleTransform displace, bool zeroVelocity = false)
 		{
 		}
 
 		public override void SetAvatar(SLZ.VRMK.Avatar avatar)
+		{
+		}
+
+		internal void BodyVelocity(Vector3 vel, Vector3 accel, Quaternion feetCenterRot, float deltaTime)
+		{
+		}
+
+		private void FeetCenter(SimpleTransform pelvis, float deltaTime)
+		{
+		}
+
+		private new void LimbLimit(float limbMag, float upperLength, float lowerLength, [Out] float newLimbMag)
+		{
+		}
+
+		public SkeletonRig()
+			: base()
 		{
 		}
 	}

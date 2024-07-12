@@ -25,5 +25,14 @@ namespace SLZ.Bonelab
 		private void Reset()
 		{
 		}
+
+		public void APPLY()
+		{
+		}
+
+		public SetDoorWindowRefraction()
+			: base()
+		{
+		}
 	}
 }

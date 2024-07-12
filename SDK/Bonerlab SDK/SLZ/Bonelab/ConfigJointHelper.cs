@@ -4,17 +4,20 @@ namespace SLZ.Bonelab
 {
 	public class ConfigJointHelper : MonoBehaviour
 	{
+		public Rigidbody kinematicRb;
+
 		private Rigidbody rb;
-
-		public ConfigurableJoint configurableJoint;
-
-		public bool updateAnchor;
 
 		private void Awake()
 		{
 		}
 
-		private void FixedUpdate()
+		private void Update()
+		{
+		}
+
+		public ConfigJointHelper()
+			: base()
 		{
 		}
 	}

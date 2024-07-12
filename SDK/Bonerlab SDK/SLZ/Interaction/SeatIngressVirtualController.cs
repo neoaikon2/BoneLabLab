@@ -20,5 +20,10 @@ namespace SLZ.Interaction
 		public override void OnVirtualControllerEnd()
 		{
 		}
+
+		public SeatIngressVirtualController()
+			: base()
+		{
+		}
 	}
 }

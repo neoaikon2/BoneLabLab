@@ -1,7 +1,7 @@
+using SLZ.MLAgents;
 using SLZ.Vehicle;
 using UnityEngine;
 using UnityEngine.Events;
-using VehicleAI;
 
 namespace SLZ.Bonelab
 {
@@ -57,6 +57,11 @@ namespace SLZ.Bonelab
 		private float[] GetRndmContextParams(VehicleContextConfig config)
 		{
 			return null;
+		}
+
+		public GameControl_TruckChase()
+			: base()
+		{
 		}
 	}
 }

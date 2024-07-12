@@ -1,5 +1,10 @@
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Bonelab;
 using SLZ.Marrow.Data;
-using SLZ.Props.Weapons;
 using UnityEngine;
 
 namespace SLZ.Interaction
@@ -24,9 +29,21 @@ namespace SLZ.Interaction
 
 		private AmmoPlug _magazinePlug;
 
-		public override bool IsClearOnInsert => false;
+		public override bool IsClearOnInsert
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public bool hasMagazine => false;
+		public bool hasMagazine
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		protected override void Awake()
 		{
@@ -73,7 +90,17 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private void ForceLoad(MagazineData magazineData)
+		public UniTask ForceLoadAsync(MagazineData magazineData)
+		{
+			return default(UniTask);
+		}
+
+		public override void OnDespawn()
+		{
+		}
+
+		public AmmoSocket()
+			: base()
 		{
 		}
 	}

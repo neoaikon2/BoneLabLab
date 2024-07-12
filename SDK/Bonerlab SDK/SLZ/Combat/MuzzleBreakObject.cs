@@ -6,5 +6,10 @@ namespace SLZ.Combat
 	public class MuzzleBreakObject : ScriptableObject
 	{
 		public MuzzleBreakVariables muzzleBreakVariables;
+
+		public MuzzleBreakObject()
+			: base()
+		{
+		}
 	}
 }

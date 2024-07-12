@@ -1,5 +1,5 @@
+using SLZ.Bonelab.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -91,7 +91,13 @@ namespace SLZ.Bonelab
 
 		public AvatarCrateReference[] avatarCrates;
 
-		private static PlayerUnlocks u => null;
+		private static PlayerUnlocks u
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Start()
 		{
@@ -254,6 +260,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void CycleCampaignLevel()
+		{
+		}
+
+		public GameControl_CheatButtons()
+			: base()
 		{
 		}
 	}

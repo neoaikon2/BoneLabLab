@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SLZ.Interaction
@@ -57,6 +58,11 @@ namespace SLZ.Interaction
 		}
 
 		public override void OnVirtualControllerSolve(VirtualControlerPayload p)
+		{
+		}
+
+		public SlideVirtualController()
+			: base()
 		{
 		}
 	}

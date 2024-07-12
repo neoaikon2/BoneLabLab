@@ -1,5 +1,5 @@
 using System;
-using SLZ.AI;
+using SLZ.Marrow.AI;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -47,6 +47,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void ToggleCollider(bool enable)
+		{
+		}
+
+		public GenGameControl_Trigger()
+			: base()
 		{
 		}
 	}

@@ -1,17 +1,23 @@
-using PuppetMasta;
+using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
-using SLZ.Zones;
+using SLZ.Marrow.PuppetMasta;
+using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
+	[RequireComponent(typeof(SpawnAISettings))]
 	public class SpawnerDifficulties : MonoBehaviour
 	{
 		[SerializeField]
-		private ZoneSpawner zoneSpawner;
+		[Header("SPAWNER DATA")]
+		private CrateSpawner crateSpawner;
 
 		[SerializeField]
-		private ZoneAISettings zoneAISettings;
+		private SpawnAISettings spawnAISettings;
+
+		[SerializeField]
+		private SpawnAgro spawnAgro;
 
 		[SerializeField]
 		private int currentDifficulty;
@@ -25,6 +31,8 @@ namespace SLZ.Bonelab
 
 		public Transform easySpawnPoint;
 
+		public bool easyAgro;
+
 		[Header("Medium Data")]
 		public Spawnable mediumSpawnable;
 
@@ -33,6 +41,8 @@ namespace SLZ.Bonelab
 		public bool mediumHomeIsPost;
 
 		public Transform mediumSpawnPoint;
+
+		public bool mediumAgro;
 
 		[Header("Hard Data")]
 		public Spawnable hardSpawnable;
@@ -43,12 +53,24 @@ namespace SLZ.Bonelab
 
 		public Transform hardSpawnPoint;
 
-		[ContextMenu("GetZoneData")]
+		public bool hardAgro;
+
+		[ContextMenu("GetSpawnerData")]
 		public void GetZoneData()
 		{
 		}
 
 		public void ApplyDifficulty(int diff)
+		{
+		}
+
+		[ContextMenu("SpawnCrate")]
+		public void SpawnCrate()
+		{
+		}
+
+		public SpawnerDifficulties()
+			: base()
 		{
 		}
 	}

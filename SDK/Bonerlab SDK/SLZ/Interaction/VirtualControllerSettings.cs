@@ -18,12 +18,12 @@ namespace SLZ.Interaction
 		[Tooltip("Per-hand blend swing rotation")]
 		public float handSwingWeight;
 
-		[Tooltip("Per-hand blend position")]
 		[Range(0f, 1f)]
+		[Tooltip("Per-hand blend position")]
 		public float positionWeight;
 
-		[Range(0f, 90f)]
 		[Tooltip("Joint swing limits")]
+		[Range(0f, 90f)]
 		public float jointSwingLimit;
 
 		[Tooltip("Joint twist limits")]
@@ -35,5 +35,10 @@ namespace SLZ.Interaction
 
 		[Tooltip("Dynamic weights based on hand to hand distance")]
 		public bool dynamicHandDistanceWeights;
+
+		public VirtualControllerSettings()
+			: base()
+		{
+		}
 	}
 }

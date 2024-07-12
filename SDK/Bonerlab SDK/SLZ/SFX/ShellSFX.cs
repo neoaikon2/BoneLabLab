@@ -1,48 +1,28 @@
 using SLZ.Data;
+using SLZ.Marrow.Audio;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.SFX
 {
 	public class ShellSFX : MonoBehaviour
 	{
-		public AudioMixerGroup outputMixer;
-
 		public AudioVarianceData impact;
 
 		public AudioVarianceData eject;
 
 		public AudioVarianceData ejectSlowmo;
 
-		public float minVelocity;
-
-		private const float _lowPitchRange = 0.88f;
-
-		private const float _highPitchRange = 1.12f;
-
-		private const float _velToVol = 0.08f;
-
-		private float _minVelSquared;
+		private const float _velToVol = 0.28f;
 
 		private bool _isHeavy;
 
 		private bool _isPlastic;
 
-		public bool spatialize;
+		private ManagedAudioPlayer _mapImpact;
 
-		private float _lastImpactTime;
+		private float _nextImpactTime;
 
-		private void Awake()
-		{
-		}
-
-		private void Initialize()
-		{
-		}
-
-		private void Start()
-		{
-		}
+		private float _lastImpactMag;
 
 		private void OnCollisionEnter(Collision c)
 		{
@@ -56,7 +36,8 @@ namespace SLZ.SFX
 		{
 		}
 
-		private void CallBack(GameObject go)
+		public ShellSFX()
+			: base()
 		{
 		}
 	}

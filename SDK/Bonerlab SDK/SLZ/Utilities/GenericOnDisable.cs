@@ -11,5 +11,10 @@ namespace SLZ.Utilities
 		private void OnDisable()
 		{
 		}
+
+		public GenericOnDisable()
+			: base()
+		{
+		}
 	}
 }

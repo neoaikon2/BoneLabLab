@@ -49,6 +49,11 @@ namespace Oculus.Platform
 			return null;
 		}
 
+		public static Request SetDeeplinkMessageOverride(string deeplink_message)
+		{
+			return null;
+		}
+
 		public static Request SetDestination(string api_name)
 		{
 			return null;

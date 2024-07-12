@@ -1,13 +1,13 @@
-using SLZ.Marrow.Warehouse;
+using SLZ.Marrow.Zones;
 using TMPro;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class LoreClipboardProxy : MonoBehaviour
+	public class LoreClipboardProxy : SpawnDecorator
 	{
-		[Header("Text")]
 		[Space(10f)]
+		[Header("Text")]
 		public string title;
 
 		[TextArea(5, 20)]
@@ -26,7 +26,12 @@ namespace SLZ.Bonelab
 		[Tooltip("Will default to prefab value if null")]
 		public AudioClip audioDeactivateOverride;
 
-		public void Spawn(SpawnableCratePlacer placer, GameObject go)
+		public override void OnSpawn(GameObject go)
+		{
+		}
+
+		public LoreClipboardProxy()
+			: base()
 		{
 		}
 	}

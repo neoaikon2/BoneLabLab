@@ -1,22 +1,24 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
 	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Multiply")]
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/MultiplyNode")]
+	[Support(SupportFlags.Supported, null)]
 	public class MultiplyNode : BaseNode
 	{
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		protected override float CalculateValue()
+		public override PortMetadata PortMetadata
 		{
-			return default(float);
+			get
+			{
+				return default(PortMetadata);
+			}
 		}
 
-		public override IReadOnlyList<InputDescription> DescribeInputs()
+		public override void Calculate(NodeState nodeState)
 		{
-			return null;
 		}
 
 		public MultiplyNode()

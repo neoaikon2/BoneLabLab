@@ -3,160 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow.Utilities;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
 	public class Cart : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CCoMoveTargetTransform_003Ed__27
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Cart _003C_003E4__this;
-
-			public float direction;
-
-			private WaitForFixedUpdate _003CfixedUpdate_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoMoveTargetTransform_003Ed__27(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoLaunch_003Ed__33
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Cart _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoLaunch_003Ed__33(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoMoveGate_003Ed__34
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoMoveGate_003Ed__34(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[Header("Options")]
 		public float maxSpeed;
 
@@ -164,62 +18,77 @@ namespace SLZ.Bonelab
 
 		public float launchReturnSeconds;
 
-		public Vector3 gateEndPoint;
-
 		public AudioClip launchClip;
 
 		public AudioClip startClip;
 
 		public AudioClip stopClip;
 
-		public AudioMixerGroup mixergroup;
+		[Tooltip("this determines what happens when reEnabled after it was disabled during it's motion.  isLauncher, tells it to GoBackward, Not isLauncher tells it to continue in the direction it was going.")]
+		public bool isLauncher;
 
+		public float launchDelay;
+
+		public Renderer[] renderers;
+
+		public int materialIndex;
+
+		public Material offMat;
+
+		public Material onMat;
+
+		[Tooltip("end transform must be sibling of cart for setup to work correctly.")]
 		[Header("References")]
-		public Transform gateTransform;
-
 		public Transform endTransform;
 
+		[Header("After moving end transform, click Setup in the context menu")]
 		public ConfigurableJoint joint;
 
 		public Rigidbody rb;
 
-		private Coroutine _gateCoroutine;
+		public Rigidbody kinematicRB;
 
 		private Coroutine _moveCoroutine;
 
-		private Quaternion _startRotation;
-
-		private Vector3 _gateStartPoint;
-
+		[ReadOnly(false)]
+		[SerializeField]
 		private float _lastDirection;
 
-		private float _speed;
-
+		[ReadOnly(false)]
+		[SerializeField]
 		private float _distance;
 
+		[SerializeField]
+		[ReadOnly(false)]
 		private float _halfDistance;
 
+		[SerializeField]
+		[ReadOnly(false)]
 		private float _linearTargetPosition;
+
+		[ReadOnly(false)]
+		[SerializeField]
+		private SoftJointLimit limit;
 
 		private float _velocity;
 
-		private float _gatePerc;
-
 		public UnityEvent StopAction;
+
+		private bool _isLaunchCancelable;
 
 		public void Reset()
 		{
 		}
 
-		public void Awake()
+		[ContextMenu("Setup")]
+		private void Setup()
 		{
 		}
 
-		public void Update()
+		private void OnEnable()
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoMoveTargetTransform_003Ed__27))]
 		public IEnumerator CoMoveTargetTransform(float direction)
 		{
 			return null;
@@ -241,25 +110,37 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void Launch()
+		public void DelayedLaunch()
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoLaunch_003Ed__33))]
-		public IEnumerator CoLaunch()
+		public void CancelLaunch()
+		{
+		}
+
+		public IEnumerator CoLaunchDelayed()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoMoveGate_003Ed__34))]
-		public IEnumerator CoMoveGate(float direction)
+		[ContextMenu("Launch")]
+		public void Launch()
+		{
+		}
+
+		public IEnumerator CoLaunch()
 		{
 			return null;
 		}
 
 		private bool AlreadyAtTarget(float direction)
 		{
-			return false;
+			return default(bool);
+		}
+
+		public Cart()
+			: base()
+		{
 		}
 	}
 }

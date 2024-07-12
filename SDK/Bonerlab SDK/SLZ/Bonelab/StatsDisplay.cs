@@ -22,5 +22,10 @@ namespace SLZ.Bonelab
 		public TMP_Text highestLevelText;
 
 		public TMP_Text headshotText;
+
+		public StatsDisplay()
+			: base()
+		{
+		}
 	}
 }

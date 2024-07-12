@@ -19,30 +19,10 @@ namespace SLZ.Bonelab
 
 			public Spawnable spawnable;
 
-			public SlotSpawnPair(string _slotName, Spawnable _spawnable)
+			public SlotSpawnPair(string slotName, Spawnable spawnable)
 			{
-				slotName = _slotName;
-				spawnable = _spawnable;
-			}
-		}
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CSpawnInSlotsAsync_003Ed__6
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public DefaultInventoryLoadout _003C_003E4__this;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
+				this.spawnable = default(Spawnable);
+				this.slotName = default(string);
 			}
 		}
 
@@ -62,10 +42,14 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CSpawnInSlotsAsync_003Ed__6))]
 		private UniTaskVoid SpawnInSlotsAsync()
 		{
 			return default(UniTaskVoid);
+		}
+
+		public DefaultInventoryLoadout()
+			: base()
+		{
 		}
 	}
 }

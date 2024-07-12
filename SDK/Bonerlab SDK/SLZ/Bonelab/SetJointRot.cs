@@ -33,5 +33,10 @@ namespace SLZ.Bonelab
 		public void SetClosed()
 		{
 		}
+
+		public SetJointRot()
+			: base()
+		{
+		}
 	}
 }

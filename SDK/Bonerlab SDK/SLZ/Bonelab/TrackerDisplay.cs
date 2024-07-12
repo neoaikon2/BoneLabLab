@@ -26,5 +26,10 @@ namespace SLZ.Bonelab
 		public void ClearAllScores()
 		{
 		}
+
+		public TrackerDisplay()
+			: base()
+		{
+		}
 	}
 }

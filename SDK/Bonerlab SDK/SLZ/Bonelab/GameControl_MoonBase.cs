@@ -1,78 +1,51 @@
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Marrow.Warehouse;
+using SLZ.Marrow.VoidLogic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SLZ.Bonelab
 {
-	public class GameControl_MoonBase : BonelabInternalGameControl
+	public class GameControl_MoonBase : BonelabAvatarLevelGameControl
 	{
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CSwapAvatar_003Ed__8
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public GameControl_MoonBase _003C_003E4__this;
-
-			public AvatarCrate avatarCrate;
-
-			private UniTask<bool>.Awaiter _003C_003Eu__1;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
-		public AvatarCrateReference avatarOverride;
+		public bool overrideMoonGrav;
 
 		private Vector3 _cachedGrav;
 
 		private readonly Vector3 _moonGrav;
 
-		public GameObject[] LoadButtons;
+		private int _cur_location;
 
-		[SerializeField]
-		private GenericCrateReference unlockCrate;
+		public ConfigurableJoint jnt_launchTowerRotator;
 
-		[SerializeField]
-		[FormerlySerializedAs("avatarGatcha")]
-		private GameObject avatarGacha;
+		public ConfigurableJoint jnt_launchTowerPlate;
+
+		public PowerSource[] pwr_effects;
+
+		public override void DoLevelComplete()
+		{
+		}
 
 		public override void Start()
 		{
-		}
-
-		public void SwitchAvatar()
-		{
-		}
-
-		[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__8))]
-		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
-		{
-			return default(UniTaskVoid);
 		}
 
 		private void OnDestroy()
 		{
 		}
 
-		public override void DoLevelComplete()
+		[ContextMenu("MoonMode")]
+		public void MoonMode(bool moonGrav = true)
 		{
 		}
 
-		private void ButtonsSetup()
+		public void Stepper()
+		{
+		}
+
+		public void SetLauncher(int location = 0)
+		{
+		}
+
+		public GameControl_MoonBase()
+			: base()
 		{
 		}
 	}

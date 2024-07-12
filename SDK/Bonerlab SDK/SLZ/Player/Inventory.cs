@@ -35,5 +35,10 @@ namespace SLZ.Player
 		public void FlipSlot(bool flipped = false, bool specialItemsFlipped = false)
 		{
 		}
+
+		public Inventory()
+			: base()
+		{
+		}
 	}
 }

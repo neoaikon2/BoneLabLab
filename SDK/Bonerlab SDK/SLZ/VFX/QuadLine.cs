@@ -19,5 +19,10 @@ namespace SLZ.VFX
 		private void Update()
 		{
 		}
+
+		public QuadLine()
+			: base()
+		{
+		}
 	}
 }

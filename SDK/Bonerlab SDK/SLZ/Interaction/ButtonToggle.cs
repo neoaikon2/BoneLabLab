@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace SLZ.Interaction
@@ -13,8 +12,6 @@ namespace SLZ.Interaction
 		public AudioClip[] pressClips;
 
 		public AudioClip[] depressClips;
-
-		public AudioMixerGroup mixerGroup;
 
 		[Tooltip("Colliders that the button shaft collider will ignore")]
 		public Collider[] ignoreColliders;
@@ -65,6 +62,11 @@ namespace SLZ.Interaction
 		}
 
 		public void CancelOneShot()
+		{
+		}
+
+		public ButtonToggle()
+			: base()
 		{
 		}
 	}

@@ -83,7 +83,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -116,7 +116,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -127,22 +127,39 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return false;
+				return default(bool);
 			}
 			set
 			{
 			}
 		}
 
-		private Vector3 TranslationVector => default(Vector3);
+		private Vector3 TranslationVector
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		private Vector3 RotationVector => default(Vector3);
+		private Vector3 RotationVector
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
 		private void Start()
 		{
 		}
 
 		public void OnWillRenderObject()
+		{
+		}
+
+		public ConstantMotion()
+			: base()
 		{
 		}
 	}

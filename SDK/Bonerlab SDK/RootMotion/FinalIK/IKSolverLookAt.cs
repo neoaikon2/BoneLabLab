@@ -9,13 +9,21 @@ namespace RootMotion.FinalIK
 		[Serializable]
 		public class LookAtBone : Bone
 		{
-			public Vector3 forward => default(Vector3);
+			public Vector3 forward
+			{
+				get
+				{
+					return default(Vector3);
+				}
+			}
 
 			public LookAtBone()
+				: base()
 			{
 			}
 
 			public LookAtBone(Transform transform)
+				: this()
 			{
 			}
 
@@ -67,36 +75,52 @@ namespace RootMotion.FinalIK
 
 		private Vector3[] eyeForward;
 
-		private bool spineIsValid => false;
-
-		private bool spineIsEmpty => false;
-
-		private bool headIsValid => false;
-
-		private bool headIsEmpty => false;
-
-		private bool eyesIsValid => false;
-
-		private bool eyesIsEmpty => false;
-
-		public void SetLookAtWeight(float weight)
+		private bool spineIsValid
 		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
-		public void SetLookAtWeight(float weight, float bodyWeight)
+		private bool spineIsEmpty
 		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
-		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight)
+		private bool headIsValid
 		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
-		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight)
+		private bool headIsEmpty
 		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
-		public void SetLookAtWeight(float weight, float bodyWeight, float headWeight, float eyesWeight, float clampWeight)
+		private bool eyesIsValid
 		{
+			get
+			{
+				return default(bool);
+			}
+		}
+
+		private bool eyesIsEmpty
+		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
 		public void SetLookAtWeight(float weight, float bodyWeight = 0f, float headWeight = 1f, float eyesWeight = 0.5f, float clampWeight = 0.5f, float clampWeightHead = 0.5f, float clampWeightEyes = 0.3f)
@@ -111,9 +135,9 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		public override bool IsValid(ref string message)
+		public override bool IsValid(string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override Point[] GetPoints()
@@ -128,7 +152,7 @@ namespace RootMotion.FinalIK
 
 		public bool SetChain(Transform[] spine, Transform head, Transform[] eyes, Transform root)
 		{
-			return false;
+			return default(bool);
 		}
 
 		protected override void OnInitiate()
@@ -151,12 +175,17 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		private Vector3[] GetForwards(ref Vector3[] forwards, Vector3 baseForward, Vector3 targetForward, int bones, float clamp)
+		private Vector3[] GetForwards(Vector3[] forwards, Vector3 baseForward, Vector3 targetForward, int bones, float clamp)
 		{
 			return null;
 		}
 
-		private void SetBones(Transform[] array, ref LookAtBone[] bones)
+		private void SetBones(Transform[] array, LookAtBone[] bones)
+		{
+		}
+
+		public IKSolverLookAt()
+			: base()
 		{
 		}
 	}

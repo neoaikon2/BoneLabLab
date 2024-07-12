@@ -12,5 +12,10 @@ namespace SLZ.Bonelab
 		public GameObject[] spawnPoints;
 
 		public float minVel;
+
+		public SpawnableGroup()
+			: base()
+		{
+		}
 	}
 }

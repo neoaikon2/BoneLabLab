@@ -1,5 +1,5 @@
+using SLZ.MLAgents;
 using UnityEngine;
-using VehicleAI;
 
 namespace SLZ.Bonelab
 {
@@ -23,12 +23,12 @@ namespace SLZ.Bonelab
 
 		public int AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex, int groundIndex)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public int AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex, int groundIndex, float width)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void CleanSkidMark()
@@ -36,6 +36,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void CleanSkidMark(int index)
+		{
+		}
+
+		public VehicleManager()
+			: base()
 		{
 		}
 	}

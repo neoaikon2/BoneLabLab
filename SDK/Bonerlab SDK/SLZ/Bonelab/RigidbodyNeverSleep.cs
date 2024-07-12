@@ -9,5 +9,10 @@ namespace SLZ.Bonelab
 		private void Start()
 		{
 		}
+
+		public RigidbodyNeverSleep()
+			: base()
+		{
+		}
 	}
 }

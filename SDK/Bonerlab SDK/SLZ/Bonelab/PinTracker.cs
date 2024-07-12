@@ -11,5 +11,10 @@ namespace SLZ.Bonelab
 		private void OnCollisionEnter(Collision collision)
 		{
 		}
+
+		public PinTracker()
+			: base()
+		{
+		}
 	}
 }

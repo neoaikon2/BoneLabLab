@@ -7,5 +7,10 @@ namespace SLZ.Bonelab
 		public void StoreStaticFlags()
 		{
 		}
+
+		public OccluderStaticToggle()
+			: base()
+		{
+		}
 	}
 }

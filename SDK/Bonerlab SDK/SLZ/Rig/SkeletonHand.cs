@@ -1,4 +1,6 @@
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using SLZ.VRMK;
 using UnityEngine;
@@ -11,24 +13,22 @@ namespace SLZ.Rig
 
 		private const float maxHoverDegreesDisplace = 10f;
 
-		private const float displaceSoftLimitArmLengths = 0.18f;
+		private const float softLimitArmLengths = 0.18f;
 
-		private const float displaceHardLimitArmLengths = 0.58f;
+		private const float hardLimitArmLengths = 0.58f;
 
-		private const float angDisplaceSoftLimitDegrees = 16f;
+		private const float softLimitDegrees = 16f;
 
-		private const float angDisplaceHardLimitDegrees = 142f;
+		private const float hardLimitDegrees = 142f;
 
 		[HideInInspector]
 		public HandPoseAnimator animator;
 
 		public Handedness handedness;
 
-		private Vector3 _velocity;
+		private SimpleTransform _lastHandInChest;
 
-		private Vector3 _acceleration;
-
-		private SimpleTransform _lastSkeleTransform;
+		private Quaternion _lastChestRot;
 
 		private SimpleTransform _overrideTransform;
 
@@ -48,11 +48,11 @@ namespace SLZ.Rig
 
 		private SimpleTransform _offsetTransform;
 
-		private bool _isOffsetTransformDirty;
+		private bool _isOffsetDirty;
 
-		private bool _isOffsetTransformOverride;
+		private bool _isOffsetOverride;
 
-		private bool _isHoverTransformDirty;
+		private bool _isHoverDirty;
 
 		[SerializeField]
 		private GameWorldSkeletonRig virtualHeptaRig;
@@ -103,7 +103,13 @@ namespace SLZ.Rig
 
 		private float _forwardProjectSeconds;
 
-		public SimpleTransform OffsetTransform => default(SimpleTransform);
+		public SimpleTransform OffsetTransform
+		{
+			get
+			{
+				return default(SimpleTransform);
+			}
+		}
 
 		public void OverrideHoverTranform(Vector3 position, Quaternion rotation)
 		{
@@ -125,24 +131,23 @@ namespace SLZ.Rig
 		{
 		}
 
-		public void ProcessTransform(Vector3 position, Quaternion rotation, Vector3 relativePos)
+		public void ProcessTransform(Vector3 position, Quaternion rotation, SimpleTransform relativeTran, float deltaTime)
 		{
 		}
 
-		public float CalculateDelta(Vector3 position, Quaternion rotation, ref SimpleTransform lastTransform, ref Vector3 acceleration, ref Vector3 velocity, out float rotDelta)
+		public float CalculateDelta(Vector3 position, Quaternion rotation, SimpleTransform lastTransform, [Out] float rotDelta)
 		{
-			rotDelta = default(float);
-			return 0f;
+			return default(float);
 		}
 
-		public SimpleTransform LimitOffset(SimpleTransform delta, float posSoftLimit, float posHardLimit, float angSoftLimit, float angHardLimit, ref float artificialDelta, ref float artificialAngDelta, ref float artificialDeltaVel, ref float artificialDeltaAngVel)
+		public SimpleTransform LimitOffset(SimpleTransform delta, float posSoftLimit, float posHardLimit, float angSoftLimit, float angHardLimit, float artificialDelta, float artificialAngDelta, float artificialDeltaVel, float artificialDeltaAngVel)
 		{
 			return default(SimpleTransform);
 		}
 
 		public bool IsSnatching()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void StartMoveHandToTarget(Hand hand, Grip grip)
@@ -159,7 +164,7 @@ namespace SLZ.Rig
 
 		private bool ReelInJoint(Hand hand, Grip grip, SimpleTransform gripTarget, SLZ.VRMK.Avatar avatar)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void OnGripHoverStart(Hand hand, Grip grip)
@@ -171,6 +176,11 @@ namespace SLZ.Rig
 		}
 
 		public void OnGripHoverEnd()
+		{
+		}
+
+		public SkeletonHand()
+			: base()
 		{
 		}
 	}

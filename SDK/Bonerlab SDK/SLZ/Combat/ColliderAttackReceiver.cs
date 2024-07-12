@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using SLZ.Marrow.Combat;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
@@ -12,6 +13,11 @@ namespace SLZ.Combat
 		public List<Collider> colliders;
 
 		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public ColliderAttackReceiver()
+			: base()
 		{
 		}
 	}

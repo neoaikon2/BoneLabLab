@@ -21,5 +21,10 @@ namespace SLZ.Bonelab
 		public void CreateKinematicConnectedObject()
 		{
 		}
+
+		public JointVisual()
+			: base()
+		{
+		}
 	}
 }

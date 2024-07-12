@@ -26,10 +26,12 @@ namespace SLZ.Bonelab
 			private List<BoneWeight> boneWeights;
 
 			public Vertices()
+				: base()
 			{
 			}
 
 			public Vertices(Mesh aMesh)
+				: this()
 			{
 			}
 
@@ -38,13 +40,13 @@ namespace SLZ.Bonelab
 				return null;
 			}
 
-			private void Copy<T>(ref List<T> aDest, List<T> aSource, int aIndex)
+			private void Copy<T>(List<T> aDest, List<T> aSource, int aIndex)
 			{
 			}
 
 			public int Add(Vertices aOther, int aIndex)
 			{
-				return 0;
+				return default(int);
 			}
 
 			public void AssignTo(Mesh aTarget)

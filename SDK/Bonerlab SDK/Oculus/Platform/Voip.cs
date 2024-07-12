@@ -63,15 +63,7 @@ namespace Oculus.Platform
 			return null;
 		}
 
-		public static void SetVoipConnectRequestCallback(Message<NetworkingPeer>.Callback callback)
-		{
-		}
-
 		public static void SetMicrophoneAvailabilityStateUpdateNotificationCallback(Message<string>.Callback callback)
-		{
-		}
-
-		public static void SetVoipStateChangeCallback(Message<NetworkingPeer>.Callback callback)
 		{
 		}
 

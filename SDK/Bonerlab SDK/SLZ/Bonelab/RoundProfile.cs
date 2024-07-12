@@ -39,5 +39,10 @@ namespace SLZ.Bonelab
 		public float customHealthRegenDuration;
 
 		public bool isProceduralRound;
+
+		public RoundProfile()
+			: base()
+		{
+		}
 	}
 }

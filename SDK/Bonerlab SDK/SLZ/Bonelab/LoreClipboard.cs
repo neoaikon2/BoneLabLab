@@ -1,4 +1,5 @@
 using SLZ.Interaction;
+using SLZ.SFX;
 using TMPro;
 using UnityEngine;
 
@@ -55,6 +56,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void ActiveText(bool goActive = false)
+		{
+		}
+
+		public LoreClipboard()
+			: base()
 		{
 		}
 	}

@@ -13,5 +13,10 @@ namespace SLZ.Bonelab
 		private void OnDestroy()
 		{
 		}
+
+		public ParticleSystemTextureStreaming()
+			: base()
+		{
+		}
 	}
 }

@@ -20,10 +20,7 @@ namespace RootMotion.FinalIK
 			public float verticalWeight;
 
 			public SpineEffector()
-			{
-			}
-
-			public SpineEffector(FullBodyBipedEffector effectorType, float horizontalWeight, float verticalWeight)
+				: base()
 			{
 			}
 		}
@@ -66,7 +63,7 @@ namespace RootMotion.FinalIK
 
 		private bool IsReadyToInitiate()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void Update()
@@ -98,6 +95,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public GrounderFBBIK()
+			: base()
 		{
 		}
 	}

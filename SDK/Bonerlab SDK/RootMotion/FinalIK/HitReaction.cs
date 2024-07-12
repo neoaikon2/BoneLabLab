@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -14,8 +15,8 @@ namespace RootMotion.FinalIK
 			[Tooltip("Linking this hit point to a collider")]
 			public Collider collider;
 
-			[SerializeField]
 			[Tooltip("Only used if this hit point gets hit when already processing another hit")]
+			[SerializeField]
 			private float crossFadeTime;
 
 			private float length;
@@ -24,7 +25,13 @@ namespace RootMotion.FinalIK
 
 			private float lastTime;
 
-			public bool inProgress => false;
+			public bool inProgress
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
 			protected float crossFader { get; private set; }
 
@@ -47,6 +54,11 @@ namespace RootMotion.FinalIK
 			protected abstract void CrossFadeStart();
 
 			protected abstract void OnApply(IKSolverFullBodyBiped solver, float weight);
+
+			public HitPoint()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -72,6 +84,11 @@ namespace RootMotion.FinalIK
 				public void CrossFadeStart()
 				{
 				}
+
+				public EffectorLink()
+					: base()
+				{
+				}
 			}
 
 			[Tooltip("Offset magnitude in the direction of the hit force")]
@@ -85,7 +102,7 @@ namespace RootMotion.FinalIK
 
 			protected override float GetLength()
 			{
-				return 0f;
+				return default(float);
 			}
 
 			protected override void CrossFadeStart()
@@ -93,6 +110,11 @@ namespace RootMotion.FinalIK
 			}
 
 			protected override void OnApply(IKSolverFullBodyBiped solver, float weight)
+			{
+			}
+
+			public HitPointEffector()
+				: base()
 			{
 			}
 		}
@@ -121,6 +143,11 @@ namespace RootMotion.FinalIK
 				public void CrossFadeStart()
 				{
 				}
+
+				public BoneLink()
+					: base()
+				{
+				}
 			}
 
 			[Tooltip("The angle to rotate the bone around it's rigidbody's world center of mass")]
@@ -133,7 +160,7 @@ namespace RootMotion.FinalIK
 
 			protected override float GetLength()
 			{
-				return 0f;
+				return default(float);
 			}
 
 			protected override void CrossFadeStart()
@@ -141,6 +168,11 @@ namespace RootMotion.FinalIK
 			}
 
 			protected override void OnApply(IKSolverFullBodyBiped solver, float weight)
+			{
+			}
+
+			public HitPointBone()
+				: base()
 			{
 			}
 		}
@@ -151,13 +183,24 @@ namespace RootMotion.FinalIK
 		[Tooltip(" Hit points for bones without an effector, such as the head")]
 		public HitPointBone[] boneHitPoints;
 
-		public bool inProgress => false;
+		public bool inProgress
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		protected override void OnModifyOffset()
 		{
 		}
 
 		public void Hit(Collider collider, Vector3 force, Vector3 point)
+		{
+		}
+
+		public HitReaction()
+			: base()
 		{
 		}
 	}

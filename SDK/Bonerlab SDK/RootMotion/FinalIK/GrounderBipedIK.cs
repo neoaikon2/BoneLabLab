@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[HelpURL("http://www.root-motion.com/finalikdox/html/page11.html")]
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/Grounder/Grounder Biped")]
+	[HelpURL("http://www.root-motion.com/finalikdox/html/page11.html")]
 	public class GrounderBipedIK : Grounder
 	{
 		[Tooltip("The BipedIK componet.")]
@@ -43,7 +43,7 @@ namespace RootMotion.FinalIK
 
 		private bool IsReadyToInitiate()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void Update()
@@ -71,6 +71,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public GrounderBipedIK()
+			: base()
 		{
 		}
 	}

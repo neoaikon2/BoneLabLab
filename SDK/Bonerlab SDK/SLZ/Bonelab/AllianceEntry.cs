@@ -17,5 +17,10 @@ namespace SLZ.Bonelab
 		public Vector2 graphPos;
 
 		public int index;
+
+		public AllianceEntry()
+			: base()
+		{
+		}
 	}
 }

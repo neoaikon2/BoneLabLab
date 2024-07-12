@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Marrow.Data;
+using System.Runtime.InteropServices;
+using SLZ.Data;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using SLZ.Rig;
 using SLZ.VRMK;
@@ -13,164 +15,6 @@ namespace SLZ.Interaction
 {
 	public class Hand : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CStart_003Ed__71
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Hand _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CStart_003Ed__71(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoDelayDestroyJoint_003Ed__78
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public bool isQuick;
-
-			public Hand _003C_003E4__this;
-
-			public Grip lastGrip;
-
-			public ConfigurableJoint myJoint;
-
-			private WaitForFixedUpdate _003Cwait_003E5__2;
-
-			private JointDrive _003Cdrive_003E5__3;
-
-			private float _003Ctime_003E5__4;
-
-			private float _003Cduration_003E5__5;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoDelayDestroyJoint_003Ed__78(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoJointBreakCooldown_003Ed__104
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Hand _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoJointBreakCooldown_003Ed__104(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		private static ComponentCache<Hand> _cache;
 
 		public Action<HandReciever> onRecieverAttached;
@@ -193,10 +37,11 @@ namespace SLZ.Interaction
 
 		private GameObject m_CurrentAttachedGO;
 
-		private const int m_ColliderArraySize = 64;
+		private const int m_ColliderArraySize = 128;
 
 		private Collider[] m_OverlappingColliders;
 
+		[SerializeField]
 		private Collider[] m_HandColliders;
 
 		private List<Collider> m_IgnoredColliders;
@@ -243,8 +88,6 @@ namespace SLZ.Interaction
 
 		private BaseController _controller;
 
-		private SkeletonHand _virtualHeptaHand;
-
 		private SkeletonHand _skeleton;
 
 		private HandPoseAnimator _animator;
@@ -265,26 +108,48 @@ namespace SLZ.Interaction
 
 		private float _indexTriggerAxis;
 
-		public static ComponentCache<Hand> Cache => null;
+		public static ComponentCache<Hand> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public float HoverSphereRadius
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
 			}
 		}
 
-		public BaseController Controller => null;
+		public BaseController Controller
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public SkeletonHand VirtualHeptaHand => null;
+		public SkeletonHand Skeleton
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public SkeletonHand Skeleton => null;
-
-		public HandPoseAnimator Animator => null;
+		public HandPoseAnimator Animator
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public bool hoverLocked { get; private set; }
 
@@ -314,7 +179,6 @@ namespace SLZ.Interaction
 
 		public bool GrabLock { get; private set; }
 
-		[IteratorStateMachine(typeof(_003CStart_003Ed__71))]
 		private IEnumerator Start()
 		{
 			return null;
@@ -340,11 +204,10 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public void DetachJoint(bool isQuick = false, Grip lastGrip = null)
+		public void DetachJoint(bool isQuick = false, Grip lastGrip = default(Grip))
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayDestroyJoint_003Ed__78))]
 		private IEnumerator CoDelayDestroyJoint(ConfigurableJoint myJoint, bool isQuick, Grip lastGrip)
 		{
 			return null;
@@ -367,7 +230,7 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public void PrepareJoint(GameObject objectToAttach, bool isSilent = false, Action OnBeforeAttach = null)
+		public void PrepareJoint(GameObject objectToAttach, bool isSilent = false, Action OnBeforeAttach = default(Action))
 		{
 		}
 
@@ -410,7 +273,7 @@ namespace SLZ.Interaction
 
 		public float WristToForearmAngle()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void DetachObject()
@@ -443,7 +306,7 @@ namespace SLZ.Interaction
 
 		public bool HasAttachedObject()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void HoverLock()
@@ -458,7 +321,6 @@ namespace SLZ.Interaction
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoJointBreakCooldown_003Ed__104))]
 		private IEnumerator CoJointBreakCooldown()
 		{
 			return null;
@@ -468,7 +330,7 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public void UpdateConnectedAnchor(Vector3 connectedAnchor = default(Vector3), ConfigurableJoint j = null)
+		public void UpdateConnectedAnchor(Vector3 connectedAnchor = default(Vector3), ConfigurableJoint j = default(ConfigurableJoint))
 		{
 		}
 
@@ -476,7 +338,7 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public void UpdateAnchor(Vector3 anchor = default(Vector3), ConfigurableJoint j = null)
+		public void UpdateAnchor(Vector3 anchor = default(Vector3), ConfigurableJoint j = default(ConfigurableJoint))
 		{
 		}
 
@@ -494,22 +356,27 @@ namespace SLZ.Interaction
 
 		public bool GetIndexButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool GetIndexButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool GetIndexButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public float GetIndexTriggerAxis()
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public Hand()
+			: base()
+		{
 		}
 	}
 }

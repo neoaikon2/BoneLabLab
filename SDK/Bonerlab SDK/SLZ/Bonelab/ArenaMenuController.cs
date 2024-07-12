@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using SLZ.Data;
-using SLZ.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -86,9 +85,9 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private Color deselectedColor;
 
-		[Space(10f)]
 		[SerializeField]
 		[Header("Texts")]
+		[Space(10f)]
 		private TMP_Text concurrentEnemyText;
 
 		[SerializeField]
@@ -236,6 +235,11 @@ namespace SLZ.Bonelab
 
 		[ContextMenu("GetButtonTexts")]
 		public void GetButtonTexts()
+		{
+		}
+
+		public ArenaMenuController()
+			: base()
 		{
 		}
 	}

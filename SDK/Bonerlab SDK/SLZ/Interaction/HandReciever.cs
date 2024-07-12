@@ -1,3 +1,5 @@
+using System;
+using System.Runtime.CompilerServices;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
@@ -12,31 +14,66 @@ namespace SLZ.Interaction
 		[HideInInspector]
 		private HandJointConfiguration _handJointConfig;
 
-		public static ComponentCache<HandReciever> Cache => null;
+		public static ComponentCache<HandReciever> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		[field: Header("Hand Receiver")]
 		public IGrippable Host { get; set; }
 
 		public bool IsEnabled
 		{
 			get
 			{
-				return false;
+				return default(bool);
 			}
 			set
 			{
 			}
 		}
 
-		public bool IsFarHoverEnabled => false;
+		public bool IsFarHoverEnabled
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public bool IsStatic => false;
+		public bool IsStatic
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public bool HasRigidbody => false;
+		public bool HasRigidbody
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public bool HasHost => false;
+		public bool HasHost
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public HandJointConfiguration HandJointConfig => null;
+		public HandJointConfiguration HandJointConfig
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		protected virtual void Awake()
 		{
@@ -59,9 +96,9 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public virtual float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public virtual ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		public virtual void OnAttachedToHand(Hand hand)
@@ -101,6 +138,11 @@ namespace SLZ.Interaction
 		}
 
 		public virtual void OnDetachedFromHand(Hand hand)
+		{
+		}
+
+		public HandReciever()
+			: base()
 		{
 		}
 	}

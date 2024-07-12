@@ -1,4 +1,8 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Input;
+using SLZ.Marrow.Interaction;
+using SLZ.Player;
 using UnityEngine;
 
 namespace SLZ.Rig
@@ -19,8 +23,9 @@ namespace SLZ.Rig
 		public Handedness handedness;
 
 		[HideInInspector]
-		public ControllerRig manager;
+		public ControllerRig contRig;
 
+		[SerializeField]
 		private Haptor _haptor;
 
 		protected GesturePose _gesturePose;
@@ -129,11 +134,16 @@ namespace SLZ.Rig
 
 		public XRControllerType Type { get; protected set; }
 
-		public Haptor haptor => null;
-
-		public virtual GesturePose GetGesturePose(out float poseIntensity, bool forceUpdate = false)
+		public Haptor haptor
 		{
-			poseIntensity = default(float);
+			get
+			{
+				return null;
+			}
+		}
+
+		public virtual GesturePose GetGesturePose([Out] float poseIntensity, bool forceUpdate = false)
+		{
 			return default(GesturePose);
 		}
 
@@ -145,83 +155,83 @@ namespace SLZ.Rig
 		{
 		}
 
-		public virtual void OnVrFixedUpdate(Vector3 headPos)
+		public virtual void OnVrFixedUpdate(Vector3 headPos, float deltaTime)
 		{
 		}
 
 		public virtual bool GetPrimaryInteractionButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetPrimaryInteractionButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetPrimaryInteractionButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual float GetPrimaryInteractionButtonAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual bool GetSecondaryInteractionButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual float GetSecondaryInteractionButtonAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual bool GetSecondaryInteractionButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetSecondaryInteractionButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual float GetGripForce()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual float GetIndexCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual float GetMiddleCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual float GetRingCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual float GetPinkyCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual float GetThumbCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual bool HasBeenGrabbed()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual void ClearHasBeenGrabbed()
@@ -230,82 +240,82 @@ namespace SLZ.Rig
 
 		public virtual float GetLastTimeGrabbed()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual bool IsGrabbed()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool IsReleased()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetGrabbedState()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetReleasedState()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetSecondaryMenuButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetSecondaryMenuButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetSecondaryMenuButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetMenuTap()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetAppMenuDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetAppMenuUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetAppMenu()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetMenuButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetMenuButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetMenuButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual float GetGripVelocity()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual void HapticAction(float secondsFromNow, float durationSeconds, float frequency, float amplitude)
@@ -318,32 +328,32 @@ namespace SLZ.Rig
 
 		public virtual bool GetAButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetAButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetAButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetBButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetBButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetBButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual Vector2 GetThumbStickAxis()
@@ -353,22 +363,22 @@ namespace SLZ.Rig
 
 		public virtual bool GetThumbStickDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetThumbStickUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetThumbStick()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetThumbStickTouch()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual Vector2 GetTouchPadAxis()
@@ -378,27 +388,27 @@ namespace SLZ.Rig
 
 		public virtual bool GetTouchPadDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetTouchPadUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetTouchPad()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetTouchPadTouch()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual bool GetThumbTouch()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual Vector3 GetRelativeVelocityInWorld()
@@ -407,6 +417,11 @@ namespace SLZ.Rig
 		}
 
 		public void StampController(BaseController fromController)
+		{
+		}
+
+		public BaseController()
+			: base()
 		{
 		}
 	}

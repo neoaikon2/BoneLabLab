@@ -1,26 +1,37 @@
-using SLZ.Marrow.Warehouse;
+using System.Runtime.CompilerServices;
+using SLZ.Marrow.Interaction;
+using SLZ.Marrow.Zones;
 using SLZ.SFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class PlacerNail : MonoBehaviour
+	public class PlacerNail : SpawnDecorator
 	{
+		[Tooltip("doesn't currently work, need to restructure part of impact sfx to fix it")]
 		public AudioClip breakSFX;
 
+		[Tooltip("If empty, will use transform of crate spawner")]
 		public Transform nailTransform;
 
 		public float breakforce;
 
-		public void OnPlaced(SpawnableCratePlacer placer, GameObject go)
+		public MarrowJoint Joint { get; private set; }
+
+		public override void OnSpawn(GameObject go)
 		{
 		}
 
-		private void SetJoint(ConfigurableJoint joint, Rigidbody rb)
+		private void SetJoint(MarrowBody bodyA)
 		{
 		}
 
 		private void SetImpactSFX(ImpactSFX impactSFX)
+		{
+		}
+
+		public PlacerNail()
+			: base()
 		{
 		}
 	}

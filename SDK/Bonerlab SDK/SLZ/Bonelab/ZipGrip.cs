@@ -42,5 +42,10 @@ namespace SLZ.Bonelab
 		public void ResetToStart()
 		{
 		}
+
+		public ZipGrip()
+			: base()
+		{
+		}
 	}
 }

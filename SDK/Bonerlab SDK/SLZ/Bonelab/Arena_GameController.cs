@@ -3,11 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.AI;
+using System.Runtime.InteropServices;
+using System.Threading;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Data;
+using SLZ.Marrow.AI;
 using SLZ.Marrow.Pool;
-using SLZ.Zones;
 using TMPro;
+using UltEvents;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -39,750 +43,6 @@ namespace SLZ.Bonelab
 			FAILED = 2,
 			QUIT = 3,
 			WIN = 4
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoKingEntrance_003Ed__109
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float waitSeconds;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoKingEntrance_003Ed__109(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoPlayerDist_003Ed__134
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoPlayerDist_003Ed__134(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoSpawnEnemies_003Ed__136
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoSpawnEnemies_003Ed__136(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoSpawnFriendlyList_003Ed__139
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			public int fCount;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoSpawnFriendlyList_003Ed__139(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoFriendlyArrival_003Ed__141
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public AIBrain currBrain;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoFriendlyArrival_003Ed__141(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoEndOfWave_003Ed__146
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoEndOfWave_003Ed__146(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoResetOnWaveCompleteOrFail_003Ed__151
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private List<NPC_Data>.Enumerator _003C_003E7__wrap1;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoResetOnWaveCompleteOrFail_003Ed__151(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			private void _003C_003Em__Finally1()
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoFriendlySublimation_003Ed__152
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private AssetPoolee _003CcrownPoolee_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoFriendlySublimation_003Ed__152(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoKillCombo_003Ed__159
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoKillCombo_003Ed__159(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCo_TimerUp_Arena_003Ed__177
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private float _003ClastTimeSent_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCo_TimerUp_Arena_003Ed__177(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCo_TimerDown_Arena_003Ed__178
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			public float seconds;
-
-			private float _003ClastTimeSent_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCo_TimerDown_Arena_003Ed__178(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoDelayedRespawn_003Ed__193
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			public NPC_Data data;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoDelayedRespawn_003Ed__193(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoSpawnObjectiveEnemies_003Ed__194
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private int _003Ci_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoSpawnObjectiveEnemies_003Ed__194(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoDelayedObjectiveStart_003Ed__206
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoDelayedObjectiveStart_003Ed__206(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoObjectiveWait_003Ed__210
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Arena_GameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoObjectiveWait_003Ed__210(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
 		}
 
 		public TimeBender timeBender;
@@ -818,7 +78,7 @@ namespace SLZ.Bonelab
 		private int friendlySpawnCount;
 
 		[SerializeField]
-		private GameObject kingSpawn;
+		private ProfileSpawner kingSpawner;
 
 		[SerializeField]
 		private GameObject[] friendlyTargetObjs;
@@ -839,6 +99,8 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private int initHeavyAmmo;
+
+		private CancellationTokenSource enemySpawnCTS;
 
 		private Coroutine enemySpawnRoutine;
 
@@ -926,7 +188,31 @@ namespace SLZ.Bonelab
 
 		public UnityEvent onModeWin;
 
+		public UltEvent playerReady;
+
+		public UltEvent playerEnter;
+
+		public UltEvent roundBegin;
+
+		public UltEvent roundEnd;
+
+		public UltEvent waveBegin;
+
+		public UltEvent waveEnd;
+
+		public UltEvent modeEnd;
+
+		public UltEvent modeQuit;
+
+		public UltEvent readyUpBell;
+
+		public UltEvent ringBell;
+
+		public UltEvent modeWin;
+
 		public static Action OnSaveReady;
+
+		public static Action<Vector3> OnCureNPC;
 
 		[SerializeField]
 		private AudioClip[] roundStartClips;
@@ -945,6 +231,9 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private AudioClip greetingClip;
+
+		[SerializeField]
+		private AudioClip ammoClip;
 
 		[SerializeField]
 		private AudioClip failModeClip;
@@ -966,7 +255,7 @@ namespace SLZ.Bonelab
 
 		public GameObject[] randToggleObjs;
 
-		public HashSet<ZoneSpawner> spawnerHash;
+		public HashSet<ProfileSpawner> spawnerHash;
 
 		private Coroutine playerDistRoutine;
 
@@ -987,6 +276,10 @@ namespace SLZ.Bonelab
 		private int totalHeadShots;
 
 		private int projectilesShot;
+
+		private int healthPackLimit;
+
+		public int healthPackCount;
 
 		[SerializeField]
 		private List<NPC_Objective> allNPCObjectives;
@@ -1009,9 +302,29 @@ namespace SLZ.Bonelab
 
 		public UnityEvent OnStackCompletion;
 
-		public int round => 0;
+		public UltEvent ObjectiveInitiated;
 
-		public int wave => 0;
+		public UltEvent ObjectiveFailed;
+
+		public UltEvent ObjectiveCompleted;
+
+		public UltEvent StackCompletion;
+
+		public int round
+		{
+			get
+			{
+				return default(int);
+			}
+		}
+
+		public int wave
+		{
+			get
+			{
+				return default(int);
+			}
+		}
 
 		protected override void OnEnable()
 		{
@@ -1025,7 +338,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		protected override void Start()
+		public override void Start()
+		{
+		}
+
+		public void OnPlayerSpawn()
 		{
 		}
 
@@ -1069,14 +386,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void InitZoneSpawners()
-		{
-		}
-
-		public void InitLootSpawner()
-		{
-		}
-
 		public void ARENA_SetDifficulty(int diff)
 		{
 		}
@@ -1102,7 +411,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoKingEntrance_003Ed__109))]
 		private IEnumerator CoKingEntrance(float waitSeconds)
 		{
 			return null;
@@ -1176,7 +484,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoPlayerDist_003Ed__134))]
 		private IEnumerator CoPlayerDist()
 		{
 			return null;
@@ -1186,10 +493,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSpawnEnemies_003Ed__136))]
-		private IEnumerator CoSpawnEnemies()
+		private UniTaskVoid SpawnEnemyLoop(CancellationToken ct)
 		{
-			return null;
+			return default(UniTaskVoid);
+		}
+
+		public void UpdateProfileEnemyCount(int concEnemyCount, bool immediateIncrease = false, int increaseRate = 1)
+		{
 		}
 
 		private void SpawnHoiPoi(EnemyProfile profile)
@@ -1200,7 +510,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSpawnFriendlyList_003Ed__139))]
 		private IEnumerator CoSpawnFriendlyList(int fCount)
 		{
 			return null;
@@ -1210,14 +519,24 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoFriendlyArrival_003Ed__141))]
 		private IEnumerator CoFriendlyArrival(AIBrain currBrain)
 		{
 			return null;
 		}
 
+		[ContextMenu("SpawnKing")]
 		private void SpawnKing()
 		{
+		}
+
+		[ContextMenu("CureAll")]
+		public void StopSpawningAndCureAll()
+		{
+		}
+
+		private IEnumerator CoCureAll()
+		{
+			return null;
 		}
 
 		private void UpdateArenaDisplay()
@@ -1228,7 +547,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoEndOfWave_003Ed__146))]
 		private IEnumerator CoEndOfWave()
 		{
 			return null;
@@ -1236,7 +554,7 @@ namespace SLZ.Bonelab
 
 		private bool CheckProfileForNextWave()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void FailProtectMode()
@@ -1251,13 +569,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoResetOnWaveCompleteOrFail_003Ed__151))]
 		private IEnumerator CoResetOnWaveCompleteOrFail()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoFriendlySublimation_003Ed__152))]
 		private IEnumerator CoFriendlySublimation()
 		{
 			return null;
@@ -1287,7 +603,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoKillCombo_003Ed__159))]
 		private IEnumerator CoKillCombo()
 		{
 			return null;
@@ -1355,13 +670,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCo_TimerUp_Arena_003Ed__177))]
 		private IEnumerator Co_TimerUp_Arena()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCo_TimerDown_Arena_003Ed__178))]
 		private IEnumerator Co_TimerDown_Arena(float seconds)
 		{
 			return null;
@@ -1387,13 +700,37 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedRespawn_003Ed__193))]
+		public void InvertNavMeshArea(string areaName)
+		{
+		}
+
+		public void RewardAmmo(int cartridge, int amount)
+		{
+		}
+
+		public void HealthPackCollected(GameObject go)
+		{
+		}
+
+		public void SpawnHealthPackOnChance(NPC_Data npcData)
+		{
+		}
+
+		[ContextMenu("SpawnLargeHealthPack")]
+		public void SpawnLargeHealthPack(Vector3 spawnPoint)
+		{
+		}
+
+		[ContextMenu("SpawnSmallHealthPack")]
+		public void SpawnSmallHealthPack(Vector3 spawnPoint)
+		{
+		}
+
 		private IEnumerator CoDelayedRespawn(NPC_Data data)
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSpawnObjectiveEnemies_003Ed__194))]
 		private IEnumerator CoSpawnObjectiveEnemies()
 		{
 			return null;
@@ -1406,6 +743,26 @@ namespace SLZ.Bonelab
 		protected NPC_Objective GetObjective()
 		{
 			return null;
+		}
+
+		[ContextMenu("StartObjective")]
+		public void ObjectiveBlueKeyedTest()
+		{
+		}
+
+		[ContextMenu("KeyObjectiveZero")]
+		public void KeyObjectiveZero()
+		{
+		}
+
+		[ContextMenu("KeyObjectiveOne")]
+		public void KeyObjectiveOne()
+		{
+		}
+
+		[ContextMenu("KeyObjectiveTwo")]
+		public void KeyObjectiveTwo()
+		{
 		}
 
 		public void OnObjectiveKeyed(NPC_Objective objective)
@@ -1444,7 +801,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedObjectiveStart_003Ed__206))]
 		private IEnumerator CoDelayedObjectiveStart()
 		{
 			return null;
@@ -1462,7 +818,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoObjectiveWait_003Ed__210))]
 		private IEnumerator CoObjectiveWait()
 		{
 			return null;
@@ -1481,6 +836,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void ObjectiveBatteryGrab()
+		{
+		}
+
+		public Arena_GameController()
+			: base()
 		{
 		}
 	}

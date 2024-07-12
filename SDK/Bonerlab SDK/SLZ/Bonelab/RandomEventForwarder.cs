@@ -17,5 +17,10 @@ namespace SLZ.Bonelab
 		public void CallEvent()
 		{
 		}
+
+		public RandomEventForwarder()
+			: base()
+		{
+		}
 	}
 }

@@ -6,5 +6,10 @@ namespace RootMotion.FinalIK
 	{
 		[Range(0f, 1f)]
 		public float weight;
+
+		public IKJBoneParams()
+			: base()
+		{
+		}
 	}
 }

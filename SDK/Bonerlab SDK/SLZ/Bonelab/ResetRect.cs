@@ -8,5 +8,10 @@ namespace SLZ.Bonelab
 		private void Awake()
 		{
 		}
+
+		public ResetRect()
+			: base()
+		{
+		}
 	}
 }

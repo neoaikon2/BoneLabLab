@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -17,6 +18,11 @@ namespace SLZ.Interaction
 			public SimpleTransform worldHandleTransform;
 
 			public Vector3 backOfHandNormal;
+
+			public HandToGenericGripState()
+				: base()
+			{
+			}
 		}
 
 		private Dictionary<Hand, HandToGenericGripState> genericHandStates;
@@ -35,9 +41,9 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		protected override void UpdateJointConfiguration(Hand hand)
@@ -45,6 +51,11 @@ namespace SLZ.Interaction
 		}
 
 		protected override void SetupConfiguration(HandJointConfiguration config)
+		{
+		}
+
+		public GenericGrip()
+			: base()
 		{
 		}
 	}

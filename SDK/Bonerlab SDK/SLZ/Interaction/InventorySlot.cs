@@ -10,30 +10,6 @@ namespace SLZ.Interaction
 		[HideInInspector]
 		public GameObject itemGameObject;
 
-		public event SlotDelegate slotInsertEvent
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event SlotDelegate slotRemoveEvent
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
 		public void Insert(GameObject go)
 		{
 		}
@@ -41,5 +17,14 @@ namespace SLZ.Interaction
 		public void Remove()
 		{
 		}
+
+		public InventorySlot()
+			: base()
+		{
+		}
+
+		public event SlotDelegate slotInsertEvent;
+
+		public event SlotDelegate slotRemoveEvent;
 	}
 }

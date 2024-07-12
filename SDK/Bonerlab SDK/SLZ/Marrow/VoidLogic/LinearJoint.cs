@@ -1,18 +1,21 @@
-using System.Collections.Generic;
-using System.Text;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Algorithms.Unity;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
+	[Support(SupportFlags.BetaSupported, "This works, but uses ConfigurableJoint instead of Marrow primitives.")]
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/LinearJoint")]
-	[AddComponentMenu("VoidLogic/Endpoints/VoidLogic Linear Joint (Sliding)")]
-	public sealed class LinearJoint : MonoBehaviour, InputDescribable
+	[AddComponentMenu("VoidLogic/Sinks/VoidLogic Linear Joint (Sliding)")]
+	public sealed class LinearJoint : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
 	{
 		[SerializeField]
 		[Tooltip("Previous node in the chain")]
-		private BaseNode _previousNode;
+		[Interface(typeof(IVoidLogicSource), false)]
+		private MonoBehaviour _previousNode;
 
-		private float _priorValue;
+		private float? _priorValue;
 
 		[SerializeField]
 		private bool _warpOnStart;
@@ -22,12 +25,9 @@ namespace SLZ.Marrow.VoidLogic
 
 		private Rigidbody _rigidBody;
 
-		[SerializeField]
 		[Header("Joint Control")]
-		private bool _varyTargetPosition;
-
 		[SerializeField]
-		private float _additiveTargetPosMultiplier;
+		private bool _varyTargetPosition;
 
 		[SerializeField]
 		private Vector3 _minPosition;
@@ -71,13 +71,23 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		private Vector3 _zMaxSpringDamperForce;
 
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		public BaseNode PreviousNode
+		public VoidLogicSubgraph Subgraph { get; set; }
+
+		public int InputCount
 		{
 			get
 			{
-				return null;
+				return default(int);
+			}
+		}
+
+		public PortMetadata PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
 			}
 		}
 
@@ -85,11 +95,23 @@ namespace SLZ.Marrow.VoidLogic
 		{
 		}
 
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
 		private void Start()
 		{
 		}
 
-		private void Update()
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
 		{
 		}
 
@@ -101,13 +123,14 @@ namespace SLZ.Marrow.VoidLogic
 		{
 		}
 
-		public void AppendEndpointInfo(StringBuilder sb)
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			return default(bool);
 		}
 
-		IReadOnlyList<InputDescription> InputDescribable.DescribeInputs()
+		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return null;
+			return default(bool);
 		}
 
 		public LinearJoint()

@@ -1,19 +1,33 @@
+using System;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Toggle Button")]
+	[AddComponentMenu(null)]
+	[Obsolete("Use Button + Toggle instead", true)]
+	[Support(SupportFlags.Unsupported, null)]
+	[Support(SupportFlags.Deprecated, "Use Button + Toggle instead")]
 	public class ToggleButtonNode : ButtonNode
 	{
 		private float _multiplier;
 
-		protected override void Update()
+		private static readonly PortMetadata _portMetadata;
+
+		public override PortMetadata PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		public override void Calculate(NodeState nodeState)
 		{
 		}
 
-		protected override float CalculateValue()
+		public ToggleButtonNode()
+			: base()
 		{
-			return 0f;
 		}
 	}
 }

@@ -1,5 +1,5 @@
 using System;
-using SLZ.AI;
+using SLZ.Marrow.AI;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -16,5 +16,10 @@ namespace SLZ.Bonelab
 		public int round;
 
 		public int wave;
+
+		public DeadData()
+			: base()
+		{
+		}
 	}
 }

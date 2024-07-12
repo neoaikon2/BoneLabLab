@@ -1,4 +1,5 @@
-using SLZ.Marrow.Data;
+using System.Runtime.InteropServices;
+using SLZ.Data;
 using UnityEngine;
 
 namespace SLZ.Interaction
@@ -62,12 +63,16 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public void GetLadderInfo(out LadderInfo info, LadderInfo.Source source)
+		public void GetLadderInfo([Out] LadderInfo info, LadderInfo.Source source)
 		{
-			info = default(LadderInfo);
 		}
 
 		private void FixedUpdate()
+		{
+		}
+
+		public LadderVirtualController()
+			: base()
 		{
 		}
 	}

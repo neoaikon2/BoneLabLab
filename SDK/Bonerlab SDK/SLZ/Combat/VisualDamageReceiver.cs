@@ -1,4 +1,5 @@
-using PuppetMasta;
+using System.Runtime.InteropServices;
+using SLZ.Marrow.Combat;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -7,35 +8,29 @@ namespace SLZ.Combat
 {
 	public class VisualDamageReceiver : MonoBehaviour, IAttackReceiver, IEventSystemHandler
 	{
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private Vector3 orgpos;
 
 		[SerializeField]
 		[HideInInspector]
 		private Quaternion orgrot;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private Vector3 orgScale;
 
 		public Transform bone;
 
 		[SerializeField]
 		[FormerlySerializedAs("ParentObj")]
-#if !UNITY_EDITOR // Castify required modification
 		private VisualDamageController visualDamageController;
-#else
-		public VisualDamageController visualDamageController;
-#endif
 
+		[Space(10f)]
 		[Header("CutOut area")]
 		[Space(5f)]
 		[SerializeField]
-		[Space(10f)]
 		public GibletEllipsoid[] gibletEllipsoid;
-
-		public PuppetMaster puppet;
 
 		private void Reset()
 		{
@@ -51,36 +46,38 @@ namespace SLZ.Combat
 
 		private int RandomizeGib()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void GibletEllipsoidGenerate(int GibletNumber)
 		{
 		}
 
-		public static Vector3 ExtractTranslationFromMatrix(ref Matrix4x4 matrix)
+		public static Vector3 ExtractTranslationFromMatrix(Matrix4x4 matrix)
 		{
 			return default(Vector3);
 		}
 
-		public static Quaternion ExtractRotationFromMatrix(ref Matrix4x4 matrix)
+		public static Quaternion ExtractRotationFromMatrix(Matrix4x4 matrix)
 		{
 			return default(Quaternion);
 		}
 
-		public static Vector3 ExtractScaleFromMatrix(ref Matrix4x4 matrix)
+		public static Vector3 ExtractScaleFromMatrix(Matrix4x4 matrix)
 		{
 			return default(Vector3);
 		}
 
-		public static void DecomposeMatrix(ref Matrix4x4 matrix, out Vector3 localPosition, out Quaternion localRotation, out Vector3 localScale)
+		public static void DecomposeMatrix(Matrix4x4 matrix, [Out] Vector3 localPosition, [Out] Quaternion localRotation, [Out] Vector3 localScale)
 		{
-			localPosition = default(Vector3);
-			localRotation = default(Quaternion);
-			localScale = default(Vector3);
 		}
 
-		public static void SetTransformFromMatrix(Transform transform, ref Matrix4x4 matrix)
+		public static void SetTransformFromMatrix(Transform transform, Matrix4x4 matrix)
+		{
+		}
+
+		public VisualDamageReceiver()
+			: base()
 		{
 		}
 	}

@@ -29,14 +29,9 @@ namespace RootMotion.FinalIK
 
 		private Quaternion[] rotations;
 
-		public override bool IsValid(ref string message)
+		public override bool IsValid(string message)
 		{
-			return false;
-		}
-
-		public bool SetChain(Transform pelvis, Transform thigh, Transform calf, Transform foot, Transform toe, Transform root)
-		{
-			return false;
+			return default(bool);
 		}
 
 		public override Point[] GetPoints()
@@ -74,6 +69,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void Write()
+		{
+		}
+
+		public IKSolverLeg()
+			: base()
 		{
 		}
 	}

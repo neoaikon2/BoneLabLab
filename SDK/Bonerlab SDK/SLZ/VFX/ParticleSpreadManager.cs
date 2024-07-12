@@ -20,6 +20,7 @@ namespace SLZ.VFX
 			public string name;
 
 			public Info(Vector3 normal, Vector3 direction, Vector3 reflect, float spread, string name)
+				: base()
 			{
 			}
 		}
@@ -32,7 +33,13 @@ namespace SLZ.VFX
 
 		private List<Info> infos;
 
-		public static ComponentCache<ParticleSpreadManager> Cache => null;
+		public static ComponentCache<ParticleSpreadManager> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Awake()
 		{
@@ -51,6 +58,11 @@ namespace SLZ.VFX
 		}
 
 		private void SetSettings(ParticleSpread particleSpread, Vector3 normal, Vector3 direction)
+		{
+		}
+
+		public ParticleSpreadManager()
+			: base()
 		{
 		}
 	}

@@ -3,133 +3,114 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.AI;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
-using SLZ.Utilities;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SLZ.Interaction
 {
-	public class InteractableHost : ObjectCleanupEvents, IGrippable
+	public class InteractableHost : MarrowBehaviour, IGrippable
 	{
-		[CompilerGenerated]
-		private sealed class _003CCoCheckForSleep_003Ed__80
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public InteractableHost _003C_003E4__this;
-
-			private WaitForFixedUpdate _003Cwffu_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoCheckForSleep_003Ed__80(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		private static ComponentCache<InteractableHost> _cache;
 
 		public InteractableHostManager manager;
 
 		public bool ignoreBodyOnGrab;
 
-		private ConfigurableJoint _bodyJoint;
+		private MarrowBody _marrowBody;
+
+		private ConfigurableJoint _monofootJoint;
+
+		private ConfigurableJoint _pelvisJoint;
 
 		private ConfigurableJoint _spineJoint;
 
 		private ConfigurableJoint _chestJoint;
 
+		private ConfigurableJoint _neckJoint;
+
 		private ConfigurableJoint _headJoint;
+
+		private readonly List<Hand> _hands;
 
 		private Hand _lastHand;
 
-		private List<Grip> _grips;
+		private readonly List<Grip> _grips;
 
-		private List<ForcePullGrip> _fpGrips;
-
-		private RigidbodyData _rbData;
-
-		private Rigidbody _rb;
+		private readonly List<ForcePullGrip> _fpGrips;
 
 		public Action<InteractableHost, Hand> onHandAttachedDelegate;
 
 		public Action<InteractableHost, Hand> onHandDetachedDelegate;
 
-		private List<Hand> _hands;
-
 		private Coroutine checkForSleepCoroutine;
 
-		public new static ComponentCache<InteractableHost> Cache => null;
+		public static ComponentCache<InteractableHost> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		[field: SerializeField]
-		[field: FormerlySerializedAs("virtualController")]
-#if !UNITY_EDITOR // Castify required modification
 		public VirtualController VirtualController { get; private set; }
-#else
-		public VirtualController VirtualController { get; set; }
-#endif
 
 		public TriggerRefProxy LastGrabbedProxy { get; private set; }
 
-		public Collider[] Colliders { get; private set; }
+		public Collider[] Colliders
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public bool IsInteractionDisabled { get; private set; }
 
 		public bool IsFarHoverEnabled { get; private set; }
 
-		[field: FormerlySerializedAs("isStatic")]
-		[field: SerializeField]
 		public bool IsStatic { get; set; }
 
-		[field: FormerlySerializedAs("hasRigidbody")]
-		[field: SerializeField]
-#if (!UNITY_EDITOR)
-		public bool HasRigidbody { get; private set; }
-#else
-		public bool HasRigidbody { get; set; }
-#endif
+		public bool HasRigidbody
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public Rigidbody Rb => null;
+		public MarrowBody Body
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public bool IsAttached => false;
+		public Rigidbody Rb
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public bool IsPulling => false;
+		public bool IsAttached
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
+
+		public bool IsPulling
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		private void Reset()
 		{
@@ -150,7 +131,11 @@ namespace SLZ.Interaction
 			return null;
 		}
 
-		public override void Awake()
+		public void Awake()
+		{
+		}
+
+		public void Start()
 		{
 		}
 
@@ -158,11 +143,7 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private void OnEnable()
-		{
-		}
-
-		public override void OnDestroy()
+		public void OnDestroy()
 		{
 		}
 
@@ -202,11 +183,11 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public void DestroyRigidbody()
+		public void Freeze()
 		{
 		}
 
-		public void CreateRigidbody()
+		public void Unfreeze()
 		{
 		}
 
@@ -234,10 +215,10 @@ namespace SLZ.Interaction
 
 		public int HandCount()
 		{
-			return 0;
+			return default(int);
 		}
 
-		public void ForceDetach()
+		public void ForceDetach(bool isQuick = false)
 		{
 		}
 
@@ -251,13 +232,13 @@ namespace SLZ.Interaction
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoCheckForSleep_003Ed__80))]
 		private IEnumerator CoCheckForSleep()
 		{
 			return null;
 		}
 
-		public override void OnCleanup()
+		public InteractableHost()
+			: base()
 		{
 		}
 	}

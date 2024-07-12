@@ -31,5 +31,10 @@ namespace RootMotion.FinalIK
 		{
 			return null;
 		}
+
+		public LegIK()
+			: base()
+		{
+		}
 	}
 }

@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 		public void ToggleForwDoorLock(bool unlock)
 		{
 		}
+
+		public GameControl_MineDive()
+			: base()
+		{
+		}
 	}
 }

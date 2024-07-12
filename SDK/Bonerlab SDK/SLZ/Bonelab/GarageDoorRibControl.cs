@@ -11,5 +11,10 @@ namespace SLZ.Bonelab
 		private void OnTriggerExit(Collider other)
 		{
 		}
+
+		public GarageDoorRibControl()
+			: base()
+		{
+		}
 	}
 }

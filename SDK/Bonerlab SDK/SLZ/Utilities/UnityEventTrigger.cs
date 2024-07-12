@@ -7,5 +7,9 @@ namespace SLZ.Utilities
 	[Serializable]
 	public class UnityEventTrigger : UnityEvent<Collider>
 	{
+		public UnityEventTrigger()
+			: base()
+		{
+		}
 	}
 }

@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.SFX
 {
@@ -14,8 +13,6 @@ namespace SLZ.SFX
 		public AudioClip windBuffetClip;
 
 		public AudioClip windBuffetSlowMo;
-
-		public AudioMixerGroup inHeadMixer;
 
 		private float calculate_t;
 
@@ -50,6 +47,11 @@ namespace SLZ.SFX
 		}
 
 		private void UpdateBuffet()
+		{
+		}
+
+		public WindBuffetSFX()
+			: base()
 		{
 		}
 	}

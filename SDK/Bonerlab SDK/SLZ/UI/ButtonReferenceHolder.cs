@@ -8,6 +8,8 @@ namespace SLZ.UI
 	{
 		public TextMeshPro tmp;
 
+		public TextMeshPro specialTmp;
+
 		public Image background;
 
 		public Image highlight;
@@ -15,5 +17,10 @@ namespace SLZ.UI
 		public Image special;
 
 		public Collider collider;
+
+		public ButtonReferenceHolder()
+			: base()
+		{
+		}
 	}
 }

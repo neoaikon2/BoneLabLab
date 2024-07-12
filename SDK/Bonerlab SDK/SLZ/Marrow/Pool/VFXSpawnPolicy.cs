@@ -12,11 +12,11 @@ namespace SLZ.Marrow.Pool
 	{
 		private double _timeOfLastSpawn;
 
-		private AssetPoolee _lastSpawn;
+		private Poolee _lastSpawn;
 
-		public override UniTask<AssetPoolee> Spawn(AssetPool pool, SpawnPolicyData policyData, Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Vector3? scale = default(Vector3?), bool? autoEnable = default(bool?))
+		public override UniTask<Poolee> Spawn(Pool pool, SpawnPolicyData policyData, Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Vector3? scale = default(Vector3?))
 		{
-			return default(UniTask<AssetPoolee>);
+			return default(UniTask<Poolee>);
 		}
 
 		public VFXSpawnPolicy()

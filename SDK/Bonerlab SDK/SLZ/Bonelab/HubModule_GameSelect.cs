@@ -29,5 +29,10 @@ namespace SLZ.Bonelab
 		private void DISPLAYUI()
 		{
 		}
+
+		public HubModule_GameSelect()
+			: base()
+		{
+		}
 	}
 }

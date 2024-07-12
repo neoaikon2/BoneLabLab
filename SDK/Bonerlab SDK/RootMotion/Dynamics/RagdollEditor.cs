@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace RootMotion.Dynamics
 {
-	[HelpURL("https://www.youtube.com/watch?v=y-luLRVmL7E&index=1&list=PLVxSIA1OaTOuE2SB9NUbckQ9r2hTg4mvL")]
 	[AddComponentMenu("Scripts/RootMotion.Dynamics/Ragdoll Manager/Ragdoll Editor")]
+	[HelpURL("https://www.youtube.com/watch?v=y-luLRVmL7E&index=1&list=PLVxSIA1OaTOuE2SB9NUbckQ9r2hTg4mvL")]
 	public class RagdollEditor : MonoBehaviour
 	{
 		[Serializable]
@@ -38,6 +38,11 @@ namespace RootMotion.Dynamics
 
 		[ContextMenu("TUTORIAL VIDEO")]
 		private void OpenTutorial()
+		{
+		}
+
+		public RagdollEditor()
+			: base()
 		{
 		}
 	}

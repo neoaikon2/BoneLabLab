@@ -26,7 +26,7 @@ namespace RootMotion.FinalIK
 
 		public bool IsValid()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Initiate(Transform transform)
@@ -34,6 +34,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void Update()
+		{
+		}
+
+		public Constraints()
+			: base()
 		{
 		}
 	}

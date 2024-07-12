@@ -9,6 +9,7 @@ namespace SLZ.Bonelab
 		public Vector3 initVelocity;
 
 		public TrajectoryData(float time, Vector3 vel)
+			: base()
 		{
 		}
 	}

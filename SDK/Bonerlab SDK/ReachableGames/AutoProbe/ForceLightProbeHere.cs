@@ -2,9 +2,13 @@ using UnityEngine;
 
 namespace ReachableGames.AutoProbe
 {
-	[ExecuteInEditMode]
 	[RequireComponent(typeof(LightProbeGroup))]
+	[ExecuteInEditMode]
 	public class ForceLightProbeHere : MonoBehaviour
 	{
+		public ForceLightProbeHere()
+			: base()
+		{
+		}
 	}
 }

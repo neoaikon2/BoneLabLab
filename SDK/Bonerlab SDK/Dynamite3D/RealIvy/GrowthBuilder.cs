@@ -9,5 +9,10 @@ namespace Dynamite3D.RealIvy
 		public Vector3 origin;
 
 		public bool growing;
+
+		public GrowthBuilder()
+			: base()
+		{
+		}
 	}
 }

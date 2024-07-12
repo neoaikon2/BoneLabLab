@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 		public TMP_Text timeToDeathText;
 
 		public TMP_Text healthText;
+
+		public PlayerHealthCanvas()
+			: base()
+		{
+		}
 	}
 }

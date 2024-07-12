@@ -13,5 +13,10 @@ namespace Dynamite3D.RealIvy
 		public IvyParameters ivyParameters;
 
 		public EditorIvyGrowth growth;
+
+		public InfoPool()
+			: base()
+		{
+		}
 	}
 }

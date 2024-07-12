@@ -47,5 +47,10 @@ namespace SLZ.Bonelab
 
 		[JsonProperty("total_headshots")]
 		public int totalHeadshots;
+
+		public Arena_Player_Stats()
+			: base()
+		{
+		}
 	}
 }

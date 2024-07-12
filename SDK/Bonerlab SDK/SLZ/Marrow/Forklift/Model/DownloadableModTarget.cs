@@ -14,7 +14,7 @@ namespace SLZ.Marrow.Forklift.Model
 		{
 		}
 
-		public override void Unpack(ObjectStore store, ObjectId objectId)
+		public override void Unpack(ObjectStore store, string objectId)
 		{
 		}
 

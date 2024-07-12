@@ -30,5 +30,10 @@ namespace SLZ.Bonelab
 		public void HIDEMODULE()
 		{
 		}
+
+		public RendererGroup()
+			: base()
+		{
+		}
 	}
 }

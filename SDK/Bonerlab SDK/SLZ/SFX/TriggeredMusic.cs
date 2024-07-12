@@ -30,9 +30,6 @@ namespace SLZ.SFX
 		[Range(0f, 10f)]
 		public float fadeOutTime;
 
-		[Tooltip("This lives on the player head.  RigManager > PhysicsRig > Head > MusicAmbience2dSFX")]
-		public MusicAmbience2dSFX musicAmb2dSFX;
-
 		private int _currentTrack;
 
 		public void PlayMusic(int clip)
@@ -43,7 +40,12 @@ namespace SLZ.SFX
 		{
 		}
 
-		private void Play(MusicAmbience2dSFX headSfx, int clip)
+		private void Play(int clip)
+		{
+		}
+
+		public TriggeredMusic()
+			: base()
 		{
 		}
 	}

@@ -1,7 +1,7 @@
 using System;
-using SLZ.AI;
 using SLZ.Data;
-using SLZ.Zones;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Zones;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -9,9 +9,9 @@ namespace SLZ.Bonelab
 	[Serializable]
 	public class NPC_Data
 	{
-		public SceneZone sZone;
+		public Zone zone;
 
-		public ZoneSpawner zSpawner;
+		public ProfileSpawner profileSpawner;
 
 		public AIBrain aiBrain;
 
@@ -44,5 +44,10 @@ namespace SLZ.Bonelab
 		public Vector3 _position;
 
 		public float deathTime;
+
+		public NPC_Data()
+			: base()
+		{
+		}
 	}
 }

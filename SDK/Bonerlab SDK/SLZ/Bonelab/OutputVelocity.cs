@@ -41,5 +41,10 @@ namespace SLZ.Bonelab
 		private void FixedUpdate()
 		{
 		}
+
+		public OutputVelocity()
+			: base()
+		{
+		}
 	}
 }

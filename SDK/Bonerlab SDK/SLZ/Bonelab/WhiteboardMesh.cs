@@ -80,5 +80,10 @@ namespace SLZ.Bonelab
 		private void OnDestroy()
 		{
 		}
+
+		public WhiteboardMesh()
+			: base()
+		{
+		}
 	}
 }

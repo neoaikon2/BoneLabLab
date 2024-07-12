@@ -1,4 +1,6 @@
-using SLZ.Marrow.Data;
+using System;
+using System.Runtime.InteropServices;
+using SLZ.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
@@ -7,15 +9,15 @@ namespace SLZ.Interaction
 	public class TargetGrip : Grip
 	{
 		[Tooltip("Degrees plus/minus. Defaults to 180")]
-		[Range(0f, 180f)]
 		[Header("Target Grip")]
+		[Range(0f, 180f)]
 		public float rotationLimit = 180.0f;
 
 		[Range(0f, 180f)]
 		public float rotationPriorityBuffer = 20.0f;
 
-		[Tooltip("Will switch to this handpose when the primary axis is flipped on hover")]
 		[Header("Flippable Hand Pose")]
+		[Tooltip("Will switch to this handpose when the primary axis is flipped on hover")]
 		public HandPose handPoseOnFlippedPrimaryAxis;
 
 		[Tooltip("Will update the target transform when the primary axis is flipped on hover")]
@@ -34,7 +36,7 @@ namespace SLZ.Interaction
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			private set
 			{
@@ -53,15 +55,14 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private bool SelectHandPose(Hand hand, out HandPose hp)
+		private bool SelectHandPose(Hand hand, [Out] HandPose hp)
 		{
-			hp = null;
-			return false;
+			return default(bool);
 		}
 
-		public override float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		protected override void UpdateJointConfiguration(Hand hand)
@@ -86,6 +87,11 @@ namespace SLZ.Interaction
 		}
 
 		private void OnDrawGizmosSelected()
+		{
+		}
+
+		public TargetGrip()
+			: base()
 		{
 		}
 	}

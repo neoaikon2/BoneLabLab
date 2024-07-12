@@ -4,9 +4,9 @@ using UnityEngine.Rendering;
 
 namespace SLZ.Bonelab
 {
-	[RequireComponent(typeof(MeshFilter))]
-	[RequireComponent(typeof(MeshRenderer))]
 	[RequireComponent(typeof(Collider))]
+	[RequireComponent(typeof(MeshRenderer))]
+	[RequireComponent(typeof(MeshFilter))]
 	public class WhiteboardQuad : MonoBehaviour
 	{
 		private struct penInfo
@@ -96,6 +96,11 @@ namespace SLZ.Bonelab
 
 		private RenderTexture Result;
 
+		[SerializeField]
+		private bool initBounds;
+
+		public Bounds boardBounds;
+
 		private Vector4 quadBounds;
 
 		private Vector3 objectScale;
@@ -116,6 +121,11 @@ namespace SLZ.Bonelab
 
 		public void UpdateFlippedAxes()
 		{
+		}
+
+		public Bounds GetMeshBounds()
+		{
+			return default(Bounds);
 		}
 
 		private Vector4 StrokeBounds(Vector3 prevPos, Vector3 currPos, Vector2Int textureDim1, Vector4 quadBounds1, float radius)
@@ -140,6 +150,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public WhiteboardQuad()
+			: base()
 		{
 		}
 	}

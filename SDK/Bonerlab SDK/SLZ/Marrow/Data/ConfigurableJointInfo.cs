@@ -6,7 +6,7 @@ namespace SLZ.Marrow.Data
 	[Serializable]
 	public class ConfigurableJointInfo
 	{
-		public Rigidbody connectedBody;
+		public Quaternion startRotation;
 
 		public Vector3 axis;
 
@@ -29,8 +29,6 @@ namespace SLZ.Marrow.Data
 		public float massScale;
 
 		public float connectedMassScale;
-
-		public Quaternion startRotation;
 
 		public float projectionAngle;
 
@@ -92,25 +90,17 @@ namespace SLZ.Marrow.Data
 
 		public bool swapBodies;
 
-		public void Apply(ConfigurableJoint joint)
+		public void CopyTo(ConfigurableJoint joint)
 		{
 		}
 
-		public void Snapshot(ConfigurableJoint joint)
+		public void CopyFrom(ConfigurableJoint joint)
 		{
 		}
 
-		public void CalculateStartRotation(ConfigurableJoint joint)
+		public Quaternion GetJointSpace()
 		{
-		}
-
-		public void Destroy(ConfigurableJoint cj)
-		{
-		}
-
-		public ConfigurableJoint Create(GameObject go)
-		{
-			return null;
+			return default(Quaternion);
 		}
 
 		public ConfigurableJointInfo()

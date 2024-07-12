@@ -12,16 +12,16 @@ namespace RootMotion.FinalIK
 		[Tooltip("If this is the forearm roll bone, the child should be the hand bone. If null, will attempt to find automatically. Assign the hand manually if the hand bone is not a child of the roll bone.")]
 		public Transform child;
 
-		[Range(0f, 1f)]
 		[Tooltip("The weight of relaxing the twist of this Transform")]
+		[Range(0f, 1f)]
 		public float weight;
 
 		[Range(0f, 1f)]
 		[Tooltip("If 0.5, this Transform will be twisted half way from parent to child. If 1, the twist angle will be locked to the child and will rotate with along with it.")]
 		public float parentChildCrossfade;
 
-		[Range(-180f, 180f)]
 		[Tooltip("Rotation offset around the twist axis.")]
+		[Range(-180f, 180f)]
 		public float twistAngleOffset;
 
 		private Vector3 twistAxis;
@@ -49,6 +49,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public TwistRelaxer()
+			: base()
 		{
 		}
 	}

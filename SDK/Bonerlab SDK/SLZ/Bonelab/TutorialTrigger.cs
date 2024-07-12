@@ -1,9 +1,11 @@
+using System;
 using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
+	[Obsolete("Uses obsolete zone components")]
 	public class TutorialTrigger : MonoBehaviour
 	{
 		private UnityEvent<string> OnHandEnter;
@@ -71,6 +73,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void TUTORIALCOMPLETE()
+		{
+		}
+
+		public TutorialTrigger()
+			: base()
 		{
 		}
 	}

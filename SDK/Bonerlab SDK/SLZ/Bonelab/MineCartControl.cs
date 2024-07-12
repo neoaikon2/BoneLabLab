@@ -19,8 +19,8 @@ namespace SLZ.Bonelab
 			MatchSpeed2 = 8
 		}
 
-		[SerializeField]
 		[Tooltip("timeline playable director goes here")]
+		[SerializeField]
 		private PlayableDirector director;
 
 		[Tooltip("spline body script goes here")]
@@ -28,8 +28,8 @@ namespace SLZ.Bonelab
 
 		public RideSpeed rideSpeed;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Off  -  0")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_off;
 
 		[InspectorDisplayName("Position Damper")]
@@ -38,8 +38,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_off;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Station  -  1")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_station;
 
 		[InspectorDisplayName("Position Damper")]
@@ -48,8 +48,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_station;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Lift Hill  -  2")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_lift;
 
 		[InspectorDisplayName("Position Damper")]
@@ -58,8 +58,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_lift;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Coast  -  3")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_coast;
 
 		[InspectorDisplayName("Position Damper")]
@@ -68,8 +68,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_coast;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Brake  -  4")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_brake;
 
 		[InspectorDisplayName("Position Damper")]
@@ -108,8 +108,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_mspeed1;
 
-		[Header("Match Speed 2  -  8")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Match Speed 2  -  8")]
 		public float velocity_mspeed2;
 
 		[InspectorDisplayName("Position Damper")]
@@ -137,6 +137,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void UpdateSpeed(int rs)
+		{
+		}
+
+		public MineCartControl()
+			: base()
 		{
 		}
 	}

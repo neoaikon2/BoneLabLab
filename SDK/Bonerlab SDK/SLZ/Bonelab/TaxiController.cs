@@ -4,382 +4,19 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Interaction;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
-using SLZ.Rig;
-using SLZ.SFX;
 using SLZ.VRMK;
 using SLZ.Vehicle;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
 	public class TaxiController : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CCreditsCoroutine_003Ed__91
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public TaxiController _003C_003E4__this;
-
-			private float _003Ctime_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCreditsCoroutine_003Ed__91(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoWaitForPush_003Ed__94
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public TaxiController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoWaitForPush_003Ed__94(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CEngineSoundCoroutine_003Ed__97
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public TaxiController _003C_003E4__this;
-
-			public int i;
-
-			public float blendTime;
-
-			private float _003CtargetVol_003E5__2;
-
-			private float _003Cstart1Volume_003E5__3;
-
-			private float _003Cstate2Volume_003E5__4;
-
-			private float _003Ctime_003E5__5;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CEngineSoundCoroutine_003Ed__97(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CPushPromptCoroutine_003Ed__101
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public TaxiController _003C_003E4__this;
-
-			private int _003CpromptCount_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CPushPromptCoroutine_003Ed__101(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CDuckMusicCoroutine_003Ed__104
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public TaxiController _003C_003E4__this;
-
-			public float length;
-
-			private float _003Ctime_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CDuckMusicCoroutine_003Ed__104(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoWaitForStop_003Ed__110
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public TaxiController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoWaitForStop_003Ed__110(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoPlayerDist_003Ed__111
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public TaxiController _003C_003E4__this;
-
-			private float _003CtoPlayerThresh_003E5__2;
-
-			private float _003CtoPlayerMag_003E5__3;
-
-			private float _003Ctime_003E5__4;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoPlayerDist_003Ed__111(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public ConfigurableJoint frontLf;
 
 		public ConfigurableJoint frontRt;
@@ -401,7 +38,7 @@ namespace SLZ.Bonelab
 		public Rigidbody frontAxle;
 
 		[SerializeField]
-		private global::SLZ.Marrow.Interaction.SplineJoint splineJoint;
+		private SLZ.Marrow.Interaction.SplineJoint splineJoint;
 
 		[SerializeField]
 		private PolyLine jimmyExitPolyLine;
@@ -411,11 +48,8 @@ namespace SLZ.Bonelab
 
 		private ConfigurableJoint _steeringHinge;
 
-		[SerializeField]
-		private RigManager rigManager;
-
-		[Header("Off  -  0")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Off  -  0")]
 		public float velocity_off;
 
 		[InspectorDisplayName("Position Damper")]
@@ -424,8 +58,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_off;
 
-		[Header("Idle  -  1")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Idle  -  1")]
 		public float velocity_idle;
 
 		[InspectorDisplayName("Position Damper")]
@@ -490,8 +124,6 @@ namespace SLZ.Bonelab
 
 		public GenericAnimatorController jimmyController;
 
-		public AudioMixerGroup outputMixer;
-
 		[SerializeField]
 		private AudioClip[] engineStart;
 
@@ -522,11 +154,17 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AudioClip engineSpeedInteriorLoop;
 
-		public AudioSource engineSource1;
+		public Transform engineTransform;
 
-		public AudioSource engineSource2;
+		public Transform cabMusicTransform;
 
 		public Transform doorTransform;
+
+		private ManagedAudioPlayer engineSource1;
+
+		private ManagedAudioPlayer engineSource2;
+
+		private ManagedAudioPlayer cabMusicSource;
 
 		private IEnumerator engineCoroutine;
 
@@ -537,8 +175,6 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private AudioClip fenceMusic;
-
-		public AudioSource cabMusicSource;
 
 		public AnimationCurve duckCurve;
 
@@ -554,8 +190,11 @@ namespace SLZ.Bonelab
 
 		private float cashedBaseVolume;
 
-		[SerializeField]
-		public MusicAmbience2dSFX headSFX;
+		public AudioReverbData voidReverbData;
+
+		public AudioReverbData cabReverbData;
+
+		public MeshRenderer[] toggleObjects;
 
 		[SerializeField]
 		private Seat rearSeat;
@@ -599,6 +238,8 @@ namespace SLZ.Bonelab
 
 		private float _lastBackRtPressure;
 
+		private bool _exitedCab;
+
 		private int loopCount;
 
 		private int loopGoal;
@@ -628,7 +269,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCreditsCoroutine_003Ed__91))]
 		private IEnumerator CreditsCoroutine()
 		{
 			return null;
@@ -642,7 +282,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoWaitForPush_003Ed__94))]
 		private IEnumerator CoWaitForPush()
 		{
 			return null;
@@ -656,7 +295,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CEngineSoundCoroutine_003Ed__97))]
 		private IEnumerator EngineSoundCoroutine(int i, float blendTime)
 		{
 			return null;
@@ -676,7 +314,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CPushPromptCoroutine_003Ed__101))]
 		private IEnumerator PushPromptCoroutine()
 		{
 			return null;
@@ -690,7 +327,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CDuckMusicCoroutine_003Ed__104))]
 		private IEnumerator DuckMusicCoroutine(float length)
 		{
 			return null;
@@ -709,16 +345,23 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoWaitForStop_003Ed__110))]
 		private IEnumerator CoWaitForStop()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoPlayerDist_003Ed__111))]
+		public void PlayerExitedCab()
+		{
+		}
+
 		private IEnumerator CoPlayerDist()
 		{
 			return null;
+		}
+
+		public TaxiController()
+			: base()
+		{
 		}
 	}
 }

@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Angle")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page12.html")]
+	[AddComponentMenu("Scripts/RootMotion.FinalIK/Rotation Limits/Rotation Limit Angle")]
 	public class RotationLimitAngle : RotationLimit
 	{
 		[Range(0f, 180f)]
@@ -40,6 +40,11 @@ namespace RootMotion.FinalIK
 		private Quaternion LimitSwing(Quaternion rotation)
 		{
 			return default(Quaternion);
+		}
+
+		public RotationLimitAngle()
+			: base()
+		{
 		}
 	}
 }

@@ -90,6 +90,11 @@ namespace RealisticEyeMovements
 			public bool isEyelidBlendshapeLookUpSet;
 
 			public bool isEyelidBlendshapeLookDownSet;
+
+			public ControlDataForExport()
+				: base()
+			{
+			}
 		}
 
 		public enum EyeControl
@@ -128,6 +133,11 @@ namespace RealisticEyeMovements
 			public string name;
 
 			public bool isUsedInEalierConfig;
+
+			public EyelidPositionBlendshapeForExport()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -147,7 +157,7 @@ namespace RealisticEyeMovements
 
 			public static bool CanImport(EyelidPositionBlendshapeForExport import, Transform startXform, EyelidControl eyelidControl)
 			{
-				return false;
+				return default(bool);
 			}
 
 			public EyelidPositionBlendshapeForExport GetExport(Transform startXform)
@@ -156,6 +166,11 @@ namespace RealisticEyeMovements
 			}
 
 			public void Import(EyelidPositionBlendshapeForExport export, Transform startXform)
+			{
+			}
+
+			public EyelidPositionBlendshape()
+				: base()
 			{
 			}
 		}
@@ -170,6 +185,11 @@ namespace RealisticEyeMovements
 			public string[] blendshapeNames;
 
 			public float[] blendshapeWeights;
+
+			public BlendshapesConfigForExport()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -185,7 +205,7 @@ namespace RealisticEyeMovements
 
 			public static bool CanImport(BlendshapesConfigForExport import, Transform startXform)
 			{
-				return false;
+				return default(bool);
 			}
 
 			public BlendshapesConfigForExport GetExport(Transform startXform)
@@ -194,6 +214,11 @@ namespace RealisticEyeMovements
 			}
 
 			public void Import(Transform startXform, BlendshapesConfigForExport import)
+			{
+			}
+
+			public BlendshapesConfig()
+				: base()
 			{
 			}
 		}
@@ -270,8 +295,8 @@ namespace RealisticEyeMovements
 		[SerializeField]
 		private EyelidRotationLimiter lowerRightLimiter;
 
-		[Range(-1f, 1f)]
 		[Tooltip("0: normal. 1: max widened, -1: max squint")]
+		[Range(-1f, 1f)]
 		public float eyeWidenOrSquint;
 
 		[SerializeField]
@@ -296,7 +321,7 @@ namespace RealisticEyeMovements
 
 		public bool CanImport(ControlDataForExport import, Transform startXform)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void CheckConsistency(Animator animator, EyeAndHeadAnimator eyeAndHeadAnimator)
@@ -305,12 +330,12 @@ namespace RealisticEyeMovements
 
 		public float ClampLeftVertEyeAngle(float angle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public float ClampRightVertEyeAngle(float angle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public ControlDataForExport GetExport(Transform startXform)
@@ -332,7 +357,7 @@ namespace RealisticEyeMovements
 
 		public bool NeedsSaveDefaultBlendshapeConfig()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void OnDestroy()
@@ -363,7 +388,7 @@ namespace RealisticEyeMovements
 		{
 		}
 
-		private void SaveBlendshapesForEyelidPosition(ref EyelidPositionBlendshape[] blendshapesForPosition, UnityEngine.Object rootObject, string positionName)
+		private void SaveBlendshapesForEyelidPosition(EyelidPositionBlendshape[] blendshapesForPosition, UnityEngine.Object rootObject, string positionName)
 		{
 		}
 
@@ -384,6 +409,11 @@ namespace RealisticEyeMovements
 		}
 
 		public void UpdateEyelids(float leftEyeAngle, float rightEyeAngle, float blink01, bool eyelidsFollowEyesVertically)
+		{
+		}
+
+		public ControlData()
+			: base()
 		{
 		}
 	}

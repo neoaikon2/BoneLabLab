@@ -6,7 +6,7 @@ namespace SLZ.Bonelab
 	public class SplineShieldController : MonoBehaviour
 	{
 		[SerializeField]
-		private global::SLZ.Marrow.Interaction.SplineJoint[] sJoints;
+		private SLZ.Marrow.Interaction.SplineJoint[] sJoints;
 
 		[SerializeField]
 		private float innerForce;
@@ -22,6 +22,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void DestroyShieldJoints()
+		{
+		}
+
+		public SplineShieldController()
+			: base()
 		{
 		}
 	}

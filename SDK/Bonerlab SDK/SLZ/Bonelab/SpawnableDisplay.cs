@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using SLZ.Marrow.Warehouse;
 using TMPro;
 using UnityEngine;
@@ -222,6 +223,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void TeleportDisplay(GameObject teleObj)
+		{
+		}
+
+		public SpawnableDisplay()
+			: base()
 		{
 		}
 	}

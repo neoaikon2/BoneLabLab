@@ -1,4 +1,4 @@
-using SLZ.Combat;
+using SLZ.Marrow.Combat;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -17,6 +17,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public AttackReceiver_TimeSlow()
+			: base()
 		{
 		}
 	}

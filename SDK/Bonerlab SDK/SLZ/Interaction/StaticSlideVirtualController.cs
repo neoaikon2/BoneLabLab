@@ -6,7 +6,7 @@ namespace SLZ.Interaction
 	{
 		public ConfigurableJoint joint;
 
-		private Vector3 _inputMagCache;
+		private float _lastPosInJoint;
 
 		protected void Reset()
 		{
@@ -17,6 +17,11 @@ namespace SLZ.Interaction
 		}
 
 		public override void OnVirtualControllerSolve(VirtualControlerPayload payload)
+		{
+		}
+
+		public StaticSlideVirtualController()
+			: base()
 		{
 		}
 	}

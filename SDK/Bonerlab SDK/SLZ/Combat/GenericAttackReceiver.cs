@@ -1,3 +1,4 @@
+using SLZ.Marrow.Combat;
 using SLZ.Marrow.Data;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -12,6 +13,11 @@ namespace SLZ.Combat
 		public UnityEventFloat AttackEvent;
 
 		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public GenericAttackReceiver()
+			: base()
 		{
 		}
 	}

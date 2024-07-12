@@ -16,15 +16,19 @@ namespace SLZ.Marrow.Input
 
 		private Vector3 _position;
 
+		private Vector3 _pointerPosition;
+
+		protected Vector3 _offsetPosition;
+
 		private Quaternion _rotation;
+
+		private Quaternion _pointerRotation;
+
+		protected Quaternion _offsetRotation;
 
 		private double _poseUpdateTime;
 
 		private double _lastPoseUpdateTime;
-
-		protected Vector3 positionOffset;
-
-		protected Quaternion rotationOffset;
 
 		public override string DeviceInfo
 		{
@@ -54,11 +58,11 @@ namespace SLZ.Marrow.Input
 		{
 		}
 
-		public void OnPosition(InputAction.CallbackContext context)
+		public void OnPalmPose(InputAction.CallbackContext context)
 		{
 		}
 
-		public void OnRotation(InputAction.CallbackContext context)
+		public void OnPointerPose(InputAction.CallbackContext context)
 		{
 		}
 
@@ -143,6 +147,10 @@ namespace SLZ.Marrow.Input
 		}
 
 		public void OnHaptic(InputAction.CallbackContext context)
+		{
+		}
+
+		public void OnIsTracked(InputAction.CallbackContext context)
 		{
 		}
 

@@ -52,5 +52,10 @@ namespace SLZ.Bonelab
 
 		[HideInInspector]
 		public Vector3 downZipEndPoint;
+
+		public ZipLinkSetup()
+			: base()
+		{
+		}
 	}
 }

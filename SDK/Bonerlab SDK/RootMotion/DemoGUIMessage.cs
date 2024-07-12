@@ -11,5 +11,10 @@ namespace RootMotion
 		private void OnGUI()
 		{
 		}
+
+		public DemoGUIMessage()
+			: base()
+		{
+		}
 	}
 }

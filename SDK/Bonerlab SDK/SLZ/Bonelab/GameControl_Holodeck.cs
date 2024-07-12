@@ -3,70 +3,30 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Data;
-using SLZ.SFX;
+using SLZ.Marrow.Data;
+using SLZ.Marrow.Zones;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
 namespace SLZ.Bonelab
 {
 	public class GameControl_Holodeck : BonelabGameControl
 	{
-		[CompilerGenerated]
-		private sealed class _003CCycleMatOverTime_003Ed__31
+		[Serializable]
+		public class ProbePair
 		{
-			private int _003C_003E1__state;
+			public Cubemap cubemap0;
 
-			private object _003C_003E2__current;
+			public Cubemap cubemap1;
 
-			public GameControl_Holodeck _003C_003E4__this;
+			public SphericalHarmonicsL2 harmonics;
 
-			private Material[] _003Cmat2_003E5__2;
-
-			private Material[] _003Cmat4_003E5__3;
-
-			private int _003Ci_003E5__4;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCycleMatOverTime_003Ed__31(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
+			public ProbePair()
+				: base()
 			{
 			}
 		}
-
-		public MusicAmbience2dSFX headSfx;
 
 		public GameObject UI;
 
@@ -84,9 +44,9 @@ namespace SLZ.Bonelab
 
 		public float maxPanelTicTime;
 
-		public ReflectionProbe probe1;
+		public ReflectionProbe[] probes;
 
-		public ReflectionProbe probe2;
+		public ProbePair[] cubemaps;
 
 		public AudioReverbData hugeRoomReverb;
 
@@ -126,6 +86,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		private void OnLevelLoad()
+		{
+		}
+
+		[ContextMenu("CYCLEMATERIAL")]
 		public void CYCLEMATERIAL()
 		{
 		}
@@ -138,13 +103,51 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCycleMatOverTime_003Ed__31))]
+		private void SetSky(int materialIndex)
+		{
+		}
+
+		private IEnumerator CycleMatOverTimeEditor()
+		{
+			return null;
+		}
+
 		private IEnumerator CycleMatOverTime()
 		{
 			return null;
 		}
 
 		private void CueAmbience(AudioClip clipMain)
+		{
+		}
+
+		[ContextMenu("Generate SphericalHarmonics")]
+		public void GenerateSHs()
+		{
+		}
+
+		private SphericalHarmonicsL2 AddCubemapToSH(Cubemap cubemap, int samplesPerFace)
+		{
+			return default(SphericalHarmonicsL2);
+		}
+
+		private static int FindFace(Vector3 dir)
+		{
+			return default(int);
+		}
+
+		private static int GetTexelIndexFromDirection(Vector3 dir, int cubemap_size)
+		{
+			return default(int);
+		}
+
+		private SphericalHarmonicsL2 NormalizeSH(SphericalHarmonicsL2 sh, int totalSamples)
+		{
+			return default(SphericalHarmonicsL2);
+		}
+
+		public GameControl_Holodeck()
+			: base()
 		{
 		}
 	}

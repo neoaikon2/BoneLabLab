@@ -29,5 +29,10 @@ namespace SLZ.Bonelab
 		public void GetAllGrips()
 		{
 		}
+
+		public Trial_GripEvents()
+			: base()
+		{
+		}
 	}
 }

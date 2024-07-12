@@ -37,5 +37,10 @@ namespace SLZ.Bonelab
 		public void ChangeAllTextColor()
 		{
 		}
+
+		public GenGameControl_Display()
+			: base()
+		{
+		}
 	}
 }

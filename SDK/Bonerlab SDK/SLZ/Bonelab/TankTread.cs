@@ -50,5 +50,10 @@ namespace SLZ.Bonelab
 		private void FixedUpdate()
 		{
 		}
+
+		public TankTread()
+			: base()
+		{
+		}
 	}
 }

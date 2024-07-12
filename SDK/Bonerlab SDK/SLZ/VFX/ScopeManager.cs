@@ -12,12 +12,12 @@ namespace SLZ.VFX
 
 		private RenderTexture camRT;
 
-		[SerializeField]
 		[Range(0f, 10f)]
+		[SerializeField]
 		public int frameskip;
 
-		[Range(0f, 1028f)]
 		[SerializeField]
+		[Range(0f, 1028f)]
 		private int RenderTextureRes;
 
 		private Material ScopeMat;
@@ -41,6 +41,11 @@ namespace SLZ.VFX
 		}
 
 		private void OnDisable()
+		{
+		}
+
+		public ScopeManager()
+			: base()
 		{
 		}
 	}

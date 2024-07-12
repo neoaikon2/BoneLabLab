@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Input;
 using UnityEngine;
 
@@ -21,9 +22,8 @@ namespace SLZ.Rig
 		{
 		}
 
-		public override GesturePose GetGesturePose(out float poseIntensity, bool forceUpdate = false)
+		public override GesturePose GetGesturePose([Out] float poseIntensity, bool forceUpdate = false)
 		{
-			poseIntensity = default(float);
 			return default(GesturePose);
 		}
 
@@ -31,7 +31,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public override void OnVrFixedUpdate(Vector3 headPos)
+		public override void OnVrFixedUpdate(Vector3 headPos, float deltaTime)
 		{
 		}
 
@@ -65,77 +65,77 @@ namespace SLZ.Rig
 
 		public override bool GetPrimaryInteractionButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetPrimaryInteractionButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetPrimaryInteractionButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override float GetPrimaryInteractionButtonAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override bool GetSecondaryInteractionButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override float GetSecondaryInteractionButtonAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override float GetGripVelocity()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override bool GetSecondaryInteractionButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetSecondaryInteractionButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetAButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetAButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetAButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetBButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetBButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetBButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override Vector2 GetThumbStickAxis()
@@ -145,17 +145,17 @@ namespace SLZ.Rig
 
 		public override bool GetThumbStickDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetThumbStickUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetThumbStick()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override Vector2 GetTouchPadAxis()
@@ -165,52 +165,52 @@ namespace SLZ.Rig
 
 		public override bool GetTouchPadDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetTouchPadUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetTouchPad()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override float GetGripForce()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override float GetIndexCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override float GetMiddleCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override float GetRingCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override float GetPinkyCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override float GetThumbCurlAxis()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override bool HasBeenGrabbed()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void ClearHasBeenGrabbed()
@@ -219,87 +219,92 @@ namespace SLZ.Rig
 
 		public override bool IsGrabbed()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool IsReleased()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetGrabbedState()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetReleasedState()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetMenuButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetMenuButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetMenuButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetSecondaryMenuButtonDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetSecondaryMenuButtonUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetSecondaryMenuButton()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetMenuTap()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetAppMenuDown()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetAppMenuUp()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetAppMenu()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetThumbStickTouch()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override bool GetThumbTouch()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override Vector3 GetRelativeVelocityInWorld()
 		{
 			return default(Vector3);
+		}
+
+		public OpenController()
+			: base()
+		{
 		}
 	}
 }

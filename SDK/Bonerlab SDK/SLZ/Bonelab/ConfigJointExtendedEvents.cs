@@ -73,5 +73,10 @@ namespace SLZ.Bonelab
 		public void SetAllLinearDriveMaxForce(float maxForce)
 		{
 		}
+
+		public ConfigJointExtendedEvents()
+			: base()
+		{
+		}
 	}
 }

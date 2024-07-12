@@ -47,5 +47,10 @@ namespace SLZ.Bonelab
 		{
 			return default(Vector3);
 		}
+
+		public SmokeTrail()
+			: base()
+		{
+		}
 	}
 }

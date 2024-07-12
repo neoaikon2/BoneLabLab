@@ -11,5 +11,10 @@ namespace SLZ.Player
 		public UnityEvent OnFarHandHoverEndEvent;
 
 		public UnityEvent OnFarHandHoverUpdateEvent;
+
+		public FarEvents()
+			: base()
+		{
+		}
 	}
 }

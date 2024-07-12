@@ -3,65 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Interaction;
+using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
-using SLZ.Props;
-using SLZ.Utilities;
+using SLZ.Marrow.Interaction;
+using SLZ.VFX;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Bonelab
 {
 	public class BoardGenerator : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003Clineloop_003Ed__41
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BoardGenerator _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003Clineloop_003Ed__41(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[SerializeField]
 		private bool isUsingAmmo;
 
@@ -81,7 +36,7 @@ namespace SLZ.Bonelab
 		private Material LineMaterial;
 
 		[SerializeField]
-		private Spawnable boardSpawnable;
+		private Spawnable[] boardSpawnable;
 
 		[SerializeField]
 		private Spawnable vfxBlasterSpawnable;
@@ -92,15 +47,13 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GameObject laserPointer;
 
-		public AudioMixerGroup outputMixer;
-
 		public AudioClip[] startSFX;
 
 		public AudioClip[] endSFX;
 
 		public AudioClip[] misfireSFX;
 
-		private AudioPlayer ap;
+		private ManagedAudioPlayer _mapActions;
 
 		private bool ButtonDown;
 
@@ -110,9 +63,9 @@ namespace SLZ.Bonelab
 
 		private Vector3 EndPoint;
 
-		private Rigidbody FirstRb;
+		private MarrowBody FirstRb;
 
-		private Rigidbody EndRb;
+		private MarrowBody EndRb;
 
 		private float distance;
 
@@ -126,7 +79,7 @@ namespace SLZ.Bonelab
 
 		private int enemyLayer;
 
-		public HashSet<ObjectDestructable> destBoardHash;
+		public HashSet<ObjectDestructible> destBoardHash;
 
 		private void OnEnable()
 		{
@@ -140,11 +93,12 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void BoardSpawner(int idx, float mass)
+		private UniTaskVoid BoardSpawnerAsync()
 		{
+			return default(UniTaskVoid);
 		}
 
-		private void OnBoardDestruction(ObjectDestructable destObj)
+		private void OnBoardDestruction(ObjectDestructible destObj)
 		{
 		}
 
@@ -180,15 +134,18 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003Clineloop_003Ed__41))]
 		private IEnumerator lineloop()
 		{
 			return null;
 		}
 
-		private Joint SetJoint(Vector3 position, Rigidbody rigidbody, Rigidbody sourceRB)
+		private void SetJoint(Vector3 position, MarrowBody bodyB, MarrowBody bodyA)
 		{
-			return null;
+		}
+
+		public BoardGenerator()
+			: base()
+		{
 		}
 	}
 }

@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[HelpURL("http://www.root-motion.com/finalikdox/html/page2.html")]
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Biped IK")]
+	[HelpURL("http://www.root-motion.com/finalikdox/html/page2.html")]
 	public class BipedIK : SolverManager
 	{
 		public BipedReferences references;
@@ -32,12 +32,12 @@ namespace RootMotion.FinalIK
 
 		public float GetIKPositionWeight(AvatarIKGoal goal)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public float GetIKRotationWeight(AvatarIKGoal goal)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void SetIKPositionWeight(AvatarIKGoal goal, float weight)
@@ -112,6 +112,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void LogWarning(string message)
+		{
+		}
+
+		public BipedIK()
+			: base()
 		{
 		}
 	}

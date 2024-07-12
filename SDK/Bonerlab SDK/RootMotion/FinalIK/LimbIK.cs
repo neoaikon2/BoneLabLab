@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[HelpURL("http://www.root-motion.com/finalikdox/html/page7.html")]
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Limb IK")]
+	[HelpURL("http://www.root-motion.com/finalikdox/html/page7.html")]
 	public class LimbIK : IK
 	{
 		public IKSolverLimb solver;
@@ -31,6 +31,11 @@ namespace RootMotion.FinalIK
 		public override IKSolver GetIKSolver()
 		{
 			return null;
+		}
+
+		public LimbIK()
+			: base()
+		{
 		}
 	}
 }

@@ -9,16 +9,6 @@ namespace RootMotion
 			return default(Vector3);
 		}
 
-		public static Axis ToAxis(Vector3 v)
-		{
-			return default(Axis);
-		}
-
-		public static Axis GetAxisToPoint(Transform t, Vector3 worldPosition)
-		{
-			return default(Axis);
-		}
-
 		public static Axis GetAxisToDirection(Transform t, Vector3 direction)
 		{
 			return default(Axis);
@@ -32,6 +22,11 @@ namespace RootMotion
 		public static Vector3 GetAxisVectorToDirection(Transform t, Vector3 direction)
 		{
 			return default(Vector3);
+		}
+
+		public AxisTools()
+			: base()
+		{
 		}
 	}
 }

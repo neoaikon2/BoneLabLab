@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace SplineMesh
@@ -10,7 +11,12 @@ namespace SplineMesh
 			return null;
 		}
 
-		public static void Update(Mesh mesh, Mesh source, IEnumerable<int> triangles = null, IEnumerable<Vector3> vertices = null, IEnumerable<Vector3> normals = null, IEnumerable<Vector2> uv = null, IEnumerable<Vector2> uv2 = null, IEnumerable<Vector2> uv3 = null, IEnumerable<Vector2> uv4 = null, IEnumerable<Vector2> uv5 = null, IEnumerable<Vector2> uv6 = null, IEnumerable<Vector2> uv7 = null, IEnumerable<Vector2> uv8 = null)
+		public static void Update(Mesh mesh, Mesh source, IEnumerable<int> triangles = default(IEnumerable<int>), IEnumerable<Vector3> vertices = default(IEnumerable<Vector3>), IEnumerable<Vector3> normals = default(IEnumerable<Vector3>), IEnumerable<Vector2> uv = default(IEnumerable<Vector2>), IEnumerable<Vector2> uv2 = default(IEnumerable<Vector2>), IEnumerable<Vector2> uv3 = default(IEnumerable<Vector2>), IEnumerable<Vector2> uv4 = default(IEnumerable<Vector2>), IEnumerable<Vector2> uv5 = default(IEnumerable<Vector2>), IEnumerable<Vector2> uv6 = default(IEnumerable<Vector2>), IEnumerable<Vector2> uv7 = default(IEnumerable<Vector2>), IEnumerable<Vector2> uv8 = default(IEnumerable<Vector2>))
+		{
+		}
+
+		public MeshUtility()
+			: base()
 		{
 		}
 	}

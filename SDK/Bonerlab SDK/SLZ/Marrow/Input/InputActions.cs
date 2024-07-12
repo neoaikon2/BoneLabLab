@@ -54,6 +54,14 @@ namespace SLZ.Marrow.Input
 				}
 			}
 
+			public InputAction IsTracked
+			{
+				get
+				{
+					return null;
+				}
+			}
+
 			public bool enabled
 			{
 				get
@@ -85,6 +93,18 @@ namespace SLZ.Marrow.Input
 				return null;
 			}
 
+			public void AddCallbacks(IHMDActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(IHMDActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(IHMDActions instance)
+			{
+			}
+
 			public void SetCallbacks(IHMDActions instance)
 			{
 			}
@@ -102,7 +122,7 @@ namespace SLZ.Marrow.Input
 				}
 			}
 
-			public InputAction Position
+			public InputAction PalmPose
 			{
 				get
 				{
@@ -110,7 +130,7 @@ namespace SLZ.Marrow.Input
 				}
 			}
 
-			public InputAction Rotation
+			public InputAction PointerPose
 			{
 				get
 				{
@@ -278,6 +298,14 @@ namespace SLZ.Marrow.Input
 				}
 			}
 
+			public InputAction IsTracked
+			{
+				get
+				{
+					return null;
+				}
+			}
+
 			public bool enabled
 			{
 				get
@@ -309,6 +337,18 @@ namespace SLZ.Marrow.Input
 				return null;
 			}
 
+			public void AddCallbacks(IControllerLActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(IControllerLActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(IControllerLActions instance)
+			{
+			}
+
 			public void SetCallbacks(IControllerLActions instance)
 			{
 			}
@@ -326,7 +366,7 @@ namespace SLZ.Marrow.Input
 				}
 			}
 
-			public InputAction Position
+			public InputAction PalmPose
 			{
 				get
 				{
@@ -334,7 +374,7 @@ namespace SLZ.Marrow.Input
 				}
 			}
 
-			public InputAction Rotation
+			public InputAction PointerPose
 			{
 				get
 				{
@@ -494,6 +534,14 @@ namespace SLZ.Marrow.Input
 				}
 			}
 
+			public InputAction IsTracked
+			{
+				get
+				{
+					return null;
+				}
+			}
+
 			public bool enabled
 			{
 				get
@@ -523,6 +571,18 @@ namespace SLZ.Marrow.Input
 			public static implicit operator InputActionMap(ControllerRActions set)
 			{
 				return null;
+			}
+
+			public void AddCallbacks(IControllerRActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(IControllerRActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(IControllerRActions instance)
+			{
 			}
 
 			public void SetCallbacks(IControllerRActions instance)
@@ -709,6 +769,18 @@ namespace SLZ.Marrow.Input
 				return null;
 			}
 
+			public void AddCallbacks(IGamepadActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(IGamepadActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(IGamepadActions instance)
+			{
+			}
+
 			public void SetCallbacks(IGamepadActions instance)
 			{
 			}
@@ -803,6 +875,18 @@ namespace SLZ.Marrow.Input
 			public static implicit operator InputActionMap(MouseActions set)
 			{
 				return null;
+			}
+
+			public void AddCallbacks(IMouseActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(IMouseActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(IMouseActions instance)
+			{
 			}
 
 			public void SetCallbacks(IMouseActions instance)
@@ -1725,6 +1809,18 @@ namespace SLZ.Marrow.Input
 				return null;
 			}
 
+			public void AddCallbacks(IPositionalKeyboardActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(IPositionalKeyboardActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(IPositionalKeyboardActions instance)
+			{
+			}
+
 			public void SetCallbacks(IPositionalKeyboardActions instance)
 			{
 			}
@@ -1779,6 +1875,18 @@ namespace SLZ.Marrow.Input
 			public static implicit operator InputActionMap(JoystickActions set)
 			{
 				return null;
+			}
+
+			public void AddCallbacks(IJoystickActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(IJoystickActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(IJoystickActions instance)
+			{
 			}
 
 			public void SetCallbacks(IJoystickActions instance)
@@ -1981,6 +2089,18 @@ namespace SLZ.Marrow.Input
 				return null;
 			}
 
+			public void AddCallbacks(ITrackersActions instance)
+			{
+			}
+
+			private void UnregisterCallbacks(ITrackersActions instance)
+			{
+			}
+
+			public void RemoveCallbacks(ITrackersActions instance)
+			{
+			}
+
 			public void SetCallbacks(ITrackersActions instance)
 			{
 			}
@@ -1997,15 +2117,17 @@ namespace SLZ.Marrow.Input
 			void OnVelocity(InputAction.CallbackContext context);
 
 			void OnAngularVelocity(InputAction.CallbackContext context);
+
+			void OnIsTracked(InputAction.CallbackContext context);
 		}
 
 		public interface IControllerLActions
 		{
 			void OnTrackingState(InputAction.CallbackContext context);
 
-			void OnPosition(InputAction.CallbackContext context);
+			void OnPalmPose(InputAction.CallbackContext context);
 
-			void OnRotation(InputAction.CallbackContext context);
+			void OnPointerPose(InputAction.CallbackContext context);
 
 			void OnVelocity(InputAction.CallbackContext context);
 
@@ -2046,15 +2168,17 @@ namespace SLZ.Marrow.Input
 			void OnMenuButton(InputAction.CallbackContext context);
 
 			void OnHaptic(InputAction.CallbackContext context);
+
+			void OnIsTracked(InputAction.CallbackContext context);
 		}
 
 		public interface IControllerRActions
 		{
 			void OnTrackingState(InputAction.CallbackContext context);
 
-			void OnPosition(InputAction.CallbackContext context);
+			void OnPalmPose(InputAction.CallbackContext context);
 
-			void OnRotation(InputAction.CallbackContext context);
+			void OnPointerPose(InputAction.CallbackContext context);
 
 			void OnVelocity(InputAction.CallbackContext context);
 
@@ -2093,6 +2217,8 @@ namespace SLZ.Marrow.Input
 			void OnSecondaryTouch(InputAction.CallbackContext context);
 
 			void OnHaptic(InputAction.CallbackContext context);
+
+			void OnIsTracked(InputAction.CallbackContext context);
 		}
 
 		public interface IGamepadActions
@@ -2426,7 +2552,7 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputActionMap m_HMD;
 
-		private IHMDActions m_HMDActionsCallbackInterface;
+		private List<IHMDActions> m_HMDActionsCallbackInterfaces;
 
 		private readonly InputAction m_HMD_TrackingState;
 
@@ -2438,15 +2564,17 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputAction m_HMD_AngularVelocity;
 
+		private readonly InputAction m_HMD_IsTracked;
+
 		private readonly InputActionMap m_ControllerL;
 
-		private IControllerLActions m_ControllerLActionsCallbackInterface;
+		private List<IControllerLActions> m_ControllerLActionsCallbackInterfaces;
 
 		private readonly InputAction m_ControllerL_TrackingState;
 
-		private readonly InputAction m_ControllerL_Position;
+		private readonly InputAction m_ControllerL_PalmPose;
 
-		private readonly InputAction m_ControllerL_Rotation;
+		private readonly InputAction m_ControllerL_PointerPose;
 
 		private readonly InputAction m_ControllerL_Velocity;
 
@@ -2488,15 +2616,17 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputAction m_ControllerL_Haptic;
 
+		private readonly InputAction m_ControllerL_IsTracked;
+
 		private readonly InputActionMap m_ControllerR;
 
-		private IControllerRActions m_ControllerRActionsCallbackInterface;
+		private List<IControllerRActions> m_ControllerRActionsCallbackInterfaces;
 
 		private readonly InputAction m_ControllerR_TrackingState;
 
-		private readonly InputAction m_ControllerR_Position;
+		private readonly InputAction m_ControllerR_PalmPose;
 
-		private readonly InputAction m_ControllerR_Rotation;
+		private readonly InputAction m_ControllerR_PointerPose;
 
 		private readonly InputAction m_ControllerR_Velocity;
 
@@ -2536,9 +2666,11 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputAction m_ControllerR_Haptic;
 
+		private readonly InputAction m_ControllerR_IsTracked;
+
 		private readonly InputActionMap m_Gamepad;
 
-		private IGamepadActions m_GamepadActionsCallbackInterface;
+		private List<IGamepadActions> m_GamepadActionsCallbackInterfaces;
 
 		private readonly InputAction m_Gamepad_LeftJoystick2DAxis;
 
@@ -2578,7 +2710,7 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputActionMap m_Mouse;
 
-		private IMouseActions m_MouseActionsCallbackInterface;
+		private List<IMouseActions> m_MouseActionsCallbackInterfaces;
 
 		private readonly InputAction m_Mouse_Mouse_ForwardButton;
 
@@ -2596,7 +2728,7 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputActionMap m_PositionalKeyboard;
 
-		private IPositionalKeyboardActions m_PositionalKeyboardActionsCallbackInterface;
+		private List<IPositionalKeyboardActions> m_PositionalKeyboardActionsCallbackInterfaces;
 
 		private readonly InputAction m_PositionalKeyboard_Positional_Escape;
 
@@ -2820,7 +2952,7 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputActionMap m_Joystick;
 
-		private IJoystickActions m_JoystickActionsCallbackInterface;
+		private List<IJoystickActions> m_JoystickActionsCallbackInterfaces;
 
 		private readonly InputAction m_Joystick_Stick;
 
@@ -2828,7 +2960,7 @@ namespace SLZ.Marrow.Input
 
 		private readonly InputActionMap m_Trackers;
 
-		private ITrackersActions m_TrackersActionsCallbackInterface;
+		private List<ITrackersActions> m_TrackersActionsCallbackInterfaces;
 
 		private readonly InputAction m_Trackers_LeftFoot;
 

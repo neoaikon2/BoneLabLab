@@ -1,10 +1,12 @@
+using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SplineMesh
 {
-	[DisallowMultipleComponent]
 	[ExecuteInEditMode]
 	[SelectionBase]
+	[DisallowMultipleComponent]
 	public class SplineMeshTiling : MonoBehaviour
 	{
 		private GameObject generated;
@@ -62,6 +64,11 @@ namespace SplineMesh
 		private GameObject FindOrCreate(string name)
 		{
 			return null;
+		}
+
+		public SplineMeshTiling()
+			: base()
+		{
 		}
 	}
 }

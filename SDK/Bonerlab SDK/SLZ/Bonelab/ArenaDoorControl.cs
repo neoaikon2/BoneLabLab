@@ -1,3 +1,4 @@
+using SLZ.Bonelab.Obsolete;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -15,6 +16,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void CloseDoor()
+		{
+		}
+
+		public ArenaDoorControl()
+			: base()
 		{
 		}
 	}

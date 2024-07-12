@@ -22,10 +22,15 @@ namespace RootMotion.FinalIK
 
 			public bool IsInDirection(Vector3 d)
 			{
-				return false;
+				return default(bool);
 			}
 
 			public void SetAngleBuffer(float value)
+			{
+			}
+
+			public Pose()
+				: base()
 			{
 			}
 		}
@@ -40,6 +45,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void SetPoseActive(Pose pose)
+		{
+		}
+
+		public AimPoser()
+			: base()
 		{
 		}
 	}

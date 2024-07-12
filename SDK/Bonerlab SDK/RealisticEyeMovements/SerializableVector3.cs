@@ -14,9 +14,9 @@ namespace RealisticEyeMovements
 
 		public SerializableVector3(float rX, float rY, float rZ)
 		{
-			x = rX;
-			y = rY;
-			z = rZ;
+			this.z = default(float);
+			this.y = default(float);
+			this.x = default(float);
 		}
 
 		public override string ToString()

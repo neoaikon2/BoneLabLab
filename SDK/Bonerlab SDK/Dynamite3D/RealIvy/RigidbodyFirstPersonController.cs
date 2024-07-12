@@ -29,9 +29,20 @@ namespace Dynamite3D.RealIvy
 
 			private bool m_Running;
 
-			public bool Running => false;
+			public bool Running
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
 			public void UpdateDesiredTargetSpeed(Vector2 input)
+			{
+			}
+
+			public MovementSettings()
+				: base()
 			{
 			}
 		}
@@ -49,6 +60,11 @@ namespace Dynamite3D.RealIvy
 
 			[Tooltip("set it to 0.1 or more if you get stuck in wall")]
 			public float shellOffset;
+
+			public AdvancedSettings()
+				: base()
+			{
+			}
 		}
 
 		public Camera cam;
@@ -75,13 +91,37 @@ namespace Dynamite3D.RealIvy
 
 		private bool m_IsGrounded;
 
-		public Vector3 Velocity => default(Vector3);
+		public Vector3 Velocity
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public bool Grounded => false;
+		public bool Grounded
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public bool Jumping => false;
+		public bool Jumping
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public bool Running => false;
+		public bool Running
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		private void Start()
 		{
@@ -97,7 +137,7 @@ namespace Dynamite3D.RealIvy
 
 		private float SlopeMultiplier()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private void StickToGroundHelper()
@@ -114,6 +154,11 @@ namespace Dynamite3D.RealIvy
 		}
 
 		private void GroundCheck()
+		{
+		}
+
+		public RigidbodyFirstPersonController()
+			: base()
 		{
 		}
 	}

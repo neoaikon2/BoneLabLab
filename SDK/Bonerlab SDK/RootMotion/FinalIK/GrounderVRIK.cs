@@ -31,7 +31,7 @@ namespace RootMotion.FinalIK
 
 		private bool IsReadyToInitiate()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void Update()
@@ -59,6 +59,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public GrounderVRIK()
+			: base()
 		{
 		}
 	}

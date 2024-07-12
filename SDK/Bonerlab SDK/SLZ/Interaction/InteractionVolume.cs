@@ -30,53 +30,7 @@ namespace SLZ.Interaction
 			zAxis = 2
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CExecuteInteraction_003Ed__16
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public InteractionVolume _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CExecuteInteraction_003Ed__16(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
+		public static Dictionary<IGrippable, int> ClaimedHosts;
 
 		[HideInInspector]
 		public bool isActive;
@@ -104,6 +58,14 @@ namespace SLZ.Interaction
 			}
 		}
 
+		public static void AddClaimedHost(IGrippable host)
+		{
+		}
+
+		public static void RemoveClaimedHost(IGrippable host)
+		{
+		}
+
 		protected virtual void Awake()
 		{
 		}
@@ -116,7 +78,6 @@ namespace SLZ.Interaction
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CExecuteInteraction_003Ed__16))]
 		private IEnumerator ExecuteInteraction()
 		{
 			return null;
@@ -131,6 +92,11 @@ namespace SLZ.Interaction
 		}
 
 		protected virtual void OnHoverEnd(InteractableHost host)
+		{
+		}
+
+		public InteractionVolume()
+			: base()
 		{
 		}
 	}

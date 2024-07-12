@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RealisticEyeMovements
@@ -9,17 +10,17 @@ namespace RealisticEyeMovements
 
 		public static bool CanGetTransformFromPath(Transform startXform, string path)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static float EaseSineIn(float t, float b, float c, float d)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public static float Fbm(Vector2 coord, int octave)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public static GameObject FindChildInHierarchy(GameObject go, string name)
@@ -44,15 +45,20 @@ namespace RealisticEyeMovements
 
 		public static bool IsEqualOrDescendant(Transform ancestor, Transform descendant)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static float NormalizedDegAngle(float degrees)
 		{
-			return 0f;
+			return default(float);
 		}
 
-		public static void PlaceDummyObject(string name, Vector3 pos, float scale = 0.1f, Quaternion? rotation = null)
+		public static void PlaceDummyObject(string name, Vector3 pos, float scale = 0.1f, Quaternion? rotation = default(Quaternion?))
+		{
+		}
+
+		public Utils()
+			: base()
 		{
 		}
 	}

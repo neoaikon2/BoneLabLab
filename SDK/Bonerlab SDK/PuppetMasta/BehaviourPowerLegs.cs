@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ;
-using SLZ.Data;
 using SLZ.Marrow.Data;
-using SLZ.VRMK;
+using SLZ.Marrow.Mechanics;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
 {
-	public class BehaviourPowerLegs : BehaviourBaseNav
+	public class BehaviourPowerLegs : BehaviourGrabbableBaseNav
 	{
 		[Flags]
 		public enum CombatType
@@ -44,56 +44,6 @@ namespace PuppetMasta
 			Hide = 3
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CSelfDespawn_003Ed__35
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float duration;
-
-			public BehaviourPowerLegs _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CSelfDespawn_003Ed__35(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		[Header("Biped Settings")]
 		public SubBehaviourIk ik;
 
@@ -101,7 +51,7 @@ namespace PuppetMasta
 
 		public SubBehaviourHandPose handPoser;
 
-		public float scaleFactor = 1f;
+		public float scaleFactor;
 
 		public GameObject throwVfx;
 
@@ -131,6 +81,8 @@ namespace PuppetMasta
 
 		private int _gestureAnim;
 
+		private int _neutral;
+
 		private float _animationBlendWeight;
 
 		private float _animationBlendWeightV;
@@ -141,17 +93,17 @@ namespace PuppetMasta
 
 		private bool _debugDrawHierarchy;
 
+		[EnumFlags]
 		[Header("Agro State")]
-		[SLZ.EnumFlags]
 		public CombatType combatProficiency;
 
 		public CombatType agroState;
 
-		public float meleeRange = 1f;
+		public float meleeRange;
 
-		public float desiredMeleeDistance = 0.8f;
+		public float desiredMeleeDistance;
 
-		public float meleeCooldown = 3f;
+		public float meleeCooldown;
 
 		public TargetableAnimatorEvent WildPunchBigL;
 
@@ -168,6 +120,8 @@ namespace PuppetMasta
 		public TargetableAnimatorEvent Fist1MidUppercutL;
 
 		public TargetableAnimatorEvent Fist1MidUppercutR;
+
+		public TargetableAnimatorEvent Block;
 
 		private float _cooldownMelee;
 
@@ -222,6 +176,14 @@ namespace PuppetMasta
 		[Tooltip("Called when the character starts getting up from a supine pose (facing up).")]
 		public AnimatorEvent[] onGetUpSupine;
 
+		public GameObject IKPunchGameObject;
+
+		public bool isOverrideOn;
+
+		public LocoController aiLocoController;
+
+		public bool useAiLocoController;
+
 		[Header("Engaged State")]
 		public EngagedMode engagedMode;
 
@@ -266,7 +228,7 @@ namespace PuppetMasta
 		{
 			get
 			{
-				return false;
+				return default(bool);
 			}
 			set
 			{
@@ -321,7 +283,6 @@ namespace PuppetMasta
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CSelfDespawn_003Ed__35))]
 		private IEnumerator SelfDespawn(float duration)
 		{
 			return null;
@@ -335,7 +296,7 @@ namespace PuppetMasta
 		{
 		}
 
-		public void Awake()
+		protected override void Awake()
 		{
 		}
 
@@ -356,6 +317,31 @@ namespace PuppetMasta
 		}
 
 		public void Throw()
+		{
+		}
+
+		[ContextMenu("ContextBlockAnim")]
+		private void ContextBlockAnim()
+		{
+		}
+
+		[ContextMenu("ContextAttack")]
+		private void ContextAttack()
+		{
+		}
+
+		[ContextMenu("StopContextAttack")]
+		private void StopContextAttack()
+		{
+		}
+
+		private IEnumerator TargetableUpdateRoutine()
+		{
+			return null;
+		}
+
+		[ContextMenu("ContextBlock")]
+		private void ContextBlock()
 		{
 		}
 
@@ -416,6 +402,11 @@ namespace PuppetMasta
 		}
 
 		public void SetGestureCooldown(float time)
+		{
+		}
+
+		public BehaviourPowerLegs()
+			: base()
 		{
 		}
 	}

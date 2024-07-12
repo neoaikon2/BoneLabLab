@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace Dynamite3D.RealIvy
@@ -43,7 +44,7 @@ namespace Dynamite3D.RealIvy
 
 		public int GetNumLeaves()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void SetValues(Vector3 growDirection, float randomizeHeight, float currentHeight, float heightParameter, int branchSense, BranchPoint originPointOfThisBranch)
@@ -168,20 +169,21 @@ namespace Dynamite3D.RealIvy
 		{
 		}
 
-		public void GetInitIdxEndIdxLeaves(int initIdxBranchPoint, float stepSize, out int initIdxLeaves, out int endIdxLeaves)
+		public void GetInitIdxEndIdxLeaves(int initIdxBranchPoint, float stepSize, [Out] int initIdxLeaves, [Out] int endIdxLeaves)
 		{
-			initIdxLeaves = default(int);
-			endIdxLeaves = default(int);
 		}
 
 		public void ReleasePoint(int indexPoint)
 		{
 		}
 
-		public void GetInitIdxEndIdxLeaves(int initIdxBranchPoint, int endIdxBranchPoint, float stepSize, out int initIdxLeaves, out int endIdxLeaves)
+		public void GetInitIdxEndIdxLeaves(int initIdxBranchPoint, int endIdxBranchPoint, float stepSize, [Out] int initIdxLeaves, [Out] int endIdxLeaves)
 		{
-			initIdxLeaves = default(int);
-			endIdxLeaves = default(int);
+		}
+
+		public BranchContainer()
+			: base()
+		{
 		}
 	}
 }

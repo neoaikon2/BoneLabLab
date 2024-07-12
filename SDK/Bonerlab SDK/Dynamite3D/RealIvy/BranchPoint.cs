@@ -44,6 +44,7 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public BranchPoint()
+			: base()
 		{
 		}
 
@@ -52,14 +53,17 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public BranchPoint(Vector3 point, Vector3 grabVector, int index, bool newBranch, int newBranchNumber, float length, BranchContainer branchContainer)
+			: this()
 		{
 		}
 
 		public BranchPoint(Vector3 point, Vector3 grabVector, int index, float length, BranchContainer branchContainer)
+			: this()
 		{
 		}
 
 		public BranchPoint(Vector3 point, int index, float length, BranchContainer branchContainer)
+			: this()
 		{
 		}
 

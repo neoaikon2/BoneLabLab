@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -37,9 +38,9 @@ namespace RootMotion.FinalIK
 
 		private BoneMap boneMap3;
 
-		public override bool IsValid(IKSolver solver, ref string message)
+		public override bool IsValid(IKSolver solver, string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public BoneMap GetBoneMap(BoneMapType boneMap)
@@ -47,19 +48,7 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public void SetLimbOrientation(Vector3 upper, Vector3 lower)
-		{
-		}
-
-		public IKMappingLimb()
-		{
-		}
-
-		public IKMappingLimb(Transform bone1, Transform bone2, Transform bone3, Transform parentBone = null)
-		{
-		}
-
-		public void SetBones(Transform bone1, Transform bone2, Transform bone3, Transform parentBone = null)
+		public void SetBones(Transform bone1, Transform bone2, Transform bone3, Transform parentBone = default(Transform))
 		{
 		}
 
@@ -80,6 +69,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void WritePose(IKSolverFullBody solver, bool fullBody)
+		{
+		}
+
+		public IKMappingLimb()
+			: base()
 		{
 		}
 	}

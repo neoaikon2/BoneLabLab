@@ -48,5 +48,10 @@ namespace SLZ.Bonelab
 		private void UpdateDisplays()
 		{
 		}
+
+		public MineDiveTargetManager()
+			: base()
+		{
+		}
 	}
 }

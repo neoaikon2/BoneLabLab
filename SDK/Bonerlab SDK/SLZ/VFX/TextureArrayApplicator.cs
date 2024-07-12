@@ -1,14 +1,10 @@
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.VFX
 {
 	[RequireComponent(typeof(Renderer))]
-	[ExecuteInEditMode]
 	public class TextureArrayApplicator : MonoBehaviour
 	{
-		private static ComponentCache<TextureArrayApplicator> _cache;
-
 		private int _texArrayHash;
 
 		private int _texArrayHash2;
@@ -24,19 +20,13 @@ namespace SLZ.VFX
 
 		public Color m_color;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private Renderer matrenderer;
 
 		private MaterialPropertyBlock _propertyBlock;
 
-		public static ComponentCache<TextureArrayApplicator> Cache => null;
-
 		private void Awake()
-		{
-		}
-
-		private void OnDestroy()
 		{
 		}
 
@@ -61,6 +51,11 @@ namespace SLZ.VFX
 		}
 
 		public void ClearSelection()
+		{
+		}
+
+		public TextureArrayApplicator()
+			: base()
 		{
 		}
 	}

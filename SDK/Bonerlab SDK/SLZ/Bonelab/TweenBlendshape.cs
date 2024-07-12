@@ -40,5 +40,10 @@ namespace SLZ.Bonelab
 		private void EnableMesh()
 		{
 		}
+
+		public TweenBlendshape()
+			: base()
+		{
+		}
 	}
 }

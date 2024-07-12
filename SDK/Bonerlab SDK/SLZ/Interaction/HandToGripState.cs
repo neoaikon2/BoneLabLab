@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SLZ.Marrow.Data;
+using SLZ.Data;
 using UnityEngine;
 
 namespace SLZ.Interaction
@@ -45,5 +45,10 @@ namespace SLZ.Interaction
 		public bool hasHandleSwitchedToFree;
 
 		public bool isZFlipped;
+
+		public HandToGripState()
+			: base()
+		{
+		}
 	}
 }

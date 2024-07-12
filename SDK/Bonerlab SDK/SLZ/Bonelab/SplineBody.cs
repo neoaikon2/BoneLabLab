@@ -1,12 +1,9 @@
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
 	public class SplineBody : SplineEntity
 	{
-		private static ComponentCache<SplineBody> _cache;
-
 		public ConfigurableJointMotion angularXMotion;
 
 		public float angularXLimit;
@@ -30,13 +27,7 @@ namespace SLZ.Bonelab
 		[HideInInspector]
 		public bool isSpeedChanged;
 
-		public static ComponentCache<SplineBody> Cache => null;
-
 		private void Awake()
-		{
-		}
-
-		protected override void OnDestroy()
 		{
 		}
 
@@ -53,6 +44,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void SetMaximumForce(float force)
+		{
+		}
+
+		public SplineBody()
+			: base()
 		{
 		}
 	}

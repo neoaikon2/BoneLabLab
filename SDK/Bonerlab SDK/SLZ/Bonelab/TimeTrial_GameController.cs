@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using SLZ.Zones;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -32,6 +30,8 @@ namespace SLZ.Bonelab
 
 		public TTDifficulty ttDifficulty;
 
+		public bool despawnAllOnKillComplete;
+
 		public GenGameControl_Trigger timeTrialStartTrigger;
 
 		public GenGameControl_Trigger timeTrialEndTrigger;
@@ -51,9 +51,6 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private int initHeavyAmmo;
 
-		[SerializeField]
-		private ZoneSpawner[] zSpawners;
-
 		public int[] diffReqKillCount;
 
 		[SerializeField]
@@ -67,15 +64,7 @@ namespace SLZ.Bonelab
 
 		public bool isSingleSpawn;
 
-		public List<ZoneSpawner> easySpawnerList;
-
-		public List<ZoneSpawner> mediumSpawnerList;
-
-		public List<ZoneSpawner> hardSpawnerList;
-
 		public SpawnerDifficulties[] spawnerDifficulties;
-
-		private List<ZoneSpawner> activeSpawnersList;
 
 		private BoneLeaderManager leaderManager;
 
@@ -91,7 +80,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		protected override void Start()
+		public override void Start()
+		{
+		}
+
+		public void OnPlayerSpawn()
 		{
 		}
 
@@ -100,6 +93,10 @@ namespace SLZ.Bonelab
 		}
 
 		public void UpdateDifficulty(int difficulty)
+		{
+		}
+
+		public void SpawnDifficultyCrates()
 		{
 		}
 
@@ -128,6 +125,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void SetLeaderboardByDifficulty()
+		{
+		}
+
+		public TimeTrial_GameController()
+			: base()
 		{
 		}
 	}

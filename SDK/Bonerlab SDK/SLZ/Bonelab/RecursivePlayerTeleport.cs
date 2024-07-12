@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using SLZ.Rig;
 using UnityEngine;
 
@@ -24,6 +25,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void Teleport()
+		{
+		}
+
+		public RecursivePlayerTeleport()
+			: base()
 		{
 		}
 	}

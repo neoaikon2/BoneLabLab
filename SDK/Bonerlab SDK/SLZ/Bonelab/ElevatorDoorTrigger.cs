@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SLZ.Props;
+using SLZ.VFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -13,7 +13,7 @@ namespace SLZ.Bonelab
 		private TutorialElevator elevator;
 
 		[SerializeField]
-		private List<ObjectDestructable> destObjList;
+		private List<ObjectDestructible> destObjList;
 
 		private HashSet<GameObject> containedObjHash;
 
@@ -26,6 +26,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnTriggerExit(Collider col)
+		{
+		}
+
+		public ElevatorDoorTrigger()
+			: base()
 		{
 		}
 	}

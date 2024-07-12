@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction Target")]
 	[HelpURL("https://www.youtube.com/watch?v=r5jiZnsDH3M")]
+	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction Target")]
 	public class InteractionTarget : MonoBehaviour
 	{
 		[Serializable]
@@ -15,6 +15,11 @@ namespace RootMotion.FinalIK
 
 			[Tooltip("Multiplier of the curve's value.")]
 			public float multiplier;
+
+			public Multiplier()
+				: base()
+			{
+			}
 		}
 
 		[Tooltip("The type of the FBBIK effector.")]
@@ -77,7 +82,7 @@ namespace RootMotion.FinalIK
 
 		public float GetValue(InteractionObject.WeightCurve.Type curveType)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void ResetRotation()
@@ -95,6 +100,11 @@ namespace RootMotion.FinalIK
 
 		[ContextMenu("Scrpt Reference")]
 		private void OpenScriptReference()
+		{
+		}
+
+		public InteractionTarget()
+			: base()
 		{
 		}
 	}

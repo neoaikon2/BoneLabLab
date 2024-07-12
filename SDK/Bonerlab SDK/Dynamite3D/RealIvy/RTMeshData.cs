@@ -26,10 +26,12 @@ namespace Dynamite3D.RealIvy
 		public int[][] triangles;
 
 		public RTMeshData(int numVertices, int numSubmeshes, List<int> numTrianglesPerSubmesh)
+			: base()
 		{
 		}
 
 		public RTMeshData(Mesh mesh)
+			: base()
 		{
 		}
 
@@ -55,7 +57,7 @@ namespace Dynamite3D.RealIvy
 
 		public int VertexCount()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void Clear()

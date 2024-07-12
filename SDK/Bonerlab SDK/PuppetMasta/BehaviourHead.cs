@@ -1,5 +1,7 @@
+using System.Runtime.InteropServices;
 using RealisticEyeMovements;
-using SLZ.Combat;
+using SLZ.Marrow.Combat;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -226,7 +228,7 @@ namespace PuppetMasta
 
 		protected bool AttachToFace(Rigidbody face)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void DetachFromFace()
@@ -235,13 +237,12 @@ namespace PuppetMasta
 
 		private static float PredictiveAimWildGuessAtImpactTime()
 		{
-			return 0f;
+			return default(float);
 		}
 
-		public static bool PredictiveAim(Vector3 muzzlePosition, float projectileSpeed, Vector3 targetPosition, Vector3 targetVelocity, float gravity, out Vector3 projectileVelocity)
+		public static bool PredictiveAim(Vector3 muzzlePosition, float projectileSpeed, Vector3 targetPosition, Vector3 targetVelocity, float gravity, [Out] Vector3 projectileVelocity)
 		{
-			projectileVelocity = default(Vector3);
-			return false;
+			return default(bool);
 		}
 
 		public void AiTick()
@@ -253,6 +254,11 @@ namespace PuppetMasta
 		}
 
 		private void ReturnToPreAgro()
+		{
+		}
+
+		public BehaviourHead()
+			: base()
 		{
 		}
 	}

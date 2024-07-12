@@ -49,7 +49,7 @@ namespace SLZ.Interaction
 
 		public bool AlignmentPhase(VirtualControlerPayload payload)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void InsertPhase()
@@ -61,6 +61,11 @@ namespace SLZ.Interaction
 		}
 
 		private void OnTriggerExit(Collider other)
+		{
+		}
+
+		public PlugVirtualController()
+			: base()
 		{
 		}
 	}

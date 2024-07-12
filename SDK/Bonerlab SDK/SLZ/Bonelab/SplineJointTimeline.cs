@@ -26,5 +26,10 @@ namespace SLZ.Bonelab
 		public static void ManualSetWithNotifications(PlayableDirector director, double time)
 		{
 		}
+
+		public SplineJointTimeline()
+			: base()
+		{
+		}
 	}
 }

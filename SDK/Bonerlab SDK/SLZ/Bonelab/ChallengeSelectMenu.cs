@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
@@ -8,16 +8,10 @@ namespace SLZ.Bonelab
 	public class ChallengeSelectMenu : MonoBehaviour
 	{
 		[SerializeField]
+		private bool updateEnemyCount;
+
+		[SerializeField]
 		private Arena_GameController arenaGameController;
-
-		[SerializeField]
-		private Transform buttonParentObj;
-
-		[SerializeField]
-		private List<GameObject> buttonObjList;
-
-		[SerializeField]
-		private GameObject buttonPrefab;
 
 		[SerializeField]
 		private TMP_Text[] chalDescriptionTexts;
@@ -28,17 +22,38 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private TMP_Text activeChallengeText;
 
+		[SerializeField]
+		private TMP_Text enemyCountText;
+
 		public UnityEvent OnChallengeSelected;
 
 		public UnityEvent OnChallengeCanceled;
+
+		public static Action<int> OnLoadoutSelected;
 
 		public UnityEvent[] OnChallengeStarted;
 
 		private int challengeID;
 
+		private int loadID;
+
+		private int minEnemyCount;
+
+		private int maxEnemyCount;
+
+		private int enemyCountValue;
+
 		private string[] diffDescriptions;
 
 		public void Start()
+		{
+		}
+
+		public void SelectLoadout(int idx)
+		{
+		}
+
+		public void OnLoadoutSelect()
 		{
 		}
 
@@ -59,6 +74,15 @@ namespace SLZ.Bonelab
 		}
 
 		public void UpdateDiffText()
+		{
+		}
+
+		public void ToggleEnemyCount(bool up)
+		{
+		}
+
+		public ChallengeSelectMenu()
+			: base()
 		{
 		}
 	}

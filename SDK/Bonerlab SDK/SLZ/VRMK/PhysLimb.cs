@@ -32,21 +32,93 @@ namespace SLZ.VRMK
 
 		public BoxCollider endCol;
 
+		public bool shutdown;
+
 		public float forceMultiplier;
 
-		public Rigidbody rbEnd => null;
+		[SerializeField]
+		private float _limbInternalMult;
 
-		public Rigidbody rbUpper => null;
+		[SerializeField]
+		private PhysicMaterial _naturalFriction;
 
-		public Rigidbody rbLower => null;
+		[SerializeField]
+		private PhysicMaterial _lowFriction;
 
-		public Servo endBaseServo => null;
+		private int _playerLayer;
 
-		public Servo upperServo => null;
+		private int _noCollideLayer;
 
-		public Servo lowerServo => null;
+		private bool _isKinematic;
 
-		public Servo endServo => null;
+		private float _lastForceMult;
+
+		public Rigidbody rbEnd
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Rigidbody rbUpper
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Rigidbody rbLower
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Servo endBaseServo
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Servo upperServo
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Servo lowerServo
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Servo endServo
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public float limbInternalMult
+		{
+			get
+			{
+				return default(float);
+			}
+			set
+			{
+			}
+		}
 
 		private void Reset()
 		{
@@ -72,15 +144,23 @@ namespace SLZ.VRMK
 		{
 		}
 
-		public void CalibrateLimbJoints(Avatar avatar, bool isLeg = false, bool isRight = false)
+		public void CalibrateLimbJoints(Avatar avatar, bool isRight = false)
 		{
 		}
 
-		public void UpdateLimbTargets(Quaternion localShoulder, Quaternion localElbow, Quaternion localHand, Quaternion localEndInChestRot, Vector3 localEndInChestPos, Vector3 wristCa, Vector3 wristAnchor, Vector3 shoulderCa, float maxLength, float deltaTime)
+		public void EarlyUpdateLimb()
 		{
 		}
 
-		public void UpdateArmDrives(Vector3 targetLocalPos, Quaternion targetRotation, ConfigurableJoint joint, float gripInput, bool secondToSolveAndStatic)
+		public void UpdateLimbTargets(Transform root, Transform upper, Transform lower, Transform end, float deltaTime)
+		{
+		}
+
+		public void UpdateLimbDrives(float slerpForceMult, float slerpSpringMult, float slerpDampMult)
+		{
+		}
+
+		public void UpdateLimbSupportDrives(float slerpForceMult, float slerpSpringMult, float slerpDampMult)
 		{
 		}
 
@@ -93,6 +173,19 @@ namespace SLZ.VRMK
 		}
 
 		public void SetPhysical()
+		{
+		}
+
+		public void SetFrictionNatural()
+		{
+		}
+
+		public void SetFrictionLow()
+		{
+		}
+
+		public PhysLimb()
+			: base()
 		{
 		}
 	}

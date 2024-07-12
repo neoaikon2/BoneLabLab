@@ -1,22 +1,16 @@
-using UnityEngine;
-
 namespace SLZ.Interaction
 {
 	public class HingeVirtualController : VirtualControllerOverride
 	{
-		public ConfigurableJoint joint;
+		public Servo servo;
 
-		private Vector3 _inputMagCache;
+		private float _lastPhysTwist;
 
-		private Quaternion _initialRotation;
+		private float _lastTargetTwist;
 
-		private float _lastTwist;
+		private float _twistWindup;
 
-		protected void Reset()
-		{
-		}
-
-		protected void Start()
+		protected virtual void Reset()
 		{
 		}
 
@@ -25,6 +19,11 @@ namespace SLZ.Interaction
 		}
 
 		public override void OnVirtualControllerSolve(VirtualControlerPayload payload)
+		{
+		}
+
+		public HingeVirtualController()
+			: base()
 		{
 		}
 	}

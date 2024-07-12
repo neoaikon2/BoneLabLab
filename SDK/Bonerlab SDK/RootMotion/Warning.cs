@@ -8,10 +8,6 @@ namespace RootMotion
 
 		public static bool logged;
 
-		public static void Log(string message, Logger logger, bool logInEditMode = false)
-		{
-		}
-
 		public static void Log(string message, Transform context, bool logInEditMode = false)
 		{
 		}

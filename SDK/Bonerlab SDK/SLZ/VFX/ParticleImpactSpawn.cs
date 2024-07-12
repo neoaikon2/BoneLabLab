@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using SLZ.Marrow.Data;
 using UnityEngine;
@@ -18,6 +19,8 @@ namespace SLZ.VFX
 
 		private List<ParticleCollisionEvent> collisionEvents;
 
+		private Action<GameObject> _onParticleSpawnCallback;
+
 		private void Reset()
 		{
 		}
@@ -26,7 +29,16 @@ namespace SLZ.VFX
 		{
 		}
 
+		private void OnParticleSpawn(GameObject go)
+		{
+		}
+
 		private void OnParticleCollision(GameObject Other)
+		{
+		}
+
+		public ParticleImpactSpawn()
+			: base()
 		{
 		}
 	}

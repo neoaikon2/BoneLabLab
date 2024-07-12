@@ -51,7 +51,7 @@ namespace SLZ.VRMK
 
 		public static float ClampAngle(float angle, float clampWeight, int clampSmoothing)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public static Quaternion MatchRotation(Quaternion targetRotation, Vector3 targetforwardAxis, Vector3 targetUpAxis, Vector3 forwardAxis, Vector3 upAxis)

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SplineMesh
@@ -44,6 +45,11 @@ namespace SplineMesh
 		}
 
 		public void Sow()
+		{
+		}
+
+		public ExampleSower()
+			: base()
 		{
 		}
 	}

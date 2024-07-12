@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using SLZ.Props;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -15,6 +14,11 @@ namespace SLZ.Bonelab
 			public int statemachineIndex;
 
 			public int animationIndex;
+
+			public AnimationRadioPair()
+				: base()
+			{
+			}
 		}
 
 		public GenericAnimatorController animatorController;
@@ -36,6 +40,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void NUKERADIOS()
+		{
+		}
+
+		public AnimatorRadioAdaptor()
+			: base()
 		{
 		}
 	}

@@ -1,7 +1,8 @@
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
+using SLZ.Marrow.Utilities;
 using SLZ.Rig;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SLZ.VRMK
 {
@@ -37,6 +38,9 @@ namespace SLZ.VRMK
 		[SerializeField]
 		private Servo _wristServo;
 
+		[SerializeField]
+		private Servo _supportHandServo;
+
 		public PhysicsRig physBody;
 
 		public Hand hand;
@@ -49,7 +53,13 @@ namespace SLZ.VRMK
 
 		public float additionalMass;
 
-		public float forceMultiplier;
+		public bool shutdown;
+
+		[SerializeField]
+		private float _forceMultiplier;
+
+		[SerializeField]
+		private float _armInternalMult;
 
 		[Header("Shoulder Muscles")]
 		public float xPosForce;
@@ -73,7 +83,9 @@ namespace SLZ.VRMK
 
 		private float _jerkedMult;
 
-		private float angJerkMult;
+		private float _angJerkMult;
+
+		private float _shock;
 
 		private float _xPos;
 
@@ -89,18 +101,9 @@ namespace SLZ.VRMK
 
 		private Quaternion _muscleSpace;
 
-		private Vector3 _muscleAngVel;
-
-		public AnimationCurve TorqueMultiplier;
-
 		public CapsuleCollider inventoryPlug;
 
-		[FormerlySerializedAs("forearmCol")]
-		public CapsuleCollider wristCol;
-
-		public CapsuleCollider colliderUpper;
-
-		public CapsuleCollider colliderLower;
+		public MeshCollider cUpper;
 
 		public MeshCollider cLower;
 
@@ -116,15 +119,13 @@ namespace SLZ.VRMK
 
 		private Quaternion _lastTargetRotation;
 
-		private float _stuck;
+		private float _lastForceMult;
 
 		private Vector3 _lastForce;
 
 		private Vector3 _lastVel;
 
-		private Vector3 _lastTorque;
-
-		private Vector3 _lastAngVel;
+		private float _lastTorqueSqMg;
 
 		private bool _colliding;
 
@@ -142,9 +143,14 @@ namespace SLZ.VRMK
 
 		private bool _fingerEnableFlag;
 
+		[SerializeField]
 		private PhysicMaterial _highFriction;
 
-		public PhysicMaterial lowFriction;
+		[SerializeField]
+		private PhysicMaterial _naturalFriction;
+
+		[SerializeField]
+		private PhysicMaterial _lowFriction;
 
 		public LayerMask fingerColCheckMask;
 
@@ -154,34 +160,71 @@ namespace SLZ.VRMK
 
 		public bool forceViaJoint;
 
-		public bool torqueViaJoint;
-
 		public HandPhysState handPhysState;
 
 		private const float _staticCheatMult = 0.3f;
 
-		public Rigidbody rbHand => null;
+		public Rigidbody rbHand
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public Rigidbody rbUpper => null;
+		public Rigidbody rbUpper
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public Rigidbody rbLower => null;
+		public Rigidbody rbLower
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public float handSupported
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
 			}
 		}
 
-		public float armMantle => 0f;
+		public float armMantle
+		{
+			get
+			{
+				return default(float);
+			}
+		}
 
-		public Vector3 wristWorld => default(Vector3);
+		public float armInternalMult
+		{
+			get
+			{
+				return default(float);
+			}
+			set
+			{
+			}
+		}
 
-		public Vector3 lastForce => default(Vector3);
+		public Vector3 lastForce
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
 		private void Awake()
 		{
@@ -199,6 +242,10 @@ namespace SLZ.VRMK
 		{
 		}
 
+		public void IgnoreWholeArmColliders(Collider[] col, bool ignore = true)
+		{
+		}
+
 		public void CalibrateArmColliders(Avatar avatar, bool isRight = false)
 		{
 		}
@@ -211,7 +258,7 @@ namespace SLZ.VRMK
 		{
 		}
 
-		public void UpdateArmTargets(Transform chest, Transform shoulder, Transform elbow, Transform hand, Vector3 wristCa, float maxLength, float deltaTime)
+		public void UpdateArmTargets(SimpleTransform chest, Transform shoulder, Transform elbow, Transform hand, Transform support, Vector3 kinematicSupportVelocity, float maxLength, float deltaTime, bool monofootEnabled)
 		{
 		}
 
@@ -219,7 +266,7 @@ namespace SLZ.VRMK
 		{
 		}
 
-		public void CalibrateJoints(float avatarArmMult, float gripMult)
+		public void CalibrateJoints(float avatarArmMult, float gripMult, bool monofootEnabled)
 		{
 		}
 
@@ -239,21 +286,44 @@ namespace SLZ.VRMK
 		{
 		}
 
-		public Vector3 GetArmMomentum(out float totalMass)
+		public Vector3 GetArmMomentum([Out] float totalMass)
 		{
-			totalMass = default(float);
 			return default(Vector3);
 		}
 
-		public void UpdateArmDrives(Vector3 targetLocalPos, Quaternion targetRotation, ConfigurableJoint joint, float gripInput, bool secondToSolveAndStatic)
+		public void EarlyUpdateArm()
 		{
 		}
 
-		private void ApplyForce(Vector3 targetLocalPos, ConfigurableJoint joint, bool secondToSolveAndStatic)
+		public void UpdateArmDrives(float slerpForceMult, float slerpSpringMult, float slerpDampMult)
 		{
 		}
 
-		private void PrepShoulderMuscle(Vector3 handVelocity, Vector3 newtonsDamped)
+		public void UpdateArmSupportDrives(float slerpForceMult, float slerpSpringMult, float slerpDampMult, bool monofootEnabled)
+		{
+		}
+
+		public void ZeroTargets()
+		{
+		}
+
+		public void SwitchSupportToMono(Quaternion handRot, Quaternion supportRot)
+		{
+		}
+
+		public void SwitchSupportToChest(Quaternion handRot, Quaternion chestRot)
+		{
+		}
+
+		public void FixedUpdateArm(Vector3 targetLocalPos, Quaternion targetRotation, ConfigurableJoint joint, float gripInput, bool secondToSolveAndStatic, bool monofootEnabled)
+		{
+		}
+
+		private void ApplyForce(Vector3 targetLocalPos, float forceMult, ConfigurableJoint joint, bool secondToSolveAndStatic)
+		{
+		}
+
+		private void PrepShoulderMuscle(Vector3 handVelocity, float forceMult, Vector3 newtonsDamped)
 		{
 		}
 
@@ -271,23 +341,38 @@ namespace SLZ.VRMK
 		{
 		}
 
+		public void SetFrictionNatural()
+		{
+		}
+
+		public void SetFrictionLow()
+		{
+		}
+
+		public void SetRangeOfMotionNatural()
+		{
+		}
+
+		public void SetRangeOfMotionActive()
+		{
+		}
+
 		private float RelaxTorqueMult(float grip)
 		{
-			return 0f;
+			return default(float);
 		}
 
-		private void ApplyTorque(Quaternion targetRotation, float maxTor, ConfigurableJoint joint)
+		private void ApplyTorque(Quaternion targetRotation, float maxTor, ConfigurableJoint joint, bool monofootEnabled)
 		{
 		}
 
-		private void ApplyTorque2(Quaternion targetRotation, float maxTor, ConfigurableJoint joint)
+		private void ApplyTorque2(Quaternion targetRotation, float maxTor, ConfigurableJoint joint, bool monofootEnabled)
 		{
 		}
 
-		public bool RefreshHandStates(ConfigurableJoint thisJ, ConfigurableJoint otherJ, out bool otherHandStatic)
+		public bool RefreshHandStates(ConfigurableJoint thisJ, ConfigurableJoint otherJ, [Out] bool otherHandStatic)
 		{
-			otherHandStatic = default(bool);
-			return false;
+			return default(bool);
 		}
 
 		public static Vector3 Div(Vector3 v, Vector3 v2)
@@ -297,7 +382,7 @@ namespace SLZ.VRMK
 
 		private bool IsNanV3(Vector3 v)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private Vector3 AbsV3(Vector3 v)
@@ -317,28 +402,28 @@ namespace SLZ.VRMK
 		{
 		}
 
-		public void ReadSensors(ConfigurableJoint joint, ref float divByNewtons)
+		public void ReadSensors(ConfigurableJoint joint, float divByNewtons)
 		{
 		}
 
 		private float ArmMantle()
 		{
-			return 0f;
-		}
-
-		public bool CheckStuck(float divByNewtons)
-		{
-			return false;
+			return default(float);
 		}
 
 		public bool ResetHand()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool ResetHand(Transform elbow, Vector3 elbowFwd)
 		{
-			return false;
+			return default(bool);
+		}
+
+		public PhysHand()
+			: base()
+		{
 		}
 	}
 }

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
@@ -88,7 +89,7 @@ namespace PuppetMasta
 
 		private float ProcessImpulse(Collision c, Rigidbody thisRb)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private void ResetAnimator()
@@ -100,6 +101,11 @@ namespace PuppetMasta
 		}
 
 		public void SwitchWatcherState(VoidWatcherState goToState)
+		{
+		}
+
+		public BehaviourVoidWatcher()
+			: base()
 		{
 		}
 	}

@@ -1,5 +1,5 @@
+using SLZ.Bonelab.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.SaveData;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,9 +15,21 @@ namespace SLZ.Bonelab
 
 		public GenericCrateReference crate_SpawnGun;
 
-		private static PlayerProgression Progression => null;
+		private static PlayerProgression Progression
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		private static PlayerUnlocks u => null;
+		private static PlayerUnlocks u
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Start()
 		{
@@ -36,6 +48,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void BIGCHEAT()
+		{
+		}
+
+		public DebugCheats()
+			: base()
 		{
 		}
 	}

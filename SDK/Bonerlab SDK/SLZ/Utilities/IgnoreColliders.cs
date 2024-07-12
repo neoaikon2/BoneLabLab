@@ -21,5 +21,10 @@ namespace SLZ.Utilities
 		public void Unignore()
 		{
 		}
+
+		public IgnoreColliders()
+			: base()
+		{
+		}
 	}
 }

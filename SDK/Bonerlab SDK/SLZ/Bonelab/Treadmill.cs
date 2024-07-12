@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 		private void Update()
 		{
 		}
+
+		public Treadmill()
+			: base()
+		{
+		}
 	}
 }

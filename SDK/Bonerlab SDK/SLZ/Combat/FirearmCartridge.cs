@@ -1,81 +1,25 @@
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Utilities;
 using SLZ.SFX;
-using SLZ.Utilities;
 using UnityEngine;
 
 namespace SLZ.Combat
 {
-	public class FirearmCartridge : SpawnEvents
+	public class FirearmCartridge : MarrowBehaviour, IPoolable
 	{
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CColliderEnableDelay_003Ed__17
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public FirearmCartridge _003C_003E4__this;
-
-			private UniTask.Awaiter _003C_003Eu__1;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CDisableDelay_003Ed__18
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public FirearmCartridge _003C_003E4__this;
-
-			private UniTask.Awaiter _003C_003Eu__1;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
-		private static ComponentCache<FirearmCartridge> _cache;
-
-		private RigidbodyData _rbData;
-
-		private bool _isStatic;
-
-		public Rigidbody rb;
-
-		public Collider col;
+		[SerializeField]
+		private Poolee _poolee;
 
 		public ShellSFX shellSfx;
 
-		public float despawnDelaySeconds;
+		[SerializeField]
+		private Renderer[] renderers;
 
 		public float startSpeed;
 
 		public float startAxisSpeed;
 
-		public static ComponentCache<FirearmCartridge> Cache => null;
+		private bool _isStatic;
 
 		private void Reset()
 		{
@@ -85,15 +29,23 @@ namespace SLZ.Combat
 		{
 		}
 
-		public void OnDestroy()
+		public void Despawn()
 		{
 		}
 
-		protected override void OnDespawn(GameObject go)
+		public void OnPoolInitialize()
 		{
 		}
 
-		protected override void OnSpawn(GameObject go)
+		public void OnPoolSpawn()
+		{
+		}
+
+		public void OnPoolDeInitialize()
+		{
+		}
+
+		public void SetRenderActive(bool isActive)
 		{
 		}
 
@@ -101,23 +53,16 @@ namespace SLZ.Combat
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CColliderEnableDelay_003Ed__17))]
-		private UniTaskVoid ColliderEnableDelay()
-		{
-			return default(UniTaskVoid);
-		}
-
-		[AsyncStateMachine(typeof(_003CDisableDelay_003Ed__18))]
-		private UniTaskVoid DisableDelay()
-		{
-			return default(UniTaskVoid);
-		}
-
 		public void MakeStatic()
 		{
 		}
 
 		public void MakeDynamic()
+		{
+		}
+
+		public FirearmCartridge()
+			: base()
 		{
 		}
 	}

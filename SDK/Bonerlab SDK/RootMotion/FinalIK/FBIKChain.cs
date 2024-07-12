@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -32,6 +33,7 @@ namespace RootMotion.FinalIK
 			public bool isRigid { get; private set; }
 
 			public ChildConstraint(Transform bone1, Transform bone2, float pushElasticity = 0f, float pullElasticity = 0f)
+				: base()
 			{
 			}
 
@@ -107,26 +109,19 @@ namespace RootMotion.FinalIK
 
 		private const float maxLimbLength = 0.99999f;
 
-		public FBIKChain()
-		{
-		}
-
-		public FBIKChain(float pin, float pull, params Transform[] nodeTransforms)
-		{
-		}
-
 		public void SetNodes(params Transform[] boneTransforms)
 		{
+			boneTransforms = default(Transform[]);
 		}
 
 		public int GetNodeIndex(Transform boneTransform)
 		{
-			return 0;
+			return default(int);
 		}
 
-		public bool IsValid(ref string message)
+		public bool IsValid(string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Initiate(IKSolverFullBody solver)
@@ -189,6 +184,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void BackwardReach(Vector3 position)
+		{
+		}
+
+		public FBIKChain()
+			: base()
 		{
 		}
 	}

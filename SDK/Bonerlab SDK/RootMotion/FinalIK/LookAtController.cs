@@ -6,8 +6,8 @@ namespace RootMotion.FinalIK
 	{
 		public LookAtIK ik;
 
-		[Header("Target Smoothing")]
 		[Tooltip("The target to look at. Do not use the Target transform that is assigned to LookAtIK. Set to null if you wish to stop looking.")]
+		[Header("Target Smoothing")]
 		public Transform target;
 
 		[Range(0f, 1f)]
@@ -21,8 +21,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("The time it takes to blend in/out of LookAtIK weight.")]
 		public float weightSmoothTime;
 
-		[Tooltip("Enables smooth turning towards the target according to the parameters under this header.")]
 		[Header("Turning Towards The Target")]
+		[Tooltip("Enables smooth turning towards the target according to the parameters under this header.")]
 		public bool smoothTurnTowardsTarget;
 
 		[Tooltip("Speed of turning towards the target using Vector3.RotateTowards.")]
@@ -40,8 +40,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("Minimum distance of looking from the first bone. Keeps the solver from failing if the target is too close.")]
 		public float minDistance;
 
-		[Tooltip("Character root will be rotate around the Y axis to keep root forward within this angle from the look direction.")]
 		[Header("RootRotation")]
+		[Tooltip("Character root will be rotate around the Y axis to keep root forward within this angle from the look direction.")]
 		[Range(0f, 180f)]
 		public float maxRootAngle;
 
@@ -59,7 +59,13 @@ namespace RootMotion.FinalIK
 
 		private bool lastSmoothTowardsTarget;
 
-		private Vector3 pivot => default(Vector3);
+		private Vector3 pivot
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
 		private void Start()
 		{
@@ -74,6 +80,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void RootRotation()
+		{
+		}
+
+		public LookAtController()
+			: base()
 		{
 		}
 	}

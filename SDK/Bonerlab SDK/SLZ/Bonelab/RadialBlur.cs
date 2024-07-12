@@ -42,5 +42,10 @@ namespace SLZ.Bonelab
 		private void ChangeMaterialBlur()
 		{
 		}
+
+		public RadialBlur()
+			: base()
+		{
+		}
 	}
 }

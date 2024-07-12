@@ -1,15 +1,10 @@
-using SLZ.Marrow.Utilities;
-using SLZ.Props.Weapons;
+using SLZ.Bonelab;
 
 namespace SLZ.Interaction
 {
 	public class AmmoPlug : AlignPlug
 	{
-		private static ComponentCache<AmmoPlug> _cache;
-
 		public Magazine magazine;
-
-		public new static ComponentCache<AmmoPlug> Cache => null;
 
 		protected override void OnPlugInsertComplete()
 		{
@@ -19,11 +14,8 @@ namespace SLZ.Interaction
 		{
 		}
 
-		protected override void Awake()
-		{
-		}
-
-		protected override void OnDestroy()
+		public AmmoPlug()
+			: base()
 		{
 		}
 	}

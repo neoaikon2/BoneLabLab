@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.Utilities;
 using TMPro;
 using UnityEngine;
@@ -23,13 +24,13 @@ namespace SLZ.Bonelab
 
 			private List<Texture2D> totalTextureSet;
 
-			public ObjectDebug(GameObject _inputGameobject, List<ObjectRendererDebug> _renderers, Dictionary<Renderer, MeshFilter> _staticRendererFilterFix = null)
+			public ObjectDebug(GameObject inputGameobject, List<Renderer> renderers, Dictionary<Renderer, MeshFilter> staticRendererFilterFix = default(Dictionary<Renderer, MeshFilter>))
 			{
-				gameObject = _inputGameobject;
-				rendererDebugs = _renderers;
-				totalTextureMemory = 0;
-				totalMemory = 0;
-				totalTextureSet = new List<Texture2D>();
+				this.totalTextureSet = default(List<Texture2D>);
+				this.totalMemory = default(ulong);
+				this.totalTextureMemory = default(ulong);
+				this.rendererDebugs = default(List<ObjectRendererDebug>);
+				this.gameObject = default(GameObject);
 			}
 
 			public void CalcTotalMemory()
@@ -52,14 +53,14 @@ namespace SLZ.Bonelab
 
 			private List<Texture2D> totalTextureSet;
 
-			public ObjectRendererDebug(Renderer _rendererInput)
+			public ObjectRendererDebug(Renderer rendererInput)
 			{
-				gameObject = new GameObject();
-				renderer = _rendererInput;
-				filter = new MeshFilter();
-				materials = new List<ObjectMaterialDebug>();
-				totalTextureMemory = 0;
-				totalTextureSet = new List<Texture2D>();
+				this.totalTextureSet = default(List<Texture2D>);
+				this.totalTextureMemory = default(ulong);
+				this.materials = default(List<ObjectMaterialDebug>);
+				this.filter = default(MeshFilter);
+				this.renderer = default(Renderer);
+				this.gameObject = default(GameObject);
 			}
 
 			public void CalcTotalMemory()
@@ -82,14 +83,14 @@ namespace SLZ.Bonelab
 
 			private List<Texture2D> totalTextureSet;
 
-			public ObjectMaterialDebug(Material _materialInput)
+			public ObjectMaterialDebug(Material materialInput)
 			{
-				materialName = "";				
-				material = _materialInput;
-				materialTextures = new List<MaterialTexture>();
-				mainTexture = new MaterialTexture();
-				totalTextureMemory = 0;
-				totalTextureSet = new List<Texture2D>();
+				this.totalTextureSet = default(List<Texture2D>);
+				this.totalTextureMemory = default(ulong);
+				this.mainTexture = default(MaterialTexture?);
+				this.materialTextures = default(List<MaterialTexture>);
+				this.material = default(Material);
+				this.materialName = default(string);
 			}
 
 			public void CalcTotalMemory()
@@ -98,12 +99,12 @@ namespace SLZ.Bonelab
 
 			public bool IsMainTexture(Texture tex)
 			{
-				return false;
+				return default(bool);
 			}
 
 			public bool IsMainTexture(MaterialTexture matTex)
 			{
-				return false;
+				return default(bool);
 			}
 		}
 
@@ -122,11 +123,11 @@ namespace SLZ.Bonelab
 
 			public MaterialTexture(string shaderPropName, Texture2D tex)
 			{
-				shaderPropertyName = shaderPropName;
-				texture = tex;
-				textureMemory = 0;
-				customMip = false;
-				lastMipLevel = 0;
+				this.lastMipLevel = default(int);
+				this.customMip = default(bool);
+				this.textureMemory = default(ulong);
+				this.texture = default(Texture2D);
+				this.shaderPropertyName = default(string);
 			}
 
 			public void SetCustomMip(int level)
@@ -169,10 +170,10 @@ namespace SLZ.Bonelab
 
 			public TexturePreviewBox(RawImage inputImage)
 			{
-				gameObject = new GameObject();
-				image = inputImage;
-				desiredMipImage = null;
-				loadedMipImage = null;
+				this.loadedMipImage = default(Image);
+				this.desiredMipImage = default(Image);
+				this.image = default(RawImage);
+				this.gameObject = default(GameObject);
 			}
 		}
 
@@ -268,9 +269,9 @@ namespace SLZ.Bonelab
 
 		public LayerMask layerMask;
 
-		[Header("Selected Texture Tools")]
-		[ReadOnly(false)]
 		[SerializeField]
+		[ReadOnly(false)]
+		[Header("Selected Texture Tools")]
 		private Texture2D selectedTexture;
 
 		[ReadOnly(false)]
@@ -286,16 +287,16 @@ namespace SLZ.Bonelab
 		public bool selectNextRenderer;
 
 		[Header("Runtime Values")]
-		[ReadOnly(false)]
 		[SerializeField]
+		[ReadOnly(false)]
 		private Camera activeCamera;
 
-		[TextArea(2, 20)]
 		[SerializeField]
+		[TextArea(2, 20)]
 		private string debugText;
 
-		[TextArea(2, 20)]
 		[SerializeField]
+		[TextArea(2, 20)]
 		private string debugGlobalText;
 
 		[TextArea(2, 20)]
@@ -308,16 +309,16 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private ObjectRendererDebug? selectedRenderer;
 
-		[ReadOnly(false)]
 		[SerializeField]
+		[ReadOnly(false)]
 		private int selectedRendererIndex;
 
-		[ReadOnly(false)]
 		[SerializeField]
+		[ReadOnly(false)]
 		private int budget;
 
-		[ReadOnly(false)]
 		[SerializeField]
+		[ReadOnly(false)]
 		private int maxLevelReduction;
 
 		[ReadOnly(false)]
@@ -528,7 +529,7 @@ namespace SLZ.Bonelab
 
 		private float InverseLerpUnclamped(float x, float y, float value)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private string GenerateColorText(string text, Color color)
@@ -558,6 +559,11 @@ namespace SLZ.Bonelab
 		private Color MipLevelToColor(int mipLevel)
 		{
 			return default(Color);
+		}
+
+		public TextureStreamingDebugTool()
+			: base()
+		{
 		}
 	}
 }

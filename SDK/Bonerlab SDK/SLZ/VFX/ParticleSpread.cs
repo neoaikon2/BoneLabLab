@@ -32,5 +32,10 @@ namespace SLZ.VFX
 		public void GetPS()
 		{
 		}
+
+		public ParticleSpread()
+			: base()
+		{
+		}
 	}
 }

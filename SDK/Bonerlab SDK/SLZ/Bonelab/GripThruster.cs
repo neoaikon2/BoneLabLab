@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using SLZ.AI;
 using SLZ.Interaction;
-using SLZ.Marrow.Utilities;
+using SLZ.Marrow.AI;
 using SLZ.SFX;
 using UnityEngine;
 
@@ -9,8 +8,6 @@ namespace SLZ.Bonelab
 {
 	public class GripThruster : MonoBehaviour
 	{
-		private static ComponentCache<GripThruster> _cache;
-
 		public GravGunSFX sfx;
 
 		public Grip triggerGrip;
@@ -43,8 +40,6 @@ namespace SLZ.Bonelab
 
 		private bool isExploding;
 
-		public static ComponentCache<GripThruster> Cache => null;
-
 		private void Awake()
 		{
 		}
@@ -72,6 +67,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDrawGizmos()
+		{
+		}
+
+		public GripThruster()
+			: base()
 		{
 		}
 	}

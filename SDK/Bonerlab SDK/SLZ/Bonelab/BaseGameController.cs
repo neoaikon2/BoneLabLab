@@ -3,18 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.AI;
 using SLZ.Data;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
-using SLZ.Props;
-using SLZ.Props.Weapons;
+using SLZ.Marrow.Zones;
 using SLZ.Rig;
-using SLZ.SFX;
-using SLZ.Zones;
 using TMPro;
+using UltEvents;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.SceneManagement;
 
 namespace SLZ.Bonelab
 {
@@ -50,403 +48,7 @@ namespace SLZ.Bonelab
 			NONE = 2
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CCoDelayedStart_003Ed__130
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BaseGameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoDelayedStart_003Ed__130(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoTimerUp_003Ed__131
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BaseGameController _003C_003E4__this;
-
-			private float _003ClastTimeSent_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoTimerUp_003Ed__131(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoTimerUpRealtime_003Ed__132
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BaseGameController _003C_003E4__this;
-
-			private float _003ClastTimeSent_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoTimerUpRealtime_003Ed__132(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoTimerDown_003Ed__133
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BaseGameController _003C_003E4__this;
-
-			private float _003ClastTimeSent_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoTimerDown_003Ed__133(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoTimerRealtime_003Ed__134
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BaseGameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoTimerRealtime_003Ed__134(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoDelayedEnd_003Ed__135
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BaseGameController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoDelayedEnd_003Ed__135(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoDelayedDespawn_003Ed__145
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float seconds;
-
-			public BaseGameController _003C_003E4__this;
-
-			public AIBrain brain;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoDelayedDespawn_003Ed__145(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoDelayedReload_003Ed__160
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float delay;
-
-			public BaseGameController _003C_003E4__this;
-
-			private float _003Ctimer_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoDelayedReload_003Ed__160(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
+		public string LevelKey;
 
 		public GameMode gameMode;
 
@@ -455,15 +57,6 @@ namespace SLZ.Bonelab
 		public EndMode endMode;
 
 		public DebugMode debugMode;
-
-		[Tooltip("Name of the scene used for debug logs, defaults to scene title string.")]
-		public string sceneTitle;
-
-		[SerializeField]
-		private string sceneDescription;
-
-		[SerializeField]
-		private string explicitSceneName;
 
 		[SerializeField]
 		private LevelCrateReference explicitSceneCrate;
@@ -501,8 +94,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private float defaultEndDelayedMaxTime;
 
-		[SerializeField]
 		[Header("Stats")]
+		[SerializeField]
 		public int score;
 
 		[SerializeField]
@@ -523,33 +116,19 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		public int friendlyRespawnAmount;
 
+		public MarrowEntity playerEntity;
+
 		public RigManager rigManager;
 
 		public GameObject playerObject;
 
 		public TriggerRefProxy playerProxy;
 
-		[SerializeField]
-		protected MusicAmbience2dSFX headSFX;
-
 		public Rigidbody[] allPlayerRBs;
 
 		public Rigidbody playerPelvisBody;
 
 		public GenGameControl_Trigger startTrigger;
-
-		private Scene activeScene;
-
-		[SerializeField]
-		protected List<CollectiblePickup> collectiblePickupList;
-
-		public bool isTrackingCollectibles;
-
-		public int collectedAmount;
-
-		public int totalCollectibles;
-
-		public UnityEvent onCollectedAll;
 
 		public List<TMP_Text> modeTexts;
 
@@ -571,24 +150,26 @@ namespace SLZ.Bonelab
 
 		private Coroutine timerRoutine;
 
-		[Tooltip("Assuming all zones are the child of a single transform, will be used to grab all zone refs")]
 		[SerializeField]
+		[Tooltip("Assuming all zones are the child of a single transform, will be used to grab all zone refs")]
 		private GameObject zoneParentObj;
 
-		[SerializeField]
-		[Tooltip("List of all scene zones in the scene, use 'GetSceneZones' button to populate")]
-		public List<SceneZone> sceneZoneList;
+		public List<Zone> zoneList;
 
 		public List<ZoneDisplayEditor> zoneDisplayList;
 
-		[SerializeField]
-		[Tooltip("List of all zone spawners in the scene, use 'GetZoneSpawners' button to populate")]
-		public List<ZoneSpawner> zoneSpawnerList;
+		public Dictionary<Zone, ZoneDisplayEditor> zoneNPCLookup;
+
+		public List<GameObject> nothingGOList;
+
+		public List<ProfileSpawner> profileSpawnerList;
+
+		public List<CrateSpawner> crateSpawnerList;
 
 		[SerializeField]
-		public ZoneSpawner safetyZoneSpawner;
+		public ProfileSpawner safetyZoneSpawner;
 
-		protected List<ZoneSpawner> removeSpawnerList;
+		protected List<ProfileSpawner> removeSpawnerList;
 
 		[HideInInspector]
 		public bool isTrackingEnemies;
@@ -603,20 +184,20 @@ namespace SLZ.Bonelab
 		[Tooltip("A list of all npcs that have been spawned since session began")]
 		protected List<AIBrain> NPC_List;
 
-		[SerializeField]
 		[Tooltip("A list of all living enemy NPC's")]
+		[SerializeField]
 		protected List<AIBrain> Alive_Enemy_List;
 
-		[SerializeField]
 		[Tooltip("A list of all dead enemy NPC's")]
+		[SerializeField]
 		protected List<AIBrain> Dead_Enemy_List;
 
 		[SerializeField]
 		[Tooltip("A list of all the friendly npcs")]
 		protected List<AIBrain> FriendlyNPC_List;
 
-		[SerializeField]
 		[Tooltip("A list of all living enemy NPC's")]
+		[SerializeField]
 		protected List<AIBrain> Alive_Friendly_List;
 
 		[SerializeField]
@@ -645,44 +226,13 @@ namespace SLZ.Bonelab
 
 		protected Dictionary<GameObject, NPC_Data> NPC_Data_Dict;
 
-		protected Dictionary<ZoneSpawner, NPC_Data> NPC_Zone_Dict;
+		protected Dictionary<ProfileSpawner, NPC_Data> NPC_Zone_Dict;
+
+		public Action OnPlayerFound;
 
 		public Action<NPC_Data> onNPCRegistration;
 
 		public Action<NPC_Data> OnRegisteredNPCDeath;
-
-		[SerializeField]
-		private Gun[] guns;
-
-		[SerializeField]
-		private List<GameObject> meleeObjList;
-
-		[SerializeField]
-		private Magazine[] magazines;
-
-		[SerializeField]
-		private AmmoPickup[] ammoPickups;
-
-		[SerializeField]
-		private List<ObjectDestructable> destAmmoBoxList;
-
-		[SerializeField]
-		private int lightAmmoAvailable;
-
-		[SerializeField]
-		private int medAmmoAvailable;
-
-		[SerializeField]
-		private int heavyAmmoAvailable;
-
-		[SerializeField]
-		private int lightAmmoCollected;
-
-		[SerializeField]
-		private int medAmmoCollected;
-
-		[SerializeField]
-		private int heavyAmmoCollected;
 
 		public BoneLeaderManager boneLeaderManager;
 
@@ -691,11 +241,19 @@ namespace SLZ.Bonelab
 		public int crabletAgentID;
 
 		[Header("SESSION EVENTS")]
+		[Obsolete("Migrate Unity Event to Ult Event")]
 		[Tooltip("Session is initialized, timer routine starts")]
 		public UnityEvent onSessionBegin;
 
+		[Tooltip("Session is initialized, timer routine starts")]
+		public UltEvent sessionBegin;
+
+		[Obsolete("Migrate Unity Event to Ult Event")]
 		[Tooltip("Session is complete, timer routine ends")]
 		public UnityEvent onSessionEnd;
+
+		[Tooltip("Session is complete, timer routine ends")]
+		public UltEvent sessionEnd;
 
 		public StaticProfiles staticProfile;
 
@@ -737,8 +295,6 @@ namespace SLZ.Bonelab
 
 		public NPC_Data currNPC;
 
-		public ZoneItem currZoneItem;
-
 		public Texture soundIcon;
 
 		public Texture settingsIcon;
@@ -751,7 +307,13 @@ namespace SLZ.Bonelab
 
 		public string profileTitle;
 
-		public float elapsedTime => 0f;
+		public float elapsedTime
+		{
+			get
+			{
+				return default(float);
+			}
+		}
 
 		protected virtual void Awake()
 		{
@@ -765,7 +327,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		protected virtual void Start()
+		public virtual void Start()
+		{
+		}
+
+		private void OnLevelLoadGetPlayer()
 		{
 		}
 
@@ -779,37 +345,35 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedStart_003Ed__130))]
+		public void DoCompleteLevel()
+		{
+		}
+
 		private IEnumerator CoDelayedStart()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerUp_003Ed__131))]
 		private IEnumerator CoTimerUp()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerUpRealtime_003Ed__132))]
 		private IEnumerator CoTimerUpRealtime()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerDown_003Ed__133))]
 		private IEnumerator CoTimerDown()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerRealtime_003Ed__134))]
 		private IEnumerator CoTimerRealtime()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedEnd_003Ed__135))]
 		private IEnumerator CoDelayedEnd()
 		{
 			return null;
@@ -836,11 +400,7 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
-		public void RegisterNPCBase(ZoneSpawner zoneSpawn, AIBrain brain, EnemyProfile enemyProfile, bool isFriendly)
-		{
-		}
-
-		public void DeRegisterNPCBase(ZoneTracker tracker)
+		public void RegisterNPCBase(ProfileSpawner profileSpawner, AIBrain brain, EnemyProfile enemyProfile, bool isFriendly)
 		{
 		}
 
@@ -852,7 +412,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedDespawn_003Ed__145))]
+		public void KillAll()
+		{
+		}
+
 		private IEnumerator CoDelayedDespawn(AIBrain brain, float seconds)
 		{
 			return null;
@@ -866,32 +429,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void DebugTime()
-		{
-		}
-
 		public void KillVolumeNPCRemoval(GameObject npcObj)
 		{
 		}
 
-		[ContextMenu("CreateSeeker")]
-		public void CreateDefSeeker()
-		{
-		}
-
-		public void CreateTrialSeekers()
-		{
-		}
-
-		protected void CreateZoneSeeker(ZoneSpawner spawner)
-		{
-		}
-
-		private void OnAmmoUpdate(string ammoWeight, int count)
-		{
-		}
-
-		private void OnCollected(CollectiblePickup pickup)
+		protected void CreateZoneSeeker(AIBrain brain)
 		{
 		}
 
@@ -915,7 +457,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedReload_003Ed__160))]
 		private IEnumerator CoDelayedReload(float delay)
 		{
 			return null;
@@ -935,6 +476,11 @@ namespace SLZ.Bonelab
 
 		[ContextMenu("GetAllLinkData")]
 		public void GetAllLinkData()
+		{
+		}
+
+		public BaseGameController()
+			: base()
 		{
 		}
 	}

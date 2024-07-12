@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
-	[HelpURL("https://www.youtube.com/watch?v=7__IafZGwvI&index=1&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
 	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Full Body Biped IK")]
+	[HelpURL("https://www.youtube.com/watch?v=7__IafZGwvI&index=1&list=PLVxSIA1OaTOu8Nos3CalXbJ2DrKnntMv6")]
 	public class FullBodyBipedIK : IK
 	{
 		public BipedReferences references;
@@ -49,14 +49,14 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public bool ReferencesError(ref string errorMessage)
+		public bool ReferencesError(string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public bool ReferencesWarning(ref string warningMessage)
+		public bool ReferencesWarning(string warningMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
 		[ContextMenu("Reinitiate")]
@@ -66,6 +66,11 @@ namespace RootMotion.FinalIK
 
 		[ContextMenu("Auto-detect References")]
 		private void AutoDetectReferences()
+		{
+		}
+
+		public FullBodyBipedIK()
+			: base()
 		{
 		}
 	}

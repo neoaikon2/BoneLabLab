@@ -1,10 +1,12 @@
+using SLZ.Bonelab.Obsolete;
+using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
 using UnityEngine;
 using UnityEngine.Video;
 
 namespace SLZ.Bonelab
 {
-	public class GameControl_EmptyGround : MonoBehaviour
+	public class GameControl_EmptyGround : BonelabInternalGameControl
 	{
 		[Header("ValvePuzzle")]
 		public ConfigurableJoint jpz_Valve;
@@ -35,8 +37,6 @@ namespace SLZ.Bonelab
 
 		public int count_SolveToggles;
 
-		public GameObject obj_newCage;
-
 		[Header("Light Control")]
 		public GameObject obj_Light_Title;
 
@@ -46,7 +46,7 @@ namespace SLZ.Bonelab
 
 		public GameObject obj_Light_Warning;
 
-		public GameObject obj_Flashlight;
+		public CrateSpawner obj_Flashlight;
 
 		[Header("End Game")]
 		public GameObject obj_FXParticleStars;
@@ -62,11 +62,21 @@ namespace SLZ.Bonelab
 
 		public GameObject[] obj_firstRecursion;
 
+		public CrateSpawner[] crates_firstRecursion;
+
 		public GameObject[] obj_secondRecursion;
+
+		public CrateSpawner[] crates_secondRecursion;
 
 		public GameObject[] obj_thirdRecursion;
 
-		private void Start()
+		public CrateSpawner[] crates_thirdRecursion;
+
+		public override void Start()
+		{
+		}
+
+		public override void Awake()
 		{
 		}
 
@@ -82,7 +92,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void LockTheLights()
+		public void LockTheLights(bool momentary = false)
+		{
+		}
+
+		public void TargetTriggerVoltCheck()
 		{
 		}
 
@@ -102,6 +116,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		public void BALLISTICDOOR(bool open = false)
+		{
+		}
+
 		public void SecondRound()
 		{
 		}
@@ -111,6 +129,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void SetRecurseObjects(bool objectsOn)
+		{
+		}
+
+		public GameControl_EmptyGround()
+			: base()
 		{
 		}
 	}

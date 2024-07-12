@@ -17,12 +17,17 @@ namespace SLZ.Bonelab
 
 		public override bool Equals(object obj)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override int GetHashCode()
 		{
-			return 0;
+			return default(int);
+		}
+
+		public SplineTimelineNode()
+			: base()
+		{
 		}
 	}
 }

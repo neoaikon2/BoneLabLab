@@ -13,5 +13,10 @@ namespace SLZ.Bonelab
 		public void SETMODULESTATE(string state)
 		{
 		}
+
+		public ModuleHandler()
+			: base()
+		{
+		}
 	}
 }

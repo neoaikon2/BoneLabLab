@@ -7,11 +7,8 @@ namespace SLZ.Bonelab
 	{
 		public MeshRenderer referenceRenderer;
 
-		public void Awake()
-		{
-		}
-
-		public void CopyLightmaps()
+		public LightmapCopier()
+			: base()
 		{
 		}
 	}

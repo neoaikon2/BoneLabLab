@@ -41,10 +41,6 @@ namespace Oculus.Platform
 
 		private static Dictionary<Message.MessageType, RequestCallback> notificationCallbacks;
 
-		private static bool hasRegisteredRoomInviteNotificationHandler;
-
-		private static List<Message> pendingRoomInviteNotifications;
-
 		private static bool hasRegisteredJoinIntentNotificationHandler;
 
 		private static Message latestPendingJoinIntentNotifications;
@@ -70,10 +66,6 @@ namespace Oculus.Platform
 		}
 
 		internal static void OnApplicationQuit()
-		{
-		}
-
-		private static void FlushRoomInviteNotificationQueue()
 		{
 		}
 

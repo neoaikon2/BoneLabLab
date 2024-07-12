@@ -70,28 +70,18 @@ namespace SplineMesh
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
 			}
 		}
 
-		[HideInInspector]
-		public event EventHandler Changed
+		public SplineNode(Vector3 position, Vector3 direction)
+			: base()
 		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
 		}
 
-		public SplineNode(Vector3 position, Vector3 direction)
-		{
-		}
+		public event EventHandler Changed;
 	}
 }

@@ -32,5 +32,10 @@ namespace SLZ.VFX
 		private void Update()
 		{
 		}
+
+		public DrawLinesFromArray()
+			: base()
+		{
+		}
 	}
 }

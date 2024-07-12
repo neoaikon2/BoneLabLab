@@ -11,5 +11,10 @@ namespace Dynamite3D.RealIvy
 		public BranchPoint initSegment;
 
 		public BranchPoint endSegment;
+
+		public BranchSegment()
+			: base()
+		{
+		}
 	}
 }

@@ -31,5 +31,10 @@ namespace SplineMesh
 		private void PlaceFollower()
 		{
 		}
+
+		public ExampleFollowSpline()
+			: base()
+		{
+		}
 	}
 }

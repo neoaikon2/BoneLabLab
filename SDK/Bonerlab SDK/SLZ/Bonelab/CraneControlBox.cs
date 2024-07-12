@@ -3,116 +3,23 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Bonelab.Obsolete;
 using SLZ.Interaction;
+using SLZ.Marrow.VoidLogic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
 	public class CraneControlBox : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CFullCraneResetCoroutine_003Ed__28
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public CraneControlBox _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CFullCraneResetCoroutine_003Ed__28(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CDeactivation_003Ed__29
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public CraneControlBox _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CDeactivation_003Ed__29(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public GameObject lineRenderers;
 
 		public JoystickForwarder joystick;
 
-		public Control_PowerLever zControls;
+		public SLZ.Marrow.VoidLogic.PowerSource zControls;
 
-		public ButtonToggle button;
+		public SLZ.Marrow.VoidLogic.PowerSource gravControlButtonPowerSource;
 
 		public Powerable_Joint[] craneSegments;
 
@@ -156,6 +63,10 @@ namespace SLZ.Bonelab
 
 		private bool inCraneVolume;
 
+		public UnityEvent craneActivateEvent;
+
+		public UnityEvent craneDeactivateEvent;
+
 		private void Start()
 		{
 		}
@@ -168,13 +79,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CFullCraneResetCoroutine_003Ed__28))]
 		public IEnumerator FullCraneResetCoroutine()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CDeactivation_003Ed__29))]
 		private IEnumerator Deactivation()
 		{
 			return null;
@@ -193,6 +102,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void DeactivateCraneColliders()
+		{
+		}
+
+		public CraneControlBox()
+			: base()
 		{
 		}
 	}

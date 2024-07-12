@@ -50,6 +50,10 @@ namespace SLZ.Marrow.Input
 		{
 		}
 
+		void InputActions.IHMDActions.OnIsTracked(InputAction.CallbackContext context)
+		{
+		}
+
 		public override void Refresh()
 		{
 		}

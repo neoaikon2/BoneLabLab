@@ -19,9 +19,9 @@ namespace RootMotion.FinalIK
 
 		private Vector3 rootDefaultPosition;
 
-		public override bool IsValid(ref string message)
+		public override bool IsValid(string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void StoreDefaultLocalState()
@@ -38,7 +38,7 @@ namespace RootMotion.FinalIK
 
 		private bool IsRoot(int index)
 		{
-			return false;
+			return default(bool);
 		}
 
 		protected override void OnUpdate()
@@ -55,13 +55,18 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		private void AddPointsToArray(ref Point[] array, FABRIKChain chain)
+		private void AddPointsToArray(Point[] array, FABRIKChain chain)
 		{
 		}
 
 		private Vector3 GetCentroid()
 		{
 			return default(Vector3);
+		}
+
+		public IKSolverFABRIKRoot()
+			: base()
+		{
 		}
 	}
 }

@@ -9,16 +9,14 @@ namespace SLZ.Marrow.Interaction
 	[RequireComponent(typeof(Rigidbody))]
 	public class SplineJoint : MonoBehaviour
 	{
-		private static ComponentCache<SplineJoint> _cache;
-
 		private static float3 _right;
 
 		private static float3 _up;
 
 		private static float3 _forward;
 
-		[SerializeField]
 		[Header("Configuration")]
+		[SerializeField]
 		private ContactCount _contactCount;
 
 		[SerializeField]
@@ -40,9 +38,9 @@ namespace SLZ.Marrow.Interaction
 		[SerializeField]
 		private DampenContactDrive _linearXDrive;
 
-		[Tooltip("Sets rotational twist motion on the configured axis")]
-		[SerializeField]
 		[Space(15f)]
+		[SerializeField]
+		[Tooltip("Sets rotational twist motion on the configured axis")]
 		private ConfigurableJointMotion _angularXMotion;
 
 		[Range(-177f, 177f)]
@@ -59,8 +57,8 @@ namespace SLZ.Marrow.Interaction
 		[SerializeField]
 		private SpringContactDrive _angularXDrive;
 
-		[Space(15f)]
 		[SerializeField]
+		[Space(15f)]
 		private SplineJointMotion _linearYZMotion;
 
 		[SerializeField]
@@ -69,9 +67,9 @@ namespace SLZ.Marrow.Interaction
 		[SerializeField]
 		private SpringContactDrive _linearYZDrive;
 
+		[SerializeField]
 		[Space(15f)]
 		[Tooltip("Sets rotational swing motion on the configured axis")]
-		[SerializeField]
 		private ConfigurableJointMotion _angularYZMotion;
 
 		[Range(0f, 177f)]
@@ -91,14 +89,6 @@ namespace SLZ.Marrow.Interaction
 		private List<Contact> _contacts;
 
 		private int _curSplineIndex;
-
-		public static ComponentCache<SplineJoint> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
 
 		private Quaternion AnchorRotation
 		{
@@ -140,7 +130,11 @@ namespace SLZ.Marrow.Interaction
 		{
 		}
 
-		private void Start()
+		private void OnDisable()
+		{
+		}
+
+		private void OnEnable()
 		{
 		}
 

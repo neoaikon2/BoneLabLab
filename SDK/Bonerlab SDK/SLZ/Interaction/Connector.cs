@@ -1,6 +1,6 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using SLZ.Marrow.Interaction;
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -15,10 +15,8 @@ namespace SLZ.Interaction
 			Socket = 2
 		}
 
-		private static ComponentCache<Connector> _cache;
-
-		[Header("Connector")]
 		[SerializeField]
+		[Header("Connector")]
 		private Type _type;
 
 		[SerializeField]
@@ -36,21 +34,11 @@ namespace SLZ.Interaction
 
 		private readonly HashSet<Connector> _otherConnectors;
 
-		public new static ComponentCache<Connector> Cache => null;
-
 		public bool HasOtherConnector { get; private set; }
 
 		public Connector OtherConnector { get; private set; }
 
 		public Quaternion AlignRotation { get; private set; }
-
-		protected override void Awake()
-		{
-		}
-
-		protected override void OnDestroy()
-		{
-		}
 
 		public override void OnOverlapEnter(GameObject other)
 		{
@@ -73,6 +61,11 @@ namespace SLZ.Interaction
 		}
 
 		protected virtual void OnConnectorHoverEnd()
+		{
+		}
+
+		public Connector()
+			: base()
 		{
 		}
 	}

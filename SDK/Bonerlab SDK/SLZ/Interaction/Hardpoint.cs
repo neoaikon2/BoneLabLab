@@ -13,5 +13,10 @@ namespace SLZ.Interaction
 		protected override void OnHoverUpdate(InteractableHost host)
 		{
 		}
+
+		public Hardpoint()
+			: base()
+		{
+		}
 	}
 }

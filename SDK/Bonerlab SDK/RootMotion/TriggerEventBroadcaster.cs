@@ -17,5 +17,10 @@ namespace RootMotion
 		private void OnTriggerExit(Collider collider)
 		{
 		}
+
+		public TriggerEventBroadcaster()
+			: base()
+		{
+		}
 	}
 }

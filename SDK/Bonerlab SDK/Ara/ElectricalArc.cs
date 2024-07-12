@@ -34,5 +34,10 @@ namespace Ara
 		private void ChangeArc()
 		{
 		}
+
+		public ElectricalArc()
+			: base()
+		{
+		}
 	}
 }

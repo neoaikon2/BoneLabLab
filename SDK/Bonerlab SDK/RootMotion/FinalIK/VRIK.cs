@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -65,19 +66,35 @@ namespace RootMotion.FinalIK
 			[Tooltip("Optional")]
 			public Transform rightToes;
 
-			public bool isFilled => false;
+			public bool isFilled
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
-			public bool isEmpty => false;
+			public bool isEmpty
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
 			public Transform[] GetTransforms()
 			{
 				return null;
 			}
 
-			public static bool AutoDetectReferences(Transform root, out References references)
+			public static bool AutoDetectReferences(Transform root, [Out] References references)
 			{
-				references = null;
-				return false;
+				return default(bool);
+			}
+
+			public References()
+				: base()
+			{
 			}
 		}
 
@@ -123,6 +140,11 @@ namespace RootMotion.FinalIK
 		}
 
 		protected override void UpdateSolver()
+		{
+		}
+
+		public VRIK()
+			: base()
 		{
 		}
 	}

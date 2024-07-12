@@ -64,7 +64,7 @@ namespace SLZ.VRMK
 
 		private float _carpalPercentDefault;
 
-		private float _toeHeightPercentDefault;
+		private float _toeHeightDefault;
 
 		private float _tippyToeExtDefault;
 
@@ -82,7 +82,6 @@ namespace SLZ.VRMK
 
 		private Vector3 _palmRtPercDefault;
 
-		/*
 		public override void Awake()
 		{
 		}
@@ -106,8 +105,13 @@ namespace SLZ.VRMK
 		public override void RefreshBodyMeasurements()
 		{
 		}
-		*/
+
 		public override void OnDrawGizmosSelected()
+		{
+		}
+
+		public RealHeptaAvatar()
+			: base()
 		{
 		}
 	}

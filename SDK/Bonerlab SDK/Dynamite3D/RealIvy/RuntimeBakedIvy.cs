@@ -6,7 +6,7 @@ namespace Dynamite3D.RealIvy
 	{
 		public override bool IsGrowingFinished()
 		{
-			return false;
+			return default(bool);
 		}
 
 		protected override void Init(IvyContainer ivyContainer, IvyParameters ivyParameters)
@@ -19,7 +19,7 @@ namespace Dynamite3D.RealIvy
 
 		protected override float GetNormalizedLifeTime()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		protected override void InitializeMeshesData(Mesh bakedMesh, int numBranches)
@@ -28,12 +28,12 @@ namespace Dynamite3D.RealIvy
 
 		protected override int GetMaxNumPoints()
 		{
-			return 0;
+			return default(int);
 		}
 
 		protected override int GetMaxNumLeaves()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public override void InitIvy(RuntimeGrowthParameters growthParameters, IvyContainer ivyContainer, IvyParameters ivyParameters)
@@ -41,6 +41,11 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public void InitIvyEditor(RuntimeGrowthParameters growthParameters, IvyContainer ivyContainer, IvyParameters ivyParameters)
+		{
+		}
+
+		public RuntimeBakedIvy()
+			: base()
 		{
 		}
 	}

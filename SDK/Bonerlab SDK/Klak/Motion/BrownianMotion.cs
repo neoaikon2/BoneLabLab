@@ -48,7 +48,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return false;
+				return default(bool);
 			}
 			set
 			{
@@ -59,7 +59,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return false;
+				return default(bool);
 			}
 			set
 			{
@@ -70,7 +70,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -81,7 +81,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -92,7 +92,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -103,7 +103,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -136,7 +136,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0;
+				return default(int);
 			}
 			set
 			{
@@ -147,7 +147,7 @@ namespace Klak.Motion
 		{
 			get
 			{
-				return 0;
+				return default(int);
 			}
 			set
 			{
@@ -167,6 +167,11 @@ namespace Klak.Motion
 		}
 
 		private void Update()
+		{
+		}
+
+		public BrownianMotion()
+			: base()
 		{
 		}
 	}

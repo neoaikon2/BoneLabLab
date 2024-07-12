@@ -35,5 +35,10 @@ namespace SLZ.Bonelab
 		public void SetOrigin()
 		{
 		}
+
+		public PolyEllipse()
+			: base()
+		{
+		}
 	}
 }

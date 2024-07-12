@@ -4,13 +4,18 @@ namespace SLZ.Interaction
 {
 	public class Slide : MonoBehaviour
 	{
-		[Header("Options")]
 		[Tooltip("Axis is realtive to parent")]
+		[Header("Options")]
 		public Vector3 slideAxis;
 
 		public float limit;
 
 		[Header("References")]
 		public Grip slideGrip;
+
+		public Slide()
+			: base()
+		{
+		}
 	}
 }

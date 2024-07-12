@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -23,6 +24,7 @@ namespace SplineMesh
 		public float Length { get; private set; }
 
 		public CubicBezierCurve(SplineNode n1, SplineNode n2)
+			: base()
 		{
 		}
 
@@ -61,7 +63,7 @@ namespace SplineMesh
 
 		private float GetRoll(float t)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private void ComputeSamples(object sender, EventArgs e)

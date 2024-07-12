@@ -27,42 +27,6 @@ namespace Dynamite3D.RealIvy
 
 		private State state;
 
-		public event Action OnGrowthStarted
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event Action OnGrowthPaused
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event Action OnGrowthFinished
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
 		private void Awake()
 		{
 		}
@@ -98,5 +62,16 @@ namespace Dynamite3D.RealIvy
 		private void UpdateGrowingState(float deltaTime)
 		{
 		}
+
+		public IvyController()
+			: base()
+		{
+		}
+
+		public event Action OnGrowthStarted;
+
+		public event Action OnGrowthPaused;
+
+		public event Action OnGrowthFinished;
 	}
 }

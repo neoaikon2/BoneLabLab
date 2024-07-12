@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 		private void OnTriggerEnter(Collider other)
 		{
 		}
+
+		public SplineBodyTrigger()
+			: base()
+		{
+		}
 	}
 }

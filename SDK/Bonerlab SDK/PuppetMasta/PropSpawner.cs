@@ -1,14 +1,16 @@
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace PuppetMasta
 {
 	public class PropSpawner : MonoBehaviour
 	{
-		private static ComponentCache<PropSpawner> _cache;
-
 		[HideInInspector]
 		public Rigidbody propRb;
 
@@ -35,9 +37,9 @@ namespace PuppetMasta
 
 		private Collider[] _cols;
 
-		private AssetPoolee _propPoolee;
+		private Poolee _propPoolee;
 
-		private AssetPoolee _poolee;
+		private Poolee _poolee;
 
 		[HideInInspector]
 		public bool _hasBeenSpawnedOnce;
@@ -46,13 +48,15 @@ namespace PuppetMasta
 
 		public bool despawnDetachedProp;
 
-		public static ComponentCache<PropSpawner> Cache => null;
+		private float breakDistance;
+
+		private float linearLimit;
+
+		private Vector3 cbPos;
+
+		private Vector3 anchorPos;
 
 		private void Awake()
-		{
-		}
-
-		private void Start()
 		{
 		}
 
@@ -60,11 +64,15 @@ namespace PuppetMasta
 		{
 		}
 
-		public void OnDespawn(GameObject go)
+		private void Start()
 		{
 		}
 
 		public void OnSpawn(GameObject gameObject)
+		{
+		}
+
+		public void OnDespawn(GameObject go)
 		{
 		}
 
@@ -80,7 +88,17 @@ namespace PuppetMasta
 		{
 		}
 
-		private void SpawnHatJoint()
+		private UniTaskVoid SpawnHatJoint()
+		{
+			return default(UniTaskVoid);
+		}
+
+		private void SetupFaceJoint(GameObject go)
+		{
+		}
+
+		public PropSpawner()
+			: base()
 		{
 		}
 	}

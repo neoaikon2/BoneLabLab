@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using SLZ.AI;
+using System.Runtime.InteropServices;
+using SLZ.Marrow.AI;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -24,6 +25,10 @@ namespace SLZ.Bonelab
 
 		public int zipStickLength;
 
+		private GameObject upPartialObj;
+
+		private GameObject downPartialObj;
+
 		private void Awake()
 		{
 		}
@@ -36,7 +41,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void ClaimZipUpLinks(TriggerRefProxy proxy = null, AgentLinkControl agentController = null)
+		public void ClaimZipUpLinks(TriggerRefProxy proxy = default(TriggerRefProxy), AgentLinkControl agentController = default(AgentLinkControl))
 		{
 		}
 
@@ -57,6 +62,11 @@ namespace SLZ.Bonelab
 		public LinkData CopyLinkData(LinkData ogLinkData, GameObject linkDataGO)
 		{
 			return null;
+		}
+
+		public ZipLinkManager()
+			: base()
+		{
 		}
 	}
 }

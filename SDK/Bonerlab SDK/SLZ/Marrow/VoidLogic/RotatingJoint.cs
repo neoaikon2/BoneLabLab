@@ -1,26 +1,29 @@
-using System.Collections.Generic;
-using System.Text;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Algorithms.Unity;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/RotatingJoint")]
-	[AddComponentMenu("VoidLogic/Endpoints/VoidLogic Rotating Joint")]
-	public sealed class RotatingJoint : MonoBehaviour, InputDescribable
+	[AddComponentMenu("VoidLogic/Sinks/VoidLogic Rotating Joint")]
+	[Support(SupportFlags.BetaSupported, "This works, but uses ConfigurableJoint instead of Marrow primitives.")]
+	public sealed class RotatingJoint : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
 	{
-		[Tooltip("Previous node in the chain")]
 		[SerializeField]
-		private BaseNode _previousNode;
+		[Tooltip("Previous node in the chain")]
+		[Interface(typeof(IVoidLogicSource), false)]
+		private MonoBehaviour _previousNode;
 
-		private float _priorValue;
+		private float? _priorValue;
 
 		[SerializeField]
 		private ConfigurableJoint _configurableJoint;
 
 		private Rigidbody _rigidBody;
 
-		[SerializeField]
 		[Header("Joint Control")]
+		[SerializeField]
 		private bool _varyTargetRotation;
 
 		[SerializeField]
@@ -47,13 +50,23 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		private Vector3 _xAngMaxSpringDamperForce;
 
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		public BaseNode PreviousNode
+		public VoidLogicSubgraph Subgraph { get; set; }
+
+		public int InputCount
 		{
 			get
 			{
-				return null;
+				return default(int);
+			}
+		}
+
+		public PortMetadata PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
 			}
 		}
 
@@ -61,11 +74,23 @@ namespace SLZ.Marrow.VoidLogic
 		{
 		}
 
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
 		private void Start()
 		{
 		}
 
-		private void Update()
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
 		{
 		}
 
@@ -73,13 +98,14 @@ namespace SLZ.Marrow.VoidLogic
 		{
 		}
 
-		public void AppendEndpointInfo(StringBuilder sb)
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			return default(bool);
 		}
 
-		IReadOnlyList<InputDescription> InputDescribable.DescribeInputs()
+		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return null;
+			return default(bool);
 		}
 
 		public RotatingJoint()

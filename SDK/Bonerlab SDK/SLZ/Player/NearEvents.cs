@@ -11,5 +11,10 @@ namespace SLZ.Player
 		public UnityEvent OnHandHoverEndEvent;
 
 		public UnityEvent OnHandHoverUpdateEvent;
+
+		public NearEvents()
+			: base()
+		{
+		}
 	}
 }

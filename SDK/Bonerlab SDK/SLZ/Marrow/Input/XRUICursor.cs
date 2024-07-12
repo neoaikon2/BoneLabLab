@@ -11,34 +11,23 @@ namespace SLZ.Marrow.Input
 		private float _maxRaycastDistance;
 
 		[SerializeField]
-		private bool _isLeft;
-
-		[SerializeField]
 		private LayerMask _raycastMask;
 
-		private XRUIInputModule _InputModule;
+		private bool _isClicked;
 
-		private XRUIInputModule _RegisteredInputModule;
+		private XRUIInputModule _inputModule;
 
 		private static TrackedDeviceModel _invalidTrackedDeviceModel { get; }
+
+		public Vector3 HitPoint { get; private set; }
+
+		public bool IsHit { get; private set; }
 
 		protected void OnEnable()
 		{
 		}
 
 		protected void OnDisable()
-		{
-		}
-
-		private void FindOrCreateXRUIInputModule()
-		{
-		}
-
-		private void RegisterWithXRUIInputModule()
-		{
-		}
-
-		private void UnregisterFromXRUIInputModule()
 		{
 		}
 
@@ -49,6 +38,10 @@ namespace SLZ.Marrow.Input
 		public bool TryGetUIModel([Out] TrackedDeviceModel model)
 		{
 			return default(bool);
+		}
+
+		public void Click(bool isClicked)
+		{
 		}
 
 		public void UpdateUIModel(ref TrackedDeviceModel model)

@@ -1,21 +1,16 @@
 using System;
-using SLZ.Combat;
+using System.Runtime.CompilerServices;
 using SLZ.Interaction;
-using SLZ.Marrow.Utilities;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
+using SLZ.Marrow.Interaction;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 
 namespace SLZ.SFX
 {
 	public class ImpactSFX : MonoBehaviour, IAttackReceiver, IEventSystemHandler
 	{
-		private static ComponentCache<ImpactSFX> _cache;
-
-		public AudioMixerGroup outputMixer;
-
-		public GameObject sourceObj;
-
 		public AudioClip[] impactSoft;
 
 		public AudioClip[] impactHard;
@@ -40,15 +35,10 @@ namespace SLZ.SFX
 
 		public float jointBreakVolume;
 
+		[HideInInspector]
 		public ImpactSfxManager manager;
 
-		private AudioSource source;
-
 		private InteractableHost _host;
-
-		private const float _lowPitchRange = 0.75f;
-
-		private const float _highPitchRange = 1.25f;
 
 		private float _minVelSquared;
 
@@ -56,21 +46,21 @@ namespace SLZ.SFX
 
 		private Rigidbody _rb;
 
+		private ManagedAudioPlayer _mapImpact;
+
 		private float _nextImpactTime;
 
+		private float _lastImpactImpulse;
+
 		private float _pitchMod;
+
+		private MarrowBody _marrowBody;
 
 		private bool _altColliders;
 
 		public Action<Collision, float> OnSignificantCollision;
 
-		public static ComponentCache<ImpactSFX> Cache => null;
-
 		private void Awake()
-		{
-		}
-
-		private void OnDestroy()
 		{
 		}
 
@@ -90,11 +80,7 @@ namespace SLZ.SFX
 		{
 		}
 
-		public void ImpactSound(Collision collision)
-		{
-		}
-
-		private void BluntAttack(float impulse, Collision c)
+		public void ImpactSound(Collision c)
 		{
 		}
 
@@ -112,10 +98,20 @@ namespace SLZ.SFX
 
 		private bool AltColliderCheck(Collider hitCol)
 		{
-			return false;
+			return default(bool);
+		}
+
+		private bool CheckImpact(float impulse)
+		{
+			return default(bool);
 		}
 
 		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public ImpactSFX()
+			: base()
 		{
 		}
 	}

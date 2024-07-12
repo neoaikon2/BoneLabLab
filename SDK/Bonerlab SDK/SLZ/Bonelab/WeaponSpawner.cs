@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
@@ -13,103 +14,8 @@ namespace SLZ.Bonelab
 {
 	public class WeaponSpawner : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CCoSpawnDefaultPack_003Ed__30
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public WeaponSpawner _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoSpawnDefaultPack_003Ed__30(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoSpawnAllWeaponPacks_003Ed__32
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float delay;
-
-			public WeaponSpawner _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoSpawnAllWeaponPacks_003Ed__32(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
+		[SerializeField]
+		private bool spawnDefAtStart;
 
 		[SerializeField]
 		private bool isSpawningAllowed;
@@ -133,13 +39,13 @@ namespace SLZ.Bonelab
 		private GameObject heavyAmmoSpawnTarg;
 
 		[SerializeField]
-		private AssetPoolee lightAmmoPoolee;
+		private Poolee lightAmmoPoolee;
 
 		[SerializeField]
-		private AssetPoolee medAmmoPoolee;
+		private Poolee medAmmoPoolee;
 
 		[SerializeField]
-		private AssetPoolee heavyAmmoPoolee;
+		private Poolee heavyAmmoPoolee;
 
 		[SerializeField]
 		private SpawnablePack defaultSpawnablePack;
@@ -156,7 +62,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AudioClip overLimitClip;
 
-		private Dictionary<GameObject, AssetPoolee> pooleeDict;
+		private Dictionary<GameObject, Poolee> pooleeDict;
 
 		public static Action<Vector2> OnCountUpdated;
 
@@ -176,6 +82,12 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private InventorySlotReceiver[] inventorySlotRecievers;
+
+		[SerializeField]
+		private List<Spawnable> specialWeaponsList;
+
+		[SerializeField]
+		private Transform specialWepSpawnPoint;
 
 		private void OnEnable()
 		{
@@ -203,7 +115,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSpawnDefaultPack_003Ed__30))]
 		private IEnumerator CoSpawnDefaultPack()
 		{
 			return null;
@@ -213,7 +124,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSpawnAllWeaponPacks_003Ed__32))]
 		private IEnumerator CoSpawnAllWeaponPacks(float delay)
 		{
 			return null;
@@ -253,7 +163,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void DropAndDespawnInventory(GameObject playerObject = null)
+		public void DropAndDespawnInventory(GameObject playerObject = default(GameObject))
 		{
 		}
 
@@ -262,11 +172,25 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void OnTriggerEnter(Collider other)
+		public void DespawnCountUpdate(GameObject rootObj, Poolee poolee)
 		{
 		}
 
 		private void UpdateSpawn(Transform spawnPoint)
+		{
+		}
+
+		public void SpawnPackByIndex(int id)
+		{
+		}
+
+		[ContextMenu("SpawnRandSpecialWep")]
+		public void SpawnRandSpecialWep()
+		{
+		}
+
+		public WeaponSpawner()
+			: base()
 		{
 		}
 	}

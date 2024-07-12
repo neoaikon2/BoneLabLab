@@ -6,7 +6,7 @@ namespace SplineMesh
 	{
 		public static bool IsOnScreen(Vector3 position)
 		{
-			return false;
+			return default(bool);
 		}
 	}
 }

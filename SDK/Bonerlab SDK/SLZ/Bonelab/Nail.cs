@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using SLZ.Marrow.Interaction;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -8,11 +10,11 @@ namespace SLZ.Bonelab
 
 		public Rigidbody connectedRb;
 
-		public ConfigurableJoint joint;
-
 		public Transform nailTran;
 
 		public float breakforce;
+
+		public MarrowJoint Joint { get; private set; }
 
 		private void Reset()
 		{
@@ -22,7 +24,24 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void SetJoint()
+		private void Start()
+		{
+		}
+
+		private void MakeJoint()
+		{
+		}
+
+		private void OnMarrowJointBreak(MarrowJoint joint)
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
+		public Nail()
+			: base()
 		{
 		}
 	}

@@ -21,5 +21,10 @@ namespace SLZ.Bonelab
 		private void Awake()
 		{
 		}
+
+		public PlatformEvent()
+			: base()
+		{
+		}
 	}
 }

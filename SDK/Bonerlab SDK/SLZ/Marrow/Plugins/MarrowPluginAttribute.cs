@@ -5,8 +5,8 @@ using UnityEngine.Scripting;
 
 namespace SLZ.Marrow.Plugins
 {
-	[RequireAttributeUsages]
 	[AttributeUsage(AttributeTargets.Class)]
+	[RequireAttributeUsages]
 	[MeansImplicitUse]
 	public class MarrowPluginAttribute : Attribute
 	{

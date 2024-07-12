@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SplineMesh
 {
-	[RequireComponent(typeof(MeshFilter))]
 	[DisallowMultipleComponent]
+	[RequireComponent(typeof(MeshFilter))]
 	[ExecuteInEditMode]
 	public class MeshBender : MonoBehaviour
 	{
@@ -98,6 +100,11 @@ namespace SplineMesh
 		}
 
 		private void FillStretch()
+		{
+		}
+
+		public MeshBender()
+			: base()
 		{
 		}
 	}

@@ -94,10 +94,12 @@ namespace Dynamite3D.RealIvy
 		public bool generateLightmapUVs;
 
 		public IvyParameters()
+			: base()
 		{
 		}
 
 		public IvyParameters(IvyParameters copyFrom)
+			: this()
 		{
 		}
 
@@ -115,7 +117,7 @@ namespace Dynamite3D.RealIvy
 
 		public bool IsEqualTo(IvyParameters compareTo)
 		{
-			return false;
+			return default(bool);
 		}
 	}
 }

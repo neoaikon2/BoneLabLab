@@ -25,12 +25,12 @@ namespace SLZ.Interaction
 
 		public LadderInfo(Source s, Transform rt, int tr, int tn, float rw, float rr)
 		{
-			source = s;
-			rungTransform = rt;
-			totalRungs = tr;
-			rungNumber = tn;
-			rungWidth = rw;
-			rungRadius = rr;
+			this.rungRadius = default(float);
+			this.rungWidth = default(float);
+			this.rungNumber = default(int);
+			this.totalRungs = default(int);
+			this.rungTransform = default(Transform);
+			this.source = default(Source);
 		}
 	}
 }

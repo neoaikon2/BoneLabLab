@@ -13,7 +13,13 @@ namespace Ara
 
 		public int snapY;
 
-		public int Segments => 0;
+		public int Segments
+		{
+			get
+			{
+				return default(int);
+			}
+		}
 
 		public void OnEnable()
 		{
@@ -25,7 +31,12 @@ namespace Ara
 
 		public static int SnapTo(float val, int snapInterval, int threshold)
 		{
-			return 0;
+			return default(int);
+		}
+
+		public TrailSection()
+			: base()
+		{
 		}
 	}
 }

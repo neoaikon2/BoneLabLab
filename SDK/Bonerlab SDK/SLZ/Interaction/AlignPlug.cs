@@ -6,8 +6,6 @@ namespace SLZ.Interaction
 {
 	public class AlignPlug : Plug
 	{
-		private static ComponentCache<AlignPlug> _cache;
-
 		private float _speed;
 
 		private float _perc;
@@ -43,13 +41,11 @@ namespace SLZ.Interaction
 
 		private int _handAttachedCount;
 
-		public new static ComponentCache<AlignPlug> Cache => null;
-
-		protected override void Awake()
+		private void Awake()
 		{
 		}
 
-		protected override void OnDestroy()
+		private void OnDestroy()
 		{
 		}
 
@@ -123,6 +119,15 @@ namespace SLZ.Interaction
 		}
 
 		private void OnHostRelease(InteractableHost host, Hand hand)
+		{
+		}
+
+		public override void OnDespawn()
+		{
+		}
+
+		public AlignPlug()
+			: base()
 		{
 		}
 	}

@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using SLZ.Marrow.Data;
+using SLZ.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -28,13 +28,20 @@ namespace SLZ.Interaction
 
 			public Corners corner;
 
-			public float sqrDistanceFromSurface;
+			public Vector3 gripWorld;
+
+			public Vector3 handleWorld;
 
 			public Vector3 normal;
 
 			public Vector3 localPosition;
 
 			public Quaternion localRotation;
+
+			public GrabConfiguration()
+				: base()
+			{
+			}
 		}
 
 		[Flags]
@@ -85,8 +92,8 @@ namespace SLZ.Interaction
 			public HandPose handPose;
 		}
 
-		[Header("BoxGrip Options")]
 		[FormerlySerializedAs("sandwitchSize")]
+		[Header("BoxGrip Options")]
 		public float sandwichSize;
 
 		public float edgePadding;
@@ -122,29 +129,29 @@ namespace SLZ.Interaction
 
 		private Dictionary<Hand, GrabConfiguration> _grabConfig;
 
-		[EnumFlags]
 		[Header("BoxGrip Face Options")]
 		[SerializeField]
+		[EnumFlags]
 		public Faces enabledFaces;
 
-		[SerializeField]
 		[EnumFlags]
+		[SerializeField]
 		public Edges enabledEdges;
 
-		[SerializeField]
 		[EnumFlags]
+		[SerializeField]
 		public Corners enabledCorners;
 
 		[Tooltip("Defines the primary face for force grab orentation")]
 		[SerializeField]
 		private Faces forceGrabFace;
 
-		[Tooltip("Defines the secondary face for force grab orentation")]
 		[SerializeField]
+		[Tooltip("Defines the secondary face for force grab orentation")]
 		private Faces forceGrabTop;
 
-		[Header("References")]
 		[SerializeField]
+		[Header("References")]
 		public BoxCollider _boxCollider;
 
 		private Dictionary<Hand, HandToBoxGripState> boxHandStates;
@@ -163,7 +170,7 @@ namespace SLZ.Interaction
 
 		private float GetDistanceBetweenFace(Faces face)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private Vector3 FaceToVector(Faces face)
@@ -182,7 +189,7 @@ namespace SLZ.Interaction
 
 		public float GetEdgePadding()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public override void OnFarHandHoverBegin(Hand hand)
@@ -195,7 +202,7 @@ namespace SLZ.Interaction
 
 		public override bool OnHandHoverUpdate(Hand hand, bool isOverride)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void OnHandAttachedUpdate(Hand hand)
@@ -206,9 +213,9 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		private void OnDrawGizmosSelected()
@@ -217,7 +224,12 @@ namespace SLZ.Interaction
 
 		public bool CheckZones(Hand hand)
 		{
-			return false;
+			return default(bool);
+		}
+
+		public BoxGrip()
+			: base()
+		{
 		}
 	}
 }

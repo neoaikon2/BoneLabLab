@@ -19,5 +19,10 @@ namespace SLZ.Bonelab
 		private void OnTriggerExit(Collider other)
 		{
 		}
+
+		public RbTriggerEventForwarder()
+			: base()
+		{
+		}
 	}
 }

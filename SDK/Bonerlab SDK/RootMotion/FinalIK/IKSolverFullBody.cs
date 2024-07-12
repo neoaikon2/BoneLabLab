@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -42,14 +43,9 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public FBIKChain GetChain(Transform transform)
-		{
-			return null;
-		}
-
 		public int GetChainIndex(Transform transform)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public Node GetNode(int chainIndex, int nodeIndex)
@@ -57,10 +53,8 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public void GetChainAndNodeIndexes(Transform transform, out int chainIndex, out int nodeIndex)
+		public void GetChainAndNodeIndexes(Transform transform, [Out] int chainIndex, [Out] int nodeIndex)
 		{
-			chainIndex = default(int);
-			nodeIndex = default(int);
 		}
 
 		public override Point[] GetPoints()
@@ -73,9 +67,9 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public override bool IsValid(ref string message)
+		public override bool IsValid(string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void StoreDefaultLocalState()
@@ -107,6 +101,11 @@ namespace RootMotion.FinalIK
 		}
 
 		protected virtual void WritePose()
+		{
+		}
+
+		public IKSolverFullBody()
+			: base()
 		{
 		}
 	}

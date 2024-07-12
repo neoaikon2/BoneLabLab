@@ -1,4 +1,4 @@
-using SLZ.Bonelab;
+using SLZ.Utilities;
 using UnityEngine;
 
 namespace SLZ.Interaction
@@ -15,5 +15,10 @@ namespace SLZ.Interaction
 
 		[Tooltip("Time in seconds for an icon to scale up / down")]
 		public float AnimationDuration;
+
+		public InteractableIconObject()
+			: base()
+		{
+		}
 	}
 }

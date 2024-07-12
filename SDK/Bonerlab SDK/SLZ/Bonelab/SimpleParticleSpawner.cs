@@ -27,11 +27,20 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		public void SpawnParticles(Vector3 pos, Vector3 norm)
+		{
+		}
+
 		private void OnDrawGizmosSelected()
 		{
 		}
 
 		private void OnDrawGizmos()
+		{
+		}
+
+		public SimpleParticleSpawner()
+			: base()
 		{
 		}
 	}

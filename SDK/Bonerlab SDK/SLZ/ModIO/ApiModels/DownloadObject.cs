@@ -1,0 +1,28 @@
+using System;
+using System.Runtime.CompilerServices;
+using Newtonsoft.Json;
+
+namespace SLZ.ModIO.ApiModels
+{
+	[Serializable]
+	public struct DownloadObject
+	{
+		[JsonProperty("binary_url")]
+		public string BinaryUrl { get; }
+
+		[JsonProperty("date_expires")]
+		public long DateExpires { get; }
+
+		[JsonConstructor]
+		public DownloadObject([JsonProperty("binary_url")] string binaryUrl, [JsonProperty("date_expires")] long dateExpires)
+		{
+			this.DateExpires = default(long);
+			this.BinaryUrl = default(string);
+		}
+
+		public override string ToString()
+		{
+			return null;
+		}
+	}
+}

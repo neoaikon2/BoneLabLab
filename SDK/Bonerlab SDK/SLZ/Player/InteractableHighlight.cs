@@ -50,5 +50,10 @@ namespace SLZ.Player
 		public void OnFarHandHoverUpdate(Hand hand)
 		{
 		}
+
+		public InteractableHighlight()
+			: base()
+		{
+		}
 	}
 }

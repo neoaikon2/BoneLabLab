@@ -3,70 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Marrow.Data;
+using System.Runtime.InteropServices;
+using SLZ.Data;
+using SLZ.Marrow.Interaction;
+using SLZ.Marrow.Pool;
 using SLZ.Marrow.Utilities;
 using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Interaction
 {
-	public class Grip : HandReciever
+	public class Grip : HandReciever, IPoolable
 	{
 		public delegate void HandDelegate(Hand hand);
-
-		[CompilerGenerated]
-		private sealed class _003CCoSnatch_003Ed__134
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public bool isQuick;
-
-			public Hand hand;
-
-			public Grip _003C_003E4__this;
-
-			private WaitForFixedUpdate _003CwaitFixed_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoSnatch_003Ed__134(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
 
 		private static ComponentCache<Grip> _cache;
 
@@ -108,12 +57,12 @@ namespace SLZ.Interaction
 
 		public Vector3 secondaryMovementAxis = new Vector3(0, 1, 0);
 
-		[SerializeField]
 		[EnumFlags]
+		[SerializeField]
 		public InteractionOptions gripOptions = InteractionOptions.SwitchHands;
 
-		[Range(0f, 10f)]
 		[Tooltip("Zero priority guarantees grip victory. 1 is Neutral >1 is low priority")]
+		[Range(0f, 10f)]
 		public float priority = 1;
 
 		public float minBreakForce = float.PositiveInfinity;
@@ -135,138 +84,32 @@ namespace SLZ.Interaction
 
 		public Transform targetTransform;
 
-		public new static ComponentCache<Grip> Cache => null;
+		private MarrowEntity _marrowEntity;
+
+		public new static ComponentCache<Grip> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public float gripDistance
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
 			}
 		}
 
-		protected bool IsInteractionDisabled => false;
-
-		public event HandDelegate attachedUpdateDelegate
+		protected bool IsInteractionDisabled
 		{
-			[CompilerGenerated]
-			add
+			get
 			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate hoverBeginHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate hoverEndHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate hoverUpdateHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate farHoverBeginHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate farHoverEndHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate farHoverUpdateHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate attachedHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate detachedHandDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
-		public event HandDelegate forcePullCompleteDelegate
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
+				return default(bool);
 			}
 		}
 
@@ -286,18 +129,22 @@ namespace SLZ.Interaction
 		{
 		}
 
+		private void Clear()
+		{
+		}
+
 		public VirtualController GetVirtualController(Hand hand)
 		{
 			return null;
 		}
 
-		public virtual void CheckHandPriority(ref HandGripPair primary, ref HandGripPair secondary)
+		public virtual void CheckHandPriority(HandGripPair primary, HandGripPair secondary)
 		{
 		}
 
 		public bool CanUpdateConnectedAnchor(Hand hand)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void SolveHandleAmplify(Hand hand)
@@ -305,11 +152,6 @@ namespace SLZ.Interaction
 		}
 
 		public SimpleTransform SolveHandTarget(Hand hand)
-		{
-			return default(SimpleTransform);
-		}
-
-		public virtual SimpleTransform GetVirtualTargetInHost(Hand hand)
 		{
 			return default(SimpleTransform);
 		}
@@ -354,17 +196,17 @@ namespace SLZ.Interaction
 
 		public virtual float GetSwingLimit(Hand hand)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual float GetTwistLimit(Hand hand)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public bool HasGripFlag(Hand hand, GripFlags flag)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void AddGripFlag(Hand hand, GripFlags flag)
@@ -375,17 +217,17 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public virtual Vector3 GetPrimaryAxis(Hand hand = null)
+		public virtual Vector3 GetPrimaryAxis(Hand hand = default(Hand))
 		{
 			return default(Vector3);
 		}
 
-		public virtual Vector3 GetSecondaryAxis(Hand hand = null)
+		public virtual Vector3 GetSecondaryAxis(Hand hand = default(Hand))
 		{
 			return default(Vector3);
 		}
 
-		public virtual Vector3 GetTertiaryAxis(Hand hand = null)
+		public virtual Vector3 GetTertiaryAxis(Hand hand = default(Hand))
 		{
 			return default(Vector3);
 		}
@@ -423,7 +265,7 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public HandPose GetHandPose(Hand hand = null)
+		public HandPose GetHandPose(Hand hand = default(Hand))
 		{
 			return null;
 		}
@@ -456,15 +298,14 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public bool GetController(out BaseController controller)
+		public bool GetController([Out] BaseController controller)
 		{
-			controller = null;
-			return false;
+			return default(bool);
 		}
 
 		public bool HasAttachedHands()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public Hand GetHand()
@@ -494,15 +335,13 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private Vector3 GetAverageHistory(int start, int samples, out Vector3 angVelocity)
+		private Vector3 GetAverageHistory(int start, int samples, [Out] Vector3 angVelocity)
 		{
-			angVelocity = default(Vector3);
 			return default(Vector3);
 		}
 
-		private Vector3 GetAverageHistory(float startDelayTime, float sampleTime, out Vector3 angVelocity)
+		private Vector3 GetAverageHistory(float startDelayTime, float sampleTime, [Out] Vector3 angVelocity)
 		{
-			angVelocity = default(Vector3);
 			return default(Vector3);
 		}
 
@@ -510,9 +349,9 @@ namespace SLZ.Interaction
 		{
 		}
 
-		private (Vector3, Vector3) CalculateDetatchVelocitys(float startDelayTime, float sampleTime, float amplificationMult, Vector3 wholeBodyVelocity)
+		private ValueTuple<Vector3, Vector3> CalculateDetatchVelocitys(float startDelayTime, float sampleTime, float amplificationMult, Vector3 wholeBodyVelocity)
 		{
-			return default((Vector3, Vector3));
+			return default(ValueTuple<Vector3, Vector3>);
 		}
 
 		public override void OnJointAttached(Hand hand)
@@ -541,7 +380,7 @@ namespace SLZ.Interaction
 
 		public virtual bool OnHandHoverUpdate(Hand hand, bool isOverride)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void OnHandHoverBegin(Hand hand)
@@ -568,13 +407,29 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		[ContextMenu("Get Sub Colliders")]
 		public void GetSubColliders()
+		{
+		}
+
+		public void SetEntity(MarrowEntity entity)
+		{
+		}
+
+		public void OnPoolInitialize()
+		{
+		}
+
+		public void OnPoolSpawn()
+		{
+		}
+
+		public void OnPoolDeInitialize()
 		{
 		}
 
@@ -586,10 +441,34 @@ namespace SLZ.Interaction
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSnatch_003Ed__134))]
 		private IEnumerator CoSnatch(Hand hand, bool isQuick)
 		{
 			return null;
 		}
+
+		public Grip()
+			: base()
+		{
+		}
+
+		public event HandDelegate attachedUpdateDelegate;
+
+		public event HandDelegate hoverBeginHandDelegate;
+
+		public event HandDelegate hoverEndHandDelegate;
+
+		public event HandDelegate hoverUpdateHandDelegate;
+
+		public event HandDelegate farHoverBeginHandDelegate;
+
+		public event HandDelegate farHoverEndHandDelegate;
+
+		public event HandDelegate farHoverUpdateHandDelegate;
+
+		public event HandDelegate attachedHandDelegate;
+
+		public event HandDelegate detachedHandDelegate;
+
+		public event HandDelegate forcePullCompleteDelegate;
 	}
 }

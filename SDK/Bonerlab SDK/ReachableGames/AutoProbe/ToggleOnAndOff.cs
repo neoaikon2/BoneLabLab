@@ -13,5 +13,10 @@ namespace ReachableGames.AutoProbe
 		public void Toggling()
 		{
 		}
+
+		public ToggleOnAndOff()
+			: base()
+		{
+		}
 	}
 }

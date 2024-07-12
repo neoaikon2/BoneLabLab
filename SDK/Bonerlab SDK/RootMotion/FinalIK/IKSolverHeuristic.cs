@@ -22,23 +22,49 @@ namespace RootMotion.FinalIK
 
 		protected float chainLength;
 
-		protected virtual int minBones => 0;
+		protected virtual int minBones
+		{
+			get
+			{
+				return default(int);
+			}
+		}
 
-		protected virtual bool boneLengthCanBeZero => false;
+		protected virtual bool boneLengthCanBeZero
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		protected virtual bool allowCommonParent => false;
+		protected virtual bool allowCommonParent
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		protected virtual Vector3 localDirection => default(Vector3);
+		protected virtual Vector3 localDirection
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		protected float positionOffset => 0f;
+		protected float positionOffset
+		{
+			get
+			{
+				return default(float);
+			}
+		}
 
 		public bool SetChain(Transform[] hierarchy, Transform root)
 		{
-			return false;
-		}
-
-		public void AddBone(Transform bone)
-		{
+			return default(bool);
 		}
 
 		public override void StoreDefaultLocalState()
@@ -49,9 +75,9 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		public override bool IsValid(ref string message)
+		public override bool IsValid(string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override Point[] GetPoints()
@@ -83,7 +109,12 @@ namespace RootMotion.FinalIK
 
 		private bool SingularityDetected()
 		{
-			return false;
+			return default(bool);
+		}
+
+		public IKSolverHeuristic()
+			: base()
+		{
 		}
 	}
 }

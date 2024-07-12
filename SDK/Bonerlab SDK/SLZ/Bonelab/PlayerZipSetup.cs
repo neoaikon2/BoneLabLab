@@ -18,5 +18,10 @@ namespace SLZ.Bonelab
 		public GameObject upStartObj;
 
 		public GameObject upEndObj;
+
+		public PlayerZipSetup()
+			: base()
+		{
+		}
 	}
 }

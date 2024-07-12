@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using RealisticEyeMovements;
+using SLZ.Marrow.Audio;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,6 +20,11 @@ namespace SLZ.Bonelab
 			public AudioClip audioClip;
 
 			public int animationIndex;
+
+			public AnimationAudioPair()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -29,6 +35,11 @@ namespace SLZ.Bonelab
 			public string triggerName;
 
 			public string triggerIndexName;
+
+			public AnimatorStateMachineGroup()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -49,6 +60,11 @@ namespace SLZ.Bonelab
 			public bool lookAtPlayer;
 
 			public TriggerActionGroup[] TriggerActions;
+
+			public AnimatorSequence()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -57,223 +73,26 @@ namespace SLZ.Bonelab
 			public float triggerActionDelay;
 
 			public UnityEvent onAnimationTriggerAction;
-		}
 
-		[CompilerGenerated]
-		private sealed class _003CCancelAnimationCoroutine_003Ed__15
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public GenericAnimatorController _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCancelAnimationCoroutine_003Ed__15(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CSetSequencePosition_003Ed__18
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public AnimatorSequence sequence;
-
-			public GenericAnimatorController _003C_003E4__this;
-
-			public int stateMachine;
-
-			public int animation;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CSetSequencePosition_003Ed__18(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CTriggerAction_003Ed__19
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float delay;
-
-			public UnityEvent action;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CTriggerAction_003Ed__19(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CSetSpecificIndex_003Ed__21
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public GenericAnimatorController _003C_003E4__this;
-
-			public int stateMachine;
-
-			public int animation;
-
-			public bool lookAtPlayer;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CSetSpecificIndex_003Ed__21(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
+			public TriggerActionGroup()
+				: base()
 			{
 			}
 		}
 
 		public Animator animator;
 
-		public AudioSource audioSource;
+		public Transform audioTransform;
 
 		public LookTargetController lookTargetController;
+
+		public float audioSourceMinDist;
 
 		public List<AnimatorStateMachineGroup> StateMachineGroups;
 
 		public List<AnimatorSequence> animationSequence;
+
+		public bool updateTimeScale;
 
 		private static readonly int Cancel;
 
@@ -283,6 +102,12 @@ namespace SLZ.Bonelab
 
 		private int nextSequenceIndex;
 
+		private static readonly int TimeScale;
+
+		private float _lastTimeScale;
+
+		private ManagedAudioPlayer audioSource;
+
 		private void Start()
 		{
 		}
@@ -291,7 +116,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCancelAnimationCoroutine_003Ed__15))]
 		private IEnumerator CancelAnimationCoroutine()
 		{
 			return null;
@@ -305,13 +129,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CSetSequencePosition_003Ed__18))]
 		private IEnumerator SetSequencePosition(int stateMachine, int animation, AnimatorSequence sequence)
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CTriggerAction_003Ed__19))]
 		private IEnumerator TriggerAction(UnityEvent action, float delay)
 		{
 			return null;
@@ -321,10 +143,18 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CSetSpecificIndex_003Ed__21))]
 		private IEnumerator SetSpecificIndex(int stateMachine, int animation, bool lookAtPlayer)
 		{
 			return null;
+		}
+
+		private void Update()
+		{
+		}
+
+		public GenericAnimatorController()
+			: base()
+		{
 		}
 	}
 }

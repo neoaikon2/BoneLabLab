@@ -32,21 +32,9 @@ namespace SplineMesh
 		{
 			get
 			{
-				return false;
+				return default(bool);
 			}
 			set
-			{
-			}
-		}
-
-		public event ListChangeHandler<SplineNode> NodeListChanged
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
 			{
 			}
 		}
@@ -84,7 +72,7 @@ namespace SplineMesh
 
 		private int GetNodeIndexForTime(float t)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void RefreshCurves()
@@ -124,5 +112,12 @@ namespace SplineMesh
 		{
 			return default(CurveSample);
 		}
+
+		public Spline()
+			: base()
+		{
+		}
+
+		public event ListChangeHandler<SplineNode> NodeListChanged;
 	}
 }

@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace SLZ.Combat
@@ -35,10 +36,14 @@ namespace SLZ.Combat
 		{
 		}
 
-		private Vector3 EyePoint(Vector3 sightPos, out float enter)
+		private Vector3 EyePoint(Vector3 sightPos, [Out] float enter)
 		{
-			enter = default(float);
 			return default(Vector3);
+		}
+
+		public AimEnhancer()
+			: base()
+		{
 		}
 	}
 }

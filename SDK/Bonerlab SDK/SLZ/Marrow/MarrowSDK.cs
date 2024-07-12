@@ -1,14 +1,14 @@
+using UnityEngine;
+
 namespace SLZ.Marrow
 {
 	public static class MarrowSDK
 	{
 		public const string SDK_NAME = "Marrow SDK";
 
-		public const string SDK_VERSION = "0.3.7-1852";
+		public const string SDK_VERSION = "0.6.0";
 
 		public const string DEV_NAME = "Stress Level Zero";
-
-		public const string DEV_NAME_ALT = "StressLevelZero";
 
 		public const string PACKAGE_NAME = "com.stresslevelzero.marrow.sdk";
 
@@ -62,6 +62,11 @@ namespace SLZ.Marrow
 			{
 				return null;
 			}
+		}
+
+		[RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+		private static void PrecachePaths()
+		{
 		}
 
 		public static string SanitizeName(string name)

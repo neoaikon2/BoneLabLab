@@ -27,5 +27,10 @@ namespace SLZ.Bonelab
 		private void Update()
 		{
 		}
+
+		public OpenDoor()
+			: base()
+		{
+		}
 	}
 }

@@ -1,7 +1,7 @@
+using System.Runtime.InteropServices;
+using SLZ.Marrow.Audio;
 using SLZ.Rig;
-using SLZ.Utilities;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.VRMK
 {
@@ -23,8 +23,6 @@ namespace SLZ.VRMK
 
 		public AudioClip[] highFallClips;
 
-		public AudioMixerGroup mixerGroup;
-
 		public float highFallVolumeMult;
 
 		public PhysicMaterial[] slimeMats;
@@ -45,11 +43,11 @@ namespace SLZ.VRMK
 
 		private int _count;
 
+		private int _ungroundedFrame;
+
 		private Rigidbody _rb;
 
-		private AudioPlayer _skidAp;
-
-		private bool _hasSkidAp;
+		private ManagedAudioPlayer _mapSkid;
 
 		private int collisionLayer;
 
@@ -73,7 +71,7 @@ namespace SLZ.VRMK
 		{
 		}
 
-		private void HighFallClipSpawn(float volume, float pitch, float minDistance)
+		private void HighFallClipSpawn(float volume, float minDistance)
 		{
 		}
 
@@ -83,16 +81,16 @@ namespace SLZ.VRMK
 
 		private bool CheckMat()
 		{
-			return false;
+			return default(bool);
 		}
 
-		public void FeetGrounded(float footballRadius, out Vector3 groundVelocity, out float groundAngVel, out Vector3 skidVelocity, out float skidMag, out Vector3 impulse)
+		public void FeetGrounded(float footballRadius, [Out] Vector3 groundVelocity, [Out] float groundAngVel, [Out] Vector3 skidVelocity, [Out] float skidMag, [Out] Vector3 impulse)
 		{
-			groundVelocity = default(Vector3);
-			groundAngVel = default(float);
-			skidVelocity = default(Vector3);
-			skidMag = default(float);
-			impulse = default(Vector3);
+		}
+
+		public PhysGrounder()
+			: base()
+		{
 		}
 	}
 }

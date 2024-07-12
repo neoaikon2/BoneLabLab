@@ -1,10 +1,9 @@
 using SLZ.Interaction;
-using SLZ.Zones;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class Conveyor : ZoneItem
+	public class Conveyor : MonoBehaviour
 	{
 		private enum Mode
 		{
@@ -45,11 +44,8 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public override void OnZoneDisabled(GameObject playerObject)
-		{
-		}
-
-		public override void OnZoneEnabled(GameObject playerObject)
+		public Conveyor()
+			: base()
 		{
 		}
 	}

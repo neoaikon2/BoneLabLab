@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.UI;
+using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine;
 
@@ -11,102 +11,6 @@ namespace SLZ.Bonelab
 {
 	public class ControllerToolTip : ToolTip
 	{
-		[CompilerGenerated]
-		private sealed class _003CFXChange_003Ed__35
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public ControllerToolTip _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CFXChange_003Ed__35(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CFollowing_003Ed__37
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public ControllerToolTip _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CFollowing_003Ed__37(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public float timeToHighlight;
 
 		private float cur_TimeToHighlight;
@@ -163,8 +67,6 @@ namespace SLZ.Bonelab
 
 		public AudioClip clip_disable;
 
-		public SimpleSFX src_Audio;
-
 		private bool _isRunning;
 
 		private Vector3 _lastHand;
@@ -183,7 +85,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void SETLINE(bool lineActive = false, Transform lockLocation = null)
+		public void SETLINE(bool lineActive = false, Transform lockLocation = default(Transform))
 		{
 		}
 
@@ -195,7 +97,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CFXChange_003Ed__35))]
 		private IEnumerator FXChange()
 		{
 			return null;
@@ -205,7 +106,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CFollowing_003Ed__37))]
 		private IEnumerator Following()
 		{
 			return null;
@@ -216,9 +116,14 @@ namespace SLZ.Bonelab
 			return default(Vector3);
 		}
 
-		protected Vector3 SmoothDamp2(Vector3 target, ref Vector3 lastTarget, ref Vector3 gimbaledVelocity, ref Vector3 gimbalAccel, ref Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset, float smoothTime = 0.1f)
+		protected Vector3 SmoothDamp2(Vector3 target, Vector3 lastTarget, Vector3 gimbaledVelocity, Vector3 gimbalAccel, Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset, float smoothTime = 0.1f)
 		{
 			return default(Vector3);
+		}
+
+		public ControllerToolTip()
+			: base()
+		{
 		}
 	}
 }

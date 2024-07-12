@@ -27,9 +27,23 @@ namespace SLZ.Bonelab
 
 		public bool clearAmmoOnModeEnd;
 
+		public bool isCustomEnemyCount;
+
+		public int increaseEnemyRate;
+
+		public int maxConcGoal;
+
 		public int killLimit;
 
 		public bool limitReached;
+
+		public bool awardAmmoOnDeath;
+
+		public int lightAward;
+
+		public int medAward;
+
+		public int heavyAward;
 
 		public float teleportTick;
 
@@ -76,6 +90,11 @@ namespace SLZ.Bonelab
 		public BoneLeaderData boneLeaderData;
 
 		public static EnemyProfile RandomFromWave(List<EnemyProfile> waveProfileList)
+		{
+			return null;
+		}
+
+		public static EnemyProfile RandomFromWaveWeighted(List<EnemyProfile> waveProfileList)
 		{
 			return null;
 		}
@@ -167,15 +186,20 @@ namespace SLZ.Bonelab
 
 		public static int CalcWaveBPE(WaveProfile wave)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public static int CalcRoundBPE(RoundProfile round)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public static WaveProfile IncreaseWaveDifficulty(WaveProfile wave, int difficulty, int maxConcurrentLimit, int round = 1, bool randomEnemyType = false)
+		{
+			return null;
+		}
+
+		public static WaveProfile IncreaseWaveDifficultyAtCustomRate(RoundProfileGroup group, WaveProfile wave)
 		{
 			return null;
 		}
@@ -190,7 +214,22 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
+		public static RoundProfileGroup IncreaseConcurrentEnemyCount(RoundProfileGroup group, int maxConcurrent, bool updateEnemyProfiles)
+		{
+			return null;
+		}
+
+		public static RoundProfileGroup IncreaseProfilesToMatchConcurrent(RoundProfileGroup group)
+		{
+			return null;
+		}
+
 		public static void CreateSurvivalProfileAtRound(RoundProfileGroup OGsurivalProfile, RoundProfileGroup surivalProfileProjected, int round, int maxEnemy, int difficulty)
+		{
+		}
+
+		public RoundProfileGroup()
+			: base()
 		{
 		}
 	}

@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using SplineMesh;
 using UnityEngine;
 
@@ -23,24 +25,49 @@ namespace SLZ.Bonelab
 
 		public Vector3 Direction { get; private set; }
 
-		public Vector3 Location => default(Vector3);
+		public Vector3 Location
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 Normal => default(Vector3);
+		public Vector3 Normal
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 Tangent => default(Vector3);
+		public Vector3 Tangent
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public CurveSample SampleA => default(CurveSample);
+		public CurveSample SampleA
+		{
+			get
+			{
+				return default(CurveSample);
+			}
+		}
 
 		public CurveSegment(CurveSample sampleA, CurveSample sampleB)
+			: base()
 		{
 		}
 
-		public CurveSample GetFirstSample(Transform parent = null)
+		public CurveSample GetFirstSample(Transform parent = default(Transform))
 		{
 			return default(CurveSample);
 		}
 
-		public CurveSample GetSampleFromPoint(Vector3 position, Transform parent = null)
+		public CurveSample GetSampleFromPoint(Vector3 position, Transform parent = default(Transform))
 		{
 			return default(CurveSample);
 		}

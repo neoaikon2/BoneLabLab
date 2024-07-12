@@ -21,5 +21,10 @@ namespace SLZ.Bonelab
 		private void ChangeSettings()
 		{
 		}
+
+		public CameraSettings()
+			: base()
+		{
+		}
 	}
 }

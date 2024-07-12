@@ -27,5 +27,10 @@ namespace Ara
 		private void SetColorFromSpeed()
 		{
 		}
+
+		public ColorFromSpeed()
+			: base()
+		{
+		}
 	}
 }

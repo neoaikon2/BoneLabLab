@@ -16,12 +16,12 @@ namespace Dynamite3D.RealIvy
 
 		public override bool IsGrowingFinished()
 		{
-			return false;
+			return default(bool);
 		}
 
 		protected override float GetNormalizedLifeTime()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void SetIvyParameters(IvyPreset ivyPreset)
@@ -34,12 +34,12 @@ namespace Dynamite3D.RealIvy
 
 		protected override int GetMaxNumPoints()
 		{
-			return 0;
+			return default(int);
 		}
 
 		protected override int GetMaxNumLeaves()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public override void InitIvy(RuntimeGrowthParameters growthParameters, IvyContainer ivyContainer, IvyParameters ivyParameters)
@@ -48,7 +48,12 @@ namespace Dynamite3D.RealIvy
 
 		private int GetMaxNumVerticesPerLeaf()
 		{
-			return 0;
+			return default(int);
+		}
+
+		public RuntimeProceduralIvy()
+			: base()
+		{
 		}
 	}
 }

@@ -15,8 +15,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private NarrativeState.HoldState activeHoldState;
 
-		[SerializeField]
 		[Header("Active Interupt Director")]
+		[SerializeField]
 		private PlayableDirector interuptDirector;
 
 		[SerializeField]
@@ -58,6 +58,11 @@ namespace SLZ.Bonelab
 
 		[ContextMenu("GetAllNarrativeStates")]
 		public void GetAllHoldStates()
+		{
+		}
+
+		public NarrativeManager()
+			: base()
 		{
 		}
 	}

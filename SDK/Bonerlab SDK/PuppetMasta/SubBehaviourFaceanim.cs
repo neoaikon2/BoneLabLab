@@ -1,6 +1,6 @@
 using System;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace PuppetMasta
 {
@@ -25,11 +25,14 @@ namespace PuppetMasta
 			public TriggerIndex triggerIndex;
 
 			public int animIndex;
+
+			public FaceEvent()
+				: base()
+			{
+			}
 		}
 
 		public bool faceAnimEnabled;
-
-		public AudioMixerGroup mixerGroup;
 
 		public Transform mouthTran;
 
@@ -88,7 +91,7 @@ namespace PuppetMasta
 
 		private int GetTriggerIndex(FaceEvent.TriggerIndex triggerIndex)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void Initiate(BehaviourBase b)
@@ -152,6 +155,11 @@ namespace PuppetMasta
 		}
 
 		public void SetEventLines(FaceEvent[] fEvents)
+		{
+		}
+
+		public SubBehaviourFaceanim()
+			: base()
 		{
 		}
 	}

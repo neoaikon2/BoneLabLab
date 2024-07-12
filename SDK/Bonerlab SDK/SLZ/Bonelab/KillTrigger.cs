@@ -1,4 +1,4 @@
-using SLZ.AI;
+using SLZ.Marrow.AI;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -24,6 +24,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void KillPlayer(TriggerRefProxy proxy)
+		{
+		}
+
+		public KillTrigger()
+			: base()
 		{
 		}
 	}

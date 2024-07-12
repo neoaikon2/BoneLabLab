@@ -11,5 +11,10 @@ namespace SLZ.Bonelab
 		public PlayableDirector director;
 
 		public bool wasTriggered;
+
+		public ActionDirector()
+			: base()
+		{
+		}
 	}
 }

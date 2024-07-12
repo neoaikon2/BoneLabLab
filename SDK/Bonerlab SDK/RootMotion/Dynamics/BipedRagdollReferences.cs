@@ -40,39 +40,19 @@ namespace RootMotion.Dynamics
 
 		public Transform rightHand;
 
-		public bool IsValid(ref string msg)
+		public bool IsValid(string msg)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private bool IsChildRecursive(Transform t, Transform parent)
 		{
-			return false;
-		}
-
-		public bool IsEmpty(bool considerRoot)
-		{
-			return false;
-		}
-
-		public bool Contains(Transform t, bool ignoreRoot = false)
-		{
-			return false;
+			return default(bool);
 		}
 
 		public Transform[] GetRagdollTransforms()
 		{
 			return null;
-		}
-
-		public static BipedRagdollReferences FromAvatar(Animator animator)
-		{
-			return default(BipedRagdollReferences);
-		}
-
-		public static BipedRagdollReferences FromBipedReferences(BipedReferences biped)
-		{
-			return default(BipedRagdollReferences);
 		}
 	}
 }

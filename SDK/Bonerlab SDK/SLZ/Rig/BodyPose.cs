@@ -8,21 +8,21 @@ namespace SLZ.Rig
 	{
 		public Quaternion headRotationInRoot;
 
+		public Quaternion neckRotationInRoot;
+
 		public Quaternion chestRotationInRoot;
 
 		public Quaternion spineRotationInRoot;
 
 		public Quaternion pelvisRotationInRoot;
 
-		public Vector3 cervicalDeviationInRoot;
+		public Quaternion clavLfRotationInRoot;
 
-		public Vector3 clavLfDirInRoot;
+		public Quaternion clavRtRotationInRoot;
 
-		public Vector3 clavRtDirInRoot;
+		public Quaternion armLfRotationInRoot;
 
-		public Vector3 armLfNormInRoot;
-
-		public Vector3 armRtNormInRoot;
+		public Quaternion armRtRotationInRoot;
 
 		public float armLfExtension;
 
@@ -32,9 +32,9 @@ namespace SLZ.Rig
 
 		public Quaternion handRtRotationInRoot;
 
-		public Vector3 legLfDirInRoot;
+		public Quaternion legLfRotationInRoot;
 
-		public Vector3 legRtDirInRoot;
+		public Quaternion legRtRotationInRoot;
 
 		public float legLfExtension;
 
@@ -68,10 +68,31 @@ namespace SLZ.Rig
 
 		public Vector3 spineInPalmRtNormed;
 
-		public Vector3 rootTranslation;
+		public Vector3 rootPosition;
 
 		public Quaternion rootRotation;
 
-		public Vector3 headTranslation;
+		public Vector3 headPosition;
+
+		public Vector3 headPositionInRoot;
+
+		public double timestamp;
+
+		public void LerpPoseUnclamped(BodyPose from, BodyPose to, float t)
+		{
+		}
+
+		public void CopyPose(BodyPose from)
+		{
+		}
+
+		public void AddPose(BodyPose addPose, RigWeights weights)
+		{
+		}
+
+		public BodyPose()
+			: base()
+		{
+		}
 	}
 }

@@ -51,59 +51,16 @@ namespace RootMotion.FinalIK
 
 			private float SpringAxis(float value, float min, float max)
 			{
-				return 0f;
+				return default(float);
 			}
 
 			private float Spring(float value, float limit, bool negative)
 			{
-				return 0f;
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CInitiate_003Ed__8
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public OffsetModifier _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
+				return default(float);
 			}
 
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CInitiate_003Ed__8(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
+			public OffsetLimits()
+				: base()
 			{
 			}
 		}
@@ -116,7 +73,13 @@ namespace RootMotion.FinalIK
 
 		protected float lastTime;
 
-		protected float deltaTime => 0f;
+		protected float deltaTime
+		{
+			get
+			{
+				return default(float);
+			}
+		}
 
 		protected abstract void OnModifyOffset();
 
@@ -124,7 +87,6 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CInitiate_003Ed__8))]
 		private IEnumerator Initiate()
 		{
 			return null;
@@ -139,6 +101,11 @@ namespace RootMotion.FinalIK
 		}
 
 		protected virtual void OnDestroy()
+		{
+		}
+
+		public OffsetModifier()
+			: base()
 		{
 		}
 	}

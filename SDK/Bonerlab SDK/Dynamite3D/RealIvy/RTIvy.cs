@@ -93,7 +93,7 @@ namespace Dynamite3D.RealIvy
 
 		private int GetBacktrackingPoints()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public virtual void UpdateIvy(float deltaTime)
@@ -130,7 +130,7 @@ namespace Dynamite3D.RealIvy
 
 		public bool IsVertexLimitReached()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private Vector3 CalculateFirstVertexVector()
@@ -153,5 +153,10 @@ namespace Dynamite3D.RealIvy
 		public abstract bool IsGrowingFinished();
 
 		public abstract void InitIvy(RuntimeGrowthParameters growthParameters, IvyContainer ivyContainer, IvyParameters ivyParameters);
+
+		public RTIvy()
+			: base()
+		{
+		}
 	}
 }

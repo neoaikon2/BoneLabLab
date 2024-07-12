@@ -33,9 +33,14 @@ namespace SLZ.Bonelab
 			return default(Quaternion);
 		}
 
-		public static Quaternion SmoothDamp(Quaternion rot, Quaternion target, ref Quaternion deriv, float time)
+		public static Quaternion SmoothDamp(Quaternion rot, Quaternion target, Quaternion deriv, float time)
 		{
 			return default(Quaternion);
+		}
+
+		public SmoothFollower()
+			: base()
+		{
 		}
 	}
 }

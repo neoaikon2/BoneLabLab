@@ -1,5 +1,6 @@
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using SLZ.Marrow.Utilities;
 using SLZ.Rig;
@@ -139,7 +140,7 @@ namespace SLZ.Vehicle
 		{
 			get
 			{
-				return 0f;
+				return default(float);
 			}
 			set
 			{
@@ -148,33 +149,43 @@ namespace SLZ.Vehicle
 
 		public float seatedPercent { get; private set; }
 
-		public RigManager rigManager => null;
-
-		public ConfigurableJoint buttJoint => null;
-
-		public Vector3 buttTargetInWorld => default(Vector3);
-
-		public event Action RegisteredEvent
+		public RigManager rigManager
 		{
-			[CompilerGenerated]
-			add
+			get
 			{
-			}
-			[CompilerGenerated]
-			remove
-			{
+				return null;
 			}
 		}
 
-		public event Action DeRegisteredEvent
+		public ConfigurableJoint buttJoint
 		{
-			[CompilerGenerated]
-			add
+			get
 			{
+				return null;
 			}
-			[CompilerGenerated]
-			remove
+		}
+
+		public Vector3 buttTargetInWorld
+		{
+			get
 			{
+				return default(Vector3);
+			}
+		}
+
+		public Vector3 physicalSpineDisplaceInWorld
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
+
+		public bool seated
+		{
+			get
+			{
+				return default(bool);
 			}
 		}
 
@@ -200,7 +211,7 @@ namespace SLZ.Vehicle
 
 		public bool TeleportRigToSeat(RigManager rigManager)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void Register(RigManager rM)
@@ -221,18 +232,21 @@ namespace SLZ.Vehicle
 
 		public virtual bool OnPlayerAbstractInput(Vector2 primaryAxis, Vector2 secondaryAxis)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public virtual Vector3 OnPlayerPreSpine(SimpleTransform head, SimpleTransform chest, SimpleTransform pelvis, float deltaTime, out SimpleTransform pelvisTarget)
+		public virtual Vector3 OnPlayerPreSpine(SimpleTransform head, SimpleTransform chest, SimpleTransform pelvis, float deltaTime, [Out] SimpleTransform pelvisTarget)
 		{
-			pelvisTarget = default(SimpleTransform);
+			return default(Vector3);
+		}
+
+		public virtual Vector3 OnPlayerPostSpine(SimpleTransform head, SimpleTransform chest, SimpleTransform pelvis, float deltaTime, SimpleTransform feet)
+		{
 			return default(Vector3);
 		}
 
-		public virtual Vector3 OnPlayerPostSpine(SimpleTransform head, SimpleTransform chest, SimpleTransform pelvis, float deltaTime, ref SimpleTransform feet)
+		public virtual void OnBeingFixedUpdate(SimpleTransform pelvis, float deltaTime)
 		{
-			return default(Vector3);
 		}
 
 		public virtual void OnPlayerAfterFixedUpdate()
@@ -243,8 +257,9 @@ namespace SLZ.Vehicle
 		{
 		}
 
-		public virtual void OnPlayerPreArt()
+		public virtual ValueTuple<SimpleTransform, SimpleTransform> OnPlayerPreArt()
 		{
+			return default(ValueTuple<SimpleTransform, SimpleTransform>);
 		}
 
 		private Vector3 IngressBlend(float deltaTime)
@@ -252,10 +267,9 @@ namespace SLZ.Vehicle
 			return default(Vector3);
 		}
 
-		private bool EgressBlend(float deltaTime, out Vector3 egressDelta)
+		private bool EgressBlend(float deltaTime, [Out] Vector3 egressDelta)
 		{
-			egressDelta = default(Vector3);
-			return false;
+			return default(bool);
 		}
 
 		private Vector3 TetherVector3(Vector3 delta, Vector3 position, Vector3 minBound, Vector3 maxBound)
@@ -265,17 +279,25 @@ namespace SLZ.Vehicle
 
 		private float TetherFloat(float delta, float position, float minBound, float maxBound)
 		{
-			return 0f;
+			return default(float);
 		}
 
-		private float GetSwingRom(Vector2 axisNormed, out Vector2 xzLimits)
+		private float GetSwingRom(Vector2 axisNormed, [Out] Vector2 xzLimits)
 		{
-			xzLimits = default(Vector2);
-			return 0f;
+			return default(float);
 		}
 
 		private void OnDrawGizmosSelected()
 		{
 		}
+
+		public Seat()
+			: base()
+		{
+		}
+
+		public event Action RegisteredEvent;
+
+		public event Action DeRegisteredEvent;
 	}
 }

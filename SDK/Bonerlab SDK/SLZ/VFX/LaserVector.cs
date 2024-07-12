@@ -28,5 +28,10 @@ namespace SLZ.VFX
 		private void Update()
 		{
 		}
+
+		public LaserVector()
+			: base()
+		{
+		}
 	}
 }

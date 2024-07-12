@@ -16,5 +16,10 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private GameObject LOD2Root;
+
+		public PipeLODPlacer()
+			: base()
+		{
+		}
 	}
 }

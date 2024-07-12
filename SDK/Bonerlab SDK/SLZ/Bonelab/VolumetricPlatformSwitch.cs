@@ -27,5 +27,10 @@ namespace SLZ.Bonelab
 		private void OnloadEvent()
 		{
 		}
+
+		public VolumetricPlatformSwitch()
+			: base()
+		{
+		}
 	}
 }

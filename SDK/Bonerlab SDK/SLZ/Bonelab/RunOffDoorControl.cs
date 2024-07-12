@@ -1,4 +1,5 @@
 using RootMotion.FinalIK;
+using SLZ.Bonelab.Obsolete;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -38,6 +39,11 @@ namespace SLZ.Bonelab
 		private float _timer;
 
 		private void Update()
+		{
+		}
+
+		public RunOffDoorControl()
+			: base()
 		{
 		}
 	}

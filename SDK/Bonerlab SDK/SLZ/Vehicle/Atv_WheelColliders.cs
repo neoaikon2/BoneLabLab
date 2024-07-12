@@ -28,6 +28,11 @@ namespace SLZ.Vehicle
 			public GameObject mesh;
 
 			public WheelType wheelType;
+
+			public Wheel()
+				: base()
+			{
+			}
 		}
 
 		[SerializeField]
@@ -126,6 +131,11 @@ namespace SLZ.Vehicle
 		}
 
 		private void Update()
+		{
+		}
+
+		public Atv_WheelColliders()
+			: base()
 		{
 		}
 	}

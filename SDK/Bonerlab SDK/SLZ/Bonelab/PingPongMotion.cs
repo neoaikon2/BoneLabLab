@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class PingPongMotion : MonoBehaviour
+	public class PingPongMotion : MarrowBehaviour
 	{
 		public enum MoveAxis
 		{
@@ -30,13 +30,13 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Rigid Body")]
 		public Rigidbody rb;
 
-		[Tooltip("Configurable Joint of object that is moving")]
 		[InspectorDisplayName("Configurable Joint")]
+		[Tooltip("Configurable Joint of object that is moving")]
 		public ConfigurableJoint configJoint;
 
-		[Tooltip("Power Source node you intend to have power change between")]
 		[InspectorDisplayName("Mini Power Source Node")]
-		public SourceNode mpsn;
+		[Tooltip("Power Source node you intend to have power change between")]
+		public PowerSource mpsn;
 
 		[Tooltip("Local Axis that you want to check the motion against, the actual local axis, not the configurable joint's axis")]
 		public MoveAxis selectedAxis;
@@ -68,7 +68,7 @@ namespace SLZ.Bonelab
 
 		private bool CheckBounds()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void ReverseMotion()
@@ -92,6 +92,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDrawGizmosSelected()
+		{
+		}
+
+		public PingPongMotion()
+			: base()
 		{
 		}
 	}

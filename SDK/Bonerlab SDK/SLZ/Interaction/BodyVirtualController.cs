@@ -13,5 +13,10 @@ namespace SLZ.Interaction
 		public override void OnVirtualControllerSolve(VirtualControlerPayload payload)
 		{
 		}
+
+		public BodyVirtualController()
+			: base()
+		{
+		}
 	}
 }

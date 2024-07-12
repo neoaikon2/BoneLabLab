@@ -1,13 +1,9 @@
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.SFX
 {
 	public class ParticleSFX : MonoBehaviour
 	{
-		[SerializeField]
-		private AudioMixerGroup outputMixer;
-
 		[SerializeField]
 		private AudioClip[] impact;
 
@@ -40,6 +36,11 @@ namespace SLZ.SFX
 		}
 
 		public void BulletImpact()
+		{
+		}
+
+		public ParticleSFX()
+			: base()
 		{
 		}
 	}

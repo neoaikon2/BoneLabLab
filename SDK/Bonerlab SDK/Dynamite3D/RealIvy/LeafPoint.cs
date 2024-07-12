@@ -46,10 +46,12 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public LeafPoint()
+			: base()
 		{
 		}
 
 		public LeafPoint(Vector3 point, float lpLength, Vector3 lpForward, Vector3 lpUpward, int chosenLeave, BranchPoint initSegment, BranchPoint endSegment)
+			: this()
 		{
 		}
 
@@ -63,7 +65,7 @@ namespace Dynamite3D.RealIvy
 
 		public float GetLengthFactor(BranchContainer branchContainer, float correctionFactor)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void CreateVertices(IvyParameters ivyParameters, RTMeshData leafMeshData, GameObject ivyGO)

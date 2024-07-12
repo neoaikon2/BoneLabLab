@@ -1,4 +1,3 @@
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -9,15 +8,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private Rigidbody rigidbody;
 
-		private static ComponentCache<GetVelocity> _cache;
-
-		public static ComponentCache<GetVelocity> Cache => null;
-
 		private void Reset()
-		{
-		}
-
-		private void Awake()
 		{
 		}
 
@@ -26,6 +17,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDisable()
+		{
+		}
+
+		public GetVelocity()
+			: base()
 		{
 		}
 	}

@@ -6,6 +6,7 @@ namespace SLZ.Marrow.Input
 		OculusTouch = 0,
 		Index = 1,
 		ViveWands = 2,
-		WindowsMR = 3
+		WindowsMR = 3,
+		OculusTouchPro = 4
 	}
 }

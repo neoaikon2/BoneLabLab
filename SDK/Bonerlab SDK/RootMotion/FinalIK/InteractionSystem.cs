@@ -1,11 +1,13 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace RootMotion.FinalIK
 {
-	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction System")]
 	[HelpURL("https://www.youtube.com/watch?v=r5jiZnsDH3M")]
+	[AddComponentMenu("Scripts/RootMotion.FinalIK/Interaction System/Interaction System")]
 	public class InteractionSystem : MonoBehaviour
 	{
 		public delegate void InteractionDelegate(FullBodyBipedEffector effectorType, InteractionObject interactionObject);
@@ -24,13 +26,13 @@ namespace RootMotion.FinalIK
 		[Tooltip("If > 0, lerps all the FBBIK channels used by the Interaction System back to their default or initial values when not in interaction.")]
 		public float resetToDefaultsSpeed;
 
-		[Tooltip("The collider that registers OnTriggerEnter and OnTriggerExit events with InteractionTriggers.")]
 		[FormerlySerializedAs("collider")]
+		[Tooltip("The collider that registers OnTriggerEnter and OnTriggerExit events with InteractionTriggers.")]
 		[Header("Triggering")]
 		public Collider characterCollider;
 
-		[Tooltip("Will be used by Interaction Triggers that need the camera's position. Assign the first person view character camera.")]
 		[FormerlySerializedAs("camera")]
+		[Tooltip("Will be used by Interaction Triggers that need the camera's position. Assign the first person view character camera.")]
 		public Transform FPSCamera;
 
 		[Tooltip("The layers that will be raycasted from the camera (along camera.forward). All InteractionTrigger look at target colliders should be included.")]
@@ -57,9 +59,9 @@ namespace RootMotion.FinalIK
 
 		public RaycastHit raycastHit;
 
-		[SerializeField]
 		[Tooltip("Reference to the FBBIK component.")]
 		[Space(10f)]
+		[SerializeField]
 		private FullBodyBipedIK fullBody;
 
 		[Tooltip("Handles looking at the interactions.")]
@@ -73,7 +75,13 @@ namespace RootMotion.FinalIK
 
 		private Collider c;
 
-		public bool inInteraction => false;
+		public bool inInteraction
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		public FullBodyBipedIK ik
 		{
@@ -120,42 +128,42 @@ namespace RootMotion.FinalIK
 
 		public bool IsInInteraction(FullBodyBipedEffector effectorType)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool IsPaused(FullBodyBipedEffector effectorType)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool IsPaused()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool IsInSync()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool StartInteraction(FullBodyBipedEffector effectorType, InteractionObject interactionObject, bool interrupt)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool PauseInteraction(FullBodyBipedEffector effectorType)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool ResumeInteraction(FullBodyBipedEffector effectorType)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool StopInteraction(FullBodyBipedEffector effectorType)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void PauseAll()
@@ -177,29 +185,27 @@ namespace RootMotion.FinalIK
 
 		public float GetProgress(FullBodyBipedEffector effectorType)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public float GetMinActiveProgress()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public bool TriggerInteraction(int index, bool interrupt)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public bool TriggerInteraction(int index, bool interrupt, out InteractionObject interactionObject)
+		public bool TriggerInteraction(int index, bool interrupt, [Out] InteractionObject interactionObject)
 		{
-			interactionObject = null;
-			return false;
+			return default(bool);
 		}
 
-		public bool TriggerInteraction(int index, bool interrupt, out InteractionTarget interactionTarget)
+		public bool TriggerInteraction(int index, bool interrupt, [Out] InteractionTarget interactionTarget)
 		{
-			interactionTarget = null;
-			return false;
+			return default(bool);
 		}
 
 		public InteractionTrigger.Range GetClosestInteractionRange()
@@ -229,7 +235,7 @@ namespace RootMotion.FinalIK
 
 		public bool TriggerEffectorsReady(int index)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public InteractionTrigger.Range GetTriggerRange(int index)
@@ -239,7 +245,7 @@ namespace RootMotion.FinalIK
 
 		public int GetClosestTriggerIndex()
 		{
-			return 0;
+			return default(int);
 		}
 
 		private void Start()
@@ -270,10 +276,9 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		private bool ContactIsInRange(int index, out int bestRangeIndex)
+		private bool ContactIsInRange(int index, [Out] int bestRangeIndex)
 		{
-			bestRangeIndex = default(int);
-			return false;
+			return default(bool);
 		}
 
 		private void OnDrawGizmosSelected()
@@ -314,12 +319,12 @@ namespace RootMotion.FinalIK
 
 		private bool IsValid(bool log)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private bool TriggerIndexIsValid(int index)
 		{
-			return false;
+			return default(bool);
 		}
 
 		[ContextMenu("User Manual")]
@@ -329,6 +334,11 @@ namespace RootMotion.FinalIK
 
 		[ContextMenu("Scrpt Reference")]
 		private void OpenScriptReference()
+		{
+		}
+
+		public InteractionSystem()
+			: base()
 		{
 		}
 	}

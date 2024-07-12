@@ -20,5 +20,10 @@ namespace SLZ.Bonelab
 		private void OnAttached(Hand hand)
 		{
 		}
+
+		public GrabDisable()
+			: base()
+		{
+		}
 	}
 }

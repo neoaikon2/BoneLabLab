@@ -31,5 +31,10 @@ namespace SLZ.Bonelab
 		public void ResetRB()
 		{
 		}
+
+		public FlightStabilizer()
+			: base()
+		{
+		}
 	}
 }

@@ -13,24 +13,6 @@ namespace SLZ.Combat
 		}
 
 		[HideInInspector]
-		public enum Material
-		{
-			Default = 0,
-			Metal = 1,
-			PureMetal = 2,
-			Wood = 3,
-			Dirt = 4,
-			Cardboard = 5,
-			Glass = 6,
-			Blood = 7,
-			Water = 8,
-			Zapper = 9,
-			Concrete = 10,
-			Hydraulic = 11,
-			Bioluminescent = 12
-		}
-
-		[HideInInspector]
 		public enum ModelType
 		{
 			Skinned = 0,
@@ -47,9 +29,6 @@ namespace SLZ.Combat
 
 		public DecalType decalType;
 
-		[HideInInspector]
-		public Material material;
-
 		[Tooltip("Define type of target Mesh for Decal System")]
 		[HideInInspector]
 		public ModelType modelType;
@@ -61,20 +40,12 @@ namespace SLZ.Combat
 		[HideInInspector]
 		public Color SecondaryColor;
 
-		[Header("Ballistics")]
-		[HideInInspector]
-		[Range(0.001f, 1f)]
-		public float PenetrationResistance;
-
 		[HideInInspector]
 		public float megaPascalModifier;
 
-		[Header(null)]
-		[HideInInspector]
-		public bool Flammable;
-
-		[Tooltip("Fire Resistance in C")]
-		[HideInInspector]
-		public float FireResistance;
+		public ImpactPropertiesVariables()
+			: base()
+		{
+		}
 	}
 }

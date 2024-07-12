@@ -23,5 +23,10 @@ namespace SLZ.Bonelab
 		public Spawnable spawnable;
 
 		public LootType lootType;
+
+		public ArenaLootItem()
+			: base()
+		{
+		}
 	}
 }

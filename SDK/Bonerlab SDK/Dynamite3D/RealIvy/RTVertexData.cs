@@ -16,13 +16,13 @@ namespace Dynamite3D.RealIvy
 
 		public Color color;
 
-		public RTVertexData(Vector3 _vertex, Vector3 _normal, Vector2 _uv, Vector2 _uv2, Color _color)
+		public RTVertexData(Vector3 vertex, Vector3 normal, Vector2 uv, Vector2 uv2, Color color)
 		{
-			vertex = _vertex;
-			normal = _normal;
-			uv = _uv;
-			uv2 = _uv2;
-			color = _color;
+			this.color = default(Color);
+			this.uv2 = default(Vector2);
+			this.uv = default(Vector2);
+			this.normal = default(Vector3);
+			this.vertex = default(Vector3);
 		}
 	}
 }

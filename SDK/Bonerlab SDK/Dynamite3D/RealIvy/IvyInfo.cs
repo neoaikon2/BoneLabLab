@@ -15,5 +15,10 @@ namespace Dynamite3D.RealIvy
 		public void Setup(InfoPool infoPool, MeshFilter meshFilter, MeshRenderer meshRenderer, IvyPreset originalPreset)
 		{
 		}
+
+		public IvyInfo()
+			: base()
+		{
+		}
 	}
 }

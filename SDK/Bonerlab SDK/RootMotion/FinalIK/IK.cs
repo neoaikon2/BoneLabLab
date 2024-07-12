@@ -19,5 +19,10 @@ namespace RootMotion.FinalIK
 		protected abstract void OpenUserManual();
 
 		protected abstract void OpenScriptReference();
+
+		public IK()
+			: base()
+		{
+		}
 	}
 }

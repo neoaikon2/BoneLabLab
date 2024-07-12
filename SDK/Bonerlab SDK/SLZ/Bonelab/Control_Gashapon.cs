@@ -6,146 +6,24 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Bonelab.SaveData;
 using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Marrow.Warehouse;
-using SLZ.Props.Weapons;
-using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Bonelab
 {
 	public class Control_Gashapon : MonoBehaviour
 	{
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CSpawnGacha_003Ed__42
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public string barcode;
-
-			public Control_Gashapon _003C_003E4__this;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CPusherPaddle_003Ed__43
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Control_Gashapon _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CPusherPaddle_003Ed__43(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CBallUpdateLoop_003Ed__44
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Control_Gashapon _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CBallUpdateLoop_003Ed__44(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		public SourceNode pusherPower;
+		public PowerSource pusherPower;
 
 		[SerializeField]
 		private List<Crate> blackList;
 
 		private List<string> blackListStrings;
-
-		private List<string> blackListPalletStrings;
 
 		[SerializeField]
 		private int _itemPrice;
@@ -198,9 +76,6 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AudioClip refundClip;
 
-		[SerializeField]
-		private AudioMixerGroup _mixergroup;
-
 		public Transform giveChangeTransform;
 
 		public Transform gachaSpawnTransform;
@@ -221,9 +96,23 @@ namespace SLZ.Bonelab
 
 		public Rigidbody[] ballRbs;
 
-		private static PlayerUnlocks u => null;
+		private AmmoInventory _ammoInventory;
 
-		private static PlayerProgression p => null;
+		private static PlayerUnlocks u
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		private static PlayerProgression p
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Start()
 		{
@@ -241,30 +130,47 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		[ContextMenu("AddAllAmmo")]
+		private void ADDALLAMMO()
+		{
+		}
+
 		public void AddBullets(int addedBullets, int type)
 		{
+		}
+
+		[ContextMenu("CheckGachaLoop")]
+		private void CHECKGACHALOOP()
+		{
+		}
+
+		private IEnumerator CheckGachaLoop()
+		{
+			return null;
 		}
 
 		public void CheckGacha()
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CSpawnGacha_003Ed__42))]
 		private UniTaskVoid SpawnGacha(string barcode)
 		{
 			return default(UniTaskVoid);
 		}
 
-		[IteratorStateMachine(typeof(_003CPusherPaddle_003Ed__43))]
 		private IEnumerator PusherPaddle()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CBallUpdateLoop_003Ed__44))]
 		private IEnumerator BallUpdateLoop()
 		{
 			return null;
+		}
+
+		public Control_Gashapon()
+			: base()
+		{
 		}
 	}
 }

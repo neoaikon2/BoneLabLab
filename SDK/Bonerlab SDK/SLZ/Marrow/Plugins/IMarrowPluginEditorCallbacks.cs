@@ -1,21 +1,47 @@
+using Cysharp.Threading.Tasks;
+
 namespace SLZ.Marrow.Plugins
 {
 	public interface IMarrowPluginEditorCallbacks : IMarrowPlugin
 	{
-		void OnMarrowPluginEditorPaused();
+		UniTask OnMarrowPluginEditorPaused()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginEditorUnpaused();
+		UniTask OnMarrowPluginEditorUnpaused()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginEditorEnteredEditMode();
+		UniTask OnMarrowPluginEditorEnteredEditMode()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginEditorExitingEditMode();
+		UniTask OnMarrowPluginEditorExitingEditMode()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginEditorEnteredPlayMode();
+		UniTask OnMarrowPluginEditorEnteredPlayMode()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginEditorExitingPlayMode();
+		UniTask OnMarrowPluginEditorExitingPlayMode()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginEditorBeforeAssemblyReload();
+		UniTask OnMarrowPluginEditorBeforeAssemblyReload()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginEditorAfterAssemblyReload();
+		UniTask OnMarrowPluginEditorAfterAssemblyReload()
+		{
+			return default(UniTask);
+		}
 	}
 }

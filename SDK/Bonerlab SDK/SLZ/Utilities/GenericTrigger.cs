@@ -23,5 +23,10 @@ namespace SLZ.Utilities
 		private void OnTriggerExit(Collider other)
 		{
 		}
+
+		public GenericTrigger()
+			: base()
+		{
+		}
 	}
 }

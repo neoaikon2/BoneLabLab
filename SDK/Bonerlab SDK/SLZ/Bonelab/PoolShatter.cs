@@ -22,7 +22,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private SimpleTrans[] transforms;
 
-		private void Awake()
+		private void Start()
 		{
 		}
 
@@ -44,6 +44,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDisable()
+		{
+		}
+
+		public PoolShatter()
+			: base()
 		{
 		}
 	}

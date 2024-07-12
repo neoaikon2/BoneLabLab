@@ -33,13 +33,37 @@ namespace SLZ.Bonelab
 		[HideInInspector]
 		public Vector3 lastPosition;
 
-		public Quaternion AnchorRotation => default(Quaternion);
+		public Quaternion AnchorRotation
+		{
+			get
+			{
+				return default(Quaternion);
+			}
+		}
 
-		public Vector3 Size => default(Vector3);
+		public Vector3 Size
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 FrontContact => default(Vector3);
+		public Vector3 FrontContact
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 RightContact => default(Vector3);
+		public Vector3 RightContact
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
 		protected virtual void Start()
 		{
@@ -64,6 +88,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDrawGizmosSelected()
+		{
+		}
+
+		public SplineEntity()
+			: base()
 		{
 		}
 	}

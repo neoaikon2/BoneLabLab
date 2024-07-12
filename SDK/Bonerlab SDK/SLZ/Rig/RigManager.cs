@@ -4,12 +4,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Bonelab;
+using SLZ.Data;
 using SLZ.Interaction;
-using SLZ.Marrow.Data;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
-using SLZ.Mods;
 using SLZ.Player;
 using SLZ.VRMK;
 using SLZ.Vehicle;
@@ -27,109 +26,39 @@ namespace SLZ.Rig
 			Rectangle = 1
 		}
 
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__69
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
-
-			public RigManager _003C_003E4__this;
-
-			private string _003CcurrentAvatar_003E5__2;
-
-			private string _003CfallbackAvatar_003E5__3;
-
-			private UniTask.Awaiter _003C_003Eu__1;
-
-			private UniTask<bool>.Awaiter _003C_003Eu__2;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CSwapAvatarCrate_003Ed__70
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskMethodBuilder<bool> _003C_003Et__builder;
-
-			public string barcode;
-
-			public Action<bool> callback;
-
-			public bool cache;
-
-			public RigManager _003C_003E4__this;
-
-			private SLZ.VRMK.Avatar _003CavatarToSwapTo_003E5__2;
-
-			private UniTask<bool>.Awaiter _003C_003Eu__1;
-
-			private UniTask<GameObject>.Awaiter _003C_003Eu__2;
-
-			private UniTask.Awaiter _003C_003Eu__3;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
 		private static ComponentCache<RigManager> _cache;
 
+		[HideInInspector]
+		public MarrowEntity marrowEntity;
+
 		[Header("Control")]
-		public OpenControllerRig openControllerRig;
+		public ControllerRig controllerRig;
 
-		public ControllerRig tempControllerRig;
-
-		public RealtimeSkeletonRig realHeptaRig;
+		[Header("Remap")]
+		public bool remapEnabled;
 
 		public RemapRig remapHeptaRig;
 
-		[Header("Rigs")]
+		public AnimationRig animationRig;
+
+		public InterpRig interpRig;
+
 		public GameWorldSkeletonRig virtualHeptaRig;
 
+		[Header("Physics")]
 		public PhysicsRig physicsRig;
-
-		[FormerlySerializedAs("artRig")]
-		public SkeletonRig animationRig;
-
-		public ArtRig artOutputRig;
 
 		[Header("Modules")]
 		public Inventory inventory;
 
-		public UIRig uiRig;
-
-		public TutorialRig tutorialRig;
-
-		[Header("Player Data")]
-		public BodyVitals bodyVitals;
-
 		public Health health;
-
-		public AmmoInventory AmmoInventory;
 
 		public Seat activeSeat;
 
-		[Tooltip("Readonly field, to change which avatar is used in a scene, use \"Avatar Override\"")]
 		[ReadOnly(false)]
-		[SerializeField]
+		[Tooltip("Readonly field, to change which avatar is used in a scene, use \"Avatar Override\"")]
 		[Header("Avatar")]
+		[SerializeField]
 		private SLZ.VRMK.Avatar _avatar;
 
 		private SLZ.VRMK.Avatar _avatarOnDeck;
@@ -142,8 +71,6 @@ namespace SLZ.Rig
 		[Tooltip("Overrides the avatar for the scene (overrides the loaded avatar)")]
 		private AvatarCrateReference _avatarCrate;
 
-		public bool loadAvatarFromSaveData;
-
 		[SerializeField]
 		private SLZ.VRMK.Avatar _calibrationAvatar;
 
@@ -154,17 +81,14 @@ namespace SLZ.Rig
 		[HideInInspector]
 		public WorldGrip worldGrip;
 
-		public bool isWorldGripEnabled;
-
 		public HandPose worldGripHandPose;
 
-		public Rig[] rigs;
+		[FormerlySerializedAs("inputRigs")]
+		public Rig[] remapRigs;
 
 		private bool _fixedRan;
 
 		private bool _reEnable;
-
-		private int _lastFrame;
 
 		public Action onAvatarSwapped;
 
@@ -178,11 +102,11 @@ namespace SLZ.Rig
 
 		public Vector3 checkpointFwd;
 
-		public bool fwdOnPort;
-
 		private SimpleTransform _queuedDestination;
 
 		private bool _teleportQueued;
+
+		private bool _zeroVelocity;
 
 		private bool _leashed;
 
@@ -200,9 +124,21 @@ namespace SLZ.Rig
 
 		private LeashType _type;
 
-		public static ComponentCache<RigManager> Cache => null;
+		public static ComponentCache<RigManager> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public ControllerRig ControllerRig => null;
+		public ControllerRig ControllerRig
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public SLZ.VRMK.Avatar avatar
 		{
@@ -215,7 +151,13 @@ namespace SLZ.Rig
 			}
 		}
 
-		public string avatarID => null;
+		public string avatarID
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public bool HasInitialAvatar { get; private set; }
 
@@ -241,7 +183,13 @@ namespace SLZ.Rig
 			}
 		}
 
-		public bool isLeashed => false;
+		public bool isLeashed
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		private void Awake()
 		{
@@ -279,23 +227,12 @@ namespace SLZ.Rig
 		{
 		}
 
-		public Rig GetPreviousRig(int i)
+		public Rig GetPhysInputRig()
 		{
 			return null;
 		}
 
-		public void LoadAvatarFromSaveData()
-		{
-		}
-
-		[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__69))]
-		public UniTask LoadAvatarFromSaveDataAsync()
-		{
-			return default(UniTask);
-		}
-
-		[AsyncStateMachine(typeof(_003CSwapAvatarCrate_003Ed__70))]
-		public UniTask<bool> SwapAvatarCrate(string barcode, bool cache = false, Action<bool> callback = null)
+		public UniTask<bool> SwapAvatarCrate(string barcode, bool cache = false, Action<bool> callback = default(Action<bool>))
 		{
 			return default(UniTask<bool>);
 		}
@@ -306,7 +243,7 @@ namespace SLZ.Rig
 
 		private bool SwitchAvatar(SLZ.VRMK.Avatar newAvatar)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void TeleportEvent(Transform trans)
@@ -315,27 +252,31 @@ namespace SLZ.Rig
 
 		public bool Teleport(Vector3 feetDestinationWorld, bool zeroVelocity = true)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool Teleport(Vector3 feetDestinationWorld, Vector3 fwdSnap, bool zeroVelocity = true)
 		{
-			return false;
+			return default(bool);
+		}
+
+		public bool Teleport(Transform destination, bool zeroVelocity = true)
+		{
+			return default(bool);
+		}
+
+		private void InternalTeleport()
+		{
 		}
 
 		public bool TeleportToPose(Vector3 feetDestinationWorld, Vector3 fwdSnap, bool zeroVelocity = true)
 		{
-			return false;
-		}
-
-		public bool QueueTeleport(Transform destination)
-		{
-			return false;
+			return default(bool);
 		}
 
 		public bool LeashPlayerCircle(Vector3 positionWorld, float minRadius, float maxRadius)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public Vector3 UpdateLeashCircle(Vector3 headDelta)
@@ -349,6 +290,11 @@ namespace SLZ.Rig
 		}
 
 		public void UnleashPlayer()
+		{
+		}
+
+		public RigManager()
+			: base()
 		{
 		}
 	}

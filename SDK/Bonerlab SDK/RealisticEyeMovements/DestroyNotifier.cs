@@ -6,20 +6,15 @@ namespace RealisticEyeMovements
 {
 	public class DestroyNotifier : MonoBehaviour
 	{
-		public event Action<DestroyNotifier> OnDestroyedEvent
-		{
-			[CompilerGenerated]
-			add
-			{
-			}
-			[CompilerGenerated]
-			remove
-			{
-			}
-		}
-
 		private void OnDestroyed()
 		{
 		}
+
+		public DestroyNotifier()
+			: base()
+		{
+		}
+
+		public event Action<DestroyNotifier> OnDestroyedEvent;
 	}
 }

@@ -7,19 +7,32 @@ namespace SLZ.Bonelab
 	[Serializable]
 	public class RegisteredSaveableInfo
 	{
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private Saveable _saveable;
 
 		[SerializeField]
 		[ReadOnly(false)]
 		private string _uniqueId;
 
-		public Saveable Saveable => null;
+		public Saveable Saveable
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public string UniqueId => null;
+		public string UniqueId
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public RegisteredSaveableInfo(string uniqueId, Saveable saveable)
+			: base()
 		{
 		}
 	}

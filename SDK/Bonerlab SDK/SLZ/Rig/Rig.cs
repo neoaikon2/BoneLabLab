@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices;
+using SLZ.Marrow.Utilities;
 using SLZ.VRMK;
 using UnityEngine;
 
@@ -20,11 +22,15 @@ namespace SLZ.Rig
 
 		public Transform m_pelvis;
 
+		public Transform m_clavLf;
+
 		public Transform m_shoulderLf;
 
 		public Transform m_elbowLf;
 
 		public Transform m_handLf;
+
+		public Transform m_clavRt;
 
 		public Transform m_shoulderRt;
 
@@ -48,12 +54,32 @@ namespace SLZ.Rig
 
 		public Vector4 eyeGaze;
 
+		protected SLZ.VRMK.Avatar _avatar;
+
 		protected BodyPose _bodyPose;
 
-		[HideInInspector]
-		public int rigIndex;
+		private RigWeights _rigWeights;
+
+		public SLZ.VRMK.Avatar avatar
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public BodyPose bodyPose
+		{
+			get
+			{
+				return null;
+			}
+			set
+			{
+			}
+		}
+
+		public RigWeights rigWeights
 		{
 			get
 			{
@@ -84,10 +110,6 @@ namespace SLZ.Rig
 		{
 		}
 
-		public virtual void OnFirstFixedUpdate()
-		{
-		}
-
 		public virtual void OnFixedUpdate(float deltaTime)
 		{
 		}
@@ -108,7 +130,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public virtual void Teleport(Vector3 displace, bool zeroVelocity = false)
+		public virtual void Teleport(SimpleTransform displace, bool zeroVelocity = false)
 		{
 		}
 
@@ -116,19 +138,32 @@ namespace SLZ.Rig
 		{
 		}
 
-		public Rig GetPreviousRig()
-		{
-			return null;
-		}
-
-		protected Vector3 Gimbal(Vector3 target, ref Vector3 lastTarget, ref Vector3 gimbaledVelocity, ref Vector3 gimbalAccel, ref Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset = float.MaxValue, float smoothTime = 0.1f)
+		protected Vector3 Gimbal(Vector3 target, Vector3 lastTarget, Vector3 gimbaledVelocity, Vector3 gimbalAccel, Vector3 gimbleOffset, float lerpRate, float deltaTime, float maxOffset = float.MaxValue, float smoothTime = 0.1f)
 		{
 			return default(Vector3);
 		}
 
-		protected float Gimbal(float target, ref float lastTarget, ref float gimbaledVelocity, ref float gimbalAccel, ref float gimbleOffset, float lerpRate, float deltaTime, float maxOffset = float.MaxValue, float smoothTime = 0.1f)
+		protected float Gimbal(float target, float lastTarget, float gimbaledVelocity, float gimbalAccel, float gimbleOffset, float lerpRate, float deltaTime, float maxOffset = float.MaxValue, float smoothTime = 0.1f)
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public bool PointInNeutralTorso(Vector3 pointLocalToSternum, SLZ.VRMK.Avatar avatar, [Out] float t, [Out] float yPercRemapped, [Out] Vector2 sin, [Out] Vector3 pointLocal, [Out] Vector3 maxSoftDisplacement)
+		{
+			return default(bool);
+		}
+
+		public void SampleRigPose(Quaternion[] rigPose)
+		{
+		}
+
+		public void BlendToSampledRigPose(Quaternion[] rigPose, float t)
+		{
+		}
+
+		public Rig()
+			: base()
+		{
 		}
 	}
 }

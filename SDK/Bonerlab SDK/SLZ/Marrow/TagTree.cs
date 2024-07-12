@@ -44,6 +44,7 @@ namespace SLZ.Marrow
 		}
 
 		public TagTree(bool autoSetup = true)
+			: base()
 		{
 		}
 

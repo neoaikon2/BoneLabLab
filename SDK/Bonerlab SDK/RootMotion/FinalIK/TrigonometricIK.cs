@@ -32,5 +32,10 @@ namespace RootMotion.FinalIK
 		{
 			return null;
 		}
+
+		public TrigonometricIK()
+			: base()
+		{
+		}
 	}
 }

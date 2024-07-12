@@ -17,5 +17,10 @@ namespace SLZ.Bonelab
 		private void EnableColliders()
 		{
 		}
+
+		public Tween()
+			: base()
+		{
+		}
 	}
 }

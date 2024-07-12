@@ -1,15 +1,28 @@
+using Cysharp.Threading.Tasks;
 using SLZ.Marrow.Warehouse;
 
 namespace SLZ.Marrow.Plugins
 {
 	public interface IMarrowPluginLevelCallbacks : IMarrowPlugin
 	{
-		void OnBeforeLevelLoad(LevelCrateReference level);
+		UniTask OnBeforeLevelLoad(LevelCrateReference level)
+		{
+			return default(UniTask);
+		}
 
-		void OnAfterLevelLoad(LevelCrateReference level);
+		UniTask OnAfterLevelLoad(LevelCrateReference level)
+		{
+			return default(UniTask);
+		}
 
-		void OnBeforeLevelUnload();
+		UniTask OnBeforeLevelUnload()
+		{
+			return default(UniTask);
+		}
 
-		void OnAfterLevelUnload();
+		UniTask OnAfterLevelUnload()
+		{
+			return default(UniTask);
+		}
 	}
 }

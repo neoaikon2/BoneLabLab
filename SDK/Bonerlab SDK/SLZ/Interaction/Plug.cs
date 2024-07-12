@@ -1,30 +1,14 @@
-using SLZ.Marrow.Pool;
 using SLZ.Marrow.Utilities;
-using UnityEngine;
 
 namespace SLZ.Interaction
 {
-	public class Plug : MonoBehaviour
+	public class Plug : MarrowBehaviour
 	{
-		private static ComponentCache<Plug> _cache;
-
 		public InteractableHost host;
 
 		public float effectiveRadius;
 
-		protected AssetPoolee _poolee;
-
-		public static ComponentCache<Plug> Cache => null;
-
 		private void Reset()
-		{
-		}
-
-		protected virtual void Awake()
-		{
-		}
-
-		protected virtual void OnDestroy()
 		{
 		}
 
@@ -37,6 +21,15 @@ namespace SLZ.Interaction
 		}
 
 		public virtual void OnPlugHoverUpdate(Socket socket)
+		{
+		}
+
+		public virtual void OnDespawn()
+		{
+		}
+
+		public Plug()
+			: base()
 		{
 		}
 	}

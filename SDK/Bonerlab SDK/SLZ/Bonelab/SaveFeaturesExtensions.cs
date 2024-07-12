@@ -4,7 +4,7 @@ namespace SLZ.Bonelab
 	{
 		public static bool HasFlagFast(this SaveFeatures value, SaveFeatures flag)
 		{
-			return false;
+			return default(bool);
 		}
 	}
 }

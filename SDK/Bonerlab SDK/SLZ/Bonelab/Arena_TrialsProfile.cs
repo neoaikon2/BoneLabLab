@@ -20,5 +20,10 @@ namespace SLZ.Bonelab
 
 		[JsonProperty("completed_hard")]
 		public bool completedHard;
+
+		public Arena_TrialsProfile()
+			: base()
+		{
+		}
 	}
 }

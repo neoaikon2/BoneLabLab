@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace SLZ.VRMK
@@ -24,15 +25,13 @@ namespace SLZ.VRMK
 			return default(Vector3);
 		}
 
-		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out bool changed)
+		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, [Out] bool changed)
 		{
-			changed = default(bool);
 			return default(Vector3);
 		}
 
-		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out float clampValue)
+		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, [Out] float clampValue)
 		{
-			clampValue = default(float);
 			return default(Vector3);
 		}
 

@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 		private void Reset()
 		{
 		}
+
+		public PlatformParticleLight()
+			: base()
+		{
+		}
 	}
 }

@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -24,12 +26,12 @@ namespace RootMotion.FinalIK
 			[Tooltip("The elbow will be bent towards this Transform if 'Bend Goal Weight' > 0.")]
 			public Transform bendGoal;
 
-			[Tooltip("Positional weight of the hand target.")]
 			[Range(0f, 1f)]
+			[Tooltip("Positional weight of the hand target.")]
 			public float positionWeight;
 
-			[Tooltip("Rotational weight of the hand target")]
 			[Range(0f, 1f)]
+			[Tooltip("Rotational weight of the hand target")]
 			public float rotationWeight;
 
 			[Tooltip("Different techniques for shoulder bone rotation.")]
@@ -39,16 +41,16 @@ namespace RootMotion.FinalIK
 			[Tooltip("The weight of shoulder rotation")]
 			public float shoulderRotationWeight;
 
-			[Tooltip("The weight of twisting the shoulders back when arms are lifted up.")]
 			[Range(0f, 1f)]
+			[Tooltip("The weight of twisting the shoulders back when arms are lifted up.")]
 			public float shoulderTwistWeight;
 
-			[Tooltip("If greater than 0, will bend the elbow towards the 'Bend Goal' Transform.")]
 			[Range(0f, 1f)]
+			[Tooltip("If greater than 0, will bend the elbow towards the 'Bend Goal' Transform.")]
 			public float bendGoalWeight;
 
-			[Tooltip("Angular offset of the elbow bending direction.")]
 			[Range(-180f, 180f)]
+			[Tooltip("Angular offset of the elbow bending direction.")]
 			public float swivelOffset;
 
 			[Tooltip("Local axis of the hand bone that points from the wrist towards the palm. Used for defining hand bone orientation.")]
@@ -102,13 +104,37 @@ namespace RootMotion.FinalIK
 
 			public Quaternion rotation { get; private set; }
 
-			private VirtualBone shoulder => null;
+			private VirtualBone shoulder
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			private VirtualBone upperArm => null;
+			private VirtualBone upperArm
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			private VirtualBone forearm => null;
+			private VirtualBone forearm
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			private VirtualBone hand => null;
+			private VirtualBone hand
+			{
+				get
+				{
+					return null;
+				}
+			}
 
 			protected override void OnRead(Vector3[] positions, Quaternion[] rotations, bool hasChest, bool hasNeck, bool hasShoulders, bool hasToes, bool hasLegs, int rootIndex, int index)
 			{
@@ -134,13 +160,13 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations)
+			public override void Write(Vector3[] solvedPositions, Quaternion[] solvedRotations)
 			{
 			}
 
 			private float DamperValue(float value, float min, float max, float weight = 1f)
 			{
-				return 0f;
+				return default(float);
 			}
 
 			private Vector3 GetBendNormal(Vector3 dir)
@@ -148,7 +174,8 @@ namespace RootMotion.FinalIK
 				return default(Vector3);
 			}
 
-			private void Visualize(VirtualBone bone1, VirtualBone bone2, VirtualBone bone3, Color color)
+			public Arm()
+				: base()
 			{
 			}
 		}
@@ -167,7 +194,7 @@ namespace RootMotion.FinalIK
 
 			protected int index;
 
-			public float sqrMag { get; private set; }
+			private float sqrMag { set; get; }
 
 			public float mag { get; private set; }
 
@@ -175,7 +202,7 @@ namespace RootMotion.FinalIK
 
 			public abstract void PreSolve();
 
-			public abstract void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations);
+			public abstract void Write(Vector3[] solvedPositions, Quaternion[] solvedRotations);
 
 			public abstract void ApplyOffsets();
 
@@ -189,14 +216,6 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public void MoveRotation(Quaternion rotation)
-			{
-			}
-
-			public void Translate(Vector3 position, Quaternion rotation)
-			{
-			}
-
 			public void TranslateRoot(Vector3 newRootPos, Quaternion newRootRot)
 			{
 			}
@@ -205,11 +224,8 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public void Visualize(Color color)
-			{
-			}
-
-			public void Visualize()
+			public BodyPart()
+				: base()
 			{
 			}
 		}
@@ -243,11 +259,18 @@ namespace RootMotion.FinalIK
 
 			private float supportLegWV;
 
-			public bool isStepping => false;
+			public bool isStepping
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
 
 			public float stepProgress { get; private set; }
 
 			public Footstep(Quaternion rootRotation, Vector3 footPosition, Quaternion footRotation, Vector3 characterSpaceOffset)
+				: base()
 			{
 			}
 
@@ -289,20 +312,20 @@ namespace RootMotion.FinalIK
 			[Range(0f, 1f)]
 			public float rotationWeight;
 
-			[Tooltip("If greater than 0, will bend the knee towards the 'Bend Goal' Transform.")]
 			[Range(0f, 1f)]
+			[Tooltip("If greater than 0, will bend the knee towards the 'Bend Goal' Transform.")]
 			public float bendGoalWeight;
 
-			[Tooltip("Angular offset of the knee bending direction.")]
 			[Range(-180f, 180f)]
+			[Tooltip("Angular offset of the knee bending direction.")]
 			public float swivelOffset;
 
-			[Tooltip("If 0, the bend plane will be locked to the rotation of the pelvis and rotating the foot will have no effect on the knee direction. If 1, to the target rotation of the leg so that the knee will bend towards the forward axis of the foot. Values in between will be slerped between the two.")]
 			[Range(0f, 1f)]
+			[Tooltip("If 0, the bend plane will be locked to the rotation of the pelvis and rotating the foot will have no effect on the knee direction. If 1, to the target rotation of the leg so that the knee will bend towards the forward axis of the foot. Values in between will be slerped between the two.")]
 			public float bendToTargetWeight;
 
-			[Range(0.01f, 2f)]
 			[Tooltip("Use this to make the leg shorter/longer.")]
+			[Range(0.01f, 2f)]
 			public float legLengthMlp;
 
 			[Tooltip("Evaluates stretching of the leg by target distance relative to leg length. Value at time 1 represents stretching amount at the point where distance to the target is equal to leg length. Value at time 1 represents stretching amount at the point where distance to the target is double the leg length. Value represents the amount of stretching. Linear stretching would be achieved with a linear curve going up by 45 degrees. Increase the range of stretching by moving the last key up and right at the same amount. Smoothing in the curve can help reduce knee snapping (start stretching the arm slightly before target distance reaches leg length).")]
@@ -352,15 +375,45 @@ namespace RootMotion.FinalIK
 
 			public bool hasToes { get; private set; }
 
-			public VirtualBone thigh => null;
+			public VirtualBone thigh
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			private VirtualBone calf => null;
+			private VirtualBone calf
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			private VirtualBone foot => null;
+			private VirtualBone foot
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			private VirtualBone toes => null;
+			private VirtualBone toes
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			public VirtualBone lastBone => null;
+			public VirtualBone lastBone
+			{
+				get
+				{
+					return null;
+				}
+			}
 
 			public Vector3 thighRelativeToPelvis { get; private set; }
 
@@ -392,11 +445,16 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations)
+			public override void Write(Vector3[] solvedPositions, Quaternion[] solvedRotations)
 			{
 			}
 
 			public override void ResetOffsets()
+			{
+			}
+
+			public Leg()
+				: base()
 			{
 			}
 		}
@@ -404,8 +462,8 @@ namespace RootMotion.FinalIK
 		[Serializable]
 		public class Locomotion
 		{
-			[Tooltip("Used for blending in/out of procedural locomotion.")]
 			[Range(0f, 1f)]
+			[Tooltip("Used for blending in/out of procedural locomotion.")]
 			public float weight;
 
 			[Tooltip("Tries to maintain this distance between the legs.")]
@@ -426,8 +484,8 @@ namespace RootMotion.FinalIK
 			[Tooltip("The amount of head/hand target velocity prediction.")]
 			public float velocityFactor;
 
-			[Tooltip("How much can a leg be extended before it is forced to step to another position? 1 means fully stretched.")]
 			[Range(0.9f, 1f)]
+			[Tooltip("How much can a leg be extended before it is forced to step to another position? 1 means fully stretched.")]
 			public float maxLegStretch;
 
 			[Tooltip("The speed of lerping the root of the character towards the horizontal mid-point of the footsteps.")]
@@ -485,55 +543,32 @@ namespace RootMotion.FinalIK
 
 			public Vector3 centerOfMass { get; private set; }
 
-			public Vector3 leftFootstepPosition => default(Vector3);
-
-			public Vector3 rightFootstepPosition => default(Vector3);
-
-			public Quaternion leftFootstepRotation => default(Quaternion);
-
-			public Quaternion rightFootstepRotation => default(Quaternion);
-
 			public void Initiate(Vector3[] positions, Quaternion[] rotations, bool hasToes)
 			{
 			}
 
-			public void Reset(Vector3[] positions, Quaternion[] rotations)
+			public void Solve(VirtualBone rootBone, Spine spine, Leg leftLeg, Leg rightLeg, Arm leftArm, Arm rightArm, int supportLegIndex, [Out] Vector3 leftFootPosition, [Out] Vector3 rightFootPosition, [Out] Quaternion leftFootRotation, [Out] Quaternion rightFootRotation, [Out] float leftFootOffset, [Out] float rightFootOffset, [Out] float leftHeelOffset, [Out] float rightHeelOffset)
 			{
-			}
-
-			public void AddDeltaRotation(Quaternion delta, Vector3 pivot)
-			{
-			}
-
-			public void AddDeltaPosition(Vector3 delta)
-			{
-			}
-
-			public void Solve(VirtualBone rootBone, Spine spine, Leg leftLeg, Leg rightLeg, Arm leftArm, Arm rightArm, int supportLegIndex, out Vector3 leftFootPosition, out Vector3 rightFootPosition, out Quaternion leftFootRotation, out Quaternion rightFootRotation, out float leftFootOffset, out float rightFootOffset, out float leftHeelOffset, out float rightHeelOffset)
-			{
-				leftFootPosition = default(Vector3);
-				rightFootPosition = default(Vector3);
-				leftFootRotation = default(Quaternion);
-				rightFootRotation = default(Quaternion);
-				leftFootOffset = default(float);
-				rightFootOffset = default(float);
-				leftHeelOffset = default(float);
-				rightHeelOffset = default(float);
 			}
 
 			private bool StepBlocked(Vector3 fromPosition, Vector3 toPosition, Vector3 rootPosition)
 			{
-				return false;
+				return default(bool);
 			}
 
 			private bool CanStep()
 			{
-				return false;
+				return default(bool);
 			}
 
 			private static bool GetLineSphereCollision(Vector3 lineStart, Vector3 lineEnd, Vector3 sphereCenter, float sphereRadius)
 			{
-				return false;
+				return default(bool);
+			}
+
+			public Locomotion()
+				: base()
+			{
 			}
 		}
 
@@ -550,8 +585,8 @@ namespace RootMotion.FinalIK
 			[Range(0f, 1f)]
 			public float positionWeight;
 
-			[Tooltip("Rotational weight of the head target.")]
 			[Range(0f, 1f)]
+			[Tooltip("Rotational weight of the head target.")]
 			public float rotationWeight;
 
 			[Range(0f, 1f)]
@@ -565,24 +600,24 @@ namespace RootMotion.FinalIK
 			[Tooltip("If 'Chest Goal Weight' is greater than 0, the chest will be turned towards this Transform.")]
 			public Transform chestGoal;
 
-			[Range(0f, 1f)]
 			[Tooltip("Rotational weight of the chest target.")]
+			[Range(0f, 1f)]
 			public float chestGoalWeight;
 
 			[Tooltip("Minimum height of the head from the root of the character.")]
 			public float minHeadHeight;
 
-			[Tooltip("Determines how much the body will follow the position of the head.")]
 			[Range(0f, 1f)]
+			[Tooltip("Determines how much the body will follow the position of the head.")]
 			public float bodyPosStiffness;
 
-			[Range(0f, 1f)]
 			[Tooltip("Determines how much the body will follow the rotation of the head.")]
+			[Range(0f, 1f)]
 			public float bodyRotStiffness;
 
+			[Tooltip("Determines how much the chest will rotate to the rotation of the head.")]
 			[FormerlySerializedAs("chestRotationWeight")]
 			[Range(0f, 1f)]
-			[Tooltip("Determines how much the chest will rotate to the rotation of the head.")]
 			public float neckStiffness;
 
 			[Tooltip("The amount of rotation applied to the chest based on hand positions.")]
@@ -604,8 +639,8 @@ namespace RootMotion.FinalIK
 			[Range(0f, 1f)]
 			public float maintainPelvisPosition;
 
-			[Range(0f, 180f)]
 			[Tooltip("Will automatically rotate the root of the character if the head target has turned past this angle.")]
+			[Range(0f, 180f)]
 			public float maxRootAngle;
 
 			[NonSerialized]
@@ -706,15 +741,29 @@ namespace RootMotion.FinalIK
 
 			private Vector3 chestForward;
 
-			public VirtualBone pelvis => null;
+			public VirtualBone pelvis
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			public VirtualBone firstSpineBone => null;
+			public VirtualBone chest
+			{
+				get
+				{
+					return null;
+				}
+			}
 
-			public VirtualBone chest => null;
-
-			private VirtualBone neck => null;
-
-			public VirtualBone head => null;
+			public VirtualBone head
+			{
+				get
+				{
+					return null;
+				}
+			}
 
 			public Quaternion anchorRotation { get; private set; }
 
@@ -746,7 +795,7 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public override void Write(ref Vector3[] solvedPositions, ref Quaternion[] solvedRotations)
+			public override void Write(Vector3[] solvedPositions, Quaternion[] solvedRotations)
 			{
 			}
 
@@ -754,7 +803,7 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			private void AdjustChestByHands(ref Quaternion chestTargetRotation, Arm[] arms)
+			private void AdjustChestByHands(Quaternion chestTargetRotation, Arm[] arms)
 			{
 			}
 
@@ -776,6 +825,11 @@ namespace RootMotion.FinalIK
 			}
 
 			private void Bend(VirtualBone[] bones, int firstIndex, int lastIndex, Quaternion targetRotation, Quaternion rotationOffset, float clampWeight, bool uniformWeight, float w)
+			{
+			}
+
+			public Spine()
+				: base()
 			{
 			}
 		}
@@ -820,6 +874,7 @@ namespace RootMotion.FinalIK
 			public Vector3 axis;
 
 			public VirtualBone(Vector3 position, Quaternion rotation)
+				: base()
 			{
 			}
 
@@ -831,24 +886,16 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			public static float PreSolve(ref VirtualBone[] bones)
+			public static float PreSolve(VirtualBone[] bones)
 			{
-				return 0f;
+				return default(float);
 			}
 
 			public static void RotateAroundPoint(VirtualBone[] bones, int index, Vector3 point, Quaternion rotation)
 			{
 			}
 
-			public static void RotateBy(VirtualBone[] bones, int index, Quaternion rotation)
-			{
-			}
-
 			public static void RotateBy(VirtualBone[] bones, Quaternion rotation)
-			{
-			}
-
-			public static void RotateTo(VirtualBone[] bones, int index, Quaternion rotation)
 			{
 			}
 
@@ -868,10 +915,6 @@ namespace RootMotion.FinalIK
 			private static Vector3 SolveFABRIKJoint(Vector3 pos1, Vector3 pos2, float length)
 			{
 				return default(Vector3);
-			}
-
-			public static void SolveCCD(VirtualBone[] bones, Vector3 targetPosition, float weight, int iterations)
-			{
 			}
 		}
 
@@ -967,19 +1010,7 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		public void AddRotationOffset(RotationOffset rotationOffset, Vector3 value)
-		{
-		}
-
 		public void AddRotationOffset(RotationOffset rotationOffset, Quaternion value)
-		{
-		}
-
-		public void AddPlatformMotion(Vector3 deltaPosition, Quaternion deltaRotation, Vector3 platformPivot)
-		{
-		}
-
-		public void Reset()
 		{
 		}
 
@@ -1001,14 +1032,9 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public override bool IsValid(ref string message)
+		public override bool IsValid(string message)
 		{
-			return false;
-		}
-
-		private Vector3 GetNormal(Transform[] transforms)
-		{
-			return default(Vector3);
+			return default(bool);
 		}
 
 		private Vector3 GuessWristToPalmAxis(Transform hand, Transform forearm)
@@ -1067,6 +1093,11 @@ namespace RootMotion.FinalIK
 		private Vector3 GetPelvisOffset()
 		{
 			return default(Vector3);
+		}
+
+		public IKSolverVR()
+			: base()
+		{
 		}
 	}
 }

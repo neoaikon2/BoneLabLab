@@ -4,8 +4,8 @@ using UnityEngine;
 namespace SplineMesh
 {
 	[DisallowMultipleComponent]
-	[ExecuteInEditMode]
 	[RequireComponent(typeof(Spline))]
+	[ExecuteInEditMode]
 	public class SplineSmoother : MonoBehaviour
 	{
 		private Spline spline;
@@ -13,7 +13,13 @@ namespace SplineMesh
 		[Range(0f, 1f)]
 		public float curvature;
 
-		private Spline Spline => null;
+		private Spline Spline
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void OnValidate()
 		{
@@ -40,6 +46,11 @@ namespace SplineMesh
 		}
 
 		private void SmoothAll()
+		{
+		}
+
+		public SplineSmoother()
+			: base()
 		{
 		}
 	}

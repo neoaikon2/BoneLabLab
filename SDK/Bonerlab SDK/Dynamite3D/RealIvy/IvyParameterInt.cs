@@ -6,6 +6,7 @@ namespace Dynamite3D.RealIvy
 	public class IvyParameterInt : IvyParameter
 	{
 		public IvyParameterInt(int value)
+			: base()
 		{
 		}
 
@@ -15,7 +16,7 @@ namespace Dynamite3D.RealIvy
 
 		public static implicit operator int(IvyParameterInt intParameter)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public static implicit operator IvyParameterInt(int intValue)

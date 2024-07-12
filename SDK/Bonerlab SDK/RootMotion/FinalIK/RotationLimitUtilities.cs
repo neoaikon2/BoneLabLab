@@ -4,7 +4,7 @@ namespace RootMotion.FinalIK
 {
 	public static class RotationLimitUtilities
 	{
-		public static Quaternion LimitHinge(Quaternion rotation, float min, float max, bool useLimits, Vector3 axis, ref Quaternion lastRotation, ref float lastAngle)
+		public static Quaternion LimitHinge(Quaternion rotation, float min, float max, bool useLimits, Vector3 axis, Quaternion lastRotation, float lastAngle)
 		{
 			return default(Quaternion);
 		}

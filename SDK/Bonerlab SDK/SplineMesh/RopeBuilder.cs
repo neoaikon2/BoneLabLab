@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[RequireComponent(typeof(Spline))]
 	[ExecuteInEditMode]
+	[RequireComponent(typeof(Spline))]
 	public class RopeBuilder : MonoBehaviour
 	{
 		private bool toUpdate;
@@ -24,7 +24,13 @@ namespace SplineMesh
 
 		public float segmentSpacing;
 
-		private GameObject Generated => null;
+		private GameObject Generated
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void OnEnable()
 		{
@@ -47,6 +53,11 @@ namespace SplineMesh
 		}
 
 		private void Generate()
+		{
+		}
+
+		public RopeBuilder()
+			: base()
 		{
 		}
 	}

@@ -1,11 +1,16 @@
 using System;
+using System.Runtime.CompilerServices;
 using SLZ.Interaction;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
+using SLZ.Marrow.Data;
+using SLZ.Marrow.Interaction;
 using UnityEngine;
-using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 
 namespace SLZ.Combat
 {
-	public class StabSlash : MonoBehaviour
+	public class StabSlash : MonoBehaviour, IMarrowEntityCullable
 	{
 		[Serializable]
 		public class StabPoint
@@ -13,7 +18,7 @@ namespace SLZ.Combat
 			[Serializable]
 			public class StabJoint
 			{
-				public ConfigurableJoint joint;
+				public MarrowJoint joint;
 
 				public Collider collider;
 
@@ -30,6 +35,11 @@ namespace SLZ.Combat
 				public float velocity;
 
 				public float damageBuffer;
+
+				public StabJoint()
+					: base()
+				{
+				}
 			}
 
 			public Transform pointTran;
@@ -70,21 +80,19 @@ namespace SLZ.Combat
 			public BladeAudio bAudio;
 
 			[HideInInspector]
-			public Rigidbody rb => null;
+			public Rigidbody rb
+			{
+				get
+				{
+					return null;
+				}
+			}
 
 			public void SpawnStab(Transform tran, Collision c, float stabForce, ImpactProperties surfaceProperties)
 			{
 			}
 
-			public void InitStabs(Transform tran)
-			{
-			}
-
-			private void InitializeStab(Transform tran, int i)
-			{
-			}
-
-			private void JointSetup(ConfigurableJoint j)
+			private void JointSetup(ConfigurableJointInfo info)
 			{
 			}
 
@@ -95,6 +103,11 @@ namespace SLZ.Combat
 			private void UnStab(int i)
 			{
 			}
+
+			public StabPoint()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
@@ -103,7 +116,7 @@ namespace SLZ.Combat
 			[Serializable]
 			public class BladeJoint
 			{
-				public ConfigurableJoint joint;
+				public MarrowJoint joint;
 
 				public Collider collider;
 
@@ -116,6 +129,11 @@ namespace SLZ.Combat
 				public float velocity;
 
 				public float damageBuffer;
+
+				public BladeJoint()
+					: base()
+				{
+				}
 			}
 
 			public Transform bladeTran;
@@ -152,7 +170,13 @@ namespace SLZ.Combat
 			public BladeAudio bAudio;
 
 			[HideInInspector]
-			public Rigidbody rb => null;
+			public Rigidbody rb
+			{
+				get
+				{
+					return null;
+				}
+			}
 
 			public virtual void SpawnSlash(GameObject obj, Collision c, float slashForce, Vector3 slashPressure, ImpactProperties surfaceProperties)
 			{
@@ -165,14 +189,42 @@ namespace SLZ.Combat
 			private void UnSlash(int i)
 			{
 			}
+
+			public SlashBlade()
+				: base()
+			{
+			}
 		}
 
 		[Serializable]
 		public class BladeAudio
 		{
-			public AudioMixerGroup outputMixer;
+			[Serializable]
+			public class RelevantCollision
+			{
+				public Vector3 totalImpulse;
 
-			public Transform sourceTran;
+				public Rigidbody rigidbody;
+
+				public float separation;
+
+				public Vector3 relativeVelocity;
+
+				public Vector3 point;
+
+				public Vector3 normal;
+
+				public Collider collider;
+
+				public Collider colliderSelf;
+
+				public ImpactProperties iP;
+
+				public RelevantCollision()
+					: base()
+				{
+				}
+			}
 
 			public AudioClip[] hiltImpactSoft;
 
@@ -206,15 +258,11 @@ namespace SLZ.Combat
 
 			public float cutAccelThresh;
 
-			private AudioSource source;
+			private ManagedAudioPlayer _mapImpact;
+
+			private ManagedAudioPlayer _mapCut;
 
 			private InteractableHost _host;
-
-			private bool isWhooshing;
-
-			private const float _lowPitchRange = 0.8f;
-
-			private const float _highPitchRange = 1.2f;
 
 			private const float _velToVol = 0.25f;
 
@@ -222,13 +270,31 @@ namespace SLZ.Combat
 
 			private float _cooldownTime;
 
-			public bool cooling => false;
+			private float _nextImpactTime;
 
-			public void Initialize(Transform tran, InteractableHost host)
+			private float _lastImpactImpulse;
+
+			private bool _isEnter;
+
+			private bool _collisionWithImpulse;
+
+			private RelevantCollision _relCol;
+
+			private float _highestImpulseSqrMag;
+
+			public bool cooling
+			{
+				get
+				{
+					return default(bool);
+				}
+			}
+
+			public void Initialize(InteractableHost host)
 			{
 			}
 
-			public void CutEvent(Vector3 worldPos, float velocity, float accel, ImpactPropertiesVariables.Material iP)
+			public void CutEvent(Vector3 worldPos, float velocity, float accel, ImpactProperties iP)
 			{
 			}
 
@@ -236,15 +302,21 @@ namespace SLZ.Combat
 			{
 			}
 
-			public void Whoosh(float velocitySqr)
+			public void CollectCollisions(Collision c, ImpactProperties iP, Rigidbody rb, bool isEnter)
 			{
 			}
 
-			public void CollisionEnterSfx(Collision c, ImpactProperties iP, Rigidbody rb)
+			public void ProcessCollisionHaul(float fixedDeltaTime, Rigidbody rb)
 			{
 			}
 
-			public void CollisionStaySfx(Collision c)
+			private bool CheckImpact(float impulse)
+			{
+				return default(bool);
+			}
+
+			public BladeAudio()
+				: base()
 			{
 			}
 		}
@@ -255,11 +327,31 @@ namespace SLZ.Combat
 
 		public BladeAudio bladeAudio;
 
+		[SerializeField]
+		private MarrowEntity _entity;
+
+		[SerializeField]
 		private InteractableHost _host;
 
-		private Rigidbody rb => null;
+		private float _fixedDeltaTime;
 
-		private void ProcessCollision(Collision c, bool isStay = false)
+		private Rigidbody rb
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
+		private void ProcessCollision(Collision c, bool isEnter = true)
 		{
 		}
 
@@ -271,6 +363,10 @@ namespace SLZ.Combat
 		{
 		}
 
+		private void Update()
+		{
+		}
+
 		private void OnCollisionEnter(Collision c)
 		{
 		}
@@ -279,7 +375,16 @@ namespace SLZ.Combat
 		{
 		}
 
-		public void InitializePreStab()
+		public void OnEntityCull()
+		{
+		}
+
+		public void OnEntityUncull()
+		{
+		}
+
+		public StabSlash()
+			: base()
 		{
 		}
 	}

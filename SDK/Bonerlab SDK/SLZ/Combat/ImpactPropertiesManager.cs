@@ -19,5 +19,10 @@ namespace SLZ.Combat
 		public void RemoveImpactProperties()
 		{
 		}
+
+		public ImpactPropertiesManager()
+			: base()
+		{
+		}
 	}
 }

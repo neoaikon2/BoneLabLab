@@ -1,4 +1,5 @@
 using System;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
@@ -31,7 +32,8 @@ namespace PuppetMasta
 		[Tooltip("This does nothing on it's own, you can use it in a 'yield return new WaitForseconds(delay);' call.")]
 		public float delay;
 
-		public void Boost(BehaviourPuppet puppet)
+		public Booster()
+			: base()
 		{
 		}
 	}

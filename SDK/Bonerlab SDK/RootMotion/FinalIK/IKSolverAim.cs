@@ -35,17 +35,41 @@ namespace RootMotion.FinalIK
 
 		private Transform lastTransform;
 
-		public Vector3 transformAxis => default(Vector3);
+		public Vector3 transformAxis
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 transformPoleAxis => default(Vector3);
+		public Vector3 transformPoleAxis
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		protected override int minBones => 0;
+		protected override int minBones
+		{
+			get
+			{
+				return default(int);
+			}
+		}
 
-		protected override Vector3 localDirection => default(Vector3);
+		protected override Vector3 localDirection
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
 		public float GetAngle()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		protected override void OnInitiate()
@@ -66,6 +90,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void RotateToTarget(Vector3 targetPosition, Bone bone, float weight)
+		{
+		}
+
+		public IKSolverAim()
+			: base()
 		{
 		}
 	}

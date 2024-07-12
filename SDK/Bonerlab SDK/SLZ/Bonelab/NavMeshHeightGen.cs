@@ -48,5 +48,10 @@ namespace SLZ.Bonelab
 		public void OnDrawGizmos()
 		{
 		}
+
+		public NavMeshHeightGen()
+			: base()
+		{
+		}
 	}
 }

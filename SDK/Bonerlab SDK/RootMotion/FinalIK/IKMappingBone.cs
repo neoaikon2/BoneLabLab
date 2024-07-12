@@ -13,17 +13,9 @@ namespace RootMotion.FinalIK
 
 		private BoneMap boneMap;
 
-		public override bool IsValid(IKSolver solver, ref string message)
+		public override bool IsValid(IKSolver solver, string message)
 		{
-			return false;
-		}
-
-		public IKMappingBone()
-		{
-		}
-
-		public IKMappingBone(Transform bone)
-		{
+			return default(bool);
 		}
 
 		public void StoreDefaultLocalState()
@@ -43,6 +35,11 @@ namespace RootMotion.FinalIK
 		}
 
 		public void WritePose(float solverWeight)
+		{
+		}
+
+		public IKMappingBone()
+			: base()
 		{
 		}
 	}

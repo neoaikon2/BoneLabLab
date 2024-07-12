@@ -70,11 +70,13 @@ namespace SLZ.Marrow
 		}
 
 		public TagTreeNode(string tagName, params TagTreeNode[] tagChildren)
+			: base()
 		{
 		}
 
 		public void AddChild(params TagTreeNode[] newChildren)
 		{
+			newChildren = default(TagTreeNode[]);
 		}
 
 		public TagTreeNode GetNode(string tagName)
@@ -84,12 +86,12 @@ namespace SLZ.Marrow
 
 		public bool HasChildren()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool HasParent()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void BuildTagTreePath(TagTreeNode currentNode)

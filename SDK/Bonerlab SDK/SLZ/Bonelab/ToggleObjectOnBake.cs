@@ -6,5 +6,10 @@ namespace SLZ.Bonelab
 	{
 		[Header("This script turns on the object it is attached to during lightmap baking")]
 		public bool ToggleOffOnBakeInstead;
+
+		public ToggleObjectOnBake()
+			: base()
+		{
+		}
 	}
 }

@@ -7,50 +7,52 @@ namespace SLZ.Marrow.Data
 	public class RigidbodyInfo
 	{
 		[SerializeField]
-		private float _mass;
+		public float mass;
 
 		[SerializeField]
-		private float _drag;
+		public float drag;
 
 		[SerializeField]
-		private float _angularDrag;
+		public float angularDrag;
 
 		[SerializeField]
-		private bool _useGravity;
+		public bool useGravity;
 
 		[SerializeField]
-		private bool _isKinematic;
+		public bool isKinematic;
 
 		[SerializeField]
-		private RigidbodyInterpolation _interpolate;
-
-		[EnumFlags]
-		[SerializeField]
-		private CollisionDetectionMode _collisionDetection;
+		public bool detectCollisions;
 
 		[SerializeField]
-		private RigidbodyConstraints _constraints;
+		public RigidbodyInterpolation interpolate;
 
 		[SerializeField]
-		private Vector3 _centerOfMass;
+		public CollisionDetectionMode collisionDetection;
 
 		[SerializeField]
-		private float _maxAngularVelocity;
+		public RigidbodyConstraints constraints;
 
 		[SerializeField]
-		private Vector3 _inertiaTensor;
+		public Vector3 centerOfMass;
 
 		[SerializeField]
-		private Vector3 _initalVelocity;
+		public Vector3 inertiaTensor;
 
 		[SerializeField]
-		private Vector3 _initialAngularVelocity;
+		public Quaternion inertiaTensorRotation;
 
-		public void Snapshot(Rigidbody rb)
+		[SerializeField]
+		public Vector3 initalVelocity;
+
+		[SerializeField]
+		public Vector3 initialAngularVelocity;
+
+		public void CopyFrom(Rigidbody rb)
 		{
 		}
 
-		public void Apply(Rigidbody rb)
+		public void CopyTo(Rigidbody rb)
 		{
 		}
 

@@ -1,10 +1,11 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SplineMesh
 {
-	[ExecuteInEditMode]
 	[RequireComponent(typeof(Spline))]
+	[ExecuteInEditMode]
 	public class SplineExtrusion : MonoBehaviour
 	{
 		private Spline spline;
@@ -42,6 +43,11 @@ namespace SplineMesh
 		}
 
 		public void SetToUpdate()
+		{
+		}
+
+		public SplineExtrusion()
+			: base()
 		{
 		}
 	}

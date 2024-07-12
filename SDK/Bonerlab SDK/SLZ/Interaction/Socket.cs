@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Interaction
 {
-	public class Socket : MonoBehaviour
+	public class Socket : MarrowBehaviour
 	{
 		private HashSet<Plug> _hoveredPlugs;
 
@@ -31,7 +33,13 @@ namespace SLZ.Interaction
 
 		public Plug LockedPlug { get; private set; }
 
-		public virtual bool IsClearOnInsert => false;
+		public virtual bool IsClearOnInsert
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		public bool IsLocked { get; private set; }
 
@@ -72,6 +80,15 @@ namespace SLZ.Interaction
 		}
 
 		public void Lock(Plug plug)
+		{
+		}
+
+		public virtual void OnDespawn()
+		{
+		}
+
+		public Socket()
+			: base()
 		{
 		}
 	}

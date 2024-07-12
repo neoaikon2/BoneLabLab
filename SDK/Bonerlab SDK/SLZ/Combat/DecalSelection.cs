@@ -1,13 +1,10 @@
 using SLZ.Marrow.Data;
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Combat
 {
 	public class DecalSelection : MonoBehaviour
 	{
-		private static ComponentCache<DecalSelection> _cache;
-
 		public DecalMaterials decalMaterials;
 
 		[SerializeField]
@@ -16,13 +13,7 @@ namespace SLZ.Combat
 		[HideInInspector]
 		public ImpactProperties SurfaceProperties;
 
-		public static ComponentCache<DecalSelection> Cache => null;
-
 		private void Awake()
-		{
-		}
-
-		public void OnDestroy()
 		{
 		}
 
@@ -35,6 +26,11 @@ namespace SLZ.Combat
 		}
 
 		private void OnDisable()
+		{
+		}
+
+		public DecalSelection()
+			: base()
 		{
 		}
 	}

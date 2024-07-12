@@ -13,5 +13,10 @@ namespace SLZ.Bonelab
 		protected virtual void OnSplineTrigger(SplineBody body)
 		{
 		}
+
+		public SplineJointEventTrigger()
+			: base()
+		{
+		}
 	}
 }

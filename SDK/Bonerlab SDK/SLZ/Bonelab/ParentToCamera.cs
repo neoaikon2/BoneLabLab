@@ -7,5 +7,10 @@ namespace SLZ.Bonelab
 		private void Start()
 		{
 		}
+
+		public ParentToCamera()
+			: base()
+		{
+		}
 	}
 }

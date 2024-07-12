@@ -10,102 +10,6 @@ namespace SLZ.Bonelab
 {
 	public class taxiFare : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CStart_003Ed__14
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public taxiFare _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CStart_003Ed__14(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCalculate_003Ed__17
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public taxiFare _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCalculate_003Ed__17(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public TextMeshProUGUI txt_fare;
 
 		public TextMeshProUGUI txt_rideNumber;
@@ -135,7 +39,6 @@ namespace SLZ.Bonelab
 
 		private Vector3 destinationPos;
 
-		[IteratorStateMachine(typeof(_003CStart_003Ed__14))]
 		private IEnumerator Start()
 		{
 			return null;
@@ -149,13 +52,17 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCalculate_003Ed__17))]
 		public IEnumerator Calculate()
 		{
 			return null;
 		}
 
 		public void UPDATEDISPLAY()
+		{
+		}
+
+		public taxiFare()
+			: base()
 		{
 		}
 	}

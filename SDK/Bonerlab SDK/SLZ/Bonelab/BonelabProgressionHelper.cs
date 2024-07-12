@@ -6,9 +6,10 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Newtonsoft.Json.Linq;
+using SLZ.Bonelab.SaveData;
+using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
 using SLZ.Player;
-using SLZ.SaveData;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -22,36 +23,6 @@ namespace SLZ.Bonelab
 			Ascent = 2,
 			Outro = 3,
 			None = 4
-		}
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003C_restoreSlotsOnReady_003Ed__13
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public Transform leftHand;
-
-			public Transform rightHand;
-
-			public JObject inventoryJson;
-
-			public Func<Barcode, Barcode> itemFilter;
-
-			public Inventory inventory;
-
-			private UniTask<bool[]>.Awaiter _003C_003Eu__1;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
 		}
 
 		public const string INITIAL_INVENTORY = "SLZ.Bonelab.initial_inventory";
@@ -70,16 +41,19 @@ namespace SLZ.Bonelab
 
 		public static Dictionary<string, int> CalculateStartingAmmo(this PlayerProgression progression, params string[] priorLevels)
 		{
+			priorLevels = default(string[]);
 			return null;
 		}
 
 		public static Dictionary<string, int> CalculateFinalAmmoDelta(this PlayerProgression progression, params string[] priorLevels)
 		{
+			priorLevels = default(string[]);
 			return null;
 		}
 
 		public static Dictionary<string, int> UpdateFinalAmmoDelta(this PlayerProgression progression, string levelKey, params string[] priorLevels)
 		{
+			priorLevels = default(string[]);
 			return null;
 		}
 
@@ -88,18 +62,17 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
-		private static bool GatherInventory(out JObject slotBarcodes)
+		private static bool GatherInventory([Out] JObject slotBarcodes)
 		{
-			slotBarcodes = null;
-			return false;
+			return default(bool);
 		}
 
-		public static bool RestoreInventory(this PlayerProgression progression, string levelKey, bool freshLoad, Transform leftHand, Transform rightHand, Func<Barcode, Barcode> itemFilter = null, params string[] priorLevels)
+		public static bool RestoreInventory(this PlayerProgression progression, string levelKey, bool freshLoad, Transform leftHand, Transform rightHand, Func<Barcode, Barcode> itemFilter = default(Func<Barcode, Barcode>), params string[] priorLevels)
 		{
-			return false;
+			priorLevels = default(string[]);
+			return default(bool);
 		}
 
-		[AsyncStateMachine(typeof(_003C_restoreSlotsOnReady_003Ed__13))]
 		private static UniTaskVoid _restoreSlotsOnReady(Inventory inventory, JObject inventoryJson, Transform leftHand, Transform rightHand, Func<Barcode, Barcode> itemFilter)
 		{
 			return default(UniTaskVoid);
@@ -107,49 +80,49 @@ namespace SLZ.Bonelab
 
 		public static bool SaveInProgressAmmoCount(this PlayerProgression progression, string levelKey)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static void RestoreAmmoCounts(this PlayerProgression progression, string levelKey, bool freshLoad, params string[] priorLevels)
 		{
+			priorLevels = default(string[]);
 		}
 
 		public static bool TrySetLevelCompleted(this PlayerProgression progression, string levelKey, bool completed)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static bool TrySetLevelProgress(this PlayerProgression progression, string levelKey, int progress)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public static bool TryGetLevelCompleted(this PlayerProgression progression, string levelKey, out bool completed)
+		public static bool TryGetLevelCompleted(this PlayerProgression progression, string levelKey, [Out] bool completed)
 		{
-			completed = default(bool);
-			return false;
+			return default(bool);
 		}
 
 		public static bool PushInventoryInto(this PlayerProgression progression, params string[] intoLevelKeys)
 		{
-			return false;
+			intoLevelKeys = default(string[]);
+			return default(bool);
 		}
 
 		public static bool SaveInventoryInProgress(this PlayerProgression progression, string levelKey)
 		{
-			return false;
+			return default(bool);
 		}
 
 		[Obsolete("To be replaced with PushInventoryInto")]
 		public static bool SaveInventoryFinal_Deprecated(this PlayerProgression progression, string levelKey)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public static bool TryGetLevelProgress(this PlayerProgression progression, string levelKey, out int progress)
+		public static bool TryGetLevelProgress(this PlayerProgression progression, string levelKey, [Out] int progress)
 		{
-			progress = default(int);
-			return false;
+			return default(bool);
 		}
 
 		internal static void DeletePartialProgressForKey(this PlayerProgression p, string levelKey, Confirmation1 confirmation = Confirmation1.IMadeAMistake)

@@ -1,15 +1,10 @@
-using SLZ.Utilities;
+using SLZ.Marrow.Audio;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.SFX
 {
 	public class GenericTurretSFX : MonoBehaviour
 	{
-		public AudioMixerGroup outputMixer;
-
-		public AudioMixerGroup loopOutputMixer;
-
 		public AudioClip[] idleClips;
 
 		public AudioClip[] alertClips;
@@ -34,7 +29,7 @@ namespace SLZ.SFX
 
 		private float minDist;
 
-		private AudioPlayer _loopAudioPlayer;
+		private ManagedAudioPlayer _mapLoop;
 
 		public void StopAll()
 		{
@@ -81,6 +76,11 @@ namespace SLZ.SFX
 		}
 
 		public void PlayImpact()
+		{
+		}
+
+		public GenericTurretSFX()
+			: base()
 		{
 		}
 	}

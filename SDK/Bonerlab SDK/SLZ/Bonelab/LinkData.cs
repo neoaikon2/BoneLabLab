@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.AI;
-using SLZ.Rig;
+using SLZ.Marrow.AI;
+using SLZ.SFX;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.AI;
-using Unity.AI.Navigation;
 
 namespace SLZ.Bonelab
 {
@@ -35,114 +35,8 @@ namespace SLZ.Bonelab
 
 			public LData(Vector3 initialVelocity, float timeToTarget)
 			{
-				iVel = initialVelocity;
-				ttTarg = timeToTarget;
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoLaunch_003Ed__133
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float timeToTarg;
-
-			public LinkData _003C_003E4__this;
-
-			public float pDot;
-
-			private float _003CairTime_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoLaunch_003Ed__133(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoLaunchSequence_003Ed__138
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public GameObject triggerObj;
-
-			public LinkData _003C_003E4__this;
-
-			private float _003CsqrPelvis_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoLaunchSequence_003Ed__138(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
+				this.ttTarg = default(float);
+				this.iVel = default(Vector3);
 			}
 		}
 
@@ -204,6 +98,10 @@ namespace SLZ.Bonelab
 
 		public Transform crabTarget;
 
+		public bool addFallForce;
+
+		public bool repairLegHealth;
+
 		[Header("Climb")]
 		public bool isObstructed;
 
@@ -238,6 +136,8 @@ namespace SLZ.Bonelab
 
 		public bool ignoreLaunchTarget;
 
+		public LayerMask startEndLayermask;
+
 		private Vector3 lastLaunchTargPos;
 
 		public Transform launchTarget;
@@ -250,7 +150,7 @@ namespace SLZ.Bonelab
 
 		public float crabJumpForce;
 
-		public bool applyCorrectiveForce;
+		public bool applyDragForce;
 
 		public float correctivePerc;
 
@@ -259,12 +159,6 @@ namespace SLZ.Bonelab
 		public GameObject playerTargForwObj;
 
 		public GameObject playerTargRevObj;
-
-		public RigManager rigManager;
-
-		public Rigidbody playerPelvisBody;
-
-		public Rigidbody[] playerBodies;
 
 		public MeshRenderer[] colorizedRends;
 
@@ -288,6 +182,60 @@ namespace SLZ.Bonelab
 		private float launchableTime;
 
 		public Vector3[] launchLinePoints;
+
+		public float yDragMult;
+
+		public float xzDragMult;
+
+		public float yDragMult_npc;
+
+		public float xzDragMult_npc;
+
+		private float unityDragVal;
+
+		public LData launchData;
+
+		public LData idealLaunchData;
+
+		public float launchAngle;
+
+		public Vector3[] positions;
+
+		public Vector3[] dragPositions;
+
+		private bool isPosArrayReversed;
+
+		public int splineResolution;
+
+		public int dragSplineResolution;
+
+		private float perc;
+
+		private int lerpValInt;
+
+		private float sqrError;
+
+		private Coroutine thrustRoutine;
+
+		public bool applyConstForce;
+
+		private bool displayAngle;
+
+		private bool isDrawingError;
+
+		private bool applyCorrectiveThrust;
+
+		private Vector3 perfectPosition;
+
+		public float thrustThreshold;
+
+		public float failThreshold;
+
+		public float thrustFactor;
+
+		public float correctiveMin;
+
+		public float correctiveMax;
 
 		[Header("Climb Bars")]
 		[SerializeField]
@@ -373,11 +321,48 @@ namespace SLZ.Bonelab
 
 		public bool disableOnLinkCompletion;
 
+		[Header("ToggleLaunchPads")]
+		public AmbientSFX forwAmbSFX;
+
+		public AmbientSFX revAmbSFX;
+
+		public Collider forwTrig;
+
+		public Collider revTrig;
+
+		public Collider forwFXTrig;
+
+		public Collider revFXTrig;
+
+		public Collider[] fwdTrigCols;
+
+		public Collider[] revTrigCols;
+
+		public GameObject[] forwToggleObjs;
+
+		public GameObject[] revToggleObjs;
+
+		public Material brightLampMat;
+
+		public Material darkLampMat;
+
+		public Renderer forwLampRingRend;
+
+		public Renderer revLampRingRend;
+
 		private bool isSubbedToJump;
 
 		public bool isDrawingSim;
 
 		public GameObject simLaunchObj;
+
+		private float avgDrag;
+
+		private float npcDrag;
+
+		private float playerDrag;
+
+		public bool drawPlayer;
 
 		[ContextMenu("CreateStartEndPoints")]
 		public void CreateStartEndPoints()
@@ -433,13 +418,18 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		[ContextMenu("SetExplicitStartAndEnd")]
+		public void SetExplicitStartAndEndLaunchPoints()
+		{
+		}
+
 		public void RotateLinkTargets(bool isForward)
 		{
 		}
 
 		public float CheckAgentDot(GameObject agentObj)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void LaunchAudio(bool isForw)
@@ -470,22 +460,21 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[ContextMenu("GetAllPlayerBodies")]
-		public void GetAllPlayerBodies()
-		{
-		}
-
+		[ContextMenu("LaunchPlayer")]
 		public void LaunchPlayer()
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoLaunch_003Ed__133))]
-		private IEnumerator CoLaunch(float pDot, float timeToTarg)
+		public void ToggleReversePositionArray()
+		{
+		}
+
+		private IEnumerator CoMeasureError(float timeToTarg)
 		{
 			return null;
 		}
 
-		private void ApplyCorrectiveForce(float playerDot)
+		private void FixedUpdate()
 		{
 		}
 
@@ -494,26 +483,51 @@ namespace SLZ.Bonelab
 			return default(LData);
 		}
 
-		public TrajectoryData CalcInitialVelocity(GameObject launchObj, Vector3 target, float height)
+		public LData CalcInitialVelocity(GameObject launchObj, Vector3 target, float height, bool multDrag = true, bool isNPC = false)
 		{
-			return null;
+			return default(LData);
 		}
 
-		[IteratorStateMachine(typeof(_003CCoLaunchSequence_003Ed__138))]
-		private IEnumerator CoLaunchSequence(GameObject triggerObj)
+		public float CalcAdjusttedTOF(GameObject launchObj, Vector3 target, float height)
 		{
-			return null;
+			return default(float);
 		}
 
-		public void EnableTrajectoryHelper(GameObject triggerObj)
+		[ContextMenu("FindMaxHeight")]
+		public void DisplayMaxHeight()
 		{
 		}
 
-		public void DisableTrajectoryHelper()
+		public Vector2 FindMaxHeight()
+		{
+			return default(Vector2);
+		}
+
+		[ContextMenu("TelePlayerToLinkStart")]
+		public void TelePlayerToLinkStart()
+		{
+		}
+
+		[ContextMenu("TelePlayerToLinkEnd")]
+		public void TelePlayerToLinkEnd()
 		{
 		}
 
 		public void SubToPlayerJump(bool enable)
+		{
+		}
+
+		[ContextMenu("ToggleLaunchPadOn")]
+		public void ToggleLaunchPadOn()
+		{
+		}
+
+		[ContextMenu("ToggleLaunchPadOff")]
+		public void ToggleLaunchPadOff()
+		{
+		}
+
+		public void ToggleLaunchPadLink(bool enable)
 		{
 		}
 
@@ -522,7 +536,22 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void OnDrawGizmosSelected()
+		[ContextMenu("DrawEditorPath")]
+		public void DrawEditorPath()
+		{
+		}
+
+		[ContextMenu("DrawEditorPathWithPlayerBody")]
+		public void DrawEditorPathWithPlayerBody()
+		{
+		}
+
+		private void DrawEditorIdealPath(GameObject launchObj)
+		{
+		}
+
+		public LinkData()
+			: base()
 		{
 		}
 	}

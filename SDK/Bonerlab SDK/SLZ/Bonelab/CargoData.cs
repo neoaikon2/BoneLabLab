@@ -11,5 +11,10 @@ namespace SLZ.Bonelab
 		public Vector3 grabPoint;
 
 		public Vector3 dropPoint;
+
+		public CargoData()
+			: base()
+		{
+		}
 	}
 }

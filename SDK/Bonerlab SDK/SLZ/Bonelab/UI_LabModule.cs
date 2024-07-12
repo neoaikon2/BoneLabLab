@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using SLZ.UI;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +16,7 @@ namespace SLZ.Bonelab
 
 		public GameObject menu;
 
-		public LevelsPanelView lpv;
+		public BonelabLevelsPanelView lpv;
 
 		public Image icon;
 
@@ -31,6 +30,11 @@ namespace SLZ.Bonelab
 		public List<string> levelTags;
 
 		private void OnEnable()
+		{
+		}
+
+		public UI_LabModule()
+			: base()
 		{
 		}
 	}

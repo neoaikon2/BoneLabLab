@@ -1,4 +1,4 @@
-using SLZ.SaveData;
+using SLZ.Bonelab.SaveData;
 using TMPro;
 using UnityEngine;
 
@@ -64,7 +64,13 @@ namespace SLZ.Bonelab
 
 		private int coreKeysInserted;
 
-		private static PlayerProgression Progression => null;
+		private static PlayerProgression Progression
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void OnEnable()
 		{
@@ -95,6 +101,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OFF()
+		{
+		}
+
+		public HubMap()
+			: base()
 		{
 		}
 	}

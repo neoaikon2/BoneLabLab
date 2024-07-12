@@ -16,6 +16,7 @@ namespace Dynamite3D.RealIvy
 		public Vector3 firstVertexVector;
 
 		private IvyContainer()
+			: base()
 		{
 		}
 

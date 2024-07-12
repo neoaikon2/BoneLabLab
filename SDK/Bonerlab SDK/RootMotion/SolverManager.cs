@@ -7,22 +7,18 @@ namespace RootMotion
 		[Tooltip("If true, will fix all the Transforms used by the solver to their initial state in each Update. This prevents potential problems with unanimated bones and animator culling with a small cost of performance. Not recommended for CCD and FABRIK solvers.")]
 		public bool fixTransforms;
 
-		private Animator animator;
-
-		private Animation legacy;
+		public Animator animator;
 
 		private bool updateFrame;
 
-		private bool componentInitiated;
-
 		private bool skipSolverUpdate;
 
-		private bool animatePhysics => false;
-
-		private bool isAnimated => false;
-
-		public void Disable()
+		private bool animatePhysics
 		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
 		protected virtual void InitiateSolver()
@@ -37,23 +33,11 @@ namespace RootMotion
 		{
 		}
 
-		private void OnDisable()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-		private void Initiate()
+		public void Initiate()
 		{
 		}
 
 		private void Update()
-		{
-		}
-
-		private void FindAnimatorRecursive(Transform t, bool findInChildren)
 		{
 		}
 
@@ -65,7 +49,8 @@ namespace RootMotion
 		{
 		}
 
-		public void UpdateSolverExternal()
+		public SolverManager()
+			: base()
 		{
 		}
 	}

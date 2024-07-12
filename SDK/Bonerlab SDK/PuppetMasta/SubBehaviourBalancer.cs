@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.CompilerServices;
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
@@ -29,6 +31,11 @@ namespace PuppetMasta
 
 			[Tooltip("Maximum magnitude of the torque applied to the lower legs if 'Torque Mlp' > 0.")]
 			public float maxTorqueMag;
+
+			public Settings()
+				: base()
+			{
+			}
 		}
 
 		private Settings settings;
@@ -62,6 +69,11 @@ namespace PuppetMasta
 		}
 
 		private void Solve()
+		{
+		}
+
+		public SubBehaviourBalancer()
+			: base()
 		{
 		}
 	}

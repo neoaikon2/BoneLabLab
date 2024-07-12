@@ -16,6 +16,11 @@ namespace RootMotion.FinalIK
 
 				[Tooltip("Multiplier of the offset value, can be negative.")]
 				public float weight;
+
+				public EffectorLink()
+					: base()
+				{
+				}
 			}
 
 			[Tooltip("Bones to start the raycast from. Multiple raycasts can be used by assigning more than 1 bone.")]
@@ -24,8 +29,8 @@ namespace RootMotion.FinalIK
 			[Tooltip("The Transform to raycast towards. Usually the body part that you want to keep from penetrating.")]
 			public Transform raycastTo;
 
-			[Range(0f, 1f)]
 			[Tooltip("If 0, will use simple raycasting, if > 0, will use sphere casting (better, but slower).")]
+			[Range(0f, 1f)]
 			public float raycastRadius;
 
 			[Tooltip("Linking this to FBBIK effectors.")]
@@ -59,12 +64,22 @@ namespace RootMotion.FinalIK
 			{
 				return default(Vector3);
 			}
+
+			public Avoider()
+				: base()
+			{
+			}
 		}
 
 		[Tooltip("Definitions of penetration avoidances.")]
 		public Avoider[] avoiders;
 
 		protected override void OnModifyOffset()
+		{
+		}
+
+		public PenetrationAvoidance()
+			: base()
 		{
 		}
 	}

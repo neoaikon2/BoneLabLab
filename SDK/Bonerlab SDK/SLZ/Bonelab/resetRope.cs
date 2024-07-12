@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class resetRope : MonoBehaviour
+	public class ResetRope : MonoBehaviour
 	{
 		[Serializable]
 		private struct RopeSegments
@@ -49,7 +49,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		[ContextMenu("ResetRope")]
 		public void RopeReset()
+		{
+		}
+
+		public ResetRope()
+			: base()
 		{
 		}
 	}

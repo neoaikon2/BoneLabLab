@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using SLZ.Rig;
 using UnityEngine;
@@ -95,6 +97,8 @@ namespace SLZ.Bonelab
 
 		public HeadTitles headTitles;
 
+		public static TutorialRig Instance { get; private set; }
+
 		private void Awake()
 		{
 		}
@@ -105,7 +109,7 @@ namespace SLZ.Bonelab
 
 		private bool GetSettings()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void OnEnable()
@@ -136,7 +140,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public void CUSTOMTUTORIAL(InputHighlight highlightPhase_left = InputHighlight.none, InputHighlight highlightPhase_right = InputHighlight.none, LocationHighlight highlightLoc_left = LocationHighlight.none_l, LocationHighlight highlightLoc_right = LocationHighlight.none_r, SpecificHand handChoice = SpecificHand.none, bool isRightHand = true, string tutorialText_left = "", string tutorialText_right = "", int flashRate = 1, float holdTime = 4f, Sprite spriteImage_left = null, Sprite spriteImage_right = null, AudioClip clip_tutorial = null, TutorialTrigger specificTutorial = null)
+		public void CUSTOMTUTORIAL(InputHighlight highlightPhase_left = InputHighlight.none, InputHighlight highlightPhase_right = InputHighlight.none, LocationHighlight highlightLoc_left = LocationHighlight.none_l, LocationHighlight highlightLoc_right = LocationHighlight.none_r, SpecificHand handChoice = SpecificHand.none, bool isRightHand = true, string tutorialText_left = "", string tutorialText_right = "", int flashRate = 1, float holdTime = 4f, Sprite spriteImage_left = default(Sprite), Sprite spriteImage_right = default(Sprite), AudioClip clip_tutorial = default(AudioClip), TutorialTrigger specificTutorial = default(TutorialTrigger))
 		{
 		}
 
@@ -165,6 +169,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void SendTutorialComplete()
+		{
+		}
+
+		public TutorialRig()
+			: base()
 		{
 		}
 	}

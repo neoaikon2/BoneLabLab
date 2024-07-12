@@ -16,6 +16,11 @@ namespace RootMotion.FinalIK
 
 				[Tooltip("Weight of using this effector")]
 				public float weight;
+
+				public EffectorLink()
+					: base()
+				{
+				}
 			}
 
 			[Tooltip("The Transform that's motion we are reading.")]
@@ -46,9 +51,9 @@ namespace RootMotion.FinalIK
 			{
 			}
 
-			private static Vector3 Multiply(Vector3 v1, Vector3 v2)
+			public Body()
+				: base()
 			{
-				return default(Vector3);
 			}
 		}
 
@@ -56,6 +61,11 @@ namespace RootMotion.FinalIK
 		public Body[] bodies;
 
 		protected override void OnModifyOffset()
+		{
+		}
+
+		public Amplifier()
+			: base()
 		{
 		}
 	}

@@ -7,6 +7,7 @@ namespace SLZ.Marrow.Data
 		OculusHome = 1,
 		OculusQuest = 2,
 		PSVR2 = 3,
-		OpenXR = 4
+		OpenXR = 4,
+		ViveFocus3 = 5
 	}
 }

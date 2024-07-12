@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
 using SLZ.VRMK;
 using TMPro;
 using UnityEngine;
@@ -12,59 +11,9 @@ namespace SLZ.Bonelab
 {
 	public class SpiderChart : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CUpdateLoop_003Ed__44
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public SpiderChart _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CUpdateLoop_003Ed__44(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public GameObject chart;
 
 		public GameObject background;
-
-		public TriggerLasers trigger;
 
 		public float targetHeight;
 
@@ -130,17 +79,13 @@ namespace SLZ.Bonelab
 
 		public TextMeshProUGUI statText;
 
-		public RigManager rm;
-
-		public BodyVitals bv;
-
 		private bool isInRange;
 
 		private Material chartMat;
 
 		private IEnumerator updateLoop;
 
-		public global::SLZ.VRMK.Avatar previewAvatar;
+		public SLZ.VRMK.Avatar previewAvatar;
 
 		private void Start()
 		{
@@ -154,13 +99,17 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CUpdateLoop_003Ed__44))]
 		private IEnumerator UpdateLoop()
 		{
 			return null;
 		}
 
-		public void UPDATESTATS(global::SLZ.VRMK.Avatar avatar, Transform previewTransform)
+		public void UPDATESTATS(SLZ.VRMK.Avatar avatar, Transform previewTransform)
+		{
+		}
+
+		public SpiderChart()
+			: base()
 		{
 		}
 	}

@@ -1,4 +1,7 @@
 using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Marrow.Interaction;
 using UnityEngine;
 
 namespace SLZ.Interaction
@@ -17,6 +20,8 @@ namespace SLZ.Interaction
 		[SerializeField]
 		private ConfigurableJoint _joint;
 
+		private Rigidbody _rb;
+
 		private Quaternion _initialRotation;
 
 		private Quaternion _toJointSpace;
@@ -27,11 +32,15 @@ namespace SLZ.Interaction
 
 		private RotationJointType _rotationJointType;
 
-		public ConfigurableJoint joint => null;
+		public ConfigurableJoint joint
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public InteractableHost host { get; private set; }
-
-		public Rigidbody rb { get; private set; }
+		public MarrowBody marrowBody { get; private set; }
 
 		public JointDrive xDriveBase { get; set; }
 
@@ -45,10 +54,12 @@ namespace SLZ.Interaction
 
 		public JointDrive slerpDriveBase { get; set; }
 
-		public Quaternion initialRotation => default(Quaternion);
-
-		public virtual void Awake()
+		public Quaternion initialRotation
 		{
+			get
+			{
+				return default(Quaternion);
+			}
 		}
 
 		private void Start()
@@ -59,31 +70,39 @@ namespace SLZ.Interaction
 		{
 		}
 
+		public Vector3 GetConnectedAnchorInWorld()
+		{
+			return default(Vector3);
+		}
+
 		public float GetTwistInDegrees()
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public float GetTwistInDegrees(Quaternion rotationToTest)
+		{
+			return default(float);
 		}
 
 		public float GetSwingInDegrees()
 		{
-			return 0f;
+			return default(float);
 		}
 
-		public float GetSwingInDegrees(out Vector2 yPositiveAlignsToSecAxis)
+		public float GetSwingInDegrees([Out] Vector2 yPositiveAlignsToSecAxis)
 		{
-			yPositiveAlignsToSecAxis = default(Vector2);
-			return 0f;
+			return default(float);
 		}
 
-		public float GetSwingInLimitPercent(out Vector2 yPositiveAlignsToSecAxis)
+		public float GetSwingInLimitPercent([Out] Vector2 yPositiveAlignsToSecAxis)
 		{
-			yPositiveAlignsToSecAxis = default(Vector2);
-			return 0f;
+			return default(float);
 		}
 
 		public float GetTwistInLimitPercent()
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void SetXDrive(float springMult, float damperMult, float maxForceMult)
@@ -160,7 +179,16 @@ namespace SLZ.Interaction
 		{
 		}
 
+		public void SetTargetTwistInDegrees(float targetTwist)
+		{
+		}
+
 		public void SetTargetPositionLocal(Vector3 targetLocalPosition, Quaternion targetLocalRotation)
+		{
+		}
+
+		public Servo()
+			: base()
 		{
 		}
 	}

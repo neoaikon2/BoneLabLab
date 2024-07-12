@@ -16,12 +16,12 @@ namespace RootMotion.FinalIK
 
 			public Grounding.Leg leg;
 
-			public Foot(IKSolver _solver, Transform _transform)
+			public Foot(IKSolver solver, Transform transform)
 			{
-				solver = _solver;
-				transform = _transform;
-				rotation = Quaternion.identity;
-				leg = new Grounding.Leg();
+				this.leg = default(Grounding.Leg);
+				this.rotation = default(Quaternion);
+				this.transform = default(Transform);
+				this.solver = default(IKSolver);
 			}
 		}
 
@@ -32,12 +32,12 @@ namespace RootMotion.FinalIK
 		[Range(0f, 1f)]
 		public float rootRotationWeight;
 
-		[Tooltip("The maximum angle of rotating the quadruped downwards (going downhill, range: -90 - 0).")]
 		[Range(-90f, 0f)]
+		[Tooltip("The maximum angle of rotating the quadruped downwards (going downhill, range: -90 - 0).")]
 		public float minRootRotation;
 
-		[Tooltip("The maximum angle of rotating the quadruped upwards (going uphill, range: 0 - 90).")]
 		[Range(0f, 90f)]
+		[Tooltip("The maximum angle of rotating the quadruped upwards (going uphill, range: 0 - 90).")]
 		public float maxRootRotation;
 
 		[Tooltip("The speed of interpolating the character root rotation (range: 0 - inf).")]
@@ -49,8 +49,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("The maximum IK offset for the forelegs (range: 0 - inf).")]
 		public float maxForeLegOffset;
 
-		[Range(0f, 1f)]
 		[Tooltip("The weight of maintaining the head's rotation as it was before solving the Grounding (range: 0 - 1).")]
+		[Range(0f, 1f)]
 		public float maintainHeadRotationWeight;
 
 		[Tooltip("The root Transform of the character, with the rigidbody and the collider.")]
@@ -116,12 +116,12 @@ namespace RootMotion.FinalIK
 
 		private bool IsReadyToInitiate()
 		{
-			return false;
+			return default(bool);
 		}
 
 		private bool IsReadyToInitiateLegs(IK[] ikComponents)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void OnDisable()
@@ -136,7 +136,7 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		private Transform[] InitiateFeet(IK[] ikComponents, ref Foot[] f, int indexOffset)
+		private Transform[] InitiateFeet(IK[] ikComponents, Foot[] f, int indexOffset)
 		{
 			return null;
 		}
@@ -170,6 +170,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void DestroyLegs(IK[] ikComponents)
+		{
+		}
+
+		public GrounderQuadruped()
+			: base()
 		{
 		}
 	}

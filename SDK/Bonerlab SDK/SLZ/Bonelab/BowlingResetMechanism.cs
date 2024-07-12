@@ -3,117 +3,15 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow.Audio;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Warehouse;
-using SLZ.Utilities;
 using UnityEngine;
-using UnityEngine.Audio;
-using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
 	public class BowlingResetMechanism : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CScoreAndResetCoroutine_003Ed__30
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BowlingResetMechanism _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CScoreAndResetCoroutine_003Ed__30(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CPinResetCycle_003Ed__37
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BowlingResetMechanism _003C_003E4__this;
-
-			private ConfigurableJoint[] _003C_003E7__wrap1;
-
-			private int _003C_003E7__wrap2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CPinResetCycle_003Ed__37(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public GameObject[] pins;
 
 		private ConfigurableJoint[] joints;
@@ -144,21 +42,19 @@ namespace SLZ.Bonelab
 
 		public PhysicMaterial noFriction;
 
-		public AudioMixerGroup outputMixer;
-
 		public AudioClip pullSFX;
 
 		public AudioClip dropSFX;
 
-		private AudioPlayer ap;
+		private ManagedAudioPlayer _mapPins;
 
 		public SpawnableCrateReference[] whiteListCrates;
 
 		private Dictionary<string, int> whiteListObjects;
 
-		private Dictionary<int, AssetPoolee> objectsInTrigger;
+		private Dictionary<int, Poolee> objectsInTrigger;
 
-		private List<AssetPoolee> objectsToSweep;
+		private List<Poolee> objectsToSweep;
 
 		private Vector3[] pinOriginalPos;
 
@@ -168,8 +64,6 @@ namespace SLZ.Bonelab
 
 		private bool isBallInTrigger;
 
-		public UnityEvent BowlingAchUnlock;
-
 		public void Start()
 		{
 		}
@@ -178,7 +72,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CScoreAndResetCoroutine_003Ed__30))]
 		private IEnumerator ScoreAndResetCoroutine()
 		{
 			return null;
@@ -194,12 +87,12 @@ namespace SLZ.Bonelab
 
 		private int CheckScore()
 		{
-			return 0;
+			return default(int);
 		}
 
 		private bool PinDownCheck(GameObject pin)
 		{
-			return false;
+			return default(bool);
 		}
 
 		private void CheckPinReset()
@@ -210,10 +103,14 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CPinResetCycle_003Ed__37))]
 		private IEnumerator PinResetCycle()
 		{
 			return null;
+		}
+
+		public BowlingResetMechanism()
+			: base()
+		{
 		}
 	}
 }

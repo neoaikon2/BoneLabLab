@@ -3,61 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Utilities;
+using SLZ.Marrow.Audio;
 using UnityEngine;
 
 namespace SLZ.SFX
 {
 	public class GravGunSFX : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CUpdateGravHold_003Ed__24
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public GravGunSFX _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CUpdateGravHold_003Ed__24(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
 		public AudioClip[] gravFire;
 
 		public AudioClip grab;
@@ -72,7 +24,7 @@ namespace SLZ.SFX
 
 		private float _targetVolume;
 
-		private AudioPlayer _ap;
+		private ManagedAudioPlayer _mapHumLoop;
 
 		private WaitForSecondsRealtime _wait;
 
@@ -128,10 +80,14 @@ namespace SLZ.SFX
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CUpdateGravHold_003Ed__24))]
 		private IEnumerator UpdateGravHold()
 		{
 			return null;
+		}
+
+		public GravGunSFX()
+			: base()
+		{
 		}
 	}
 }

@@ -37,6 +37,8 @@ namespace SLZ.Marrow.Input
 
 		public float Trigger { get; protected set; }
 
+		public float TriggerForce { get; protected set; }
+
 		public bool TriggerButton { get; protected set; }
 
 		public bool TriggerButtonUp { get; protected set; }

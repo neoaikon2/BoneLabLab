@@ -8,5 +8,10 @@ namespace SLZ.Bonelab
 	public class SpawnablePack
 	{
 		public List<SpawnableCrateReference> spawnableList;
+
+		public SpawnablePack()
+			: base()
+		{
+		}
 	}
 }

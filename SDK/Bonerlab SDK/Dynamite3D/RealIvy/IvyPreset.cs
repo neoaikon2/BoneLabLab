@@ -13,5 +13,10 @@ namespace Dynamite3D.RealIvy
 		public void CopyFrom(IvyParametersGUI copyFrom)
 		{
 		}
+
+		public IvyPreset()
+			: base()
+		{
+		}
 	}
 }

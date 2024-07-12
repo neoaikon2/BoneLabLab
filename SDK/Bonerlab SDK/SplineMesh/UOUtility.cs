@@ -7,6 +7,7 @@ namespace SplineMesh
 	{
 		public static GameObject Create(string name, GameObject parent, params Type[] components)
 		{
+			components = default(Type[]);
 			return null;
 		}
 

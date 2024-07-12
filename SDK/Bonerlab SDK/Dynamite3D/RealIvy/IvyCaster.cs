@@ -32,5 +32,10 @@ namespace Dynamite3D.RealIvy
 		{
 			return null;
 		}
+
+		public IvyCaster()
+			: base()
+		{
+		}
 	}
 }

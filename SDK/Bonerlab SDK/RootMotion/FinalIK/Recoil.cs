@@ -16,6 +16,11 @@ namespace RootMotion.FinalIK
 
 				[Tooltip("Weight of using this effector")]
 				public float weight;
+
+				public EffectorLink()
+					: base()
+				{
+				}
 			}
 
 			[Tooltip("Offset vector for the associated effector when doing recoil.")]
@@ -40,6 +45,11 @@ namespace RootMotion.FinalIK
 			}
 
 			public void Apply(IKSolverFullBodyBiped solver, Quaternion rotation, float masterWeight, float length, float timeLeft)
+			{
+			}
+
+			public RecoilOffset()
+				: base()
 			{
 			}
 		}
@@ -109,15 +119,45 @@ namespace RootMotion.FinalIK
 
 		private Vector3 aimIKAxis;
 
-		public bool isFinished => false;
+		public bool isFinished
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		private IKEffector primaryHandEffector => null;
+		private IKEffector primaryHandEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		private IKEffector secondaryHandEffector => null;
+		private IKEffector secondaryHandEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		private Transform primaryHand => null;
+		private Transform primaryHand
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		private Transform secondaryHand => null;
+		private Transform secondaryHand
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public void SetHandRotations(Quaternion leftHandRotation, Quaternion rightHandRotation)
 		{
@@ -140,6 +180,11 @@ namespace RootMotion.FinalIK
 		}
 
 		protected override void OnDestroy()
+		{
+		}
+
+		public Recoil()
+			: base()
 		{
 		}
 	}

@@ -13,5 +13,10 @@ namespace SLZ.Bonelab
 		public void FlipOnOff()
 		{
 		}
+
+		public Simple_OnOff()
+			: base()
+		{
+		}
 	}
 }

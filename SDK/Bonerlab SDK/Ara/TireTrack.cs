@@ -22,5 +22,10 @@ namespace Ara
 		private void ProjectToGround()
 		{
 		}
+
+		public TireTrack()
+			: base()
+		{
+		}
 	}
 }

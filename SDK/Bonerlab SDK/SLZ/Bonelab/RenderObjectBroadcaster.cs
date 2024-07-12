@@ -10,5 +10,10 @@ namespace SLZ.Bonelab
 		private void OnRenderObject()
 		{
 		}
+
+		public RenderObjectBroadcaster()
+			: base()
+		{
+		}
 	}
 }

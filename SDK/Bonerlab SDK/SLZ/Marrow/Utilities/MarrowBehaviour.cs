@@ -1,14 +1,17 @@
+using SLZ.Marrow.Interaction;
 using UnityEngine;
 
 namespace SLZ.Marrow.Utilities
 {
 	public class MarrowBehaviour : MonoBehaviour
 	{
-		protected virtual void OnEnable()
+		public MarrowEntity marrowEntity;
+
+		public virtual void OnLevelStart()
 		{
 		}
 
-		protected virtual void OnDisable()
+		public virtual void OnLevelEnd()
 		{
 		}
 

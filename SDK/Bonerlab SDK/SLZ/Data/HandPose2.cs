@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
@@ -114,6 +115,11 @@ namespace SLZ.Data
 		public Quaternion RightOffsetRotation { get; private set; }
 
 		private void OnEnable()
+		{
+		}
+
+		public HandPose2()
+			: base()
 		{
 		}
 	}

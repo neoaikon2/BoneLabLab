@@ -58,5 +58,10 @@ namespace SLZ.Interaction
 		public override void OnVirtualControllerSolve(VirtualControlerPayload payload)
 		{
 		}
+
+		public WheelVirtualController()
+			: base()
+		{
+		}
 	}
 }

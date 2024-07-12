@@ -29,5 +29,10 @@ namespace SLZ.Combat
 		private void FixedUpdate()
 		{
 		}
+
+		public SeekingThruster()
+			: base()
+		{
+		}
 	}
 }

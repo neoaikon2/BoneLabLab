@@ -25,5 +25,10 @@ namespace SLZ.Bonelab
 		public void UpdatePolyEllipse(int i, float front, float back, float side)
 		{
 		}
+
+		public PlayerRemappingConfigurator()
+			: base()
+		{
+		}
 	}
 }

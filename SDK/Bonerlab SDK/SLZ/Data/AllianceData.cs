@@ -10,5 +10,10 @@ namespace SLZ.Data
 		public string species;
 
 		public float agression;
+
+		public AllianceData()
+			: base()
+		{
+		}
 	}
 }

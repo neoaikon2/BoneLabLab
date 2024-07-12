@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -12,7 +13,13 @@ namespace RootMotion.FinalIK
 
 		private Vector3[] solverLocalPositions;
 
-		protected override bool boneLengthCanBeZero => false;
+		protected override bool boneLengthCanBeZero
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		public void SolveForward(Vector3 position)
 		{
@@ -82,9 +89,8 @@ namespace RootMotion.FinalIK
 			return default(Vector3);
 		}
 
-		private Quaternion GetLimitedRotation(int index, Quaternion q, out bool changed)
+		private Quaternion GetLimitedRotation(int index, Quaternion q, [Out] bool changed)
 		{
-			changed = default(bool);
 			return default(Quaternion);
 		}
 
@@ -109,6 +115,11 @@ namespace RootMotion.FinalIK
 		}
 
 		private void MapToSolverPositionsLimited()
+		{
+		}
+
+		public IKSolverFABRIK()
+			: base()
 		{
 		}
 	}

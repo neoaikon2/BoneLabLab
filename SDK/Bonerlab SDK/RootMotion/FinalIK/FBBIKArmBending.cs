@@ -31,5 +31,10 @@ namespace RootMotion.FinalIK
 		private void OnDestroy()
 		{
 		}
+
+		public FBBIKArmBending()
+			: base()
+		{
+		}
 	}
 }

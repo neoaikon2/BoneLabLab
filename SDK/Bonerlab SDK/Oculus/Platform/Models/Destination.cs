@@ -10,6 +10,8 @@ namespace Oculus.Platform.Models
 
 		public readonly string DisplayName;
 
+		public readonly string ShareableUri;
+
 		public Destination(IntPtr o)
 			: base()
 		{

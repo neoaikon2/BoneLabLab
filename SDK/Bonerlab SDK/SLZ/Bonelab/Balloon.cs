@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Combat;
-using SLZ.Props;
+using SLZ.Marrow.Combat;
+using SLZ.Marrow.Utilities;
 using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -32,139 +32,71 @@ namespace SLZ.Bonelab
 			Random = 14
 		}
 
-		[CompilerGenerated]
-		private sealed class _003CStart_003Ed__17
-		{
-			private int _003C_003E1__state;
+		[Header("Options")]
+		public bool scaleForceWithAttachedMass;
 
-			private object _003C_003E2__current;
-
-			public Balloon _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CStart_003Ed__17(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoRandomPop_003Ed__20
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public Balloon _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoRandomPop_003Ed__20(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		public global::SLZ.Props.Balloon.BalloonColor startColor;
-
-		public GameObject popPrefab;
-
+		[Tooltip("Max Velocity After Impact")]
 		public float maxVelocity;
 
-		public float lifetime;
+		[Tooltip("Balloon's Up Force")]
+		public float constantBuoyantForce;
 
-		public bool burstOnLifetimeEnd;
+		[Tooltip("Impact Force Before Popping")]
+		public float maxImpactForce;
 
-		public GameObject lifetimeEndParticlePrefab;
+		[Header("References")]
+		public ImpactSFX impactSFX;
 
-		public SoundPlayOneshot lifetimeEndSound;
+		public Rigidbody myRigidbody;
 
-		private float destructTime;
+		public ConfigurableJoint joint;
 
-		private float releaseTime;
+		public MeshRenderer artRenderer;
 
-		public SoundPlayOneshot collisionSound;
+		public LineRenderer lineRenderer;
 
-		private float lastSoundTime;
+		public GameObject balloonArt;
 
-		private float soundDelay;
+		public Transform stringStartTransform;
 
-		[SerializeField]
-		private Rigidbody balloonRigidbody;
+		public Transform forceTargetTransform;
 
-		private bool bParticlesSpawned;
+		private float sqrMaxVelocity;
 
-		private static float s_flLastDeathSound;
+		private float sqrMaxImpactForce;
 
-		private bool isWarmup;
+		private float scaledBuoyantForce;
 
-		[IteratorStateMachine(typeof(_003CStart_003Ed__17))]
-		private IEnumerator Start()
+		private float defaultDrag;
+
+		private bool hasConnectedBody;
+
+		private float _timeWhenSettled;
+
+		private bool _isSettled;
+
+		private bool isWarmingUp;
+
+		private SimpleTransform sleepTransform;
+
+		private void Reset()
 		{
-			return null;
+		}
+
+		private void FreeJoint()
+		{
+		}
+
+		public void AttachJoint(Rigidbody connectedBody, Vector3 impactPosition)
+		{
+		}
+
+		private void TakeDamage()
+		{
+		}
+
+		private void Awake()
+		{
 		}
 
 		private void OnEnable()
@@ -175,30 +107,21 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoRandomPop_003Ed__20))]
-		private IEnumerator CoRandomPop()
-		{
-			return null;
-		}
-
-		private void Update()
-		{
-		}
-
-		private void SpawnParticles(GameObject particlePrefab, SoundPlayOneshot sound)
-		{
-		}
-
-		private void ApplyDamage()
-		{
-		}
-
 		private void OnCollisionEnter(Collision collision)
 		{
 		}
 
-		public void SetColor(global::SLZ.Props.Balloon.BalloonColor color)
+		private void FixedUpdate()
 		{
+		}
+
+		private void LateUpdate()
+		{
+		}
+
+		private IEnumerator CoWarmupAttach()
+		{
+			return null;
 		}
 
 		public static BalloonColor GetRandomColor()
@@ -206,12 +129,17 @@ namespace SLZ.Bonelab
 			return default(BalloonColor);
 		}
 
-		public static Color BalloonColorToRGB(global::SLZ.Props.Balloon.BalloonColor balloonColorVar)
+		public static Color BalloonColorToRGB(BalloonColor balloonColorVar)
 		{
 			return default(Color);
 		}
 
 		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public Balloon()
+			: base()
 		{
 		}
 	}

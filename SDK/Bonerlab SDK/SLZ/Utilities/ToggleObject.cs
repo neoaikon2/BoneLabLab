@@ -10,5 +10,10 @@ namespace SLZ.Utilities
 		public void Toggle()
 		{
 		}
+
+		public ToggleObject()
+			: base()
+		{
+		}
 	}
 }

@@ -56,36 +56,6 @@ namespace Oculus.Platform
 			public float z;
 		}
 
-		public struct ovrMatchmakingCriterion
-		{
-			public string key_;
-
-			public MatchmakingCriterionImportance importance_;
-
-			public IntPtr parameterArray;
-
-			public uint parameterArrayCount;
-
-			public ovrMatchmakingCriterion(string key, MatchmakingCriterionImportance importance)
-			{
-				this.parameterArrayCount = default(uint);
-				this.parameterArray = default(IntPtr);
-				this.importance_ = default(MatchmakingCriterionImportance);
-				this.key_ = default(string);
-			}
-		}
-
-		public struct ovrMatchmakingCustomQueryData
-		{
-			public IntPtr dataArray;
-
-			public uint dataArrayCount;
-
-			public IntPtr criterionArray;
-
-			public uint criterionArrayCount;
-		}
-
 		public struct OculusInitParams
 		{
 			public int sType;
@@ -111,6 +81,11 @@ namespace Oculus.Platform
 		public static IntPtr ArrayOfStructsToIntPtr(Array ar)
 		{
 			return default(IntPtr);
+		}
+
+		public static ovrKeyValuePair[] DictionaryToOVRKeyValuePairs(Dictionary<InitConfigOptions, bool> dict)
+		{
+			return null;
 		}
 
 		public static ovrKeyValuePair[] DictionaryToOVRKeyValuePairs(Dictionary<string, object> dict)
@@ -175,6 +150,8 @@ namespace Oculus.Platform
 
 		public static extern ulong ovr_PlatformInitializeWithAccessToken(ulong appId, string accessToken);
 
+		public static extern ulong ovr_PlatformInitializeWithAccessTokenAndOptions(ulong appId, string accessToken, ovrKeyValuePair[] configOptions, UIntPtr numOptions);
+
 		public static extern bool ovr_UnityInitWrapperWindows(string appId, IntPtr loggingCB);
 
 		public static extern ulong ovr_UnityInitWrapperWindowsAsynchronous(string appId, IntPtr loggingCB);
@@ -219,6 +196,10 @@ namespace Oculus.Platform
 		public static extern void ovr_Voip_SetMicrophoneFilterCallback(FilterCallback cb);
 
 		public static extern void ovr_Voip_SetMicrophoneFilterCallbackWithFixedSizeBuffer(FilterCallback cb, UIntPtr bufferSizeElements);
+
+		public static void LogNewUnifiedEvent(LogEventName eventName, Dictionary<string, string> values)
+		{
+		}
 
 		public static void LogNewEvent(string eventName, Dictionary<string, string> values)
 		{
@@ -272,26 +253,6 @@ namespace Oculus.Platform
 
 		public static extern void ovr_NetSync_SetListenerPosition(long connection_id, ovrNetSyncVec3 position);
 
-		public static extern void ovr_Net_Accept(ulong peerID);
-
-		public static extern bool ovr_Net_AcceptForCurrentRoom();
-
-		public static extern void ovr_Net_Close(ulong peerID);
-
-		public static extern void ovr_Net_CloseForCurrentRoom();
-
-		public static extern void ovr_Net_Connect(ulong peerID);
-
-		public static extern bool ovr_Net_IsConnected(ulong peerID);
-
-		public static extern ulong ovr_Net_Ping(ulong peerID);
-
-		public static extern IntPtr ovr_Net_ReadPacket();
-
-		public static extern bool ovr_Net_SendPacket(ulong userID, UIntPtr length, byte[] bytes, SendPolicy policy);
-
-		public static extern bool ovr_Net_SendPacketToCurrentRoom(UIntPtr length, byte[] bytes, SendPolicy policy);
-
 		public static extern int ovr_Party_PluginGetSharedMemHandle();
 
 		public static extern VoipMuteState ovr_Party_PluginGetVoipMicrophoneMuted();
@@ -340,6 +301,8 @@ namespace Oculus.Platform
 
 		public static extern ulong ovr_AbuseReport_LaunchAdvancedReportFlow(ulong content_id, IntPtr abuse_report_options);
 
+		public static extern ulong ovr_AbuseReport_ReportRequestHandled(ReportRequestResponse response);
+
 		public static ulong ovr_Achievements_AddCount(string name, ulong count)
 		{
 			return default(ulong);
@@ -369,13 +332,19 @@ namespace Oculus.Platform
 
 		private static extern ulong ovr_Achievements_Unlock_Native(IntPtr name);
 
-		public static extern ulong ovr_Application_ExecuteCoordinatedLaunch(ulong appID, ulong roomID);
+		public static extern ulong ovr_Application_CancelAppDownload();
+
+		public static extern ulong ovr_Application_CheckAppDownloadProgress();
 
 		public static extern ulong ovr_Application_GetInstalledApplications();
 
 		public static extern ulong ovr_Application_GetVersion();
 
+		public static extern ulong ovr_Application_InstallAppUpdateAndRelaunch(IntPtr deeplink_options);
+
 		public static extern ulong ovr_Application_LaunchOtherApp(ulong appID, IntPtr deeplink_options);
+
+		public static extern ulong ovr_Application_StartAppDownload();
 
 		public static extern ulong ovr_ApplicationLifecycle_GetRegisteredPIDs();
 
@@ -434,18 +403,14 @@ namespace Oculus.Platform
 
 		private static extern ulong ovr_AssetFile_StatusByName_Native(IntPtr assetFileName);
 
+		public static extern ulong ovr_Avatar_LaunchAvatarEditor(IntPtr options);
+
 		public static ulong ovr_Avatar_UpdateMetaData(string avatarMetaData, string imageFilePath)
 		{
 			return default(ulong);
 		}
 
 		private static extern ulong ovr_Avatar_UpdateMetaData_Native(IntPtr avatarMetaData, IntPtr imageFilePath);
-
-		public static extern ulong ovr_Cal_FinalizeApplication(ulong groupingObject, ulong[] userIDs, int numUserIDs, ulong finalized_application_ID);
-
-		public static extern ulong ovr_Cal_GetSuggestedApplications(ulong groupingObject, ulong[] userIDs, int numUserIDs);
-
-		public static extern ulong ovr_Cal_ProposeApplication(ulong groupingObject, ulong[] userIDs, int numUserIDs, ulong proposed_application_ID);
 
 		public static ulong ovr_Challenges_Create(string leaderboardName, IntPtr challengeOptions)
 		{
@@ -482,71 +447,6 @@ namespace Oculus.Platform
 
 		public static extern ulong ovr_Challenges_UpdateInfo(ulong challengeID, IntPtr challengeOptions);
 
-		public static ulong ovr_CloudStorage_Delete(string bucket, string key)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_Delete_Native(IntPtr bucket, IntPtr key);
-
-		public static ulong ovr_CloudStorage_Load(string bucket, string key)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_Load_Native(IntPtr bucket, IntPtr key);
-
-		public static ulong ovr_CloudStorage_LoadBucketMetadata(string bucket)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_LoadBucketMetadata_Native(IntPtr bucket);
-
-		public static ulong ovr_CloudStorage_LoadConflictMetadata(string bucket, string key)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_LoadConflictMetadata_Native(IntPtr bucket, IntPtr key);
-
-		public static ulong ovr_CloudStorage_LoadHandle(string handle)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_LoadHandle_Native(IntPtr handle);
-
-		public static ulong ovr_CloudStorage_LoadMetadata(string bucket, string key)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_LoadMetadata_Native(IntPtr bucket, IntPtr key);
-
-		public static ulong ovr_CloudStorage_ResolveKeepLocal(string bucket, string key, string remoteHandle)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_ResolveKeepLocal_Native(IntPtr bucket, IntPtr key, IntPtr remoteHandle);
-
-		public static ulong ovr_CloudStorage_ResolveKeepRemote(string bucket, string key, string remoteHandle)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_ResolveKeepRemote_Native(IntPtr bucket, IntPtr key, IntPtr remoteHandle);
-
-		public static ulong ovr_CloudStorage_Save(string bucket, string key, byte[] data, uint dataSize, long counter, string extraData)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_CloudStorage_Save_Native(IntPtr bucket, IntPtr key, byte[] data, uint dataSize, long counter, IntPtr extraData);
-
-		public static extern ulong ovr_CloudStorage2_GetUserDirectoryPath();
-
 		public static extern ulong ovr_Colocation_GetCurrentMapUuid();
 
 		public static ulong ovr_Colocation_RequestMap(string uuid)
@@ -562,6 +462,50 @@ namespace Oculus.Platform
 		}
 
 		private static extern ulong ovr_Colocation_ShareMap_Native(IntPtr uuid);
+
+		public static extern ulong ovr_Cowatching_GetPresenterData();
+
+		public static extern ulong ovr_Cowatching_GetViewersData();
+
+		public static extern ulong ovr_Cowatching_IsInSession();
+
+		public static extern ulong ovr_Cowatching_JoinSession();
+
+		public static extern ulong ovr_Cowatching_LaunchInviteDialog();
+
+		public static extern ulong ovr_Cowatching_LeaveSession();
+
+		public static extern ulong ovr_Cowatching_RequestToPresent();
+
+		public static extern ulong ovr_Cowatching_ResignFromPresenting();
+
+		public static ulong ovr_Cowatching_SetPresenterData(string video_title, string presenter_data)
+		{
+			return default(ulong);
+		}
+
+		private static extern ulong ovr_Cowatching_SetPresenterData_Native(IntPtr video_title, IntPtr presenter_data);
+
+		public static ulong ovr_Cowatching_SetViewerData(string viewer_data)
+		{
+			return default(ulong);
+		}
+
+		private static extern ulong ovr_Cowatching_SetViewerData_Native(IntPtr viewer_data);
+
+		public static ulong ovr_DeviceApplicationIntegrity_GetAttestationToken(string challenge_nonce)
+		{
+			return default(ulong);
+		}
+
+		private static extern ulong ovr_DeviceApplicationIntegrity_GetAttestationToken_Native(IntPtr challenge_nonce);
+
+		public static ulong ovr_DeviceApplicationIntegrity_GetIntegrityToken(string challenge_nonce)
+		{
+			return default(ulong);
+		}
+
+		private static extern ulong ovr_DeviceApplicationIntegrity_GetIntegrityToken_Native(IntPtr challenge_nonce);
 
 		public static extern ulong ovr_Entitlement_GetIsViewerEntitled();
 
@@ -601,6 +545,13 @@ namespace Oculus.Platform
 		public static extern ulong ovr_GroupPresence_SendInvites(ulong[] userIDs, uint userIDLength);
 
 		public static extern ulong ovr_GroupPresence_Set(IntPtr groupPresenceOptions);
+
+		public static ulong ovr_GroupPresence_SetDeeplinkMessageOverride(string deeplink_message)
+		{
+			return default(ulong);
+		}
+
+		private static extern ulong ovr_GroupPresence_SetDeeplinkMessageOverride_Native(IntPtr deeplink_message);
 
 		public static ulong ovr_GroupPresence_SetDestination(string api_name)
 		{
@@ -745,95 +696,6 @@ namespace Oculus.Platform
 
 		public static extern ulong ovr_Livestreaming_UpdateMicStatus(LivestreamingMicrophoneStatus micStatus);
 
-		public static ulong ovr_Matchmaking_Browse(string pool, IntPtr customQueryData)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_Browse_Native(IntPtr pool, IntPtr customQueryData);
-
-		public static ulong ovr_Matchmaking_Browse2(string pool, IntPtr matchmakingOptions)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_Browse2_Native(IntPtr pool, IntPtr matchmakingOptions);
-
-		public static ulong ovr_Matchmaking_Cancel(string pool, string requestHash)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_Cancel_Native(IntPtr pool, IntPtr requestHash);
-
-		public static extern ulong ovr_Matchmaking_Cancel2();
-
-		public static ulong ovr_Matchmaking_CreateAndEnqueueRoom(string pool, uint maxUsers, bool subscribeToUpdates, IntPtr customQueryData)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_CreateAndEnqueueRoom_Native(IntPtr pool, uint maxUsers, bool subscribeToUpdates, IntPtr customQueryData);
-
-		public static ulong ovr_Matchmaking_CreateAndEnqueueRoom2(string pool, IntPtr matchmakingOptions)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_CreateAndEnqueueRoom2_Native(IntPtr pool, IntPtr matchmakingOptions);
-
-		public static ulong ovr_Matchmaking_CreateRoom(string pool, uint maxUsers, bool subscribeToUpdates)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_CreateRoom_Native(IntPtr pool, uint maxUsers, bool subscribeToUpdates);
-
-		public static ulong ovr_Matchmaking_CreateRoom2(string pool, IntPtr matchmakingOptions)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_CreateRoom2_Native(IntPtr pool, IntPtr matchmakingOptions);
-
-		public static ulong ovr_Matchmaking_Enqueue(string pool, IntPtr customQueryData)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_Enqueue_Native(IntPtr pool, IntPtr customQueryData);
-
-		public static ulong ovr_Matchmaking_Enqueue2(string pool, IntPtr matchmakingOptions)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_Enqueue2_Native(IntPtr pool, IntPtr matchmakingOptions);
-
-		public static extern ulong ovr_Matchmaking_EnqueueRoom(ulong roomID, IntPtr customQueryData);
-
-		public static extern ulong ovr_Matchmaking_EnqueueRoom2(ulong roomID, IntPtr matchmakingOptions);
-
-		public static extern ulong ovr_Matchmaking_GetAdminSnapshot();
-
-		public static ulong ovr_Matchmaking_GetStats(string pool, uint maxLevel, MatchmakingStatApproach approach)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_GetStats_Native(IntPtr pool, uint maxLevel, MatchmakingStatApproach approach);
-
-		public static extern ulong ovr_Matchmaking_JoinRoom(ulong roomID, bool subscribeToUpdates);
-
-		public static ulong ovr_Matchmaking_ReportResultInsecure(ulong roomID, ovrKeyValuePair[] data)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Matchmaking_ReportResultInsecure_Native(ulong roomID, ovrKeyValuePair[] data, UIntPtr numItems);
-
-		public static extern ulong ovr_Matchmaking_StartMatch(ulong roomID);
-
 		public static ulong ovr_Media_ShareToFacebook(string postTextSuggestion, string filePath, MediaContentType contentType)
 		{
 			return default(ulong);
@@ -884,8 +746,6 @@ namespace Oculus.Platform
 
 		public static extern ulong ovr_NetSync_SetVoipStreamMode(long connection_id, ulong sessionId, NetSyncVoipStreamMode streamMode);
 
-		public static extern ulong ovr_Notification_GetRoomInvites();
-
 		public static extern ulong ovr_Notification_MarkAsRead(ulong notificationID);
 
 		public static extern ulong ovr_Party_Create();
@@ -933,61 +793,6 @@ namespace Oculus.Platform
 
 		private static extern ulong ovr_RichPresence_SetMatchSession_Native(IntPtr id);
 
-		public static extern ulong ovr_Room_CreateAndJoinPrivate(RoomJoinPolicy joinPolicy, uint maxUsers, bool subscribeToUpdates);
-
-		public static extern ulong ovr_Room_CreateAndJoinPrivate2(RoomJoinPolicy joinPolicy, uint maxUsers, IntPtr roomOptions);
-
-		public static extern ulong ovr_Room_Get(ulong roomID);
-
-		public static extern ulong ovr_Room_GetCurrent();
-
-		public static extern ulong ovr_Room_GetCurrentForUser(ulong userID);
-
-		public static extern ulong ovr_Room_GetInvitableUsers();
-
-		public static extern ulong ovr_Room_GetInvitableUsers2(IntPtr roomOptions);
-
-		public static extern ulong ovr_Room_GetModeratedRooms();
-
-		public static extern ulong ovr_Room_GetSocialRooms(ulong appID);
-
-		public static ulong ovr_Room_InviteUser(ulong roomID, string inviteToken)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Room_InviteUser_Native(ulong roomID, IntPtr inviteToken);
-
-		public static extern ulong ovr_Room_Join(ulong roomID, bool subscribeToUpdates);
-
-		public static extern ulong ovr_Room_Join2(ulong roomID, IntPtr roomOptions);
-
-		public static extern ulong ovr_Room_KickUser(ulong roomID, ulong userID, int kickDurationSeconds);
-
-		public static extern ulong ovr_Room_LaunchInvitableUserFlow(ulong roomID);
-
-		public static extern ulong ovr_Room_Leave(ulong roomID);
-
-		public static ulong ovr_Room_SetDescription(ulong roomID, string description)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Room_SetDescription_Native(ulong roomID, IntPtr description);
-
-		public static ulong ovr_Room_UpdateDataStore(ulong roomID, ovrKeyValuePair[] data)
-		{
-			return default(ulong);
-		}
-
-		private static extern ulong ovr_Room_UpdateDataStore_Native(ulong roomID, ovrKeyValuePair[] data, UIntPtr numItems);
-
-		public static extern ulong ovr_Room_UpdateMembershipLockStatus(ulong roomID, RoomMembershipLockStatus membershipLockStatus);
-
-		public static extern ulong ovr_Room_UpdateOwner(ulong roomID, ulong userID);
-
-		public static extern ulong ovr_Room_UpdatePrivateRoomJoinPolicy(ulong roomID, RoomJoinPolicy newJoinPolicy);
-
 		public static ulong ovr_User_CancelRecordingForReportFlow(string recordingUUID)
 		{
 			return default(ulong);
@@ -999,19 +804,19 @@ namespace Oculus.Platform
 
 		public static extern ulong ovr_User_GetAccessToken();
 
+		public static extern ulong ovr_User_GetBlockedUsers();
+
 		public static extern ulong ovr_User_GetLinkedAccounts(IntPtr userOptions);
 
 		public static extern ulong ovr_User_GetLoggedInUser();
 
 		public static extern ulong ovr_User_GetLoggedInUserFriends();
 
-		public static extern ulong ovr_User_GetLoggedInUserFriendsAndRooms();
-
-		public static extern ulong ovr_User_GetLoggedInUserRecentlyMetUsersAndRooms(IntPtr userOptions);
-
 		public static extern ulong ovr_User_GetOrgScopedID(ulong userID);
 
 		public static extern ulong ovr_User_GetSdkAccounts();
+
+		public static extern ulong ovr_User_GetUserCapabilities();
 
 		public static extern ulong ovr_User_GetUserProof();
 
@@ -1053,6 +858,10 @@ namespace Oculus.Platform
 		}
 
 		private static extern ulong ovr_User_TestUserCreateDeviceManifest_Native(IntPtr deviceID, ulong[] appIDs, int numAppIDs);
+
+		public static extern ulong ovr_UserAgeCategory_Get();
+
+		public static extern ulong ovr_UserAgeCategory_Report(AppAgeCategory age_category);
 
 		public static ulong ovr_UserDataStore_PrivateDeleteEntryByKey(ulong userID, string key)
 		{
@@ -1101,6 +910,8 @@ namespace Oculus.Platform
 		private static extern ulong ovr_UserDataStore_PublicWriteEntry_Native(ulong userID, IntPtr key, IntPtr value);
 
 		public static extern ulong ovr_Voip_GetMicrophoneAvailability();
+
+		public static extern ulong ovr_Voip_ReportAppVoipSessions(ulong[] sessionIDs);
 
 		public static extern ulong ovr_Voip_SetSystemVoipSuppressed(bool suppressed);
 
@@ -1184,6 +995,14 @@ namespace Oculus.Platform
 
 		private static extern IntPtr ovr_AchievementUpdate_GetName_Native(IntPtr obj);
 
+		public static extern long ovr_AppDownloadProgressResult_GetDownloadBytes(IntPtr obj);
+
+		public static extern long ovr_AppDownloadProgressResult_GetDownloadedBytes(IntPtr obj);
+
+		public static extern AppStatus ovr_AppDownloadProgressResult_GetStatusCode(IntPtr obj);
+
+		public static extern long ovr_AppDownloadResult_GetTimestamp(IntPtr obj);
+
 		public static extern ulong ovr_Application_GetID(IntPtr obj);
 
 		public static extern IntPtr ovr_ApplicationInvite_GetDestination(IntPtr obj);
@@ -1238,6 +1057,15 @@ namespace Oculus.Platform
 		}
 
 		private static extern IntPtr ovr_ApplicationVersion_GetLatestName_Native(IntPtr obj);
+
+		public static extern long ovr_ApplicationVersion_GetReleaseDate(IntPtr obj);
+
+		public static string ovr_ApplicationVersion_GetSize(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_ApplicationVersion_GetSize_Native(IntPtr obj);
 
 		public static extern ulong ovr_AssetDetails_GetAssetId(IntPtr obj);
 
@@ -1331,31 +1159,22 @@ namespace Oculus.Platform
 
 		public static extern bool ovr_AssetFileDownloadUpdate_GetCompleted(IntPtr obj);
 
-		public static extern int ovr_CalApplicationFinalized_GetCountdownMS(IntPtr obj);
+		public static extern bool ovr_AvatarEditorResult_GetRequestSent(IntPtr obj);
 
-		public static extern ulong ovr_CalApplicationFinalized_GetID(IntPtr obj);
+		public static extern ulong ovr_BlockedUser_GetId(IntPtr obj);
 
-		public static string ovr_CalApplicationFinalized_GetLaunchDetails(IntPtr obj)
+		public static extern IntPtr ovr_BlockedUserArray_GetElement(IntPtr obj, UIntPtr index);
+
+		public static string ovr_BlockedUserArray_GetNextUrl(IntPtr obj)
 		{
 			return null;
 		}
 
-		private static extern IntPtr ovr_CalApplicationFinalized_GetLaunchDetails_Native(IntPtr obj);
+		private static extern IntPtr ovr_BlockedUserArray_GetNextUrl_Native(IntPtr obj);
 
-		public static extern ulong ovr_CalApplicationProposed_GetID(IntPtr obj);
+		public static extern UIntPtr ovr_BlockedUserArray_GetSize(IntPtr obj);
 
-		public static extern ulong ovr_CalApplicationSuggestion_GetID(IntPtr obj);
-
-		public static string ovr_CalApplicationSuggestion_GetSocialContext(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CalApplicationSuggestion_GetSocialContext_Native(IntPtr obj);
-
-		public static extern IntPtr ovr_CalApplicationSuggestionArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static extern UIntPtr ovr_CalApplicationSuggestionArray_GetSize(IntPtr obj);
+		public static extern bool ovr_BlockedUserArray_HasNextPage(IntPtr obj);
 
 		public static extern ChallengeCreationType ovr_Challenge_GetCreationType(IntPtr obj);
 
@@ -1476,111 +1295,33 @@ namespace Oculus.Platform
 
 		public static extern bool ovr_ChallengeEntryArray_HasPreviousPage(IntPtr obj);
 
-		public static string ovr_CloudStorage2UserDirectoryPathResponse_GetPath(IntPtr obj)
+		public static string ovr_CowatchViewer_GetData(IntPtr obj)
 		{
 			return null;
 		}
 
-		private static extern IntPtr ovr_CloudStorage2UserDirectoryPathResponse_GetPath_Native(IntPtr obj);
+		private static extern IntPtr ovr_CowatchViewer_GetData_Native(IntPtr obj);
 
-		public static extern IntPtr ovr_CloudStorageConflictMetadata_GetLocal(IntPtr obj);
+		public static extern ulong ovr_CowatchViewer_GetId(IntPtr obj);
 
-		public static extern IntPtr ovr_CloudStorageConflictMetadata_GetRemote(IntPtr obj);
+		public static extern IntPtr ovr_CowatchViewerArray_GetElement(IntPtr obj, UIntPtr index);
 
-		public static string ovr_CloudStorageData_GetBucket(IntPtr obj)
+		public static string ovr_CowatchViewerArray_GetNextUrl(IntPtr obj)
 		{
 			return null;
 		}
 
-		private static extern IntPtr ovr_CloudStorageData_GetBucket_Native(IntPtr obj);
+		private static extern IntPtr ovr_CowatchViewerArray_GetNextUrl_Native(IntPtr obj);
 
-		public static byte[] ovr_CloudStorageData_GetData(IntPtr obj)
-		{
-			return null;
-		}
+		public static extern UIntPtr ovr_CowatchViewerArray_GetSize(IntPtr obj);
 
-		private static extern IntPtr ovr_CloudStorageData_GetData_Native(IntPtr obj);
+		public static extern bool ovr_CowatchViewerArray_HasNextPage(IntPtr obj);
 
-		public static extern uint ovr_CloudStorageData_GetDataSize(IntPtr obj);
+		public static extern IntPtr ovr_CowatchViewerUpdate_GetDataList(IntPtr obj);
 
-		public static string ovr_CloudStorageData_GetKey(IntPtr obj)
-		{
-			return null;
-		}
+		public static extern ulong ovr_CowatchViewerUpdate_GetId(IntPtr obj);
 
-		private static extern IntPtr ovr_CloudStorageData_GetKey_Native(IntPtr obj);
-
-		public static string ovr_CloudStorageMetadata_GetBucket(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageMetadata_GetBucket_Native(IntPtr obj);
-
-		public static extern long ovr_CloudStorageMetadata_GetCounter(IntPtr obj);
-
-		public static extern uint ovr_CloudStorageMetadata_GetDataSize(IntPtr obj);
-
-		public static string ovr_CloudStorageMetadata_GetExtraData(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageMetadata_GetExtraData_Native(IntPtr obj);
-
-		public static string ovr_CloudStorageMetadata_GetKey(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageMetadata_GetKey_Native(IntPtr obj);
-
-		public static extern ulong ovr_CloudStorageMetadata_GetSaveTime(IntPtr obj);
-
-		public static extern CloudStorageDataStatus ovr_CloudStorageMetadata_GetStatus(IntPtr obj);
-
-		public static string ovr_CloudStorageMetadata_GetVersionHandle(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageMetadata_GetVersionHandle_Native(IntPtr obj);
-
-		public static extern IntPtr ovr_CloudStorageMetadataArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static string ovr_CloudStorageMetadataArray_GetNextUrl(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageMetadataArray_GetNextUrl_Native(IntPtr obj);
-
-		public static extern UIntPtr ovr_CloudStorageMetadataArray_GetSize(IntPtr obj);
-
-		public static extern bool ovr_CloudStorageMetadataArray_HasNextPage(IntPtr obj);
-
-		public static string ovr_CloudStorageUpdateResponse_GetBucket(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageUpdateResponse_GetBucket_Native(IntPtr obj);
-
-		public static string ovr_CloudStorageUpdateResponse_GetKey(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageUpdateResponse_GetKey_Native(IntPtr obj);
-
-		public static extern CloudStorageUpdateStatus ovr_CloudStorageUpdateResponse_GetStatus(IntPtr obj);
-
-		public static string ovr_CloudStorageUpdateResponse_GetVersionHandle(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_CloudStorageUpdateResponse_GetVersionHandle_Native(IntPtr obj);
+		public static extern bool ovr_CowatchingState_GetInSession(IntPtr obj);
 
 		public static uint ovr_DataStore_Contains(IntPtr obj, string key)
 		{
@@ -1625,6 +1366,13 @@ namespace Oculus.Platform
 		}
 
 		private static extern IntPtr ovr_Destination_GetDisplayName_Native(IntPtr obj);
+
+		public static string ovr_Destination_GetShareableUri(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_Destination_GetShareableUri_Native(IntPtr obj);
 
 		public static extern IntPtr ovr_DestinationArray_GetElement(IntPtr obj, UIntPtr index);
 
@@ -1798,8 +1546,6 @@ namespace Oculus.Platform
 
 		public static extern LaunchType ovr_LaunchDetails_GetLaunchType(IntPtr obj);
 
-		public static extern ulong ovr_LaunchDetails_GetRoomID(IntPtr obj);
-
 		public static string ovr_LaunchDetails_GetTrackingID(IntPtr obj)
 		{
 			return null;
@@ -1955,128 +1701,6 @@ namespace Oculus.Platform
 
 		private static extern IntPtr ovr_LivestreamingVideoStats_GetTotalViews_Native(IntPtr obj);
 
-		public static extern IntPtr ovr_MatchmakingAdminSnapshot_GetCandidates(IntPtr obj);
-
-		public static extern double ovr_MatchmakingAdminSnapshot_GetMyCurrentThreshold(IntPtr obj);
-
-		public static extern bool ovr_MatchmakingAdminSnapshotCandidate_GetCanMatch(IntPtr obj);
-
-		public static extern double ovr_MatchmakingAdminSnapshotCandidate_GetMyTotalScore(IntPtr obj);
-
-		public static extern double ovr_MatchmakingAdminSnapshotCandidate_GetTheirCurrentThreshold(IntPtr obj);
-
-		public static extern double ovr_MatchmakingAdminSnapshotCandidate_GetTheirTotalScore(IntPtr obj);
-
-		public static string ovr_MatchmakingAdminSnapshotCandidate_GetTraceId(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_MatchmakingAdminSnapshotCandidate_GetTraceId_Native(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingAdminSnapshotCandidateArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static extern UIntPtr ovr_MatchmakingAdminSnapshotCandidateArray_GetSize(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingBrowseResult_GetEnqueueResult(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingBrowseResult_GetRooms(IntPtr obj);
-
-		public static string ovr_MatchmakingCandidate_GetEntryHash(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_MatchmakingCandidate_GetEntryHash_Native(IntPtr obj);
-
-		public static extern ulong ovr_MatchmakingCandidate_GetUserId(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingCandidateArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static string ovr_MatchmakingCandidateArray_GetNextUrl(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_MatchmakingCandidateArray_GetNextUrl_Native(IntPtr obj);
-
-		public static extern UIntPtr ovr_MatchmakingCandidateArray_GetSize(IntPtr obj);
-
-		public static extern bool ovr_MatchmakingCandidateArray_HasNextPage(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingEnqueueResult_GetAdminSnapshot(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingEnqueueResult_GetAverageWait(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingEnqueueResult_GetMatchesInLastHourCount(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingEnqueueResult_GetMaxExpectedWait(IntPtr obj);
-
-		public static string ovr_MatchmakingEnqueueResult_GetPool(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_MatchmakingEnqueueResult_GetPool_Native(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingEnqueueResult_GetRecentMatchPercentage(IntPtr obj);
-
-		public static string ovr_MatchmakingEnqueueResult_GetRequestHash(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_MatchmakingEnqueueResult_GetRequestHash_Native(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingEnqueueResultAndRoom_GetMatchmakingEnqueueResult(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingEnqueueResultAndRoom_GetRoom(IntPtr obj);
-
-		public static extern ulong ovr_MatchmakingEnqueuedUser_GetAdditionalUserID(IntPtr obj, uint index);
-
-		public static extern uint ovr_MatchmakingEnqueuedUser_GetAdditionalUserIDsSize(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingEnqueuedUser_GetCustomData(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingEnqueuedUser_GetUser(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingEnqueuedUserArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static extern UIntPtr ovr_MatchmakingEnqueuedUserArray_GetSize(IntPtr obj);
-
-		public static extern ulong ovr_MatchmakingNotification_GetAddedByUserId(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingNotification_GetRoom(IntPtr obj);
-
-		public static string ovr_MatchmakingNotification_GetTraceId(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_MatchmakingNotification_GetTraceId_Native(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingRoom_GetPingTime(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingRoom_GetRoom(IntPtr obj);
-
-		public static extern bool ovr_MatchmakingRoom_HasPingTime(IntPtr obj);
-
-		public static extern IntPtr ovr_MatchmakingRoomArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static extern UIntPtr ovr_MatchmakingRoomArray_GetSize(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingStats_GetDrawCount(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingStats_GetLossCount(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingStats_GetSkillLevel(IntPtr obj);
-
-		public static extern double ovr_MatchmakingStats_GetSkillMean(IntPtr obj);
-
-		public static extern double ovr_MatchmakingStats_GetSkillStandardDeviation(IntPtr obj);
-
-		public static extern uint ovr_MatchmakingStats_GetWinCount(IntPtr obj);
-
 		public static extern IntPtr ovr_Message_GetAbuseReportRecording(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetAchievementDefinitionArray(IntPtr obj);
@@ -2084,6 +1708,10 @@ namespace Oculus.Platform
 		public static extern IntPtr ovr_Message_GetAchievementProgressArray(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetAchievementUpdate(IntPtr obj);
+
+		public static extern IntPtr ovr_Message_GetAppDownloadProgressResult(IntPtr obj);
+
+		public static extern IntPtr ovr_Message_GetAppDownloadResult(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetApplicationInviteArray(IntPtr obj);
 
@@ -2101,11 +1729,9 @@ namespace Oculus.Platform
 
 		public static extern IntPtr ovr_Message_GetAssetFileDownloadUpdate(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetCalApplicationFinalized(IntPtr obj);
+		public static extern IntPtr ovr_Message_GetAvatarEditorResult(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetCalApplicationProposed(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetCalApplicationSuggestionArray(IntPtr obj);
+		public static extern IntPtr ovr_Message_GetBlockedUserArray(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetChallenge(IntPtr obj);
 
@@ -2113,15 +1739,11 @@ namespace Oculus.Platform
 
 		public static extern IntPtr ovr_Message_GetChallengeEntryArray(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetCloudStorageConflictMetadata(IntPtr obj);
+		public static extern IntPtr ovr_Message_GetCowatchViewerArray(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetCloudStorageData(IntPtr obj);
+		public static extern IntPtr ovr_Message_GetCowatchViewerUpdate(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetCloudStorageMetadata(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetCloudStorageMetadataArray(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetCloudStorageUpdateResponse(IntPtr obj);
+		public static extern IntPtr ovr_Message_GetCowatchingState(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetDataStore(IntPtr obj);
 
@@ -2165,18 +1787,6 @@ namespace Oculus.Platform
 
 		public static extern IntPtr ovr_Message_GetLivestreamingVideoStats(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetMatchmakingAdminSnapshot(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetMatchmakingBrowseResult(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetMatchmakingEnqueueResult(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetMatchmakingEnqueueResultAndRoom(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetMatchmakingRoomArray(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetMatchmakingStats(IntPtr obj);
-
 		public static extern IntPtr ovr_Message_GetMicrophoneAvailabilityState(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetNativeMessage(IntPtr obj);
@@ -2191,8 +1801,6 @@ namespace Oculus.Platform
 
 		public static extern IntPtr ovr_Message_GetNetSyncVoipAttenuationValueArray(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetNetworkingPeer(IntPtr obj);
-
 		public static extern IntPtr ovr_Message_GetOrgScopedID(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetParty(IntPtr obj);
@@ -2202,8 +1810,6 @@ namespace Oculus.Platform
 		public static extern IntPtr ovr_Message_GetPartyUpdateNotification(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetPidArray(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetPingResult(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetPlatformInitialize(IntPtr obj);
 
@@ -2216,14 +1822,6 @@ namespace Oculus.Platform
 		public static extern IntPtr ovr_Message_GetRejoinDialogResult(IntPtr obj);
 
 		public static extern ulong ovr_Message_GetRequestID(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetRoom(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetRoomArray(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetRoomInviteNotification(IntPtr obj);
-
-		public static extern IntPtr ovr_Message_GetRoomInviteNotificationArray(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetSdkAccountArray(IntPtr obj);
 
@@ -2244,9 +1842,11 @@ namespace Oculus.Platform
 
 		public static extern IntPtr ovr_Message_GetUser(IntPtr obj);
 
-		public static extern IntPtr ovr_Message_GetUserAndRoomArray(IntPtr obj);
+		public static extern IntPtr ovr_Message_GetUserAccountAgeCategory(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetUserArray(IntPtr obj);
+
+		public static extern IntPtr ovr_Message_GetUserCapabilityArray(IntPtr obj);
 
 		public static extern IntPtr ovr_Message_GetUserDataStoreUpdateResponse(IntPtr obj);
 
@@ -2322,17 +1922,11 @@ namespace Oculus.Platform
 
 		public static extern UIntPtr ovr_NetSyncVoipAttenuationValueArray_GetSize(IntPtr obj);
 
-		public static extern ulong ovr_NetworkingPeer_GetID(IntPtr obj);
-
-		public static extern PeerConnectionState ovr_NetworkingPeer_GetState(IntPtr obj);
-
 		public static extern ulong ovr_OrgScopedID_GetID(IntPtr obj);
 
 		public static extern void ovr_Packet_Free(IntPtr obj);
 
 		public static extern IntPtr ovr_Packet_GetBytes(IntPtr obj);
-
-		public static extern SendPolicy ovr_Packet_GetSendPolicy(IntPtr obj);
 
 		public static extern ulong ovr_Packet_GetSenderID(IntPtr obj);
 
@@ -2343,8 +1937,6 @@ namespace Oculus.Platform
 		public static extern IntPtr ovr_Party_GetInvitedUsers(IntPtr obj);
 
 		public static extern IntPtr ovr_Party_GetLeader(IntPtr obj);
-
-		public static extern IntPtr ovr_Party_GetRoom(IntPtr obj);
 
 		public static extern IntPtr ovr_Party_GetUsers(IntPtr obj);
 
@@ -2389,12 +1981,6 @@ namespace Oculus.Platform
 		public static extern IntPtr ovr_PidArray_GetElement(IntPtr obj, UIntPtr index);
 
 		public static extern UIntPtr ovr_PidArray_GetSize(IntPtr obj);
-
-		public static extern ulong ovr_PingResult_GetID(IntPtr obj);
-
-		public static extern ulong ovr_PingResult_GetPingTimeUsec(IntPtr obj);
-
-		public static extern bool ovr_PingResult_IsTimeout(IntPtr obj);
 
 		public static extern PlatformInitializeResult ovr_PlatformInitialize_GetResult(IntPtr obj);
 
@@ -2455,6 +2041,13 @@ namespace Oculus.Platform
 
 		public static extern bool ovr_ProductArray_HasNextPage(IntPtr obj);
 
+		public static string ovr_Purchase_GetDeveloperPayload(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_Purchase_GetDeveloperPayload_Native(IntPtr obj);
+
 		public static DateTime ovr_Purchase_GetExpirationTime(IntPtr obj)
 		{
 			return default(DateTime);
@@ -2478,6 +2071,13 @@ namespace Oculus.Platform
 
 		private static extern IntPtr ovr_Purchase_GetPurchaseStrID_Native(IntPtr obj);
 
+		public static string ovr_Purchase_GetReportingId(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_Purchase_GetReportingId_Native(IntPtr obj);
+
 		public static string ovr_Purchase_GetSKU(IntPtr obj)
 		{
 			return null;
@@ -2500,87 +2100,6 @@ namespace Oculus.Platform
 
 		public static extern bool ovr_RejoinDialogResult_GetRejoinSelected(IntPtr obj);
 
-		public static extern ulong ovr_Room_GetApplicationID(IntPtr obj);
-
-		public static extern IntPtr ovr_Room_GetDataStore(IntPtr obj);
-
-		public static string ovr_Room_GetDescription(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_Room_GetDescription_Native(IntPtr obj);
-
-		public static extern ulong ovr_Room_GetID(IntPtr obj);
-
-		public static extern IntPtr ovr_Room_GetInvitedUsers(IntPtr obj);
-
-		public static extern bool ovr_Room_GetIsMembershipLocked(IntPtr obj);
-
-		public static extern RoomJoinPolicy ovr_Room_GetJoinPolicy(IntPtr obj);
-
-		public static extern RoomJoinability ovr_Room_GetJoinability(IntPtr obj);
-
-		public static extern IntPtr ovr_Room_GetMatchedUsers(IntPtr obj);
-
-		public static extern uint ovr_Room_GetMaxUsers(IntPtr obj);
-
-		public static string ovr_Room_GetName(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_Room_GetName_Native(IntPtr obj);
-
-		public static extern IntPtr ovr_Room_GetOwner(IntPtr obj);
-
-		public static extern IntPtr ovr_Room_GetTeams(IntPtr obj);
-
-		public static extern RoomType ovr_Room_GetType(IntPtr obj);
-
-		public static extern IntPtr ovr_Room_GetUsers(IntPtr obj);
-
-		public static extern uint ovr_Room_GetVersion(IntPtr obj);
-
-		public static extern IntPtr ovr_RoomArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static string ovr_RoomArray_GetNextUrl(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_RoomArray_GetNextUrl_Native(IntPtr obj);
-
-		public static extern UIntPtr ovr_RoomArray_GetSize(IntPtr obj);
-
-		public static extern bool ovr_RoomArray_HasNextPage(IntPtr obj);
-
-		public static extern ulong ovr_RoomInviteNotification_GetID(IntPtr obj);
-
-		public static extern ulong ovr_RoomInviteNotification_GetRoomID(IntPtr obj);
-
-		public static extern ulong ovr_RoomInviteNotification_GetSenderID(IntPtr obj);
-
-		public static DateTime ovr_RoomInviteNotification_GetSentTime(IntPtr obj)
-		{
-			return default(DateTime);
-		}
-
-		private static extern ulong ovr_RoomInviteNotification_GetSentTime_Native(IntPtr obj);
-
-		public static extern IntPtr ovr_RoomInviteNotificationArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static string ovr_RoomInviteNotificationArray_GetNextUrl(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_RoomInviteNotificationArray_GetNextUrl_Native(IntPtr obj);
-
-		public static extern UIntPtr ovr_RoomInviteNotificationArray_GetSize(IntPtr obj);
-
-		public static extern bool ovr_RoomInviteNotificationArray_HasNextPage(IntPtr obj);
-
 		public static extern SdkAccountType ovr_SdkAccount_GetAccountType(IntPtr obj);
 
 		public static extern ulong ovr_SdkAccount_GetUserId(IntPtr obj);
@@ -2600,23 +2119,6 @@ namespace Oculus.Platform
 		public static extern VoipMuteState ovr_SystemVoipState_GetMicrophoneMuted(IntPtr obj);
 
 		public static extern SystemVoipStatus ovr_SystemVoipState_GetStatus(IntPtr obj);
-
-		public static extern IntPtr ovr_Team_GetAssignedUsers(IntPtr obj);
-
-		public static extern int ovr_Team_GetMaxUsers(IntPtr obj);
-
-		public static extern int ovr_Team_GetMinUsers(IntPtr obj);
-
-		public static string ovr_Team_GetName(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_Team_GetName_Native(IntPtr obj);
-
-		public static extern IntPtr ovr_TeamArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static extern UIntPtr ovr_TeamArray_GetSize(IntPtr obj);
 
 		public static string ovr_TestUser_GetAccessToken(IntPtr obj)
 		{
@@ -2680,13 +2182,6 @@ namespace Oculus.Platform
 
 		private static extern IntPtr ovr_User_GetImageUrl_Native(IntPtr obj);
 
-		public static string ovr_User_GetInviteToken(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_User_GetInviteToken_Native(IntPtr obj);
-
 		public static string ovr_User_GetOculusID(IntPtr obj)
 		{
 			return null;
@@ -2738,22 +2233,7 @@ namespace Oculus.Platform
 
 		private static extern IntPtr ovr_User_GetSmallImageUrl_Native(IntPtr obj);
 
-		public static extern IntPtr ovr_UserAndRoom_GetRoom(IntPtr obj);
-
-		public static extern IntPtr ovr_UserAndRoom_GetUser(IntPtr obj);
-
-		public static extern IntPtr ovr_UserAndRoomArray_GetElement(IntPtr obj, UIntPtr index);
-
-		public static string ovr_UserAndRoomArray_GetNextUrl(IntPtr obj)
-		{
-			return null;
-		}
-
-		private static extern IntPtr ovr_UserAndRoomArray_GetNextUrl_Native(IntPtr obj);
-
-		public static extern UIntPtr ovr_UserAndRoomArray_GetSize(IntPtr obj);
-
-		public static extern bool ovr_UserAndRoomArray_HasNextPage(IntPtr obj);
+		public static extern AccountAgeCategory ovr_UserAccountAgeCategory_GetAgeCategory(IntPtr obj);
 
 		public static extern IntPtr ovr_UserArray_GetElement(IntPtr obj, UIntPtr index);
 
@@ -2767,6 +2247,42 @@ namespace Oculus.Platform
 		public static extern UIntPtr ovr_UserArray_GetSize(IntPtr obj);
 
 		public static extern bool ovr_UserArray_HasNextPage(IntPtr obj);
+
+		public static string ovr_UserCapability_GetDescription(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_UserCapability_GetDescription_Native(IntPtr obj);
+
+		public static extern bool ovr_UserCapability_GetIsEnabled(IntPtr obj);
+
+		public static string ovr_UserCapability_GetName(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_UserCapability_GetName_Native(IntPtr obj);
+
+		public static string ovr_UserCapability_GetReasonCode(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_UserCapability_GetReasonCode_Native(IntPtr obj);
+
+		public static extern IntPtr ovr_UserCapabilityArray_GetElement(IntPtr obj, UIntPtr index);
+
+		public static string ovr_UserCapabilityArray_GetNextUrl(IntPtr obj)
+		{
+			return null;
+		}
+
+		private static extern IntPtr ovr_UserCapabilityArray_GetNextUrl_Native(IntPtr obj);
+
+		public static extern UIntPtr ovr_UserCapabilityArray_GetSize(IntPtr obj);
+
+		public static extern bool ovr_UserCapabilityArray_HasNextPage(IntPtr obj);
 
 		public static extern bool ovr_UserDataStoreUpdateResponse_GetSuccess(IntPtr obj);
 
@@ -2803,6 +2319,14 @@ namespace Oculus.Platform
 
 		public static extern void ovr_AdvancedAbuseReportOptions_Destroy(IntPtr handle);
 
+		public static void ovr_AdvancedAbuseReportOptions_SetDeveloperDefinedContextString(IntPtr handle, string key, string value)
+		{
+		}
+
+		private static extern void ovr_AdvancedAbuseReportOptions_SetDeveloperDefinedContextString_Native(IntPtr handle, IntPtr key, IntPtr value);
+
+		public static extern void ovr_AdvancedAbuseReportOptions_ClearDeveloperDefinedContext(IntPtr handle);
+
 		public static void ovr_AdvancedAbuseReportOptions_SetObjectType(IntPtr handle, string value)
 		{
 		}
@@ -2810,6 +2334,10 @@ namespace Oculus.Platform
 		private static extern void ovr_AdvancedAbuseReportOptions_SetObjectType_Native(IntPtr handle, IntPtr value);
 
 		public static extern void ovr_AdvancedAbuseReportOptions_SetReportType(IntPtr handle, AbuseReportType value);
+
+		public static extern void ovr_AdvancedAbuseReportOptions_AddSuggestedUser(IntPtr handle, ulong value);
+
+		public static extern void ovr_AdvancedAbuseReportOptions_ClearSuggestedUsers(IntPtr handle);
 
 		public static extern void ovr_AdvancedAbuseReportOptions_SetVideoMode(IntPtr handle, AbuseReportVideoMode value);
 
@@ -2822,6 +2350,36 @@ namespace Oculus.Platform
 		}
 
 		private static extern void ovr_ApplicationOptions_SetDeeplinkMessage_Native(IntPtr handle, IntPtr value);
+
+		public static void ovr_ApplicationOptions_SetDestinationApiName(IntPtr handle, string value)
+		{
+		}
+
+		private static extern void ovr_ApplicationOptions_SetDestinationApiName_Native(IntPtr handle, IntPtr value);
+
+		public static void ovr_ApplicationOptions_SetLobbySessionId(IntPtr handle, string value)
+		{
+		}
+
+		private static extern void ovr_ApplicationOptions_SetLobbySessionId_Native(IntPtr handle, IntPtr value);
+
+		public static void ovr_ApplicationOptions_SetMatchSessionId(IntPtr handle, string value)
+		{
+		}
+
+		private static extern void ovr_ApplicationOptions_SetMatchSessionId_Native(IntPtr handle, IntPtr value);
+
+		public static extern void ovr_ApplicationOptions_SetRoomId(IntPtr handle, ulong value);
+
+		public static extern IntPtr ovr_AvatarEditorOptions_Create();
+
+		public static extern void ovr_AvatarEditorOptions_Destroy(IntPtr handle);
+
+		public static void ovr_AvatarEditorOptions_SetSourceOverride(IntPtr handle, string value)
+		{
+		}
+
+		private static extern void ovr_AvatarEditorOptions_SetSourceOverride_Native(IntPtr handle, IntPtr value);
 
 		public static extern IntPtr ovr_ChallengeOptions_Create();
 
@@ -2871,6 +2429,12 @@ namespace Oculus.Platform
 
 		public static extern void ovr_GroupPresenceOptions_Destroy(IntPtr handle);
 
+		public static void ovr_GroupPresenceOptions_SetDeeplinkMessageOverride(IntPtr handle, string value)
+		{
+		}
+
+		private static extern void ovr_GroupPresenceOptions_SetDeeplinkMessageOverride_Native(IntPtr handle, IntPtr value);
+
 		public static void ovr_GroupPresenceOptions_SetDestinationApiName(IntPtr handle, string value)
 		{
 		}
@@ -2898,54 +2462,6 @@ namespace Oculus.Platform
 		public static extern void ovr_InviteOptions_AddSuggestedUser(IntPtr handle, ulong value);
 
 		public static extern void ovr_InviteOptions_ClearSuggestedUsers(IntPtr handle);
-
-		public static extern IntPtr ovr_MatchmakingOptions_Create();
-
-		public static extern void ovr_MatchmakingOptions_Destroy(IntPtr handle);
-
-		public static void ovr_MatchmakingOptions_SetCreateRoomDataStoreString(IntPtr handle, string key, string value)
-		{
-		}
-
-		private static extern void ovr_MatchmakingOptions_SetCreateRoomDataStoreString_Native(IntPtr handle, IntPtr key, IntPtr value);
-
-		public static extern void ovr_MatchmakingOptions_ClearCreateRoomDataStore(IntPtr handle);
-
-		public static extern void ovr_MatchmakingOptions_SetCreateRoomJoinPolicy(IntPtr handle, RoomJoinPolicy value);
-
-		public static extern void ovr_MatchmakingOptions_SetCreateRoomMaxUsers(IntPtr handle, uint value);
-
-		public static extern void ovr_MatchmakingOptions_AddEnqueueAdditionalUser(IntPtr handle, ulong value);
-
-		public static extern void ovr_MatchmakingOptions_ClearEnqueueAdditionalUsers(IntPtr handle);
-
-		public static void ovr_MatchmakingOptions_SetEnqueueDataSettingsInt(IntPtr handle, string key, int value)
-		{
-		}
-
-		private static extern void ovr_MatchmakingOptions_SetEnqueueDataSettingsInt_Native(IntPtr handle, IntPtr key, int value);
-
-		public static void ovr_MatchmakingOptions_SetEnqueueDataSettingsDouble(IntPtr handle, string key, double value)
-		{
-		}
-
-		private static extern void ovr_MatchmakingOptions_SetEnqueueDataSettingsDouble_Native(IntPtr handle, IntPtr key, double value);
-
-		public static void ovr_MatchmakingOptions_SetEnqueueDataSettingsString(IntPtr handle, string key, string value)
-		{
-		}
-
-		private static extern void ovr_MatchmakingOptions_SetEnqueueDataSettingsString_Native(IntPtr handle, IntPtr key, IntPtr value);
-
-		public static extern void ovr_MatchmakingOptions_ClearEnqueueDataSettings(IntPtr handle);
-
-		public static extern void ovr_MatchmakingOptions_SetEnqueueIsDebug(IntPtr handle, bool value);
-
-		public static void ovr_MatchmakingOptions_SetEnqueueQueryKey(IntPtr handle, string value)
-		{
-		}
-
-		private static extern void ovr_MatchmakingOptions_SetEnqueueQueryKey_Native(IntPtr handle, IntPtr value);
 
 		public static extern IntPtr ovr_MultiplayerErrorOptions_Create();
 
@@ -2981,89 +2497,13 @@ namespace Oculus.Platform
 
 		private static extern void ovr_RichPresenceOptions_SetApiName_Native(IntPtr handle, IntPtr value);
 
-		public static void ovr_RichPresenceOptions_SetArgsString(IntPtr handle, string key, string value)
-		{
-		}
-
-		private static extern void ovr_RichPresenceOptions_SetArgsString_Native(IntPtr handle, IntPtr key, IntPtr value);
-
-		public static extern void ovr_RichPresenceOptions_ClearArgs(IntPtr handle);
-
-		public static extern void ovr_RichPresenceOptions_SetCurrentCapacity(IntPtr handle, uint value);
-
 		public static void ovr_RichPresenceOptions_SetDeeplinkMessageOverride(IntPtr handle, string value)
 		{
 		}
 
 		private static extern void ovr_RichPresenceOptions_SetDeeplinkMessageOverride_Native(IntPtr handle, IntPtr value);
 
-		public static void ovr_RichPresenceOptions_SetEndTime(IntPtr handle, DateTime value)
-		{
-		}
-
-		private static extern void ovr_RichPresenceOptions_SetEndTime_Native(IntPtr handle, ulong value);
-
-		public static extern void ovr_RichPresenceOptions_SetExtraContext(IntPtr handle, RichPresenceExtraContext value);
-
-		public static void ovr_RichPresenceOptions_SetInstanceId(IntPtr handle, string value)
-		{
-		}
-
-		private static extern void ovr_RichPresenceOptions_SetInstanceId_Native(IntPtr handle, IntPtr value);
-
-		public static extern void ovr_RichPresenceOptions_SetIsIdle(IntPtr handle, bool value);
-
 		public static extern void ovr_RichPresenceOptions_SetIsJoinable(IntPtr handle, bool value);
-
-		public static void ovr_RichPresenceOptions_SetJoinableId(IntPtr handle, string value)
-		{
-		}
-
-		private static extern void ovr_RichPresenceOptions_SetJoinableId_Native(IntPtr handle, IntPtr value);
-
-		public static void ovr_RichPresenceOptions_SetLobbySessionId(IntPtr handle, string value)
-		{
-		}
-
-		private static extern void ovr_RichPresenceOptions_SetLobbySessionId_Native(IntPtr handle, IntPtr value);
-
-		public static void ovr_RichPresenceOptions_SetMatchSessionId(IntPtr handle, string value)
-		{
-		}
-
-		private static extern void ovr_RichPresenceOptions_SetMatchSessionId_Native(IntPtr handle, IntPtr value);
-
-		public static extern void ovr_RichPresenceOptions_SetMaxCapacity(IntPtr handle, uint value);
-
-		public static void ovr_RichPresenceOptions_SetStartTime(IntPtr handle, DateTime value)
-		{
-		}
-
-		private static extern void ovr_RichPresenceOptions_SetStartTime_Native(IntPtr handle, ulong value);
-
-		public static extern IntPtr ovr_RoomOptions_Create();
-
-		public static extern void ovr_RoomOptions_Destroy(IntPtr handle);
-
-		public static void ovr_RoomOptions_SetDataStoreString(IntPtr handle, string key, string value)
-		{
-		}
-
-		private static extern void ovr_RoomOptions_SetDataStoreString_Native(IntPtr handle, IntPtr key, IntPtr value);
-
-		public static extern void ovr_RoomOptions_ClearDataStore(IntPtr handle);
-
-		public static extern void ovr_RoomOptions_SetExcludeRecentlyMet(IntPtr handle, bool value);
-
-		public static extern void ovr_RoomOptions_SetMaxUserResults(IntPtr handle, uint value);
-
-		public static extern void ovr_RoomOptions_SetOrdering(IntPtr handle, UserOrdering value);
-
-		public static extern void ovr_RoomOptions_SetRecentlyMetTimeWindow(IntPtr handle, TimeWindow value);
-
-		public static extern void ovr_RoomOptions_SetRoomId(IntPtr handle, ulong value);
-
-		public static extern void ovr_RoomOptions_SetTurnOffUpdates(IntPtr handle, bool value);
 
 		public static extern IntPtr ovr_RosterOptions_Create();
 

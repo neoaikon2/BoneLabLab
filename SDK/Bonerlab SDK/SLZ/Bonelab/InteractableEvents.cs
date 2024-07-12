@@ -31,5 +31,10 @@ namespace SLZ.Bonelab
 		private void OnDestroy()
 		{
 		}
+
+		public InteractableEvents()
+			: base()
+		{
+		}
 	}
 }

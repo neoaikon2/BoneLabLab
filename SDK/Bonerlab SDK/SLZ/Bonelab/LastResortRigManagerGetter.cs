@@ -1,5 +1,6 @@
 using System;
-using SLZ.AI;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using SLZ.Rig;
 using UnityEngine;
 
@@ -8,7 +9,6 @@ namespace SLZ.Bonelab
 	[Obsolete("You had better know what you're doing, using this component!")]
 	public class LastResortRigManagerGetter : MonoBehaviour
 	{
-		[field: SerializeField]
 		public RigManager RigManager { get; private set; }
 
 		public void ClearRigManager(bool areYouSure)
@@ -27,19 +27,17 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		internal static bool TryGetTriggerRefProxy_HACKY(out TriggerRefProxy triggerRefProxy)
+		internal static bool TryGetRigManager_HACKY([Out] RigManager rigManager)
 		{
-			triggerRefProxy = null;
-			return false;
-		}
-
-		internal static bool TryGetRigManager_HACKY(out RigManager rigManager)
-		{
-			rigManager = null;
-			return false;
+			return default(bool);
 		}
 
 		private void SearchDesperatelyForRigManager()
+		{
+		}
+
+		public LastResortRigManagerGetter()
+			: base()
 		{
 		}
 	}

@@ -13,7 +13,7 @@ namespace Dynamite3D.RealIvy
 
 		public static float DistanceBetweenPointAndSegmentSS(Vector2 point, Vector2 a, Vector2 b)
 		{
-			return 0f;
+			return default(float);
 		}
 	}
 }

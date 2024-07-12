@@ -1,8 +1,15 @@
-using SLZ.Rig;
+using System;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow.Interaction;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
+	[Obsolete("Uses obsolete zone components")]
 	public class HeadTitlesTrigger : MonoBehaviour
 	{
 		public AudioClip clipToPlay;
@@ -14,6 +21,9 @@ namespace SLZ.Bonelab
 		public Sprite spriteToDisplay;
 
 		public float bufferTime;
+
+		[Tooltip("delay in seconds till headtitle starts")]
+		public float startDelay;
 
 		[Header("LEVEL TRIGGER")]
 		public bool isLevel;
@@ -35,9 +45,21 @@ namespace SLZ.Bonelab
 
 		private string currentTag;
 
-		private RigManager manager;
+		public void DelayedSENDTITLES(MarrowEntity entity)
+		{
+		}
 
-		public void SENDTITLES()
+		private UniTaskVoid DelayedSENDTITLES_async(MarrowEntity entity)
+		{
+			return default(UniTaskVoid);
+		}
+
+		public void SENDTITLES(MarrowEntity entity)
+		{
+		}
+
+		public HeadTitlesTrigger()
+			: base()
 		{
 		}
 	}

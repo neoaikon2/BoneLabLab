@@ -1,13 +1,12 @@
+using System;
 using SLZ.Marrow.Pool;
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Marrow.SceneStreaming
 {
+	[Obsolete("Chunk tracker is now obsolete use the new zone/entity system for this functionality")]
 	public class ChunkTracker : SpawnEvents
 	{
-		private static ComponentCache<ChunkTracker> _cache;
-
 		private int _freezeCount;
 
 		[SerializeField]
@@ -15,14 +14,6 @@ namespace SLZ.Marrow.SceneStreaming
 
 		[SerializeField]
 		private ChunkTrackerGroup _parentGroup;
-
-		public static ComponentCache<ChunkTracker> Cache
-		{
-			get
-			{
-				return null;
-			}
-		}
 
 		public bool IsFrozen
 		{
@@ -32,19 +23,11 @@ namespace SLZ.Marrow.SceneStreaming
 			}
 		}
 
-		private void Awake()
+		protected override void Awake()
 		{
 		}
 
 		private void OnDestroy()
-		{
-		}
-
-		protected override void OnPostSpawn(GameObject go)
-		{
-		}
-
-		protected override void OnPostDespawn(GameObject go)
 		{
 		}
 

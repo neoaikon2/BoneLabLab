@@ -1,20 +1,22 @@
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
 {
 	public class FingerRig : SolverManager
 	{
-		[Tooltip("The master weight for all fingers.")]
 		[Range(0f, 1f)]
+		[Tooltip("The master weight for all fingers.")]
 		public float weight;
 
 		public Finger[] fingers;
 
 		public bool initiated { get; private set; }
 
-		public bool IsValid(ref string errorMessage)
+		public bool IsValid(string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
 		[ContextMenu("Auto-detect")]
@@ -22,7 +24,7 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		public void AddFinger(Transform bone1, Transform bone2, Transform bone3, Transform tip, Transform target = null)
+		public void AddFinger(Transform bone1, Transform bone2, Transform bone3, Transform tip, Transform target = default(Transform))
 		{
 		}
 
@@ -30,7 +32,7 @@ namespace RootMotion.FinalIK
 		{
 		}
 
-		private void AddChildrenRecursive(Transform parent, ref Transform[] array)
+		private void AddChildrenRecursive(Transform parent, Transform[] array)
 		{
 		}
 
@@ -55,6 +57,11 @@ namespace RootMotion.FinalIK
 		}
 
 		protected override void FixTransforms()
+		{
+		}
+
+		public FingerRig()
+			: base()
 		{
 		}
 	}

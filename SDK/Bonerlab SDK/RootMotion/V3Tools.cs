@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion
@@ -5,11 +6,6 @@ namespace RootMotion
 	public static class V3Tools
 	{
 		public static Vector3 Lerp(Vector3 fromVector, Vector3 toVector, float weight)
-		{
-			return default(Vector3);
-		}
-
-		public static Vector3 Slerp(Vector3 fromVector, Vector3 toVector, float weight)
 		{
 			return default(Vector3);
 		}
@@ -24,15 +20,8 @@ namespace RootMotion
 			return default(Vector3);
 		}
 
-		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out bool changed)
+		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, [Out] bool changed)
 		{
-			changed = default(bool);
-			return default(Vector3);
-		}
-
-		public static Vector3 ClampDirection(Vector3 direction, Vector3 normalDirection, float clampWeight, int clampSmoothing, out float clampValue)
-		{
-			clampValue = default(float);
 			return default(Vector3);
 		}
 

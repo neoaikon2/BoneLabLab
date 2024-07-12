@@ -21,5 +21,10 @@ namespace SLZ.Interaction
 		private void OnAttachedToHand(Hand hand)
 		{
 		}
+
+		public PhysicsMaterialSwap()
+			: base()
+		{
+		}
 	}
 }

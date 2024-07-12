@@ -1,15 +1,15 @@
-using SLZ.Interaction;
-using SLZ.Marrow.Utilities;
+using System.Runtime.CompilerServices;
+using SLZ.Combat;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
 using SLZ.VRMK;
 using UnityEngine;
-using UnityEngine.Audio;
+using UnityEngine.EventSystems;
 
 namespace SLZ.SFX
 {
 	public class HandSFX : MonoBehaviour
 	{
-		private static ComponentCache<HandSFX> _cache;
-
 		public AudioClip[] grab;
 
 		public AudioClip[] grabBig;
@@ -19,6 +19,8 @@ namespace SLZ.SFX
 		public AudioClip[] bodySlot;
 
 		public AudioClip[] fallbackImpact;
+
+		public AudioClip[] slide;
 
 		public AudioClip[] punch;
 
@@ -48,24 +50,35 @@ namespace SLZ.SFX
 
 		public AnimationCurve VelocityPitchCurve;
 
-		public AudioMixerGroup outputMixer;
-
 		public float realtimeWhooshUpdateFrequency;
 
 		[SerializeField]
 		private PhysHand _physHand;
 
+		private ManagedAudioPlayer _mapImpact;
+
+		private ManagedAudioPlayer _mapSlide;
+
 		private Rigidbody _rb;
 
-		private bool isPlaying;
+		private float _nextImpactTime;
 
-		private Hand _hand;
+		private float _lastImpulse;
 
-		private float _lastImpactTime;
+		private float _nextSlideTime;
+
+		private float _lastAccelSqMg;
+
+		private Vector3 _lastRelVelPlane;
 
 		private int _enemyLayer;
 
-		public static ComponentCache<HandSFX> Cache => null;
+		[SerializeField]
+		private CollisionCollector _collisionCollector;
+
+		private bool _fixedRan;
+
+		private float _lastHandChestVelSqMg;
 
 		private void Awake()
 		{
@@ -79,7 +92,7 @@ namespace SLZ.SFX
 		{
 		}
 
-		public void Grab()
+		public void Grab(float volumeMult)
 		{
 		}
 
@@ -95,22 +108,38 @@ namespace SLZ.SFX
 		{
 		}
 
-		private void OnCollisionEnter(Collision c)
+		private void FixedUpdate()
 		{
 		}
 
-		private float ProcessImpulse(Collision c, Rigidbody thisRb)
+		private void Update()
 		{
-			return 0f;
+		}
+
+		private void OnSignificantCollisionEnter(CollisionCollector.RelevantCollision c)
+		{
+		}
+
+		private void OnSignificantCollisionStay(CollisionCollector.RelevantCollision c)
+		{
+		}
+
+		private void Slide(float speed, float impulse, float relAccelSqMg)
+		{
+		}
+
+		private bool PunchAttack(CollisionCollector.RelevantCollision c, float impulse, float relVelSqr)
+		{
+			return default(bool);
 		}
 
 		private void OnCollisionStay(Collision c)
 		{
 		}
 
-		private bool PunchAttack(Collision c, float impulse, float relVelSqr)
+		public HandSFX()
+			: base()
 		{
-			return false;
 		}
 	}
 }

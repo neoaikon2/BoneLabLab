@@ -27,5 +27,10 @@ namespace RootMotion.FinalIK
 		protected override void OnModifyOffset()
 		{
 		}
+
+		public BodyTilt()
+			: base()
+		{
+		}
 	}
 }

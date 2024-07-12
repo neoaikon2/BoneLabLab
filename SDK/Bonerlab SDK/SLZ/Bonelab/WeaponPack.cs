@@ -2,7 +2,6 @@ using System;
 using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
-using SLZ.Props.Weapons;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -35,7 +34,7 @@ namespace SLZ.Bonelab
 
 		public Spawnable magSpawnable;
 
-		public AssetPoolee weaponAssetPoolee;
+		public Poolee weaponPoolee;
 
 		[Header("Spawned Instances")]
 		public GameObject spawnedWeaponObj;
@@ -84,6 +83,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnWeaponGrabbed(Hand hand)
+		{
+		}
+
+		public WeaponPack()
+			: base()
 		{
 		}
 	}

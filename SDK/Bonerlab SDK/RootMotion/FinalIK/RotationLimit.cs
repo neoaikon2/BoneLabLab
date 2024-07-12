@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -15,23 +16,34 @@ namespace RootMotion.FinalIK
 
 		private bool defaultLocalRotationSet;
 
-		public Vector3 secondaryAxis => default(Vector3);
+		public Vector3 secondaryAxis
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		public Vector3 crossAxis => default(Vector3);
+		public Vector3 crossAxis
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
 		public void SetDefaultLocalRotation()
 		{
 		}
 
-		public Quaternion GetLimitedLocalRotation(Quaternion localRotation, out bool changed)
+		public Quaternion GetLimitedLocalRotation(Quaternion localRotation, [Out] bool changed)
 		{
-			changed = default(bool);
 			return default(Quaternion);
 		}
 
 		public bool Apply()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Disable()
@@ -64,7 +76,12 @@ namespace RootMotion.FinalIK
 
 		protected static float GetOrthogonalAngle(Vector3 v1, Vector3 v2, Vector3 normal)
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public RotationLimit()
+			: base()
+		{
 		}
 	}
 }

@@ -39,5 +39,10 @@ namespace SLZ.Bonelab
 		private void CreateAnchorObject()
 		{
 		}
+
+		public JointMover()
+			: base()
+		{
+		}
 	}
 }

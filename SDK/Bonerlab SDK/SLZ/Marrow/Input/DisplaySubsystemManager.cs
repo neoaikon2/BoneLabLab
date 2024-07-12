@@ -52,6 +52,14 @@ namespace SLZ.Marrow.Input
 		{
 		}
 
+		public void EnableLocalDimming(bool value)
+		{
+		}
+
+		public void EnableEyeTrackedFoveatedRendering(bool value)
+		{
+		}
+
 		public void EnableDynamicFFR(bool value)
 		{
 		}

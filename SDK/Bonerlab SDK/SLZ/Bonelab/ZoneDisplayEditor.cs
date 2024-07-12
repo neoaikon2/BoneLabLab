@@ -1,5 +1,6 @@
 using System;
-using SLZ.Zones;
+using System.Collections.Generic;
+using SLZ.Marrow.Zones;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -7,9 +8,11 @@ namespace SLZ.Bonelab
 	[Serializable]
 	public class ZoneDisplayEditor
 	{
-		public SceneZone sZone;
+		public Zone zone;
 
-		public string zoneTitle;
+		public List<NPC_Data> npcDataList;
+
+		public List<ProfileSpawner> profileSpawnerList;
 
 		public Rect zoneRect;
 
@@ -28,5 +31,10 @@ namespace SLZ.Bonelab
 		public bool showZoneDisplay;
 
 		public bool showDebug;
+
+		public ZoneDisplayEditor()
+			: base()
+		{
+		}
 	}
 }

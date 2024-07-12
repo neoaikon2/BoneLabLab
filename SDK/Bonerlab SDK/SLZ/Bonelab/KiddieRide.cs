@@ -1,10 +1,12 @@
+using SLZ.Marrow.Interaction;
+using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 
 namespace SLZ.Bonelab
 {
-	public class KiddieRide : MonoBehaviour
+	public class KiddieRide : MarrowBehaviour, IMarrowEntityCullable
 	{
 		[SerializeField]
 		private ConfigurableJoint rideJoint;
@@ -36,6 +38,19 @@ namespace SLZ.Bonelab
 		}
 
 		public void TogglePower()
+		{
+		}
+
+		public void OnEntityCull()
+		{
+		}
+
+		public void OnEntityUncull()
+		{
+		}
+
+		public KiddieRide()
+			: base()
 		{
 		}
 	}

@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using SLZ.VRMK;
 using UnityEngine;
@@ -9,18 +10,28 @@ namespace SLZ.Rig
 		[SerializeField]
 		private float _spineForceMult;
 
-		public float spineInternalMult;
+		[SerializeField]
+		private float _spineInternalMult;
 
-		private bool _spineForceWasZero;
+		public bool shutdown;
 
 		[SerializeField]
-		private float _linearDamperMult;
+		public float _linearDamperMult;
 
 		[SerializeField]
-		private float _slerpDamperMult;
+		public float _slerpDamperMult;
+
+		private float _lastLinearDamperMult;
+
+		private float _lastSlerpDamperMult;
+
+		private float _lastSpineForceMult;
 
 		[SerializeField]
 		private Rigidbody _headRb;
+
+		[SerializeField]
+		private Rigidbody _neckRb;
 
 		[SerializeField]
 		private Rigidbody _chestRb;
@@ -41,12 +52,20 @@ namespace SLZ.Rig
 		private Servo _chestPelServo;
 
 		[SerializeField]
+		private Servo _headNeckServo;
+
+		[SerializeField]
+		private Servo _neckChestServo;
+
+		[SerializeField]
 		private Servo _chestSpineServo;
 
 		[SerializeField]
 		private Servo _spinePelServo;
 
 		public MeshCollider cPelvis;
+
+		public MeshCollider cSpineLow;
 
 		public MeshCollider cSpine;
 
@@ -64,13 +83,64 @@ namespace SLZ.Rig
 
 		public Grip gHead;
 
-		public Rigidbody rbHead => null;
+		public CylinderGrip gNeck;
 
-		public Rigidbody rbChest => null;
+		[SerializeField]
+		private PhysicMaterial _naturalFriction;
 
-		public Rigidbody rbSpine => null;
+		[SerializeField]
+		private PhysicMaterial _lowFriction;
 
-		public Rigidbody rbPelvis => null;
+		public float spineInternalMult
+		{
+			get
+			{
+				return default(float);
+			}
+			set
+			{
+			}
+		}
+
+		public Rigidbody rbHead
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Rigidbody rbNeck
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Rigidbody rbChest
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Rigidbody rbSpine
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		public Rigidbody rbPelvis
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public void OnAwakeInitialize()
 		{
@@ -88,7 +158,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public void UpdateSpineJoints(Rig inRig, float deltaTime)
+		public void EarlyUpdateSpineJoints()
 		{
 		}
 
@@ -100,7 +170,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public void UpdateTorsoColliders(Rig inRig)
+		public void ZeroTargets()
 		{
 		}
 
@@ -108,11 +178,29 @@ namespace SLZ.Rig
 		{
 		}
 
+		public Vector3 GetTorsoMomentum([Out] float totalMass)
+		{
+			return default(Vector3);
+		}
+
 		public void IgnoreWholeTorsoColliders(Collider collider, bool ignore = true)
 		{
 		}
 
 		public void IgnoreWholeTorsoColliders(Collider[] collider, bool ignore = true)
+		{
+		}
+
+		public void SetFrictionNatural()
+		{
+		}
+
+		public void SetFrictionLow()
+		{
+		}
+
+		public PhysTorso()
+			: base()
 		{
 		}
 	}

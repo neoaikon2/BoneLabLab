@@ -35,5 +35,10 @@ namespace SLZ.Bonelab
 		public void LEVER(float voltage)
 		{
 		}
+
+		public CoasterController()
+			: base()
+		{
+		}
 	}
 }

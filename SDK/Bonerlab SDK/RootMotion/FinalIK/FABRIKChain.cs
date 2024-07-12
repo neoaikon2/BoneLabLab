@@ -16,9 +16,9 @@ namespace RootMotion.FinalIK
 
 		public int[] children;
 
-		public bool IsValid(ref string message)
+		public bool IsValid(string message)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Initiate()
@@ -36,6 +36,11 @@ namespace RootMotion.FinalIK
 		private Vector3 GetCentroid(FABRIKChain[] chain)
 		{
 			return default(Vector3);
+		}
+
+		public FABRIKChain()
+			: base()
+		{
 		}
 	}
 }

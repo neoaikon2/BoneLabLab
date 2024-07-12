@@ -16,7 +16,7 @@ namespace Dynamite3D.RealIvy
 
 		private int ChooseBranchSense()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public void Step()
@@ -96,6 +96,11 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public void Optimize()
+		{
+		}
+
+		public EditorIvyGrowth()
+			: base()
 		{
 		}
 	}

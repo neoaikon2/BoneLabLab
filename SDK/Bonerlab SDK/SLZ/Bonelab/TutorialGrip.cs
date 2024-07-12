@@ -1,4 +1,5 @@
 using SLZ.Interaction;
+using SLZ.Player;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -95,6 +96,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDetachedFromHandInternal(Hand hand)
+		{
+		}
+
+		public TutorialGrip()
+			: base()
 		{
 		}
 	}

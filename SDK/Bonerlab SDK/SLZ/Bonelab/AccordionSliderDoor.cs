@@ -23,5 +23,10 @@ namespace SLZ.Bonelab
 		private void Update()
 		{
 		}
+
+		public AccordionSliderDoor()
+			: base()
+		{
+		}
 	}
 }

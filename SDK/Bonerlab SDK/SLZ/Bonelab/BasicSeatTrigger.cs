@@ -4,66 +4,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Rig;
-using SLZ.Utilities;
 using SLZ.Vehicle;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Bonelab
 {
 	public class BasicSeatTrigger : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CYoinkCoroutine_003Ed__24
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public BasicSeatTrigger _003C_003E4__this;
-
-			private float _003CyoinkTime_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CYoinkCoroutine_003Ed__24(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		public RigManager rM;
+		private RigManager rM;
 
 		public Seat seat;
 
@@ -81,8 +29,6 @@ namespace SLZ.Bonelab
 
 		public AnimationCurve lerpSpeedCurve;
 
-		public AudioMixerGroup outputMixer;
-
 		public AudioClip[] startSFX;
 
 		public AudioClip[] endSFX;
@@ -99,13 +45,17 @@ namespace SLZ.Bonelab
 
 		private bool endSound;
 
-		private AudioPlayer ap1;
-
-		private AudioPlayer ap2;
-
 		private IEnumerator yoinkCoroutine;
 
 		private List<Rigidbody> rigidbodies;
+
+		private void Start()
+		{
+		}
+
+		private void Intialize()
+		{
+		}
 
 		public void EnterSeat()
 		{
@@ -115,7 +65,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CYoinkCoroutine_003Ed__24))]
 		private IEnumerator YoinkCoroutine()
 		{
 			return null;
@@ -130,6 +79,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void UpdateRBVelocity(float velocity)
+		{
+		}
+
+		public BasicSeatTrigger()
+			: base()
 		{
 		}
 	}

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using Oculus.Platform.Models;
 
@@ -26,6 +27,11 @@ namespace Oculus.Platform
 		}
 
 		public static Request<PlatformInitialize> AsyncInitialize(string appId = default(string))
+		{
+			return null;
+		}
+
+		public static Request<PlatformInitialize> AsyncInitialize(string accessToken, Dictionary<InitConfigOptions, bool> initConfigOptions, string appId = default(string))
 		{
 			return null;
 		}

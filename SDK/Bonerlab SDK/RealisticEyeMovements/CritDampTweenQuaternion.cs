@@ -5,13 +5,11 @@ namespace RealisticEyeMovements
 {
 	internal struct CritDampTweenQuaternion
 	{
-		//[StructLayout(2)]
+		[StructLayout(2)]
 		private struct QVUnion
 		{
-			//[FieldOffset(0)]
 			public Vector4 v;
 
-			//[FieldOffset(0)]
 			public Quaternion q;
 		}
 
@@ -39,10 +37,13 @@ namespace RealisticEyeMovements
 			return default(Vector4);
 		}
 
-		/*public CritDampTweenQuaternion(Quaternion rotation, float omega, float maxSpeed)
+		public CritDampTweenQuaternion(Quaternion rotation, float omega, float maxSpeed)
 		{
-			
-		}*/
+			this.maxSpeed = default(float);
+			this.omega = default(float);
+			this.velocity = default(Vector4);
+			this._rotation = default(QVUnion);
+		}
 
 		public void Step(Quaternion target)
 		{

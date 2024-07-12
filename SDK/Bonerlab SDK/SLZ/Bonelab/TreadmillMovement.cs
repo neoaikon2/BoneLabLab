@@ -19,5 +19,10 @@ namespace SLZ.Bonelab
 		private void OnTriggerStay(Collider other)
 		{
 		}
+
+		public TreadmillMovement()
+			: base()
+		{
+		}
 	}
 }

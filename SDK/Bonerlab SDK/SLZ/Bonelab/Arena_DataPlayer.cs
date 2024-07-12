@@ -15,5 +15,10 @@ namespace SLZ.Bonelab
 
 		[JsonProperty("challenge_profile_list")]
 		public List<Arena_TrialsProfile> challengeProfileList;
+
+		public Arena_DataPlayer()
+			: base()
+		{
+		}
 	}
 }

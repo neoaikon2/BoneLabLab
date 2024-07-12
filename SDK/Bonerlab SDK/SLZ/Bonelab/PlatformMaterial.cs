@@ -22,5 +22,10 @@ namespace SLZ.Bonelab
 		private void Reset()
 		{
 		}
+
+		public PlatformMaterial()
+			: base()
+		{
+		}
 	}
 }

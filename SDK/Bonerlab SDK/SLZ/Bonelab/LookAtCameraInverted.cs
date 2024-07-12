@@ -7,5 +7,10 @@ namespace SLZ.Bonelab
 		private void OnEnable()
 		{
 		}
+
+		public LookAtCameraInverted()
+			: base()
+		{
+		}
 	}
 }

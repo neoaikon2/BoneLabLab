@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using UnityEngine;
 
@@ -27,11 +28,16 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public static void RegisterPack(WeaponPack pack, InteractableHost weaponhost, InteractableHost maghost = null)
+		public static void RegisterPack(WeaponPack pack, InteractableHost weaponhost, InteractableHost maghost = default(InteractableHost))
 		{
 		}
 
-		public static void UnregisterPack(WeaponPack pack, InteractableHost weaponHost, InteractableHost magHost = null)
+		public static void UnregisterPack(WeaponPack pack, InteractableHost weaponHost, InteractableHost magHost = default(InteractableHost))
+		{
+		}
+
+		public WeaponResetVolume()
+			: base()
 		{
 		}
 	}

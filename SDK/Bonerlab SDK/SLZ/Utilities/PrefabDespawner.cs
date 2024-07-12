@@ -7,5 +7,10 @@ namespace SLZ.Utilities
 		private void OnTriggerEnter(Collider other)
 		{
 		}
+
+		public PrefabDespawner()
+			: base()
+		{
+		}
 	}
 }

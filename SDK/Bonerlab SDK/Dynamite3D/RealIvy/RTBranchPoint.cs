@@ -31,10 +31,12 @@ namespace Dynamite3D.RealIvy
 		public Vector3 lastVectorNormal;
 
 		public RTBranchPoint()
+			: base()
 		{
 		}
 
 		public RTBranchPoint(BranchPoint branchPoint, RTBranchContainer rtBranchContainer)
+			: this()
 		{
 		}
 

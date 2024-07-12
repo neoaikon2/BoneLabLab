@@ -29,17 +29,22 @@ namespace SLZ.Bonelab
 
 		public static bool GetKey(KeyCode code)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static bool GetKeyDown(KeyCode code)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static bool GetKeyUp(KeyCode code)
 		{
-			return false;
+			return default(bool);
+		}
+
+		public CheatTool()
+			: base()
+		{
 		}
 	}
 }

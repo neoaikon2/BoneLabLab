@@ -1,3 +1,10 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using SLZ.Bonelab.Obsolete;
+using SLZ.VFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -19,30 +26,52 @@ namespace SLZ.Bonelab
 		private bool isOpen;
 
 		[SerializeField]
-		private Vector3 openPos;
+		private ObjectDestructible destructable;
 
 		[SerializeField]
-		private Vector3 closePos;
+		private bool isDestructable;
 
 		[SerializeField]
-		private AudioClip openClip;
+		private GarageDoor_Phys_Powerable garageDoor;
 
 		[SerializeField]
-		private AudioClip closeClip;
+		private bool forceOpenOnStart;
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		private IEnumerator CoForceGarage(float delay)
+		{
+			return null;
+		}
+
+		private void ForceGarageDoorsOpen()
+		{
+		}
+
+		private void OnDestructableBreak(ObjectDestructible dest)
+		{
+		}
 
 		public void ToggleDoor()
 		{
 		}
 
-		private void OpenDoor()
-		{
-		}
-
-		private void CloseDoor()
-		{
-		}
-
 		public void ToggleArea(bool open)
+		{
+		}
+
+		public NavMeshDoor()
+			: base()
 		{
 		}
 	}

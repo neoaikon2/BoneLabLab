@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[ExecuteInEditMode]
 	[RequireComponent(typeof(Spline))]
+	[ExecuteInEditMode]
 	public class ExampleContortAlong : MonoBehaviour
 	{
 		private Spline spline;
@@ -46,6 +46,11 @@ namespace SplineMesh
 		}
 
 		private void Init()
+		{
+		}
+
+		public ExampleContortAlong()
+			: base()
 		{
 		}
 	}

@@ -1,12 +1,10 @@
-using System.Collections.Generic;
-using System.Text;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Marrow.VoidLogic
 {
+	[Support(SupportFlags.Supported, null)]
 	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Button")]
-	public class ButtonNode : BaseNode
+	public class ButtonNode : BaseNode, IVoidLogicSensor, IVoidLogicNode, IVoidLogicActuator
 	{
 		[SerializeField]
 		protected float _lowThreshold;
@@ -25,13 +23,9 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		protected AudioClip[] _pressClips;
 
-		[SerializeField]
 		[Tooltip("Clip(s) to be played on button unpress")]
-		protected AudioClip[] _depressClips;
-
 		[SerializeField]
-		[Tooltip("Mixer group for pressed/unpressed clips")]
-		protected AudioMixerGroup _mixerGroup;
+		protected AudioClip[] _depressClips;
 
 		[Tooltip("Colliders that the button shaft collider will ignore")]
 		[SerializeField]
@@ -46,38 +40,41 @@ namespace SLZ.Marrow.VoidLogic
 
 		protected bool _isPressed;
 
-		protected float _previousPercent;
+		private bool _performedInitialRead;
 
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		private Vector3 Displacement => default(Vector3);
+		public override PortMetadata PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
 
-		protected float Percent => 0f;
-
-		private void Awake()
+		private new void Awake()
 		{
 		}
 
-		protected virtual void OnEnable()
+		protected override void OnEnable()
 		{
 		}
 
-		protected virtual void Update()
+		void IVoidLogicSensor.ReadSensors(NodeState nodeState)
 		{
 		}
 
-		protected override float CalculateValue()
-		{
-			return 0f;
-		}
-
-		public override void AppendNodeInfo(StringBuilder sb)
+		public override void Calculate(NodeState nodeState)
 		{
 		}
 
-		public override IReadOnlyList<InputDescription> DescribeInputs()
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
 		{
-			return null;
+		}
+
+		public ButtonNode()
+			: base()
+		{
 		}
 	}
 }

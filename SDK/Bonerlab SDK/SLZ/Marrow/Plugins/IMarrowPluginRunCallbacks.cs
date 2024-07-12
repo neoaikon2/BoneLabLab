@@ -1,9 +1,17 @@
+using Cysharp.Threading.Tasks;
+
 namespace SLZ.Marrow.Plugins
 {
 	public interface IMarrowPluginRunCallbacks : IMarrowPlugin
 	{
-		void OnMarrowPluginStart();
+		UniTask OnMarrowPluginStart()
+		{
+			return default(UniTask);
+		}
 
-		void OnMarrowPluginStop();
+		UniTask OnMarrowPluginStop()
+		{
+			return default(UniTask);
+		}
 	}
 }

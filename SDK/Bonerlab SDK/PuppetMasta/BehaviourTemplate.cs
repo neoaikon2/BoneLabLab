@@ -1,3 +1,4 @@
+using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
 
 namespace PuppetMasta
@@ -42,6 +43,11 @@ namespace PuppetMasta
 		}
 
 		protected override void OnMuscleCollisionBehaviour(MuscleCollision m)
+		{
+		}
+
+		public BehaviourTemplate()
+			: base()
 		{
 		}
 	}

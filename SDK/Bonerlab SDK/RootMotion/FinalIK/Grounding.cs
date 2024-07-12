@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -50,9 +51,21 @@ namespace RootMotion.FinalIK
 
 			public float IKOffset { get; private set; }
 
-			public float stepHeightFromGround => 0f;
+			public float stepHeightFromGround
+			{
+				get
+				{
+					return default(float);
+				}
+			}
 
-			private float rootYOffset => 0f;
+			private float rootYOffset
+			{
+				get
+				{
+					return default(float);
+				}
+			}
 
 			public void Initiate(Grounding grounding, Transform transform)
 			{
@@ -95,7 +108,7 @@ namespace RootMotion.FinalIK
 
 			private float GetHeightFromGround(Vector3 hitPoint)
 			{
-				return 0f;
+				return default(float);
 			}
 
 			private void RotateFoot()
@@ -105,6 +118,11 @@ namespace RootMotion.FinalIK
 			private Quaternion GetRotationOffsetTarget()
 			{
 				return default(Quaternion);
+			}
+
+			public Leg()
+				: base()
+			{
 			}
 		}
 
@@ -139,6 +157,11 @@ namespace RootMotion.FinalIK
 			public void Process(float lowestOffset, float highestOffset, bool isGrounded)
 			{
 			}
+
+			public Pelvis()
+				: base()
+			{
+			}
 		}
 
 		[Tooltip("Layers to ground the character to. Make sure to exclude the layer of the character controller.")]
@@ -156,8 +179,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("CapsuleCast radius. Should match approximately with the size of the feet.")]
 		public float footRadius;
 
-		[HideInInspector]
 		[Tooltip("Offset of the foot center along character forward axis.")]
+		[HideInInspector]
 		public float footCenterOffset;
 
 		[Tooltip("Amount of velocity based prediction of the foot positions.")]
@@ -170,8 +193,8 @@ namespace RootMotion.FinalIK
 		[Tooltip("Speed of slerping the feet to their grounded rotations.")]
 		public float footRotationSpeed;
 
-		[Range(0f, 90f)]
 		[Tooltip("Max Foot Rotation Angle. Max angular offset from the foot's rotation.")]
+		[Range(0f, 90f)]
 		public float maxFootRotationAngle;
 
 		[Tooltip("If true, solver will rotate with the character root so the character can be grounded for example to spherical planets. For performance reasons leave this off unless needed.")]
@@ -211,20 +234,38 @@ namespace RootMotion.FinalIK
 
 		public RaycastHit rootHit { get; private set; }
 
-		public bool rootGrounded => false;
+		public bool rootGrounded
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public Vector3 up => default(Vector3);
+		public Vector3 up
+		{
+			get
+			{
+				return default(Vector3);
+			}
+		}
 
-		private bool useRootRotation => false;
+		private bool useRootRotation
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
 		public RaycastHit GetRootHit(float maxDistanceMlp = 10f)
 		{
 			return default(RaycastHit);
 		}
 
-		public bool IsValid(ref string errorMessage)
+		public bool IsValid(string errorMessage)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Initiate(Transform root, Transform[] feet)
@@ -250,7 +291,7 @@ namespace RootMotion.FinalIK
 
 		public float GetVerticalOffset(Vector3 p1, Vector3 p2)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public Vector3 Flatten(Vector3 v)
@@ -261,6 +302,11 @@ namespace RootMotion.FinalIK
 		public Vector3 GetFootCenterOffset()
 		{
 			return default(Vector3);
+		}
+
+		public Grounding()
+			: base()
+		{
 		}
 	}
 }

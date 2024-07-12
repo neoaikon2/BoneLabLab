@@ -3,64 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Marrow.Utilities;
+using SLZ.Combat;
+using SLZ.Marrow.Combat;
 using SLZ.SFX;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace SLZ.Interaction
 {
 	public class PowerPuncher : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003CPopAnim_003Ed__25
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public PowerPuncher _003C_003E4__this;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CPopAnim_003Ed__25(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		private static ComponentCache<PowerPuncher> _cache;
-
 		public GravGunSFX sfx;
 
 		public Grip triggerGrip;
@@ -91,7 +43,12 @@ namespace SLZ.Interaction
 
 		private float _cooldownStartTime;
 
-		public static ComponentCache<PowerPuncher> Cache => null;
+		[SerializeField]
+		private CollisionCollector _collisionCollector;
+
+		private InteractableHost _host;
+
+		private bool _fixedRan;
 
 		private void Awake()
 		{
@@ -121,13 +78,25 @@ namespace SLZ.Interaction
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CPopAnim_003Ed__25))]
 		private IEnumerator PopAnim()
 		{
 			return null;
 		}
 
-		public void OnCollisionEnter(Collision collision)
+		private void FixedUpdate()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		public void OnSignificantCollisionEnter(CollisionCollector.RelevantCollision collision)
+		{
+		}
+
+		public PowerPuncher()
+			: base()
 		{
 		}
 	}

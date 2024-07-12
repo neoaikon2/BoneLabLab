@@ -26,5 +26,10 @@ namespace SLZ.Bonelab
 		public void Break()
 		{
 		}
+
+		public Plunger()
+			: base()
+		{
+		}
 	}
 }

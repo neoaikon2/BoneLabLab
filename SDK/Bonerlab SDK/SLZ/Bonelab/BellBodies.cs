@@ -7,5 +7,10 @@ namespace SLZ.Bonelab
 		public Quaternion[] localBodyRotations;
 
 		public Vector3[] localBodyPositions;
+
+		public BellBodies()
+			: base()
+		{
+		}
 	}
 }

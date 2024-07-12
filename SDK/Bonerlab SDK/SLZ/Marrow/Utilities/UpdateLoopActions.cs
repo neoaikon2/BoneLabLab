@@ -2,13 +2,14 @@ namespace SLZ.Marrow.Utilities
 {
 	public enum UpdateLoopActions
 	{
-		StartFrame = 0,
-		PreNewInputUpdate = 1,
-		PostNewInputUpdate = 2,
-		EarlyUpdate = 3,
-		PreFixedUpdate = 4,
-		PostFixedUpdate = 5,
-		Update = 6,
-		EndFrame = 7
+		PostTimeUpdate = 0,
+		StartFrame = 1,
+		PreNewInputUpdate = 2,
+		PostNewInputUpdate = 3,
+		EarlyUpdate = 4,
+		PreFixedUpdate = 5,
+		PostFixedUpdate = 6,
+		Update = 7,
+		EndFrame = 8
 	}
 }

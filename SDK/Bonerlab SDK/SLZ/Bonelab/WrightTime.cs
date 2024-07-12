@@ -14,5 +14,10 @@ namespace SLZ.Bonelab
 		private void FixedUpdate()
 		{
 		}
+
+		public WrightTime()
+			: base()
+		{
+		}
 	}
 }

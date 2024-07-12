@@ -11,5 +11,10 @@ namespace SLZ.Bonelab
 		public void CONFIRM()
 		{
 		}
+
+		public HubModule_AvatarSelect()
+			: base()
+		{
+		}
 	}
 }

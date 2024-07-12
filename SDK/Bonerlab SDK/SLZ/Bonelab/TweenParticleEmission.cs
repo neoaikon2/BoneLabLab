@@ -28,6 +28,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		public void SetEmissionOverride(float emissionOverride)
+		{
+		}
+
 		private void SetEmission(float currentEmissions, float ratio)
 		{
 		}
@@ -37,6 +41,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void EnableSystem()
+		{
+		}
+
+		public TweenParticleEmission()
+			: base()
 		{
 		}
 	}

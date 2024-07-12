@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.AI;
-using SLZ.Combat;
 using SLZ.Interaction;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Audio;
+using SLZ.Marrow.Combat;
 using SLZ.Marrow.Data;
+using SLZ.VFX;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
@@ -22,234 +23,6 @@ namespace SLZ.Bonelab
 			CHARGING = 0,
 			DRAINING = 1,
 			NONE = 2
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoExploder_003Ed__76
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public NPC_Objective _003C_003E4__this;
-
-			private float _003CstartTime_003E5__2;
-
-			private float _003Cendtime_003E5__3;
-
-			private float _003CexploderLerp_003E5__4;
-
-			private Vector3 _003CendScale_003E5__5;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoExploder_003Ed__76(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoFadePumpEmission_003Ed__81
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public NPC_Objective _003C_003E4__this;
-
-			private float _003Cstart_003E5__2;
-
-			private float _003Cend_003E5__3;
-
-			private float _003CfadeLerp_003E5__4;
-
-			private float _003CstartIntensity_003E5__5;
-
-			private float _003CstartPitch_003E5__6;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoFadePumpEmission_003Ed__81(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoFadeEmission_003Ed__85
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public NPC_Objective _003C_003E4__this;
-
-			private float _003Cstart_003E5__2;
-
-			private float _003Cend_003E5__3;
-
-			private float _003CfadeLerp_003E5__4;
-
-			private float _003CstartIntensity_003E5__5;
-
-			private float _003CstartScale_003E5__6;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoFadeEmission_003Ed__85(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CCoLaser_003Ed__87
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public NPC_Objective _003C_003E4__this;
-
-			private float _003Cstart_003E5__2;
-
-			private float _003Cend_003E5__3;
-
-			private float _003ClaserLerp_003E5__4;
-
-			private Vector3 _003CcurrScale_003E5__5;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoLaser_003Ed__87(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
 		}
 
 		public TowerMode towerMode;
@@ -306,6 +79,10 @@ namespace SLZ.Bonelab
 		[Header("Events")]
 		public UnityEvent ObjectiveModeStart;
 
+		public UnityEvent OnDamageRec;
+
+		public UnityEvent OnFullCharge;
+
 		[Header("Key")]
 		[SerializeField]
 		private bool isKeyRequired;
@@ -313,7 +90,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private bool isKeyed;
 
-		public KeyReciever keyReciever;
+		public KeyReceiver keyReceiver;
 
 		[SerializeField]
 		private Key batteryKey;
@@ -323,15 +100,19 @@ namespace SLZ.Bonelab
 
 		public int tankIndex;
 
-		[SerializeField]
 		[Header("Audio")]
-		private AudioSource loopingASource;
+		private ManagedAudioPlayer loopingASource;
+
+		private IEnumerator loopingACoroutine;
+
+		private bool _fadeActive;
+
+		private bool loopingACanPlay;
+
+		public float loopingAVolume;
 
 		[SerializeField]
-		private AudioMixerGroup audioGroup;
-
-		[SerializeField]
-		private AudioClip enableClip;
+		private AudioClip loopingAClip;
 
 		[SerializeField]
 		private AudioClip explodeClip;
@@ -359,10 +140,19 @@ namespace SLZ.Bonelab
 		private Spawnable blasterLightningNeg;
 
 		[SerializeField]
-		private LineRenderer lineRend;
+		private Spawnable fizzler;
+
+		public MeshFilter[] fizzlerMeshFilters;
+
+		public MeshRenderer[] fizzlerMeshRenderer;
 
 		[SerializeField]
+		private LineRenderer lineRend;
+
+		public DrawLine2Points drawPoints;
+
 		[Header("UI")]
+		[SerializeField]
 		private TMP_Text energyText;
 
 		[SerializeField]
@@ -392,9 +182,6 @@ namespace SLZ.Bonelab
 		private float maxLaserScale;
 
 		[SerializeField]
-		private GameObject magmaObj;
-
-		[SerializeField]
 		private float laserScaleTime;
 
 		private float currIntensity;
@@ -402,8 +189,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private LightningStriker striker;
 
-		[SerializeField]
 		[Header("ContainerYard")]
+		[SerializeField]
 		private GameObject puddleScalerObj;
 
 		private Vector3 startPuddleScale;
@@ -419,6 +206,8 @@ namespace SLZ.Bonelab
 		private float explosionRadius;
 
 		private float expandDuration;
+
+		public TweenParticleEmission particleHealth;
 
 		public void OnEnable()
 		{
@@ -436,7 +225,17 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void UpdateDamage(float damage)
+		[ContextMenu("TestAttack10")]
+		public void TestAttack10()
+		{
+		}
+
+		[ContextMenu("TestAttack100")]
+		public void TestAttack100()
+		{
+		}
+
+		private void UpdateDamage(Attack attack)
 		{
 		}
 
@@ -456,6 +255,11 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		private float GetVolumeSurface(Vector3 size)
+		{
+			return default(float);
+		}
+
 		public void KeyRecieved(Key key)
 		{
 		}
@@ -473,7 +277,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoExploder_003Ed__76))]
 		private IEnumerator CoExploder()
 		{
 			return null;
@@ -499,8 +302,16 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoFadePumpEmission_003Ed__81))]
 		private IEnumerator CoFadePumpEmission()
+		{
+			return null;
+		}
+
+		public void EnterAudioArea(bool enter = true)
+		{
+		}
+
+		private IEnumerator Fade(float fadeTarget, float fadeTime)
 		{
 			return null;
 		}
@@ -517,7 +328,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoFadeEmission_003Ed__85))]
 		private IEnumerator CoFadeEmission()
 		{
 			return null;
@@ -527,10 +337,14 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoLaser_003Ed__87))]
 		private IEnumerator CoLaser()
 		{
 			return null;
+		}
+
+		public NPC_Objective()
+			: base()
+		{
 		}
 	}
 }

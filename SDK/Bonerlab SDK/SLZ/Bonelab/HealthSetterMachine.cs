@@ -56,5 +56,10 @@ namespace SLZ.Bonelab
 		public void DISPLAY_HEALTHMACHINE()
 		{
 		}
+
+		public HealthSetterMachine()
+			: base()
+		{
+		}
 	}
 }

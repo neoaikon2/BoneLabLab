@@ -6,7 +6,12 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		protected override void Start()
+		protected new void Start()
+		{
+		}
+
+		public Linear_GameController()
+			: base()
 		{
 		}
 	}

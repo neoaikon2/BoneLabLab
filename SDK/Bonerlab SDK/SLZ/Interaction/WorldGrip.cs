@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -21,6 +22,11 @@ namespace SLZ.Interaction
 			public Collider[] targetColliders;
 
 			public int targetColliderCount;
+
+			public HandToGenericGripState()
+				: base()
+			{
+			}
 		}
 
 		private Dictionary<Hand, HandToGenericGripState> genericHandStates;
@@ -35,9 +41,9 @@ namespace SLZ.Interaction
 		{
 		}
 
-		public override float ValidateGripScore(Hand hand, SimpleTransform handTransform)
+		public override ValueTuple<float, float, Vector3, Vector3> ValidateGripScore(Hand hand, SimpleTransform handTransform)
 		{
-			return 0f;
+			return default(ValueTuple<float, float, Vector3, Vector3>);
 		}
 
 		public override void OnAttachedToHand(Hand hand)
@@ -57,6 +63,11 @@ namespace SLZ.Interaction
 		}
 
 		protected override void SetupConfiguration(HandJointConfiguration config)
+		{
+		}
+
+		public WorldGrip()
+			: base()
 		{
 		}
 	}

@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -11,6 +12,10 @@ namespace SLZ.Rig
 
 		public Transform right;
 
+		public Transform vrRoot;
+
+		private bool _zeroTrack;
+
 		private void Awake()
 		{
 		}
@@ -20,6 +25,11 @@ namespace SLZ.Rig
 		}
 
 		private void OnBeginCameraRendering(ScriptableRenderContext ctx, Camera camera)
+		{
+		}
+
+		public BasicTrackingRig()
+			: base()
 		{
 		}
 	}

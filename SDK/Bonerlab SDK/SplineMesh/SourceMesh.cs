@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace SplineMesh
@@ -19,38 +20,65 @@ namespace SplineMesh
 
 		private float length;
 
-		internal Mesh Mesh { get; }
+		internal Mesh Mesh
+		{			
+			get;
+		}
 
-		internal List<MeshVertex> Vertices => null;
+		internal List<MeshVertex> Vertices
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		internal int[] Triangles => null;
+		internal int[] Triangles
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		internal float MinX => 0f;
+		internal float MinX
+		{
+			get
+			{
+				return default(float);
+			}
+		}
 
-		internal float Length => 0f;
-		
+		internal float Length
+		{
+			get
+			{
+				return default(float);
+			}
+		}
+
 		private SourceMesh(Mesh mesh)
 		{
-			translation = Vector3.zero;
-			rotation = Quaternion.identity;
-			scale = Vector3.one;
-			vertices = new List<MeshVertex>();
-			triangles = new int[0];
-			minX = 0;
-			length = 0;
-			Mesh = mesh;
+			this.Mesh = default(Mesh);
+			this.length = default(float);
+			this.minX = default(float);
+			this.triangles = default(int[]);
+			this.vertices = default(List<MeshVertex>);
+			this.scale = default(Vector3);
+			this.rotation = default(Quaternion);
+			this.translation = default(Vector3);
 		}
 
 		private SourceMesh(SourceMesh other)
 		{
-			translation = Vector3.zero;
-			rotation = Quaternion.identity;
-			scale = Vector3.one;
-			vertices = new List<MeshVertex>();
-			triangles = new int[0];
-			minX = 0;
-			length = 0;
-			Mesh = other.Mesh;	
+			this.Mesh = default(Mesh);
+			this.length = default(float);
+			this.minX = default(float);
+			this.triangles = default(int[]);
+			this.vertices = default(List<MeshVertex>);
+			this.scale = default(Vector3);
+			this.rotation = default(Quaternion);
+			this.translation = default(Vector3);
 		}
 
 		public static SourceMesh Build(Mesh mesh)
@@ -89,22 +117,22 @@ namespace SplineMesh
 
 		public override bool Equals(object obj)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override int GetHashCode()
 		{
-			return 0;
+			return default(int);
 		}
 
 		public static bool operator ==(SourceMesh sm1, SourceMesh sm2)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static bool operator !=(SourceMesh sm1, SourceMesh sm2)
 		{
-			return false;
+			return default(bool);
 		}
 	}
 }

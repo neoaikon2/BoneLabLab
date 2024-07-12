@@ -1,14 +1,11 @@
 using System.Collections.Generic;
 using SLZ.Marrow.Interaction;
-using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Interaction
 {
 	public class InventoryHand : OverlapTrigger
 	{
-		private static ComponentCache<InventoryHand> _cache;
-
 		private readonly HashSet<InventoryHandReceiver> _receivers;
 
 		[SerializeField]
@@ -32,21 +29,31 @@ namespace SLZ.Interaction
 
 		private float _smearDuration;
 
-		public new static ComponentCache<InventoryHand> Cache => null;
+		public bool HasAttachedHost
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public bool HasAttachedHost => false;
+		public IGrippable Host
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IGrippable Host => null;
-
-		protected override void Awake()
+		private void Awake()
 		{
 		}
 
-		protected override void OnDestroy()
+		private void OnDestroy()
 		{
 		}
 
-		protected override void Reset()
+		private void Reset()
 		{
 		}
 
@@ -71,6 +78,11 @@ namespace SLZ.Interaction
 		}
 
 		private void MarrowUpdate()
+		{
+		}
+
+		public InventoryHand()
+			: base()
 		{
 		}
 	}

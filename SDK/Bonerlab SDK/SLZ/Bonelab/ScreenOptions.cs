@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -34,59 +35,59 @@ namespace SLZ.Bonelab
 
 			public CallbackFloat callbackFloat;
 
-			public GUIItem(GUIType t, float v, float st, float sp, CallbackFloat c = null)
+			public GUIItem(GUIType t, float v, float st, float sp, CallbackFloat c = default(CallbackFloat))
 			{
-				type = t;
-				label = "";
-				value = v;
-				start = st;
-				stop = sp;
-				callbackBool = null;
-				callbackFloat = c;
+				this.callbackFloat = default(CallbackFloat);
+				this.callbackBool = default(CallbackBool);
+				this.stop = default(float);
+				this.start = default(float);
+				this.value = default(float);
+				this.label = default(string);
+				this.type = default(GUIType);
 			}
 
-			public GUIItem(GUIType t, string l, float v, float st, float sp, CallbackFloat c = null)
+			public GUIItem(GUIType t, string l, float v, float st, float sp, CallbackFloat c = default(CallbackFloat))
 			{
-				type = t;
-				label = l;
-				value = v;
-				start = st;
-				stop = sp;
-				callbackBool = null;
-				callbackFloat = c;
+				this.callbackFloat = default(CallbackFloat);
+				this.callbackBool = default(CallbackBool);
+				this.stop = default(float);
+				this.start = default(float);
+				this.value = default(float);
+				this.label = default(string);
+				this.type = default(GUIType);
 			}
 
 			public GUIItem(GUIType t, string l)
 			{
-				type = t;
-				label = l;
-				value = 0;
-				start = 0;
-				stop = 0;
-				callbackBool = null;
-				callbackFloat = null;
+				this.callbackFloat = default(CallbackFloat);
+				this.callbackBool = default(CallbackBool);
+				this.stop = default(float);
+				this.start = default(float);
+				this.value = default(float);
+				this.label = default(string);
+				this.type = default(GUIType);
 			}
 
-			public GUIItem(GUIType t, string l, CallbackBool c = null)
+			public GUIItem(GUIType t, string l, CallbackBool c = default(CallbackBool))
 			{
-				type = t;
-				label = l;
-				value = 0;
-				start = 0;
-				stop = 0;
-				callbackBool = c;
-				callbackFloat = null;
+				this.callbackFloat = default(CallbackFloat);
+				this.callbackBool = default(CallbackBool);
+				this.stop = default(float);
+				this.start = default(float);
+				this.value = default(float);
+				this.label = default(string);
+				this.type = default(GUIType);
 			}
 
-			public GUIItem(GUIType t, string l, CallbackFloat c = null)
+			public GUIItem(GUIType t, string l, CallbackFloat c = default(CallbackFloat))
 			{
-				type = t;
-				label = l;
-				value = 0;
-				start = 0;
-				stop = 0;
-				callbackBool = null;
-				callbackFloat = c;				
+				this.callbackFloat = default(CallbackFloat);
+				this.callbackBool = default(CallbackBool);
+				this.stop = default(float);
+				this.start = default(float);
+				this.value = default(float);
+				this.label = default(string);
+				this.type = default(GUIType);
 			}
 		}
 
@@ -145,6 +146,11 @@ namespace SLZ.Bonelab
 		}
 
 		protected void GUISlider(string label, float value, float start, float stop, CallbackFloat callback)
+		{
+		}
+
+		public ScreenOptions()
+			: base()
 		{
 		}
 	}

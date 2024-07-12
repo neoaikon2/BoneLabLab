@@ -1,8 +1,7 @@
+using SLZ.Marrow.Audio;
 using SLZ.SFX;
-using SLZ.Utilities;
 using SLZ.VRMK;
 using UnityEngine;
-using UnityEngine.Audio;
 
 namespace SLZ.Vehicle
 {
@@ -52,11 +51,7 @@ namespace SLZ.Vehicle
 
 		private bool _motorRunning;
 
-		private bool _hasSkidAp;
-
-		private AudioPlayer _skidAp;
-
-		public AudioMixerGroup outputMixer;
+		private ManagedAudioPlayer _mapSkid;
 
 		public AudioClip skidPavement;
 
@@ -88,7 +83,8 @@ namespace SLZ.Vehicle
 		{
 		}
 
-		private void StopSkid()
+		public Atv()
+			: base()
 		{
 		}
 	}

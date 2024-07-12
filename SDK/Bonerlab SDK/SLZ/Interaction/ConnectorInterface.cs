@@ -8,17 +8,22 @@ namespace SLZ.Interaction
 	{
 		public virtual bool IsCompatibleWith(ConnectorInterface other)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public virtual float Validate(Connector connectorA, Connector connectorB)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public virtual SimpleTransform Solve(Connector connectorA, Connector connectorB)
 		{
 			return default(SimpleTransform);
+		}
+
+		public ConnectorInterface()
+			: base()
+		{
 		}
 	}
 }

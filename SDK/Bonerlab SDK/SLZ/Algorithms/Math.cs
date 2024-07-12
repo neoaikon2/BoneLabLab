@@ -12,7 +12,17 @@ namespace SLZ.Algorithms
 			return default(float);
 		}
 
+		public static float Clipf(this float value, float min, float max)
+		{
+			return default(float);
+		}
+
 		public static float Clamp01f(this float value)
+		{
+			return default(float);
+		}
+
+		public static float Lerpf(float a, float b, float t)
 		{
 			return default(float);
 		}

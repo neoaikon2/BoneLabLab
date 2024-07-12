@@ -31,7 +31,7 @@ namespace SLZ.Bonelab
 
 		public int GetEntryCount()
 		{
-			return 0;
+			return default(int);
 		}
 
 		[ContextMenu("RESET DEFAULTS")]
@@ -52,7 +52,12 @@ namespace SLZ.Bonelab
 		[ContextMenu("TestLookup")]
 		public float TestLookup()
 		{
-			return 0f;
+			return default(float);
+		}
+
+		public AllianceTable()
+			: base()
+		{
 		}
 	}
 }

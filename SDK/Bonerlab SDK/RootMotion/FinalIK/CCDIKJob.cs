@@ -91,7 +91,7 @@ namespace RootMotion.FinalIK
 
 		private float GetPositionOffset(AnimationStream s, Vector3 localDirection)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		private Vector3 GetSingularityOffset(AnimationStream s, Vector3 IKPosition, bool useRotationLimits)
@@ -101,7 +101,7 @@ namespace RootMotion.FinalIK
 
 		private bool SingularityDetected(AnimationStream s, Vector3 IKPosition)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void Dispose()

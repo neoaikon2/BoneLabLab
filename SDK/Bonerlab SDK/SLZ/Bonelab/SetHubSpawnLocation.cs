@@ -1,4 +1,4 @@
-using SLZ.SaveData;
+using SLZ.Bonelab.SaveData;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -7,13 +7,24 @@ namespace SLZ.Bonelab
 	{
 		public int location;
 
-		private static PlayerProgression p => null;
+		private static PlayerProgression p
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public void SetSpawnLocation()
 		{
 		}
 
 		public void UnlockModKey()
+		{
+		}
+
+		public SetHubSpawnLocation()
+			: base()
 		{
 		}
 	}

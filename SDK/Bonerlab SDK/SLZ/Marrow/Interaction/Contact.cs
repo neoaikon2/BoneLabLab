@@ -22,6 +22,8 @@ namespace SLZ.Marrow.Interaction
 
 		private readonly quaternion _worldToJointSpace;
 
+		private Quaternion _disabledRotation;
+
 		public SimpleTransform Transform
 		{
 			get
@@ -32,6 +34,14 @@ namespace SLZ.Marrow.Interaction
 
 		public Contact(Rigidbody hostBody, Vector3 anchorPosition, Quaternion anchorRotation, ConfigurableJointMotion twistMotion = ConfigurableJointMotion.Free, float twistMinLimit = 0f, float twistMaxLimit = 0f, ConfigurableJointMotion swingMotion = ConfigurableJointMotion.Free, float swingLimit = 0f, SplineJointMotion linearYZMotion = SplineJointMotion.Locked, float limit = 0f, float bounciness = 0f, float contactDistance = 0f)
 			: base()
+		{
+		}
+
+		public void Disable()
+		{
+		}
+
+		public void Enable()
 		{
 		}
 

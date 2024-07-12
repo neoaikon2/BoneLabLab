@@ -33,5 +33,10 @@ namespace RootMotion.FinalIK
 		protected void StoreDefaultState()
 		{
 		}
+
+		public HandPoser()
+			: base()
+		{
+		}
 	}
 }

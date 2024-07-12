@@ -1,16 +1,19 @@
-using System.Collections.Generic;
-using System.Text;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.Algorithms.Unity;
 using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
+	[Support(SupportFlags.Supported, null)]
+	[AddComponentMenu("VoidLogic/Sinks/VoidLogic Material Switcher")]
 	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/MaterialSwitcher")]
-	[AddComponentMenu("VoidLogic/Endpoints/VoidLogic Material Switcher")]
-	public class MaterialSwitcher : MonoBehaviour, InputDescribable
+	public class MaterialSwitcher : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
 	{
 		[SerializeField]
+		[Interface(typeof(IVoidLogicSource), false)]
 		[Tooltip("Previous node in the chain")]
-		private BaseNode _previousNode;
+		private MonoBehaviour _previousNode;
 
 		private float _priorValue;
 
@@ -34,21 +37,23 @@ namespace SLZ.Marrow.VoidLogic
 
 		private bool _isHigh;
 
-		private static readonly IReadOnlyList<InputDescription> _inputs;
+		private static readonly PortMetadata _portMetadata;
 
-		public BaseNode PreviousNode
+		public VoidLogicSubgraph Subgraph { get; set; }
+
+		public int InputCount
 		{
 			get
 			{
-				return null;
+				return default(int);
 			}
 		}
 
-		public float Value
+		public PortMetadata PortMetadata
 		{
 			get
 			{
-				return default(float);
+				return default(PortMetadata);
 			}
 		}
 
@@ -56,11 +61,23 @@ namespace SLZ.Marrow.VoidLogic
 		{
 		}
 
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
 		private void Start()
 		{
 		}
 
-		private void Update()
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
 		{
 		}
 
@@ -68,13 +85,14 @@ namespace SLZ.Marrow.VoidLogic
 		{
 		}
 
-		public void AppendEndpointInfo(StringBuilder sb)
+		public bool TryGetInputAtIndex(uint idx, [Out] IVoidLogicSource input)
 		{
+			return default(bool);
 		}
 
-		IReadOnlyList<InputDescription> InputDescribable.DescribeInputs()
+		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
 		{
-			return null;
+			return default(bool);
 		}
 
 		public MaterialSwitcher()

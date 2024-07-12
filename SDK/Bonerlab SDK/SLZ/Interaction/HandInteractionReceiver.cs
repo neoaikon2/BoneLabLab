@@ -39,7 +39,7 @@ namespace SLZ.Interaction
 
 		protected virtual bool IsValid(IGrippable host)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public override void OnHandHoverUpdate(Hand hand)
@@ -83,6 +83,11 @@ namespace SLZ.Interaction
 		}
 
 		protected virtual void Update()
+		{
+		}
+
+		public HandInteractionReceiver()
+			: base()
 		{
 		}
 	}

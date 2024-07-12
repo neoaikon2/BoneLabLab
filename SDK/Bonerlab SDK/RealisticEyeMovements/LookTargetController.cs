@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -17,12 +18,12 @@ namespace RealisticEyeMovements
 		[Tooltip("Drag objects here for the actor to look at. If empty, actor will look in random directions.")]
 		public Transform[] pointsOfInterest;
 
-		[Tooltip("Ratio of how often to look at player vs elsewhere. 0: never, 1: always")]
 		[Range(0f, 1f)]
+		[Tooltip("Ratio of how often to look at player vs elsewhere. 0: never, 1: always")]
 		public float lookAtPlayerRatio;
 
-		[Tooltip("How likely the actor is to look back at the player when player stares at actor.")]
 		[Range(0f, 1f)]
+		[Tooltip("How likely the actor is to look back at the player when player stares at actor.")]
 		public float stareBackFactor;
 
 		[Tooltip("If player is closer than this, notice him")]
@@ -146,12 +147,12 @@ namespace RealisticEyeMovements
 
 		public bool IsLookingAtPlayer()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public bool IsPlayerInView()
 		{
-			return false;
+			return default(bool);
 		}
 
 		public void LookAtPlayerSimple()
@@ -215,6 +216,11 @@ namespace RealisticEyeMovements
 		}
 
 		private void VeryLateUpdate()
+		{
+		}
+
+		public LookTargetController()
+			: base()
 		{
 		}
 	}

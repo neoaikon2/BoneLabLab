@@ -1,4 +1,5 @@
-using SLZ.SaveData;
+using System.Runtime.InteropServices;
+using SLZ.Bonelab.SaveData;
 
 namespace SLZ.Bonelab
 {
@@ -16,29 +17,27 @@ namespace SLZ.Bonelab
 
 		public static bool GetHubFlag(this PlayerProgression progression, string flag)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public static int GetHubInt(this PlayerProgression progression, string flag)
 		{
-			return 0;
+			return default(int);
 		}
 
 		public static bool TrySetHubFlag(this PlayerProgression progression, string flag, bool value)
 		{
-			return false;
+			return default(bool);
 		}
 
-		public static bool TryGetHubFlag(this PlayerProgression progression, string flag, out bool value)
+		public static bool TryGetHubFlag(this PlayerProgression progression, string flag, [Out] bool value)
 		{
-			value = default(bool);
-			return false;
+			return default(bool);
 		}
 
-		public static bool TryGetHubInt(this PlayerProgression progression, string flag, out int value)
+		public static bool TryGetHubInt(this PlayerProgression progression, string flag, [Out] int value)
 		{
-			value = default(int);
-			return false;
+			return default(bool);
 		}
 	}
 }

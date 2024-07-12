@@ -20,6 +20,11 @@ namespace RealisticEyeMovements
 			public bool isLookUpSet;
 
 			public bool isLookDownSet;
+
+			public EyeRotationLimiterForExport()
+				: base()
+			{
+			}
 		}
 
 		[SerializeField]
@@ -46,12 +51,12 @@ namespace RealisticEyeMovements
 
 		public bool CanImport(EyeRotationLimiterForExport import, Transform startXform)
 		{
-			return false;
+			return default(bool);
 		}
 
 		public float ClampAngle(float angle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public EyeRotationLimiterForExport GetExport(Transform startXform)
@@ -61,12 +66,12 @@ namespace RealisticEyeMovements
 
 		public float GetEyeUp01(float angle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public float GetEyeDown01(float angle)
 		{
-			return 0f;
+			return default(float);
 		}
 
 		public void Import(EyeRotationLimiterForExport import, Transform startXform)
@@ -98,6 +103,11 @@ namespace RealisticEyeMovements
 		}
 
 		private void UpdateMaxAngles()
+		{
+		}
+
+		public EyeRotationLimiter()
+			: base()
 		{
 		}
 	}

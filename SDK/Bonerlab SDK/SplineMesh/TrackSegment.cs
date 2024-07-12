@@ -7,5 +7,10 @@ namespace SplineMesh
 	public class TrackSegment
 	{
 		public List<TransformedMesh> transformedMeshes;
+
+		public TrackSegment()
+			: base()
+		{
+		}
 	}
 }

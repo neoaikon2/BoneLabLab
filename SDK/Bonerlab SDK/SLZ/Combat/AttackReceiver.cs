@@ -1,3 +1,4 @@
+using SLZ.Marrow.Combat;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
@@ -9,6 +10,11 @@ namespace SLZ.Combat
 		public UnityEvent OnAttackReceived;
 
 		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public AttackReceiver()
+			: base()
 		{
 		}
 	}

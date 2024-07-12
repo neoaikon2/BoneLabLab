@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -44,28 +45,11 @@ namespace RootMotion.FinalIK
 
 		public bool initiated { get; private set; }
 
-		public bool IsValid(IKSolverFullBody solver, Warning.Logger logger)
-		{
-			return false;
-		}
-
-		public IKConstraintBend()
-		{
-		}
-
-		public IKConstraintBend(Transform bone1, Transform bone2, Transform bone3)
-		{
-		}
-
 		public void SetBones(Transform bone1, Transform bone2, Transform bone3)
 		{
 		}
 
 		public void Initiate(IKSolverFullBody solver)
-		{
-		}
-
-		public void SetLimbOrientation(Vector3 upper, Vector3 lower, Vector3 last)
 		{
 		}
 
@@ -86,6 +70,11 @@ namespace RootMotion.FinalIK
 		private Vector3 OrthoToBone1(IKSolverFullBody solver, Vector3 tangent)
 		{
 			return default(Vector3);
+		}
+
+		public IKConstraintBend()
+			: base()
+		{
 		}
 	}
 }

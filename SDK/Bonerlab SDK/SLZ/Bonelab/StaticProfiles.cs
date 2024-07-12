@@ -51,6 +51,12 @@ namespace SLZ.Bonelab
 
 		public Spawnable crownSpawnable;
 
+		public Spawnable bulletBlastSpawnable;
+
+		public Spawnable animeCollectSpawnble;
+
+		public Spawnable healthSpawnable;
+
 		[Header("Loot Tables")]
 		public LootTableData lightAmmoLootTable;
 
@@ -95,9 +101,20 @@ namespace SLZ.Bonelab
 
 		public Spawnable seekerSpawnable;
 
-		public static StaticProfiles instance => null;
+		public static StaticProfiles instance
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public void CreateStatProfile(StaticProfiles profile)
+		{
+		}
+
+		public StaticProfiles()
+			: base()
 		{
 		}
 	}

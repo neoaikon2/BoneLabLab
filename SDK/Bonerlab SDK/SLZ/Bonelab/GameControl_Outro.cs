@@ -1,15 +1,13 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Marrow.SceneStreaming;
+using SLZ.Marrow.AI;
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
-using SLZ.SFX;
-using SLZ.VFX;
+using SLZ.Marrow.Zones;
 using TMPro;
 using UnityEngine;
 
@@ -17,165 +15,27 @@ namespace SLZ.Bonelab
 {
 	public class GameControl_Outro : BonelabInternalGameControl
 	{
-		[CompilerGenerated]
-		private sealed class _003C_003Ec__DisplayClass40_0
-		{
-			public bool isDoneLoading;
+		public Encounter[] Encounters;
 
-			internal void _003CCycleWindmillAirlock_003Eb__0()
-			{
-			}
-		}
+		[Header("Chunks")]
+		public SceneChunk Town;
 
-		[CompilerGenerated]
-		private sealed class _003CCycleWindmillAirlock_003Ed__40
-		{
-			private int _003C_003E1__state;
+		public SceneChunk Gap;
 
-			private object _003C_003E2__current;
+		public SceneChunk Windmill;
 
-			public GameControl_Outro _003C_003E4__this;
+		public SceneChunk Tube;
 
-			private _003C_003Ec__DisplayClass40_0 _003C_003E8__1;
+		public SceneChunk TaxiStart;
 
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+		public SceneChunk VoidFloor;
 
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+		public SceneChunk EmptyFloor;
 
-			[DebuggerHidden]
-			public _003CCycleWindmillAirlock_003Ed__40(int _003C_003E1__state)
-			{
-			}
+		public SceneChunk VoidG114;
 
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[CompilerGenerated]
-		private sealed class _003CChangeChunk_003Ed__50
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public float delay;
-
-			public Chunk targetChunk;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CChangeChunk_003Ed__50(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-		}
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__58
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
-
-			public GameControl_Outro _003C_003E4__this;
-
-			private UniTask.Awaiter _003C_003Eu__1;
-
-			private void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
-		public GameObject[] disableTownItemsAirlock;
-
-		public GameObject[] disableTownItemsWindmill;
-
-		public Blip femMBlip;
-
-		public Chunk TownfightChunk;
-
-		public Chunk WindMillOpChunk;
-
-		public Chunk SkyTubeChunk;
-
-		public Chunk TaxiStartChunk;
-
-		public Chunk VoidFloorChunk;
-
-		public Chunk VoidG114Chunk;
-
-		public Chunk TaxiStartConfigChunk;
-
-		public Chunk VoidFloorConfigChunk;
-
-		public Chunk VoidG114ConfigChunk;
-
-		public GameObject TaxiSequence;
-
-		public GameObject WindmillGate;
+		[Space(10f)]
+		public MarrowEntity TaxiSequence;
 
 		public ArmFinale ArmFinale;
 
@@ -183,14 +43,24 @@ namespace SLZ.Bonelab
 
 		public GameObject windmill;
 
+		public MarrowEntity holeStopper;
+
+		[Tooltip("Used Internally, do not set in inspector")]
+		public bool RightDoorIsClosed;
+
+		[Tooltip("Used Internally, do not set in inspector")]
+		public bool LeftDoorIsClosed;
+
 		private IEnumerator WindmillAirlock;
 
 		private Coroutine changeChunk;
 
 		[Header("ArmCinematic")]
-		public GameObject[] ceilingtiles;
+		public MarrowEntity[] ceilingtiles;
 
-		public GameObject JimmyArm;
+		public GameObject[] ceilingStaticObjects;
+
+		public MarrowEntity JimmyArm;
 
 		public float armDelay;
 
@@ -222,26 +92,14 @@ namespace SLZ.Bonelab
 
 		public SpawnableCrateReference blueApollo;
 
+		public HomeCleanupVolume homeCleanupVolume;
+
 		public override void Awake()
 		{
 		}
 
 		public override void Start()
 		{
-		}
-
-		public void DespawnTownItemsAirlock()
-		{
-		}
-
-		public void DespawnItemsWindmill()
-		{
-		}
-
-		[IteratorStateMachine(typeof(_003CCycleWindmillAirlock_003Ed__40))]
-		private IEnumerator CycleWindmillAirlock()
-		{
-			return null;
 		}
 
 		public void WarmUpJimmyArm()
@@ -268,23 +126,42 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void CompleteGame()
+		public void LeashPlayerAtLevelEnd()
 		{
 		}
 
-		[ContextMenu("SkipToTaxi")]
-		public void SkipToTaxi()
+		public void CompleteGame()
 		{
 		}
 
-		public void SequenceProgress(int progress)
+		public void NonAsyncSequenceProgress(int progress)
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CChangeChunk_003Ed__50))]
-		private IEnumerator ChangeChunk(Chunk targetChunk, float delay = 0f)
+		public UniTaskVoid SequenceProgress(int progress)
 		{
-			return null;
+			return default(UniTaskVoid);
+		}
+
+		private UniTask ChangeChunk(int progress)
+		{
+			return default(UniTask);
+		}
+
+		public void ClosedLeftDoor()
+		{
+		}
+
+		public void ClosedRightDoor()
+		{
+		}
+
+		public void OpenedLeftDoor()
+		{
+		}
+
+		public void OpenedRightDoor()
+		{
 		}
 
 		public void RemoveObjects()
@@ -315,7 +192,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__58))]
 		public UniTask LoadAvatarFromSaveDataAsync()
 		{
 			return default(UniTask);
@@ -330,6 +206,11 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public GameControl_Outro()
+			: base()
 		{
 		}
 	}

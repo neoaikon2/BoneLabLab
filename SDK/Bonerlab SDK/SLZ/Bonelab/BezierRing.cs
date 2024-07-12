@@ -11,7 +11,13 @@ namespace SLZ.Bonelab
 
 		public int lineSteps;
 
-		public int CurveCount => 0;
+		public int CurveCount
+		{
+			get
+			{
+				return default(int);
+			}
+		}
 
 		private void Awake()
 		{
@@ -41,6 +47,11 @@ namespace SLZ.Bonelab
 		}
 
 		public void UpdateLines()
+		{
+		}
+
+		public BezierRing()
+			: base()
 		{
 		}
 	}

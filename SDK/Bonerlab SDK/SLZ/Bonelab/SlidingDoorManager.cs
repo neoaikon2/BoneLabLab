@@ -22,5 +22,10 @@ namespace SLZ.Bonelab
 		public void CloseAllEnemyDoors()
 		{
 		}
+
+		public SlidingDoorManager()
+			: base()
+		{
+		}
 	}
 }

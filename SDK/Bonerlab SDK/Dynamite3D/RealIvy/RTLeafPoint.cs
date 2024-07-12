@@ -33,10 +33,12 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public RTLeafPoint()
+			: base()
 		{
 		}
 
 		public RTLeafPoint(LeafPoint leafPoint, IvyParameters ivyParameters)
+			: this()
 		{
 		}
 

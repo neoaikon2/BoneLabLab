@@ -1,4 +1,6 @@
 using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 namespace RootMotion.FinalIK
@@ -19,51 +21,111 @@ namespace RootMotion.FinalIK
 
 		private Vector3 offset;
 
-		public IKEffector bodyEffector => null;
+		public IKEffector bodyEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector leftShoulderEffector => null;
+		public IKEffector leftShoulderEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector rightShoulderEffector => null;
+		public IKEffector rightShoulderEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector leftThighEffector => null;
+		public IKEffector leftThighEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector rightThighEffector => null;
+		public IKEffector rightThighEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector leftHandEffector => null;
+		public IKEffector leftHandEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector rightHandEffector => null;
+		public IKEffector rightHandEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector leftFootEffector => null;
+		public IKEffector leftFootEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public IKEffector rightFootEffector => null;
+		public IKEffector rightFootEffector
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public FBIKChain leftArmChain => null;
+		public FBIKChain leftArmChain
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public FBIKChain rightArmChain => null;
+		public FBIKChain rightArmChain
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public FBIKChain leftLegChain => null;
+		public IKMappingLimb leftLegMapping
+		{
+			get
+			{
+				return null;
+			}
+		}
 
-		public FBIKChain rightLegChain => null;
-
-		public IKMappingLimb leftArmMapping => null;
-
-		public IKMappingLimb rightArmMapping => null;
-
-		public IKMappingLimb leftLegMapping => null;
-
-		public IKMappingLimb rightLegMapping => null;
-
-		public IKMappingBone headMapping => null;
+		public IKMappingLimb rightLegMapping
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		public Vector3 pullBodyOffset { get; private set; }
-
-		public void SetChainWeights(FullBodyBipedChain c, float pull, float reach = 0f)
-		{
-		}
-
-		public void SetEffectorWeights(FullBodyBipedEffector effector, float positionWeight, float rotationWeight)
-		{
-		}
 
 		public FBIKChain GetChain(FullBodyBipedChain c)
 		{
@@ -90,46 +152,18 @@ namespace RootMotion.FinalIK
 			return null;
 		}
 
-		public IKMappingLimb GetLimbMapping(FullBodyBipedEffector effector)
+		public override bool IsValid(string message)
 		{
-			return null;
+			return default(bool);
 		}
 
-		public IKMappingSpine GetSpineMapping()
-		{
-			return null;
-		}
-
-		public IKMappingBone GetHeadMapping()
-		{
-			return null;
-		}
-
-		public IKConstraintBend GetBendConstraint(FullBodyBipedChain limb)
-		{
-			return null;
-		}
-
-		public override bool IsValid(ref string message)
-		{
-			return false;
-		}
-
-		public void SetToReferences(BipedReferences references, Transform rootNode = null)
+		public void SetToReferences(BipedReferences references, Transform rootNode = default(Transform))
 		{
 		}
 
 		public static Transform DetectRootNodeBone(BipedReferences references)
 		{
 			return null;
-		}
-
-		public void SetLimbOrientations(BipedLimbOrientations o)
-		{
-		}
-
-		private void SetLimbOrientation(FullBodyBipedChain chain, BipedLimbOrientations.LimbOrientation limbOrientation)
-		{
 		}
 
 		private static Transform GetLeftClavicle(BipedReferences references)
@@ -144,7 +178,7 @@ namespace RootMotion.FinalIK
 
 		private static bool Contains(Transform[] array, Transform transform)
 		{
-			return false;
+			return default(bool);
 		}
 
 		protected override void ReadPose()
@@ -170,6 +204,11 @@ namespace RootMotion.FinalIK
 		}
 
 		protected override void WritePose()
+		{
+		}
+
+		public IKSolverFullBodyBiped()
+			: base()
 		{
 		}
 	}

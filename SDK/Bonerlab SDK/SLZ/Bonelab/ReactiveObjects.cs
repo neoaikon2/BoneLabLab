@@ -30,5 +30,10 @@ namespace SLZ.Bonelab
 		public void IntializeArray()
 		{
 		}
+
+		public ReactiveObjects()
+			: base()
+		{
+		}
 	}
 }

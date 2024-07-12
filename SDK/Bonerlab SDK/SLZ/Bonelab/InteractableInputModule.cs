@@ -1,5 +1,5 @@
+using System.Runtime.InteropServices;
 using SLZ.Interaction;
-using SLZ.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -14,16 +14,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private bool GetInput(Hand hand, out int index)
+		private bool GetInput(Hand hand, [Out] int index)
 		{
-			index = default(int);
-			return false;
+			return default(bool);
 		}
 
-		protected PointerEventData ModifiedGetTouchPointerEventData(Touch input, out bool pressed, out bool released)
+		protected PointerEventData ModifiedGetTouchPointerEventData(Touch input, [Out] bool pressed, [Out] bool released)
 		{
-			pressed = default(bool);
-			released = default(bool);
 			return null;
 		}
 
@@ -40,6 +37,11 @@ namespace SLZ.Bonelab
 		}
 
 		protected void ModifiedHandlePointerExitAndEnter(PointerEventData currentPointerData, GameObject newEnterTarget)
+		{
+		}
+
+		public InteractableInputModule()
+			: base()
 		{
 		}
 	}

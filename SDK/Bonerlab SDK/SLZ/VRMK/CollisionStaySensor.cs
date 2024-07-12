@@ -63,5 +63,10 @@ namespace SLZ.VRMK
 		public void UpdateSensor()
 		{
 		}
+
+		public CollisionStaySensor()
+			: base()
+		{
+		}
 	}
 }

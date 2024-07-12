@@ -36,6 +36,7 @@ namespace Dynamite3D.RealIvy
 		public int branchNumber;
 
 		public RTBranchContainer(BranchContainer branchContainer, IvyParameters ivyParameters, RTIvyContainer rtIvyContainer, GameObject ivyGO, RTMeshData[] leavesMeshesByChosenLeaf)
+			: base()
 		{
 		}
 
@@ -45,6 +46,7 @@ namespace Dynamite3D.RealIvy
 		}
 
 		public RTBranchContainer(int numPoints, int numLeaves)
+			: base()
 		{
 		}
 

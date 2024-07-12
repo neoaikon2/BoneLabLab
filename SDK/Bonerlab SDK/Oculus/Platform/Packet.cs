@@ -24,14 +24,6 @@ namespace Oculus.Platform
 			}
 		}
 
-		public SendPolicy Policy
-		{
-			get
-			{
-				return default(SendPolicy);
-			}
-		}
-
 		public Packet(IntPtr packetHandle)
 			: base()
 		{
