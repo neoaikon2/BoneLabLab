@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="The Scene Chunk dynamic multi-scene streaming system allows level designers to carve a level into several smaller scenes.  Scene Chunks, Zones, Zone Cullers and Zone Chunk Loaders are used to define which scenes will be loaded around the player and will dynamically stream in new parts of the level as the player traverses through it and streams out any scenes that the player can no longer see or reach from their current zone.\n&#10;The Scene Chunk system is aggressive in putting all geometry, entities and assets into a dormant state.  Even the physics state of an object is frozen and stored when an object streams out, ensuring the most minimal resource usage possible.\n&#10;The Level Crate Muti-Scene option is used to define a level that uses Scene Chunks.  Any items that should never be put into a streamed out, dormant state should reside in the &quot;Root Persistent Scene.&quot;  This scene is &lt;i&gt;always loaded&lt;/i&gt;, and should contain items like Scene Chunks, Zones, Zone Items and entities and the Player Marker.  Additionally, gameobjects that would be visible across most, if not all scenes, like the level&apos;s sky or the ambient fog volume and the Directional Light should reside in the Root Persistent Scene.  While the Zones themselves exist in the Persistent Scene, their contents, like geometry, lighting and so on, should be moved to a seperate scene and will be streamed in and out based on the player&apos;s location and the linkages between the player&apos;s current Zone and Scene Chunk.\n&#10;Scene Chunks contain lists to hold the scene(s) that should be streamed in when active.  Zones and their Zone Cullers define the areas that will be managed by the Scene Chunk.  Similarly, zones and Scene Chunks that are not linked to the Zone that the player occupies are streamed out and their contents are held in a frozen state.  Zone Chunk Loaders define what chunks should be loaded whenever the current Zone is active.  This ensures that neighboring scenes get loaded before the player reaches them and prevents the player seeing geometry and entities seeming to pop into existence out of nowhere." name="sceneChunkInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - Scene Chunk" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-top: 5px;">
+            <ui:IMGUIContainer name="imguiValidationContainer" />
+        </ui:VisualElement>
+        <ui:IMGUIContainer name="imguiInspector" />
+        <ui:VisualElement name="fieldsContainer" style="display: none;">
+            <uie:PropertyField name="sceneLayers" binding-path="sceneLayers" label="Scene Layers" tooltip="Lists the Scenes that make up this SceneChunk.\n\nThe Scene Layers usually only holds one scene that makes up the chunk, but multiple Scenes can be listed, if needed." />
+            <uie:PropertyField name="zoneCullers" binding-path="zoneCullers" label="Zone Cullers" class="foldoutindent15" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            <uie:PropertyField name="onChunkLoad" binding-path="onChunkLoad" label="On Chunk Load" class="foldoutindent15" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+            <uie:PropertyField name="onChunkUnload" binding-path="onChunkUnload" label="On Chunk Unload" />
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,39 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/AWSpawnerStyles.uss?fileID=7433441132597879392&amp;guid=61d104e7b9f50b14485cdfaf526f709e&amp;type=3#AWSpawnerStyles" />
+    <ui:VisualElement name="spawnablesSearchContainer" style="flex-direction: row;">
+        <uie:ToolbarSearchField name="spawnablesSearchField" style="width: 160px; flex-direction: row; flex-wrap: nowrap;" />
+        <uie:ToolbarToggle focusable="false" label="Bits" name="spawnableShowBitsToggle" binding-path="spawnableShowBitsToggle" tooltip="Show or hide Destructible Fragments" class="marrowToggleOn" style="width: 30px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 2px; padding-left: 2px;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="awSpawnerParentContainer">
+        <ui:VisualElement name="spawnablesListParentContainer">
+            <ui:VisualElement name="spawnablesListContainer">
+                <ui:ListView focusable="true" name="spawnablesListView" binding-path="spawnablesListView" fixed-item-height="16" show-alternating-row-backgrounds="None" show-foldout-header="false" show-border="true" virtualization-method="DynamicHeight" style="flex-shrink: 0; flex-grow: 1;" />
+            </ui:VisualElement>
+            <ui:ScrollView name="spawnablesGridScrollView" mode="Horizontal" horizontal-scroller-visibility="Hidden" style="flex-shrink: 0; flex-grow: 1; display: none; flex-direction: row; flex-wrap: wrap;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="spawnableLabelContainer" style="flex-direction: row; justify-content: space-between; align-items: center; margin-top: 5px;">
+            <ui:Label text="Label" display-tooltip-when-elided="true" name="dragSpawnableLabel" binding-path="dragSpawnableLabel" />
+            <ui:VisualElement name="spawnableModeButtons" style="flex-direction: row;">
+                <uie:ToolbarToggle focusable="false" label="Prvw" name="spawnableShowPreviewsToggle" binding-path="spawnableShowPreviewsToggle" class="marrowToggleOn" style="width: 40px; padding-bottom: 1px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                <uie:ToolbarToggle focusable="false" label="V/H" name="spawnableVertiHorizModeToggle" binding-path="spawnableVertiHorizModeToggle" style="width: 32px; align-items: flex-start; justify-content: flex-start; padding-bottom: 1px; display: none;" />
+                <uie:ToolbarToggle focusable="false" label="Grid" name="spawnableGridModeToggle" binding-path="spawnableGridModeToggle" class="marrowToggleOn" style="width: 36px; align-items: center; justify-content: flex-start; padding-bottom: 1px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                <uie:ToolbarToggle focusable="false" label="Conf" name="awOverlaySettingsToggle" binding-path="awOverlaySettingsToggle" style="width: 37px; align-items: center; justify-content: flex-start; padding-bottom: 1px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="dragSpawnablePreviewContainer" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-height: initial; justify-content: space-around;">
+            <ui:VisualElement name="dragSpawnableImageContainer" style="min-width: 60px; min-height: 60px; flex-shrink: 0;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="awOverlaySettingsContainer" style="align-items: stretch; justify-content: flex-start;">
+        <ui:Label text="AW Spawner Settings" display-tooltip-when-elided="true" name="awSpawnerSettingsLabel" style="padding-bottom: 10px; -unity-font-style: bold;" />
+        <ui:SliderInt picking-mode="Ignore" label="Image Size" value="100" high-value="150" name="awImageSizeSlider" binding-path="awImageSizeSlider" low-value="20" tooltip="Size in pixels of the square preview images (20px - 500px)" show-input-field="true" style="flex-direction: column; margin-bottom: 10px;" />
+        <ui:Label text="Grid Settings" display-tooltip-when-elided="true" name="awGridSettingsLabel" style="padding-bottom: 5px; -unity-font-style: bold; padding-top: 10px;" />
+        <ui:SliderInt picking-mode="Ignore" label="Scene Horizontal %" value="40" high-value="90" name="awGridSceneHorizPercentSlider" binding-path="awGridSceneHorizPercentSlider" tooltip="What horizontal percentage of the SceneView should be used by the AW Spawner Overlay (10% - 90%)" low-value="10" show-input-field="true" style="flex-direction: column;" />
+        <ui:SliderInt picking-mode="Ignore" label="Scene Vertical %" value="40" high-value="90" name="awGridSceneVertPercentSlider" binding-path="awGridSceneVertPercentSlider" tooltip="What vertical percentage of the SceneView should be used by the AW Spawner Overlay in List Mode (10% - 90%)" low-value="10" show-input-field="true" style="flex-direction: column;" />
+        <ui:Label text="List Settings" display-tooltip-when-elided="true" name="awListSettingsLabel" style="padding-bottom: 5px; -unity-font-style: bold; padding-top: 10px;" />
+        <ui:SliderInt picking-mode="Ignore" label="List - Scene Vertical %" value="40" high-value="90" name="awListSceneVertPercentSlider" binding-path="awListSceneVertPercentSlider" tooltip="What vertical percentage of the SceneView should be used by the AW Spawner Overlay  (10% - 90%)" low-value="10" show-input-field="true" style="flex-direction: column;" />
+        <ui:VisualElement name="settingsButtonContainer" style="align-items: center;">
+            <ui:Button text="Apply Settings" display-tooltip-when-elided="true" name="awSettingsApplyButton" binding-path="awSettingsApplyButton" style="width: 120px; margin-top: 20px; margin-bottom: 10px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

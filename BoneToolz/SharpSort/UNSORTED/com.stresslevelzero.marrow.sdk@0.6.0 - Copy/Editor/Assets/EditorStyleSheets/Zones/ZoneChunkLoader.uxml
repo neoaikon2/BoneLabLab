@@ -1,0 +1,28 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="The Zone Chunk Loader connects the Zone Link with the Scene Chunk(s) and the scene contents that should be active while the current Zone is active.  Careful Zone linking and configuring the Zone Chunk Loader&apos;s &quot;Chunks&quot; list based off of &lt;b&gt;line of sight&lt;/b&gt; ensures that the current and surrounding scene chunks are loaded in a way that hides any sudden popping in or disappearing of geometry and entities.&#10;&#10;You can quickly add to or overwrite the Zone Chunk Loader&apos;s Scene Chunk list by locking the inspector and adding Scene Chunks to the current Zone selection.  Clicking the &quot;Add Selected SceneChunks&quot; button will add any selected Scene Chunks to the Zone Chunk Loader&apos;s Scene Chunk List.  Clicking the Overwrite button will replace the &quot;Chunks&quot; list with the selected Scene Chunks." name="zoneChunkLoaderInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - Zone Chunk Loader" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-top: 10px;">
+            <ui:IMGUIContainer name="imguiValidationContainer" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fieldsContainer">
+            <uie:PropertyField name="_zoneLink" binding-path="_zoneLink" label="ZoneLink" tooltip="The ZoneLink is automatically set to the this script&apos;s required ZoneLink sibling." />
+            <uie:PropertyField name="chunks" binding-path="chunks" label="Chunks" tooltip="The Chunks list should contain all of the Scene Chunks that should be loaded whenever this ZoneLink is active." />
+            <ui:VisualElement name="buttonsborderContainer" style="border-left-color: rgb(128, 128, 128); border-right-color: rgb(128, 128, 128); border-top-color: rgb(128, 128, 128); border-bottom-color: rgb(128, 128, 128); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; margin-top: 10px;">
+                <ui:Label text="Lock the inspector and select the Scene Chunks to quickly Add to or Overwrite this Chunks list" display-tooltip-when-elided="true" name="buttonUsageTip" style="white-space: normal;" />
+                <ui:VisualElement name="buttonContainer" style="flex-direction: row; flex-shrink: 0; margin-top: 5px; width: 100%; justify-content: center;">
+                    <ui:Button text="Add Selected SceneChunks" display-tooltip-when-elided="true" name="addSelectedSceneChunksButton" binding-path="addSelectedSceneChunksButton" tooltip="A selection containing a combination of Zone(s) and SceneChunks will add any selected SceneChunks to the currently selected ZoneChunkLoader(s)." style="width: 45%;" />
+                    <ui:Button text="Overwrite Selected SceneChunks" display-tooltip-when-elided="true" name="overwriteSelectedSceneChunksButton" binding-path="overwriteSelectedSceneChunksButton" tooltip="A selection containing a combination of Zone(s) and SceneChunks will REPLACE the ZoneChunkLoader Chunks list with the currently selected SceneChunks." style="width: 45%;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;">
+                <ui:IMGUIContainer name="imguiInspector" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

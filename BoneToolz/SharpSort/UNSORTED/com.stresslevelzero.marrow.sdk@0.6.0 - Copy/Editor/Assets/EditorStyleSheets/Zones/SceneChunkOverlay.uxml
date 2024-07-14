@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="zoneChunkParentContainer" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-height: initial; justify-content: space-around; display: flex; flex-shrink: 0;">
+        <ui:VisualElement name="zoneChunkOverviewContainer" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-height: initial; justify-content: space-around;">
+            <ui:Toggle label="Chunk Overview" name="zoneChunkOverviewToggle" value="false" binding-path="zoneChunkOverviewToggle" focusable="true" usage-hints="None" class="unity-button" style="margin-left: 3px; margin-top: 10px; margin-bottom: 10px; padding-top: 5px; padding-bottom: 5px; font-size: 14px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; justify-content: space-around; align-items: auto; -unity-text-align: middle-center; visibility: visible;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="zoneChunkHandlesContainer" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-height: initial; justify-content: space-around;">
+            <ui:Toggle label="ZoneCuller Add/Rem" name="zoneChunkCullerHandleToggle" value="false" binding-path="zoneChunkCullerHandleToggle" focusable="true" usage-hints="None" class="unity-button" style="margin-left: 3px; margin-top: 10px; margin-bottom: 10px; padding-top: 5px; padding-bottom: 5px; font-size: 14px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; justify-content: space-around; align-items: auto; -unity-text-align: middle-center; visibility: visible;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

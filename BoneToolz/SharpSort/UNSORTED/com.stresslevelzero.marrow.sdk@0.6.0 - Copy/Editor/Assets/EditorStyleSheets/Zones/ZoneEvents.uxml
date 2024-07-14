@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="Zone Events are used to trigger an event or action based on an activator or set of activators.  The most commom activator is the player, but other entities, like enemies or a rigidbody object like a key, can be specified.  Activators can be defined using the BoneTag system or by Crate types from the Asset Warehouse.\n&#10;&lt;b&gt;Permissions:&lt;/b&gt;\n&#10;- &lt;b&gt;Tag matches&lt;/b&gt; are successful if the item or entity activating the Zone Event matches &lt;b&gt;&lt;i&gt;all tags&lt;/i&gt;&lt;/b&gt; listed.&#10;- &lt;b&gt;Crate matches&lt;/b&gt; are successful if &lt;b&gt;&lt;i&gt;any&lt;/i&gt;&lt;/b&gt; item or enity spawned from a listed crate is used to activate the Zone Event.&#10;- The &lt;b&gt;AND Operator&lt;/b&gt; will match successfully if both the Tags are present &lt;i&gt;and&lt;/i&gt; the entity matches at least one of the listed Crates.&#10;- The &lt;b&gt;OR Operator&lt;/b&gt; will match successfully if all Tags are present on the enitity &lt;i&gt;or&lt;/i&gt; the entity matches at least one of the listed Crates.\n&#10;The &lt;b&gt;On Zone Enter&lt;/b&gt; listener will trigger their methods and actions whenever a valid activator enters the Zone Event trigger volume.\n&#10;The &lt;b&gt;On Zone Enter OneShot &lt;/b&gt; listener will trigger their methods and actions only the first time a valid activator enters the Zone Event trigger volume.\n&#10;The &lt;b&gt;On Zone Exit&lt;/b&gt; listener will trigger their methods and actions whenever a valid activator leaves the Zone Event trigger volume.\n" name="zoneEventsInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - Zone Events" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-bottom: 0;">
+            <ui:IMGUIContainer name="imguiValidationContainer" style="margin-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fieldsContainer">
+            <uie:PropertyField name="_zone" binding-path="_zone" label="Zone" tooltip="The sibling or parent Zone and collider that defines that area that will trigger the Zone Event" />
+            <uie:PropertyField name="activatorTags" binding-path="activatorTags" label="Activator Tags" tooltip="Lists of BoneTags and Asset Warehouse Crates that define the set of permissions allowed to activate the Zone Event." />
+            <uie:PropertyField name="onZoneEnter" binding-path="onZoneEnter" label="On Zone Enter" tooltip="Methods and actions taken whenever a valid activator enters the Zone Event trigger volume" />
+            <uie:PropertyField name="onZoneEnterOneShot" binding-path="onZoneEnterOneShot" label="On Zone Enter OneShot" tooltip="Methods and actions taken the first time a valid activator enters the Zone Event trigger volume" />
+            <uie:PropertyField name="onZoneExit" binding-path="onZoneExit" label="On Zone Exit" tooltip="Methods and actions taken whenever a valid activator leaves the Zone Event trigger volume" />
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;">
+                <ui:IMGUIContainer name="imguiInspector" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

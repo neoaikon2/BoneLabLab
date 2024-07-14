@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="The Player Marker designates the spawnpoint of the player. " name="playerMarkerInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - PlayerMarker" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-bottom: 0;">
+            <ui:IMGUIContainer name="imguiValidationContainer" style="margin-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fieldsContainer" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-wrap: nowrap; flex-shrink: 0; width: auto;">
+            <ui:Label text="By default, the player is Mortal and the level will reload upon death." display-tooltip-when-elided="true" style="white-space: normal;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="gizmoOptionsContainer">
+            <ui:IMGUIContainer name="gizmoOptionsIMGUI" />
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;">
+                <ui:IMGUIContainer name="imguiInspector" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

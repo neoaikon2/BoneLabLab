@@ -1,0 +1,9 @@
+<linker>
+    <assembly fullname="Newtonsoft.Json" preserve="all"/>
+    <assembly fullname="SLZ.Marrow, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <type fullname="SLZ.Marrow.MarrowSettings" preserve="all" />
+    </assembly>
+    <assembly fullname="UnityEngine.VideoModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+        <type fullname="UnityEngine.Video.VideoClip" preserve="all"/>
+    </assembly>
+</linker>

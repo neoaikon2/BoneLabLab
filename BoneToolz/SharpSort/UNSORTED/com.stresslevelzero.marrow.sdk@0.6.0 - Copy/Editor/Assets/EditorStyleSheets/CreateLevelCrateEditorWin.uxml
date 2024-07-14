@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="createPalletParentContainer" style="margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; flex-wrap: wrap;">
+        <ui:Label text="Add a Level Crate to the specified Pallet in the Asset Warehouse. A level template with a basic scene will be auto-generated." display-tooltip-when-elided="true" name="addCrateLabel" style="white-space: normal; margin-bottom: 10px;" />
+        <ui:VisualElement name="crateInputsContainer" style="margin-bottom: 10px;">
+            <uie:ObjectField label="Pallet" name="createCratePalletField" type="SLZ.Marrow.Warehouse.Pallet, SLZ.Marrow" binding-path="createCratePalletField" tooltip="The pallet under whcih this Level Crate should be created. This is usually automatically set." />
+            <ui:TextField picking-mode="Ignore" label="Level Title" text="My Level Crate" name="crateTitleTextField" binding-path="crateTitleTextField" value="My Level Crate" tooltip="The title is used to display the level title in game." />
+            <ui:DropdownField label="Scene" index="0" choices="Default Marrow Scene,Custom Scene (Optional)" name="createLevelSceneDropdown" binding-path="createLevelSceneDropdown" tooltip="The Default Marrow Scene has all of the basic elements needed to create a level.  The Custom Scene option will allow you to provide an already-existing Scene when creating the Level Crate." />
+            <uie:ObjectField label="Custom Scene" type="UnityEditor.SceneAsset, UnityEditor" name="customSceneObjectField" tooltip="Custom Scene to be used in the Level Crate." />
+            <ui:TextField picking-mode="Ignore" label="Barcode" text="barcode" name="barcodeField" binding-path="crateTitleTextField" value="barcode" readonly="true" focusable="false" style="color: rgba(128, 128, 128, 0.59); margin-top: 5px; background-color: rgba(0, 0, 0, 0.16); padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; font-size: 11px; opacity: 0.75;" />
+        </ui:VisualElement>
+        <ui:IMGUIContainer name="imguiValidationContainer" />
+        <ui:VisualElement name="createButtonContainer" style="flex-direction: row; justify-content: space-between; margin-top: 10px;">
+            <ui:VisualElement>
+                <ui:Label text="Warning: The Title and Barcode cannot be changed later." display-tooltip-when-elided="true" style="white-space: normal;" />
+            </ui:VisualElement>
+            <ui:Button text="Create" display-tooltip-when-elided="true" name="createLevelCrateButton" binding-path="createLevelCrateButton" style="padding-left: 32px; padding-right: 32px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

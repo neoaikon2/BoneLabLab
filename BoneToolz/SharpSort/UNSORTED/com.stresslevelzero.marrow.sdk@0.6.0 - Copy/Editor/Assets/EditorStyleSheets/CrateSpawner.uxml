@@ -1,0 +1,38 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="The Crate Spawner acts as a spawn point for the entity contained in the Spawnable Crate Reference field.&#10;Click the selector button to the right of the &apos;Spawnable Crate Reference&apos; field to choose a Spawnable Crate or drag a Spawnable Crate from the Asset Warehouse into the field.&#10;&#10;If the &apos;Manual Mode&apos; checkbox is enabled, the Spawnable will not spawn when the level loads.  Instead, a trigger or event that calls the Crate Spawner&apos;s SpawnSpawnable() method will place it into the level once activated.&#10;&#10;The &apos;On Spawn Event&apos; list provides the ability to trigger additional events or actions once the entity is spawned into the level." name="crateSpawnerInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - Spawnables" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-bottom: 0;">
+            <ui:IMGUIContainer name="imguiValidationContainer" style="margin-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fieldsContainer">
+            <ui:Toggle label="Use Query" name="useQueryToggle" binding-path="useQueryToggle" />
+            <uie:PropertyField name="spawnableCrateReference" binding-path="spawnableCrateReference" label="Spawnable Crate Ref" style="margin-bottom: 5px;" />
+            <uie:PropertyField name="policyData" binding-path="policyData" />
+            <ui:Toggle label="Manual Mode" name="manualModeToggle" binding-path="manualMode" style="margin-bottom: 5px;" />
+            <uie:PropertyField name="onSpawnEvent" binding-path="onSpawnEvent" label="On Spawn Event" style="margin-bottom: 5px;" />
+            <ui:IMGUIContainer name="imguiRuntimeDebugContainer" />
+            <ui:IMGUIContainer name="imguiGizmoOptionsContainer" style="margin-bottom: 10px; display: none;" />
+            <ui:VisualElement name="gizmoOptionsContainer" style="background-color: rgb(64, 64, 64); padding-left: 2px; padding-right: 2px; padding-top: 2px; padding-bottom: 2px; margin-left: 1px; margin-right: 1px; margin-top: 1px; margin-bottom: 1px; -unity-font-style: bold; border-left-width: 2px; border-right-width: 2px; border-top-width: 2px; border-bottom-width: 2px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+                <ui:Label text="Gizmo Options" display-tooltip-when-elided="true" name="gizmoOptionsLabel" style="-unity-font-style: bold; margin-bottom: 4px;" />
+                <ui:VisualElement name="gizmoOptionsButtonContainer" style="flex-direction: row;">
+                    <uie:ToolbarToggle focusable="false" name="showPreviewMeshToolbarToggle" binding-path="showPreviewMeshToolbarToggle" class="marrowToggleOn" style="width: 30px; height: 20px; margin-left: 2px; margin-right: 2px; margin-top: 0; margin-bottom: 0;" />
+                    <uie:ToolbarToggle focusable="false" name="showColliderBoundsToolbarToggle" binding-path="showColliderBoundsToolbarToggle" class="marrowToggleOn" style="width: 30px; height: 20px; margin-left: 2px; margin-right: 2px; margin-top: 0; margin-bottom: 0;" />
+                    <uie:ToolbarToggle focusable="false" name="showLitMaterialPreviewToolbarToggle" binding-path="showLitMaterialPreviewToolbarToggle" style="width: 30px; height: 20px; margin-left: 2px; margin-right: 2px; margin-top: 0; margin-bottom: 0;" />
+                    <ui:SliderInt picking-mode="Ignore" label="Gizmo Range" value="50" high-value="1000" name="gizmoVisRangeSlider" binding-path="gizmoVisRange" show-input-field="true" style="flex-grow: 1; -unity-font-style: normal;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="gizmoOptionsContainer">
+            <ui:IMGUIContainer name="gizmoOptionsIMGUI" />
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;">
+                <ui:IMGUIContainer name="imguiInspector" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="settings-container" style="margin-left: 9px; margin-top: 1px;">
+        <ui:Label text="Marrow Settings" display-tooltip-when-elided="true" name="header" style="font-size: 19px; -unity-font-style: bold; margin-bottom: 0;" />
+        <ui:Label text="Marrow Game" display-tooltip-when-elided="true" name="game-header" style="-unity-font-style: bold; margin-top: 12px;" />
+        <ui:VisualElement name="game-container" style="padding-left: 15px;">
+            <uie:PropertyField binding-path="_gameTitle" name="game-title" />
+            <uie:PropertyField binding-path="_gamePallets" name="game-pallets" />
+            <uie:PropertyField binding-path="_standalonePallets" name="standalone-pallets" />
+        </ui:VisualElement>
+        <ui:Label text="Defaults" display-tooltip-when-elided="true" name="defaults-header" style="-unity-font-style: bold; margin-top: 12px;" />
+        <ui:VisualElement name="defaults-container" style="padding-left: 15px;">
+            <uie:PropertyField binding-path="_defaultLoadingLevel" name="loading-level" />
+            <uie:PropertyField binding-path="_defaultControllerRig" name="controller-rig" />
+            <uie:PropertyField binding-path="_defaultPlayerRig" name="player-rig" />
+            <uie:PropertyField binding-path="_uiEventSystem" name="ui-event-system" />
+            <uie:PropertyField binding-path="_defaultAudioMixer" name="audio-mixer" />
+            <uie:PropertyField binding-path="_audioPlayer" name="audio-player" />
+        </ui:VisualElement>
+        <ui:Label text="DataCards" display-tooltip-when-elided="true" name="datacard-header" style="-unity-font-style: bold; margin-top: 12px;" />
+        <ui:VisualElement name="datacards-container" style="padding-left: 15px;">
+            <uie:PropertyField binding-path="_playerTag" name="player-tag" />
+            <uie:PropertyField binding-path="_beingTag" name="being-tag" />
+            <uie:PropertyField binding-path="_loadMusic" name="load-music" />
+            <uie:PropertyField binding-path="_loadAmbience" name="load-ambience" />
+            <uie:PropertyField binding-path="_defaultAmbience" name="default-ambience" />
+        </ui:VisualElement>
+        <ui:Label text="Optional Settings" display-tooltip-when-elided="true" name="optional-header" style="-unity-font-style: bold; margin-top: 12px;" />
+        <ui:VisualElement name="optional-container" style="padding-left: 15px;">
+            <uie:PropertyField binding-path="_additionalDefineSymbols" name="additional-define-symbols" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

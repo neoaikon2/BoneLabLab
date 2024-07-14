@@ -1,0 +1,24 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="Zone Load Level triggers a level change when a valid activator (usually the player) enters the collider volume.  The Load Screen Level field specifies the &quot;loading screen&quot; area the player will see during the level loading process.  This is recommended to be a very visually simple, small, low-asset, walled-in area that prevents the player from falling.  It should display some form of loading progress status or a simple image or animation to convey the level load process.\n&#10;The Level field accepts any Level Crate found in the Asset Warehouse." name="zoneLoadLevelInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - Zone Load Level" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-bottom: 0;">
+            <ui:IMGUIContainer name="imguiValidationContainer" style="margin-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fieldsContainer">
+            <uie:PropertyField name="_zone" binding-path="_zone" label="Zone" tooltip="The sibling or parent Zone and collider that defines that area that will trigger the level load process." />
+            <uie:PropertyField name="activatorTags" binding-path="activatorTags" label="Activator Tags" tooltip="Lists of BoneTags and Asset Warehouse Crates that define the set of permissions allowed to trigger the Zone Load Level." />
+            <uie:PropertyField name="level" binding-path="level" label="Level" tooltip="The Asset Warehouse Level Crate that will be loaded." />
+            <uie:PropertyField name="loadScreenLevel" binding-path="loadScreenLevel" label="Load Screen Level" tooltip="The area that the player will see during the level load process.  Best practice is to keep this level small, simple, walled-in, and show an image or animation that indicates the loading process." />
+            <uie:PropertyField name="OnLevelSwitch" binding-path="OnLevelSwitch" label="On Level Switch" />
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: flex;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px; display: none;">
+                <ui:IMGUIContainer name="imguiInspector" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

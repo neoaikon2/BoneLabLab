@@ -1,0 +1,31 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="Zone Ambience defines the ambient sounds that are played while the associated Zone Link is active.  Two methods of setting the ambient track are available.  Clip Main can use raw sound file formats, like WAV and OGG.  Alternatively, a music or sound entry added to the Asset Warehouse as a Mono Disc item can be specified using the Ambient Track field.&#10;&#10;The ambience can be further tweaked by setting the overall Volume, Fade In and Out timing and Reverberation data settings.  Small volume levels are recommended to ensure more immediate foreground noises, like gunshots and impacts can be easily heard by the player.  Tooltips for each option provide further recommendations.&#10;&#10;The Zone Ambience component is best configured as a child to the Zone and Zone Link that activates it, and the Music and Ambience Utils on the Zone Link component follow this guideline.&#10;&#10;&lt;b&gt;Considerations&lt;/b&gt;&#10;&#10;- Zone Ambience will automatically loop forever even after the activator (player) leaves the triggering Zone.  The Ambient Track will continue until another Zone Ambience is triggered.   &#10;- It is highly recommended to layer ambience throughout all parts of your level to add depth and character to it.  However, if you really need ambient audio to be silent after a Zone Ambience has been triggered, simply add a Zone Ambience where you need silence, give it a valid &lt;i&gt;Ambient Track&lt;/i&gt; and then set the &lt;i&gt;Volume&lt;/i&gt; to zero.&#10;&#10;- If the same track is listed in other Zones, the current Ambient Track will continue to play without interruption." name="zoneAmbienceInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - Zone Ambience" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-bottom: 0;">
+            <ui:IMGUIContainer name="imguiValidationContainer" style="margin-bottom: 10px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fieldsContainer">
+            <uie:ObjectField label="Zone Link" name="_zoneLink" binding-path="_zoneLink" type="SLZ.Marrow.Zones.ZoneLink, SLZ.Marrow" tooltip="Automatically set to the parent or sibling ZoneLink that defines the area that should trigger this ZoneAmbience" />
+            <uie:EnumField label="Event Types" name="EventTypesFiltered" binding-path="EventTypesFiltered" value="Primary" type="SLZ.MarrowEditor.Zones.ZoneAmbienceEditor+EventTypesFiltered, SLZ.Marrow.Editor" tooltip="The type of trigger event that will activate this ZoneAmbience" />
+            <uie:PropertyField name="_eventTypes" binding-path="_eventTypes" style="display: none;" />
+            <ui:Label text="Ambience" display-tooltip-when-elided="true" name="ambienceLabel" style="-unity-font-style: bold; margin-top: 10px;" />
+            <uie:ObjectField label="Clip Main" name="clipMain" binding-path="clipMain" type="UnityEngine.AudioClip, UnityEngine.AudioModule" />
+            <uie:PropertyField name="ambientTrack" binding-path="ambientTrack" label="Ambient Track" tooltip="Ambience to play." />
+            <uie:PropertyField name="volume" binding-path="volume" label="Volume" />
+            <uie:PropertyField name="loop" binding-path="loop" label="Loop" />
+            <uie:PropertyField name="fadeInTime" binding-path="fadeInTime" label="Fade In Time" />
+            <uie:PropertyField name="fadeOutTime" binding-path="fadeOutTime" label="Fade Out Time" />
+            <ui:Label text="Reverb" display-tooltip-when-elided="true" name="reverbLabel" style="-unity-font-style: bold; margin-top: 10px;" />
+            <uie:PropertyField name="reverbSettings" binding-path="reverbSettings" label="Reverb Settings" />
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;">
+                <ui:IMGUIContainer name="imguiInspector" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

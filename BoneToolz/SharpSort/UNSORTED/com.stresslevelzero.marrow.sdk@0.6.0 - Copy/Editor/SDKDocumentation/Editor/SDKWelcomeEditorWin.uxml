@@ -1,0 +1,95 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="rootContainer" style="padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; flex-grow: 1;">
+        <ui:VisualElement name="headerContainer" style="flex-direction: row; margin-bottom: 10px;">
+            <ui:VisualElement name="welcomeHeaderImageContainer" style="width: 64px; height: 128px; margin-left: 10px;" />
+            <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: flex-start; flex-direction: row;">
+                <ui:VisualElement style="margin-left: 30px;">
+                    <ui:Label text="Marrow SDK" display-tooltip-when-elided="true" name="headerLabel" style="font-size: 32px; -unity-font-style: bold; justify-content: center; -unity-text-align: middle-center;" />
+                    <ui:Label display-tooltip-when-elided="true" style="-unity-text-align: upper-center; font-size: 14px; -unity-font-style: italic; display: none;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="bodyContainer" style="flex-grow: 0;">
+            <ui:VisualElement name="introContainer">
+                <ui:Label text="Welcome to the Marrow SDK!" display-tooltip-when-elided="true" name="welcomeSDKHeader" style="-unity-font-style: bold; font-size: 18px; margin-bottom: 10px;" />
+                <ui:Label text="The Marrow SDK is powered by Pallets, Crates and DataCards that are all housed in the Asset Warehouse." name="readmeSDKOverview" style="font-size: 14px; display: flex; white-space: normal; margin-bottom: 15px; margin-left: 10px; -unity-text-align: upper-left;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="summaryContainer" style="margin-left: 10px;">
+                <ui:VisualElement name="scannablesInfo">
+                    <ui:VisualElement name="palletInfo" style="flex-direction: row; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:Image name="palletInfoImage" style="margin-right: 7px; width: 32px; height: 32px;" />
+                        <ui:Label text="Pallet: " name="palletInfoTitle" style="white-space: normal; font-size: 16px; -unity-font-style: bold; -unity-text-align: middle-left;" />
+                        <ui:Label text="Manifest of &lt;b&gt;Crates&lt;/b&gt; and &lt;b&gt;DataCards&lt;/b&gt;" name="palletInfoText" style="white-space: normal; font-size: 14px; -unity-text-align: middle-left; flex-grow: 1; flex-wrap: wrap;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="crateInfo" style="flex-direction: row; margin-top: 1px; margin-bottom: 1px;">
+                        <ui:Image name="crateInfoImage" style="margin-right: 7px; width: 32px; height: 32px;" />
+                        <ui:Label text="Crate:" name="crateInfoTitle" style="font-size: 16px; display: flex; white-space: normal; -unity-font-style: bold; -unity-text-align: middle-left;" />
+                        <ui:Label text="Physical content (&lt;b&gt;Avatars&lt;/b&gt;, &lt;b&gt;Levels&lt;/b&gt; and &lt;b&gt;Spawnables&lt;/b&gt;)" name="crateInfoText" style="font-size: 14px; display: flex; white-space: normal; -unity-text-align: middle-left; flex-wrap: wrap; flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="dataCardInfo" style="flex-direction: row; margin-bottom: 1px; margin-top: 1px;">
+                        <ui:Image name="dataCardInfoImage" style="margin-right: 7px; width: 32px; height: 32px;" />
+                        <ui:Label text="DataCard:" name="dataCardInfoTitle" style="font-size: 16px; display: flex; white-space: normal; -unity-font-style: bold; -unity-text-align: middle-left;" />
+                        <ui:Label text="Digital content (&lt;b&gt;Tags&lt;/b&gt; and &lt;b&gt;Audio&lt;/b&gt;)" name="dataCardInfoText" style="font-size: 14px; display: flex; white-space: normal; -unity-text-align: middle-left; flex-grow: 1; flex-wrap: wrap;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="gettingStartedContainer">
+                <ui:Label text="&lt;b&gt;&lt;size=125%&gt;Getting Started&lt;/size&gt;&lt;/b&gt;:" display-tooltip-when-elided="true" name="gettingStartedTitle" style="margin-bottom: 10px; font-size: 16px; margin-top: 15px; -unity-font-style: bold;" />
+                <ui:VisualElement name="gettingStartedSteps" style="margin-left: 10px; display: flex;">
+                    <ui:VisualElement name="readmeInstallButtonContainer" style="flex-direction: row; margin-bottom: 2px; align-items: center; margin-top: 2px;">
+                        <ui:Label text="1." display-tooltip-when-elided="true" name="stepOne" style="-unity-font-style: bold; font-size: 22px; -unity-text-align: upper-left; margin-right: 4px; -unity-font-definition: none; -unity-font: resource(&apos;FlatSkin/Font/Roboto-Light&apos;);" />
+                        <ui:Button text="Ver" display-tooltip-when-elided="true" name="welcomeVerifyInstallButton" class="linkCursor" style="width: 56px; height: 36px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 7px; padding-right: 7px;" />
+                        <ui:VisualElement>
+                            <ui:Label text="Confirm &lt;b&gt;BONELAB&lt;/b&gt; Install, click button to change path" name="welcomeVerifyInstallLabel" style="font-size: 14px; display: flex; white-space: normal; margin-bottom: 0; width: auto; margin-left: 7px; margin-right: 0; margin-top: 0; -unity-text-align: upper-left; -unity-paragraph-spacing: 0; flex-grow: 1; flex-shrink: 1;" />
+                            <ui:Label text="Not Found" name="welcomeInstallPathLabel" style="font-size: 10px; display: flex; white-space: normal; margin-bottom: 0; width: auto; margin-left: 7px; margin-right: 7px; margin-top: 0; -unity-text-align: upper-left; -unity-paragraph-spacing: 0; flex-grow: 1; flex-shrink: 1; padding-left: 7px; padding-right: 7px; padding-top: 5px; padding-bottom: 5px; background-color: rgb(46, 46, 46);" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="readmeAWButtonContainer" style="flex-direction: row; margin-bottom: 2px; align-items: center; margin-top: 2px;">
+                        <ui:Label text="2." display-tooltip-when-elided="true" name="stepTwo" style="-unity-font-style: bold; font-size: 22px; -unity-text-align: upper-left; margin-right: 4px; -unity-font: resource(&apos;FlatSkin/Font/Roboto-Light&apos;); -unity-font-definition: none;" />
+                        <ui:Button display-tooltip-when-elided="true" name="welcomeAssetWarehouseButton" tooltip="This quick access Asset Warehouse button is always available in the top-left corner of the Unity editor" text="AW" class="linkCursor" style="width: 56px; height: 36px; align-items: center; justify-content: flex-start; flex-grow: 0; padding-left: 7px; padding-right: 7px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-top: 1px; padding-bottom: 1px;" />
+                        <ui:Label text="Open the &lt;b&gt;Asset Warehouse&lt;/b&gt;" name="readmeToGetStartedAW" style="font-size: 14px; margin-left: 7px; flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="welcomeCreatePalletButtonContainer" style="flex-direction: row; align-items: center; justify-content: flex-start; margin-top: 2px; margin-bottom: 2px;">
+                        <ui:Label text="3." display-tooltip-when-elided="true" name="stepThree" style="-unity-font-style: bold; font-size: 22px; -unity-text-align: upper-left; margin-right: 4px; -unity-font-definition: none; -unity-font: resource(&apos;FlatSkin/Font/Roboto-Light&apos;);" />
+                        <ui:Image name="welcomeCreatePalletImage" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-color: rgb(98, 98, 98); border-right-color: rgb(98, 98, 98); border-top-color: rgb(98, 98, 98); border-bottom-color: rgb(98, 98, 98); padding-left: 8px; padding-right: 0; padding-top: 3px; padding-bottom: 3px; background-color: rgb(46, 46, 46); width: 50px; height: 44px; margin-left: 3px;" />
+                        <ui:Label text="Create a new &lt;b&gt;Pallet&lt;/b&gt; and select it in the Asset Warehouse" display-tooltip-when-elided="true" name="welcomeCreatePallet" style="font-size: 14px; margin-left: 7px; flex-grow: 1;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="welcomePalletDependencyButtonContainer" style="flex-direction: row; align-items: center; margin-bottom: 2px; flex-grow: 0; margin-top: 2px; display: none;">
+                        <ui:Label text="4." display-tooltip-when-elided="true" name="stepFour" style="-unity-font-style: bold; font-size: 22px; -unity-text-align: upper-left; margin-right: 4px; -unity-font: url(&apos;project://database/Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf?fileID=12800000&amp;guid=2a29e27936eb547458f646f71125b264&amp;type=3#Roboto-Light&apos;); -unity-font-definition: none;" />
+                        <ui:Image name="welcomeSelectPalletImage" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-color: rgb(98, 98, 98); border-right-color: rgb(98, 98, 98); border-top-color: rgb(98, 98, 98); border-bottom-color: rgb(98, 98, 98); padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; background-color: rgb(46, 46, 46); width: 50px; height: 44px; display: flex; margin-left: 3px;" />
+                        <ui:Label text="Select the new &lt;b&gt;Pallet&lt;/b&gt; in the Asset Warehouse" name="welcomePalletDependency" style="font-size: 14px; display: flex; white-space: normal; flex-grow: 1; flex-shrink: 1; margin-left: 7px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="welcomeLevelCrateButtonContainer" style="flex-direction: row; margin-bottom: 2px; align-items: center; flex-grow: 0; margin-top: 2px;">
+                        <ui:Label text="4." display-tooltip-when-elided="true" name="stepFour" style="-unity-font-style: bold; font-size: 22px; -unity-text-align: upper-left; margin-right: 4px; -unity-font: resource(&apos;FlatSkin/Font/Roboto-Light&apos;); -unity-font-definition: none;" />
+                        <ui:Image name="welcomeLevelCrateImage" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-color: rgb(98, 98, 98); border-right-color: rgb(98, 98, 98); border-top-color: rgb(98, 98, 98); border-bottom-color: rgb(98, 98, 98); padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; background-color: rgb(46, 46, 46); width: 50px; height: 44px; margin-left: 3px;" />
+                        <ui:Label text="Create a new Level by clicking &lt;b&gt;New Level Crate&lt;/b&gt; on your Pallet" name="welcomeLevelCrateLabel" style="font-size: 14px; margin-left: 7px; flex-grow: 1; display: flex;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="welcomePackPalletContainer" style="flex-direction: row; margin-bottom: 2px; align-items: center; margin-top: 2px;">
+                        <ui:Label text="5." display-tooltip-when-elided="true" name="stepFive" style="-unity-font-style: bold; font-size: 22px; -unity-text-align: upper-left; margin-right: 4px; -unity-font-definition: none; -unity-font: url(&apos;project://database/Packages/com.unity.searcher/Editor/Resources/FlatSkin/Font/Roboto-Light.ttf?fileID=12800000&amp;guid=2a29e27936eb547458f646f71125b264&amp;type=3#Roboto-Light&apos;);" />
+                        <ui:Image name="welcomePackPalletImage" style="border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-left-color: rgb(98, 98, 98); border-right-color: rgb(98, 98, 98); border-top-color: rgb(98, 98, 98); border-bottom-color: rgb(98, 98, 98); padding-left: 0; padding-right: 0; padding-top: 1px; padding-bottom: 1px; background-color: rgb(46, 46, 46); width: 50px; height: 56px; margin-left: 3px;" />
+                        <ui:Label text="Pack your Pallet content by clicking &lt;b&gt;Pack Pallet&lt;/b&gt;" name="welcomePackPalletLabel" style="font-size: 14px; margin-left: 7px; flex-grow: 1;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="footerContainer" style="justify-content: flex-start; flex-grow: 1; align-items: stretch;">
+            <ui:VisualElement style="flex-grow: 1; flex-shrink: 0;" />
+            <ui:VisualElement name="readmeDocsButtonContainer" style="flex-direction: row; height: 22px; width: 348px; margin-top: 14px;">
+                <ui:Label text="Need Help?  Check out the " name="readmeMarrowDocsInfo" style="font-size: 14px; display: flex; white-space: normal; height: 21px;" />
+                <ui:Button display-tooltip-when-elided="true" name="welcomeMarrowWikiButton" tooltip="Open the online MarrowSDK Wiki in the default browser." text="MarrowSDK Wiki" class="linkText linkCursor" style="width: 120px; height: 24px; bottom: 5px; font-size: 14px; padding-left: 1px; padding-right: 2px; margin-left: 0;" />
+                <ui:Label text="the " name="readmeMarrowWikisInfo" style="font-size: 14px; display: flex; white-space: normal;" />
+                <ui:Button display-tooltip-when-elided="true" name="welcomeMarrowDocsButton" tooltip="Open the MarrowSDK In-editor documentation." text="MarrowSDK Docs" class="linkText linkCursor" style="width: 120px; height: 24px; bottom: 5px; font-size: 14px; padding-left: 1px; padding-right: 2px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="readmeDocsButtonContainer" style="flex-direction: row;">
+                <ui:Label text="or the " name="readmeMarrowWikisInfo" style="font-size: 14px; display: flex; white-space: normal;" />
+                <ui:Button display-tooltip-when-elided="true" name="welcomeLavaGangDiscordButton" tooltip="Open the Lava Gang Discord Channel in the default browser" text="LavaGang Discord" class="linkText linkCursor" style="width: 120px; height: 24px; bottom: 5px; font-size: 14px; padding-left: 1px; padding-right: 2px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;">
+                <ui:IMGUIContainer name="imguiInspector" style="display: none;" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

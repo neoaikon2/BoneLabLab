@@ -1,0 +1,725 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!181963792 &2655988077585873504
+Preset:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AddressableAssetSettings
+  m_TargetType:
+    m_NativeTypeID: 114
+    m_ManagedTypePPtr: {fileID: 11500000, guid: 468a46d0ae32c3544b7d98094e6448a9,
+      type: 3}
+    m_ManagedTypeFallback: 
+  m_Properties:
+  - target: {fileID: 0}
+    propertyPath: m_Enabled
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorHideFlags
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_EditorClassIdentifier
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DefaultGroup
+    value: 4d882dacb0cf54c449d94345cde2d533
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[0]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[1]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[2]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[3]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[4]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[5]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[6]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[7]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[8]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[9]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[10]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[11]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[12]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[13]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[14]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_currentHash.bytes[15]
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_OptimizeCatalogSize
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildRemoteCatalog
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BundleLocalCatalog
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CatalogRequestsTimeout
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DisableCatalogUpdateOnStart
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_IgnoreUnsupportedFilesInBuild
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_UniqueBundleIds
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_NonRecursiveBuilding
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CCDEnabled
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_maxConcurrentWebRequests
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ContiguousBundles
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StripUnityVersionFromBundleBuild
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DisableVisibleSubAssetRepresentations
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ShaderBundleNaming
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ShaderBundleCustomNaming
+    value: PALLET_NAME_HERE
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MonoScriptBundleNaming
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CheckForContentUpdateRestrictionsOption
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_MonoScriptBundleCustomNaming
+    value: MARROW
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RemoteCatalogBuildPath.m_Id
+    value: f03d2a55457fa6e4f8d499c42217628e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_RemoteCatalogLoadPath.m_Id
+    value: c379e54b5a3413b4e95ede99b7df5856
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ContentStateBuildPathProfileVariableName
+    value: <default settings path>
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CustomContentStateBuildPath
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ContentStateBuildPath
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildAddressablesWithPlayerBuild
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_overridePlayerVersion
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_GroupAssets.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_GroupAssets.Array.data[0]
+    value: 
+    objectReference: {fileID: 11400000, guid: 8b5ee8ae1bae6794692e05c65f209650, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_BuildSettings.m_CompileScriptsInVirtualMode
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildSettings.m_CleanupStreamingAssetsAfterBuilds
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildSettings.m_LogResourceManagerExceptions
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_BuildSettings.m_BundleBuildPath
+    value: Temp/com.unity.addressables/AssetBundles
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.size
+    value: 2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_InheritedParent
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Id
+    value: 2056c22079b11ce478d338f3f85afa99
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_ProfileName
+    value: Default
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.size
+    value: 13
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[0].m_Id
+    value: 4b5be2a9894728a48b3be114e9cab1d3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[0].m_Value
+    value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[1].m_Id
+    value: cd46b6cc1cd9bb3468de6ffa0c95ecc0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[1].m_Value
+    value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[2].m_Id
+    value: f61512461f3fbb64bb882a6af52b8090
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[2].m_Value
+    value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[3].m_Id
+    value: f03d2a55457fa6e4f8d499c42217628e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[3].m_Value
+    value: ServerData/[BuildTarget]
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[4].m_Id
+    value: c379e54b5a3413b4e95ede99b7df5856
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[4].m_Value
+    value: http://[PrivateIpAddress]:[HostingServicePort]
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[5].m_Id
+    value: a55fd1d1cc0e2c54f8fc99fd45a015b6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[5].m_Value
+    value: ~PALLETBARCODE~
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[6].m_Id
+    value: ba16486fe6f55fd4fbf595bcaa8301dc
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[6].m_Value
+    value: 'PALLET_BARCODE:[PalletBarcode]:'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[7].m_Id
+    value: 8f6c7444a8c35a84aa1f5afd15b7b68c
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[7].m_Value
+    value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[8].m_Id
+    value: f8725ba8ca4660e4a9c94c64ccb97536
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[8].m_Value
+    value: '[SLZ.Marrow.MarrowSDK.BUILT_PALLETS_NAME]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[9].m_Id
+    value: f97bbac1d358e3b47a31bd05dd60fd33
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[9].m_Value
+    value: '[PalletBuildPath]/[UnityEditor.EditorUserBuildSettings.activeBuildTarget]/[PalletBarcode]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[10].m_Id
+    value: d936b3f7b661e3b4eac88aca85467faa
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[10].m_Value
+    value: '[PalletLoadPath]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[11].m_Id
+    value: 2023158ce820b5e46b6902e85fc5ddda
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[11].m_Value
+    value: '[GameBuildPath]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[12].m_Id
+    value: 641fa520f0cf9104eb3a4973a1e9aea2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[0].m_Values.Array.data[12].m_Value
+    value: '[PalletLoadPath]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_InheritedParent
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Id
+    value: fbad295727b3dec49ba750485b9465e7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_ProfileName
+    value: Pallets
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.size
+    value: 13
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[0].m_Id
+    value: 4b5be2a9894728a48b3be114e9cab1d3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[0].m_Value
+    value: '[UnityEditor.EditorUserBuildSettings.activeBuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[1].m_Id
+    value: cd46b6cc1cd9bb3468de6ffa0c95ecc0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[1].m_Value
+    value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[2].m_Id
+    value: f61512461f3fbb64bb882a6af52b8090
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[2].m_Value
+    value: '{UnityEngine.AddressableAssets.Addressables.RuntimePath}/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[3].m_Id
+    value: f03d2a55457fa6e4f8d499c42217628e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[3].m_Value
+    value: ServerData/[BuildTarget]
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[4].m_Id
+    value: c379e54b5a3413b4e95ede99b7df5856
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[4].m_Value
+    value: http://[PrivateIpAddress]:[HostingServicePort]
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[5].m_Id
+    value: a55fd1d1cc0e2c54f8fc99fd45a015b6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[5].m_Value
+    value: ~PALLETBARCODE~
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[6].m_Id
+    value: ba16486fe6f55fd4fbf595bcaa8301dc
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[6].m_Value
+    value: 'PALLET_BARCODE:[PalletBarcode]:'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[7].m_Id
+    value: 8f6c7444a8c35a84aa1f5afd15b7b68c
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[7].m_Value
+    value: '[UnityEngine.AddressableAssets.Addressables.BuildPath]/[BuildTarget]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[8].m_Id
+    value: f8725ba8ca4660e4a9c94c64ccb97536
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[8].m_Value
+    value: '[SLZ.Marrow.MarrowSDK.BUILT_PALLETS_NAME]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[9].m_Id
+    value: f97bbac1d358e3b47a31bd05dd60fd33
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[9].m_Value
+    value: '[PalletBuildPath]/[UnityEditor.EditorUserBuildSettings.activeBuildTarget]/[PalletBarcode]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[10].m_Id
+    value: d936b3f7b661e3b4eac88aca85467faa
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[10].m_Value
+    value: '[PalletLoadPath]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[11].m_Id
+    value: 2023158ce820b5e46b6902e85fc5ddda
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[11].m_Value
+    value: '[GameBuildPath]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[12].m_Id
+    value: 641fa520f0cf9104eb3a4973a1e9aea2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_Profiles.Array.data[1].m_Values.Array.data[12].m_Value
+    value: '[PalletLoadPath]'
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.size
+    value: 13
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[0].m_Id
+    value: 4b5be2a9894728a48b3be114e9cab1d3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[0].m_Name
+    value: BuildTarget
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[0].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[1].m_Id
+    value: cd46b6cc1cd9bb3468de6ffa0c95ecc0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[1].m_Name
+    value: Local.BuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[1].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[2].m_Id
+    value: f61512461f3fbb64bb882a6af52b8090
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[2].m_Name
+    value: Local.LoadPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[2].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[3].m_Id
+    value: f03d2a55457fa6e4f8d499c42217628e
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[3].m_Name
+    value: Remote.BuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[3].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[4].m_Id
+    value: c379e54b5a3413b4e95ede99b7df5856
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[4].m_Name
+    value: Remote.LoadPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[4].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[5].m_Id
+    value: a55fd1d1cc0e2c54f8fc99fd45a015b6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[5].m_Name
+    value: PalletBarcode
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[5].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[6].m_Id
+    value: ba16486fe6f55fd4fbf595bcaa8301dc
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[6].m_Name
+    value: PalletLoadPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[6].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[7].m_Id
+    value: 8f6c7444a8c35a84aa1f5afd15b7b68c
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[7].m_Name
+    value: GameBuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[7].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[8].m_Id
+    value: f8725ba8ca4660e4a9c94c64ccb97536
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[8].m_Name
+    value: PalletBuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[8].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[9].m_Id
+    value: f97bbac1d358e3b47a31bd05dd60fd33
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[9].m_Name
+    value: Pallet.BuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[9].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[10].m_Id
+    value: d936b3f7b661e3b4eac88aca85467faa
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[10].m_Name
+    value: Pallet.LoadPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[10].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[11].m_Id
+    value: 2023158ce820b5e46b6902e85fc5ddda
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[11].m_Name
+    value: Game Pallet.BuildPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[11].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[12].m_Id
+    value: 641fa520f0cf9104eb3a4973a1e9aea2
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[12].m_Name
+    value: Game Pallet.LoadPath
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileEntryNames.Array.data[12].m_InlineUsage
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ProfileSettings.m_ProfileVersion
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_LabelTable.m_LabelNames.Array.size
+    value: 1
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_LabelTable.m_LabelNames.Array.data[0]
+    value: default
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_SchemaTemplates.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_GroupTemplateObjects.Array.size
+    value: 3
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_GroupTemplateObjects.Array.data[0]
+    value: 
+    objectReference: {fileID: 11400000, guid: 63c989be4f767464bbd2d29f27316786, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_GroupTemplateObjects.Array.data[1]
+    value: 
+    objectReference: {fileID: 11400000, guid: 76efe2a1ad2f9f24fb9b02f794fd974d, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_GroupTemplateObjects.Array.data[2]
+    value: 
+    objectReference: {fileID: 11400000, guid: af5933cee8a8f9140889c4a0a669a67d, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_InitializationObjects.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CertificateHandlerType.m_AssemblyName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_CertificateHandlerType.m_ClassName
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_ActivePlayerDataBuilderIndex
+    value: 4
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.size
+    value: 6
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.data[0]
+    value: 
+    objectReference: {fileID: 11400000, guid: 3aaba9eb0090cbd43bda0b87dae007ad, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.data[1]
+    value: 
+    objectReference: {fileID: 11400000, guid: 2cf32c6dca5c3814aa682f35cb5afdb1, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.data[2]
+    value: 
+    objectReference: {fileID: 11400000, guid: 70bd1540f4e4b0f4fa920d3ba706e290, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.data[3]
+    value: 
+    objectReference: {fileID: 11400000, guid: 529af1d9b97831944b46774fd6d973d0, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.data[4]
+    value: 
+    objectReference: {fileID: 11400000, guid: d2953db3a3b7d444b88a0af7383ae15b, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_DataBuilders.Array.data[5]
+    value: 
+    objectReference: {fileID: 11400000, guid: 53d1aec21bc407e46951276825cdb752, type: 2}
+  - target: {fileID: 0}
+    propertyPath: m_ActiveProfileId
+    value: fbad295727b3dec49ba750485b9465e7
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HostingServicesManager.m_HostingServiceInfos.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HostingServicesManager.m_Settings
+    value: 
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HostingServicesManager.m_NextInstanceId
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HostingServicesManager.m_RegisteredServiceTypeRefs.Array.size
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_HostingServicesManager.m_PingTimeoutInMilliseconds
+    value: 5000
+    objectReference: {fileID: 0}
+  m_ExcludedProperties:
+  - m_BuildSettings.m_LogResourceManagerExceptions

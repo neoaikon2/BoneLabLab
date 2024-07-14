@@ -4,4 +4,4 @@ Welcome to the BoneLab Lab, this repository is a collection of learning material
 Where it is possible, example prefabs have been constructed to match as closely as possible to an official StresslevelZero asset; Reference documentation tries to match this philosophy as well.
 
 # BonerLab SDK
-Also in the repository is the BonerLab SDK, the most complete patch 3 compatible extended SDK available.
+Thie repo is also home to the BonerLab SDK, the most complete BoneLab patch 4 compatible extended SDK available.

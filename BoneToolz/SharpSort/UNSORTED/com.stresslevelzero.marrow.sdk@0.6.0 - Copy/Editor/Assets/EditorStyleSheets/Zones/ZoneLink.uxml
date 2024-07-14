@@ -1,0 +1,40 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/DragAndDropHidden.uss?fileID=7433441132597879392&amp;guid=91e8122385109644395c11f1e9bb1170&amp;type=3#DragAndDropHidden" />
+    <ui:VisualElement name="rootContainer">
+        <ui:Foldout text="Usage Info" name="usageInfo" value="false">
+            <ui:Label display-tooltip-when-elided="true" text="The Zone Link handles the activation permissions for a Zone and maintains a list of links between it and other Zone Links.  Activators can be defined using the BoneTag system or by Crate types from the Asset Warehouse.\n&#10;&lt;b&gt;Permissions:&lt;/b&gt;\n&#10;- &lt;b&gt;Tag matches&lt;/b&gt; are successful if the item or entity activating the Zone matches &lt;b&gt;&lt;i&gt;all tags&lt;/i&gt;&lt;/b&gt; listed.&#10;- &lt;b&gt;Crate matches&lt;/b&gt; are successful if &lt;b&gt;&lt;i&gt;any&lt;/i&gt;&lt;/b&gt; item or enity spawned from a listed crate is used to activate the Zone.\n&#10;Zones linked with the currently occupied zone keep entities and objects within them loaded and active.  Any Zones and their contents that are not linked with the current one are set to a frozen state, which recovers resources and maintains level performance.\n&#10;The Priority system gives the designer control of which Zone Link should take precedence in cases where a Zone resides entirely within another Zone and the player can occupy both at once." name="zonelinkInfo" style="white-space: normal; font-size: 12px;" />
+            <ui:Button text="MarrowSDK Documentation - Zone Link" display-tooltip-when-elided="true" name="marrowDocsButton" binding-path="marrowDocsButton" tooltip="Open the MarrowSDK Documentation in the default web browser." style="margin-top: 10px; width: auto; align-items: auto; justify-content: flex-start;" />
+        </ui:Foldout>
+        <ui:VisualElement name="validationFeedback" style="visibility: visible; display: flex; margin-top: 5px;">
+            <ui:IMGUIContainer name="imguiValidationContainer" />
+        </ui:VisualElement>
+        <ui:VisualElement name="fieldsContainer">
+            <ui:Foldout text="Zone Music and Ambience Utils" name="zoneMusicAmbButtonsFoldout" value="false" tooltip="Quickly add Zone Music or Zone Ambience objects as children with several fields pre-configured." style="padding-bottom: 5px;">
+                <ui:VisualElement name="zoneMusicAmbButtonsContainer" style="border-left-color: rgb(128, 128, 128); border-right-color: rgb(128, 128, 128); border-top-color: rgb(128, 128, 128); border-bottom-color: rgb(128, 128, 128); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px;">
+                    <ui:VisualElement name="buttonContainerRow1" style="flex-direction: row; align-items: center; justify-content: space-between; margin-top: 2px;">
+                        <ui:Button text="Add ZoneMusic Child" display-tooltip-when-elided="true" name="addZoneMusicButton" binding-path="addZoneMusicButton" tooltip="Create a child ZoneMusic gameobject and link it to the current ZoneLink" style="width: 45%;" />
+                        <ui:Button text="Add ZoneAmbience Child" display-tooltip-when-elided="true" name="addZoneAmbienceButton" binding-path="addZoneAmbienceButton" tooltip="Create a child ZoneAmbience gameobject and link it to the current ZoneLink" style="width: 45%;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="buttonContainerRow2" style="flex-direction: row; align-items: center; justify-content: center;">
+                        <ui:Button text="Connect Orphaned Child Audio To Zone" display-tooltip-when-elided="true" name="connectChildAudioToZoneButton" binding-path="connectChildAudioToZoneButton" tooltip="Fix any ZoneMusic/ZoneAmbience child objects that have missing or incorrect ZoneLink fields" style="flex-grow: 1; margin-bottom: 5px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:Foldout>
+            <uie:PropertyField name="zonePropertyField" binding-path="_zone" label="Zone" tooltip="Zones are activated when an entity (i.e. the Player) or item that matches the Tags and Crates permission list enter its collider bounds.  Any zones linked to this one are secondarily activated. It is best practice to link Zones by line-of-sight to ensure that the entities and objects governed by a Zone are active whenever the player could potentially see them." style="display: flex;" />
+            <uie:PropertyField name="activatorTagsPropertyField" binding-path="activatorTags" tooltip="Lists of BoneTags and Asset Warehouse Crates that define the set of permissions allowed to activate the Zone." class="foldoutindent15" style="display: flex;" />
+            <uie:PropertyField name="zoneLinksPropertyField" binding-path="zoneLinks" label="ZoneLinks" tooltip="Zone Linking is used to keep neighboring zones that the player can still see or reach active to ensure entities and geometry do not suddenly appear or disappear as the player enters or leaves a Zone&apos;s bounds.  When linking Zones, the best practice is to link them together based on line-of-sight to avoid entities or geometry popping in and out of view as the player crosses into new Zone boundaries.  Line of sight considerations should account for the player&apos;s ability to jump, climb and launch themselves in unexpected ways, including using the Nimbus Gun." class="foldoutindent15" style="margin-bottom: 0; display: flex;" />
+            <ui:VisualElement name="zoneLinkDragDropTarget" class="drop-area" style="margin-top: 2px; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px; top: -20px; border-left-color: rgb(128, 128, 128); border-right-color: rgb(128, 128, 128); border-top-color: rgb(128, 128, 128); border-bottom-color: rgb(128, 128, 128); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; margin-left: 18px; width: 282px; display: flex;">
+                <ui:Label text="Lock Inspector &amp; Drop ZoneLinks here for Multi-Add" display-tooltip-when-elided="true" name="preDragHintText" tooltip="Lock the Inspector and Drag and Drop selected ZoneLink(s) here to populate the ZoneLinks list." style="position: absolute; font-size: 10px; -unity-font-style: italic; color: rgb(144, 144, 144);" />
+                <ui:Label text="Drop ZoneLinks here to Add" display-tooltip-when-elided="true" name="zoneLinkDragDropHint" style="-unity-font-style: italic;" />
+                <ui:Label text="Drag ZoneLinks here to add" display-tooltip-when-elided="true" name="zoneLinkDragDropLabel" class="drop-area__label" style="visibility: hidden; display: none;" />
+            </ui:VisualElement>
+            <uie:PropertyField name="priorityPropertyField" binding-path="priority" label="Priority" tooltip="The Priority system gives the designer control of which Zone Link should take precedence in cases where a Zone resides entirely within another Zone and the player can occupy both at once." style="display: flex;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="imguiInspectorContainer" style="display: none;">
+            <ui:Foldout text="Default IMGUI Inspector" name="imguiContainerFoldout" value="false" style="padding-top: 10px;">
+                <ui:IMGUIContainer name="imguiInspector" />
+            </ui:Foldout>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

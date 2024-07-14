@@ -1,0 +1,26 @@
+#spawnablesGridScrollView .unity-scroll-view__content-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#spawnablesSearchField #unity-search {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0);
+    flex-shrink: 0;
+    min-height: 8px;
+    min-width: 8px;
+    margin-right: 4px;
+}
+
+#spawnablesSearchField #unity-cancel {
+    width: 14px;
+    height: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    min-height: 8px;
+    min-width: 8px;
+}
+
+.marrowToggleOn:checked {
+    background-color: rgb(70, 96, 124);
+}

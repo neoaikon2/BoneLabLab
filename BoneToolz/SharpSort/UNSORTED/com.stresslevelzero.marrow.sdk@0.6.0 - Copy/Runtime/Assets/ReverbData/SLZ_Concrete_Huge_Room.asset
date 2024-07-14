@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37eedab185f26df4ca6c7ba65dbb72c9, type: 3}
+  m_Name: SLZ_Concrete_Huge_Room
+  m_EditorClassIdentifier: 
+  reverbData:
+  - paramName: DryLevel
+    paramValue: 0
+    minRange: -10000
+    maxRange: 0
+  - paramName: Room
+    paramValue: -620
+    minRange: -10000
+    maxRange: 0
+  - paramName: RoomHF
+    paramValue: -1394
+    minRange: -10000
+    maxRange: 0
+  - paramName: DecayTime
+    paramValue: 4.7
+    minRange: -0.1
+    maxRange: 20
+  - paramName: DecayHFRatio
+    paramValue: 0.32
+    minRange: 0.1
+    maxRange: 2
+  - paramName: Reflections
+    paramValue: -1301
+    minRange: -10000
+    maxRange: 0
+  - paramName: ReflectDelay
+    paramValue: 0
+    minRange: 0
+    maxRange: 0.3
+  - paramName: Reverb
+    paramValue: -45
+    minRange: -10000
+    maxRange: 2000
+  - paramName: ReverbDelay
+    paramValue: 0.03
+    minRange: -10000
+    maxRange: 2000
+  - paramName: Diffusion
+    paramValue: 100
+    minRange: 0
+    maxRange: 100
+  - paramName: Density
+    paramValue: 100
+    minRange: 0
+    maxRange: 100
+  - paramName: HFReference
+    paramValue: 6867
+    minRange: 20
+    maxRange: 20000
+  - paramName: RoomLF
+    paramValue: 0
+    minRange: -10000
+    maxRange: 0
+  - paramName: LFReference
+    paramValue: 250
+    minRange: 20
+    maxRange: 1000

@@ -1,0 +1,33 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="zonesParentContainer" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-height: initial; justify-content: space-around; display: flex; flex-shrink: 0;">
+        <ui:VisualElement name="zonelabModeContainer" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; min-height: initial; justify-content: space-around;">
+            <ui:Toggle label="Zonelab Item Mode" name="zonelabItemModeToggle" value="false" binding-path="zonelabItemModeToggle" focusable="true" usage-hints="None" text="  Disabled: All Objects are Selectable" class="unity-button" style="margin-left: 3px; margin-top: 5px; margin-bottom: 5px; padding-top: 5px; padding-bottom: 5px; font-size: 14px; border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; justify-content: space-around; align-items: auto; -unity-text-align: middle-center; visibility: visible;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="zoneSettingsContainer" style="flex-direction: column; flex-shrink: 0;">
+            <ui:VisualElement name="zoneLinkItemToggleSliderRow" style="flex-direction: row; justify-content: space-between; margin-left: 5px; margin-right: 5px;">
+                <ui:VisualElement name="zoneLinkItemRelToggleContainer" style="flex-shrink: 0; flex-direction: row; justify-content: space-between; align-items: center;">
+                    <ui:Toggle label="Zone Relationships" name="zoneLinkItemRelationsToggle" binding-path="zoneLinkItemRelationsToggle" value="true" style="align-items: center; justify-content: space-around;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="sliderContainer" style="width: 199px; flex-shrink: 0; align-items: auto; justify-content: space-around; flex-direction: row; min-width: auto; margin-left: 5px;">
+                    <ui:Slider picking-mode="Ignore" label="ZI Opacity" value="0.75" high-value="1" name="zoneLinkItemOpacitySlider" show-input-field="true" binding-path="zoneLinkItemOpacitySlider" tooltip="Sets the opacity of the Zone collider boxes." style="flex-direction: row; align-items: stretch; justify-content: space-around; margin-right: 0; margin-left: 0; flex-shrink: 0; flex-basis: auto; width: 170px; left: -20px; flex-wrap: nowrap; min-width: auto; max-width: none; padding-right: 5px; padding-left: 0; flex-grow: 0; transform-origin: center; translate: 0 0; padding-top: 0; padding-bottom: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="buttonsContainer" style="width: auto; flex-shrink: 0; align-items: center; justify-content: space-between; flex-direction: row; min-width: auto; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                <ui:Button text="Enable All ZI Gizmos" display-tooltip-when-elided="true" name="enableAllZoneLinkItemGizmosButton" binding-path="enableAllZoneLinkItemGizmosButton" />
+                <ui:Button text="Disable All ZI Gizmos" display-tooltip-when-elided="true" name="disableAllZoneLinkItemGizmosButton" binding-path="disableAllZoneLinkItemGizmosButton" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="zoneLinkItemsLabelContainer" style="border-left-color: rgb(128, 128, 128); border-right-color: rgb(128, 128, 128); border-top-color: rgb(128, 128, 128); border-bottom-color: rgb(128, 128, 128); border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; min-height: initial; flex-grow: 0; justify-content: space-around; flex-shrink: 0;">
+            <ui:VisualElement name="zoneLinkItemsContainer" style="flex-shrink: 0; align-items: stretch;">
+                <ui:VisualElement name="zoneLinkItemsToggleRowContainer" style="flex-direction: row; flex-shrink: 0; width: auto; justify-content: flex-start; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                    <ui:Toggle label="ZoneLinkItems" name="zoneLinkItemsToggle" binding-path="zoneLinkItemsToggle" value="true" style="align-items: center;" />
+                    <ui:Toggle label="Zone3dSound" name="zone3dSoundToggle" binding-path="zone3dSoundToggle" value="true" style="align-items: center; display: none;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="zoneLinkItemsToggleRowContainer" style="flex-direction: row; flex-shrink: 0; width: auto; justify-content: space-between; margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px;">
+                    <ui:Toggle label="ZoneAmbience" name="zoneAmbienceToggle" binding-path="zoneAmbienceToggle" value="true" style="align-items: center;" />
+                    <ui:Toggle label="ZoneMusic" name="zoneMusicToggle" binding-path="zoneMusicToggle" value="true" style="align-items: center;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,0 +1,19 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="createPalletParentContainer" style="margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; flex-wrap: wrap;">
+        <ui:Label text="Add a Crate to the specified Pallet in the Asset Warehouse.\n\nDeleting Crates or Pallets from the Asset Warehouse is not recommended." display-tooltip-when-elided="true" name="addCrateLabel" tooltip="A Marrow mod is structured into a Pallet that can contain one or many Crates, like Avatar Crates, Level Crates and Spawnable Crates.  Pallets can also refer to the contents of other Pallets through dependences." style="white-space: normal; margin-bottom: 10px;" />
+        <ui:VisualElement name="crateInputsContainer" style="margin-bottom: 10px;">
+            <ui:TextField picking-mode="Ignore" label="Barcode" text="barcode" name="barcodeField" binding-path="barcodeField" readonly="true" />
+            <uie:ObjectField label="Pallet" name="createCratePalletField" type="SLZ.Marrow.Warehouse.Pallet, SLZ.Marrow" binding-path="createCratePalletField" />
+            <uie:EnumField label="Crate Type" value="LEVEL_CRATE" name="crateTypeEnumField" binding-path="crateTypeEnumField" type="SLZ.MarrowEditor.CreateCrateEditorWindow+CrateType, SLZ.Marrow.Editor" />
+            <ui:TextField picking-mode="Ignore" label="Crate Title" text="My Crate" name="crateTitleTextField" binding-path="crateTitleTextField" value="My Crate" />
+            <uie:ObjectField label="Asset Reference" name="assetReferenceField" binding-path="assetReferenceField" />
+        </ui:VisualElement>
+        <ui:IMGUIContainer name="imguiValidationContainer" />
+        <ui:VisualElement name="createButtonContainer" style="flex-direction: row; justify-content: space-between; margin-top: 10px;">
+            <ui:VisualElement>
+                <ui:Label text="Warning: The Crate Title cannot be changed later." display-tooltip-when-elided="true" style="white-space: normal;" />
+            </ui:VisualElement>
+            <ui:Button text="Create" display-tooltip-when-elided="true" name="createCrateButton" binding-path="createCrateButton" style="padding-left: 32px; padding-right: 32px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

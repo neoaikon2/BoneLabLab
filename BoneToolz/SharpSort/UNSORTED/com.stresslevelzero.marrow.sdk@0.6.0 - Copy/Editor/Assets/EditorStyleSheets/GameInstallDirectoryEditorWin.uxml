@@ -1,0 +1,36 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <Style src="project://database/Packages/com.stresslevelzero.marrow.sdk/Editor/Assets/EditorStyleSheets/MarrowStyles.uss?fileID=7433441132597879392&amp;guid=7ebe2475af85eae4ca7aeb90fab90275&amp;type=3#MarrowStyles" />
+    <ui:VisualElement name="gameInstallDirParentContainer" style="margin-left: 5px; margin-right: 5px; margin-top: 5px; margin-bottom: 5px; flex-grow: 1; flex-direction: column;">
+        <ui:Label text="Select your game install location from the list to import the game Content Pallet into the MarrowSDK." display-tooltip-when-elided="true" name="instructionsLabel" style="white-space: normal; margin-left: 10px; margin-right: 10px; margin-top: 5px; margin-bottom: 5px;" />
+        <ui:VisualElement name="foundLocationsContainer" style="border-left-width: 1px; border-right-width: 1px; border-top-width: 1px; border-bottom-width: 1px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-color: rgb(128, 128, 128); border-right-color: rgb(128, 128, 128); border-top-color: rgb(128, 128, 128); border-bottom-color: rgb(128, 128, 128); margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;">
+            <ui:ListView focusable="true" name="foundLocationsListView" binding-path="foundLocationsListView" show-alternating-row-backgrounds="ContentOnly" />
+        </ui:VisualElement>
+        <ui:VisualElement name="multipleFoundInstructionsContainer" style="align-items: center; -unity-text-align: upper-center;">
+            <ui:Label text="Multiple game installs found.  Select the one from the list that should be used by the MarrowSDK." display-tooltip-when-elided="true" name="multipleFoundInstructionsLabel" binding-path="multipleFoundInstructionsLabel" style="margin-left: 10px; font-size: 10px; -unity-text-align: upper-center; align-items: center;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="foundInLocationsContainer" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 0;">
+            <ui:Label text="Game Install Folder:" display-tooltip-when-elided="true" name="foundInLocationsHeaderLabel" binding-path="foundInLocationsHeaderLabel" style="-unity-font-style: bold; font-size: 14px; margin-top: 10px; margin-left: 10px; margin-right: 10px; margin-bottom: 2px;" />
+            <ui:Label display-tooltip-when-elided="true" name="foundInLocationsLabel" style="background-color: rgb(46, 46, 46); margin-left: 10px; margin-right: 10px; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-right: 5px; padding-top: 5px; padding-bottom: 5px;" />
+            <ui:VisualElement style="flex-direction: row; justify-content: center; align-items: center;">
+                <ui:VisualElement name="gameInstallRefreshImageContainer" style="width: 16px; height: 16px; margin-right: 5px;" />
+                <ui:Label text="Refresh the Asset Warehouse after any changes." display-tooltip-when-elided="true" name="refreshAWLabel" binding-path="refreshAWLabel" style="font-size: 10px; -unity-text-align: upper-center; align-items: center; margin-top: 5px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="confirmButtonContainer" style="align-items: center; flex-grow: 0; margin-top: 20px; margin-bottom: 20px;">
+            <ui:Button text="Confirm" display-tooltip-when-elided="true" name="doneButton" style="flex-shrink: 1; font-size: 18px; padding-left: 12px; padding-right: 12px; padding-top: 6px; padding-bottom: 6px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+        </ui:VisualElement>
+        <ui:Foldout text="Not seeing your game install location?  Expand for Advanced Search Options." name="advancedOptionsFoldout" value="false" binding-path="advancedOptionsFoldout" class="linkCursor" style="font-size: 10px;">
+            <ui:VisualElement name="installLocHintContainer" style="align-items: center; margin-bottom: 10px; margin-top: 10px;">
+                <ui:Label text="Browse for your install location manually" display-tooltip-when-elided="true" name="browseLocationLabel" binding-path="notSeeingLocationLabel" style="margin-bottom: 5px; font-size: 16px; -unity-font-style: bold;" />
+                <ui:Button text="Browse" display-tooltip-when-elided="true" name="searchGameManualButton" binding-path="searchGameManualButton" style="font-size: 14px; width: 100px; padding-top: 3px; padding-bottom: 3px;" />
+                <ui:VisualElement name="searchGameFolderContainer" style="align-items: center; margin-top: 10px;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="searchGameFolderContainer" style="align-items: center; margin-top: 10px;">
+                <ui:Label text="Or Perform a full fixed drive search" display-tooltip-when-elided="true" name="notSeeingLocationLabel" binding-path="notSeeingLocationLabel" style="margin-bottom: 5px; font-size: 16px; -unity-font-style: bold;" />
+                <ui:VisualElement name="findButtonsContainer" style="flex-direction: row; margin-bottom: 20px; flex-shrink: 0;">
+                    <ui:Button text="Auto-Find Game" display-tooltip-when-elided="true" name="searchGameFolderButton" binding-path="searchGameFolderButton" style="font-size: 14px; width: 200px; padding-top: 3px; padding-bottom: 3px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:Foldout>
+    </ui:VisualElement>
+</ui:UXML>
