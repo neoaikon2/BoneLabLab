@@ -12,24 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e577ead1b08f5b16bbf47483da1626d, type: 3}
   m_Name: 0.40 Cal
   m_EditorClassIdentifier:
-  projectile: {fileID: 11400000, guid: d9a96ba094594c3488c2363edea25ab1, type: 2}
+  projectile: {fileID: 11400000, guid: 671cdc4a5d43c604b905aa216bc239ab, type: 2}
   cartridgeSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-7dbf-4797-b9c5-1aa734304361
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}
   cartridgeCaseSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-40c6-4d2d-b18b-589a34304361
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36d99ff80fe02e88761ff6d668dcce3, type: 3}
+  m_Name: ava_Cloth_Light_FootLand
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: c7a61c4573756a04c8106e0ad522d623, type: 3}
+  - {fileID: 8300000, guid: 535df207cefa6634a9686688af53453c, type: 3}
+  - {fileID: 8300000, guid: a266f8475a163624e9faf51ab725f571, type: 3}
+  - {fileID: 8300000, guid: 0caa47bcc8c925f4ebae3e1a2b0d2cd5, type: 3}
+  - {fileID: 8300000, guid: d3969da112e1aba4cb10f1234264bf47, type: 3}
+  - {fileID: 8300000, guid: c3185a135d022e944b8bbedecabcd8cf, type: 3}

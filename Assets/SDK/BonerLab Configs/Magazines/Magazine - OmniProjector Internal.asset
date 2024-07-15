@@ -16,11 +16,6 @@ MonoBehaviour:
     crateRef:
       _barcode:
         _id: null.empty.barcode
-        generated: 0
-      _version:
-      _palletBarcode:
-        _id: null.empty.barcode
-        generated: 0
     policyData: {fileID: 0}
   platform: OMNI
   rounds: 15

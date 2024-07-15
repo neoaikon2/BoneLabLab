@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da29abf0dd58da209ec414fa7049aa61, type: 3}
+  m_Name: Default Surface
+  m_EditorClassIdentifier:
+  PenetrationResistance: 0.9
+  megaPascal: 100
+  isFlammable: 0
+  fireResistance: 0
+  ParicleColorTint: {r: 1, g: 1, b: 1, a: 1}
+  physicMaterial: {fileID: 0}
+  impactEffectSpawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-acf4-423b-b9e8-029548617264
+    policyData: {fileID: 11400000, guid: e51e12d28102b8d41859453c8d8a6132, type: 2}
+  bulletDecalSpawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-df6c-4156-9a6a-b09541747461
+    policyData: {fileID: 11400000, guid: ceb9b6e0d090ff6478d02ed90e01b75d, type: 2}
+  BulletDecal:
+  - material: {fileID: 2100000, guid: b5a1e2c870807864694dbac8c20b335e, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: afd82f107bcc1d34ab2facdb008343f0, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: 0a44ebb9d33d94149814c8a55503723e, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  BluntDecal:
+  - material: {fileID: 2100000, guid: 793a4ad29cbc3db41abb2e5fbd414383, type: 2}
+    size: 0.1
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: 495dedc3a1a0be548988f80920af8fe9, type: 2}
+    size: 0.1
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: 9f6d1394764800346aea314041377f16, type: 2}
+    size: 0.1
+    atlasData: {fileID: 0}
+    useVertexColor: 0

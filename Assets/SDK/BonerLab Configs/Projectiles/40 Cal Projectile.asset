@@ -16,11 +16,6 @@ MonoBehaviour:
     crateRef:
       _barcode:
         _id: c1534c5a-00d0-44de-ab14-19e850726f6a
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
     policyData: {fileID: 0}
   mass: 0.01
   startVelocity: 350

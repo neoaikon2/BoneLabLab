@@ -9,7 +9,11 @@ public class PlayerTeleport : ZoneLinkItem
 
 	public bool useRotation;
 
-	private RigManager _rigManager;	
+	private RigManager _rigManager;
+
+	protected override void OnEnter(MarrowEntity activatorEntity)
+	{
+	}
 
 	private void TeleportPlayer(MarrowEntity activatorEntity)
 	{

@@ -16,11 +16,6 @@ MonoBehaviour:
     crateRef:
       _barcode:
         _id: null.empty.barcode
-        generated: 1
-      _version: null.empty.barcode
-      _palletBarcode:
-        _id: null.empty.barcode
-        generated: 1
-    policyData: {fileID: 11400000, guid: 3076e1b53ae6ab149902489f662f0bd6, type: 2}
+    policyData: {fileID: 11400000, guid: 33a1dabcbdbe96a4887ad76ba1e8929b, type: 2}
   platform: MINECART
   rounds: 999999

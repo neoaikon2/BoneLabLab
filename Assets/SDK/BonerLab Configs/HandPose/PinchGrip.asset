@@ -12,28 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8dee6e90fb12c2b7cf1301d97ee90d8, type: 3}
   m_Name: PinchGrip
   m_EditorClassIdentifier:
-  primaryAxis:
-    x: 0
-    y: 0
-    z: 1
-  secondaryAxis:
-    x: 0
-    y: 1
-    z: 0
-  wristOffset:
-    x: 0
-    y: 0
-    z: 0
+  primaryAxis: {x: 0, y: 0, z: 1}
+  secondaryAxis: {x: 0, y: 1, z: 0}
+  wristOffset: {x: 0, y: 0, z: 0}
   swingRotationLimit: 30
   twistRotationLimit: 30
   poseData: []
-  leftOffsetRotation:
-    x: 0
-    y: 0
-    z: 0
-    w: 0
-  rightOffsetRotation:
-    x: 0
-    y: 0
-    z: 0
-    w: 0
+  leftOffsetRotation: {x: 0, y: 0, z: 0, w: 0}
+  rightOffsetRotation: {x: 0, y: 0, z: 0, w: 0}

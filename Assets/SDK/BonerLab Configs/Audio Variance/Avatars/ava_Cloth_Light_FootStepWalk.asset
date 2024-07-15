@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36d99ff80fe02e88761ff6d668dcce3, type: 3}
+  m_Name: ava_Cloth_Light_FootStepWalk
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: f0416cbcd4ec2364c91b626c407f31dc, type: 3}
+  - {fileID: 8300000, guid: 61d20ac154a3eb84e8ea9eeebcf26e24, type: 3}
+  - {fileID: 8300000, guid: 608da59a1eeaae946aec986cfdbc8afc, type: 3}
+  - {fileID: 8300000, guid: 11b12bf775629b14688846e2904456d4, type: 3}
+  - {fileID: 8300000, guid: 5ed8d5ca73288fa468ced73aa97d3bf0, type: 3}
+  - {fileID: 8300000, guid: 8f3651309fa8747409c3a83fe1a231e7, type: 3}

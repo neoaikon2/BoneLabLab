@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c632c5c6ce09ce68cf3a5aa465261389, type: 3}
   m_Name: NullBody_LumberJack
   m_EditorClassIdentifier:
+  defaultSavePath: /_BoneWorks/Data/BaseEnemyConfigs/
   puppetState: 0
   restingRange: 5
   freezeWhileResting: 1
   homeIsPost: 0
   activeRange: 7
   roamSpeed: 1.5
-  roamRange:
-    x: 15
-    y: 15
+  roamRange: {x: 15, y: 15}
   roamAngSpeed: 180
   roamFrequency: 0.2
   roamWanders: 0
@@ -44,22 +43,14 @@ MonoBehaviour:
   clipSize: 1
   burstSize: 3
   desiredGunDistance: 4
-  baseColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
-  agroColor:
-    r: 1
-    g: 1
-    b: 1
-    a: 1
+  baseColor: {r: 1, g: 1, b: 1, a: 1}
+  agroColor: {r: 1, g: 1, b: 1, a: 1}
   fwdThresh: 0
   forcePath: 1
   sensorSettings:
     blockVisionRaycast:
       serializedVersion: 2
-      m_Bits: 8192
+      m_Bits: 1
     visionFov: 90
   healthSettings:
     maxHitPoints: 4
@@ -108,5 +99,4 @@ MonoBehaviour:
     legRt: 1
     armLf: 1
     armRt: 1
-  mentalState: 0
   locoState: 0

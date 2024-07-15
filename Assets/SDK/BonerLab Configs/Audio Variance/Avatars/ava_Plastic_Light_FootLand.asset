@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d36d99ff80fe02e88761ff6d668dcce3, type: 3}
+  m_Name: ava_Plastic_Light_FootLand
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: dd5376293ac3ac94a97d3aef03285bc4, type: 3}
+  - {fileID: 8300000, guid: 62c84bc40ddaed145a93da3c14173a4c, type: 3}
+  - {fileID: 8300000, guid: d6710c63bd3ceea4b86966b12aa980fe, type: 3}
+  - {fileID: 8300000, guid: bf55d5e87ea9e58438787220dab0494e, type: 3}
+  - {fileID: 8300000, guid: 2b29f5e72487a4a499f71db0f2e88896, type: 3}
+  - {fileID: 8300000, guid: e4f0d878825001b4ab61eb277c7ec471, type: 3}

@@ -16,11 +16,6 @@ MonoBehaviour:
     crateRef:
       _barcode:
         _id: SLZ.BONELAB.Core.Spawnable.ProjectileFreezeBallistics
-        generated: 1
-      _version: 0.0.3
-      _palletBarcode:
-        _id: SLZ.BONELAB.Core
-        generated: 1
     policyData: {fileID: 0}
   mass: 0.021
   startVelocity: 75

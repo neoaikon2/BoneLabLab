@@ -12,24 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e577ead1b08f5b16bbf47483da1626d, type: 3}
   m_Name: 5
   m_EditorClassIdentifier:
-  projectile: {fileID: 11400000, guid: e00e506f465a8e848a5920c46643d066, type: 2}
+  projectile: {fileID: 11400000, guid: 675832d744609194cb7397993c49fb0b, type: 2}
   cartridgeSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-7538-4397-8ad7-a15a352e3536
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}
   cartridgeCaseSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-b100-49d5-bc7f-fc4f352e3536
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}

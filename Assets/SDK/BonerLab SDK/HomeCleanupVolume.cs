@@ -9,6 +9,14 @@ public class HomeCleanupVolume : ZoneItem
 	[Header("This is explicitly for use in Home to deal with the top of the arm tube.  Use elsewhere is unwise.")]
 	public List<MarrowEntity> _entities;
 
+	protected override void OnEnter(MarrowEntity entity)
+	{
+	}
+
+	protected override void OnExit(MarrowEntity entity)
+	{
+	}
+
 	public void DespawnObjects()
 	{
 	}

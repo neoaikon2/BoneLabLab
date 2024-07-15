@@ -22,7 +22,11 @@ public class SwingJointManager : ZoneLinkItem
 	private void Awake()
 	{
 	}
-	
+
+	protected override void OnEnter(MarrowEntity Entity)
+	{
+	}
+
 	[ContextMenu("Start Stuff")]
 	private void StartStuff()
 	{

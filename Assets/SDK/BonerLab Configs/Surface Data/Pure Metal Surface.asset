@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da29abf0dd58da209ec414fa7049aa61, type: 3}
+  m_Name: Pure Metal Surface
+  m_EditorClassIdentifier:
+  PenetrationResistance: 1
+  megaPascal: Infinity
+  isFlammable: 0
+  fireResistance: 0
+  ParicleColorTint: {r: 1, g: 1, b: 1, a: 1}
+  physicMaterial: {fileID: 13400000, guid: 0d62ab06e5091b14a9b11d9afcc75b36, type: 2}
+  impactEffectSpawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-acf4-423b-b9e8-029548617264
+    policyData: {fileID: 11400000, guid: e51e12d28102b8d41859453c8d8a6132, type: 2}
+  bulletDecalSpawnable:
+    crateRef:
+      _barcode:
+        _id: c1534c5a-df6c-4156-9a6a-b09541747461
+    policyData: {fileID: 11400000, guid: ceb9b6e0d090ff6478d02ed90e01b75d, type: 2}
+  BulletDecal:
+  - material: {fileID: 2100000, guid: 099a4407802c78043a04018620fab2bd, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  BluntDecal:
+  - material: {fileID: 2100000, guid: 505cd94bf374900489ffe3662d7da2d5, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: 8e63cfa4b720fa0499c93b4782028336, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: 330bf13cf2fcf7042af71dc71f47495b, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0

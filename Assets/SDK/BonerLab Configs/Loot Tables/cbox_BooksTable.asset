@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87af7f299ae4d5075667ed003fd5ee11, type: 3}
+  m_Name: cbox_BooksTable
+  m_EditorClassIdentifier:
+  items:
+  - percentage: 26
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.BookA
+      policyData: {fileID: 0}
+  - percentage: 26
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.BookB
+      policyData: {fileID: 0}
+  - percentage: 26
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.BookC
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.SMPaperFolder
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderBWCommand
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderFantasyLand
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderIncinerationLog
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderMelonLog
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderMonodisk
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderMonogon
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderMuseumLog
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderMythOS
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderProject4
+      policyData: {fileID: 0}
+  - percentage: 2
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.PropPaperFolderVoidLog
+      policyData: {fileID: 0}

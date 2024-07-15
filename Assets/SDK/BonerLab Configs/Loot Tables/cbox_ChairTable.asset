@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87af7f299ae4d5075667ed003fd5ee11, type: 3}
+  m_Name: cbox_ChairTable
+  m_EditorClassIdentifier:
+  items:
+  - percentage: 85
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.CafeChair
+      policyData: {fileID: 0}
+  - percentage: 15
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.ChairWoodenA
+      policyData: {fileID: 0}

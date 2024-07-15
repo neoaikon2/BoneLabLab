@@ -16,12 +16,7 @@ MonoBehaviour:
     crateRef:
       _barcode:
         _id: SLZ.BONELAB.CORE.Spawnable.ProjectilePlasmaSLZBallisticsVariant
-        generated: 1
-      _version: 0.0.3
-      _palletBarcode:
-        _id: SLZ.BONELAB.CORE
-        generated: 1
-    policyData: {fileID: 11400000, guid: 3e21fe88b6d71e54f98d9f32dd3a023c, type: 2}
+    policyData: {fileID: 11400000, guid: 2bfa596bbca55d843be08cc1790a2e8c, type: 2}
   mass: 0.008
   startVelocity: 150
   AttackType: 9

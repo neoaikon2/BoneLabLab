@@ -12,24 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e577ead1b08f5b16bbf47483da1626d, type: 3}
   m_Name: Freeze cart
   m_EditorClassIdentifier:
-  projectile: {fileID: 11400000, guid: e1f13355db3163b459c65a72d82399b5, type: 2}
+  projectile: {fileID: 11400000, guid: 2d5e8c557cd33d543baccd6b593b0377, type: 2}
   cartridgeSpawnable:
     crateRef:
       _barcode:
         _id: SLZ.BONELAB.Content.Spawnable.CartridgePlasma
-        generated: 1
-      _version: 0.0.3
-      _palletBarcode:
-        _id: SLZ.BONELAB.Content
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}
   cartridgeCaseSpawnable:
     crateRef:
       _barcode:
         _id: SLZ.BONELAB.Content.Spawnable.CartridgePlasmaCase
-        generated: 1
-      _version: 0.0.3
-      _palletBarcode:
-        _id: SLZ.BONELAB.Content
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}

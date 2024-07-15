@@ -16,11 +16,6 @@ MonoBehaviour:
     crateRef:
       _barcode:
         _id: c1534c5a-eae9-4837-9bf2-2fd94d616761
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
-    policyData: {fileID: 11400000, guid: 3076e1b53ae6ab149902489f662f0bd6, type: 2}
+    policyData: {fileID: 11400000, guid: 33a1dabcbdbe96a4887ad76ba1e8929b, type: 2}
   platform: M9
   rounds: 15

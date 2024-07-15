@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87af7f299ae4d5075667ed003fd5ee11, type: 3}
+  m_Name: museumBasement_giftTable
+  m_EditorClassIdentifier:
+  items:
+  - percentage: 25
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: SLZ.BONELAB.Content.Spawnable.TimeCouch
+      policyData: {fileID: 0}
+  - percentage: 25
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: c1534c5a-0c71-4ce9-a9bb-af8a50726f70
+      policyData: {fileID: 0}
+  - percentage: 25
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: c1534c5a-6a57-477d-8bcd-e2dc53686f70
+      policyData: {fileID: 0}
+  - percentage: 25
+    spawnable:
+      crateRef:
+        _barcode:
+          _id: fa534c5a83ee4ec6bd641fec424c4142.Spawnable.Plunger
+      policyData: {fileID: 0}

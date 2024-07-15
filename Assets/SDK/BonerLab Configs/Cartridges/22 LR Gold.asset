@@ -12,24 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e577ead1b08f5b16bbf47483da1626d, type: 3}
   m_Name: 22 LR Gold
   m_EditorClassIdentifier:
-  projectile: {fileID: 11400000, guid: f9bf0c02c7c7b094391b3fa027346e85, type: 2}
+  projectile: {fileID: 11400000, guid: 2ad79727db1ae5e4181781cc4fb941ae, type: 2}
   cartridgeSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-89ec-414f-a99b-6b3043617274
-        generated: 1
-      _version: 0.0.0
-      _palletBarcode:
-        _id: fa534c5a-8682-4713-8f50-c62e424c4144
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}
   cartridgeCaseSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-d181-417c-b4d0-673d43617274
-        generated: 1
-      _version: 0.0.0
-      _palletBarcode:
-        _id: fa534c5a-8682-4713-8f50-c62e424c4144
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}

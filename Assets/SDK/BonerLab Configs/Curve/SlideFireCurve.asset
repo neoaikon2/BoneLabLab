@@ -20,6 +20,7 @@ MonoBehaviour:
       value: 0
       inSlope: 2.9380615
       outSlope: 2.9380615
+      tangentMode: 0
       weightedMode: 2
       inWeight: 0
       outWeight: 0.2630058
@@ -28,6 +29,7 @@ MonoBehaviour:
       value: 1
       inSlope: 0.12257514
       outSlope: 0.12257514
+      tangentMode: 0
       weightedMode: 3
       inWeight: 0.20086706
       outWeight: 0.14186852

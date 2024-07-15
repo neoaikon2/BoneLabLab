@@ -12,24 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e577ead1b08f5b16bbf47483da1626d, type: 3}
   m_Name: 7.62x51mm NATO
   m_EditorClassIdentifier:
-  projectile: {fileID: 11400000, guid: cfeb35a083590f24e8629f7b3947051c, type: 2}
+  projectile: {fileID: 11400000, guid: 13259fb610846da4384817022c4e7b6b, type: 2}
   cartridgeSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-d440-472e-a58e-086d372e3632
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}
   cartridgeCaseSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-255d-46f1-90af-fa63372e3632
-        generated: 1
-      _version: 0.0.1
-      _palletBarcode:
-        _id: fa534c5a-83ee-4ec6-bd64-1fec424c4142
-        generated: 1
-    policyData: {fileID: 11400000, guid: e37456b4080c3154d9fd8d721375e695, type: 2}
+    policyData: {fileID: 11400000, guid: adbd06e1622d75e4d865556f03cffccd, type: 2}
