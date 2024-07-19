@@ -7,15 +7,20 @@ using UnityEngine.Serialization;
 
 namespace SLZ.Bonelab.VoidLogic
 {
+	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Particle Emission Controller")]
 	[Obsolete("This interface is not yet considered stable. Use at your own risk!")]
 	[Support(SupportFlags.CowboySupported, null)]
-	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Particle Emission Controller")]
-	public class ParticleEmissionController : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
+	public class ParticleEmissionController : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver, IVoidLogicActuator
 	{
-		[Tooltip("Previous node in the chain")]
-		[Interface(typeof(IVoidLogicSource), false)]
+		[Obsolete("Replace with `_previousConnection`")]
 		[SerializeField]
+		[Interface(typeof(IVoidLogicSource), false)]
+		[Tooltip("Previous node in the chain")]
 		private MonoBehaviour _previousNode;
+
+		[Tooltip("Previous node in the chain")]
+		[SerializeField]
+		private OutputPortReference _previousConnection;
 
 		[FormerlySerializedAs("ParticleSystems")]
 		[SerializeField]
@@ -38,6 +43,14 @@ namespace SLZ.Bonelab.VoidLogic
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
 
 		public PortMetadata PortMetadata => throw new NotImplementedException();
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Reset()
 		{
@@ -71,18 +84,28 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+		public bool TryGetInputConnection(uint inputIndex, out OutputPortReference connectedPort)
 		{
-			input = null;
+			connectedPort = default(OutputPortReference);
 			return false;
 		}
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
 		{
 			return false;
 		}
 
 		public void Actuate(ref NodeState nodeState)
+		{
+			throw new NotImplementedException();
+		}
+
+		public void OnBeforeSerialize()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void OnAfterDeserialize()
 		{
 			throw new NotImplementedException();
 		}

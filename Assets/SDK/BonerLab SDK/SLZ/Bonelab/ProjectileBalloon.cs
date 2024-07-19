@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Combat;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Pool;
-using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

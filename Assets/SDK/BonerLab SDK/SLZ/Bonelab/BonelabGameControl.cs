@@ -1,11 +1,8 @@
-using System;
 using System.Collections.Generic;
 using SLZ.Bonelab.SaveData;
-using SLZ.Marrow.Data;
+using SLZ.Marrow;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace SLZ.Bonelab
 {
@@ -27,21 +24,13 @@ namespace SLZ.Bonelab
 		[field: SerializeField]
 		public SaveFeatures SaveFeatures { get; protected set; }
 
-		[Tooltip("Crate reference to the loading screen level")]
+		[Tooltip("Crate reference to a fadeout VFX override, if any")]
 		[field: SerializeField]
-		public LevelCrateReference LoadScreenLevel { get; protected set; }
+		public SpawnableCrateReference FadeoutVFXOverride { get; protected set; }
 
 		[Tooltip("Crate references to levels to possibly load")]
 		[field: SerializeField]
 		public List<LevelCrateReference> LevelJumpList { get; protected set; }
-
-		[field: FormerlySerializedAs("rm")]
-		[field: SerializeField]
-		[field: Obsolete("This shouldn't be exported. See note in source code.")]
-		public RigManager PlayerRigManager { get; protected set; }
-
-		[field: SerializeField]
-		public Spawnable VfxFadeOutSpawnable { get; protected set; }
 
 		[field: SerializeField]
 		protected List<string> PriorLevels { get; set; }
@@ -61,15 +50,6 @@ namespace SLZ.Bonelab
 		public int Progress { get; protected set; }
 
 		public bool IsResuming { get; protected set; }
-
-		public static bool IsCompleted(PlayerProgression progression, string levelKey)
-		{
-			return false;
-		}
-
-		public static void SetCompleted(PlayerProgression progression, string levelKey, bool completed)
-		{
-		}
 
 		public virtual void Awake()
 		{
@@ -92,10 +72,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void SetProgress(int progress)
-		{
-		}
-
-		public void FinalizeAmmo()
 		{
 		}
 

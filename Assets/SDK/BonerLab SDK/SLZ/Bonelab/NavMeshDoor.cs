@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.Obsolete;
-using SLZ.VFX;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab

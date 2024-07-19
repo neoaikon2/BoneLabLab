@@ -1,5 +1,4 @@
-using SLZ.Interaction;
-using SLZ.Rig;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -46,8 +45,6 @@ namespace SLZ.Bonelab
 			left = 3,
 			right = 4
 		}
-
-		public RigManager manager;
 
 		public ControllerTutorialArt[] leftControllerArt;
 
@@ -101,6 +98,14 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		private void OnLevelLoad()
+		{
+		}
+
+		private void OnLevelUnload()
+		{
+		}
+
 		private void Start()
 		{
 		}
@@ -108,14 +113,6 @@ namespace SLZ.Bonelab
 		private bool GetSettings()
 		{
 			return false;
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		private void OnDisable()
-		{
 		}
 
 		public void GrippedLeft(HandReciever handReciever)

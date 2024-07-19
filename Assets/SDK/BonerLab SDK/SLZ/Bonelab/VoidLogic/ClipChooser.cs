@@ -21,8 +21,8 @@ namespace SLZ.Bonelab.VoidLogic
 		[field: SerializeField]
 		public int ClipIndex { get; set; }
 
-		[field: HideInInspector]
 		[field: SerializeField]
+		[field: HideInInspector]
 		public int RandomSeed { get; set; }
 
 		public bool TryChooseClip(EdgeType edgeType, out ClipPair clipPair)

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.VoidLogic;
 using SLZ.SFX;
-using SLZ.VFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -108,8 +108,8 @@ namespace SLZ.Bonelab
 		[Range(10f, 22000f)]
 		public float cutoffFreqHigh;
 
-		[Header("AI")]
 		[HideInInspector]
+		[Header("AI")]
 		public List<AgentLinkControl> omniAi;
 
 		public bool omniRoam;

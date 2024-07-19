@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001057338d542498d30c555063f47d5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 80455f5ce5030ab827e259daca1420f5, type: 3}
   m_Name: Medium Ammo Group
   m_EditorClassIdentifier:
   KeyName: medium
   cartridges:
-  - {fileID: 11400000, guid: e1cc19c86be47f140a0cb32347a655b5, type: 2}
-  - {fileID: 11400000, guid: 44b620e1f80734141a3278323ef4256c, type: 2}
-  - {fileID: 11400000, guid: 3f209372ca311134fa92e329bbc8823f, type: 2}
+  - {fileID: 11400000, guid: a58e59517ef1e7b4f9f328eddd0acdc4, type: 2}
+  - {fileID: 11400000, guid: 3278f670249858242a5077bc0ab615dc, type: 2}
+  - {fileID: 11400000, guid: 2fec60fe6b85dea4d96c7396abc22324, type: 2}

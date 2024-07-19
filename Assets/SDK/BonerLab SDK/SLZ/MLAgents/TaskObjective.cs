@@ -13,8 +13,8 @@ namespace SLZ.MLAgents
 		public delegate void OnProxChangeDelegate(float newVal);
 
 		public delegate void OnGoalChangeDelegate(float newVal);
-		[Header("Radii Section")]
 		[Tooltip("The collider component name that will tell task that contestant has entered")]
+		[Header("Radii Section")]
 		public string vehicleComponentCpName;
 
 		[Tooltip("Goal is the inner radius")]

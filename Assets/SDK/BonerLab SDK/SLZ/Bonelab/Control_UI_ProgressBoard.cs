@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.SaveData;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.SFX;
 using TMPro;
@@ -117,6 +117,8 @@ namespace SLZ.Bonelab
 
 		private int lastSocketIndex;
 
+		public bool inVolume;
+
 		private static PlayerProgression p => null;
 
 		private void OnEnable()
@@ -130,12 +132,20 @@ namespace SLZ.Bonelab
 		private void Start()
 		{
 		}
+
+		public void INVOLUME(bool inOut)
+		{
+		}
 		private IEnumerator BoardUpdateLoop()
 		{
 			return null;
 		}
 
 		public void UPDATEDBOARD()
+		{
+		}
+
+		public void CheckActivation()
 		{
 		}
 

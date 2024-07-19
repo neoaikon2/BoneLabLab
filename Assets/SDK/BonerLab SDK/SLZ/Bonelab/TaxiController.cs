@@ -3,13 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
-using SLZ.VRMK;
-using SLZ.Vehicle;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -58,8 +56,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_off;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Idle  -  1")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_idle;
 
 		[InspectorDisplayName("Position Damper")]
@@ -88,8 +86,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_slow;
 
-		[Header("Brake  -  4")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Brake  -  4")]
 		public float velocity_brake;
 
 		[InspectorDisplayName("Position Damper")]

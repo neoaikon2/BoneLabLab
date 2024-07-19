@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Lava Gang
   artist:
-  audioClip: {fileID: 8300000, guid: 1c5af9e26c02b8540bc4ed9278c9fd17, type: 3}
+  audioClip: {fileID: 8300000, guid: f0b932627691eda4185fd192e183c537, type: 3}

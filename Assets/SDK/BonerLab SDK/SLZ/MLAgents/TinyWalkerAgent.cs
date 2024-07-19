@@ -8,8 +8,8 @@ namespace SLZ.MLAgents
 {
 	public class TinyWalkerAgent : Agent
 	{
-		[SerializeField]
 		[Range(0.1f, 10f)]
+		[SerializeField]
 		[Header("Walk Speed")]
 		private float m_TargetWalkingSpeed;
 

@@ -1,3 +1,4 @@
+using System;
 using SLZ.Algorithms.Unity;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
@@ -7,12 +8,17 @@ namespace SLZ.Bonelab.VoidLogic
 {
 	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Line Renderer One-off Sink")]
 	[Support(SupportFlags.CowboySupported, "This is a one-off. Your bugs are your own unless or until we have a plan to generalize this into Marrow.")]
-	public sealed class OneOffLineRendererSink : MonoBehaviour, IVoidLogicSink, IVoidLogicNode
+	public sealed class OneOffLineRendererSink : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver
 	{
-		[Tooltip("Previous node in the chain")]
-		[Interface(typeof(IVoidLogicSource), false)]
 		[SerializeField]
+		[Interface(typeof(IVoidLogicSource), false)]
+		[Obsolete("Replace with `_previousConnection`")]
+		[Tooltip("Previous node in the chain")]
 		private MonoBehaviour _previousNode;
+
+		[Tooltip("Previous node in the chain")]
+		[SerializeField]
+		private OutputPortReference _previousConnection;
 
 		private float _priorValue;
 
@@ -69,15 +75,23 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		[field: ReadOnly(false)]
 		[field: SerializeField]
+		[field: ReadOnly(false)]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
 		public int InputCount => 0;
 
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
 
-		public PortMetadata PortMetadata => throw new System.NotImplementedException();
+		public PortMetadata PortMetadata => throw new NotImplementedException();
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Awake()
 		{
@@ -119,15 +133,25 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+		public bool TryGetInputConnection(uint inputIndex, out OutputPortReference connectedPort)
 		{
-			input = null;
+			connectedPort = default(OutputPortReference);
 			return false;
 		}
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
 		{
 			return false;
+		}
+
+		public void OnBeforeSerialize()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void OnAfterDeserialize()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

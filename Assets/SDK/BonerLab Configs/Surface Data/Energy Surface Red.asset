@@ -16,17 +16,17 @@ MonoBehaviour:
   megaPascal: 5
   isFlammable: 0
   fireResistance: 100
-  ParicleColorTint: {r: 2.2518575, g: 0.2711661, b: 0.2711661, a: 1}
-  physicMaterial: {fileID: 13400000, guid: d01bc85202846ee4fb9d9e3858dcf826, type: 2}
+  ParicleColorTint: {r: 2.2689862, g: 0.022689842, b: 0.022689842, a: 1}
+  physicMaterial: {fileID: 13400000, guid: b8066892211ca2244b9d02afa65dd16b, type: 2}
   impactEffectSpawnable:
     crateRef:
       _barcode:
         _id: SLZ.BONELAB.Core.VFX.ImpactEnergyZap
-    policyData: {fileID: 11400000, guid: e51e12d28102b8d41859453c8d8a6132, type: 2}
+    policyData: {fileID: 11400000, guid: a1c90e2b5be53c64e98cbcee28dbda0c, type: 2}
   bulletDecalSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-df6c-4156-9a6a-b09541747461
-    policyData: {fileID: 11400000, guid: ceb9b6e0d090ff6478d02ed90e01b75d, type: 2}
+    policyData: {fileID: 11400000, guid: 87ee0f63eb4d8c24883d3a496c9d4c46, type: 2}
   BulletDecal: []
   BluntDecal: []

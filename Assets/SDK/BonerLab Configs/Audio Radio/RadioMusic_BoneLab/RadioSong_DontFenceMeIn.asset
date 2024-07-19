@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Don't Fence Me In
   artist:
-  audioClip: {fileID: 8300000, guid: a6d8f3342fc31094392627205c668fec, type: 3}
+  audioClip: {fileID: 8300000, guid: 98625fe308b3b4449a186e11fde9c64c, type: 3}

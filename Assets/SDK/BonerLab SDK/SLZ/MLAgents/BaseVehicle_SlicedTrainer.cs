@@ -8,8 +8,8 @@ namespace SLZ.MLAgents
 {
 	public class BaseVehicle_SlicedTrainer : Agent
 	{
-		[Header("Reward Section")]
 		[Header("Base Vehicle Trainer Class")]
+		[Header("Reward Section")]
 		public bool log_cum_reward;
 
 		[Header("Base Agent Components")]

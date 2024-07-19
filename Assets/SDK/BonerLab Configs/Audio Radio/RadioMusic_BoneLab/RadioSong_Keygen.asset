@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Keygen
   artist:
-  audioClip: {fileID: 8300000, guid: f29a9283d5ef7654c8739d70cf3dbef5, type: 3}
+  audioClip: {fileID: 8300000, guid: a0230a007e9177f4a9a503d3df135d4b, type: 3}

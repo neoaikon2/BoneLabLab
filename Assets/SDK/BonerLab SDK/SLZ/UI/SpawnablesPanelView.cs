@@ -1,10 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab;
 using SLZ.Bonelab.SaveData;
 using SLZ.Marrow;
@@ -19,6 +15,7 @@ namespace SLZ.UI
 		public delegate void SelectSpawnableDelegate(SpawnableCrate data);
 
 		public delegate void SelectUtilityModeDelegate(UtilityModes mode);
+
 		[Header("Buttons")]
 		public ButtonReferenceHolder[] tabButtons;
 
@@ -108,7 +105,7 @@ namespace SLZ.UI
 
 		private List<string> palletStripTitles;
 
-		private List<string> ammoBarcodes;
+		private List<SpawnableCrateReference> ammoBarcodes;
 
 		private bool firstActivation;
 
@@ -233,9 +230,9 @@ namespace SLZ.UI
 		private void UpdateTagPageText(int idx, int total)
 		{
 		}
-		private UniTaskVoid LoadFavorites()
+
+		private void LoadFavorites()
 		{
-			return default(UniTaskVoid);
 		}
 
 		public void SaveFavorites()

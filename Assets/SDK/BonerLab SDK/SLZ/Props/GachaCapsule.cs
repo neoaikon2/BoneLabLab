@@ -8,10 +8,9 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab;
 using SLZ.Bonelab.SaveData;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.VFX;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -47,16 +46,16 @@ namespace SLZ.Props
 
 		public AnimationCurve hapticsCurve;
 
-		[Range(0f, 1f)]
 		[SerializeField]
+		[Range(0f, 1f)]
 		private float amplitudeMin;
 
 		[SerializeField]
 		[Range(0f, 1f)]
 		private float amplitudeMax;
 
-		[Range(0f, 2000f)]
 		[SerializeField]
+		[Range(0f, 2000f)]
 		private float frequencyMin;
 
 		[Range(0f, 2000f)]

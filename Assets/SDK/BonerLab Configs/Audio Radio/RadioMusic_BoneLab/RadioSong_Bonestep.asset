@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: BoneStep
   artist:
-  audioClip: {fileID: 8300000, guid: fdd0a55a093d97844948874a0e0ccc73, type: 3}
+  audioClip: {fileID: 8300000, guid: 58e95759d336f6240948bf63216cebf9, type: 3}

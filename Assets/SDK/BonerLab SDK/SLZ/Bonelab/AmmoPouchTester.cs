@@ -1,9 +1,5 @@
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
@@ -24,23 +20,5 @@ namespace SLZ.Bonelab
 		private bool _isSwitching;
 
 		private bool _hasMagazineInQueue;
-
-		[ContextMenu("TestSwitch")]
-		private void TestSwitch()
-		{
-		}
-
-		[ContextMenu("TestSwitchSpam")]
-		private void TestSwitchSpam()
-		{
-		}
-		private UniTaskVoid SwitchMagazine(Spawnable spawnable)
-		{
-			return default(UniTaskVoid);
-		}
-		private UniTask SpawnAndPlaceMagazine(Spawnable spawnable)
-		{
-			return default(UniTask);
-		}
 	}
 }

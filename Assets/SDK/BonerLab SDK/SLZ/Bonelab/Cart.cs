@@ -58,8 +58,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private float _distance;
 
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private float _halfDistance;
 
 		[SerializeField]

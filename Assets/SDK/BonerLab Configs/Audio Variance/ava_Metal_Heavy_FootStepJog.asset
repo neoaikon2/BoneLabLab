@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: ava_Metal_Heavy_FootStepJog
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: ff5cb40e91fda5d4bb22ecc0c22c4e96, type: 3}
+  - {fileID: 8300000, guid: 7d5654ba7c16a5848b0e65458791b53b, type: 3}
+  - {fileID: 8300000, guid: a5ca33508a7cd0b40a4a3fde9f6eec08, type: 3}
+  - {fileID: 8300000, guid: f6f0f8e332a0e534f8c3b14e11c74f40, type: 3}
+  - {fileID: 8300000, guid: 5e53fa4e946dae74ab447b7caa869872, type: 3}
+  - {fileID: 8300000, guid: ec52f24602f8e464fa5d36ec63c6405b, type: 3}

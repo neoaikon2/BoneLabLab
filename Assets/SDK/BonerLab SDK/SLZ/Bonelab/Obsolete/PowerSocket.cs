@@ -7,24 +7,24 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.Obsolete
 {
+	[Obsolete("OLD POWERABLE SYSTEM - DO NOT USE!")]
 	[AddComponentMenu(null)]
-	[Obsolete("Superseded by VoidLogic")]
 	public class PowerSocket : MonoBehaviour
 	{
-		[SerializeField]
 		[Tooltip("The charge rate passed into the battery in Watts/min")]
+		[SerializeField]
 		private float m_ChargeCurrent;
 
 		private Coroutine CoroutineChargeLoop;
 
 		public bool Charging;
 
-		[Header("SPECIFIC POWERSOURCE")]
 		[SerializeField]
+		[Header("SPECIFIC POWERSOURCE")]
 		private PowerSource SamePower;
 
-		[Header("INDICATOR LIGHTS")]
 		[Space(5f)]
+		[Header("INDICATOR LIGHTS")]
 		public GameObject[] indicateOn;
 
 		public GameObject[] indicateOff;

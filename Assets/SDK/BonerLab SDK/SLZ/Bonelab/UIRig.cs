@@ -1,12 +1,9 @@
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
 	public class UIRig : MonoBehaviour
 	{
-		public OpenControllerRig openCtrlRig;
-
 		public PopUpMenuView popUpMenu;
 
 		public UI_HUD uiHud;
@@ -26,7 +23,15 @@ namespace SLZ.Bonelab
 
 		private float uiScale;
 
+		public UIControllerInput leftUIController;
+
+		public UIControllerInput rightUIController;
+
 		public static UIRig Instance { get; private set; }
+
+		private void Awake()
+		{
+		}
 
 		private void Start()
 		{
@@ -37,10 +42,6 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDisable()
-		{
-		}
-
-		private void Awake()
 		{
 		}
 

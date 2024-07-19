@@ -46,8 +46,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private int shockCost;
 
-		[Header("Audio")]
 		[SerializeField]
+		[Header("Audio")]
 		private AudioClip shockClip;
 
 		[SerializeField]

@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class PlayerSettings
+	public sealed class PlayerSettings : IPlayerSettings
 	{
 		[JsonProperty("modified")]
 		public string Modified { get; set; }
@@ -31,12 +32,6 @@ namespace SLZ.Bonelab.SaveData
 
 		[JsonProperty("locomotion_snap_degrees_per_frame")]
 		public int LocomotionSnapDegreesPerFrame { get; set; }
-
-		[JsonProperty("snap_enabled")]
-		public bool SnapEnabled { get; set; }
-
-		[JsonProperty("virtual_crouching_enabled")]
-		public bool VirtualCrouchingEnabled { get; set; }
 
 		[JsonProperty("player_height")]
 		public float PlayerHeight { get; set; }

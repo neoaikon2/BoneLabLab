@@ -16,8 +16,8 @@ namespace SLZ.MLAgents
 		}
 		public static List<BarracudaModelManager> Instances;
 
-		[Header("Model/Inference Pipeline Specific")]
 		[Tooltip("Config holding values for Model Manager")]
+		[Header("Model/Inference Pipeline Specific")]
 		public ModelManagerConfig bmmConfig;
 
 		[Tooltip("The neural network to do inference with")]

@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Marrow.Warehouse;
@@ -21,7 +22,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private List<Crate> blackList;
 
-		private List<string> blackListStrings;
+		private List<Barcode> blackListStrings;
 
 		[SerializeField]
 		private int _itemPrice;
@@ -94,7 +95,7 @@ namespace SLZ.Bonelab
 
 		public Rigidbody[] ballRbs;
 
-		private AmmoInventory _ammoInventory;
+		private SLZ.Marrow.AmmoInventory _ammoInventory;
 
 		private static PlayerUnlocks u => null;
 
@@ -137,7 +138,7 @@ namespace SLZ.Bonelab
 		public void CheckGacha()
 		{
 		}
-		private UniTaskVoid SpawnGacha(string barcode)
+		private UniTaskVoid SpawnGacha(Barcode barcode)
 		{
 			return default(UniTaskVoid);
 		}

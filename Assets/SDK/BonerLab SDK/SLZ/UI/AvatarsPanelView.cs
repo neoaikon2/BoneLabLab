@@ -8,11 +8,9 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
-using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
-using SLZ.Player;
-using SLZ.Rig;
 using SLZ.VRMK;
 using TMPro;
 using UnityEngine;
@@ -33,8 +31,6 @@ namespace SLZ.UI
 		public bool includeExternalAvatars;
 
 		public bool filterByTag;
-
-		public List<string> avatarTags;
 
 		public bool favoritesMode;
 
@@ -114,7 +110,7 @@ namespace SLZ.UI
 
 		private string selectedTag;
 
-		private Dictionary<string, AvatarCrate> avatarFlatDictionary;
+		private Dictionary<Barcode, AvatarCrate> avatarFlatDictionary;
 
 		private List<AvatarCrate> avatarCrates;
 
@@ -140,8 +136,7 @@ namespace SLZ.UI
 
 		public Transform previewTransform;
 
-		[SerializeField]
-		private BonelabSerializableDictionaries.StringAvatarDictionary cachedPreviews;
+		private Dictionary<Barcode, SLZ.VRMK.Avatar> cachedPreviews;
 
 		private SLZ.VRMK.Avatar previewAvatar;
 
@@ -166,9 +161,9 @@ namespace SLZ.UI
 
 		private bool firstActivation;
 
-		private List<string> defaultFavoriteAvatarsBarcodes;
+		private List<AvatarCrateReference> defaultFavoriteAvatarsBarcodes;
 
-		private List<string> defaultPeasantBarcodes;
+		private List<AvatarCrateReference> defaultPeasantBarcodes;
 
 		public UnityEvent pullCordInserted;
 
@@ -176,7 +171,11 @@ namespace SLZ.UI
 
 		private static PlayerUnlocks u => null;
 
-		private void Start()
+		private void Awake()
+		{
+		}
+
+		private void OnLevelLoad()
 		{
 		}
 
@@ -188,11 +187,7 @@ namespace SLZ.UI
 		{
 		}
 
-		private void OnPalletAdded(string palletBarcode)
-		{
-		}
-
-		public void SetRig(MarrowEntity incomingRig)
+		private void OnPalletAdded(Barcode palletBarcode)
 		{
 		}
 
@@ -279,15 +274,15 @@ namespace SLZ.UI
 		{
 			return null;
 		}
-		private UniTaskVoid LoadFavoriteAvatars()
+
+		private void LoadFavoriteAvatars()
 		{
-			return default(UniTaskVoid);
 		}
 		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
 		{
 			return default(UniTaskVoid);
 		}
-		private UniTask SwapReflectionAvatar(string barcode)
+		private UniTask SwapReflectionAvatar(Barcode barcode)
 		{
 			return default(UniTask);
 		}

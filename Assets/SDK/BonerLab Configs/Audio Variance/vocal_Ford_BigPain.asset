@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_Ford_BigPain
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: c8ff1a777d3f81c4b95add795dc229da, type: 3}
+  - {fileID: 8300000, guid: eb139c0f3ff69274aba11d82f39f161b, type: 3}
+  - {fileID: 8300000, guid: 58da7308f53106545a13e7f5f5b26b16, type: 3}
+  - {fileID: 8300000, guid: 7469633cb82d6564090d268644472480, type: 3}
+  - {fileID: 8300000, guid: e57057ce202695e4695c8531c1cee9ae, type: 3}
+  - {fileID: 8300000, guid: 84d666e60425ec14ba4e39d04e1d6cdf, type: 3}

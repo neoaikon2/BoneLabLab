@@ -16,8 +16,8 @@ namespace SLZ.SFX
 
 		public AudioClip powerDown;
 
-		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		[Range(0f, 1f)]
+		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		public float volume;
 
 		[Range(0f, 1f)]
@@ -28,8 +28,8 @@ namespace SLZ.SFX
 		[Range(0.1f, 4f)]
 		public float fadeSpeed;
 
-		[Range(0f, 10f)]
 		[Tooltip("Radius of min sphere")]
+		[Range(0f, 10f)]
 		public float sourceRadius;
 
 		[Tooltip("Should source loop?")]

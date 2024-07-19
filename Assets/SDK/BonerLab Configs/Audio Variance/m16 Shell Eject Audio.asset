@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36d99ff80fe02e88761ff6d668dcce3, type: 3}
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
   m_Name: m16 Shell Eject Audio
   m_EditorClassIdentifier:
   audioClips:
-  - {fileID: 8300000, guid: a1525b81706032b41a28840262e5790e, type: 3}
-  - {fileID: 8300000, guid: 99f06c486ab2d4244921c56624235b71, type: 3}
-  - {fileID: 8300000, guid: 72511873ff1d1ee4e828b0c227f3f8c7, type: 3}
+  - {fileID: 8300000, guid: 6990db997a09c7c448ae79a5b85759b4, type: 3}
+  - {fileID: 8300000, guid: e8ca4386445b10849ad85e170d2a16f5, type: 3}
+  - {fileID: 8300000, guid: 3d2c43d6a6d11b84590ade30ebf0cf5b, type: 3}

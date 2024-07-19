@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Heavy Steps
   artist:
-  audioClip: {fileID: 8300000, guid: ada13296488eeac4a9cfd7e59669da84, type: 3}
+  audioClip: {fileID: 8300000, guid: b12e34610ac51b54090d1779ad6ee316, type: 3}

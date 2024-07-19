@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Stank Face
   artist:
-  audioClip: {fileID: 8300000, guid: 736357f0deeb7e0448af65f0039432ba, type: 3}
+  audioClip: {fileID: 8300000, guid: 2d631cb20571e2d48ae994f4506099dc, type: 3}

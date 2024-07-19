@@ -23,8 +23,8 @@ namespace SLZ.Utilities
 		[Tooltip("Spawn Interval")]
 		private float spawnInterval;
 
-		[Tooltip("Ignore Colliders")]
 		[SerializeField]
+		[Tooltip("Ignore Colliders")]
 		private Collider[] ignoreColliders;
 
 		private CancellationTokenSource cts;

@@ -24,8 +24,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private Spawnable spawnSpawnable;
 
-		[Header("DO NOT SET IN INSPECTOR")]
 		[HideInInspector]
+		[Header("DO NOT SET IN INSPECTOR")]
 		public Vector3 velocity;
 
 		private bool isDestructible;

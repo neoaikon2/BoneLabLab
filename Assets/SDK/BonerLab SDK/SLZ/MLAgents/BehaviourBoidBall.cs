@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using PuppetMasta;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
@@ -96,12 +96,12 @@ namespace SLZ.MLAgents
 
 		private float _blendToAnimationTime;
 
-		[Tooltip("This allows the radii to lerp between min and max values")]
 		[Header("----BoidBall Deal Damage Section----")]
+		[Tooltip("This allows the radii to lerp between min and max values")]
 		public RigidBodyDamageDealer[] dmgDealers;
 
-		[Tooltip("Rate is multiplied by current health")]
 		[Header("----Mental State Section----")]
+		[Tooltip("Rate is multiplied by current health")]
 		public float agroTickRate;
 
 		public float waypointAgroTime;

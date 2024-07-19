@@ -1,8 +1,8 @@
 using UnityEngine;
 
+[RequireComponent(typeof(ReflectionProbe))]
 [ExecuteInEditMode]
 [DisallowMultipleComponent]
-[RequireComponent(typeof(ReflectionProbe))]
 public class SpecularProbeRenderer : MonoBehaviour
 {
 }

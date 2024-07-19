@@ -7,9 +7,7 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab.SaveData;
-using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.Marrow.Zones;
 using TMPro;
 using UnityEngine;
 
@@ -59,9 +57,9 @@ namespace SLZ.Bonelab
 
 		public AudioClip sfx_bonelab;
 
-		public ZoneMusic music_menu;
+		public AudioClip clip_menu;
 
-		public ZoneMusic music_keygen;
+		public AudioClip clip_kegen;
 
 		public GameObject particles_elements;
 
@@ -109,8 +107,8 @@ namespace SLZ.Bonelab
 
 		private AvatarCrate avatarCrate;
 
-		[HideInInspector]
 		[Header("CONTROL")]
+		[HideInInspector]
 		public BodyVitals ctrl_bodyVitals;
 
 		private bool m_waitForConfirm;
@@ -164,11 +162,7 @@ namespace SLZ.Bonelab
 
 		public LevelCrateReference voidG114LevelCrate;
 
-		public LevelCrateReference loadScreenLevel;
-
 		private LevelCrateReference _loadcrate;
-
-		public Spawnable vfxFadeOutSpawnable;
 
 		private bool canClick;
 

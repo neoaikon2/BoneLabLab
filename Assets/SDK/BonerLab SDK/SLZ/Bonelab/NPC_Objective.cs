@@ -82,8 +82,8 @@ namespace SLZ.Bonelab
 
 		public UnityEvent OnFullCharge;
 
-		[Header("Key")]
 		[SerializeField]
+		[Header("Key")]
 		private bool isKeyRequired;
 
 		[SerializeField]
@@ -154,8 +154,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private TMP_Text energyText;
 
-		[SerializeField]
 		[Header("DoorJoints")]
+		[SerializeField]
 		private ConfigurableJoint joint;
 
 		[SerializeField]

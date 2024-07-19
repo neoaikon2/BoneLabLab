@@ -7,8 +7,9 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Newtonsoft.Json.Linq;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
+using SLZ.Marrow.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.Player;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -32,10 +33,6 @@ namespace SLZ.Bonelab
 		public const string FINAL_AMMO_DELTA = "SLZ.Bonelab.final_ammo_delta";
 
 		public const string IN_PROGRESS_AMMO = "SLZ.Bonelab.in_progress_ammo";
-
-		public const string PROGRESS = "SLZ.Bonelab.progress";
-
-		public const string COMPLETED = "SLZ.Bonelab.completed";
 
 		public static Dictionary<string, int> CalculateStartingAmmo(this PlayerProgression progression, params string[] priorLevels)
 		{
@@ -81,22 +78,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		public static bool TrySetLevelCompleted(this PlayerProgression progression, string levelKey, bool completed)
-		{
-			return false;
-		}
-
-		public static bool TrySetLevelProgress(this PlayerProgression progression, string levelKey, int progress)
-		{
-			return false;
-		}
-
-		public static bool TryGetLevelCompleted(this PlayerProgression progression, string levelKey, out bool completed)
-		{
-			completed = default(bool);
-			return false;
-		}
-
 		public static bool PushInventoryInto(this PlayerProgression progression, params string[] intoLevelKeys)
 		{
 			return false;
@@ -110,12 +91,6 @@ namespace SLZ.Bonelab
 		[Obsolete("To be replaced with PushInventoryInto")]
 		public static bool SaveInventoryFinal_Deprecated(this PlayerProgression progression, string levelKey)
 		{
-			return false;
-		}
-
-		public static bool TryGetLevelProgress(this PlayerProgression progression, string levelKey, out int progress)
-		{
-			progress = default(int);
 			return false;
 		}
 

@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using SLZ.UI;
 using UnityEngine;
 
@@ -123,7 +123,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void Update()
+		private void LateUpdate()
 		{
 		}
 

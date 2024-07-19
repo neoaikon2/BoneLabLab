@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_Jimmy_Laugh
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: 20a5613e435f24a459cfd3b14aa95b63, type: 3}
+  - {fileID: 8300000, guid: 74fb6ed79f4b5e44c8174433327baf5b, type: 3}
+  - {fileID: 8300000, guid: 0fb06627da9db534d92c6a424e0f2e27, type: 3}
+  - {fileID: 8300000, guid: 3654c7bb907f40b438d4317632ffbd2d, type: 3}
+  - {fileID: 8300000, guid: 4bea4a6f7b0975d4184dcf13f494c114, type: 3}
+  - {fileID: 8300000, guid: b0cf2b081102f0e44983474a2d0fc29f, type: 3}
+  - {fileID: 8300000, guid: b394e38861a8d13428547d4789d0cb78, type: 3}
+  - {fileID: 8300000, guid: ef83ae7b3dd81c64c821cde98672ad92, type: 3}
+  - {fileID: 8300000, guid: cb9a6f5f7385ecf43801e5e3dd32a205, type: 3}
+  - {fileID: 8300000, guid: 3be6b52e73a83ec45ae6cb1f11cb5cf7, type: 3}
+  - {fileID: 8300000, guid: c408a0e8cd8225e42afa50af0655c19f, type: 3}
+  - {fileID: 8300000, guid: 6f329847968a762468964719ce22d92c, type: 3}
+  - {fileID: 8300000, guid: 4b15b9b96752ef04eb4a29c92c4ed580, type: 3}
+  - {fileID: 8300000, guid: 97876a43bb7b9a14ba0976a48f07122f, type: 3}
+  - {fileID: 8300000, guid: d08041ee72cc4a6489c6d644db055de9, type: 3}
+  - {fileID: 8300000, guid: b099bdb5305bf2f4082f26f9646743ec, type: 3}
+  - {fileID: 8300000, guid: 77bcf328e4710304d918b87f8c7058fe, type: 3}
+  - {fileID: 8300000, guid: f3e8475fa6e59ca40a954f1560662eef, type: 3}

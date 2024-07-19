@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
-using SLZ.SFX;
 using UnityEngine;
 
 namespace SLZ.MLAgents
@@ -13,8 +12,8 @@ namespace SLZ.MLAgents
 	[Obsolete("Uses obsolete zone components")]
 	public class BoidGun : MonoBehaviour
 	{
-		[Tooltip("Total number of boids that can be out in the scene and amount of ammo")]
 		[Header("Gun Specific Section")]
+		[Tooltip("Total number of boids that can be out in the scene and amount of ammo")]
 		public int maxMagSize;
 
 		private int currentMagSize;
@@ -76,8 +75,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Sound affect for powering down gun")]
 		public GunSFX powerDownSFX;
 
-		[Tooltip("The model manager that this spawner is associated with")]
 		[Header("Inference Section")]
+		[Tooltip("The model manager that this spawner is associated with")]
 		public BarracudaModelManagerMono bmm;
 
 		[Tooltip("Scriptable object that holds model manager/spawner variable and model references")]

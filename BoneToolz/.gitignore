@@ -1,7 +1,10 @@
 guidmap.txt
 
-BoneDoc/BASE
-BoneDoc/DUMP
-BoneDoc/SDK_UPDATE
+Archived/BoneDoc/BASE
+Archived/BoneDoc/DUMP
+Archived/BoneDoc/SDK_UPDATE
 SharpSort/SORTED
 SharpSort/UNSORTED
+Ossify/SORTED
+Ossify/UNSORTED
+Parsify/SDK

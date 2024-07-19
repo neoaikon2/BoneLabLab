@@ -4,11 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -91,7 +90,7 @@ namespace SLZ.Bonelab
 		{
 			return default(UniTaskVoid);
 		}
-		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrate, RigManager targetRig)
+		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrateRef, RigManager targetRig)
 		{
 			return default(UniTaskVoid);
 		}

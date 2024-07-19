@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Data;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
-using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
 using SLZ.Marrow.Zones;
-using SLZ.Rig;
 using TMPro;
 using UltEvents;
 using UnityEngine;
@@ -115,19 +114,11 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		public int friendlyRespawnAmount;
 
-		public MarrowEntity playerEntity;
-
 		public RigManager rigManager;
 
 		public GameObject playerObject;
 
 		public TriggerRefProxy playerProxy;
-
-		public Rigidbody[] allPlayerRBs;
-
-		public Rigidbody playerPelvisBody;
-
-		public GenGameControl_Trigger startTrigger;
 
 		public List<TMP_Text> modeTexts;
 
@@ -149,8 +140,8 @@ namespace SLZ.Bonelab
 
 		private Coroutine timerRoutine;
 
-		[SerializeField]
 		[Tooltip("Assuming all zones are the child of a single transform, will be used to grab all zone refs")]
+		[SerializeField]
 		private GameObject zoneParentObj;
 
 		public List<Zone> zoneList;
@@ -187,16 +178,16 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		protected List<AIBrain> Alive_Enemy_List;
 
-		[Tooltip("A list of all dead enemy NPC's")]
 		[SerializeField]
+		[Tooltip("A list of all dead enemy NPC's")]
 		protected List<AIBrain> Dead_Enemy_List;
 
 		[SerializeField]
 		[Tooltip("A list of all the friendly npcs")]
 		protected List<AIBrain> FriendlyNPC_List;
 
-		[Tooltip("A list of all living enemy NPC's")]
 		[SerializeField]
+		[Tooltip("A list of all living enemy NPC's")]
 		protected List<AIBrain> Alive_Friendly_List;
 
 		[SerializeField]
@@ -239,16 +230,16 @@ namespace SLZ.Bonelab
 
 		public int crabletAgentID;
 
+		[Tooltip("Session is initialized, timer routine starts")]
 		[Header("SESSION EVENTS")]
 		[Obsolete("Migrate Unity Event to Ult Event")]
-		[Tooltip("Session is initialized, timer routine starts")]
 		public UnityEvent onSessionBegin;
 
 		[Tooltip("Session is initialized, timer routine starts")]
 		public UltEvent sessionBegin;
 
-		[Obsolete("Migrate Unity Event to Ult Event")]
 		[Tooltip("Session is complete, timer routine ends")]
+		[Obsolete("Migrate Unity Event to Ult Event")]
 		public UnityEvent onSessionEnd;
 
 		[Tooltip("Session is complete, timer routine ends")]

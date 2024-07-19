@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
+using SLZ.Marrow;
 using TMPro;
 using UnityEngine;
 
@@ -105,6 +105,14 @@ namespace SLZ.Bonelab
 		public AudioClip clip_enable;
 
 		public AudioClip clip_disable;
+
+		private void Awake()
+		{
+		}
+
+		private void OnLevelLoad()
+		{
+		}
 
 		private void Start()
 		{

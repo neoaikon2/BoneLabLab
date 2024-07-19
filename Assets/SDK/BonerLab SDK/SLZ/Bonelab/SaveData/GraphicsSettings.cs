@@ -1,8 +1,9 @@
 using Newtonsoft.Json;
+using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class GraphicsSettings
+	public sealed class GraphicsSettings : IGraphicsSettings, IFixFieldsIfNeeded
 	{
 		[JsonProperty("graphics_quality")]
 		public GraphicsQuality GraphicsQuality { get; set; }

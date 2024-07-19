@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
-using SLZ.Vehicle;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -31,8 +30,6 @@ namespace SLZ.Bonelab
 		public float yoinkLength;
 
 		public Spawnable vfxFadeOutSpawnable;
-
-		public LevelCrateReference loadScreenLevel;
 
 		public AnimationCurve lerpSpeedCurve;
 

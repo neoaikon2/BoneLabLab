@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36d99ff80fe02e88761ff6d668dcce3, type: 3}
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
   m_Name: plastic Impact Audio
   m_EditorClassIdentifier:
   audioClips:
-  - {fileID: 8300000, guid: 156f31ee21804214f9125fa96559ca75, type: 3}
-  - {fileID: 8300000, guid: d44e1e80ac551dd4da59aaf1baa8205c, type: 3}
+  - {fileID: 8300000, guid: 1ca6f1cc5aa2b7c4aadf6730c379ffea, type: 3}
+  - {fileID: 8300000, guid: 791216c10a2b6234cb6ef8ed6c68bbe1, type: 3}

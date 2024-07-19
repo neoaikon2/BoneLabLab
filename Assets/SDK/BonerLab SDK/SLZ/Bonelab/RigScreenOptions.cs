@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Bonelab.SaveData;
+using SLZ.Marrow.SaveData;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -42,7 +42,7 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
-		private SpectatorSettings GetSettings()
+		private ISpectatorSettings GetSettings()
 		{
 			return null;
 		}

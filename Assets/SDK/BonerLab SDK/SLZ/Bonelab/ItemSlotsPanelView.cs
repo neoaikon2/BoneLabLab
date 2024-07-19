@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Player;
+using SLZ.Marrow;
+using SLZ.SFX;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
@@ -12,11 +14,29 @@ namespace SLZ.Bonelab
 	{
 		public UIRig uiRig;
 
-		public Transform[] slotTargets;
+		public SimpleSFX SimpleSfx;
 
 		private Inventory inventory;
 
+		private List<UnityAction> EnableActiveHoverEleActions;
+
+		private List<UnityAction> DisableActiveHoverEleActions;
+
+		private List<UnityAction> DisableInactiveHoverEleActions;
+
+		private List<UnityAction> EnableInactiveHoverEleActions;
+
+		private UnityAction PlayActiveSoundAction;
+
+		private UnityAction PlayDropSoundAction;
+
+		public Transform[] slotTargets;
+
 		public PageElementView[] slots;
+
+		public GameObject[] activeHoverEleObjs;
+
+		public GameObject[] inactiveHoverEleObjs;
 
 		public bool displayHud;
 
@@ -24,6 +44,10 @@ namespace SLZ.Bonelab
 
 		[HideInInspector]
 		public bool isInventoryOpen;
+
+		private void Awake()
+		{
+		}
 
 		public void OnEnable()
 		{
@@ -39,6 +63,14 @@ namespace SLZ.Bonelab
 		}
 
 		public override void Deactivate()
+		{
+		}
+
+		private void RegisterBodySlotEvents()
+		{
+		}
+
+		private void UnregisterBodySlotEvents()
 		{
 		}
 

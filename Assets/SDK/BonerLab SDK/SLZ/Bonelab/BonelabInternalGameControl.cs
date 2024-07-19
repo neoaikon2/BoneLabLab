@@ -14,8 +14,8 @@ namespace SLZ.Bonelab
 	{
 		private Dictionary<string, int> storyLevelBarcodeKeyPair;
 
-		[field: Header("BONELAB INTERNAL")]
 		[field: SerializeField]
+		[field: Header("BONELAB INTERNAL")]
 		protected LevelCrateReference NextCampaignLevel { get; set; }
 
 		[field: SerializeField]

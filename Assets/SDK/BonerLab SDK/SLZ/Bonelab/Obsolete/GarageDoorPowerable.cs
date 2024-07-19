@@ -16,8 +16,8 @@ namespace SLZ.Bonelab.Obsolete
 			STOPPED_UP = 2,
 			STOPPED_DOWN = 3
 		}
-		[Header("GARAGE REFS")]
 		[Space(5f)]
+		[Header("GARAGE REFS")]
 		public bool isBinary;
 
 		public GameObject GarageDoorParent;
@@ -26,18 +26,18 @@ namespace SLZ.Bonelab.Obsolete
 
 		public Transform GarageBottom;
 
-		[Space(5f)]
-		[Header("MOVERATE")]
 		[Range(0.005f, 0.015f)]
 		[Tooltip("Used for the non-binary mode")]
+		[Header("MOVERATE")]
+		[Space(5f)]
 		public float MinMoveRate;
 
 		[Range(0.005f, 0.02f)]
 		[Tooltip("Used for the non-binary mode")]
 		public float MaxMoveRate;
 
-		[Range(0.01f, 0.015f)]
 		[Tooltip("Used when in binary mode")]
+		[Range(0.01f, 0.015f)]
 		public float ConstantMoveRate;
 
 		[Range(75f, 200f)]
@@ -66,8 +66,8 @@ namespace SLZ.Bonelab.Obsolete
 
 		private float m_currVoltage;
 
-		[Space(10f)]
 		[Header("DEBUG")]
+		[Space(10f)]
 		public bool isDebugging;
 
 		private float stored_Draw;

@@ -15,8 +15,6 @@ namespace SLZ.Bonelab
 
 		public LevelCrateReference VoidG114CrateRef;
 
-		public LevelCrateReference LevelLoaderCrateRef;
-
 		private static PlayerProgression p => null;
 		public UniTaskVoid Load()
 		{

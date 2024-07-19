@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001057338d542498d30c555063f47d5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 80455f5ce5030ab827e259daca1420f5, type: 3}
   m_Name: Heavy Ammo Group
   m_EditorClassIdentifier:
   KeyName: heavy
   cartridges:
-  - {fileID: 11400000, guid: 9e31b00e73de6f3499e31a02885ede9b, type: 2}
-  - {fileID: 11400000, guid: 0a06685fde19e5e46a6c0e63c41c05b7, type: 2}
-  - {fileID: 11400000, guid: 48e88b59ae8192e4aae42ccaecd14af8, type: 2}
-  - {fileID: 11400000, guid: 3a5a0d154deaa744aa58f9d19251a6b5, type: 2}
-  - {fileID: 11400000, guid: 1bc9868fa00a0994893ea19b5ecf8726, type: 2}
+  - {fileID: 11400000, guid: 659c7d20d18a84545a52b9b0955d707c, type: 2}
+  - {fileID: 11400000, guid: fa262c6c94e544343a471330fbe530dd, type: 2}
+  - {fileID: 11400000, guid: d83b013f774aa0d4985f592adce5b306, type: 2}
+  - {fileID: 11400000, guid: aeae2eb7e1c27b548b487eca14d14922, type: 2}
+  - {fileID: 11400000, guid: b65c7f290f658564197910996d16f200, type: 2}

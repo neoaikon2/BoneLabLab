@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: ava_Metal_Heavy_FootLand
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: 0407d02ecfaef334a8b5e49ca3fabc0f, type: 3}
+  - {fileID: 8300000, guid: c8a77fafe92a1e24ba42539b2233fa1b, type: 3}
+  - {fileID: 8300000, guid: b82dd34aab48a974388203c58db76e4f, type: 3}
+  - {fileID: 8300000, guid: 413c0e97ce9eda249ac5912cd29fac36, type: 3}
+  - {fileID: 8300000, guid: 41eb647c10e20d042be427e620c49b3d, type: 3}
+  - {fileID: 8300000, guid: 60b47b5910bbe194b8e7fe3dcd5e0e46, type: 3}

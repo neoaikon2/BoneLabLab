@@ -1,4 +1,4 @@
-using SLZ.Player;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -14,16 +14,16 @@ namespace SLZ.Bonelab
 
 		public Transform spawnFromTransform;
 
-		[Header("MODULES")]
 		[Space(10f)]
+		[Header("MODULES")]
 		public GameObject ui_Core;
 
 		[Space(10f)]
 		[Header("BUTTONS")]
 		public GameObject[] but_Compass;
 
-		[Space(10f)]
 		[Header("SELECTION ")]
+		[Space(10f)]
 		public AudioClip[] clips_Confirm;
 
 		public AudioClip[] clips_Deny;

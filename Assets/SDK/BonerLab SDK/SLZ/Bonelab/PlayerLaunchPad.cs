@@ -1,5 +1,4 @@
 using System;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -18,8 +17,6 @@ namespace SLZ.Bonelab
 				this.timeToTarget = 0f;
 			}
 		}
-
-		public RigManager rigManager;
 
 		public Rigidbody[] playerBodies;
 

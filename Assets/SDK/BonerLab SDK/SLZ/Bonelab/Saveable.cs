@@ -9,16 +9,16 @@ namespace SLZ.Bonelab
 		[field: HideInInspector]
 		public string BakedObjectPath { get; private set; }
 
-		[field: HideInInspector]
 		[field: SerializeField]
+		[field: HideInInspector]
 		public string HashAlgorithm { get; private set; }
 
-		[field: ReadOnly(false)]
 		[field: SerializeField]
+		[field: ReadOnly(false)]
 		public string UniqueId { get; private set; }
 
-		[field: SerializeField]
 		[field: ReadOnly(false)]
+		[field: SerializeField]
 		public string LastBaked { get; private set; }
 
 		[field: SerializeField]

@@ -10,8 +10,8 @@ namespace SLZ.MLAgents
 {
 	public class BarracudaModelManagerMono : MonoBehaviour
 	{
-		[Header("Model/Inference Pipeline Specific")]
 		[Tooltip("The neural network to do inference with")]
+		[Header("Model/Inference Pipeline Specific")]
 		public NNModel srcModel;
 
 		private Model model;

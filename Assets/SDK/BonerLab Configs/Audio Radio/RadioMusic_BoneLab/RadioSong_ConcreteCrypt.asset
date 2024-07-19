@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: ConcreteCrypt
   artist:
-  audioClip: {fileID: 8300000, guid: 490339b012a5e994185e680725fa8036, type: 3}
+  audioClip: {fileID: 8300000, guid: 3995592d12763b945876b728e2719705, type: 3}

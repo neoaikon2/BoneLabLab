@@ -1,6 +1,6 @@
+using SLZ.Marrow;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Zones;
-using SLZ.Rig;
 
 namespace SLZ.Bonelab
 {

@@ -16,29 +16,29 @@ MonoBehaviour:
   megaPascal: 4
   isFlammable: 0
   fireResistance: 0
-  ParicleColorTint: {r: 0.068690926, g: 0.42745823, b: 2.0803523, a: 1}
-  physicMaterial: {fileID: 13400000, guid: 4c0feaf0e36088f419851ccf5edccafc, type: 2}
+  ParicleColorTint: {r: 0, g: 0.7070349, b: 2.1132076, a: 1}
+  physicMaterial: {fileID: 13400000, guid: 9743945472c34074fa8492a1373951ce, type: 2}
   impactEffectSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-aa7a-4c6e-b16b-10955a617070
-    policyData: {fileID: 11400000, guid: e51e12d28102b8d41859453c8d8a6132, type: 2}
+    policyData: {fileID: 11400000, guid: a1c90e2b5be53c64e98cbcee28dbda0c, type: 2}
   bulletDecalSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-df6c-4156-9a6a-b09541747461
-    policyData: {fileID: 11400000, guid: ceb9b6e0d090ff6478d02ed90e01b75d, type: 2}
+    policyData: {fileID: 11400000, guid: 87ee0f63eb4d8c24883d3a496c9d4c46, type: 2}
   BulletDecal:
-  - material: {fileID: 2100000, guid: 099a4407802c78043a04018620fab2bd, type: 2}
+  - material: {fileID: 2100000, guid: d22723ab77b15e547b264aedc5942cdd, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0
   BluntDecal:
-  - material: {fileID: 2100000, guid: 505cd94bf374900489ffe3662d7da2d5, type: 2}
+  - material: {fileID: 2100000, guid: 470ddc5586d41af4ea7a227912d563c8, type: 2}
     size: 0.1
     atlasData: {fileID: 0}
     useVertexColor: 0
-  - material: {fileID: 2100000, guid: 8e63cfa4b720fa0499c93b4782028336, type: 2}
+  - material: {fileID: 2100000, guid: a18caeddf0e6f014fb35ef8818ce36b1, type: 2}
     size: 0.1
     atlasData: {fileID: 0}
     useVertexColor: 0

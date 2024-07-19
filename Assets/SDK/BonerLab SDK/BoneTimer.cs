@@ -15,8 +15,8 @@ public class BoneTimer : MonoBehaviour
 		COUNT_UP_REALTIME = 2,
 		REALTIME = 3
 	}
-	[Header("Time Data")]
 	[SerializeField]
+	[Header("Time Data")]
 	private float timerValue;
 
 	[SerializeField]

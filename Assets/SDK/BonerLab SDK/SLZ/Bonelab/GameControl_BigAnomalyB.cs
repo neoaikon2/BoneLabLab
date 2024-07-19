@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab

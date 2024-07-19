@@ -18,8 +18,8 @@ MonoBehaviour:
       _barcode:
         _id: SLZ.BONELAB.Content.Spawnable.NPCPeasantMaleM
     policyData: {fileID: 0}
-  baseConfig: {fileID: 11400000, guid: 70da1e08bbd5495498eacbbae0facea6, type: 2}
-  iconImage: {fileID: 2800000, guid: e57855921b166c940842f8a97b902dd9, type: 3}
+  baseConfig: {fileID: 11400000, guid: 1099c29ecb9d9c24b842ca82e4ff96b4, type: 2}
+  iconImage: {fileID: 2800000, guid: 1ddb25ccb4a6732419d619db3810bc05, type: 3}
   isKing: 0
   showEnemy: 1
   deathMult: 1

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_Jimmy_PainSmall
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: 6f56126effae19f439b6b2326a5339d7, type: 3}
+  - {fileID: 8300000, guid: b55359b521479ef41b4ae1ee089a231a, type: 3}
+  - {fileID: 8300000, guid: c761767e18579c9429681e5bb6ad640e, type: 3}
+  - {fileID: 8300000, guid: 34bfdc1069d050f49be0a2a705f29453, type: 3}
+  - {fileID: 8300000, guid: 37ded67233c45d14e972512db4e2c55e, type: 3}
+  - {fileID: 8300000, guid: f0a9ba50d5b778540978255f7476586e, type: 3}
+  - {fileID: 8300000, guid: e2812c311b0fe0b458c7d23ad8ebe720, type: 3}
+  - {fileID: 8300000, guid: bd4ae4c7ebb57d04b843a13925cbad10, type: 3}
+  - {fileID: 8300000, guid: 01d2f6c4997a18c44a80a554c7f7ab98, type: 3}
+  - {fileID: 8300000, guid: 2e4af82bf3da18f469ea2b02b3284096, type: 3}

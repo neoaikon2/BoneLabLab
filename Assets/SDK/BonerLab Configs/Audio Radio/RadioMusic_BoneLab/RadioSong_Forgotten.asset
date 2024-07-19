@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Forgotten
   artist:
-  audioClip: {fileID: 8300000, guid: 270d7d3cbd46a534bb8c7f94ad3fea11, type: 3}
+  audioClip: {fileID: 8300000, guid: 5d3752791d3d94f4fb385008b91e95bb, type: 3}

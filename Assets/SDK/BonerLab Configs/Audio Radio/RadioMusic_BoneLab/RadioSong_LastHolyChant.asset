@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Last Holy Chant
   artist:
-  audioClip: {fileID: 8300000, guid: 54370d57e1b36814cae685f692aa7b58, type: 3}
+  audioClip: {fileID: 8300000, guid: b00a220b6f4d34b4e82e0ebae1b07838, type: 3}

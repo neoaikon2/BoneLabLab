@@ -8,9 +8,9 @@ namespace SLZ.Bonelab
 	[RequireComponent(typeof(CrateSpawner))]
 	public class GachaPlacer : SpawnDecorator
 	{
-		[Header("Requires Crate Spawner to be in Manual Mode")]
-		[Space(10f)]
 		[SerializeField]
+		[Space(10f)]
+		[Header("Requires Crate Spawner to be in Manual Mode")]
 		private GenericCrateReference unlockCrate;
 
 		public bool onlyPlaceIfBeatGame;

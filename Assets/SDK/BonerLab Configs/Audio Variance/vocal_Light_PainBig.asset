@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_Light_PainBig
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: 4ef2042ada0b5fe43bb581962c1657a7, type: 3}
+  - {fileID: 8300000, guid: c23ca4f8c0a8ba74cb39ceaf9499747c, type: 3}
+  - {fileID: 8300000, guid: add3e2c1cca176645b24e0ad023341ca, type: 3}
+  - {fileID: 8300000, guid: ca529d0233a2ed34b88f98fbcf544f60, type: 3}
+  - {fileID: 8300000, guid: 51735dffa8e4f6c47b06be99dde50ec3, type: 3}
+  - {fileID: 8300000, guid: bde776a7ed127a24293d6823f68431f8, type: 3}

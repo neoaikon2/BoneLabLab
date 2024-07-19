@@ -3,12 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
-using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
@@ -128,8 +126,6 @@ namespace SLZ.Bonelab
 
 		[Header("Level Loader")]
 		public LevelCrateReference level;
-
-		public Spawnable vfxFadeOutSpawnable;
 
 		private bool _skipUpdate;
 

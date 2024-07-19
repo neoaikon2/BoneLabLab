@@ -9,32 +9,20 @@ namespace SLZ.Bonelab.VoidLogic
 	[Support(SupportFlags.CowboySupported, null)]
 	public class OneOffCollisionSensor : MonoBehaviour, IVoidLogicSource, IVoidLogicNode, IVoidLogicSensor
 	{
-		public enum Measurement
-		{
-			ForceMagnitude = 0,
-			ForceX = 1,
-			ForceY = 2,
-			ForceZ = 3,
-			TorqueX = 4,
-			TorqueY = 5,
-			TorqueZ = 6
-		}
-
-		[SerializeField]
-		private Measurement _measurement;
-
 		[SerializeField]
 		private bool _negate;
 
 		private Rigidbody _rigidbody;
 
-		private readonly Queue<float> _impacts;
+		private readonly Queue<(Vector3 force, Vector3 torque)> _impacts;
 
 		private static readonly PortMetadata _portMetadata;
 
 		[field: SerializeField]
 		[field: ReadOnly(false)]
 		public VoidLogicSubgraph Subgraph { get; set; }
+
+		public int OutputCount => 0;
 
 		public PortMetadata PortMetadata => default(PortMetadata);
 

@@ -17,32 +17,40 @@ MonoBehaviour:
   isFlammable: 0
   fireResistance: 0
   ParicleColorTint: {r: 1, g: 1, b: 1, a: 1}
-  physicMaterial: {fileID: 13400000, guid: 0d62ab06e5091b14a9b11d9afcc75b36, type: 2}
+  physicMaterial: {fileID: 13400000, guid: 5933cf0f86b587145bc012b4fe354a4b, type: 2}
   impactEffectSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-acf4-423b-b9e8-029548617264
-    policyData: {fileID: 11400000, guid: e51e12d28102b8d41859453c8d8a6132, type: 2}
+    policyData: {fileID: 11400000, guid: a1c90e2b5be53c64e98cbcee28dbda0c, type: 2}
   bulletDecalSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-df6c-4156-9a6a-b09541747461
-    policyData: {fileID: 11400000, guid: ceb9b6e0d090ff6478d02ed90e01b75d, type: 2}
+    policyData: {fileID: 11400000, guid: 87ee0f63eb4d8c24883d3a496c9d4c46, type: 2}
   BulletDecal:
-  - material: {fileID: 2100000, guid: 099a4407802c78043a04018620fab2bd, type: 2}
+  - material: {fileID: 2100000, guid: 470ddc5586d41af4ea7a227912d563c8, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: a18caeddf0e6f014fb35ef8818ce36b1, type: 2}
+    size: 0.06
+    atlasData: {fileID: 0}
+    useVertexColor: 0
+  - material: {fileID: 2100000, guid: a5e7884592b09674da1c6941abe7a88c, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0
   BluntDecal:
-  - material: {fileID: 2100000, guid: 505cd94bf374900489ffe3662d7da2d5, type: 2}
+  - material: {fileID: 2100000, guid: 470ddc5586d41af4ea7a227912d563c8, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0
-  - material: {fileID: 2100000, guid: 8e63cfa4b720fa0499c93b4782028336, type: 2}
+  - material: {fileID: 2100000, guid: a18caeddf0e6f014fb35ef8818ce36b1, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0
-  - material: {fileID: 2100000, guid: 330bf13cf2fcf7042af71dc71f47495b, type: 2}
+  - material: {fileID: 2100000, guid: a5e7884592b09674da1c6941abe7a88c, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0

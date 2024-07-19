@@ -235,8 +235,8 @@ namespace SLZ.Bonelab
 
 		public float correctiveMax;
 
-		[Header("Climb Bars")]
 		[SerializeField]
+		[Header("Climb Bars")]
 		private GameObject[] barObjs;
 
 		public GameObject[] grabObjs;

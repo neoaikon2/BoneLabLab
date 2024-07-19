@@ -21,3 +21,7 @@ I decided to mess with ElevatorPowerables, that was kind of a mistake but I know
 ## 4.0.0 - Date: 7/12/2024
 
 Finally got around to updating this for Patch 4, everything should be working if not let me know on the LavaGang discord!
+
+## 5.0.0 - Date: 7/19/2024
+
+Updated for Patch 5

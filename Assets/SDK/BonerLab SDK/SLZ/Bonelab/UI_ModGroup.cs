@@ -11,7 +11,6 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Forklift;
 using SLZ.Marrow.Forklift.Model;
 using SLZ.Marrow.Warehouse;
-using SLZ.ModIO.WebSockets;
 using SLZ.UI;
 using TMPro;
 using UnityEngine;
@@ -53,6 +52,8 @@ namespace SLZ.Bonelab
 			public TextMeshProUGUI txt_developerModePort;
 
 			public TextMeshProUGUI txt_modioDiagnostics;
+
+			public TextMeshProUGUI txt_generalDiagnostics;
 		}
 
 		[Serializable]
@@ -119,26 +120,26 @@ namespace SLZ.Bonelab
 
 		public Sprite defaultImage;
 
-		[Header("Group")]
 		[Space(10f)]
+		[Header("Group")]
 		public GameObject Group_Mods;
 
 		public GameObject Group_Main;
 
-		[Header("SubMenus")]
 		[Space(10f)]
+		[Header("SubMenus")]
 		public GameObject Menu_ModsMain;
 
 		public GameObject Menu_Downloads;
 
-		[Header("Popups")]
 		[Space(10f)]
+		[Header("Popups")]
 		public GameObject Popup_ModWarning;
 
 		public GameObject Popup_AvatarWarning;
 
-		[Header("Pages")]
 		[Space(10f)]
+		[Header("Pages")]
 		public GameObject Page_Installed;
 
 		public GameObject Page_Approved;
@@ -177,8 +178,8 @@ namespace SLZ.Bonelab
 
 		public TextMeshPro modioInstructions;
 
-		[Header("Warning")]
 		[Space(10f)]
+		[Header("Warning")]
 		public GameObject obj_DevModeWarning;
 
 		public GameObject obj_AvatarWarning;
@@ -201,7 +202,7 @@ namespace SLZ.Bonelab
 
 		private bool logInProcessActive;
 
-		private CancellationTokenSource codeTimerToken;
+		private CancellationTokenSource killLoginCTS;
 
 		private bool firstEnable;
 
@@ -265,6 +266,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		private void UpdateGeneralDiagnostics()
+		{
+		}
+
 		private void DevModeWarning()
 		{
 		}
@@ -275,10 +280,6 @@ namespace SLZ.Bonelab
 
 		private void LogInTask()
 		{
-		}
-		private UniTaskVoid CodeTimmer(DeviceLoginResponseContext loginResponseContext, CancellationTokenSource cts, CancellationTokenSource maincts)
-		{
-			return default(UniTaskVoid);
 		}
 
 		public void BUTTON_INSTALLSUBSCRIPTION(bool yesInstall = false)

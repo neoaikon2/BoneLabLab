@@ -1,3 +1,4 @@
+using SLZ.Marrow.SaveData;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -292,7 +293,7 @@ namespace SLZ.Bonelab.SaveData
 		{
 		}
 
-		public static void SetFoveatedRenderingMode(FoveatedRenderingMode currentlevel)
+		public static void SetFoveatedRenderingMode(Marrow.SaveData.FoveatedRenderingMode currentlevel)
 		{
 		}
 

@@ -17,28 +17,28 @@ MonoBehaviour:
   isFlammable: 1
   fireResistance: 20
   ParicleColorTint: {r: 0.7075472, g: 0.7075472, b: 0.7075472, a: 1}
-  physicMaterial: {fileID: 13400000, guid: 9a028bc9925e82b428af5cc01f17c33f, type: 2}
+  physicMaterial: {fileID: 13400000, guid: 467cd3c8bb5579d42869e0b2d116094d, type: 2}
   impactEffectSpawnable:
     crateRef:
       _barcode:
-        _id: c1534c5a-680e-4bd5-abae-5bb6476c6173
-    policyData: {fileID: 11400000, guid: e51e12d28102b8d41859453c8d8a6132, type: 2}
+        _id: SLZ.BONELAB.Core.Spawnable.ImpactPolymer
+    policyData: {fileID: 11400000, guid: a1c90e2b5be53c64e98cbcee28dbda0c, type: 2}
   bulletDecalSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-df6c-4156-9a6a-b09541747461
-    policyData: {fileID: 11400000, guid: ceb9b6e0d090ff6478d02ed90e01b75d, type: 2}
+    policyData: {fileID: 11400000, guid: 87ee0f63eb4d8c24883d3a496c9d4c46, type: 2}
   BulletDecal:
-  - material: {fileID: 2100000, guid: e80914f1dd963e44d90c6ac478383e9a, type: 2}
+  - material: {fileID: 2100000, guid: 3bb21ddc8c0e7394c874cde72adb2488, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0
   BluntDecal:
-  - material: {fileID: 2100000, guid: 505cd94bf374900489ffe3662d7da2d5, type: 2}
+  - material: {fileID: 2100000, guid: 470ddc5586d41af4ea7a227912d563c8, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0
-  - material: {fileID: 2100000, guid: 8e63cfa4b720fa0499c93b4782028336, type: 2}
+  - material: {fileID: 2100000, guid: a18caeddf0e6f014fb35ef8818ce36b1, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0

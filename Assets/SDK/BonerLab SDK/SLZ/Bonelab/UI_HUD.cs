@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using TMPro;
 using UnityEngine;
@@ -48,8 +48,8 @@ namespace SLZ.Bonelab
 
 		private float _headFollowCountDown;
 
-		[Header("MODULE - UI AMMO")]
 		[HideInInspector]
+		[Header("MODULE - UI AMMO")]
 		public bool showLowAmmoPopup;
 
 		[HideInInspector]
@@ -78,9 +78,6 @@ namespace SLZ.Bonelab
 		public int lowAmmoMedium;
 
 		public int lowAmmoHeavy;
-
-		[HideInInspector]
-		public AmmoInventory ammoInventory;
 
 		private IEnumerator _co_ammo_follow;
 
@@ -124,6 +121,14 @@ namespace SLZ.Bonelab
 		private WeaponSlot rightGun;
 
 		private WeaponSlot leftGun;
+
+		private void Awake()
+		{
+		}
+
+		private void OnLevelLoad()
+		{
+		}
 
 		private void Start()
 		{

@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.Obsolete;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
+	[Obsolete("Uses old Powerable system.")]
 	public class CraneControlBox : MonoBehaviour
 	{
 		public GameObject lineRenderers;

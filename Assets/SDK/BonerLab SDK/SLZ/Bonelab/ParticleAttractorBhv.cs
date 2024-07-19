@@ -10,8 +10,8 @@ namespace SLZ.Bonelab
 	[RequireComponent(typeof(ParticleSystem))]
 	public class ParticleAttractorBhv : MonoBehaviour
 	{
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		private ParticleSystem AffectedParticles;
 
 		public float LerpTime;

@@ -10,7 +10,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using Navigation;
 using PuppetMasta;
 using SLZ.Bonelab;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.PuppetMasta;

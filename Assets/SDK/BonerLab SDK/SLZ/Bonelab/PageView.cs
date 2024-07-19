@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -47,6 +47,10 @@ namespace SLZ.Bonelab
 		private Page m_HomePage;
 
 		private bool clip_closeDownFirstPlay;
+
+		public Action<PageView> onActivated;
+
+		public Action<PageView> onDeactivated;
 
 		private void Start()
 		{

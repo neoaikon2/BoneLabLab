@@ -26,8 +26,8 @@ namespace SLZ.Bonelab
 
 		private bool isDebuggingFallenState;
 
-		[SerializeField]
 		[Header("Agent Data")]
+		[SerializeField]
 		private float totalMass;
 
 		[SerializeField]
@@ -120,8 +120,8 @@ namespace SLZ.Bonelab
 
 		private Coroutine escalatorRoutine;
 
-		[Header("Rigidbodies")]
 		[SerializeField]
+		[Header("Rigidbodies")]
 		public Rigidbody headRB;
 
 		[SerializeField]

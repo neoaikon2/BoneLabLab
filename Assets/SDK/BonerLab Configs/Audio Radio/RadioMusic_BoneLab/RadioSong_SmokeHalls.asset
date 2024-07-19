@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Smoke Halls
   artist:
-  audioClip: {fileID: 8300000, guid: 5fb7109cc0f691a4eab0c2a7e6e6f5ba, type: 3}
+  audioClip: {fileID: 8300000, guid: 1305229621fb9b642863dce409e93941, type: 3}

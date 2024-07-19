@@ -4,7 +4,7 @@ using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public class PlayerProgression : IProgression
+	public class PlayerProgression : IProgression, IFixFieldsIfNeeded
 	{
 		[JsonProperty("beat_game")]
 		public bool BeatGame { get; set; }
@@ -26,5 +26,9 @@ namespace SLZ.Bonelab.SaveData
 
 		[JsonProperty("level_state")]
 		public Dictionary<string, Dictionary<string, object>> LevelState { get; set; }
+
+		public void FixFieldsIfNeeded()
+		{
+		}
 	}
 }

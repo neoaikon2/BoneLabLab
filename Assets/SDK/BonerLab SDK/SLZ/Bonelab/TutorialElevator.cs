@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.Obsolete;
-using SLZ.Marrow.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
@@ -45,8 +45,8 @@ namespace SLZ.Bonelab
 
 		private Coroutine moveUpRoutine;
 
-		[Header("Audio")]
 		[SerializeField]
+		[Header("Audio")]
 		private AudioClip abortDoorClip;
 
 		[SerializeField]
@@ -54,8 +54,8 @@ namespace SLZ.Bonelab
 
 		public SpawnableCrateReference sparksCrate;
 
-		[SerializeField]
 		[Header("Doors")]
+		[SerializeField]
 		public bool isClosing;
 
 		[SerializeField]
@@ -124,8 +124,6 @@ namespace SLZ.Bonelab
 		public bool playerInElevator;
 
 		public AudioSource[] elevatorAudioSources;
-
-		private MarrowEntity playerEntity;
 
 		private void Start()
 		{

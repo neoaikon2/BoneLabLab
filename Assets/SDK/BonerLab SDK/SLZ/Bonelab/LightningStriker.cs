@@ -12,8 +12,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GameObject targetObj;
 
-		[SerializeField]
 		[Header("FX")]
+		[SerializeField]
 		private GameObject lightningBoltObj;
 
 		[SerializeField]
@@ -25,8 +25,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GameObject lightingPathParticles;
 
-		[Header("Audio")]
 		[SerializeField]
+		[Header("Audio")]
 		private AudioClip shockClip;
 
 		[SerializeField]

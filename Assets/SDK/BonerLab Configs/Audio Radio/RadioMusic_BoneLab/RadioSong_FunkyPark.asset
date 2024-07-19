@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Funky Park
   artist:
-  audioClip: {fileID: 8300000, guid: cd28d7990b921ca41b552209ab3d25e4, type: 3}
+  audioClip: {fileID: 8300000, guid: 2af5b464e64d8cb4d816ab9f636219ec, type: 3}

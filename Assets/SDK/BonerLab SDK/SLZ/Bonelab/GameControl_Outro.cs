@@ -86,9 +86,9 @@ namespace SLZ.Bonelab
 
 		public TextMeshPro tmp_BuildInfo;
 
-		public ZoneMusic music_menu;
+		public AudioClip clip_menu;
 
-		public ZoneMusic music_keygen;
+		public AudioClip clip_kegen;
 
 		public SpawnableCrateReference blueApollo;
 
@@ -99,6 +99,10 @@ namespace SLZ.Bonelab
 		}
 
 		public override void Start()
+		{
+		}
+
+		private void OnLevelLoad()
 		{
 		}
 

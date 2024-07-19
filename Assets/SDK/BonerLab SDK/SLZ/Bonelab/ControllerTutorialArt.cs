@@ -3,8 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Input;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab

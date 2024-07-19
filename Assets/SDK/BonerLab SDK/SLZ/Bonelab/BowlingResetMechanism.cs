@@ -50,7 +50,7 @@ namespace SLZ.Bonelab
 
 		public SpawnableCrateReference[] whiteListCrates;
 
-		private Dictionary<string, int> whiteListObjects;
+		private Dictionary<Barcode, int> whiteListObjects;
 
 		private Dictionary<int, Poolee> objectsInTrigger;
 

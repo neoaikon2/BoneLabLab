@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_Peasant_M_B_Dying
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: e6fee1eb710e7dc4f91becc0af0f23b9, type: 3}
+  - {fileID: 8300000, guid: c90f51803b39ad54987a04bb15056e41, type: 3}
+  - {fileID: 8300000, guid: a621dcc5d3ba88b4399784469d9be617, type: 3}
+  - {fileID: 8300000, guid: 215ccc2c2853a0e4aae51ebc0c03b93b, type: 3}
+  - {fileID: 8300000, guid: 9739487134d24204fad2b75c3c31e002, type: 3}

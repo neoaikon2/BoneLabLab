@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_securityGuard_Dying
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: ad950f12cd070334b8d4f8f85a7e5fa4, type: 3}
+  - {fileID: 8300000, guid: d3f4fabf2d2ceda44a059a5255e5329e, type: 3}
+  - {fileID: 8300000, guid: 16aede65c3699354388ed85fed4156ef, type: 3}
+  - {fileID: 8300000, guid: 29bd291fd8888c64e9cbc83f5a3604bc, type: 3}
+  - {fileID: 8300000, guid: 19a7c3fe4d12f4a418b85d9917f0b7ab, type: 3}

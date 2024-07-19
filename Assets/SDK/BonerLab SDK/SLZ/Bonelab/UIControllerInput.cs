@@ -3,22 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Marrow.Data;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
 	public class UIControllerInput : MonoBehaviour
 	{
-		private OpenController m_Controller;
-
-		private OpenControllerRig openCtrlRig;
-
-		[HideInInspector]
-		private List<Transform> _cursorTargetOverrides;
+		private Transform _cursorTargetOverride;
 
 		public Transform cursorTarget;
+
+		public bool isLeft;
 
 		private float m_levelReloadCounter;
 
@@ -36,14 +31,7 @@ namespace SLZ.Bonelab
 
 		private bool _hasTriggeredThisFrame;
 
-		[field: SerializeField]
-		public Spawnable VfxFadeOutSpawnable { get; protected set; }
-
 		public Transform CursorTarget => null;
-
-		private void Awake()
-		{
-		}
 
 		public void Start()
 		{
@@ -57,7 +45,7 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
-		public void RemoveCursorTargetOverride(Transform transform)
+		public void RemoveCursorTargetOverride()
 		{
 		}
 

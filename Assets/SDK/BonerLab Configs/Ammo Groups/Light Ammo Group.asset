@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 001057338d542498d30c555063f47d5a, type: 3}
+  m_Script: {fileID: 11500000, guid: 80455f5ce5030ab827e259daca1420f5, type: 3}
   m_Name: Light Ammo Group
   m_EditorClassIdentifier:
   KeyName: light
   cartridges:
-  - {fileID: 11400000, guid: f16ddb0a4456c574394b138de667aed4, type: 2}
-  - {fileID: 11400000, guid: bb5cd616cc0103643bb40decde4191b3, type: 2}
-  - {fileID: 11400000, guid: 7b78dea8a227e57429b11a42e32feeb6, type: 2}
-  - {fileID: 11400000, guid: 286d7e7bdac9607438d248d0569fe702, type: 2}
-  - {fileID: 11400000, guid: 9497b85abe8e7ad42b1d5bbf8e4cdf5a, type: 2}
-  - {fileID: 11400000, guid: 568dfd61ac9e0294daccf1c8b85e98ec, type: 2}
+  - {fileID: 11400000, guid: 867d61d3ecc481345814bcb51082d82a, type: 2}
+  - {fileID: 11400000, guid: e21e2842b43d702438d7bc761b302ec8, type: 2}
+  - {fileID: 11400000, guid: 7a49db164c43ac744b1410e504b08b79, type: 2}
+  - {fileID: 11400000, guid: b14d751c4e70c3943ae33a2a5aa5fd2f, type: 2}
+  - {fileID: 11400000, guid: f7f10b9cb3aa3454d8a7e17d2d9224dd, type: 2}
+  - {fileID: 11400000, guid: aa465d858520d2d4aa1a6a38640448eb, type: 2}

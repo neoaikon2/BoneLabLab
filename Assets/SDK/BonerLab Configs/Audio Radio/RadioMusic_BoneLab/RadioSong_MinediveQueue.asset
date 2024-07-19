@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: MineDive Queue Music
   artist: Michael Wyckoff
-  audioClip: {fileID: 8300000, guid: 0ec5c31e824a18740b3220ed5491f9aa, type: 3}
+  audioClip: {fileID: 8300000, guid: e06daa922e820444a823539e2318b05c, type: 3}

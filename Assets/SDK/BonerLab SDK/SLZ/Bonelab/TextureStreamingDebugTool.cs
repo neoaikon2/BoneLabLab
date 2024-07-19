@@ -286,8 +286,8 @@ namespace SLZ.Bonelab
 		public bool selectNextRenderer;
 
 		[Header("Runtime Values")]
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private Camera activeCamera;
 
 		[SerializeField]
@@ -298,8 +298,8 @@ namespace SLZ.Bonelab
 		[TextArea(2, 20)]
 		private string debugGlobalText;
 
-		[TextArea(2, 20)]
 		[SerializeField]
+		[TextArea(2, 20)]
 		private string debugModeText;
 
 		[SerializeField]
@@ -308,16 +308,16 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private ObjectRendererDebug? selectedRenderer;
 
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private int selectedRendererIndex;
 
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private int budget;
 
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private int maxLevelReduction;
 
 		[ReadOnly(false)]

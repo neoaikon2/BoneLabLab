@@ -1,9 +1,11 @@
+using JetBrains.Annotations;
 using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class DataManager : MarrowDataManager<DataManager, Save, Settings, PlayerProgression, PlayerUnlocks>
+	public sealed class DataManager : MarrowDataManager<DataManager, Save, Settings, PlayerSettings, PlayerProgression, PlayerUnlocks>
 	{
+		[PublicAPI]
 		public static DataManager Instance => null;
 
 		public static Settings Settings => null;
@@ -15,22 +17,22 @@ namespace SLZ.Bonelab.SaveData
 		{
 		}
 
-		public static bool TrySaveSettings()
+		public new static bool TrySaveSettings()
 		{
 			return false;
 		}
 
-		public static bool TryLoadActiveSave(SaveFlags flags)
+		public new static bool TryLoadActiveSave(SaveFlags flags)
 		{
 			return false;
 		}
 
-		public static bool TrySaveActiveSave(SaveFlags flags)
+		public new static bool TrySaveActiveSave(SaveFlags flags)
 		{
 			return false;
 		}
 
-		public static bool TryAutosaveAndSetActive(Save save, SaveFlags flags)
+		public new static bool TryAutosaveAndSetActive(Save save, SaveFlags flags)
 		{
 			return false;
 		}

@@ -2,13 +2,13 @@ using UnityEngine;
 
 namespace LuxURPEssentials
 {
-	[RequireComponent(typeof(WindZone))]
 	[ExecuteInEditMode]
+	[RequireComponent(typeof(WindZone))]
 	public class LuxURP_Wind : MonoBehaviour
 	{
-		[Space(-5f)]
 		[Space(5f)]
 		[LuxURP_HelpBtn("h.wnnhm4pxp610")]
+		[Space(-5f)]
 		public bool UpdateInEditMode;
 
 		[Header("Render Texture Settings")]
@@ -25,8 +25,8 @@ namespace LuxURPEssentials
 
 		public float Foliage;
 
-		[Tooltip("Base Wind Speed in km/h at Main = 1 (WindZone)")]
 		[Header("Wind Speed and Size")]
+		[Tooltip("Base Wind Speed in km/h at Main = 1 (WindZone)")]
 		public float BaseWindSpeed;
 
 		[Tooltip("Size of the Wind RenderTexture in World Space")]

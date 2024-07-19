@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Doorway
   artist:
-  audioClip: {fileID: 8300000, guid: 36944c6f6a7b8b74dbc27bc4b1d98d79, type: 3}
+  audioClip: {fileID: 8300000, guid: 02ce7ef6c97996748bff1c6a3ba624e6, type: 3}

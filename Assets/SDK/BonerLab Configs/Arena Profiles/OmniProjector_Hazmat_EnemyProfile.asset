@@ -18,8 +18,8 @@ MonoBehaviour:
       _barcode:
         _id: c1534c5a-7c6d-4f53-b61c-e4024f6d6e69
     policyData: {fileID: 0}
-  baseConfig: {fileID: 11400000, guid: f8057c6f70f4b5d4cb35861334c58344, type: 2}
-  iconImage: {fileID: 2800000, guid: 23aeb82416189124f9dbf4740ba4ab29, type: 3}
+  baseConfig: {fileID: 11400000, guid: b0eeea44283a3664ab2eed2fd7a3f41e, type: 2}
+  iconImage: {fileID: 2800000, guid: f8d670754b10fc240911b6df6324cc3c, type: 3}
   isKing: 0
   showEnemy: 0
   deathMult: 3

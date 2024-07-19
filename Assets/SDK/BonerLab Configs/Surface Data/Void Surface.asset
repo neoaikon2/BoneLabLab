@@ -12,29 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da29abf0dd58da209ec414fa7049aa61, type: 3}
   m_Name: Void Surface
   m_EditorClassIdentifier:
-  PenetrationResistance: 1
-  megaPascal: 100
+  PenetrationResistance: 0.25
+  megaPascal: 20
   isFlammable: 0
   fireResistance: 0
   ParicleColorTint: {r: 1, g: 1, b: 1, a: 1}
-  physicMaterial: {fileID: 13400000, guid: 4c0feaf0e36088f419851ccf5edccafc, type: 2}
+  physicMaterial: {fileID: 13400000, guid: 9743945472c34074fa8492a1373951ce, type: 2}
   impactEffectSpawnable:
     crateRef:
       _barcode:
         _id: SLZ.BONELAB.Core.Spawnable.ImpactVoid
-    policyData: {fileID: 11400000, guid: e51e12d28102b8d41859453c8d8a6132, type: 2}
+    policyData: {fileID: 11400000, guid: a1c90e2b5be53c64e98cbcee28dbda0c, type: 2}
   bulletDecalSpawnable:
     crateRef:
       _barcode:
         _id: c1534c5a-df6c-4156-9a6a-b09541747461
-    policyData: {fileID: 11400000, guid: ceb9b6e0d090ff6478d02ed90e01b75d, type: 2}
+    policyData: {fileID: 11400000, guid: 87ee0f63eb4d8c24883d3a496c9d4c46, type: 2}
   BulletDecal:
-  - material: {fileID: 2100000, guid: 15dbb76a8dd34ac4180e17ccaaf9fe26, type: 2}
+  - material: {fileID: 2100000, guid: 2af4e7aa31364284183937b645e1efff, type: 2}
     size: 0.06
     atlasData: {fileID: 0}
     useVertexColor: 0
   BluntDecal:
-  - material: {fileID: 2100000, guid: 15dbb76a8dd34ac4180e17ccaaf9fe26, type: 2}
+  - material: {fileID: 2100000, guid: 2af4e7aa31364284183937b645e1efff, type: 2}
     size: 0.03
     atlasData: {fileID: 0}
     useVertexColor: 0

@@ -9,8 +9,8 @@ namespace SLZ.MLAgents
 {
 	public class TrackRaceTaskClass : TaskClass
 	{
-		[Tooltip("The context of the current task")]
 		[Header("Objective Section")]
+		[Tooltip("The context of the current task")]
 		private VehicleSceneContextManager context;
 
 		[Tooltip("Objective not currently being used in race since the checkpoints are spawned by the track generator")]
@@ -19,8 +19,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Objective not currently being used in race since the checkpoints are spawned by the track generator")]
 		public GameObject objectivePrefab;
 
-		[Header("Timer Section")]
 		[Tooltip("Master clock for how long this track task objective has been active")]
+		[Header("Timer Section")]
 		public float currentTrackTime;
 
 		[Tooltip("The max amount of time this task can be active for before resetting")]
@@ -29,8 +29,8 @@ namespace SLZ.MLAgents
 		[Tooltip("To use the master timer or not")]
 		public bool useTrackTimer;
 
-		[Header("Race Specific Section")]
 		[Tooltip("The actual race track that is generated")]
+		[Header("Race Specific Section")]
 		public InfiniteTrackClass infTrack;
 
 		[Tooltip("Best times for each checkpoint")]

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: ava_Skeleton_FootStepWalk
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: 5f144835aad91464ab70d30c53619659, type: 3}
+  - {fileID: 8300000, guid: c0293d6761d915d4c85d60e259391bbe, type: 3}
+  - {fileID: 8300000, guid: 921c18fb30416f54b885b07ae195d369, type: 3}
+  - {fileID: 8300000, guid: 6847544cc6ae32943a0b53108fea7122, type: 3}
+  - {fileID: 8300000, guid: 576859c05520cf84fb919f43a58c52df, type: 3}
+  - {fileID: 8300000, guid: 39a38247b388f6f468cc91b996655504, type: 3}

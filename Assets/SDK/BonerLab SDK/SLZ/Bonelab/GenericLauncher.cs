@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
-using SLZ.Vehicle;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -64,8 +63,6 @@ namespace SLZ.Bonelab
 		public GameObject testGO;
 
 		public Mesh previewMesh;
-
-		public RigManager rigManager;
 
 		public Seat seat;
 

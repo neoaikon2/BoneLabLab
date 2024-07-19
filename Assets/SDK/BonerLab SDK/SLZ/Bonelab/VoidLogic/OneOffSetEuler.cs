@@ -1,3 +1,4 @@
+using System;
 using SLZ.Algorithms.Unity;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
@@ -5,14 +6,20 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[Support(SupportFlags.NotForRelease, "This is a one-off for testing.")]
 	[AddComponentMenu(null)]
-	public sealed class OneOffSetEuler : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
+	[Support(SupportFlags.NotForRelease, "This is a one-off for testing.")]
+	public sealed class OneOffSetEuler : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver, IVoidLogicActuator
 	{
-		[Interface(typeof(IVoidLogicSource), false)]
+		[Obsolete("Replace with `_previousConnections`")]
 		[Tooltip("Previous node(s) in the chain")]
 		[SerializeField]
-		internal MonoBehaviour[] _previous;
+		[Interface(typeof(IVoidLogicSource), false)]
+		private MonoBehaviour[] _previous;
+
+		[Tooltip("Previous node(s) in the chain")]
+		[NonReorderable]
+		[SerializeField]
+		internal OutputPortReference[] _previousConnections;
 
 		[SerializeField]
 		private bool _setOnActuation;
@@ -32,7 +39,15 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
 
-		public PortMetadata PortMetadata => throw new System.NotImplementedException();
+		public PortMetadata PortMetadata => throw new NotImplementedException();
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Awake()
 		{
@@ -58,15 +73,25 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+		public bool TryGetInputConnection(uint inputIndex, out OutputPortReference connectedPort)
 		{
-			input = null;
+			connectedPort = default(OutputPortReference);
 			return false;
 		}
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
 		{
 			return false;
+		}
+
+		public void OnBeforeSerialize()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void OnAfterDeserialize()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

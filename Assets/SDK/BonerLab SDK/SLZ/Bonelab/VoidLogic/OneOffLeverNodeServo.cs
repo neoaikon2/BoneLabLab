@@ -1,27 +1,27 @@
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[RequireComponent(typeof(Servo))]
 	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Lever Servo One-off Node")]
 	[Support(SupportFlags.CowboySupported, "This is a one-off. Your bugs are your own unless or until we have a plan to generalize this into Marrow.")]
+	[RequireComponent(typeof(Servo))]
 	public class OneOffLeverNodeServo : BaseNode, IVoidLogicSensor, IVoidLogicNode, IVoidLogicActuator
 	{
 		public Servo servo;
 
-		[SerializeField]
 		[Tooltip("Output response curve (multiplied by input)")]
+		[SerializeField]
 		private AnimationCurve _curve;
 
+		[Min(0f)]
 		[Tooltip("Lever Types:\n0 => Free\n1 => Momentary\n2+ => Stepped")]
 		[SerializeField]
-		[Min(0f)]
 		private int _steps;
 
-		[SerializeField]
 		[Tooltip("Lever joint that drives the output power value")]
+		[SerializeField]
 		private ConfigurableJoint _leverConfigurableJoint;
 
 		[Tooltip("Interactable host i.e. for running haptics")]

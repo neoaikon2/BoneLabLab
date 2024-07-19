@@ -10,8 +10,8 @@ namespace SLZ.Bonelab
 	[RequireComponent(typeof(Rigidbody))]
 	public class shaker : MonoBehaviour
 	{
-		[Range(0f, 1f)]
 		[SerializeField]
+		[Range(0f, 1f)]
 		private float multiplier;
 
 		[SerializeField]

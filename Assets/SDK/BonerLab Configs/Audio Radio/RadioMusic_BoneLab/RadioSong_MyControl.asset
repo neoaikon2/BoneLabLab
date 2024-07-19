@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: My Control
   artist:
-  audioClip: {fileID: 8300000, guid: b12837364ee3f904e972765de3a53cdd, type: 3}
+  audioClip: {fileID: 8300000, guid: db1d8c3af1cd47d4ca8c61c1ad9e8d8b, type: 3}

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Warehouse;
@@ -49,7 +49,7 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private SpawnablePack defaultSpawnablePack;
 
-		public Dictionary<string, WeaponPack> weaponPackMap;
+		public Dictionary<Barcode, WeaponPack> weaponPackMap;
 
 		public Transform defSpawn;
 

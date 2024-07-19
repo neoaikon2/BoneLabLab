@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -17,7 +18,7 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
-		public void DataWrite(string barcode)
+		public void DataWrite(Barcode barcode)
 		{
 		}
 

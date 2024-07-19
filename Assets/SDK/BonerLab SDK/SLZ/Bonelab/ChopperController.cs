@@ -4,9 +4,9 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.VoidLogic;
-using SLZ.VFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab

@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Combat;
-using SLZ.SFX;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Interaction

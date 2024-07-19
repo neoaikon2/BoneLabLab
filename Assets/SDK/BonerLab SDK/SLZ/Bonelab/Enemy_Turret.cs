@@ -35,8 +35,8 @@ namespace SLZ.Bonelab
 		[HideInInspector]
 		public bool dead;
 
-		[Space(10f)]
 		[Range(0f, 1f)]
+		[Space(10f)]
 		[Header("HEALTH")]
 		public float mod_targetForce;
 
@@ -139,8 +139,8 @@ namespace SLZ.Bonelab
 
 		private bool can_Target;
 
-		[Header("AUDIO")]
 		[Space(10f)]
+		[Header("AUDIO")]
 		public AudioClip[] clips_idle;
 
 		public AudioClip[] clips_alert;

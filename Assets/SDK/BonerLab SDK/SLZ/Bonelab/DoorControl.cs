@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -36,8 +36,8 @@ namespace SLZ.Bonelab
 
 		private bool DoorIsOffHinge;
 
-		[Header("LOCK")]
 		[Space(10f)]
+		[Header("LOCK")]
 		public float[] LockAngleLimits;
 
 		public bool Lock_Locked;
@@ -63,8 +63,8 @@ namespace SLZ.Bonelab
 
 		private bool initializedLocked;
 
-		[Header("LINK")]
 		[Space(10f)]
+		[Header("LINK")]
 		public Rigidbody rb_parent;
 
 		private ConfigurableJoint jnt_link;
@@ -130,8 +130,8 @@ namespace SLZ.Bonelab
 
 		private bool KnobLocked;
 
-		[Tooltip("This is the number added to the lowest x-angularThreshold and subtracted from the highest x-angularThreshold")]
 		[SerializeField]
+		[Tooltip("This is the number added to the lowest x-angularThreshold and subtracted from the highest x-angularThreshold")]
 		private float KnobThreshOffset;
 
 		public float[] knob_UnlockAngles;
@@ -150,8 +150,8 @@ namespace SLZ.Bonelab
 
 		public Grip[] grips;
 
-		[Space(10f)]
 		[Header("REFERENCES")]
+		[Space(10f)]
 		public Transform audioPosition_Hinge;
 
 		public Transform audioPosition_Lock;

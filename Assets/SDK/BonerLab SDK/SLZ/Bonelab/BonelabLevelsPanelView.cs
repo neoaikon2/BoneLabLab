@@ -14,8 +14,8 @@ namespace SLZ.Bonelab
 {
 	public class BonelabLevelsPanelView : PanelView
 	{
-		[Tooltip("Include levels that are built in with the game")]
 		[Header("Level Query")]
+		[Tooltip("Include levels that are built in with the game")]
 		public bool includeInternalLevels;
 
 		[Tooltip("Include levels that are external (mods)")]
@@ -68,9 +68,9 @@ namespace SLZ.Bonelab
 
 		private LevelCrateReference[] keyLevelCrates;
 
-		private Dictionary<string, string> storyLevelBarcodeKeyPair;
+		private Dictionary<LevelCrateReference, string> storyLevelBarcodeKeyPair;
 
-		public List<string> completedStoryLevelBarcodes;
+		public List<Barcode> completedStoryLevelBarcodes;
 
 		private LevelCrateReference kartRaceRef;
 
@@ -95,7 +95,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnPalletAdded(string palletBarcode)
+		private void OnPalletAdded(Barcode palletBarcode)
 		{
 		}
 

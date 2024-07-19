@@ -60,8 +60,8 @@ namespace SLZ.Bonelab
 
 		private List<TrackData> promptDirectorDataList;
 
-		[Header("Events")]
 		[SerializeField]
+		[Header("Events")]
 		private UnityEvent OnIntro;
 
 		[SerializeField]

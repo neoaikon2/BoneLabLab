@@ -1,6 +1,6 @@
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.VFX;
 using UnityEngine;
 using UnityEngine.Serialization;
 
@@ -18,9 +18,9 @@ namespace SLZ.Bonelab
 		}
 
 		[Tooltip("This field is intentionally LOST after the initial spawn. It is serialized for an initial-load backreference, but should not otherwise be preserved.")]
+		[field: FormerlySerializedAs("<AssignedPlacer>k__BackingField")]
 		[field: FormerlySerializedAs("_assignedPlacer")]
 		[field: SerializeField]
-		[field: FormerlySerializedAs("<AssignedPlacer>k__BackingField")]
 		public CrateSpawner AssignedSpawner { get; set; }
 
 		[field: SerializeField]

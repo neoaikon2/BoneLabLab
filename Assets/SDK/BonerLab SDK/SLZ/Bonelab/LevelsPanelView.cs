@@ -52,9 +52,9 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		public LevelKeyPair[] storyLevelBarcodeKeyPair;
 
-		private Dictionary<string, string> _storyLevelBarcodeKeyPair;
+		private Dictionary<Barcode, string> _storyLevelBarcodeKeyPair;
 
-		private readonly List<string> _completedStoryLevelBarcodes;
+		private readonly List<Barcode> _completedStoryLevelBarcodes;
 
 		private void Awake()
 		{
@@ -68,7 +68,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnPalletAdded(string palletBarcode)
+		private void OnPalletAdded(Barcode palletBarcode)
 		{
 		}
 

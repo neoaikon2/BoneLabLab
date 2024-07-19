@@ -4,8 +4,8 @@ namespace SLZ.Bonelab
 {
 	public class ForceLevels : MonoBehaviour
 	{
-		[Header("Oculus Settings")]
 		[SerializeField]
+		[Header("Oculus Settings")]
 		private OVRPlugin.ColorSpace QuestColorSpace;
 
 		private void Awake()

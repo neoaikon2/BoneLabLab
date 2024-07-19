@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_securityGuard_PainBig
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: a76720b6da3439146a76290ed278a7ef, type: 3}
+  - {fileID: 8300000, guid: a654d62f24770e149989d395d6ec175c, type: 3}
+  - {fileID: 8300000, guid: e062527ca3f1a5649b317211259c7f8a, type: 3}
+  - {fileID: 8300000, guid: 2af18c560bb972a41a58dcc214a88416, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: BoneDaddy
   artist:
-  audioClip: {fileID: 8300000, guid: 3c7d9c784d1af1149b5263df6d314a8e, type: 3}
+  audioClip: {fileID: 8300000, guid: e3674576018288b41bdf0d02128be878, type: 3}

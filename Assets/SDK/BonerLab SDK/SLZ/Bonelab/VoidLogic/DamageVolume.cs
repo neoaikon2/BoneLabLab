@@ -1,44 +1,49 @@
+using System;
 using System.Collections.Generic;
 using SLZ.Algorithms.Unity;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.PuppetMasta;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.VoidLogic;
-using SLZ.Player;
-using SLZ.VFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
 	[AddComponentMenu("VoidLogic/Bonelab/Sinks/VoidLogic Damage Volume")]
 	[Support(SupportFlags.AlphaSupported, "This works, but should use Marrow primitives.")]
-	public class DamageVolume : MonoBehaviour, IVoidLogicSink, IVoidLogicNode
+	public class DamageVolume : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver
 	{
-		[SerializeField]
 		[Tooltip("Previous node in the chain")]
 		[Interface(typeof(IVoidLogicSource), false)]
+		[SerializeField]
+		[Obsolete("Replace with `_previousConnection`")]
 		private MonoBehaviour _previousNode;
+
+		[Tooltip("Previous node in the chain")]
+		[SerializeField]
+		private OutputPortReference _previousConnection;
 
 		[Header("Damage")]
 		[Range(0.25f, 10f)]
 		[SerializeField]
 		private float _tickFrequency;
 
-		[Tooltip("Base damage - This can get modified by Velocity or Distance")]
 		[SerializeField]
+		[Tooltip("Base damage - This can get modified by Velocity or Distance")]
 		private float _damage;
 
-		[Tooltip("Damage Type for modfying receiver behavior")]
 		[SerializeField]
+		[Tooltip("Damage Type for modfying receiver behavior")]
 		private AttackType _damageType;
 
-		[Header("Source / Range")]
-		[Tooltip("Determines attack origin location")]
 		[SerializeField]
+		[Tooltip("Determines attack origin location")]
+		[Header("Source / Range")]
 		private Transform _damageSourceTransform;
 
-		[Tooltip("Setting 0 will make damage always be at an effective distance. NOTE: This should likely be greater than the trigger volume")]
 		[SerializeField]
+		[Tooltip("Setting 0 will make damage always be at an effective distance. NOTE: This should likely be greater than the trigger volume")]
 		private float _effectiveDistance;
 
 		[SerializeField]
@@ -85,8 +90,8 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		[field: ReadOnly(false)]
 		[field: SerializeField]
+		[field: ReadOnly(false)]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
 		private int _AffectedProxiesCount => 0;
@@ -95,7 +100,15 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
 
-		public PortMetadata PortMetadata => throw new System.NotImplementedException();
+		public PortMetadata PortMetadata => throw new NotImplementedException();
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Awake()
 		{
@@ -152,15 +165,25 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+		public bool TryGetInputConnection(uint inputIndex, out OutputPortReference connectedPort)
 		{
-			input = null;
+			connectedPort = default(OutputPortReference);
 			return false;
 		}
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
 		{
 			return false;
+		}
+
+		public void OnBeforeSerialize()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void OnAfterDeserialize()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

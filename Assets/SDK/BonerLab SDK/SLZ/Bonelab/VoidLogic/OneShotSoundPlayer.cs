@@ -12,15 +12,21 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[Obsolete("This interface is not yet considered stable. Use at your own risk!")]
-	[AddComponentMenu("VoidLogic/Bonelab/Sinks/VoidLogic One-shot Sound Player")]
 	[Support(SupportFlags.CowboySupported, "It's unclear how exactly we want to properly support playing sound. This component is allowed without endorsement until we have an answer for that.")]
-	public class OneShotSoundPlayer : MonoBehaviour, IVoidLogicSink, IVoidLogicNode
+	[AddComponentMenu("VoidLogic/Bonelab/Sinks/VoidLogic One-shot Sound Player")]
+	[Obsolete("This interface is not yet considered stable. Use at your own risk!")]
+	public class OneShotSoundPlayer : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver
 	{
 		[SerializeField]
-		[Tooltip("Previous node(s) in the chain")]
 		[Interface(typeof(IVoidLogicSource), false)]
-		protected internal MonoBehaviour[] _previous;
+		[Obsolete("Replace with `_previousConnections`")]
+		[Tooltip("Previous node(s) in the chain")]
+		private MonoBehaviour[] _previous;
+
+		[NonReorderable]
+		[Tooltip("Previous node(s) in the chain")]
+		[SerializeField]
+		protected internal OutputPortReference[] _previousConnections;
 
 		private float _volumeMultiplier;
 
@@ -32,8 +38,8 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		[field: SerializeField]
 		[field: ReadOnly(false)]
+		[field: SerializeField]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
 		[field: SerializeField]
@@ -46,24 +52,24 @@ namespace SLZ.Bonelab.VoidLogic
 		[field: SerializeField]
 		public float SourceRadius { get; set; }
 
-		[field: Range(0f, 1f)]
 		[field: SerializeField]
+		[field: Range(0f, 1f)]
 		public float Volume { get; set; }
 
 		[field: SerializeField]
 		[field: Range(0f, 1f)]
 		public float SpacialBlend { get; set; }
 
-		[field: Range(1f, 5f)]
 		[field: SerializeField]
+		[field: Range(1f, 5f)]
 		public int MaximumQueueDepth { get; set; }
 
-		[field: Tooltip("Edge detection configuration for start input")]
 		[field: SerializeField]
+		[field: Tooltip("Edge detection configuration for start input")]
 		private EdgeDetector StartEdgeDetector { get; set; }
 
-		[field: Tooltip("Edge detection configuration for reset input")]
 		[field: SerializeField]
+		[field: Tooltip("Edge detection configuration for reset input")]
 		private EdgeDetector ResetEdgeDetector { get; set; }
 
 		public int InputCount => 0;
@@ -71,6 +77,14 @@ namespace SLZ.Bonelab.VoidLogic
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
 
 		public PortMetadata PortMetadata => throw new NotImplementedException();
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Awake()
 		{
@@ -109,15 +123,25 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+		public bool TryGetInputConnection(uint inputIndex, out OutputPortReference connectedPort)
 		{
-			input = null;
+			connectedPort = default(OutputPortReference);
 			return false;
 		}
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
 		{
 			return false;
+		}
+
+		public void OnBeforeSerialize()
+		{
+			throw new NotImplementedException();
+		}
+
+		public void OnAfterDeserialize()
+		{
+			throw new NotImplementedException();
 		}
 	}
 }

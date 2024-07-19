@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_Skeleton_PainSmall
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: 50d7d88127b0a7f4c83a00efe5087374, type: 3}
+  - {fileID: 8300000, guid: 14c97a07a512ef44d9f388d4c4c6bd24, type: 3}
+  - {fileID: 8300000, guid: 517db36d75789a94884eda936329b6a6, type: 3}
+  - {fileID: 8300000, guid: 72decc07a1fec554c8f4aa367e2d9d8a, type: 3}
+  - {fileID: 8300000, guid: 4b778966542ca3c4a8025d6d4fe0ceb7, type: 3}

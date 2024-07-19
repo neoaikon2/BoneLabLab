@@ -3,11 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
-using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
-using SLZ.Vehicle;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -28,10 +26,6 @@ namespace SLZ.Bonelab
 		public float seatingLength;
 
 		public float yoinkLength;
-
-		public Spawnable vfxFadeOutSpawnable;
-
-		public LevelCrateReference loadScreenLevel;
 
 		public AnimationCurve lerpDistanceCurve;
 

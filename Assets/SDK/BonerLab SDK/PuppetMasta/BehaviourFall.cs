@@ -13,8 +13,8 @@ namespace PuppetMasta
 	[HelpURL("http://root-motion.com/puppetmasterdox/html/page11.html")]
 	public class BehaviourFall : BehaviourBase
 	{
-		[Tooltip("Animation State to crossfade to when this behaviour is activated.")]
 		[LargeHeader("Animation State")]
+		[Tooltip("Animation State to crossfade to when this behaviour is activated.")]
 		public string stateName;
 
 		[Tooltip("The duration of crossfading to 'State Name'. Value is in seconds.")]

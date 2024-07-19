@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: ava_Skeleton_FootLand
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: e012122db26aab64e97e72257a3427e6, type: 3}
+  - {fileID: 8300000, guid: ae095027d05c2b44db7acab3a0f6f681, type: 3}
+  - {fileID: 8300000, guid: 2eceb4b486ffd6742b3feb22b3cdeff1, type: 3}
+  - {fileID: 8300000, guid: bc15835b04d3fe646b7303df030fc2ad, type: 3}

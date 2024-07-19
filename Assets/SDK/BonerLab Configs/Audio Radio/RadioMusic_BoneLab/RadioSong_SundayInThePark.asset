@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Sunday in the Park
   artist:
-  audioClip: {fileID: 8300000, guid: d90cd01fcc3629242a2b0d02021dd403, type: 3}
+  audioClip: {fileID: 8300000, guid: 8a916b35bb1a87349a214348e64b6ba3, type: 3}

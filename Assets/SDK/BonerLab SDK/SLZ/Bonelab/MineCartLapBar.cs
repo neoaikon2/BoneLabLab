@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Utilities;
-using SLZ.Vehicle;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,8 +12,8 @@ namespace SLZ.Bonelab
 {
 	public class MineCartLapBar : MonoBehaviour
 	{
-		[InspectorDisplayName("Configurable Joint")]
 		[Tooltip("Joint for lapbar")]
+		[InspectorDisplayName("Configurable Joint")]
 		public ConfigurableJoint cj;
 
 		[InspectorDisplayName("Seat")]
@@ -25,25 +24,25 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Servo Script")]
 		public Servo servo;
 
-		[Tooltip("The amount of rotation in degrees that will lock the joint")]
 		[InspectorDisplayName("Lock Angle")]
+		[Tooltip("The amount of rotation in degrees that will lock the joint")]
 		public float lockAngle;
 
-		[SerializeField]
 		[Tooltip("Event to fire on player seated")]
 		[Header("Events")]
+		[SerializeField]
 		private UnityEvent OnSeat;
 
-		[SerializeField]
 		[Tooltip("Event to fire on player unseated")]
+		[SerializeField]
 		private UnityEvent OnUnseat;
 
 		[SerializeField]
 		[Tooltip("Event to fire on bar locked")]
 		private UnityEvent OnBarLocked;
 
-		[Tooltip("Event to fire on bar unlocked")]
 		[SerializeField]
+		[Tooltip("Event to fire on bar unlocked")]
 		private UnityEvent OnBarUnlocked;
 
 		private Quaternion startRotation;

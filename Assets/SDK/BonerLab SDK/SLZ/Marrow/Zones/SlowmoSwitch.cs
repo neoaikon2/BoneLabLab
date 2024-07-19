@@ -1,6 +1,4 @@
 using SLZ.Marrow.Interaction;
-using SLZ.Player;
-using SLZ.Rig;
 
 namespace SLZ.Marrow.Zones
 {
@@ -11,8 +9,6 @@ namespace SLZ.Marrow.Zones
 		public bool toggleSlowmo;
 
 		public Health.HealthMode healthModeToSet;
-
-		private RigManager rm;
 
 		private Health.HealthMode cashedHeathMode;
 
@@ -26,7 +22,7 @@ namespace SLZ.Marrow.Zones
 		{
 		}
 
-		public void ToggleSlowmo(bool apply, MarrowEntity activatorEntity)
+		public void ToggleSlowmo(bool apply)
 		{
 		}
 

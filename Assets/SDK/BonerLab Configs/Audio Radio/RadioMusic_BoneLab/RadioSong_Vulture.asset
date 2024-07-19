@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Vulture
   artist:
-  audioClip: {fileID: 8300000, guid: 80f77875075abb246aba81432cee481c, type: 3}
+  audioClip: {fileID: 8300000, guid: 104b0c50645739a42910995829d7a7ad, type: 3}

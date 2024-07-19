@@ -8,14 +8,13 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Marrow.Warehouse;
 using SLZ.Marrow.Zones;
-using SLZ.Rig;
-using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -236,13 +235,24 @@ namespace SLZ.Bonelab
 
 		public LevelCrateReference ascent;
 
-		public LevelCrateReference loadScreenLevel;
+		public InventorySaveFilter inventorySaveFilter;
 
 		public Spawnable vfxFadeOutSpawnable;
 
-		public InventorySaveFilter inventorySaveFilter;
+		[Header("Door Emancipator")]
+		public MarrowEntity bigDoorEntity;
 
-		public RigManager rm;
+		public MarrowEntity smallDoorEntity;
+
+		public Transform emancipatorPointSmall;
+
+		public Vector3 emancipatorBoundsSmall;
+
+		public Transform emancipatorPointBig;
+
+		public Vector3 emancipatorBoundsBig;
+
+		public LayerMask layerMask;
 
 		private int _loadedTeleportSpot;
 
@@ -312,7 +322,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void SceneStreamerCallback()
+		private void OnLevelLoad()
 		{
 		}
 
@@ -471,6 +481,18 @@ namespace SLZ.Bonelab
 		private UniTask CloseBigDoors(CancellationToken cancelToken)
 		{
 			return default(UniTask);
+		}
+		private UniTask DoorCloseTimer(CancellationToken cancelToken, float timerLength, bool bigDoor = false)
+		{
+			return default(UniTask);
+		}
+
+		public void DoorEmancipator(bool bigDoor = false)
+		{
+		}
+
+		private void OnDrawGizmosSelected()
+		{
 		}
 		private IEnumerator BlinkAirLockCycleLight()
 		{

@@ -30,22 +30,22 @@ namespace SLZ.Bonelab
 		}
 		public LeaderMode leaderMode;
 
-		[SerializeField]
 		[Header("LEADERBOARD DATA")]
+		[SerializeField]
 		private List<BoneLeaderData> allLeaderDataList;
 
 		public BoneLeaderData currData;
 
 		[Header("OCULUS USER DATA")]
-		[Space(20f)]
 		[SerializeField]
+		[Space(20f)]
 		private ulong myID;
 
 		[SerializeField]
 		private string myOculusID;
 
-		[Header("STEAM USER DATA")]
 		[SerializeField]
+		[Header("STEAM USER DATA")]
 		private string steamName;
 
 		[SerializeField]
@@ -57,8 +57,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private SteamFilter steamFilter;
 
-		[SerializeField]
 		[Header("PREFABS")]
+		[SerializeField]
 		private GameObject entryPrefab;
 
 		[SerializeField]

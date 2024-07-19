@@ -3,15 +3,13 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Rig;
+using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
 	public class PlayerAvatarManager : MonoBehaviour
 	{
-		public RigManager rigManager;
-
 		public bool loadAvatarFromSaveData;
 
 		private bool _hasAvatarOverride;
@@ -24,7 +22,7 @@ namespace SLZ.Bonelab
 			return default(UniTask);
 		}
 
-		public void OverrideAvatar(string barcode, bool cached)
+		public void OverrideAvatar(Barcode barcode, bool cached)
 		{
 		}
 	}

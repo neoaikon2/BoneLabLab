@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using PuppetMasta;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.PuppetMasta;

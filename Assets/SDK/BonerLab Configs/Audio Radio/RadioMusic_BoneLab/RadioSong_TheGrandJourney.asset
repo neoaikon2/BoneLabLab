@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: The Grand Journey
   artist:
-  audioClip: {fileID: 8300000, guid: 12c2631fcb0d8ad4480d5844f0cbe122, type: 3}
+  audioClip: {fileID: 8300000, guid: de21cf6ea9b3fec4d9d6a49a2cc5b679, type: 3}

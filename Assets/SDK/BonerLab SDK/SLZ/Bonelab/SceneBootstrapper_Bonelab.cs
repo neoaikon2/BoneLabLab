@@ -18,8 +18,6 @@ namespace SLZ.Bonelab
 
 		public LevelCrateReference VoidG114CrateRef;
 
-		public LevelCrateReference LevelLoaderCrateRef;
-
 		public TextMeshProUGUI tmp;
 
 		public GameObject Overlay2d;

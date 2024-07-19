@@ -19,7 +19,7 @@ MonoBehaviour:
         _id: c1534c5a-af28-46cb-84c1-012343726162
     policyData: {fileID: 0}
   baseConfig: {fileID: 0}
-  iconImage: {fileID: 2800000, guid: 0f8efa69786fd874ba89169d768fcd58, type: 3}
+  iconImage: {fileID: 2800000, guid: 684562c65f9bfbb469105bcf186a8e85, type: 3}
   isKing: 0
   showEnemy: 0
   deathMult: 3

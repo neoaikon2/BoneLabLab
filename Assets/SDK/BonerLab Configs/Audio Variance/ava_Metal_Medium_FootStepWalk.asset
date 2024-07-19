@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: ava_Metal_Medium_FootStepWalk
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: 7d65ad1e89f736d408f8667f632a2b0c, type: 3}
+  - {fileID: 8300000, guid: 48ce232e66c4a344db9f32eb16330b9a, type: 3}
+  - {fileID: 8300000, guid: a1c78d0ded567024aab144f416ac6e84, type: 3}
+  - {fileID: 8300000, guid: 17a49c62587506447bd0435b4804db73, type: 3}
+  - {fileID: 8300000, guid: f253f151ebb51154fa94c932ca48df95, type: 3}
+  - {fileID: 8300000, guid: c04aeec422f85e94e9bee22d2952bf36, type: 3}

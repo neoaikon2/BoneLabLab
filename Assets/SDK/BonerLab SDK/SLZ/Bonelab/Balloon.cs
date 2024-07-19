@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Combat;
 using SLZ.Marrow.Utilities;
-using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
 

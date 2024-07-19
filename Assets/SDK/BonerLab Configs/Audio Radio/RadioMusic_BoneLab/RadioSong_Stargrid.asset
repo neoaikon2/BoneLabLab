@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: StarGrid
   artist:
-  audioClip: {fileID: 8300000, guid: 7345ba0b955761a4cb0dbd2fa881938d, type: 3}
+  audioClip: {fileID: 8300000, guid: 8288b9a88a7aaeb4ea51ba981c344083, type: 3}

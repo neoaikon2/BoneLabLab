@@ -15,6 +15,8 @@ namespace SLZ.Bonelab
 
 		public TextMeshPro text_unlockedItemName;
 
+		public SpriteRenderer image_item;
+
 		public string unlockedItemType;
 
 		public string unlockedItemName;
@@ -29,11 +31,15 @@ namespace SLZ.Bonelab
 
 		public Vector3 scale_target;
 
+		private Vector3 scale_start_img;
+
 		private Vector3 scale_start_uit;
 
 		private Vector3 scale_start_uin;
 
 		public Color32 color_transparent;
+
+		private Color32 color_start_img;
 
 		private Color32 color_start_uit;
 

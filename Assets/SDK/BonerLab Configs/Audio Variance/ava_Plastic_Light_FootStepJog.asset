@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: ava_Plastic_Light_FootStepJog
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: c6f3268f834a58b47ad27323c89068ec, type: 3}
+  - {fileID: 8300000, guid: b37ddb1315e11714e849d83094f007aa, type: 3}
+  - {fileID: 8300000, guid: cf020e0cb444f1649ad23aee50b58390, type: 3}
+  - {fileID: 8300000, guid: 502927155c80a4645af1166019a09af1, type: 3}
+  - {fileID: 8300000, guid: 6c3616bb6ca8f604fa4ef06da4de81b5, type: 3}
+  - {fileID: 8300000, guid: 06f38375392065245b392149ec946556, type: 3}

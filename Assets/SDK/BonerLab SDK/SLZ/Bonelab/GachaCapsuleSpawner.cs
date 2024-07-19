@@ -32,7 +32,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnPalletAdded(string palletBarcode)
+		private void OnPalletAdded(Barcode palletBarcode)
 		{
 		}
 

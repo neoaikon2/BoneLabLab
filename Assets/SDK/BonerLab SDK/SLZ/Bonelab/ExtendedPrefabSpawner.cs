@@ -13,8 +13,8 @@ namespace SLZ.Bonelab
 {
 	public class ExtendedPrefabSpawner : MonoBehaviour
 	{
-		[SerializeField]
 		[Tooltip("Spawnable")]
+		[SerializeField]
 		private Spawnable[] spawnables;
 
 		public bool spawnOnStart;

@@ -6,12 +6,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using SLZ.UI;
 using UnityEngine;
 
@@ -19,8 +18,6 @@ namespace SLZ.Bonelab
 {
 	public class PullCordDevice : MonoBehaviour
 	{
-		public PullCordHandle pch;
-
 		public AvatarsPanelView apv;
 
 		[Header("Joint Stuff")]
@@ -80,8 +77,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AudioClip[] incrementInTick;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float gripVolume;
 
 		[SerializeField]
@@ -90,15 +87,15 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AudioClip[] gripRelease;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float activateVolume;
 
 		[SerializeField]
 		private AudioClip[] activateBodyLog;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float glyphVolume;
 
 		[SerializeField]
@@ -111,15 +108,15 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AudioClip[] lockBodyLog;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float switchVolume;
 
 		[SerializeField]
 		private AudioClip[] switchAvatar;
 
-		[Range(0f, 1f)]
 		[SerializeField]
+		[Range(0f, 1f)]
 		private float addAvatarVolume;
 
 		[SerializeField]
@@ -152,24 +149,24 @@ namespace SLZ.Bonelab
 		[Range(0f, 1f)]
 		private float incrementAmplitudeMin;
 
-		[Range(0f, 1f)]
 		[SerializeField]
+		[Range(0f, 1f)]
 		private float incrementAmplitudeMax;
 
 		[Range(0f, 2000f)]
 		[SerializeField]
 		private float incrementFrequencyMin;
 
-		[Range(0f, 2000f)]
 		[SerializeField]
+		[Range(0f, 2000f)]
 		private float incrementFrequencyMax;
 
 		[SerializeField]
 		[Range(0f, 1f)]
 		private float incrementDurationMin;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float incrementDurationMax;
 
 		[Header("Avatars")]
@@ -247,8 +244,6 @@ namespace SLZ.Bonelab
 		public AnimationCurve addAvatarFlickerCurve;
 
 		public RigManager rm;
-
-		public BodyVitals bv;
 
 		public bool isHandleInReceiver;
 

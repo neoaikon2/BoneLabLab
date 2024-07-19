@@ -4,8 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using PuppetMasta;
-using SLZ.Bonelab;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.PuppetMasta;
 using SLZ.SFX;
@@ -15,8 +14,8 @@ namespace SLZ.MLAgents
 {
 	public class BehaviourStationaryTurret : BehaviourGrabbableBaseNav
 	{
-		[Header("References")]
 		[Header("Settings")]
+		[Header("References")]
 		public InteractableHost host;
 
 		public Collider[] ignoreColliders;

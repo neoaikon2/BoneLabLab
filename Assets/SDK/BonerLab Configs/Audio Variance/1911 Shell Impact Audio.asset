@@ -9,10 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d36d99ff80fe02e88761ff6d668dcce3, type: 3}
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
   m_Name: 1911 Shell Impact Audio
   m_EditorClassIdentifier:
   audioClips:
-  - {fileID: 8300000, guid: f2a0a6efcb062b14c9d081fc28d40f67, type: 3}
-  - {fileID: 8300000, guid: 39c0f6aef3bcf1b4a969e27ba8885633, type: 3}
-  - {fileID: 8300000, guid: 39df9a066947e7e458f8acca3fef7129, type: 3}
+  - {fileID: 8300000, guid: 93d2dab759c4dfa4f88af9433b1234e7, type: 3}
+  - {fileID: 8300000, guid: 65ca7b5cb48bcbc4fb532f144b60c884, type: 3}
+  - {fileID: 8300000, guid: 28c9628f7423ba14e8a4d279ca6901dc, type: 3}

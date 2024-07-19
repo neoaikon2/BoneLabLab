@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 882c5be2f3c618291672aa1a52e8222a, type: 3}
+  m_Name: GachaGrow
+  m_EditorClassIdentifier:
+  value:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.015741263
+      outSlope: 0.015741263
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.12991263
+    - serializedVersion: 3
+      time: 0.44551677
+      value: 0.7114982
+      inSlope: 5.204449
+      outSlope: 5.204449
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.044336293
+      outWeight: 0.45093572
+    - serializedVersion: 3
+      time: 0.674701
+      value: 0.47486237
+      inSlope: 0.031262938
+      outSlope: 0.031262938
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7561167
+      value: 0.5976209
+      inSlope: 2.8842251
+      outSlope: 2.8842251
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.39694524
+      outWeight: 0.35327825
+    - serializedVersion: 3
+      time: 1
+      value: 0.9978714
+      inSlope: -1.62309
+      outSlope: -1.62309
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.12981358
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

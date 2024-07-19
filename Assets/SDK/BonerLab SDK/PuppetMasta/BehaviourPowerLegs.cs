@@ -92,8 +92,8 @@ namespace PuppetMasta
 
 		private bool _debugDrawHierarchy;
 
-		[EnumFlags]
 		[Header("Agro State")]
+		[EnumFlags]
 		public CombatType combatProficiency;
 
 		public CombatType agroState;

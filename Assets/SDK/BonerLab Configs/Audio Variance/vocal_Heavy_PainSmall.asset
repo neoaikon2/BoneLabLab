@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b28eb85c6ef8edc49b01114eef913a4e, type: 3}
+  m_Name: vocal_Heavy_PainSmall
+  m_EditorClassIdentifier:
+  audioClips:
+  - {fileID: 8300000, guid: e3c9566e3b73e2d4d8458dd116a04eeb, type: 3}
+  - {fileID: 8300000, guid: dd5e00221968a784c817da9df4eae16a, type: 3}
+  - {fileID: 8300000, guid: 3e479a2b8f68ac749b851b434ec84e6a, type: 3}
+  - {fileID: 8300000, guid: 3a8e73ab1be8af347b90b651d7ddfd14, type: 3}
+  - {fileID: 8300000, guid: 55fb2124044df454881e433c599bf1e4, type: 3}
+  - {fileID: 8300000, guid: 283ea4e0d430da847a34c6dad5bd7935, type: 3}

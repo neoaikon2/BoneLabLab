@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
-using SLZ.Rig;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -12,8 +11,6 @@ namespace SLZ.Bonelab
 	[ExecuteInEditMode]
 	public class ThrowPrediction : MonoBehaviour
 	{
-		public RigManager rigManager;
-
 		[SerializeField]
 		private Rigidbody rb;
 
@@ -23,8 +20,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private Transform reboundTarget;
 
-		[SerializeField]
 		[Header("Trajectory")]
+		[SerializeField]
 		private TrajectoryData trajData;
 
 		[SerializeField]
@@ -63,8 +60,8 @@ namespace SLZ.Bonelab
 
 		private Coroutine errorRoutine;
 
-		[SerializeField]
 		[Header("Prediction")]
+		[SerializeField]
 		private float predictionTime;
 
 		[SerializeField]

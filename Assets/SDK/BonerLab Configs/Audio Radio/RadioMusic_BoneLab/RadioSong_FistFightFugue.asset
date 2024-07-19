@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Fist Fight Fugue
   artist:
-  audioClip: {fileID: 8300000, guid: a862b14c96eefe64cba9cfefb576547a, type: 3}
+  audioClip: {fileID: 8300000, guid: 48bfdb634238ccd49ab9081e192741bd, type: 3}

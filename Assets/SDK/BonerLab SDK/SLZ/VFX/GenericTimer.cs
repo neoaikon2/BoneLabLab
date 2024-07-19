@@ -15,8 +15,8 @@ namespace SLZ.VFX
 			Realtime = 0,
 			ScaledTime = 1
 		}
-		[Tooltip("Consider in scaled time or realtime")]
 		[SerializeField]
+		[Tooltip("Consider in scaled time or realtime")]
 		private TimeType CountingType;
 
 		[SerializeField]

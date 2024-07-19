@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier:
   name: Bonelight Sonata
   artist:
-  audioClip: {fileID: 8300000, guid: bede7e7f84e1797408cb99b937a1c037, type: 3}
+  audioClip: {fileID: 8300000, guid: 35880547ef69df94888e627a6ae92239, type: 3}

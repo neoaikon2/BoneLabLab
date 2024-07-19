@@ -3,7 +3,7 @@ using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class Settings : ISettings
+	public sealed class Settings : ISettings, IFixFieldsIfNeeded
 	{
 		[JsonProperty("version")]
 		public int Version { get; set; }
@@ -15,13 +15,13 @@ namespace SLZ.Bonelab.SaveData
 		public string ActiveSave { get; set; }
 
 		[JsonProperty("debug_settings")]
-		public DebugSettings DebugSettings { get; set; }
+		public IDebugSettings DebugSettings { get; set; }
 
 		[JsonProperty("graphics_settings")]
-		public GraphicsSettings GraphicsSettings { get; set; }
+		public IGraphicsSettings GraphicsSettings { get; set; }
 
 		[JsonProperty("spectator_settings")]
-		public SpectatorSettings SpectatorSettings { get; set; }
+		public ISpectatorSettings SpectatorSettings { get; set; }
 
 		public void FixFieldsIfNeeded()
 		{
