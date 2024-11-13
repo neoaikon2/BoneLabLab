@@ -69,9 +69,9 @@ namespace SLZ.MLAgents
 
 		private OrientationCubeController m_OrientationCube;
 
-		private DirectionIndicator m_DirectionIndicator;
+		private Unity.MLAgents.DirectionIndicator m_DirectionIndicator;
 
-		private JointDriveController m_JdController;
+		private Unity.MLAgents.JointDriveController m_JdController;
 
 		private EnvironmentParameters m_ResetParams;
 
@@ -106,7 +106,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void CollectObservationBodyPart(BodyPart bp, VectorSensor sensor)
+		public void CollectObservationBodyPart(Unity.MLAgents.BodyPart bp, VectorSensor sensor)
 		{
 		}
 

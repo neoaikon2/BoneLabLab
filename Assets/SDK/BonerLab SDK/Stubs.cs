@@ -13,8 +13,8 @@ namespace SLZ
 
 namespace Unity.MLAgents
 {
-	public abstract class GroundContact { }
-	public abstract class TargetContact { }
+	//public abstract class GroundContact { }
+	//public abstract class TargetContact { }
 	public abstract class DirectionIndicator { }
 	public abstract class JointDriveController { }
 	public abstract class BodyPart { }
@@ -23,7 +23,7 @@ namespace Unity.MLAgents
 
 namespace Unity.MLAgentsExamples
 {
-	public abstract class OrientationCubeController { }
+	//public abstract class OrientationCubeController { }
 }
 
 namespace Unity.Splines.Examples
@@ -150,3 +150,34 @@ namespace OVRSimpleJSON
 }
 
 namespace RealisticEyeMovements { }
+
+namespace SLZ.Marrow.Redacted
+{
+	interface ISocketable
+	{
+	}
+
+	interface IPlugable
+	{
+	}
+
+	interface IRecycleListenable
+	{
+	}
+}
+
+namespace SLZ.Marrow.Zones
+{
+	interface IRecycleListenable
+	{
+	}
+}
+
+namespace SLZ.Marrow.VoidLogic
+{
+	public class VoidLogicToolSettings
+	{
+
+	}
+
+}

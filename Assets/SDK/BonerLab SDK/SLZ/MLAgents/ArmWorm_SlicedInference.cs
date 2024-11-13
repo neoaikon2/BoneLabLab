@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SLZ.MLAgents
 {
-	[RequireComponent(typeof(JointDriveController))]
+	[RequireComponent(typeof(Unity.MLAgents.JointDriveController))]
 	public class ArmWorm_SlicedInference : InferenceAgent
 	{
 		private int current_action_counter;
@@ -60,15 +60,15 @@ namespace SLZ.MLAgents
 
 		private bool jump_cooldown;
 
-		private ImpactTargetController target_controller;
+		private Unity.MLAgents.ImpactTargetController target_controller;
 
 		public OrientationCubeController m_OrientationCube;
 
 		public GameObject forward_reference;
 
-		private DirectionIndicator m_DirectionIndicator;
+		private Unity.MLAgents.DirectionIndicator m_DirectionIndicator;
 
-		private JointDriveController m_JdController;
+		private Unity.MLAgents.JointDriveController m_JdController;
 
 		private Vector3 m_StartingPos;
 
@@ -122,7 +122,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void CollectObservationBodyPart(BodyPart bp)
+		public void CollectObservationBodyPart(Unity.MLAgents.BodyPart bp)
 		{
 		}
 

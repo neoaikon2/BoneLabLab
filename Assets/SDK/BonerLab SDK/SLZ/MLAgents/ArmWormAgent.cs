@@ -3,6 +3,7 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using Unity.MLAgentsExamples;
 using UnityEngine;
+using JointDriveController = Unity.MLAgents.JointDriveController;
 
 namespace SLZ.MLAgents
 {
@@ -62,13 +63,13 @@ namespace SLZ.MLAgents
 
 		private bool jump_cooldown;
 
-		private ImpactTargetController target_controller;
+		private Unity.MLAgents.ImpactTargetController target_controller;
 
 		public OrientationCubeController m_OrientationCube;
 
 		public GameObject forward_reference;
 
-		private DirectionIndicator m_DirectionIndicator;
+		private Unity.MLAgents.DirectionIndicator m_DirectionIndicator;
 
 		private JointDriveController m_JdController;
 
@@ -116,7 +117,7 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void CollectObservationBodyPart(BodyPart bp, VectorSensor sensor)
+		public void CollectObservationBodyPart(Unity.MLAgents.BodyPart bp, VectorSensor sensor)
 		{
 		}
 

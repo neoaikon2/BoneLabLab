@@ -38,7 +38,7 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		[field: ReadOnly(false)]
+		//[field: ReadOnly(false)]
 		[field: SerializeField]
 		public VoidLogicSubgraph Subgraph { get; set; }
 
@@ -136,12 +136,12 @@ namespace SLZ.Bonelab.VoidLogic
 
 		public void OnBeforeSerialize()
 		{
-			throw new NotImplementedException();
+			//throw new NotImplementedException();
 		}
 
 		public void OnAfterDeserialize()
 		{
-			throw new NotImplementedException();
+			//throw new NotImplementedException();
 		}
 	}
 }

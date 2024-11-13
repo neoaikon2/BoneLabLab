@@ -30,7 +30,7 @@ namespace SLZ.MLAgents
 
 		public float m_MaxWalkingSpeed;
 
-		private ImpactTargetController target_controller;
+		private Unity.MLAgents.ImpactTargetController target_controller;
 
 		[Header("Target Prefabs")]
 		public Transform TargetPrefab;
@@ -78,7 +78,7 @@ namespace SLZ.MLAgents
 
 		public GameObject forward_reference;
 
-		private DirectionIndicator m_DirectionIndicator;
+		private Unity.MLAgents.DirectionIndicator m_DirectionIndicator;
 
 		public BehaviourDriveController m_JdController;
 
